@@ -1,13 +1,15 @@
 # 项目开发约定
 
-- 当前 v0.1.6 修复 listen-wechat 顶部移除后的连续性：旧连续后缀与新前缀至少两个 token/内容摘要锚点完全一致且有追加行时继续；其他变化停止。会话已见 token 最多 4096 个，重现或超限整批停止；首次非空快照仍只建立基线。新增 6 项回归，完整 136 项通过。见 docs/LIVE_READ.md。
-- 真实固定文本收发已通过：两条相同左侧来信可见且原生读取到两项；一次明确授权的固定回复经 Computer Use 点击发送，用户确认收到。该次授权已用完，不得再发。旧有界监听器曾因顶部移除停止，没有返回新增观察；本次修复只有虚构快照回归，尚未进行修复后的真实新消息监听验收。证据 docs/evidence/78-live-exchange.json。自动 AI 回复、项目发送适配器与真实模型未启用；sender_verified/history_boundary_verified 仍 false，不接入 Engine/模型/记忆。无需重登或重做固定回复验收。
+- 当前 v0.1.7 新增固定白名单停止诊断、已接受顶部移除/已见 token 计数、--inspect-layout 与 --inspect-capabilities。诊断不读消息 Name，只输出计数/布尔，不输出属性值、身份或正文。默认连续性规则保持 v0.1.6：至少两个 token/摘要后缀锚点且有追加才接受顶部移除；已见 token 重现或超过 4096 个整批停止。见 docs/LIVE_READ.md。
+- 真实新消息监听未通过：证据92接受第一条测试来信后，第二条因 message_token_reused 停止。95/101确认7文本项全宽无子控件；9行中有7行共用1个非空 AutomationId（两项汇总不能推断逐行交叉分布）。无 TextPattern、HelpText/ItemStatus/ItemType/LabeledBy 或列表 ScrollPattern。不把 RuntimeId、共享 AutomationId、正文哈希或截图猜测当成稳定消息ID；不能直接放宽保护后宣称自动回复就绪。
+- v0.1.7 新增14项回归，完整150/150通过；独立审查未发现代码缺陷，已修正文档的汇总计数推断。证据与限制以 docs/TEST_RESULTS.md、docs/LIVE_READ.md 为准。
+- 用户已授权自主推进至自动回复启用前，无需重复确认常规开发/只读验证权限。真实固定文本收发此前已通过（证据78），一次固定回复授权已用完；无需重登或重做。本轮没有再次发送，自动 AI、项目发送适配器及真实模型未启用；sender_verified/history_boundary_verified 仍 false，不接入 Engine/模型/记忆。
 
 - 核心仍 v0.1.4；新增源码树独立 RapidOCR 候选实验，9 项新增测试、完整 117 项通过。实验依赖只在 `.ocr-env`，核心与单元测试仍只用标准库；环境/模型/缓存不提交。实际识别结果 review_required/3：误检可被阈值过滤，但真实符号也会被漏掉；不接入自动消息处理，不能把 OCR 当作稳定身份/消息 ID。详见 docs/OCR_CANDIDATE.md。
 
 - v0.1.4 新增 `ocr-check`，只生成内存虚构图片。108 项测试通过；本机 OCR 可运行但部分样例识别失败，必须保留 recognition_mismatch/3，不能声称真实接入通过。另一次真实 MSAA 探测被自动审批拒绝，未执行、未重试，不能推定结果。详见 docs/OCR_CHECK.md。
 
-- 需求以 CODEX_TASK.md 与用户本轮范围为准。离线核心、UIA 结构诊断、v0.1.3 回调队列与 offline-check 已完成；用户已确认第二个号和测试好友窗口准备好，授权只读实测。此前 4.1.15.50 仅暴露基础控件的记录见 docs/LIVE_UIA_CHECK.md，当前状态以上节 v0.1.6 为准。仅当前唯一测试窗口授权读取，不采集其他会话；项目真实发送保持禁用，不接管登录。
+- 需求以 CODEX_TASK.md 与用户本轮范围为准。离线核心、UIA 结构诊断、v0.1.3 回调队列与 offline-check 已完成；用户已确认第二个号和测试好友窗口准备好，授权只读实测。此前 4.1.15.50 仅暴露基础控件的记录见 docs/LIVE_UIA_CHECK.md，当前状态以上节 v0.1.7 为准。仅当前唯一测试窗口授权读取，不采集其他会话；项目真实发送保持禁用，不接管登录。
 - Python >=3.11，核心与测试只用标准库。测试：`python scripts/test.py`。
 - Windows 可用 `scripts/windows.ps1 -Action test`；无 py 时自动发现实际 Python，也支持 -Python。v0.1.1 已在本机 Windows 离线验证，真实微信仍未接入。
 - 适配器、模型、记忆分离；运行时模型没有工具、shell、文件或配置修改权限。

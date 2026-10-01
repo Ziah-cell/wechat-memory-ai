@@ -7,6 +7,7 @@ import argparse
 from dataclasses import dataclass
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -18,6 +19,22 @@ import uuid
 
 class ReadError(RuntimeError):
     pass
+
+
+_NATIVE_REASONS = frozenset({
+    'client_unavailable', 'process_inspection_failed', 'window_discovery_failed',
+    'private_window_not_unique', 'window_minimized', 'window_binding_unavailable',
+    'window_or_list_changed', 'message_tree_unavailable', 'message_list_unavailable',
+    'message_rows_unavailable', 'layout_unavailable', 'capabilities_unavailable', 'native_reader_failed',
+})
+
+_STOP_REASONS = _NATIVE_REASONS | frozenset({
+    'invalid_snapshot', 'reader_unavailable', 'independent_private_chat_required',
+    'window_or_list_changed', 'message_continuity_lost', 'message_token_reused',
+    'session_token_limit', 'windows_required', 'invalid_client_path',
+    'reader_build_failed', 'reader_cleanup_failed', 'native_reader_unavailable',
+    'interrupted', 'read_failed', 'native_reader_timeout',
+})
 
 
 @dataclass(frozen=True)
@@ -58,6 +75,79 @@ def validate_snapshot(raw):
     return identity, rows
 
 
+def layout_report(raw):
+    """Inspect geometry availability, never infer a sender or expose row identity."""
+    if (not isinstance(raw,dict) or raw.get('status') != 'layout_snapshot'
+            or not isinstance(raw.get('rows'),list) or len(raw['rows']) > 256):
+        raise ReadError('invalid_snapshot')
+    text_rows = []
+    validation_rows = []
+    for row in raw['rows']:
+        if not isinstance(row,dict) or set(row) != {
+                'token','kind','left_gap','right_gap','width_ratio','has_children'}:
+            raise ReadError('invalid_snapshot')
+        for field in ('left_gap','right_gap','width_ratio'):
+            value = row[field]
+            if type(value) not in (int,float) or not -100 <= value <= 100 or not math.isfinite(value):
+                raise ReadError('invalid_snapshot')
+        if row['width_ratio'] <= 0 or type(row['has_children']) is not bool:
+            raise ReadError('invalid_snapshot')
+        validation_rows.append(dict(token=row['token'],kind=row['kind'],text=''))
+        if row['kind'] == 'text':
+            text_rows.append(row)
+    # Reuse the strict binding, token, row-count and kind contract without
+    # requesting or retaining message names in the layout provider.
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+    return dict(status='layout_observed',rows=len(raw['rows']),text_rows=len(text_rows),
+                full_width_text_rows=sum(abs(r['left_gap']) <= 0.01 and abs(r['right_gap']) <= 0.01
+                                         and abs(r['width_ratio']-1) <= 0.02 for r in text_rows),
+                text_rows_with_children=sum(r['has_children'] for r in text_rows),
+                sender_verified=False,history_boundary_verified=False,
+                real_send_supported=False,model_called=False)
+
+
+def capability_report(raw):
+    """Count UIA metadata/pattern availability, without exporting its values."""
+    extras={'scroll_pattern','vertical_scrollable','vertical_scroll_percent','distinct_automation_ids'}
+    flags={'automation_id','help_text','item_status','item_type','labeled_by','text_pattern'}
+    if (not isinstance(raw,dict) or raw.get('status') != 'capability_snapshot'
+            or not extras <= set(raw) or not isinstance(raw.get('rows'),list)
+            or len(raw['rows']) > 256 or type(raw['scroll_pattern']) is not bool):
+        raise ReadError('invalid_snapshot')
+    percent=raw['vertical_scroll_percent']
+    scrollable=raw['vertical_scrollable']
+    if raw['scroll_pattern']:
+        if (type(scrollable) is not bool or type(percent) not in (int,float)
+                or not -1 <= percent <= 100 or not math.isfinite(percent)
+                or (scrollable and percent < 0) or (not scrollable and percent != -1)):
+            raise ReadError('invalid_snapshot')
+        bottom=not scrollable or percent == 100
+    else:
+        if percent is not None or scrollable is not None:
+            raise ReadError('invalid_snapshot')
+        bottom=None
+    validation_rows=[]
+    for row in raw['rows']:
+        if (not isinstance(row,dict) or set(row) != flags | {'token','kind'}
+                or any(type(row[key]) is not bool for key in flags)):
+            raise ReadError('invalid_snapshot')
+        validation_rows.append(dict(token=row['token'],kind=row['kind'],text=''))
+    validation={k:v for k,v in raw.items() if k not in extras}
+    validate_snapshot(dict(validation,status='snapshot',rows=validation_rows))
+    report={key+'_rows':sum(row[key] for row in raw['rows']) for key in flags}
+    distinct=raw['distinct_automation_ids']
+    if (type(distinct) is not int or not 0 <= distinct <= report['automation_id_rows']
+            or (distinct == 0) != (report['automation_id_rows'] == 0)):
+        raise ReadError('invalid_snapshot')
+    report.update(status='capabilities_observed',rows=len(raw['rows']),
+                  distinct_automation_ids=distinct,
+                  text_rows=sum(row['kind']=='text' for row in raw['rows']),
+                  scroll_pattern=raw['scroll_pattern'],bottom_observed=bottom,
+                  sender_verified=False,history_boundary_verified=False,
+                  real_send_supported=False,model_called=False)
+    return report
+
+
 class ReadSession:
     def __init__(self):
         self._identity = None
@@ -67,7 +157,16 @@ class ReadSession:
         self._sequence = 0
         self._texts = 0
         self._snapshots = 0
+        self._front_evictions = 0
+        self._stop_reason = None
         self._state = 'waiting'
+
+    def stop(self, reason):
+        # Preserve the first failure, including when the CLI catches the
+        # sanitized exception raised by accept(). Never expose arbitrary text.
+        if self._state != 'stopped':
+            self._stop_reason = reason if isinstance(reason,str) and reason in _STOP_REASONS else 'read_failed'
+            self._state = 'stopped'
 
     def accept(self, raw):
         if self._state == 'stopped':
@@ -113,16 +212,23 @@ class ReadSession:
                 if kind == 'text' and text.strip():
                     self._texts += 1
                     observations.append(Observation(self._epoch+':'+str(self._sequence),text))
+            if overlap < len(self._rows):
+                self._front_evictions += 1
             self._rows = current
             self._seen_tokens.update(new_tokens)
             self._snapshots += 1
             return observations
-        except (ReadError, TypeError, ValueError):
-            self._state = 'stopped'
+        except ReadError as error:
+            self.stop(str(error))
+            raise ReadError('read_session_stopped') from None
+        except (TypeError, ValueError):
+            self.stop('invalid_snapshot')
             raise ReadError('read_session_stopped') from None
 
     def report(self):
         return dict(status=self._state, snapshots=self._snapshots,
+                    stop_reason=self._stop_reason, front_evictions=self._front_evictions,
+                    seen_tokens=len(self._seen_tokens),
                     window_bound=self._identity is not None,
                     observed_new_rows=self._sequence, observed_new_texts=self._texts,
                     sender_verified=False, server_message_ids_available=False,
@@ -174,21 +280,44 @@ class NativeReader:
             finally:
                 self._temporary = None
 
-    def read(self):
+    def read(self, *, layout=False, capabilities=False):
         try:
-            done = subprocess.run([str(self.executable),self.client_path],
+            if layout and capabilities:
+                raise ReadError('invalid_snapshot')
+            command = [str(self.executable),self.client_path]
+            if layout:
+                command.append('--layout')
+            if capabilities:
+                command.append('--capabilities')
+            done = subprocess.run(command,
                                   input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=8,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-            if done.returncode or len(done.stdout) > 4_000_000:
-                raise ReadError('native_reader_failed')
+            if len(done.stdout) > 4_000_000:
+                raise ReadError('native_reader_unavailable')
             raw = json.loads(done.stdout.decode('utf-8-sig'))
-            validate_snapshot(raw)
+            if done.returncode:
+                if (done.returncode == 3 and isinstance(raw,dict)
+                        and set(raw) == {'status','reason'} and raw['status'] == 'reader_error'
+                        and isinstance(raw['reason'],str) and raw['reason'] in _NATIVE_REASONS):
+                    raise ReadError(raw['reason'])
+                raise ReadError('native_reader_unavailable')
+            try:
+                if layout:
+                    layout_report(raw)
+                elif capabilities:
+                    capability_report(raw)
+                else:
+                    validate_snapshot(raw)
+            except ReadError:
+                raise ReadError('native_reader_unavailable') from None
             binding = {key:raw[key] for key in ('process','started','window','root','list_token')}
             if self._binding is not None and binding != self._binding:
-                raise ReadError('bound_window_changed')
+                raise ReadError('window_or_list_changed')
             self._binding = binding
             return raw
-        except (OSError,subprocess.TimeoutExpired,ValueError,TypeError,RecursionError,ReadError):
+        except subprocess.TimeoutExpired:
+            raise ReadError('native_reader_timeout') from None
+        except (OSError,ValueError,TypeError,RecursionError):
             raise ReadError('native_reader_unavailable') from None
 
 
@@ -196,12 +325,21 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description='Read only one independent WeChat private-chat window.')
     parser.add_argument('--client-path',required=True)
     parser.add_argument('--seconds',type=int,default=30)
+    inspections=parser.add_mutually_exclusive_group()
+    inspections.add_argument('--inspect-layout',action='store_true',help='Report geometry counts without reading message text.')
+    inspections.add_argument('--inspect-capabilities',action='store_true',help='Report UIA metadata availability without exporting its values.')
     args = parser.parse_args(argv)
     if not 1 <= args.seconds <= 300:
         parser.error('seconds must be between 1 and 300')
     session = ReadSession()
     try:
         with NativeReader(args.client_path) as reader:
+            if args.inspect_layout:
+                print(json.dumps(layout_report(reader.read(layout=True)),sort_keys=True),flush=True)
+                return 0
+            if args.inspect_capabilities:
+                print(json.dumps(capability_report(reader.read(capabilities=True)),sort_keys=True),flush=True)
+                return 0
             deadline = time.monotonic()+args.seconds
             while True:
                 session.accept(reader.read())
@@ -210,8 +348,8 @@ def main(argv=None):
                     break
                 time.sleep(1)
         return 0
-    except (ReadError,KeyboardInterrupt):
-        session._state = 'stopped'
+    except (ReadError,KeyboardInterrupt) as error:
+        session.stop('interrupted' if isinstance(error,KeyboardInterrupt) else str(error))
         print(json.dumps(session.report(),sort_keys=True),flush=True)
         return 3
 

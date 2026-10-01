@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-01",
+  "version": "0.1.7",
+  "client_version": "4.1.15.50",
+  "live_continuity_passed": false,
+  "latest_live_monitor": {
+    "source": "92-live-native-diagnostic-monitor.txt",
+    "accepted_snapshots": 85,
+    "accepted_front_evictions": 1,
+    "accepted_new_rows": 2,
+    "accepted_new_texts": 1,
+    "matching_test_observations": 1,
+    "first_append_overlap": 7,
+    "rejected_append_overlap": 8,
+    "stop_reason": "message_token_reused",
+    "failed_batch_counters_unchanged": true
+  },
+  "layout": {
+    "source": "95-live-layout.json",
+    "rows": 9,
+    "text_rows": 7,
+    "full_width_text_rows": 7,
+    "text_rows_with_children": 0
+  },
+  "capabilities": {
+    "source": "101-live-identifier-capabilities.json",
+    "rows": 9,
+    "text_rows": 7,
+    "automation_id_rows": 7,
+    "distinct_automation_ids": 1,
+    "text_row_automation_id_cross_distribution": "not_recorded",
+    "help_text_rows": 0,
+    "item_status_rows": 0,
+    "item_type_rows": 0,
+    "labeled_by_rows": 0,
+    "text_pattern_rows": 0,
+    "scroll_pattern": false,
+    "bottom_observed": null
+  },
+  "earlier_attempts": {
+    "84": "stopped_without_specific_reason",
+    "87": "interrupted_after_baseline_incomplete",
+    "88": "baseline_failed_tool_also_reported_minimized",
+    "89": "stopped_without_specific_native_reason"
+  },
+  "unit_regression": {
+    "source": "102-live-diagnostics-full-suite.txt",
+    "tests": 150,
+    "seconds": 77.271,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "sender_verified": false,
+  "history_boundary_verified": false,
+  "server_message_ids_available": false,
+  "automatic_reply_ready": false,
+  "engine_connected": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_messages_sent_this_stage": 0,
+  "raw_messages_or_identifiers_saved": false,
+  "new_dependencies_installed": false,
+  "msaa_retried": false
+}

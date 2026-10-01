@@ -1,8 +1,18 @@
-# Windows 测试结果（当前 v0.1.6）
+# Windows 测试结果（当前 v0.1.7）
 
 执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.6 监听连续性修复
+## v0.1.7 真实监听与停止诊断
+
+通过 Windows 项目入口 `scripts/windows.ps1 -Action test -Python <现有解释器>` 执行完整 **150/150，77.271秒，0失败/错误/跳过**：[102](evidence/102-live-diagnostics-full-suite.txt)。产品逻辑测试后仅更新版本和文档；`pyproject.toml` 与运行时版本为0.1.7，未安装依赖、构建新包或生成ZIP。
+
+新增14项诊断用例，定向 **33/33，6.412秒**：[100](evidence/100-identifier-count-targeted.txt)。覆盖固定原因白名单、首次原因不覆盖、接受计数原子性、中断/原生错误/超时、布局与能力模式、严格协议和极大整数边界。先失败/修复证据：85→86、90→91、93→94、96→97、99→100，均保留于 evidence。定向命令为设置 `PYTHONPATH=src` 后 `python -m unittest discover -s tests -p test_live_read.py -v`。
+
+独立只读审查定向 **33/33，6.559秒**，无待修复代码发现。审查指出两个独立汇总不能推断逐行交叉关系，文档已修正；详见 [审查记录](evidence/104-live-diagnostics-review.json)。
+
+实机验收**未通过**：证据92记录第一条接受、第二条因 RuntimeId 复用停止；95/101记录全宽无子控件、共享 AutomationId 及缺少发送方/滚动能力。84和89为未定位旧格式错误，87为中断的未完成尝试，88基线失败时工具另报窗口最小化。程序测试通过不改变这些结果，详见 [LIVE_READ.md](LIVE_READ.md)。本轮未发送、调用模型或写入记忆，尚不能开始自动回复。
+
+## v0.1.6 监听连续性修复（历史记录）
 
 保留原 6 项新增回归，先复现 19 项、6 errors（一个测试的两个子例），合法顶部移除触发旧前缀检查拒绝：[79](evidence/79-live-overlap-red.txt)。实现后定向 **19/19，1.875 秒**：[80](evidence/80-live-overlap-targeted.txt)；完整 **136/136，30.124 秒，0 失败/错误/跳过**：[81](evidence/81-live-overlap-full-suite.txt)。
 

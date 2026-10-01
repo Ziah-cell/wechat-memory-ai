@@ -1,10 +1,26 @@
-# v0.1.6 微信独立只读连接
+# v0.1.7 微信独立只读连接
+
+**当前连续监听未通过，尚不能开始自动回复。** 新增诊断已定位真实 RuntimeId 复用；当前 UIA 元数据不足以验证发送方和历史边界。下面保留固定文本收发与先前修复的历史记录，最新结果见本节和证据92、95、101。
 
 2026-10-01，用户本人完成登录后，实际微信 4.1.15.50 的独立测试私聊窗口能提供消息控件。Computer Use 和项目独立程序均读取成功。初次窗口有 8 个列表项、5 个文本项；原生程序连续 3 次读取并保持同一绑定，没有把已有文字输出为新增观察。证据：[69](evidence/69-live-read-initial.json)、[73](evidence/73-live-read-bound-snapshots.json)。
 
 随后已完成一次真实双向固定文本验收：两条相同来信显示为两个独立左侧气泡，原生读取器也读到两个文本项；用户明确授权的一条固定回复通过 Computer Use 点击一次发送，观察到唯一右侧绿色回复、输入框清空，用户确认收到。该次授权已用完。测试文字核对仅忽略用户省去的空格，不改写真实文本或合并相同文本。脱敏证据：[78](evidence/78-live-exchange.json)。没有调用真实模型、启用自动回复或开发项目发送适配器。
 
-旧有界监听器在 8 行变 9 行、保留旧列表末尾 6 行并追加时间行与两条文本时停止，**没有返回新增观察**。v0.1.6 针对此变化修复 Python 状态机，使用虚构快照回归；本阶段未再次读取或操作真实微信，修复后的真实新消息连续监听尚未验收。
+旧有界监听器在 8 行变 9 行、保留旧列表末尾 6 行并追加时间行与两条文本时停止，**没有返回新增观察**。v0.1.6 针对此变化修复 Python 状态机并通过虚构快照回归，后续实机结果如下。
+
+## 本轮实机结果
+
+| 检查 | 真实结果 |
+|---|---|
+| 首次连续监听 | 25次接受快照、2新增行/1新增文本后停止；旧格式无原因，不能推断，见[84](evidence/84-live-continuity-monitor.txt) |
+| 中断和恢复 | [87](evidence/87-live-diagnostic-monitor.txt)只有基线，因用户中断未完成；[88](evidence/88-live-resumed-diagnostic-monitor.txt)未建立基线，当时 Computer Use 报告窗口最小化，恢复窗口后再读；[89](evidence/89-live-restored-monitor.txt)接受54次后报旧格式 generic error，原因未知 |
+| 新诊断下的两条相同来信 | 第一条接受：7行连续重叠，顶部移除1次，新增2行/1文本。第二条8行连续重叠，但追加项复用已见token，整批因 `message_token_reused` 停止，计数保持不变。见[92](evidence/92-live-native-diagnostic-monitor.txt) |
+| 几何与子控件 | 9行中7文本，7文本均横跨列表全宽，无子控件；无法按行位置识别方向。见[95](evidence/95-live-layout.json) |
+| UIA 元数据 | 9行中7行有非空 AutomationId，不同值只有1个；另有7个文本行，两项汇总不推断逐行交叉分布。全部行均无 HelpText、ItemStatus、ItemType、LabeledBy、TextPattern，列表无 ScrollPattern，`bottom_observed=null`。见[101](evidence/101-live-identifier-capabilities.json) |
+
+以上表明当前 RuntimeId 与 AutomationId 均不能直接作为消息身份，连续监听、自身过滤和历史边界仍不满足自动回复前提。默认保护保持停止，不自动重建基线、替换ID或重试。不要求重登或重复已完成的固定回复验收。本轮真实发送数为0；没有调用模型或写入记忆。
+
+免费上游的 `is_my_bubble` 使用头像区域/绿色像素启发式，而非可验证的发送方字段。该源码是路线参考，不是本机正确性证据；本项目未安装或执行它。若继续视觉路线，需独立处理遮挡、裁切、主题、长消息与历史滚动反例，并保留未知状态，不能将“未发现右侧绿色”直接当作来信。[上游源码](https://raw.githubusercontent.com/Hello-Mr-Crab/pywechat/main/src/pyweixin/WeChatTools.py)（2026-10-01查阅）。
 
 ## 运行
 
@@ -17,6 +33,19 @@
 时长可设 1–300 秒；Ctrl+C 停止。首次建立基线，之后每秒尝试读取一次；系统 UIA 单次调用可能使实际间隔变长。编译最多 25 秒，每次读取最多 8 秒，异常即停止。源码入口是 `scripts/listen-wechat.py`，安装后的命令为 `wechat-memory-listen --client-path ... --seconds 30`。
 
 `status=reading` 与 `window_bound=true` 表示当前窗口已绑定；`observed_new_rows/texts` 是相对于基线新增的 UI 列表项/文本项计数。初始化时列表为空则保持 `initializing`，首批非空行只建立基线。正常结束退出码 0，读取失败或中止为 3；退出码 0 不表示真实收发验收通过。
+
+`stop_reason` 在正常读取时为 null，停止时只输出固定错误代码。第一次停止原因保留，未知异常转为 `read_failed`；不输出异常正文。`front_evictions` 只累计接受的顶部移除，`seen_tokens` 包含基线及已移出项；失败批次不增加计数。
+
+原生读取可报告 `window_minimized`、`private_window_not_unique`、`window_or_list_changed`、`message_tree_unavailable` 等固定阶段代码；阶段代码表示失败位置，不一定能解释底层根因。超过子进程8秒时为 `native_reader_timeout`；坏输出、未知代码仍为 `native_reader_unavailable`。
+
+新增两个互斥的单次检查（用本机Python路径设置 `$Python`）：
+
+```powershell
+& $Python scripts/listen-wechat.py --client-path 'D:\软件\Weixin\Weixin.exe' --inspect-layout
+& $Python scripts/listen-wechat.py --client-path 'D:\软件\Weixin\Weixin.exe' --inspect-capabilities
+```
+
+两者均在限定窗口绑定下运行，不读取消息 Name，不观察新增消息。布局检查只报告文本行全宽/有子控件的数量；能力检查只报告属性/模式存在数量和非空 AutomationId 的不同值数量，不输出其原值。`bottom_observed` 仅在有有效 ScrollPattern 时表达当前滚动位置，**即使为 true 也不证明历史同步完成**。诊断成功退出码0不改变发送方/历史/发送能力标志。
 
 不使用 `config.toml`、API Key 或 OCR 环境，不调用模型、不写入记忆。默认输出没有聊天正文或联系人信息。核心的 `run` 仍为控制台模拟器；这条独立连接没有隐藏的发送开关。
 
@@ -38,9 +67,15 @@ RuntimeId 只用于同一运行中 UI 实例的比较，可能被复用；Automa
 
 采样间发生又恢复的变化可能不可见；初始非空列表后续仍可能追加同步的历史记录。因此“新增观察”不等于已证明的新到达微信消息，`history_boundary_verified=false`。发送方方向未取得可靠证据，`sender_verified=false`；当前不会把任何观察自动交给模型、记忆或发送器。
 
-两条相同来信和一次固定回复的人工实机验收已通过，但目视左右方向不等于程序已具备可靠的发送方识别。修复后的连续监听、历史边界、自身过滤、另一联系人切换、跨重启、锁屏/最小化/RDP 和长期稳定性仍待实测。此前不能读取 UI 的原因没有确定，不把本次成功推广到其他账号/版本。
+两条相同来信和一次固定回复的人工实机验收已通过，但目视左右方向不等于程序已具备可靠的发送方识别。连续监听实测因token复用失败；历史边界、自身过滤、另一联系人切换、跨重启、锁屏/RDP 和长期稳定性仍待验证。本轮观察过最小化导致窗口状态不可取及恢复后的读取，但没有完成最小化/恢复全过程的产品验收。此前不能读取 UI 的原因没有确定，不把本次结果推广到其他账号/版本。
 
 ## 验证
+
+v0.1.7 新增14项用例，定向33项通过，见[100](evidence/100-identifier-count-targeted.txt)。覆盖首次停止原因、计数原子性、未知异常脱敏、CLI传播/中断、原生阶段代码与超时、布局/能力严格协议、无模式不能声称到底、极大整数/非有限几何拒绝、检查模式绑定与历史隔离。完整回归与独立审查以 [TEST_RESULTS.md](TEST_RESULTS.md) 为准。
+
+失败/修复配对：[85/86](evidence/85-live-diagnostics-red.txt)、[90/91](evidence/90-native-diagnostics-red.txt)、[93/94](evidence/93-layout-red.txt)、[96/97](evidence/96-capabilities-red.txt)、[99/100](evidence/99-identifier-count-red.txt)。真实失败证据不会因程序测试通过而改写。
+
+以下为 v0.1.6 验证记录：
 
 v0.1.6 新增 6 项回归，覆盖顶部移除后两条相同文本、锚点/追加要求、旧 token 重现（含正文变化及完整前缀追加）、4096 上限与批次原子性、重启不回放。实现前 19 项、6 errors（其中一个测试有两个失败子例）：[79](evidence/79-live-overlap-red.txt)。实现后 19/19、1.875 秒：[80](evidence/80-live-overlap-targeted.txt)；完整 136/136、30.124 秒、0 失败/错误/跳过：[81](evidence/81-live-overlap-full-suite.txt)。这些是虚构数据回归，不代替修复后的真实新消息监听验收。
 
