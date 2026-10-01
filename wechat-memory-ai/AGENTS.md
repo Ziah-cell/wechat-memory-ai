@@ -1,6 +1,6 @@
 # 项目开发约定
 
-- 需求以 CODEX_TASK.md 与用户本轮范围为准。离线核心、UIA 结构诊断、v0.1.3 回调队列与 offline-check 已完成；真实消息监听尚未接入。用户决定先独立开发，第二个号登录放到后续，不主动启动或探测真实微信。
+- 需求以 CODEX_TASK.md 与用户本轮范围为准。离线核心、UIA 结构诊断、v0.1.3 回调队列与 offline-check 已完成；用户现已确认第二个号和测试好友窗口准备好，授权只读实测。当前 4.1.15.50 的两个可见窗口各仅暴露 8 个基础控件，真实身份/消息监听尚未验证，详见 docs/LIVE_UIA_CHECK.md。禁止真实发送，不接管登录。
 - Python >=3.11，核心与测试只用标准库。测试：`python scripts/test.py`。
 - Windows 可用 `scripts/windows.ps1 -Action test`；无 py 时自动发现实际 Python，也支持 -Python。v0.1.1 已在本机 Windows 离线验证，真实微信仍未接入。
 - 适配器、模型、记忆分离；运行时模型没有工具、shell、文件或配置修改权限。

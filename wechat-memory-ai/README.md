@@ -2,7 +2,9 @@
 
 当前聊天入口是**控制台模拟器**。v0.1.2 增加独立 Windows UIA 结构诊断，尚无真实微信消息监听或发送。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。
 
-v0.1.3 增加异步回调队列和一键离线演练，第二个微信号登录留到后续。现在可运行 `.\scripts\windows.ps1 -Action offline-check`，用临时数据库和假模型验证回调、过滤、去重与停止边界；不读取个人配置或操作真实微信。详见 [docs/OFFLINE_CHECK.md](docs/OFFLINE_CHECK.md)。
+v0.1.3 增加异步回调队列和一键离线演练。现在可运行 `.\scripts\windows.ps1 -Action offline-check`，用临时数据库和假模型验证回调、过滤、去重与停止边界；不读取个人配置或操作真实微信。详见 [docs/OFFLINE_CHECK.md](docs/OFFLINE_CHECK.md)。
+
+最新实机结果：用户已完成登录准备，检测到微信 4.1.15.50。只读 UIA 仅看到基础窗口控件，尚无联系人/消息控件证据，当前不能启用真实监听。详见 [docs/LIVE_UIA_CHECK.md](docs/LIVE_UIA_CHECK.md)。
 
 本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
 
@@ -153,7 +155,7 @@ JSON 中 `text` 可包含 `\n`。不填写时间时会被标记为“刚输入�
 
 ## 微信只读诊断
 
-登录实测已按用户安排留到后续。届时本人启动现有微信、登录受控的第二个普通个人号，并打开唯一测试好友后，可执行：
+用户已确认本次登录准备完成。以下是只读结构探测命令，当前实机结果见上方说明：
 
 ```powershell
 .\scripts\windows.ps1 -Action probe-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe'

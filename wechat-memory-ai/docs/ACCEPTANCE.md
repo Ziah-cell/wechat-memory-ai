@@ -1,6 +1,6 @@
 # 本轮验收
 
-当前 v0.1.3：按用户安排先完成独立开发，第二个号登录延后。完整 97 项离线测试通过；新增回调队列、纯模拟一键演练和 Windows 入口，详见 [OFFLINE_CHECK.md](OFFLINE_CHECK.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
+当前代码 v0.1.3，完整 97 项离线测试通过。用户已确认登录与测试窗口准备好；真实 4.1.15.50 的 UIA 只暴露基础控件，身份/消息接入未通过，详见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。回调队列与纯模拟验收详见 [OFFLINE_CHECK.md](OFFLINE_CHECK.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
 
 | 任务书要求 | 实现/实际结果 | 证据 |
 |---|---|---|
@@ -14,6 +14,7 @@
 | 回调工作线程与单线程 SQLite | 有界队列，只有创建线程可消费；默认 128 条 | test_callback_inbox |
 | 订阅撤销/溢出/关闭 | 旧回调失效、积压清空、不自动补发；已交出事件不能撤回 | test_callback_inbox；真实来源未接入 |
 | 无需登录的一键演练 | offline-check 使用内置假消息/假模型/临时 SQLite，不读取个人配置 | evidence/42、43、44 |
+| 登录后的正常 UIA 读取 | 4.1.15.50 两个可见窗口各仅 8 个基础控件，无消息/身份控件证据；真实接入阻塞 | evidence/45、46、47 |
 | 假模型与可替换接口 | 已实现，真实 HTTP 可选并默认禁止 | models.py、test_models |
 | 上下文窗口与摘要 | 有界历史/摘录和有限相关记忆 | test_engine、test_memory |
 | 长期偏好、事件、来源与时间 | 显式指令写入；普通临时对话不固化 | test_memory |

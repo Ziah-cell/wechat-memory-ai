@@ -1,0 +1,16 @@
+{
+  "client_version": "4.1.15.50",
+  "matching_processes": 5,
+  "visible_top_level_windows": 2,
+  "main_window_count": 1,
+  "main_windows": [
+    {
+      "visible": true,
+      "minimized": false,
+      "foreground": true,
+      "in_visible_inventory": true
+    }
+  ],
+  "names_or_text_read": false,
+  "window_actions": false
+}

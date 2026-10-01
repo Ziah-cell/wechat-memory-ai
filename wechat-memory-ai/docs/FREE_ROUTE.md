@@ -4,7 +4,7 @@
 
 ## 当前可用阶段
 
-v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 独立结构探针，并增加有界回调队列与 offline-check 纯模拟演练。完整 97 项测试通过。用户已将第二个号登录放到后续，当前不主动操作真实微信。真实消息适配器尚未完成，不能把结构诊断或模拟回调说成已接通个人微信。
+v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 独立结构探针，并增加有界回调队列与 offline-check 纯模拟演练。完整 97 项测试通过。用户现已确认登录/测试窗口准备完成，实际客户端版本为 4.1.15.50；两个可见窗口各只有 8 个基础控件，没有联系人/消息控件证据，详见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。真实消息适配器尚未完成，不能把结构诊断或模拟回调说成已接通个人微信。
 
 ## 实际发行包核验（2026-10-01 补充）
 
@@ -21,7 +21,7 @@ v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 
 
 发行包声明 Python >=3.10，直接依赖包括 emoji、PyAutoGUI、pycaw、pywin32、pywin32-ctypes、pywinauto、psutil、Pillow、sounddevice、soundfile、packaging。没有为结构诊断安装这些依赖。发行包内 pyweixin/__init__.py 与固定仓库提交字节不一致，包内未包含仓库新增的 Notes2MD.py；不能用仓库当前功能声明替代发行文件的验证。[固定 PyPI 版本页](https://pypi.org/project/pywechat127/1.9.8/) 写的是微信 4.1.6.x，也不是本机 4.1.15.13 兼容证明。
 
-本阶段选择独立实现的 Windows 原生 UIA 结构探针，具体边界见 [READ_ONLY_PROBE.md](READ_ONLY_PROBE.md)。本机实际结果 not_running；用户尚需本人登录才能核验 UI 树，暂不实现真实消息监听。
+发行包核验阶段选择独立实现的 Windows 原生 UIA 结构探针，具体边界见 [READ_ONLY_PROBE.md](READ_ONLY_PROBE.md)。当时结果为 not_running；后续用户确认登录后已补查真实窗口，结果见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)，仍不足以实现真实消息监听。
 
 ## 免费候选重新核验
 

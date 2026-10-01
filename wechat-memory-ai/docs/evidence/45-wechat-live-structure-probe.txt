@@ -1,0 +1,1 @@
+{"client_version": "4.1.15.50", "control_types": {"50000": 4, "50032": 1, "50033": 2, "50037": 1}, "identity_verified": false, "limited": false, "listener_ready": false, "login_state": "unverified", "nodes": 8, "onscreen_nodes": 3, "process_count": 5, "real_send_supported": false, "schema_version": 1, "status": "structure_observed", "window_count": 1}

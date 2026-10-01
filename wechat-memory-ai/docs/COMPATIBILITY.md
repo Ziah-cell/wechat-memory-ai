@@ -2,9 +2,11 @@
 
 查阅日期：2026-10-01（Asia/Shanghai）。以下“文档声明”与“本机实测”严格区分。v0.1.0 在 Linux 验证；v0.1.1 已在用户 Windows 电脑补验。
 
-v0.1.3 补充：回调队列与 offline-check 纯模拟演练已在同一 Windows/Python 环境通过，完整 97 项测试通过，未新增依赖。第二个号登录按用户安排延后，本阶段没有新的真实微信探测；下方 not_running 是 v0.1.2 当时记录，不代表此刻进程状态。
+最新实机补充：用户已确认登录及测试好友窗口准备好，现有客户端文件版本为 **4.1.15.50**。两个可见顶层窗口各仅暴露 8 个 Window/Pane/TitleBar/Button 控件，没有列表/文本控件；主窗口前台且未最小化。当前没有可用于真实消息接入的 UIA 证据，身份和监听仍未验证。详见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。本轮没有修改或升降级微信。
 
-## v0.1.2 当前补充
+v0.1.3 独立开发阶段的回调队列与 offline-check 已在同一 Windows/Python 环境通过，完整 97 项测试通过，未新增依赖。该阶段登录曾延后；下方 not_running 是 v0.1.2 当时记录，不代表最新实机状态。
+
+## v0.1.2 历史补充
 
 当前新增独立 Windows 原生 UIA 结构探针，不是消息适配器。完整 84 项测试通过，其中真实 UIA 测试对象为虚构 WinForms 窗口。现有微信文件 4.1.15.13 的实际探针结果是 **not_running / process_count=0**；登录、真实控件树、身份和消息 ID 未验证。[实机证据](evidence/34-wechat-native-probe.txt)、[探针边界](READ_ONLY_PROBE.md)。
 

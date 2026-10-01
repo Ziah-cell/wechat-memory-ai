@@ -1,0 +1,34 @@
+{
+  "client_version": "4.1.15.50",
+  "names_or_text_read": false,
+  "visible_window_count": 2,
+  "window_actions": false,
+  "windows": [
+    {
+      "scope_changed": false,
+      "is_process_main": true,
+      "control_types": {
+        "50032": 1,
+        "50033": 2,
+        "50037": 1,
+        "50000": 4
+      },
+      "nodes": 8,
+      "onscreen_nodes": 3,
+      "limited": false
+    },
+    {
+      "scope_changed": false,
+      "is_process_main": false,
+      "control_types": {
+        "50032": 1,
+        "50033": 2,
+        "50037": 1,
+        "50000": 4
+      },
+      "nodes": 8,
+      "onscreen_nodes": 3,
+      "limited": false
+    }
+  ]
+}

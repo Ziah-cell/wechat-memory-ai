@@ -2,6 +2,12 @@
 
 执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
+## 登录后只读检查阶段（代码仍 v0.1.3）
+
+用户确认准备后，真实客户端文件为 4.1.15.50，路径匹配 5 个进程。主窗口在前台且未最小化；同一客户端的两个可见顶层窗口各仅 8 个基础 UIA 控件，无列表/文本控件证据，身份/监听未通过。原始脱敏证据为 [45](evidence/45-wechat-live-structure-probe.txt)、[46](evidence/46-wechat-window-metadata.json)、[47](evidence/47-wechat-owned-window-structures.json)，完整说明见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。
+
+重新运行 `.\scripts\windows.ps1 -Action test`：**97/97，24.192 秒，0 失败/错误/跳过**，见 [48-live-probe-stage-regression.txt](evidence/48-live-probe-stage-regression.txt)。这仅确认原有代码回归通过，不能把真实 UIA 控件不足的结果改写为微信兼容通过。本轮没有产品代码改动、真实聊天读取、窗口动作、真实发送或真实模型调用。
+
 ## v0.1.3 独立开发阶段
 
 执行 `.\scripts\windows.ps1 -Action test`：**97/97，23.931 秒，0 失败/错误/跳过**。原始输出：[43-offline-stage-full-suite.txt](evidence/43-offline-stage-full-suite.txt)。已有 84 项全部保持通过，新增 12 项回调/演练用例和 1 项双 PowerShell 入口用例。
