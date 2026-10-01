@@ -1,0 +1,20 @@
+test_candidate_benchmark_exists (test_ocr_candidate.CandidateExistsTests.test_candidate_benchmark_exists) ... FAIL
+test_actual_timeout_terminates_child (test_ocr_candidate.CandidateTests.test_actual_timeout_terminates_child) ... skipped 'candidate benchmark not implemented'
+test_exact_duplicates_are_preserved (test_ocr_candidate.CandidateTests.test_exact_duplicates_are_preserved) ... skipped 'candidate benchmark not implemented'
+test_invalid_outputs_reject_before_scoring (test_ocr_candidate.CandidateTests.test_invalid_outputs_reject_before_scoring) ... skipped 'candidate benchmark not implemented'
+test_report_allowlist_never_exposes_text_or_promotes_identity (test_ocr_candidate.CandidateTests.test_report_allowlist_never_exposes_text_or_promotes_identity) ... skipped 'candidate benchmark not implemented'
+test_subprocess_is_literal_bounded_and_errors_are_sanitized (test_ocr_candidate.CandidateTests.test_subprocess_is_literal_bounded_and_errors_are_sanitized) ... skipped 'candidate benchmark not implemented'
+test_uncertain_text_requires_review_even_when_filter_matches (test_ocr_candidate.CandidateTests.test_uncertain_text_requires_review_even_when_filter_matches) ... skipped 'candidate benchmark not implemented'
+
+======================================================================
+FAIL: test_candidate_benchmark_exists (test_ocr_candidate.CandidateExistsTests.test_candidate_benchmark_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_candidate.py", line 23, in test_candidate_benchmark_exists
+    self.assertIsNotNone(candidate, 'candidate benchmark not implemented')
+AssertionError: unexpectedly None : candidate benchmark not implemented
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+FAILED (failures=1, skipped=6)

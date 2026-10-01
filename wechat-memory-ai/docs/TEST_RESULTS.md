@@ -2,6 +2,14 @@
 
 执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
+## 独立 OCR 候选阶段（核心仍 v0.1.4）
+
+完整回归 **117/117，28.766 秒，0 失败/错误/跳过**，见 [62](evidence/62-ocr-candidate-regression.txt)。新增 9 项标准库测试覆盖重复行、不确定符号、非法分数、报告脱敏/一致性、字面参数、真实子进程超时与 SDK 预过滤关闭。
+
+独立审查提出两项问题：SDK 默认过滤会隐藏部分低分识别项；报告可能在没有过滤时同时声称原始失败、过滤后成功。先补失败回归 [60](evidence/60-ocr-candidate-review-red.txt)，修复后 9 项通过 [61](evidence/61-ocr-candidate-review-fixed.txt)，审查复验已关闭两项问题。
+
+实际候选推理另用 `.ocr-env` 实测，依赖/三个模型哈希核验通过；5 张固定虚构图中深色与空白无需核查，浅色、大字号与真实符号仍需核查。最终 **review_required / 3**，见 [63](evidence/63-ocr-candidate-final.json)。没有真实微信消息读取或发送。候选依赖不加入核心；源码树实验不打包进应用 wheel，详见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。
+
 ## v0.1.4 本地 OCR 可行性诊断
 
 完整回归 **108/108，27.490 秒，0 失败/错误/跳过**，见 [54](evidence/54-ocr-stage-regression.txt)。新增 11 项覆盖固定虚构位图的真实系统 OCR、空白图不通过、结果脱敏、实际超时和双 PowerShell 配置隔离。独立审查无待修复发现。

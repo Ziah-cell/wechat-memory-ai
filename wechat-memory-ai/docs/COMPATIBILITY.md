@@ -2,7 +2,9 @@
 
 查阅日期：2026-10-01（Asia/Shanghai）。以下“文档声明”与“本机实测”严格区分。v0.1.0 在 Linux 验证；v0.1.1 已在用户 Windows 电脑补验。
 
-最新 v0.1.4 在同一机器用系统 Windows OCR 识别内存虚构图片，中文引擎可用，但部分文字误识别，整体 recognition_mismatch。108 项程序测试通过不等于 OCR 或微信接入通过；详见 [OCR_CHECK.md](OCR_CHECK.md)。另一个真实 MSAA 检查在执行前被自动审批拒绝，无结果。
+最新独立 RapidOCR 候选已在项目隔离环境实测，改善固定中文/数字识别，但仍存在误检和符号漏字，报告 review_required。完整 117 项程序回归通过，不能替代真实消息或身份验收；详见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。核心仍为 v0.1.4，无第三方运行依赖。
+
+此前 v0.1.4 在同一机器用系统 Windows OCR 识别内存虚构图片，中文引擎可用，但部分文字误识别，整体 recognition_mismatch。108 项程序测试通过不等于 OCR 或微信接入通过；详见 [OCR_CHECK.md](OCR_CHECK.md)。另一个真实 MSAA 检查在执行前被自动审批拒绝，无结果。
 
 最新实机补充：用户已确认登录及测试好友窗口准备好，现有客户端文件版本为 **4.1.15.50**。两个可见顶层窗口各仅暴露 8 个 Window/Pane/TitleBar/Button 控件，没有列表/文本控件；主窗口前台且未最小化。当前没有可用于真实消息接入的 UIA 证据，身份和监听仍未验证。详见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。本轮没有修改或升降级微信。
 

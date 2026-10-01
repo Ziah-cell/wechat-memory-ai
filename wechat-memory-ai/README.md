@@ -8,6 +8,8 @@ v0.1.3 增加异步回调队列和一键离线演练。现在可运行 `.\script
 
 v0.1.4 增加 `.\scripts\windows.ps1 -Action ocr-check`：只用内存生成的虚构气泡检查 Windows 本地中文 OCR，不读取屏幕或真实聊天。本机引擎可运行，但浅色/大字号样例有识别误差，返回 `recognition_mismatch` / 退出码 3。完整 108 项程序测试通过，不代表 OCR 样例或真实微信接入通过。详见 [docs/OCR_CHECK.md](docs/OCR_CHECK.md)。
 
+后续已在独立 `.ocr-env` 实测免费 RapidOCR 候选，固定样例的中文和字母数字识别改善，但气泡边缘误检与真实符号漏字仍存在，结果为 `review_required` / 退出码 3。新增源码树实验脚本，不改变核心依赖或默认运行流程。当前完整 **117 项测试通过**，真实微信收发仍未接通。详见 [docs/OCR_CANDIDATE.md](docs/OCR_CANDIDATE.md)。
+
 本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
 
 ## 现在如何运行

@@ -1,6 +1,8 @@
 __pycache__/
 *.py[cod]
 .venv/
+.ocr-env/
+.ocr-cache/
 *.egg-info/
 build/
 dist/

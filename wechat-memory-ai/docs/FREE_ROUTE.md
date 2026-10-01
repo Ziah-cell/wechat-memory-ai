@@ -4,6 +4,8 @@
 
 ## 当前可用阶段
 
+最新增加独立 RapidOCR 候选实验：项目 `.ocr-env` 安装免费依赖，核心仍无第三方依赖。固定样例的中文/字母数字识别改善，但过滤误检会漏掉真实符号，结果 **review_required / 3**，不接入自动监听/回复。完整回归 117 项通过；来源、实际结果和局限见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。
+
 最新 v0.1.4 增加系统自带中文 OCR 的纯虚构图片诊断 `ocr-check`，无新增运行依赖。本机引擎可用，但部分样例存在中文和字母数字误差；整体 recognition_mismatch，不接入自动监听或发送。108 项程序测试通过，详见 [OCR_CHECK.md](OCR_CHECK.md)。免费路线不等于只读付费墙，当前限制来自兼容性、识别与身份验证尚未完成。
 
 v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 独立结构探针，并增加有界回调队列与 offline-check 纯模拟演练。完整 97 项测试通过。用户现已确认登录/测试窗口准备完成，实际客户端版本为 4.1.15.50；两个可见窗口各只有 8 个基础控件，没有联系人/消息控件证据，详见 [LIVE_UIA_CHECK.md](LIVE_UIA_CHECK.md)。真实消息适配器尚未完成，不能把结构诊断或模拟回调说成已接通个人微信。
@@ -38,11 +40,11 @@ v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 
 ## 下一阶段的实现顺序
 
 1. 用户已确认受控第二个普通号与唯一测试好友窗口准备好，不重复要求登录，不自动降级客户端。
-2. 已只读检查真实 UIA，暂未得到消息控件；进一步 MSAA 检查被执行策略拒绝，不能作为已验证路线。OCR 已在固定虚构图片验证可运行但存在误差，见 OCR_CHECK.md。
+2. 已只读检查真实 UIA，暂未得到消息控件；进一步 MSAA 检查被执行策略拒绝，不能作为已验证路线。系统 OCR 与隔离 RapidOCR 候选均已在固定虚构图片实测，仍有误差，见 OCR_CHECK.md / OCR_CANDIDATE.md。
 3. 若正常 UI 可见，核验免费依赖的具体发行包与许可，开发独立只读适配器。读取回调进入队列，由单线程核心处理。
 4. 必须取得稳定的会话身份、新消息证据与重启边界。昵称或 OCR 文本本身不足以授权发送；UIA RuntimeId 也不能未经实测当成跨重启消息 ID。
 5. 只在唯一测试好友上做 dry-run；实际收件人和一次发送由用户明确确认后，再单独实现固定文本发送验收。
 
 优先验证 pyweixin 的纯 UI 路线，也可基于 Windows 自带 UI Automation 独立实现最小只读层。若该账号没有可用 UI 树，记录阻塞；OCR 可以作为后续可行性研究，但在身份与去重未可靠解决前不接入自动发送。
 
-Windows UI Automation 的基础访问方式见 [Microsoft 官方说明](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/obtaining-ui-automation-elements)。本次未安装候选库、启动微信、切换联系人或真实收发。
+Windows UI Automation 的基础访问方式见 [Microsoft 官方说明](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/obtaining-ui-automation-elements)。未安装微信适配器；已安装的 OCR 实验依赖仅在项目隔离目录，未启动微信、切换联系人或真实收发。

@@ -2,6 +2,8 @@
 
 2026-10-01，继续免费路线。新增 `ocr-check`，验证 Windows 自带中文 OCR 能否识别固定虚构气泡；它不是微信适配器。
 
+后续已完成隔离 RapidOCR 候选比较，字符识别改善但仍有误检/符号漏字，保持需核查，见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。本页保留系统 OCR 原始结果。
+
 ```powershell
 .\scripts\windows.ps1 -Action ocr-check
 ```
