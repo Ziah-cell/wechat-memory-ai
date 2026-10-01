@@ -54,6 +54,21 @@ class WindowsScriptTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertEqual(self.config.read_bytes(), self.original)
 
+    def test_offline_check_ignores_personal_config_and_keeps_it_unchanged(self):
+        self.config.write_text('[app]\nreal_send = true\nPRIVATE-MARKER\n', 'utf-8')
+        original = self.config.read_bytes()
+        for shell in SHELLS:
+            with self.subTest(shell=shell):
+                result = self.invoke(shell, 'windows.ps1', '-Action', 'offline-check')
+                self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
+                report = json.loads(result.stdout)
+                self.assertEqual(report['status'], 'passed')
+                self.assertEqual(report['source'], 'synthetic_callbacks')
+                self.assertFalse(report['network_enabled'])
+                self.assertFalse(report['real_wechat_verified'])
+                self.assertNotIn(b'PRIVATE-MARKER', result.stdout+result.stderr)
+                self.assertEqual(self.config.read_bytes(), original)
+
     def test_broken_venv_falls_back_to_working_python(self):
         project = Path(self.tmp.name)/'isolated project'
         scripts = project/'scripts'

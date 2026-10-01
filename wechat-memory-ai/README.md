@@ -1,6 +1,8 @@
-# 普通个人微信长期记忆 AI · 只读诊断准备 v0.1.2
+# 普通个人微信长期记忆 AI · 独立接入准备 v0.1.3
 
 当前聊天入口是**控制台模拟器**。v0.1.2 增加独立 Windows UIA 结构诊断，尚无真实微信消息监听或发送。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。
+
+v0.1.3 增加异步回调队列和一键离线演练，第二个微信号登录留到后续。现在可运行 `.\scripts\windows.ps1 -Action offline-check`，用临时数据库和假模型验证回调、过滤、去重与停止边界；不读取个人配置或操作真实微信。详见 [docs/OFFLINE_CHECK.md](docs/OFFLINE_CHECK.md)。
 
 本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
 
@@ -144,13 +146,14 @@ JSON 中 `text` 可包含 `\n`。不填写时间时会被标记为“刚输入�
 | `runtime.py` / `cli.py` | 单实例锁、控制命令、模拟器 |
 | `config.py` / `audit.py` | 严格配置和元数据日志 |
 | `wechat_probe.py` / `uia_*.ps1` | 独立只读结构诊断；不接通消息、身份、模型或 SQLite |
+| `callback_inbox.py` / `offline_check.py` | 有界回调队列、订阅撤销、临时数据的离线演练 |
 | `tests/` | 自动化行为和子进程/本地 HTTP 测试 |
 
 未来 Windows 适配器必须提供稳定消息 ID、真实发送方/会话身份、消息原始发生时间；不能仅凭昵称匹配。还须在实际发送动作前再次验证目标、明确处理未知结果。详见 [docs/WINDOWS_NEXT.md](docs/WINDOWS_NEXT.md)。
 
 ## 微信只读诊断
 
-用户本人启动现有微信、登录受控的第二个普通个人号，并打开唯一测试好友后，可执行：
+登录实测已按用户安排留到后续。届时本人启动现有微信、登录受控的第二个普通个人号，并打开唯一测试好友后，可执行：
 
 ```powershell
 .\scripts\windows.ps1 -Action probe-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe'

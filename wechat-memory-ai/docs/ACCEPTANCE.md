@@ -1,5 +1,7 @@
 # 本轮验收
 
+当前 v0.1.3：按用户安排先完成独立开发，第二个号登录延后。完整 97 项离线测试通过；新增回调队列、纯模拟一键演练和 Windows 入口，详见 [OFFLINE_CHECK.md](OFFLINE_CHECK.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
+
 | 任务书要求 | 实现/实际结果 | 证据 |
 |---|---|---|
 | 独立项目、完整任务书、计划/状态 | 已创建，原任务书保留 | CODEX_TASK.md、AGENTS.md、DESIGN/PLAN/STATUS |
@@ -9,6 +11,9 @@
 | 历史/自身/群聊/非白名单过滤 | 已实现且不调用模型 | test_engine |
 | 持久化去重、重启、不盲重发 | guard 保存状态；处理未完成时终止或待核查 | test_engine |
 | 连发顺序、并发上限 | FIFO 模拟队列、串行处理、max_concurrency=1 | test_engine、test_runtime |
+| 回调工作线程与单线程 SQLite | 有界队列，只有创建线程可消费；默认 128 条 | test_callback_inbox |
+| 订阅撤销/溢出/关闭 | 旧回调失效、积压清空、不自动补发；已交出事件不能撤回 | test_callback_inbox；真实来源未接入 |
+| 无需登录的一键演练 | offline-check 使用内置假消息/假模型/临时 SQLite，不读取个人配置 | evidence/42、43、44 |
 | 假模型与可替换接口 | 已实现，真实 HTTP 可选并默认禁止 | models.py、test_models |
 | 上下文窗口与摘要 | 有界历史/摘录和有限相关记忆 | test_engine、test_memory |
 | 长期偏好、事件、来源与时间 | 显式指令写入；普通临时对话不固化 | test_memory |

@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat')]
+    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check')]
     [string]$Action = 'run',
     [string]$Config = 'config.toml',
     [string]$Path = '',
@@ -56,6 +56,10 @@ Push-Location $ProjectRoot
 try {
     if ($Action -eq 'test') {
         & $PythonExe -X utf8 'scripts/test.py'
+        exit $LASTEXITCODE
+    }
+    if ($Action -eq 'offline-check') {
+        & $PythonExe -X utf8 'scripts/offline-check.py'
         exit $LASTEXITCODE
     }
     if ($Action -eq 'probe-wechat') {

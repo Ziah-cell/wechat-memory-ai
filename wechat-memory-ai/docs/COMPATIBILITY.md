@@ -2,6 +2,8 @@
 
 查阅日期：2026-10-01（Asia/Shanghai）。以下“文档声明”与“本机实测”严格区分。v0.1.0 在 Linux 验证；v0.1.1 已在用户 Windows 电脑补验。
 
+v0.1.3 补充：回调队列与 offline-check 纯模拟演练已在同一 Windows/Python 环境通过，完整 97 项测试通过，未新增依赖。第二个号登录按用户安排延后，本阶段没有新的真实微信探测；下方 not_running 是 v0.1.2 当时记录，不代表此刻进程状态。
+
 ## v0.1.2 当前补充
 
 当前新增独立 Windows 原生 UIA 结构探针，不是消息适配器。完整 84 项测试通过，其中真实 UIA 测试对象为虚构 WinForms 窗口。现有微信文件 4.1.15.13 的实际探针结果是 **not_running / process_count=0**；登录、真实控件树、身份和消息 ID 未验证。[实机证据](evidence/34-wechat-native-probe.txt)、[探针边界](READ_ONLY_PROBE.md)。

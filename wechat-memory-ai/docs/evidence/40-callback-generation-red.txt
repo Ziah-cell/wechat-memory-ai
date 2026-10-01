@@ -1,0 +1,25 @@
+test_bad_or_oversized_events_are_not_retained_or_logged (test_callback_inbox.InboxTests.test_bad_or_oversized_events_are_not_retained_or_logged) ... ok
+test_begin_consume_and_invalid_arguments_cannot_corrupt_owner_state (test_callback_inbox.InboxTests.test_begin_consume_and_invalid_arguments_cannot_corrupt_owner_state) ... ok
+test_callback_to_real_sqlite_engine_stays_on_owner_and_dedup_is_durable (test_callback_inbox.InboxTests.test_callback_to_real_sqlite_engine_stays_on_owner_and_dedup_is_durable) ... ok
+test_callbacks_only_enqueue_then_owner_consumes_fifo_without_coalescing (test_callback_inbox.InboxTests.test_callbacks_only_enqueue_then_owner_consumes_fifo_without_coalescing) ... ok
+test_close_is_terminal_and_discards_backlog (test_callback_inbox.InboxTests.test_close_is_terminal_and_discards_backlog) ... ok
+test_consume_does_not_cross_subscription_generation_and_honors_limit (test_callback_inbox.InboxTests.test_consume_does_not_cross_subscription_generation_and_honors_limit) ... FAIL
+test_consumer_can_invalidate_without_deadlock_and_failure_stops_backlog (test_callback_inbox.InboxTests.test_consumer_can_invalidate_without_deadlock_and_failure_stops_backlog) ... ok
+test_many_producers_only_owner_runs_consumer (test_callback_inbox.InboxTests.test_many_producers_only_owner_runs_consumer) ... ok
+test_overflow_clears_backlog_and_requires_explicit_new_subscription (test_callback_inbox.InboxTests.test_overflow_clears_backlog_and_requires_explicit_new_subscription) ... ok
+test_switch_pause_disconnect_and_restart_invalidate_old_callbacks (test_callback_inbox.InboxTests.test_switch_pause_disconnect_and_restart_invalidate_old_callbacks) ... ok
+test_failure_report_does_not_expose_exception_text (test_callback_inbox.OfflineCheckTests.test_failure_report_does_not_expose_exception_text) ... ok
+test_report_is_offline_sanitized_and_temp_data_removed (test_callback_inbox.OfflineCheckTests.test_report_is_offline_sanitized_and_temp_data_removed) ... ok
+
+======================================================================
+FAIL: test_consume_does_not_cross_subscription_generation_and_honors_limit (test_callback_inbox.InboxTests.test_consume_does_not_cross_subscription_generation_and_honors_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_callback_inbox.py", line 142, in test_consume_does_not_cross_subscription_generation_and_honors_limit
+    self.assertEqual(inbox.consume(replace_subscription, limit=2), 1)
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.149s
+
+FAILED (failures=1)
