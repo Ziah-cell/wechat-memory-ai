@@ -1,0 +1,25 @@
+{
+  "wheel": "wechat_memory_ai-0.1.2-py3-none-any.whl",
+  "packaged_probe_resources": [
+    "wechat_memory/wechat_probe.py",
+    "wechat_memory/uia_probe.ps1",
+    "wechat_memory/uia_support.ps1"
+  ],
+  "installed_module_missing_client_result": {
+    "client_version": "",
+    "control_types": {},
+    "identity_verified": false,
+    "limited": false,
+    "listener_ready": false,
+    "login_state": "unverified",
+    "nodes": 0,
+    "onscreen_nodes": 0,
+    "process_count": 0,
+    "real_send_supported": false,
+    "schema_version": 1,
+    "status": "client_not_found",
+    "window_count": 0
+  },
+  "installed_probe_exit_code": 3,
+  "third_party_runtime_dependencies_installed": false
+}

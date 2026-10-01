@@ -1,10 +1,11 @@
 param(
-    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review')]
+    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat')]
     [string]$Action = 'run',
     [string]$Config = 'config.toml',
     [string]$Path = '',
     [string]$Guard = '',
     [switch]$Confirm,
+    [string]$ClientPath = '',
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'
@@ -55,6 +56,11 @@ Push-Location $ProjectRoot
 try {
     if ($Action -eq 'test') {
         & $PythonExe -X utf8 'scripts/test.py'
+        exit $LASTEXITCODE
+    }
+    if ($Action -eq 'probe-wechat') {
+        if (!$ClientPath) { throw 'Use -ClientPath with the installed Weixin.exe or WeChat.exe.' }
+        & $PythonExe -X utf8 'scripts/probe-wechat.py' --client-path $ClientPath
         exit $LASTEXITCODE
     }
     if (!(Test-Path -LiteralPath $Config)) {

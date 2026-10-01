@@ -1,0 +1,15 @@
+test_actual_child_timeout_is_terminated_without_forwarding_output (test_wechat_probe.NativeProbeTests.test_actual_child_timeout_is_terminated_without_forwarding_output) ... ok
+test_missing_client_both_entry_shells_no_config_or_data_created (test_wechat_probe.NativeProbeTests.test_missing_client_both_entry_shells_no_config_or_data_created) ... ok
+test_native_tree_is_read_only_scoped_and_bounded_with_private_fixture (test_wechat_probe.NativeProbeTests.test_native_tree_is_read_only_scoped_and_bounded_with_private_fixture) ... ok
+test_provider_process_path_scope_with_synthetic_executable (test_wechat_probe.NativeProbeTests.test_provider_process_path_scope_with_synthetic_executable) ... ok
+test_bad_child_exit_json_or_oversize_is_sanitized (test_wechat_probe.ProbeTests.test_bad_child_exit_json_or_oversize_is_sanitized) ... ok
+test_child_is_bounded_and_uses_literal_arguments (test_wechat_probe.ProbeTests.test_child_is_bounded_and_uses_literal_arguments) ... ok
+test_malformed_and_sensitive_provider_fields_fail_closed (test_wechat_probe.ProbeTests.test_malformed_and_sensitive_provider_fields_fail_closed) ... ok
+test_non_windows_never_starts_provider (test_wechat_probe.ProbeTests.test_non_windows_never_starts_provider) ... ok
+test_output_allowlist_never_promotes_structure_to_identity (test_wechat_probe.ProbeTests.test_output_allowlist_never_promotes_structure_to_identity) ... ok
+test_timeout_and_provider_errors_discard_external_details (test_wechat_probe.ProbeTests.test_timeout_and_provider_errors_discard_external_details) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.045s
+
+OK

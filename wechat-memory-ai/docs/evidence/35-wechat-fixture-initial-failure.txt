@@ -1,0 +1,26 @@
+test_actual_child_timeout_is_terminated_without_forwarding_output (test_wechat_probe.NativeProbeTests.test_actual_child_timeout_is_terminated_without_forwarding_output) ... ok
+test_missing_client_both_entry_shells_no_config_or_data_created (test_wechat_probe.NativeProbeTests.test_missing_client_both_entry_shells_no_config_or_data_created) ... ok
+test_native_tree_is_read_only_scoped_and_bounded_with_private_fixture (test_wechat_probe.NativeProbeTests.test_native_tree_is_read_only_scoped_and_bounded_with_private_fixture) ... ok
+test_provider_process_path_scope_with_synthetic_executable (test_wechat_probe.NativeProbeTests.test_provider_process_path_scope_with_synthetic_executable) ... FAIL
+test_bad_child_exit_json_or_oversize_is_sanitized (test_wechat_probe.ProbeTests.test_bad_child_exit_json_or_oversize_is_sanitized) ... ok
+test_child_is_bounded_and_uses_literal_arguments (test_wechat_probe.ProbeTests.test_child_is_bounded_and_uses_literal_arguments) ... ok
+test_malformed_and_sensitive_provider_fields_fail_closed (test_wechat_probe.ProbeTests.test_malformed_and_sensitive_provider_fields_fail_closed) ... ok
+test_non_windows_never_starts_provider (test_wechat_probe.ProbeTests.test_non_windows_never_starts_provider) ... ok
+test_output_allowlist_never_promotes_structure_to_identity (test_wechat_probe.ProbeTests.test_output_allowlist_never_promotes_structure_to_identity) ... ok
+test_timeout_and_provider_errors_discard_external_details (test_wechat_probe.ProbeTests.test_timeout_and_provider_errors_discard_external_details) ... ok
+
+======================================================================
+FAIL: test_provider_process_path_scope_with_synthetic_executable (test_wechat_probe.NativeProbeTests.test_provider_process_path_scope_with_synthetic_executable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_wechat_probe.py", line 150, in test_provider_process_path_scope_with_synthetic_executable
+    self.assertEqual(result['status'], 'structure_observed', result)
+AssertionError: 'no_window' != 'structure_observed'
+- no_window
++ structure_observed
+ : {'schema_version': 1, 'status': 'no_window', 'client_version': '9.9.9.9', 'process_count': 1, 'window_count': 0, 'nodes': 0, 'onscreen_nodes': 0, 'control_types': {}, 'limited': False, 'login_state': 'unverified', 'identity_verified': False, 'listener_ready': False, 'real_send_supported': False}
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.599s
+
+FAILED (failures=1)

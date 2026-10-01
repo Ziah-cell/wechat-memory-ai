@@ -1,6 +1,22 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
-> v0.1.0 历史实施计划。Windows v0.1.1 续开发见 [Windows 实测与修复计划](superpowers/plans/2026-10-01-windows-validation.md)，当前结果以 STATUS.md / TEST_RESULTS.md 为准。
+> v0.1.0 历史实施计划。Windows v0.1.1 续开发见 [Windows 实测与修复计划](superpowers/plans/2026-10-01-windows-validation.md)，当前 v0.1.2 免费只读准备阶段见下节，结果以 STATUS.md / TEST_RESULTS.md 为准。
+
+## v0.1.2 免费只读准备阶段
+
+用户已授权直接推进、按阶段测试并 commit/push 到同一仓库。范围是本人正常登录下的免费 UIA 路线，真实发送禁用；不重复实现核心。
+
+- [x] 核对干净的 implementation 分支、07f4ccb 基线、绑定远程和本机 4.1.15.13 / 未运行状态。
+- [x] 核查 pywechat127 1.9.8 wheel/sdist 依赖/许可/哈希；记录与上游当前源码差异，不安装/导入。
+- [x] 先写失败测试，实现独立 Windows 原生 UIA 结构诊断：进程路径限定、属性白名单、节点/深度/时间上限、不读取正文或操作 UI。
+- [x] 虚构 Windows 窗口与实际子进程回归；完整 84/84；临时隔离构建安装；独立只读审查。
+- [x] 更新状态、实机矩阵和脱敏证据；交付方式仅 GitHub 阶段更新。
+- [ ] 本人登录受控第二个号并确认唯一测试好友后，读取真实 UI 结构并验证稳定身份。
+- [ ] 身份与边界条件满足后，实现只读监听/dry-run；回调排队、SQLite 单处理线程，实测历史/相同文本/重启/自身/重名/窗口切换。
+
+设计与当前限制见 [READ_ONLY_PROBE.md](READ_ONLY_PROBE.md)。未满足实机前提时不虚构 peer/message ID 或把结构探针接入运行时。
+
+## v0.1.0 历史计划正文
 
 > **For agentic workers:** 使用 superpowers:executing-plans 在本会话逐项实现。用户已要求直接开发和运行测试；不再增加需求批准环节。
 

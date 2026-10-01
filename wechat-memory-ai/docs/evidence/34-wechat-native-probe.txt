@@ -1,0 +1,1 @@
+{"client_version": "4.1.15.13", "control_types": {}, "identity_verified": false, "limited": false, "listener_ready": false, "login_state": "unverified", "nodes": 0, "onscreen_nodes": 0, "process_count": 0, "real_send_supported": false, "schema_version": 1, "status": "not_running", "window_count": 0}

@@ -1,6 +1,20 @@
-# 项目状态：Windows 离线核心已验证，真实微信仍未接入
+# 项目状态：免费路线只读诊断已完成，等待本人登录验证
 
-更新日期：2026-10-01（Asia/Shanghai）。当前版本：**0.1.1**。
+更新日期：2026-10-01（Asia/Shanghai）。当前版本：**0.1.2**。
+
+## 当前阶段结果（v0.1.2）
+
+- 已核验 `pywechat127 1.9.8` 实际 wheel/源码包的 SHA-256、依赖与许可文件清单。发行文件没有 LICENSE/COPYING/NOTICE，元数据 LGPLv3 与仓库定制 LGPL 2.1 文本不一致；没有安装、导入或分发候选包。详见 [FREE_ROUTE.md](FREE_ROUTE.md)。
+- 新增 `probe-wechat` 独立诊断命令，使用 Windows 自带 UIA，只输出版本与有界控件结构计数。15 秒超时、256 节点、深度 16；无聊天正文、昵称、二维码、RuntimeId、操作/发送接口，也不加载配置、数据库或模型。
+- **完整 84 项 Windows 测试通过，0 失败、0 错误、0 跳过，22.594 秒**。新增 10 项含真实 Windows UIA 虚构窗口、不同路径同名进程排除、实际子进程超时、输出脱敏与双 PowerShell 入口。证据 [36-wechat-probe-full-suite.txt](evidence/36-wechat-probe-full-suite.txt)。
+- 本项目 0.1.2 wheel 离线构建、临时隔离安装与安装后诊断通过，资源打包完整。仅做临时验证，不发布构建包。证据 [37-wechat-probe-package.json](evidence/37-wechat-probe-package.json)。
+- 独立只读代码审查未发现需修复问题；不将审查或虚构窗口测试当作真实微信兼容证明。
+
+**本机实测前提：微信文件版本仍为 4.1.15.13，实际探针返回 `not_running`、0 个匹配进程。** 证据 [34-wechat-native-probe.txt](evidence/34-wechat-native-probe.txt)。未读取真实聊天，未发送消息，未调用真实模型，未创建自启动/计划任务。
+
+**当前阻塞：** 需要用户本人启动现有微信、扫码登录其控制的第二个普通个人号，只打开唯一测试好友窗口并确认准备完成。登录后先验证结构，再核验稳定身份。真实消息监听/dry-run、新旧消息边界、连续相同文本、重启去重、自身过滤、重名/窗口切换均仍待实机验证。方案与状态解释见 [READ_ONLY_PROBE.md](READ_ONLY_PROBE.md)。
+
+## 已完成基线（以下为 v0.1.1 历史记录）
 
 用户最新决定：**先做免费版本，阶段完成后直接提交并上传 GitHub，后续在同一仓库更新；不再提供下载修订包流程。** 免费接入候选与下一阶段边界见 [FREE_ROUTE.md](FREE_ROUTE.md)，交付约定见 [REPOSITORY_WORKFLOW.md](REPOSITORY_WORKFLOW.md)。以下 ZIP 记录仅是已完成的历史验证。
 

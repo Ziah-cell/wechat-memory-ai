@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wechat-memory-ai"
-version = "0.1.1"
-description = "Offline-first conversation and memory core; real WeChat adapter not implemented"
+version = "0.1.2"
+description = "Offline-first memory core with read-only Windows UIA diagnostics; no real messaging"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
@@ -15,3 +15,6 @@ wechat-memory = "wechat_memory.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+wechat_memory = ["uia_*.ps1"]

@@ -1,0 +1,21 @@
+test_wechat_probe (unittest.loader._FailedTest.test_wechat_probe) ... ERROR
+
+======================================================================
+ERROR: test_wechat_probe (unittest.loader._FailedTest.test_wechat_probe)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_wechat_probe
+Traceback (most recent call last):
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_wechat_probe.py", line 12, in <module>
+    from wechat_memory.wechat_probe import probe, sanitize_report
+ModuleNotFoundError: No module named 'wechat_memory.wechat_probe'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

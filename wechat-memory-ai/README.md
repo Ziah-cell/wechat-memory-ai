@@ -1,6 +1,6 @@
-# 普通个人微信长期记忆 AI · 离线核心 v0.1.1
+# 普通个人微信长期记忆 AI · 只读诊断准备 v0.1.2
 
-这是已实现、可运行和测试的本地项目。当前入口是**控制台模拟器**，没有真实微信适配器。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。本项目尚不能自动操作你的微信。
+当前聊天入口是**控制台模拟器**。v0.1.2 增加独立 Windows UIA 结构诊断，尚无真实微信消息监听或发送。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。
 
 本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
 
@@ -8,7 +8,7 @@
 
 需要 Python 3.11 或更新版本；核心与测试均没有第三方依赖。本版已在 Windows 11、Python 3.12.14、PowerShell 5.1/7 实测。不要因项目自动升降级微信。
 
-Windows：把压缩包解压到自己的目录，在该目录打开 PowerShell：
+Windows：从同一 GitHub 仓库更新后，进入 `wechat-memory-ai` 子目录，在该目录打开 PowerShell：
 
 ```powershell
 .\scripts\windows.ps1 -Action test
@@ -143,6 +143,17 @@ JSON 中 `text` 可包含 `\n`。不填写时间时会被标记为“刚输入�
 | `models.py` | 假模型、可选文本 HTTP 客户端 |
 | `runtime.py` / `cli.py` | 单实例锁、控制命令、模拟器 |
 | `config.py` / `audit.py` | 严格配置和元数据日志 |
+| `wechat_probe.py` / `uia_*.ps1` | 独立只读结构诊断；不接通消息、身份、模型或 SQLite |
 | `tests/` | 自动化行为和子进程/本地 HTTP 测试 |
 
 未来 Windows 适配器必须提供稳定消息 ID、真实发送方/会话身份、消息原始发生时间；不能仅凭昵称匹配。还须在实际发送动作前再次验证目标、明确处理未知结果。详见 [docs/WINDOWS_NEXT.md](docs/WINDOWS_NEXT.md)。
+
+## 微信只读诊断
+
+用户本人启动现有微信、登录受控的第二个普通个人号，并打开唯一测试好友后，可执行：
+
+```powershell
+.\scripts\windows.ps1 -Action probe-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe'
+```
+
+此命令不启动或操作微信、不创建配置/数据库，只输出版本、匹配进程/主窗口数量、控件类型与可见性计数。最多遍历 256 个控件、深度 16，15 秒超时结束子进程；不读取名称、正文、二维码、AutomationId 或 RuntimeId。`structure_observed` 只表示读到了子控件，不证明登录、联系人身份或可监听。`not_running` 表示指定路径的客户端未运行；`no_window` 也可能只是窗口隐藏到托盘。身份与监听准备标志始终为 false。详细状态与验收步骤见 [docs/READ_ONLY_PROBE.md](docs/READ_ONLY_PROBE.md)。

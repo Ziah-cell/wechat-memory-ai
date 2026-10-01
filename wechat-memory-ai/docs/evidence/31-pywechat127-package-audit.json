@@ -1,0 +1,95 @@
+{
+  "checked_on": "2026-10-01",
+  "metadata_url": "https://pypi.org/pypi/pywechat127/1.9.8/json",
+  "upstream_commit": "8589baa049bb91d3a500602c167f07b2f8397a13",
+  "artifacts": [
+    {
+      "filename": "pywechat127-1.9.8-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/04/f7/677c2477b417d837507ce6dc95545dff0a21679326929051e0b2bfeb1ad7/pywechat127-1.9.8-py3-none-any.whl",
+      "sha256": "fcc3879a364c33ea4858ae28b4d7602677f0633979197963499d78ff1821313e",
+      "pypi_hash_verified": true,
+      "size_bytes": 190352,
+      "uploaded_at": "2026-06-10T17:20:57.616597Z",
+      "license_files": [],
+      "metadata_license": "LGPL",
+      "metadata_classifiers": [
+        "Operating System :: Microsoft :: Windows",
+        "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Desktop Environment",
+        "Intended Audience :: Developers"
+      ],
+      "requires_dist": [
+        "emoji >=2.14.1",
+        "PyAutoGUI >=0.9.54",
+        "pycaw >=20240210.0",
+        "pywin32 >=308",
+        "pywin32-ctypes >=0.2.2",
+        "pywinauto >=0.6.8",
+        "psutil >=5.9.5",
+        "pillow >=10.4.0",
+        "sounddevice >=0.5.1",
+        "soundfile >=0.13.1",
+        "packaging >=23.2"
+      ],
+      "pyweixin_init_matches_upstream": false,
+      "pyweixin_init_sha256": "b8d2c7f592cfabf30963ae1c77b3d7d95a130550d68a7f01d0942a51a9fd2592",
+      "pyweixin_modules": [
+        "pyweixin/Config.py",
+        "pyweixin/Errors.py",
+        "pyweixin/Uielements.py",
+        "pyweixin/Warnings.py",
+        "pyweixin/WeChatAuto.py",
+        "pyweixin/WeChatTools.py",
+        "pyweixin/WinSettings.py",
+        "pyweixin/__init__.py",
+        "pyweixin/utils.py"
+      ]
+    },
+    {
+      "filename": "pywechat127-1.9.8.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/bc/43/2cbf818cc516f6f421093ee1726333341d273574c6491f3d29ddc8ba2af2/pywechat127-1.9.8.tar.gz",
+      "sha256": "de7f9a8281ea3e4a5ff6c2f4c00fdcfad77e89e237e8d54eea39f0d653a4c109",
+      "pypi_hash_verified": true,
+      "size_bytes": 187592,
+      "uploaded_at": "2026-06-10T17:21:00.466966Z",
+      "license_files": [],
+      "metadata_license": "LGPL",
+      "metadata_classifiers": [
+        "Operating System :: Microsoft :: Windows",
+        "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Desktop Environment",
+        "Intended Audience :: Developers"
+      ],
+      "requires_dist": [
+        "emoji>=2.14.1",
+        "PyAutoGUI>=0.9.54",
+        "pycaw>=20240210.0",
+        "pywin32>=308",
+        "pywin32-ctypes>=0.2.2",
+        "pywinauto>=0.6.8",
+        "psutil>=5.9.5",
+        "pillow>=10.4.0",
+        "sounddevice>=0.5.1",
+        "soundfile>=0.13.1",
+        "packaging>=23.2"
+      ],
+      "pyweixin_init_matches_upstream": false,
+      "pyweixin_init_sha256": "b8d2c7f592cfabf30963ae1c77b3d7d95a130550d68a7f01d0942a51a9fd2592",
+      "pyweixin_modules": [
+        "pywechat127-1.9.8/pyweixin/Config.py",
+        "pywechat127-1.9.8/pyweixin/Errors.py",
+        "pywechat127-1.9.8/pyweixin/Uielements.py",
+        "pywechat127-1.9.8/pyweixin/Warnings.py",
+        "pywechat127-1.9.8/pyweixin/WeChatAuto.py",
+        "pywechat127-1.9.8/pyweixin/WeChatTools.py",
+        "pywechat127-1.9.8/pyweixin/WinSettings.py",
+        "pywechat127-1.9.8/pyweixin/__init__.py",
+        "pywechat127-1.9.8/pyweixin/utils.py"
+      ]
+    }
+  ]
+}

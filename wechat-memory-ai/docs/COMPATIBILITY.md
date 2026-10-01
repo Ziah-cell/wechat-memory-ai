@@ -2,6 +2,14 @@
 
 查阅日期：2026-10-01（Asia/Shanghai）。以下“文档声明”与“本机实测”严格区分。v0.1.0 在 Linux 验证；v0.1.1 已在用户 Windows 电脑补验。
 
+## v0.1.2 当前补充
+
+当前新增独立 Windows 原生 UIA 结构探针，不是消息适配器。完整 84 项测试通过，其中真实 UIA 测试对象为虚构 WinForms 窗口。现有微信文件 4.1.15.13 的实际探针结果是 **not_running / process_count=0**；登录、真实控件树、身份和消息 ID 未验证。[实机证据](evidence/34-wechat-native-probe.txt)、[探针边界](READ_ONLY_PROBE.md)。
+
+已通过 GitHub API 再次确认 pywechat HEAD 为 8589baa049bb91d3a500602c167f07b2f8397a13。已读取并复算 pywechat127 1.9.8 的 wheel/sdist 哈希，包内许可文件缺失，包分类器 LGPLv3 与仓库定制 LGPL 2.1 文本不同，当前没有引入该候选。具体依赖、文件哈希与来源见 [FREE_ROUTE.md](FREE_ROUTE.md)。当前实现只使用 Windows 自带 .NET UIA 和 Python 标准库。
+
+以下候选比较和环境记录保留为 v0.1.1 基线；其中“本轮未接入”等描述不应被理解为禁止当前独立只读诊断。核心真实发送与真实适配器配置仍拒绝。
+
 ## 本机 Windows 核验补充
 
 - 系统：Windows 11 家庭版中文版，10.0.26200，64 位。
