@@ -1,5 +1,14 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
+## v0.1.4 免费 OCR 可行性阶段
+
+- [x] 新增只生成内存虚构气泡的 ocr-check，Windows 自带 API、独立超时与脱敏输出，不接入真实聊天。
+- [x] 检查浅色/深色/大字号的重复中文、字母数字与行数，保留实际 recognition_mismatch，不做字符猜测。
+- [x] 测试先行，11 项新增和完整 108 项回归、临时安装后检查、独立审查。
+- [x] 更新状态与免费路线，实际局限见 [OCR_CHECK.md](OCR_CHECK.md)。
+
+稳定身份、真实消息监听与发送仍未完成；本轮 MSAA 只读检查被自动审批拒绝，未执行、未获得结果。
+
 > v0.1.0 历史实施计划。Windows v0.1.1 续开发见 [Windows 实测与修复计划](superpowers/plans/2026-10-01-windows-validation.md)，当前 v0.1.2 免费只读准备阶段见下节，结果以 STATUS.md / TEST_RESULTS.md 为准。
 
 ## v0.1.2 免费只读准备阶段

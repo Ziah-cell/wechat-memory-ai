@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check')]
+    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check','ocr-check')]
     [string]$Action = 'run',
     [string]$Config = 'config.toml',
     [string]$Path = '',
@@ -60,6 +60,10 @@ try {
     }
     if ($Action -eq 'offline-check') {
         & $PythonExe -X utf8 'scripts/offline-check.py'
+        exit $LASTEXITCODE
+    }
+    if ($Action -eq 'ocr-check') {
+        & $PythonExe -X utf8 'scripts/ocr-check.py'
         exit $LASTEXITCODE
     }
     if ($Action -eq 'probe-wechat') {

@@ -1,0 +1,22 @@
+test_builtin_ocr_with_synthetic_pixels (test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels) ... skipped 'requires implemented Windows diagnostic'
+test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) ... skipped 'requires implemented Windows diagnostic'
+test_real_child_timeout (test_ocr_check.NativeOcrCheckTests.test_real_child_timeout) ... skipped 'requires implemented Windows diagnostic'
+test_child_errors_timeout_and_bad_output_hide_external_details (test_ocr_check.OcrCheckTests.test_child_errors_timeout_and_bad_output_hide_external_details) ... skipped 'module not implemented yet'
+test_malformed_or_contradictory_results_fail_closed (test_ocr_check.OcrCheckTests.test_malformed_or_contradictory_results_fail_closed) ... skipped 'module not implemented yet'
+test_no_file_or_window_input_and_bounded_child (test_ocr_check.OcrCheckTests.test_no_file_or_window_input_and_bounded_child) ... skipped 'module not implemented yet'
+test_non_windows_never_starts_provider (test_ocr_check.OcrCheckTests.test_non_windows_never_starts_provider) ... skipped 'module not implemented yet'
+test_provider_cannot_promote_ocr_to_verified_identity_or_send (test_ocr_check.OcrCheckTests.test_provider_cannot_promote_ocr_to_verified_identity_or_send) ... skipped 'module not implemented yet'
+test_synthetic_ocr_check_is_available (test_ocr_check.OcrModuleTests.test_synthetic_ocr_check_is_available) ... FAIL
+
+======================================================================
+FAIL: test_synthetic_ocr_check_is_available (test_ocr_check.OcrModuleTests.test_synthetic_ocr_check_is_available)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 30, in test_synthetic_ocr_check_is_available
+    self.assertTrue(AVAILABLE, 'synthetic OCR diagnostic has not been implemented')
+AssertionError: False is not true : synthetic OCR diagnostic has not been implemented
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+FAILED (failures=1, skipped=8)

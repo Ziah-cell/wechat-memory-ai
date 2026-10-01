@@ -1,0 +1,36 @@
+{
+  "wheel": "wechat_memory_ai-0.1.4-py3-none-any.whl",
+  "required_resources_present": true,
+  "installed_ocr_check": {
+    "checks": {
+      "dark": {
+        "chinese_duplicates_match": true,
+        "latin_exact_match": true,
+        "line_count_match": true
+      },
+      "large": {
+        "chinese_duplicates_match": true,
+        "latin_exact_match": false,
+        "line_count_match": true
+      },
+      "light": {
+        "chinese_duplicates_match": false,
+        "latin_exact_match": false,
+        "line_count_match": true
+      }
+    },
+    "chinese_available": true,
+    "identity_verified": false,
+    "listener_ready": false,
+    "network_used": false,
+    "real_chat_read": false,
+    "real_send_supported": false,
+    "schema_version": 1,
+    "screen_captured": false,
+    "status": "recognition_mismatch",
+    "synthetic_only": true
+  },
+  "exit_code": 3,
+  "third_party_runtime_dependencies_installed": false,
+  "temporary_build_and_install_only": true
+}

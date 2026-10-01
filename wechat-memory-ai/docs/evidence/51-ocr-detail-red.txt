@@ -1,0 +1,65 @@
+test_blank_synthetic_pixels_cannot_pass_recognition (test_ocr_check.NativeOcrCheckTests.test_blank_synthetic_pixels_cannot_pass_recognition) ... FAIL
+test_builtin_ocr_with_synthetic_pixels (test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels) ... FAIL
+test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) ... ok
+test_real_child_timeout (test_ocr_check.NativeOcrCheckTests.test_real_child_timeout) ... ok
+test_child_errors_timeout_and_bad_output_hide_external_details (test_ocr_check.OcrCheckTests.test_child_errors_timeout_and_bad_output_hide_external_details) ... ok
+test_malformed_or_contradictory_results_fail_closed (test_ocr_check.OcrCheckTests.test_malformed_or_contradictory_results_fail_closed) ... ok
+test_no_file_or_window_input_and_bounded_child (test_ocr_check.OcrCheckTests.test_no_file_or_window_input_and_bounded_child) ... FAIL
+test_non_windows_never_starts_provider (test_ocr_check.OcrCheckTests.test_non_windows_never_starts_provider) ... ok
+test_partial_recognition_and_missing_language_are_not_success (test_ocr_check.OcrCheckTests.test_partial_recognition_and_missing_language_are_not_success) ... FAIL
+test_provider_cannot_promote_ocr_to_verified_identity_or_send (test_ocr_check.OcrCheckTests.test_provider_cannot_promote_ocr_to_verified_identity_or_send) ... FAIL
+test_synthetic_ocr_check_is_available (test_ocr_check.OcrModuleTests.test_synthetic_ocr_check_is_available) ... ok
+
+======================================================================
+FAIL: test_blank_synthetic_pixels_cannot_pass_recognition (test_ocr_check.NativeOcrCheckTests.test_blank_synthetic_pixels_cannot_pass_recognition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 132, in test_blank_synthetic_pixels_cannot_pass_recognition
+    self.assertIsInstance(fields, dict)
+AssertionError: False is not an instance of <class 'dict'>
+
+======================================================================
+FAIL: test_builtin_ocr_with_synthetic_pixels (test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 116, in test_builtin_ocr_with_synthetic_pixels
+    self.assertIsInstance(fields, dict)
+AssertionError: False is not an instance of <class 'dict'>
+
+======================================================================
+FAIL: test_no_file_or_window_input_and_bounded_child (test_ocr_check.OcrCheckTests.test_no_file_or_window_input_and_bounded_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 90, in test_no_file_or_window_input_and_bounded_child
+    self.assertEqual(check(timeout=2)['status'], 'passed')
+AssertionError: 'invalid_check_output' != 'passed'
+- invalid_check_output
++ passed
+
+
+======================================================================
+FAIL: test_partial_recognition_and_missing_language_are_not_success (test_ocr_check.OcrCheckTests.test_partial_recognition_and_missing_language_are_not_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 62, in test_partial_recognition_and_missing_language_are_not_success
+    self.assertEqual(result['status'], 'recognition_mismatch')
+AssertionError: 'invalid_check_output' != 'recognition_mismatch'
+- invalid_check_output
++ recognition_mismatch
+
+
+======================================================================
+FAIL: test_provider_cannot_promote_ocr_to_verified_identity_or_send (test_ocr_check.OcrCheckTests.test_provider_cannot_promote_ocr_to_verified_identity_or_send)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 39, in test_provider_cannot_promote_ocr_to_verified_identity_or_send
+    self.assertEqual(result['status'], 'passed')
+AssertionError: 'invalid_check_output' != 'passed'
+- invalid_check_output
++ passed
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.313s
+
+FAILED (failures=5)

@@ -1,6 +1,12 @@
-# Windows 测试结果（当前 v0.1.3）
+# Windows 测试结果（当前 v0.1.4）
 
 执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
+
+## v0.1.4 本地 OCR 可行性诊断
+
+完整回归 **108/108，27.490 秒，0 失败/错误/跳过**，见 [54](evidence/54-ocr-stage-regression.txt)。新增 11 项覆盖固定虚构位图的真实系统 OCR、空白图不通过、结果脱敏、实际超时和双 PowerShell 配置隔离。独立审查无待修复发现。
+
+本机中文引擎可运行，但识别准确性检查为 **recognition_mismatch / 3**：深色通过，浅色中文/字母数字和大字号字母数字失败。报告保留失败结果；不能把程序测试通过改写为 OCR 准确性或微信兼容通过。[实际结果](evidence/53-ocr-local-result.txt)、[临时构建安装](evidence/55-ocr-package.json)。先失败、设计修正、范围和来源详见 [OCR_CHECK.md](OCR_CHECK.md)。本轮没有读取真实聊天或发送。
 
 ## 登录后只读检查阶段（代码仍 v0.1.3）
 

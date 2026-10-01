@@ -1,0 +1,40 @@
+test_builtin_ocr_with_synthetic_pixels (test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels) ... FAIL
+test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) ... 
+  test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) (shell='powershell.exe') ... FAIL
+  test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) (shell='pwsh.exe') ... FAIL
+test_real_child_timeout (test_ocr_check.NativeOcrCheckTests.test_real_child_timeout) ... ok
+test_child_errors_timeout_and_bad_output_hide_external_details (test_ocr_check.OcrCheckTests.test_child_errors_timeout_and_bad_output_hide_external_details) ... ok
+test_malformed_or_contradictory_results_fail_closed (test_ocr_check.OcrCheckTests.test_malformed_or_contradictory_results_fail_closed) ... ok
+test_no_file_or_window_input_and_bounded_child (test_ocr_check.OcrCheckTests.test_no_file_or_window_input_and_bounded_child) ... ok
+test_non_windows_never_starts_provider (test_ocr_check.OcrCheckTests.test_non_windows_never_starts_provider) ... ok
+test_provider_cannot_promote_ocr_to_verified_identity_or_send (test_ocr_check.OcrCheckTests.test_provider_cannot_promote_ocr_to_verified_identity_or_send) ... ok
+test_synthetic_ocr_check_is_available (test_ocr_check.OcrModuleTests.test_synthetic_ocr_check_is_available) ... ok
+
+======================================================================
+FAIL: test_builtin_ocr_with_synthetic_pixels (test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 101, in test_builtin_ocr_with_synthetic_pixels
+    self.assertIn(result['status'], ('passed', 'language_unavailable'), result)
+AssertionError: 'recognition_mismatch' not found in ('passed', 'language_unavailable') : {'schema_version': 1, 'status': 'recognition_mismatch', 'chinese_available': True, 'checks': {'light': False, 'dark': True, 'large': False}, 'synthetic_only': True, 'screen_captured': False, 'real_chat_read': False, 'network_used': False, 'identity_verified': False, 'listener_ready': False, 'real_send_supported': False}
+
+======================================================================
+FAIL: test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) (shell='powershell.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 132, in test_entry_shells_do_not_load_config_or_create_data
+    self.assertIn(report['status'], ('passed', 'language_unavailable'))
+AssertionError: 'recognition_mismatch' not found in ('passed', 'language_unavailable')
+
+======================================================================
+FAIL: test_entry_shells_do_not_load_config_or_create_data (test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data) (shell='pwsh.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_ocr_check.py", line 132, in test_entry_shells_do_not_load_config_or_create_data
+    self.assertIn(report['status'], ('passed', 'language_unavailable'))
+AssertionError: 'recognition_mismatch' not found in ('passed', 'language_unavailable')
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.112s
+
+FAILED (failures=3)
