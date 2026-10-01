@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.env
+config.toml
+data/
+backups/
+*.sqlite3*
+*.db*
+*.log
+.superpowers/

@@ -1,0 +1,148 @@
+# 普通个人微信长期记忆 AI · 离线核心 v0.1.1
+
+这是已实现、可运行和测试的本地项目。当前入口是**控制台模拟器**，没有真实微信适配器。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。本项目尚不能自动操作你的微信。
+
+本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
+
+## 现在如何运行
+
+需要 Python 3.11 或更新版本；核心与测试均没有第三方依赖。本版已在 Windows 11、Python 3.12.14、PowerShell 5.1/7 实测。不要因项目自动升降级微信。
+
+Windows：把压缩包解压到自己的目录，在该目录打开 PowerShell：
+
+```powershell
+.\scripts\windows.ps1 -Action test
+.\scripts\windows.ps1 -Action diagnose
+.\scripts\windows.ps1 -Action run
+```
+
+脚本只在默认 `config.toml` 不存在时复制示例，不覆盖已有配置。此处直接运行源码，不用先执行 pip install，也不需要管理员权限。
+
+没有 `py` 启动器也可使用：脚本依次检查项目 `.venv`、PATH 中实际存在的 `py/python/python3`，最后检查本机 Codex 缓存运行时；跳过 WindowsApps 商店占位命令。也可指定 `-Python 'C:\你的目录\python.exe'` 或设置当前终端的 `WECHAT_MEMORY_PYTHON`。显式指定的解释器无效时直接报错，不悄悄改用另一环境。Codex 缓存路径可能随应用更新变化，长期运行可指定自己安装的 Python 3.11+。
+
+Linux / macOS 的对应方式：
+
+```bash
+cp -n config.example.toml config.toml
+python3 scripts/test.py
+python3 scripts/run.py --config config.toml run
+```
+
+启动后每输入一行，代表一条新的模拟消息；回复以 JSON 输出，`status=dry_run` 表示仅预览。例如依次输入：
+
+```text
+记住：称呼我为小禾，回复尽量简短
+你好
+以后不要叫小禾，改叫阿禾
+你记住了什么
+/退出
+```
+
+重启后输入“你好”，假模型会使用保留的称呼，并明确标注“离线模拟”。假模型只验证流程，不能代表真实大模型的回答质量。测试结果与待办见 [docs/STATUS.md](docs/STATUS.md)。
+
+多行文本、重复事件或身份字段测试可用 JSONL：
+
+```powershell
+# 将此路径替换为本机实际解释器；若已装 py，也可使用 py -3。
+$Python = 'C:\你的目录\python.exe'
+$OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+Get-Content -Encoding UTF8 examples/demo.jsonl | & $Python -X utf8 scripts/run.py --config config.toml run --jsonl
+```
+
+JSON 中 `text` 可包含 `\n`。不填写时间时会被标记为“刚输入的模拟消息”，不能拿这个行为导入真实历史。重复的稳定 `id` 会在重启后继续被去重；正常文本模式每条输入分配不同 ID。
+
+## 暂停、停止与状态
+
+在另一个终端执行（配置必须指向同一数据目录）：
+
+```powershell
+.\scripts\windows.ps1 -Action status
+.\scripts\windows.ps1 -Action pause
+.\scripts\windows.ps1 -Action resume
+.\scripts\windows.ps1 -Action stop
+```
+
+同一数据目录只允许一个运行或维护实例。暂停期间的新模拟输入会返回 `paused` 并丢弃，不自动积压补发；停止不使用 PID 杀进程。请求已进入真实模型 HTTP 调用时，主进程仍会轮询控制指令，并在发送前再次检查。HTTP 调用有总时限，由独立子进程执行；暂停、停止或到期会终止本地请求进程，轮询间隔不超过 50 毫秒（另有进程清理时间）。这不等于撤销服务商已经接收的计算或费用。
+
+脚本支持 `run|test|status|pause|resume|stop|diagnose|backup|restore|review`，`scripts/diagnose-windows.ps1` 是诊断快捷入口。已在 Windows PowerShell 5.1 与 PowerShell 7 实测诊断、配置保护和错误码。若脚本执行受到本机策略限制，可直接用实际 Python 路径执行 `scripts/run.py`；项目不会修改系统策略或创建自启动任务。CLI 的管道输入/输出统一使用 UTF-8。
+
+## 记忆操作
+
+| 输入 | 行为 |
+|---|---|
+| `记住：称呼我为小禾，回复尽量简短` | 显式保存两条偏好 |
+| `以后不要叫小禾，改叫阿禾` | 替换称呼，不同时保留两个互斥值 |
+| `/记住 preference 兴趣=绘画` | 按指定键写入/覆盖偏好 |
+| `/记住 event 考试=下周复习英语` | 写入事件与进度；同键新消息可更新 |
+| `/记忆` 或 `你记住了什么` | 查看记忆 ID、类型和内容；每页 5 条 |
+| `/记忆 2` | 下一页；展示内容最多 100 字 |
+| `/纠正 ID=新的内容` | 修改该条，保留最初创建时间并更新来源 |
+| `/忘记 ID` | 删除该条，并保守清理此前本会话历史和摘要 |
+| `/清空记忆` | 取得会话绑定、60 秒有效的确认码 |
+| `/确认清空 确认码` | 清空该会话记忆、历史与摘要 |
+
+普通聊天不会被自动当作永久事实。“今天有些累，不想长聊”只进入会话上下文。自然语言记忆解析仅支持这里列出的明确格式，其他表达会请求使用键值格式，不假装具备完整的意图识别。
+
+每条记忆保留 ID、类型、`certainty=explicit`、活动状态、来源事件引用及创建/更新时间。本版不生成待确认推测，也不将临时状态写成稳定人格。偏好优先检索；事件采用中文二字片段重合检索，最多 12 条且受字符预算限制。每个会话最多 100 条、单条值最多 500 字。
+
+“称呼 / 回复长度 / 兴趣”等键应保持一致；自由文本键的同义词和逻辑冲突不会自动合并。程序的明确记忆管理指令不会交给模型执行，模型输出也不会被解析成命令。
+
+## 配置、模型和费用
+
+`config.example.toml` 包含唯一模拟联系人、角色语气、模型超时、输入/输出和上下文预算、调用与估算金额上限。路径相对于配置文件解析。未知字段和无效类型直接报错，不静默忽略。
+
+默认 `provider="fake"`、`allow_network=false`。需要真实模型时，在自己电脑完成：
+
+1. 核验服务商支持的接口、授权方式、模型名与费用；本版客户端只实现文本 Chat Completions。
+2. 将 `.env.example` 复制为 `.env`，本机填写 `WECHAT_AI_API_KEY`，或设置同名进程环境变量（环境变量优先）。不要把密钥粘贴到聊天、命令示例或 Git。
+3. 在 `config.toml` 填写完整 endpoint 和 model name，设 `provider="chat_completions"`、`allow_network=true`。保留 `real_send=false` 和 `dry_run=true`。
+4. 先在模拟入口验证真实模型；此操作会向所填服务发送当前消息、必要记忆、有限历史/摘录，并可能产生费用。不会上传整个微信历史或电脑文件。
+
+客户端使用 Bearer 凭据；非回环地址要求 HTTPS，拒绝 URL 内嵌凭据、查询参数和重定向。无自动重试。401/403、402/429、服务错误、网络断开、超时、空返回、非文本/畸形 JSON 均会终止本条处理，不自动重扣或重发。响应最大读取 1 MiB。暂不支持流式、工具调用、图片、语音、专有认证头或仅支持 Responses 的服务。`store=false` 不等于保证服务商不留存数据。
+
+上限包含每天调用次数、并发数固定为 1、每次调用预留的估算金额。失败也计入预留，避免不确定请求反复计费；金额来自用户设置，**不是实际账单或精确 token 费用**。每日窗口支持 UTC 或 Asia/Shanghai。更多授权区别与一手资料见 [COMPATIBILITY.md](docs/COMPATIBILITY.md)。
+
+开发本项目所用的 Codex/ChatGPT 授权与运行系统的模型授权分开；本项目没有读取你的 ChatGPT 登录态、Cookie 或订阅额度。也没有启动 OpenClaw 高权限网关。
+
+## 备份、恢复和遗忘
+
+详见 [docs/DATA_AND_PRIVACY.md](docs/DATA_AND_PRIVACY.md)。核心规则：
+
+- `data/state.sqlite3` 是会话、摘要和记忆；`data/guard.sqlite3` 是遗忘、去重、额度与确认记录，恢复时不能被旧副本覆盖。
+- 先停止应用，再做备份：
+
+```powershell
+.\scripts\windows.ps1 -Action backup -Path backups/content-001.zip
+```
+
+- 备份压缩包只含内容库和清单，**另行保存最新的 `data/guard.sqlite3`**。每次遗忘/修改后更新它的安全副本，不仅依赖当初的内容备份。
+- 恢复会替换当前内容库、丢失备份后的未备份聊天；必须显式确认：
+
+```powershell
+.\scripts\windows.ps1 -Action restore -Path backups/content-001.zip -Confirm
+```
+
+- 新电脑需要提供旧电脑停止应用后复制的最新 guard：
+
+```powershell
+.\scripts\windows.ps1 -Action restore -Path backups/content-001.zip -Guard D:\private\guard.sqlite3 -Confirm
+```
+
+缺失/不匹配的账本将拒绝恢复；已经存在的账本不接受外部覆盖。旧备份中的已删除/被取代记忆会被账本再清除；备份后才写入的新值不会凭空出现，需要重新录入。
+
+数据是本机明文 SQLite。日志为 `data/logs/audit.log`，最多 1 MB × 4 份，只记录时间、事件散列、固定状态/错误代码，不记录正文、姓名或密钥。数据库、日志和备份默认在 Git 忽略范围内；请使用自己电脑账户的访问权限保护它们。
+
+## 代码入口与扩展
+
+| 文件 | 职责 |
+|---|---|
+| `src/wechat_memory/adapters.py` | 事件/身份契约、模拟收发；没有真实 SDK |
+| `engine.py` / `operations.py` | 白名单、顺序、去重、调用预算、发送状态 |
+| `memory.py` / `store.py` | 显式记忆、上下文摘录、遗忘账本 |
+| `backup.py` | 内容备份与账本保护的恢复 |
+| `models.py` | 假模型、可选文本 HTTP 客户端 |
+| `runtime.py` / `cli.py` | 单实例锁、控制命令、模拟器 |
+| `config.py` / `audit.py` | 严格配置和元数据日志 |
+| `tests/` | 自动化行为和子进程/本地 HTTP 测试 |
+
+未来 Windows 适配器必须提供稳定消息 ID、真实发送方/会话身份、消息原始发生时间；不能仅凭昵称匹配。还须在实际发送动作前再次验证目标、明确处理未知结果。详见 [docs/WINDOWS_NEXT.md](docs/WINDOWS_NEXT.md)。

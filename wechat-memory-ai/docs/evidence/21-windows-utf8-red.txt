@@ -1,0 +1,23 @@
+test_cli_uses_utf8_even_when_process_locale_requests_ascii (test_runtime.RuntimeTests.test_cli_uses_utf8_even_when_process_locale_requests_ascii) ... ERROR
+
+======================================================================
+ERROR: test_cli_uses_utf8_even_when_process_locale_requests_ascii (test_runtime.RuntimeTests.test_cli_uses_utf8_even_when_process_locale_requests_ascii)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_runtime.py", line 89, in test_cli_uses_utf8_even_when_process_locale_requests_ascii
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1630, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', 'C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\scripts\\run.py', '--config', 'C:\\Users\\zhihua\\AppData\\Local\\Temp\\tmp9nfmfz_0\\config.toml', 'run']' timed out after 10 seconds
+
+----------------------------------------------------------------------
+Ran 1 test in 10.030s
+
+FAILED (errors=1)

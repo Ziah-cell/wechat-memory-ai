@@ -1,0 +1,100 @@
+test_diagnostic_wrapper_propagates_config_error_exit_code (test_windows_scripts.WindowsScriptTests.test_diagnostic_wrapper_propagates_config_error_exit_code) ... 
+  test_diagnostic_wrapper_propagates_config_error_exit_code (test_windows_scripts.WindowsScriptTests.test_diagnostic_wrapper_propagates_config_error_exit_code) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe') ... FAIL
+  test_diagnostic_wrapper_propagates_config_error_exit_code (test_windows_scripts.WindowsScriptTests.test_diagnostic_wrapper_propagates_config_error_exit_code) (shell='C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe') ... FAIL
+test_explicit_python_runs_diagnose_and_preserves_existing_config (test_windows_scripts.WindowsScriptTests.test_explicit_python_runs_diagnose_and_preserves_existing_config) ... 
+  test_explicit_python_runs_diagnose_and_preserves_existing_config (test_windows_scripts.WindowsScriptTests.test_explicit_python_runs_diagnose_and_preserves_existing_config) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe') ... FAIL
+  test_explicit_python_runs_diagnose_and_preserves_existing_config (test_windows_scripts.WindowsScriptTests.test_explicit_python_runs_diagnose_and_preserves_existing_config) (shell='C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe') ... FAIL
+test_invalid_explicit_python_fails_without_fallback_or_config_change (test_windows_scripts.WindowsScriptTests.test_invalid_explicit_python_fails_without_fallback_or_config_change) ... ok
+
+======================================================================
+FAIL: test_diagnostic_wrapper_propagates_config_error_exit_code (test_windows_scripts.WindowsScriptTests.test_diagnostic_wrapper_propagates_config_error_exit_code) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_windows_scripts.py", line 46, in test_diagnostic_wrapper_propagates_config_error_exit_code
+    self.assertEqual(result.returncode, 2, result.stderr.decode('utf-8', 'replace'))
+AssertionError: 1 != 2 : & : The term 'py' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spel
+
+ling of the name, or if a path was included, verify that the path is correct and try again.
+
+At C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\scripts\windows.ps1:30 char:7
+
++     & py @PythonArgs
+
++       ~~
+
+    + CategoryInfo          : ObjectNotFound: (py:String) [], ParentContainsErrorRecordException
+
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+ 
+
+
+
+======================================================================
+FAIL: test_diagnostic_wrapper_propagates_config_error_exit_code (test_windows_scripts.WindowsScriptTests.test_diagnostic_wrapper_propagates_config_error_exit_code) (shell='C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_windows_scripts.py", line 46, in test_diagnostic_wrapper_propagates_config_error_exit_code
+    self.assertEqual(result.returncode, 2, result.stderr.decode('utf-8', 'replace'))
+AssertionError: 1 != 2 : &: C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\scripts\windows.ps1:30
+
+Line |
+
+  30 |      & py @PythonArgs
+
+     |        ~~
+
+     | The term 'py' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the
+
+     | spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+
+======================================================================
+FAIL: test_explicit_python_runs_diagnose_and_preserves_existing_config (test_windows_scripts.WindowsScriptTests.test_explicit_python_runs_diagnose_and_preserves_existing_config) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_windows_scripts.py", line 34, in test_explicit_python_runs_diagnose_and_preserves_existing_config
+    self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
+AssertionError: 1 != 0 : & : The term 'py' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spel
+
+ling of the name, or if a path was included, verify that the path is correct and try again.
+
+At C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\scripts\windows.ps1:30 char:7
+
++     & py @PythonArgs
+
++       ~~
+
+    + CategoryInfo          : ObjectNotFound: (py:String) [], ParentContainsErrorRecordException
+
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+ 
+
+
+
+======================================================================
+FAIL: test_explicit_python_runs_diagnose_and_preserves_existing_config (test_windows_scripts.WindowsScriptTests.test_explicit_python_runs_diagnose_and_preserves_existing_config) (shell='C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_windows_scripts.py", line 34, in test_explicit_python_runs_diagnose_and_preserves_existing_config
+    self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
+AssertionError: 1 != 0 : &: C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\scripts\windows.ps1:30
+
+Line |
+
+  30 |      & py @PythonArgs
+
+     |        ~~
+
+     | The term 'py' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the
+
+     | spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.276s
+
+FAILED (failures=4)

@@ -1,0 +1,26 @@
+# Local credentials and user data are never part of a stage upload.
+.env
+.env.*
+!.env.example
+config.toml
+config.local.*
+data/
+backups/
+private/
+*.sqlite3*
+*.db*
+*.log
+*.pem
+*.key
+
+# Generated files and historical ZIP deliverables stay local.
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+*.zip
+*.zip.sha256
+PACKAGE_MANIFEST.json
+.superpowers/

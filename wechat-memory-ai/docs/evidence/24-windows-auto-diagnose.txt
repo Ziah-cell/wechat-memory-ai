@@ -1,0 +1,1 @@
+{"python": "3.12.14", "os": "Windows", "sqlite": "3.53.1", "adapter": "mock", "model_provider": "fake", "dry_run": true, "network_enabled": false, "real_send_supported": false, "real_wechat_verified": false, "wechat_client_version": "not_checked"}

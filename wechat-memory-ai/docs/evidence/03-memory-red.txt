@@ -1,0 +1,27 @@
+test_credential_is_local_and_not_in_repr (test_config.ConfigTests.test_credential_is_local_and_not_in_repr) ... ok
+test_default_is_offline_and_paths_relative_to_config (test_config.ConfigTests.test_default_is_offline_and_paths_relative_to_config) ... ok
+test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail (test_config.ConfigTests.test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail) ... ok
+test_network_requires_explicit_opt_in_and_credential (test_config.ConfigTests.test_network_requires_explicit_opt_in_and_credential) ... ok
+test_plain_http_remote_url_userinfo_and_query_rejected (test_config.ConfigTests.test_plain_http_remote_url_userinfo_and_query_rejected) ... ok
+test_real_send_and_unsupported_adapters_fail_closed (test_config.ConfigTests.test_real_send_and_unsupported_adapters_fail_closed) ... ok
+test_memory (unittest.loader._FailedTest.test_memory) ... ERROR
+
+======================================================================
+ERROR: test_memory (unittest.loader._FailedTest.test_memory)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_memory
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/workspace/scratch/1d8286e0d891/wechat-memory-ai/tests/test_memory.py", line 9, in <module>
+    from wechat_memory.store import Store
+ModuleNotFoundError: No module named 'wechat_memory.store'
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.011s
+
+FAILED (errors=1)

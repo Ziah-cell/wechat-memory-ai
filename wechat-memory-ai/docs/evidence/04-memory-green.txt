@@ -1,0 +1,28 @@
+test_credential_is_local_and_not_in_repr (test_config.ConfigTests.test_credential_is_local_and_not_in_repr) ... ok
+test_default_is_offline_and_paths_relative_to_config (test_config.ConfigTests.test_default_is_offline_and_paths_relative_to_config) ... ok
+test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail (test_config.ConfigTests.test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail) ... ok
+test_network_requires_explicit_opt_in_and_credential (test_config.ConfigTests.test_network_requires_explicit_opt_in_and_credential) ... ok
+test_plain_http_remote_url_userinfo_and_query_rejected (test_config.ConfigTests.test_plain_http_remote_url_userinfo_and_query_rejected) ... ok
+test_real_send_and_unsupported_adapters_fail_closed (test_config.ConfigTests.test_real_send_and_unsupported_adapters_fail_closed) ... ok
+test_clear_requires_session_bound_expiring_confirmation (test_memory.MemoryTests.test_clear_requires_session_bound_expiring_confirmation) ... ok
+test_compaction_keeps_bounded_recent_history_and_source_refs (test_memory.MemoryTests.test_compaction_keeps_bounded_recent_history_and_source_refs) ... ok
+test_expired_clear_token_does_not_clear (test_memory.MemoryTests.test_expired_clear_token_does_not_clear) ... ok
+test_explicit_preferences_survive_restart_with_provenance (test_memory.MemoryTests.test_explicit_preferences_survive_restart_with_provenance) ... ok
+test_forgetting_purges_history_summary_and_survives_restart (test_memory.MemoryTests.test_forgetting_purges_history_summary_and_survives_restart) ... ok
+test_incomplete_forget_replays_before_any_read (test_memory.MemoryTests.test_incomplete_forget_replays_before_any_read) ... ok
+test_malformed_backup_leaves_existing_content_intact (test_memory.MemoryTests.test_malformed_backup_leaves_existing_content_intact) ... ok
+test_old_backup_cannot_revive_replaced_preference (test_memory.MemoryTests.test_old_backup_cannot_revive_replaced_preference) ... ok
+test_old_backup_with_current_guard_cannot_revive_deleted_memory (test_memory.MemoryTests.test_old_backup_with_current_guard_cannot_revive_deleted_memory) ... ok
+test_preference_change_removes_stale_context (test_memory.MemoryTests.test_preference_change_removes_stale_context) ... ok
+test_restore_on_new_machine_with_latest_guard (test_memory.MemoryTests.test_restore_on_new_machine_with_latest_guard) ... ok
+test_restore_without_matching_guard_is_rejected (test_memory.MemoryTests.test_restore_without_matching_guard_is_rejected) ... ok
+test_retrieval_and_deletion_are_session_isolated (test_memory.MemoryTests.test_retrieval_and_deletion_are_session_isolated) ... ok
+test_retrieve_events_by_relevance_and_preserve_type (test_memory.MemoryTests.test_retrieve_events_by_relevance_and_preserve_type) ... ok
+test_sensitive_information_is_not_saved (test_memory.MemoryTests.test_sensitive_information_is_not_saved) ... ok
+test_temporary_statement_does_not_become_permanent_preference (test_memory.MemoryTests.test_temporary_statement_does_not_become_permanent_preference) ... ok
+test_view_correct_and_delete_specific_memory (test_memory.MemoryTests.test_view_correct_and_delete_specific_memory) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.060s
+
+OK

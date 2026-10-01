@@ -1,0 +1,11 @@
+{
+  "extracted_test_count": 74,
+  "extracted_test_seconds": 18.76,
+  "extracted_test_exit_code": 0,
+  "unchanged_code_script_test_files": 24,
+  "git_no_index_check_exit_code": 1,
+  "git_no_index_note": "1 means differences exist; --check emitted no whitespace errors",
+  "windows_crlf_accepted": true,
+  "raw_evidence_whitespace_preserved": true,
+  "real_wechat_verified": false
+}

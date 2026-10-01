@@ -1,0 +1,149 @@
+{
+  "python": "3.12.14",
+  "os": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.53.1",
+  "input_data": "fictional test preferences only",
+  "steps": [
+    {
+      "step": "diagnose",
+      "exit_code": 0,
+      "result": [
+        {
+          "python": "3.12.14",
+          "os": "Windows",
+          "sqlite": "3.53.1",
+          "adapter": "mock",
+          "model_provider": "fake",
+          "dry_run": true,
+          "network_enabled": false,
+          "real_send_supported": false,
+          "real_wechat_verified": false,
+          "wechat_client_version": "not_checked"
+        }
+      ]
+    },
+    {
+      "step": "remember",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "已记住：称呼；回复长度。可用 /记忆 查看和修改。",
+          "event_key": "c9f86687fd42527c80eb3a6f94f5ecd75e85f7f93b77b5f07dcf371a669d09eb",
+          "code": ""
+        },
+        {
+          "status": "dry_run",
+          "reply": "（离线模拟）小禾，收到：你好。此回复来自假模型。",
+          "event_key": "b1b81e75688b3fd86ac54afd8dc7d158fb4faa7b5119b8df92fd3f3029c3efd9",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "step": "restart",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "（离线模拟）小禾，收到：你好。此回复来自假模型。",
+          "event_key": "d4d70c689cc3766866fe9c61af586d3e0c3c8505494e9327647fcc2efe365502",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "step": "correct",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "已记住：称呼。可用 /记忆 查看和修改。",
+          "event_key": "c55d63038e9a9b93491b94cdccaddd6111778686be22992b3fdc86f8804f7163",
+          "code": ""
+        },
+        {
+          "status": "dry_run",
+          "reply": "（离线模拟）阿禾，收到：你好。此回复来自假模型。",
+          "event_key": "51d5fbafa7263a58e8afdee0ea3e10a52c2cdfbf7121e9e0f4b9e7e3e724b679",
+          "code": ""
+        },
+        {
+          "status": "dry_run",
+          "reply": "4736e18c99b5 [preference] 称呼=阿禾\na1ec3e5662ac [preference] 回复长度=简短\n第 1 页；用 /记忆 页码 翻页，/纠正 ID=新内容 或 /忘记 ID。",
+          "event_key": "0e52a09cc0cbf8f634a589ca22c45c69df87e93dec8b40adcc248dd4a2ed175b",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "step": "backup_before_forget",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "backed_up",
+          "warning": "preserve latest guard.sqlite3 separately after stopping the app"
+        }
+      ]
+    },
+    {
+      "step": "forget",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "已删除该记忆，并清理此前会话历史与摘要；其他记忆保留。",
+          "event_key": "8eaa01eedc22afe5be890b1c59c85a8453b4efa1b96421284eeaa8520186fd91",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "step": "restart_after_forget",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "（离线模拟）收到：你好。此回复来自假模型。",
+          "event_key": "1dae6052cb86b6b2bab535a9c3360ed527815e41f5f61b95af9d16a083683b75",
+          "code": ""
+        },
+        {
+          "status": "dry_run",
+          "reply": "a1ec3e5662ac [preference] 回复长度=简短\n第 1 页；用 /记忆 页码 翻页，/纠正 ID=新内容 或 /忘记 ID。",
+          "event_key": "8e511d9b351584631ebd0c567480dcadaac33f035ff311bc1e6a82c5f615f75d",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "step": "restore_old_backup_keep_latest_guard",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "restored",
+          "warning": "only local content; latest guard preserved"
+        }
+      ]
+    },
+    {
+      "step": "verify_forget_survives_restore",
+      "exit_code": 0,
+      "result": [
+        {
+          "status": "dry_run",
+          "reply": "（离线模拟）收到：你好。此回复来自假模型。",
+          "event_key": "7c413edb0e29255443489ac17e05e1ade8585af38a604e4152cf3a1085dbb155",
+          "code": ""
+        },
+        {
+          "status": "dry_run",
+          "reply": "a1ec3e5662ac [preference] 回复长度=简短\n第 1 页；用 /记忆 页码 翻页，/纠正 ID=新内容 或 /忘记 ID。",
+          "event_key": "bb943274f7a022b3d135e89dfe2e44c4f843a1fa435da089eccba3d2870e94c2",
+          "code": ""
+        }
+      ]
+    }
+  ],
+  "all_assertions_passed": true
+}

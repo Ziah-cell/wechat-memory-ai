@@ -1,0 +1,6 @@
+&: C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\scripts\windows.ps1:14
+Line |
+  14 |          & py -3 -X utf8 'scripts/test.py'
+     |            ~~
+     | The term 'py' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the
+     | spelling of the name, or if a path was included, verify that the path is correct and try again.

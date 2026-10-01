@@ -1,0 +1,36 @@
+# 复制为 config.toml；本版本只能使用模拟适配器。
+[app]
+adapter = "mock"
+peer_id = "mock:owner" # 模拟 ID；不能把真实联系人昵称直接填到此处当作验证。
+data_dir = "data"
+dry_run = true
+real_send = false
+proactive = false
+max_concurrency = 1
+max_input_chars = 1600
+
+[persona]
+address = ""
+tone = "自然、尊重、中文交流，不确定时明确说明"
+reply_style = "尽量简短，不擅自设定恋爱关系"
+
+[model]
+provider = "fake" # fake 或 chat_completions
+allow_network = false
+endpoint = "" # 填写服务商核验过的完整 /v1/chat/completions 地址
+name = "" # 由用户按服务商实际可用模型填写
+api_key_env = "WECHAT_AI_API_KEY"
+timeout_seconds = 20.0
+context_chars = 6000 # 字符预算，不是精确 token 计数
+history_messages = 12
+summary_chars = 700
+memory_chars = 1200
+max_reply_chars = 1500
+max_completion_tokens = 512
+
+[limits]
+daily_calls = 50
+per_call_estimate = 0.02 # 用户设置的保守估算；不是服务商账单
+daily_estimate = 2.0
+currency = "USD"
+timezone = "Asia/Shanghai"

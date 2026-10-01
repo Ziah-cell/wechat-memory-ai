@@ -1,0 +1,6 @@
+{"status": "dry_run", "reply": "已记住：称呼；回复长度。可用 /记忆 查看和修改。", "event_key": "2f1967f0dfd8902c7645da9a6f488364d2b48a822eb253a8f00e10aa79ed6092", "code": ""}
+{"status": "dry_run", "reply": "（离线模拟）小禾，收到：你好\n这是第二行。此回复来自假模型。", "event_key": "3a11243ab23f9de786b76f92d5d3c4da8f54761a91b261be18ef03d6c2076313", "code": ""}
+{"status": "duplicate", "reply": "", "event_key": "3a11243ab23f9de786b76f92d5d3c4da8f54761a91b261be18ef03d6c2076313", "code": ""}
+{"status": "dry_run", "reply": "已记住：称呼。可用 /记忆 查看和修改。", "event_key": "2f5c728b0bbcf37711fe013bf843f580e0ce801af876bc8295aca0575de7b309", "code": ""}
+{"status": "dry_run", "reply": "a724302184c7 [preference] 称呼=阿禾\na4a537952462 [preference] 回复长度=简短\n第 1 页；用 /记忆 页码 翻页，/纠正 ID=新内容 或 /忘记 ID。", "event_key": "c09f5453222a8569f0b12de3762cc04c84a0bf1a98fc0f0946fbb5dc6cd1fde9", "code": ""}
+{"status": "rejected", "reply": "", "event_key": "c6973de49950237bfea43f90628255c4db2cbe000ab370edfde4c73855ccb24d", "code": "not_allowed"}

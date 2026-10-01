@@ -1,0 +1,69 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--no-build-isolation",
+        "--no-index",
+        "--wheel-dir",
+        "C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\wheels",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "Processing .\\.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: wechat-memory-ai\n  Building wheel for wechat-memory-ai (pyproject.toml): started\n  Building wheel for wechat-memory-ai (pyproject.toml): finished with status 'done'\n  Created wheel for wechat-memory-ai: filename=wechat_memory_ai-0.1.1-py3-none-any.whl size=30666 sha256=161566cc5d25ad75e7d90d928e589cc09d0222814394a2c6a8c5918eaf23ff96\n  Stored in directory: C:\\Users\\zhihua\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-nyq43nc9\\wheels\\52\\b4\\91\\0e021ac60287bd80db173266bb8ffb19ebb04d68f554bc34b6\nSuccessfully built wechat-memory-ai\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--target",
+        "C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\installed",
+        "C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\wheels\\wechat_memory_ai-0.1.1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "stdout": "Processing C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\wheels\\wechat_memory_ai-0.1.1-py3-none-any.whl\nInstalling collected packages: wechat-memory-ai\nSuccessfully installed wechat-memory-ai-0.1.1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "wechat_memory",
+        "--config",
+        "C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\config.toml",
+        "diagnose"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"python\": \"3.12.14\", \"os\": \"Windows\", \"sqlite\": \"3.53.1\", \"adapter\": \"mock\", \"model_provider\": \"fake\", \"dry_run\": true, \"network_enabled\": false, \"real_send_supported\": false, \"real_wechat_verified\": false, \"wechat_client_version\": \"not_checked\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "wechat_memory",
+        "--config",
+        "C:\\Users\\zhihua\\AppData\\Local\\Temp\\wechat-memory-build-rhchajbf\\config.toml",
+        "run"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"dry_run\", \"reply\": \"安装包本地 HTTP 验证成功\", \"event_key\": \"d81476a743f9ba03e1d6bdd5c3b8aadff82d78a59316f2435a53744bb2d194f0\", \"code\": \"\"}\n",
+      "stderr": ""
+    }
+  ],
+  "installed_http_calls": 1,
+  "all_assertions_passed": true
+}

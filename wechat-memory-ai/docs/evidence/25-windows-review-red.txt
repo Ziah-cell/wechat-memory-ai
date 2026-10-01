@@ -1,0 +1,31 @@
+test_broken_venv_falls_back_to_working_python (test_windows_scripts.WindowsScriptTests.test_broken_venv_falls_back_to_working_python) ... 
+  test_broken_venv_falls_back_to_working_python (test_windows_scripts.WindowsScriptTests.test_broken_venv_falls_back_to_working_python) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe') ... FAIL
+
+======================================================================
+FAIL: test_broken_venv_falls_back_to_working_python (test_windows_scripts.WindowsScriptTests.test_broken_venv_falls_back_to_working_python) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_windows_scripts.py", line 76, in test_broken_venv_falls_back_to_working_python
+    self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
+AssertionError: 1 != 0 : python.exe : No Python at '"C:\Users\zhihua\AppData\Local\Temp\wechat scripts alc4ky93\isolated project\missing runtime
+
+\python.exe'
+
+At C:\Users\zhihua\AppData\Local\Temp\wechat scripts alc4ky93\isolated project\scripts\windows.ps1:39 char:14
+
++ ...    $Probe = & $Executable.Source @Prefix -X utf8 -c 'import sys; prin ...
+
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    + CategoryInfo          : NotSpecified: (No Python at '"...ime\python.exe':String) [], RemoteException
+
+    + FullyQualifiedErrorId : NativeCommandError
+
+ 
+
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.300s
+
+FAILED (failures=1)

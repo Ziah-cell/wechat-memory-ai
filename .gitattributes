@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+# Preserve raw historical command output, including trailing terminal whitespace.
+wechat-memory-ai/docs/evidence/** -text -whitespace
+# Preserve the original handoff's intentional Markdown hard line break.
+wechat-memory-ai/CODEX_TASK.md whitespace=-blank-at-eol

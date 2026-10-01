@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-01",
+  "os": "Windows-11-10.0.26200-SP0",
+  "windows_build": "26200",
+  "python": "3.12.14",
+  "python_executable": "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "sqlite": "3.53.1",
+  "powershell": [
+    "5.1",
+    "7.6.5"
+  ],
+  "py_launcher_present": false,
+  "wechat_file_version": "4.1.15.13",
+  "wechat_product_version": "4.1.15.13",
+  "wechat_process_found_at_inspection": false,
+  "original_zip_crc": "ok",
+  "original_archive_files_matched": 60,
+  "original_manifest_hashes_matched": 59,
+  "real_wechat_verified": false,
+  "real_model_verified": false,
+  "sources": [
+    "https://docs.wxauto.org/docs/install.html",
+    "https://github.com/cluic/wxauto4"
+  ]
+}
