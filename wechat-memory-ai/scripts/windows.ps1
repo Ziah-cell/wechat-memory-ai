@@ -1,11 +1,12 @@
 param(
-    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check','ocr-check')]
+    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check','ocr-check','listen-wechat')]
     [string]$Action = 'run',
     [string]$Config = 'config.toml',
     [string]$Path = '',
     [string]$Guard = '',
     [switch]$Confirm,
     [string]$ClientPath = '',
+    [ValidateRange(1,300)][int]$ListenSeconds = 30,
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'
@@ -56,6 +57,10 @@ Push-Location $ProjectRoot
 try {
     if ($Action -eq 'test') {
         & $PythonExe -X utf8 'scripts/test.py'
+        exit $LASTEXITCODE
+    }
+    if ($Action -eq 'listen-wechat') {
+        & $PythonExe -X utf8 'scripts/listen-wechat.py' --client-path $ClientPath --seconds $ListenSeconds
         exit $LASTEXITCODE
     }
     if ($Action -eq 'offline-check') {

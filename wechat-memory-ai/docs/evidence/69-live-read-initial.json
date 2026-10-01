@@ -1,0 +1,15 @@
+{
+  "client_version": "4.1.15.50",
+  "user_login_confirmed": true,
+  "computer_use_chat_structure_readable": true,
+  "native_connection": true,
+  "independent_private_chat_windows": 1,
+  "initial_rows": 8,
+  "initial_text_rows": 5,
+  "challenge_texts_at_check": 0,
+  "history_processed": false,
+  "sender_verified": false,
+  "real_send_supported": false,
+  "real_model_called": false,
+  "raw_chat_saved": false
+}

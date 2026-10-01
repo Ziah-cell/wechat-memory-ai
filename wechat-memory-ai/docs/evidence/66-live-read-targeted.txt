@@ -1,0 +1,24 @@
+test_bad_schema_and_non_independent_chats_rejected (test_live_read.LiveReadTests.test_bad_schema_and_non_independent_chats_rejected) ... ERROR
+test_baseline_ignores_history_and_preserves_identical_new_rows (test_live_read.LiveReadTests.test_baseline_ignores_history_and_preserves_identical_new_rows) ... ok
+test_identity_and_list_changes_stop_and_cannot_rearm (test_live_read.LiveReadTests.test_identity_and_list_changes_stop_and_cannot_rearm) ... ok
+test_non_text_rows_never_become_text_observations (test_live_read.LiveReadTests.test_non_text_rows_never_become_text_observations) ... ok
+test_rebuild_removed_history_or_reused_token_stops (test_live_read.LiveReadTests.test_rebuild_removed_history_or_reused_token_stops) ... ok
+test_restart_baselines_current_rows_without_replaying (test_live_read.LiveReadTests.test_restart_baselines_current_rows_without_replaying) ... ok
+test_timeout_child_failure_and_private_errors_are_sanitized (test_live_read.LiveReadTests.test_timeout_child_failure_and_private_errors_are_sanitized) ... ok
+
+======================================================================
+ERROR: test_bad_schema_and_non_independent_chats_rejected (test_live_read.LiveReadTests.test_bad_schema_and_non_independent_chats_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 65, in test_bad_schema_and_non_independent_chats_rejected
+    live_read.ReadSession().accept(snapshot(**change))
+                                   ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 16, in snapshot
+    rows=[dict(token=token, text=text, kind='text') for token, text in rows])
+                                                        ^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (errors=1)

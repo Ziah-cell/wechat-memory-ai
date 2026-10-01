@@ -1,14 +1,16 @@
-# 普通个人微信长期记忆 AI · 独立接入准备 v0.1.4
+# 普通个人微信长期记忆 AI · 独立只读连接 v0.1.5
 
-当前聊天入口是**控制台模拟器**。v0.1.2 增加独立 Windows UIA 结构诊断，尚无真实微信消息监听或发送。`real_send = false` 为硬边界；即使将 `dry_run` 关闭，也只会向模拟输出队列写入结果。
+核心聊天入口仍是**控制台模拟器**。v0.1.5 新增独立 `listen-wechat`，已在本机连接真实测试私聊窗口并读取可见文本。发送方与新消息边界仍待验收，没有接入模型或自动回复；`real_send = false` 为硬边界。
+
+只读连接运行：`.\scripts\windows.ps1 -Action listen-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe' -ListenSeconds 30`。只保留一个测试好友的独立聊天窗口，启动时建立基线，报告仅含计数。具体限制见 [docs/LIVE_READ.md](docs/LIVE_READ.md)。
 
 v0.1.3 增加异步回调队列和一键离线演练。现在可运行 `.\scripts\windows.ps1 -Action offline-check`，用临时数据库和假模型验证回调、过滤、去重与停止边界；不读取个人配置或操作真实微信。详见 [docs/OFFLINE_CHECK.md](docs/OFFLINE_CHECK.md)。
 
-最新实机结果：用户已完成登录准备，检测到微信 4.1.15.50。只读 UIA 仅看到基础窗口控件，尚无联系人/消息控件证据，当前不能启用真实监听。详见 [docs/LIVE_UIA_CHECK.md](docs/LIVE_UIA_CHECK.md)。
+此前实机检查曾只看到基础窗口控件，记录见 [docs/LIVE_UIA_CHECK.md](docs/LIVE_UIA_CHECK.md)。用户重新登录后，当前 4.1.15.50 已可读取测试窗口；原因尚未确定，不能据此保证其他账号或版本可用。
 
 v0.1.4 增加 `.\scripts\windows.ps1 -Action ocr-check`：只用内存生成的虚构气泡检查 Windows 本地中文 OCR，不读取屏幕或真实聊天。本机引擎可运行，但浅色/大字号样例有识别误差，返回 `recognition_mismatch` / 退出码 3。完整 108 项程序测试通过，不代表 OCR 样例或真实微信接入通过。详见 [docs/OCR_CHECK.md](docs/OCR_CHECK.md)。
 
-后续已在独立 `.ocr-env` 实测免费 RapidOCR 候选，固定样例的中文和字母数字识别改善，但气泡边缘误检与真实符号漏字仍存在，结果为 `review_required` / 退出码 3。新增源码树实验脚本，不改变核心依赖或默认运行流程。当前完整 **117 项测试通过**，真实微信收发仍未接通。详见 [docs/OCR_CANDIDATE.md](docs/OCR_CANDIDATE.md)。
+此前在独立 `.ocr-env` 实测免费 RapidOCR 候选，固定样例的中文和字母数字识别改善，但气泡边缘误检与真实符号漏字仍存在，结果为 `review_required` / 退出码 3。该阶段 117 项测试通过，详见 [docs/OCR_CANDIDATE.md](docs/OCR_CANDIDATE.md)。当前只读连接直接使用 UIA，不依赖 OCR。
 
 本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
 

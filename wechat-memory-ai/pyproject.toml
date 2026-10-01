@@ -4,17 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wechat-memory-ai"
-version = "0.1.4"
-description = "Offline-first memory core with read-only Windows UIA diagnostics; no real messaging"
+version = "0.1.5"
+description = "Offline memory core and an independent read-only WeChat connection; no real sends"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
 [project.scripts]
 wechat-memory = "wechat_memory.cli:main"
+wechat-memory-listen = "wechat_memory.live_read:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-wechat_memory = ["uia_*.ps1", "ocr_*.ps1"]
+wechat_memory = ["uia_*.ps1", "ocr_*.ps1", "live_reader.cs"]

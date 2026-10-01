@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-01",
+  "client_version": "4.1.15.50",
+  "observation_source": "computer_use",
+  "existing_client_opened": true,
+  "target_window_count": 1,
+  "login_page_observed": true,
+  "login_controls_accessible": true,
+  "chat_page_observed": false,
+  "authentication_actions": false,
+  "real_chat_read": false,
+  "identity_verified": false,
+  "listener_ready": false,
+  "real_send_supported": false,
+  "status": "awaiting_user_login"
+}
