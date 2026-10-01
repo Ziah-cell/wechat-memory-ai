@@ -1,6 +1,6 @@
-# 普通个人微信长期记忆 AI · 独立只读连接 v0.1.5
+# 普通个人微信长期记忆 AI · 独立只读连接 v0.1.6
 
-核心聊天入口仍是**控制台模拟器**。v0.1.5 新增独立 `listen-wechat`，已在本机连接真实测试私聊窗口并读取可见文本。发送方与新消息边界仍待验收，没有接入模型或自动回复；`real_send = false` 为硬边界。
+核心聊天入口仍是**控制台模拟器**。真实测试私聊已完成两条相同来信和一次经授权的固定回复验收，回复由 Computer Use 发送且用户确认收到。v0.1.6 修复独立 `listen-wechat` 在顶部旧行移出后停止的问题，136 项回归通过；修复后的真实新消息监听尚未再验收。程序发送方与历史边界仍未验证，没有接入模型或自动回复；`real_send = false` 为硬边界。
 
 只读连接运行：`.\scripts\windows.ps1 -Action listen-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe' -ListenSeconds 30`。只保留一个测试好友的独立聊天窗口，启动时建立基线，报告仅含计数。具体限制见 [docs/LIVE_READ.md](docs/LIVE_READ.md)。
 

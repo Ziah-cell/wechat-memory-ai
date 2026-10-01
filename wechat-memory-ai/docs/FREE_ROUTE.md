@@ -4,7 +4,7 @@
 
 ## 当前可用阶段
 
-当前 v0.1.5 已有独立 `listen-wechat`，通过系统 .NET/UIA 读取本机测试私聊窗口，无第三方运行依赖。实际读到 8 个列表项，其中 5 个文本项；发送方、新消息/历史边界与自动回复仍待验收。此前“只能看到基础控件”的状态已经变化，原因尚未确定。详见 [LIVE_READ.md](LIVE_READ.md)。
+当前 v0.1.6 的独立 `listen-wechat` 通过系统 .NET/UIA 读取本机测试私聊窗口，无第三方运行依赖，已修复顶部移除后的连续性。真实两条相同来信与一次 Computer Use 固定回复已验收，用户确认收到；该次发送授权已用完。修复后的真实新消息监听、程序发送方/历史边界仍待验收，自动回复未启用。详见 [LIVE_READ.md](LIVE_READ.md)。
 
 最新增加独立 RapidOCR 候选实验：项目 `.ocr-env` 安装免费依赖，核心仍无第三方依赖。固定样例的中文/字母数字识别改善，但过滤误检会漏掉真实符号，结果 **review_required / 3**，不接入自动监听/回复。完整回归 117 项通过；来源、实际结果和局限见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。
 
@@ -43,10 +43,10 @@ v0.1.3 保留无第三方运行依赖的离线核心、假模型和 Windows UIA 
 
 1. 用户已确认受控第二个普通号与唯一测试好友窗口准备好，不重复要求登录，不自动降级客户端。
 2. 用户重新登录后，当前 UIA 已可读取独立测试窗口，v0.1.5 原生只读连接已验证；当前不需要 OCR 或被拒绝过的 MSAA 路线。
-3. 继续实测两条相同新文字、发送方与历史边界。只读观察目前没有接入核心，不能跳过这些验证直接自动回复。
+3. 两条相同来信已观察；继续验证修复后的连续监听、程序发送方与历史边界。只读观察目前没有接入核心，不能跳过这些验证直接自动回复。
 4. 必须取得稳定的会话身份、新消息证据与重启边界。昵称或 OCR 文本本身不足以授权发送；UIA RuntimeId 也不能未经实测当成跨重启消息 ID。
-5. 只在唯一测试好友上做 dry-run；实际收件人和一次发送由用户明确确认后，再单独实现固定文本发送验收。
+5. 一次固定文本发送已由 Computer Use 完成并获用户确认，无需重做。项目发送适配器尚未开发，后续程序发送验证须另行核验目标与授权，不重用已消耗的授权。
 
 优先验证 pyweixin 的纯 UI 路线，也可基于 Windows 自带 UI Automation 独立实现最小只读层。若该账号没有可用 UI 树，记录阻塞；OCR 可以作为后续可行性研究，但在身份与去重未可靠解决前不接入自动发送。
 
-Windows UI Automation 的基础访问方式见 [Microsoft 官方说明](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/obtaining-ui-automation-elements)。未安装微信适配器；已安装的 OCR 实验依赖仅在项目隔离目录，未启动微信、切换联系人或真实收发。
+Windows UI Automation 的基础访问方式见 [Microsoft 官方说明](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/obtaining-ui-automation-elements)。未安装第三方微信适配器；OCR 实验依赖仅在项目隔离目录，本次连续性修复未新增依赖或操作真实微信。此前固定收发证据见 [78](evidence/78-live-exchange.json)。

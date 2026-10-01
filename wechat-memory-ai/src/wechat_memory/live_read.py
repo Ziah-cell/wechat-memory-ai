@@ -62,6 +62,7 @@ class ReadSession:
     def __init__(self):
         self._identity = None
         self._rows = []
+        self._seen_tokens = set()
         self._epoch = uuid.uuid4().hex
         self._sequence = 0
         self._texts = 0
@@ -76,6 +77,7 @@ class ReadSession:
             current = [(r[0],r[1]) for r in rows]
             if self._identity is None:
                 self._identity, self._rows = identity, current
+                self._seen_tokens.update(r[0] for r in current)
                 self._state = 'reading' if current else 'initializing'
                 self._snapshots += 1
                 return []
@@ -83,20 +85,36 @@ class ReadSession:
                 raise ReadError('window_or_list_changed')
             if self._state == 'initializing':
                 self._rows = current
+                self._seen_tokens.update(r[0] for r in current)
                 self._state = 'reading' if current else 'initializing'
                 self._snapshots += 1
                 return []
-            # Deliberately conservative: virtualized removal, reorder, mutation
-            # or rebuilding is not evidence that all visible text is new.
-            if current[:len(self._rows)] != self._rows:
-                raise ReadError('message_continuity_lost')
+            overlap = len(self._rows)
+            if current[:overlap] != self._rows:
+                # Only a complete old suffix may anchor a front eviction.
+                # Require two unchanged rows and at least one appended row.
+                for start in range(1, len(self._rows) - 1):
+                    overlap = len(self._rows) - start
+                    if len(current) > overlap and current[:overlap] == self._rows[start:]:
+                        break
+                else:
+                    raise ReadError('message_continuity_lost')
+            appended = rows[overlap:]
+            new_tokens = {r[0] for r in appended}
+            # Validate the entire batch before advancing counters or returning
+            # observations. Evicted tokens remain known for this session.
+            if new_tokens & self._seen_tokens:
+                raise ReadError('message_token_reused')
+            if len(self._seen_tokens) + len(new_tokens) > 4096:
+                raise ReadError('session_token_limit')
             observations = []
-            for _, _, kind, text in rows[len(self._rows):]:
+            for _, _, kind, text in appended:
                 self._sequence += 1
                 if kind == 'text' and text.strip():
                     self._texts += 1
                     observations.append(Observation(self._epoch+':'+str(self._sequence),text))
             self._rows = current
+            self._seen_tokens.update(new_tokens)
             self._snapshots += 1
             return observations
         except (ReadError, TypeError, ValueError):

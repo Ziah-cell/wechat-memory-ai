@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-01",
+  "client_version": "4.1.15.50",
+  "scope": "previously selected single independent private chat",
+  "incoming_identical_test_messages_visible": 2,
+  "incoming_visual_side": "left",
+  "test_comparison": "spaces omitted by sender; whitespace-insensitive test-only comparison",
+  "native_snapshot_rows_before": 8,
+  "native_snapshot_rows_after": 9,
+  "retained_prior_rows": 6,
+  "prior_bounded_monitor": "stopped_on_continuity_change; no new observations returned",
+  "single_fixed_reply_explicitly_authorized": true,
+  "reply_send_button_clicks": 1,
+  "reply_visible_on_right": true,
+  "input_cleared_after_send": true,
+  "user_confirmed_reply_received": true,
+  "send_method": "Computer Use action; not a project send adapter",
+  "automatic_reply_enabled": false,
+  "model_called": false,
+  "raw_messages_or_identifiers_saved": false
+}

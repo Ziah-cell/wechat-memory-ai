@@ -42,6 +42,76 @@ class LiveReadTests(unittest.TestCase):
         self.assertEqual(restarted.accept(snapshot([('1', 'new')])), [])
         self.assertEqual(restarted.report()['observed_new_rows'], 0)
 
+    def test_front_eviction_keeps_two_identical_appended_messages(self):
+        session = live_read.ReadSession()
+        baseline = [(str(i), 'history '+str(i)) for i in range(8)]
+        session.accept(snapshot(baseline))
+        raw = snapshot(baseline[2:]+[('8','timestamp'),('9','same'),('10','same')])
+        raw['rows'][6]['kind'] = 'other'
+        result = session.accept(raw)
+        self.assertEqual([row.text for row in result], ['same','same'])
+        self.assertNotEqual(result[0].observation_id,result[1].observation_id)
+        self.assertEqual(session.accept(raw),[])
+        self.assertEqual(session.report()['observed_new_rows'],3)
+        self.assertEqual(session.report()['observed_new_texts'],2)
+        self.assertFalse(session.report()['history_boundary_verified'])
+        self.assertTrue(all(row.direction == 'unverified' for row in result))
+
+    def test_front_eviction_requires_two_unchanged_anchors_and_append(self):
+        baseline = [('1','a'),('2','b'),('3','c'),('4','d')]
+        invalid = [baseline[2:], [('4','d'),('5','e')], [('5','e'),('6','f')],
+                   [('2','b'),('4','d'),('5','e')],
+                   [('3','c'),('2','b'),('4','d'),('5','e')],
+                   [('3','changed'),('4','d'),('5','e')]]
+        for rows in invalid:
+            with self.subTest(rows=rows):
+                session = live_read.ReadSession()
+                session.accept(snapshot(baseline))
+                with self.assertRaises(live_read.ReadError):
+                    session.accept(snapshot(rows))
+                self.assertEqual(session.report()['observed_new_rows'],0)
+                self.assertEqual(session.report()['status'],'stopped')
+
+    def test_evicted_tokens_cannot_reappear_even_with_changed_text(self):
+        for text in ('a','different'):
+            with self.subTest(text=text):
+                session = live_read.ReadSession()
+                session.accept(snapshot([('1','a'),('2','b'),('3','c')]))
+                session.accept(snapshot([('2','b'),('3','c'),('4','d')]))
+                with self.assertRaises(live_read.ReadError):
+                    session.accept(snapshot([('3','c'),('4','d'),('5','e'),('1',text)]))
+                self.assertEqual(session.report()['observed_new_rows'],1)
+
+    def test_plain_append_cannot_replay_evicted_token(self):
+        session = live_read.ReadSession()
+        session.accept(snapshot([('1','a'),('2','b'),('3','c')]))
+        session.accept(snapshot([('2','b'),('3','c'),('4','d')]))
+        with self.assertRaises(live_read.ReadError):
+            session.accept(snapshot([('2','b'),('3','c'),('4','d'),('1','a')]))
+
+    def test_seen_token_limit_stops_before_returning_partial_batch(self):
+        session = live_read.ReadSession()
+        rows = [(str(i),'text') for i in range(3)]
+        session.accept(snapshot(rows))
+        for i in range(3,4096):
+            rows = rows[1:]+[(str(i),'text')]
+            self.assertEqual(len(session.accept(snapshot(rows))),1)
+        self.assertEqual(session.accept(snapshot(rows)),[])
+        before = session.report()['observed_new_rows']
+        with self.assertRaises(live_read.ReadError):
+            session.accept(snapshot(rows[1:]+[('4096','text'),('4097','text')]))
+        self.assertEqual(session.report()['observed_new_rows'],before)
+
+    def test_eviction_then_restart_baselines_without_replay(self):
+        rows = [('1','a'),('2','b'),('3','c')]
+        first = live_read.ReadSession()
+        first.accept(snapshot(rows))
+        rows = rows[1:]+[('4','new')]
+        self.assertEqual(len(first.accept(snapshot(rows))),1)
+        restarted = live_read.ReadSession()
+        self.assertEqual(restarted.accept(snapshot(rows)),[])
+        self.assertEqual(restarted.report()['observed_new_texts'],0)
+
     def test_identity_and_list_changes_stop_and_cannot_rearm(self):
         for change in ({'root':'ChatSingleWindowwxid_other'}, {'window':35},
                        {'process':13}, {'started':'other'}, {'list_token':'new'}):

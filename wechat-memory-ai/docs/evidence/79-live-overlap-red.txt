@@ -1,0 +1,89 @@
+test_bad_schema_and_non_independent_chats_rejected (test_live_read.LiveReadTests.test_bad_schema_and_non_independent_chats_rejected) ... ok
+test_baseline_ignores_history_and_preserves_identical_new_rows (test_live_read.LiveReadTests.test_baseline_ignores_history_and_preserves_identical_new_rows) ... ok
+test_evicted_tokens_cannot_reappear_even_with_changed_text (test_live_read.LiveReadTests.test_evicted_tokens_cannot_reappear_even_with_changed_text) ... 
+  test_evicted_tokens_cannot_reappear_even_with_changed_text (test_live_read.LiveReadTests.test_evicted_tokens_cannot_reappear_even_with_changed_text) (text='a') ... ERROR
+  test_evicted_tokens_cannot_reappear_even_with_changed_text (test_live_read.LiveReadTests.test_evicted_tokens_cannot_reappear_even_with_changed_text) (text='different') ... ERROR
+test_eviction_then_restart_baselines_without_replay (test_live_read.LiveReadTests.test_eviction_then_restart_baselines_without_replay) ... ERROR
+test_front_eviction_keeps_two_identical_appended_messages (test_live_read.LiveReadTests.test_front_eviction_keeps_two_identical_appended_messages) ... ERROR
+test_front_eviction_requires_two_unchanged_anchors_and_append (test_live_read.LiveReadTests.test_front_eviction_requires_two_unchanged_anchors_and_append) ... ok
+test_identity_and_list_changes_stop_and_cannot_rearm (test_live_read.LiveReadTests.test_identity_and_list_changes_stop_and_cannot_rearm) ... ok
+test_initial_empty_list_never_promotes_late_history (test_live_read.LiveReadTests.test_initial_empty_list_never_promotes_late_history) ... ok
+test_literal_child_arguments_and_malformed_output (test_live_read.LiveReadTests.test_literal_child_arguments_and_malformed_output) ... ok
+test_non_text_rows_never_become_text_observations (test_live_read.LiveReadTests.test_non_text_rows_never_become_text_observations) ... ok
+test_plain_append_cannot_replay_evicted_token (test_live_read.LiveReadTests.test_plain_append_cannot_replay_evicted_token) ... ERROR
+test_reader_transmits_binding_before_subsequent_native_reads (test_live_read.LiveReadTests.test_reader_transmits_binding_before_subsequent_native_reads) ... ok
+test_real_native_build_missing_client_and_temporary_cleanup (test_live_read.LiveReadTests.test_real_native_build_missing_client_and_temporary_cleanup) ... ok
+test_rebuild_removed_history_or_reused_token_stops (test_live_read.LiveReadTests.test_rebuild_removed_history_or_reused_token_stops) ... ok
+test_restart_baselines_current_rows_without_replaying (test_live_read.LiveReadTests.test_restart_baselines_current_rows_without_replaying) ... ok
+test_seen_token_limit_stops_before_returning_partial_batch (test_live_read.LiveReadTests.test_seen_token_limit_stops_before_returning_partial_batch) ... ERROR
+test_temporary_creation_and_cleanup_errors_are_sanitized (test_live_read.LiveReadTests.test_temporary_creation_and_cleanup_errors_are_sanitized) ... ok
+test_timeout_child_failure_and_private_errors_are_sanitized (test_live_read.LiveReadTests.test_timeout_child_failure_and_private_errors_are_sanitized) ... ok
+test_windows_entry_points_preserve_config_and_propagate_failure (test_live_read.LiveReadTests.test_windows_entry_points_preserve_config_and_propagate_failure) ... ok
+
+======================================================================
+ERROR: test_evicted_tokens_cannot_reappear_even_with_changed_text (test_live_read.LiveReadTests.test_evicted_tokens_cannot_reappear_even_with_changed_text) (text='a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 80, in test_evicted_tokens_cannot_reappear_even_with_changed_text
+    session.accept(snapshot([('2','b'),('3','c'),('4','d')]))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_evicted_tokens_cannot_reappear_even_with_changed_text (test_live_read.LiveReadTests.test_evicted_tokens_cannot_reappear_even_with_changed_text) (text='different')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 80, in test_evicted_tokens_cannot_reappear_even_with_changed_text
+    session.accept(snapshot([('2','b'),('3','c'),('4','d')]))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_eviction_then_restart_baselines_without_replay (test_live_read.LiveReadTests.test_eviction_then_restart_baselines_without_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 110, in test_eviction_then_restart_baselines_without_replay
+    self.assertEqual(len(first.accept(snapshot(rows))),1)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_front_eviction_keeps_two_identical_appended_messages (test_live_read.LiveReadTests.test_front_eviction_keeps_two_identical_appended_messages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 51, in test_front_eviction_keeps_two_identical_appended_messages
+    result = session.accept(raw)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_plain_append_cannot_replay_evicted_token (test_live_read.LiveReadTests.test_plain_append_cannot_replay_evicted_token)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 88, in test_plain_append_cannot_replay_evicted_token
+    session.accept(snapshot([('2','b'),('3','c'),('4','d')]))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_seen_token_limit_stops_before_returning_partial_batch (test_live_read.LiveReadTests.test_seen_token_limit_stops_before_returning_partial_batch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_live_read.py", line 98, in test_seen_token_limit_stops_before_returning_partial_batch
+    self.assertEqual(len(session.accept(snapshot(rows))),1)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 104, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+----------------------------------------------------------------------
+Ran 19 tests in 2.041s
+
+FAILED (errors=6)

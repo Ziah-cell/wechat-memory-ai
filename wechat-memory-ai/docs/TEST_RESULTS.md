@@ -1,14 +1,26 @@
-# Windows 测试结果（当前 v0.1.5）
+# Windows 测试结果（当前 v0.1.6）
 
 执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.5 独立只读连接
+## v0.1.6 监听连续性修复
+
+保留原 6 项新增回归，先复现 19 项、6 errors（一个测试的两个子例），合法顶部移除触发旧前缀检查拒绝：[79](evidence/79-live-overlap-red.txt)。实现后定向 **19/19，1.875 秒**：[80](evidence/80-live-overlap-targeted.txt)；完整 **136/136，30.124 秒，0 失败/错误/跳过**：[81](evidence/81-live-overlap-full-suite.txt)。
+
+版本更新为 0.1.6 后，按项目交付约定执行 `scripts/windows.ps1 -Action test -Python <现有解释器>`，最终 **136/136，30.488 秒，0 失败/错误/跳过**：[82](evidence/82-live-overlap-final-suite.txt)。`pyproject.toml` 与运行时 `__version__` 均为 0.1.6；本轮未构建新的安装包。
+
+独立只读审查未发现 Critical / Important / Minor 问题；审查者重跑定向 19/19、1.863 秒，并执行 6 项内存边界检查全部通过。完整回归由本任务执行，审查者仅复核其证据。审查范围与保留限制见 [83](evidence/83-live-overlap-review.json)。
+
+使用现有 Python，无安装依赖。应用目录内定向命令：设置 `PYTHONPATH=src` 后 `python -X utf8 -m unittest discover -s tests -p test_live_read.py -v`；完整命令：`python -X utf8 scripts/test.py`。覆盖后缀衔接、两条相同正文独立输出、无追加/弱锚点/变化拒绝、旧 token 重现、4096 上限整批停止及重启重新建基线。
+
+实机证据 [78](evidence/78-live-exchange.json)：两条相同左侧来信已观察，一条经授权的固定回复由 Computer Use 发送且用户确认收到。旧有界监听因顶部移除而停止，没有返回新增观察。本次虚构快照回归不等于修复后的真实连续监听验收；未再发送、未调用真实模型、未启用自动回复。
+
+## v0.1.5 独立只读连接（历史记录）
 
 最终完整回归 **130/130，32.715 秒，0 失败/错误/跳过**，见 [77](evidence/77-live-read-final-suite.txt)。新增 13 项覆盖首次基线、重复文字、重启不回放、窗口/进程/列表绑定、条目变化拒绝、空列表初始化、私有管道传递绑定、异常脱敏、原生编译/清理与双 PowerShell 入口。前一轮完整回归 130/130、33.658 秒见 [72](evidence/72-live-read-full-suite.txt)。
 
 独立审查发现读取正文前绑定校验、空列表加载历史及临时目录异常脱敏问题；修复后又补齐编译器属性检查的权限错误脱敏。已先补失败回归再修复，全部发现经审查复验关闭。证据 [70](evidence/70-live-read-review-red.txt)、[71](evidence/71-live-read-review-fixed.txt)、[75](evidence/75-live-read-stat-red.txt)、[76](evidence/76-live-read-stat-fixed.txt)。
 
-实际微信 4.1.15.50 的测试窗口已经可读，原生程序取得 8 个列表项、5 个文本项，连续 3 次绑定读取成功，初始内容没有转为新观察：[69](evidence/69-live-read-initial.json)、[73](evidence/73-live-read-bound-snapshots.json)。**尚未收到所请求的两条验证消息**；发送方方向、消息到达/历史边界、真实切换/重启、真实发送仍未验收。未调用模型、写入记忆或保存真实聊天到仓库。
+当时微信 4.1.15.50 的原生程序取得 8 个列表项、5 个文本项，连续 3 次绑定读取成功，初始内容没有转为新观察：[69](evidence/69-live-read-initial.json)、[73](evidence/73-live-read-bound-snapshots.json)。该阶段结束时尚未收到验证消息，后续固定收发结果见本页 v0.1.6 与证据 78。未调用模型、写入记忆或保存真实聊天到仓库。
 
 v0.1.5 wheel 临时构建/安装后原生源码存在、编译成功、缺失客户端正确拒绝：[74](evidence/74-live-read-package.json)。完整运行和局限见 [LIVE_READ.md](LIVE_READ.md)。
 
