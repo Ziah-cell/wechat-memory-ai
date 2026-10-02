@@ -1,0 +1,45 @@
+test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry (test_visual_occurrences.NativeVisualTextTests.test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry) ... ok
+test_real_native_joined_mode_rejects_missing_client_and_cleans_up (test_visual_occurrences.NativeVisualTextTests.test_real_native_joined_mode_rejects_missing_client_and_cleans_up) ... ok
+test_anchor_direction_change_stops_without_partial_counts (test_visual_occurrences.VisualOccurrenceTests.test_anchor_direction_change_stops_without_partial_counts) ... ok
+test_bad_protocol_is_sanitized_and_terminal (test_visual_occurrences.VisualOccurrenceTests.test_bad_protocol_is_sanitized_and_terminal) ... ok
+test_baseline_is_not_replayed_and_same_text_keeps_its_own_direction (test_visual_occurrences.VisualOccurrenceTests.test_baseline_is_not_replayed_and_same_text_keeps_its_own_direction) ... ok
+test_cli_outputs_only_counts_and_uses_the_joined_reader (test_visual_occurrences.VisualOccurrenceTests.test_cli_outputs_only_counts_and_uses_the_joined_reader) ... ok
+test_native_protocol_retains_target_binding_and_rejects_unjoined_output (test_visual_occurrences.VisualOccurrenceTests.test_native_protocol_retains_target_binding_and_rejects_unjoined_output) ... ok
+test_plain_visual_and_joined_modes_cannot_be_interchanged (test_visual_occurrences.VisualOccurrenceTests.test_plain_visual_and_joined_modes_cannot_be_interchanged) ... ok
+test_recycled_new_content_can_be_candidate_but_old_pair_with_new_direction_cannot (test_visual_occurrences.VisualOccurrenceTests.test_recycled_new_content_can_be_candidate_but_old_pair_with_new_direction_cannot) ... ok
+test_unknown_intermediate_does_not_erase_conflicting_positive_direction (test_visual_occurrences.VisualOccurrenceTests.test_unknown_intermediate_does_not_erase_conflicting_positive_direction) ... ERROR
+test_unknown_nontext_and_blank_rows_do_not_promote_to_incoming_text (test_visual_occurrences.VisualOccurrenceTests.test_unknown_nontext_and_blank_rows_do_not_promote_to_incoming_text) ... ok
+test_unknown_visibility_transitions_do_not_destroy_unchanged_content_anchors (test_visual_occurrences.VisualOccurrenceTests.test_unknown_visibility_transitions_do_not_destroy_unchanged_content_anchors) ... ERROR
+
+======================================================================
+ERROR: test_unknown_intermediate_does_not_erase_conflicting_positive_direction (test_visual_occurrences.VisualOccurrenceTests.test_unknown_intermediate_does_not_erase_conflicting_positive_direction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_occurrences.py", line 74, in test_unknown_intermediate_does_not_erase_conflicting_positive_direction
+    self.assertEqual(session.accept(snapshot(row('a',direction='unknown'),row('b'))),[])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 348, in accept
+    observations = super().accept(raw)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 280, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+======================================================================
+ERROR: test_unknown_visibility_transitions_do_not_destroy_unchanged_content_anchors (test_visual_occurrences.VisualOccurrenceTests.test_unknown_visibility_transitions_do_not_destroy_unchanged_content_anchors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_occurrences.py", line 65, in test_unknown_visibility_transitions_do_not_destroy_unchanged_content_anchors
+    result=session.accept(snapshot(row('a',direction='unknown'),row('b'),row('c','new')))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 348, in accept
+    observations = super().accept(raw)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 280, in accept
+    raise ReadError('read_session_stopped') from None
+wechat_memory.live_read.ReadError: read_session_stopped
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.697s
+
+FAILED (errors=2)

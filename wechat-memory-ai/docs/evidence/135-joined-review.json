@@ -1,0 +1,18 @@
+{
+  "scope": "joined_visual_text_occurrence_candidates",
+  "initial_targeted_tests": 10,
+  "final_targeted_tests": 12,
+  "final_seconds": 0.681,
+  "three_observation_direction_sequences_checked": 27,
+  "capacity_and_rejection_atomicity_checked": true,
+  "findings": [],
+  "real_ui_accessed": false,
+  "full_suite_rerun_by_reviewer": false,
+  "limitations": [
+    "real_new_message_acceptance_pending",
+    "native_value_fixture_does_not_simulate_full_UIA_churn",
+    "capture_bracket_not_atomic",
+    "sender_history_server_identity_unverified",
+    "broad_visual_accuracy_unverified"
+  ]
+}

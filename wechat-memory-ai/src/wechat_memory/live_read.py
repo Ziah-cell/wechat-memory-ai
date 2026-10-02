@@ -172,6 +172,23 @@ def visual_report(raw):
                 real_send_supported=False,model_called=False)
 
 
+def validate_visual_text_snapshot(raw):
+    """Validate a single provider read; visual directions remain candidates."""
+    if (not isinstance(raw,dict) or raw.get('status') != 'visual_text_snapshot'
+            or not isinstance(raw.get('rows'),list) or len(raw['rows'])>256):
+        raise ReadError('invalid_snapshot')
+    validation_rows, directions = [], []
+    for row in raw['rows']:
+        if (not isinstance(row,dict) or set(row) != {'token','kind','text','direction'}
+                or row['direction'] not in ('incoming_candidate','self_candidate','unknown')
+                or (row['kind']!='text' and row['direction']!='unknown')):
+            raise ReadError('invalid_snapshot')
+        validation_rows.append({key:row[key] for key in ('token','kind','text')})
+        directions.append(row['direction'])
+    identity, rows = validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+    return identity, [(*record,direction) for record,direction in zip(rows,directions)]
+
+
 class ReadSession:
     def __init__(self):
         self._identity = None
@@ -184,6 +201,15 @@ class ReadSession:
         self._front_evictions = 0
         self._stop_reason = None
         self._state = 'waiting'
+
+    def _validate(self, raw):
+        return validate_snapshot(raw)
+
+    def _continuity_key(self, row):
+        return row[0], row[1]
+
+    def _direction(self, row):
+        return 'unverified'
 
     def _check_appended(self, appended):
         new_tokens = {r[0] for r in appended}
@@ -206,8 +232,8 @@ class ReadSession:
         if self._state == 'stopped':
             raise ReadError('session_stopped')
         try:
-            identity, rows = validate_snapshot(raw)
-            current = [(r[0],r[1]) for r in rows]
+            identity, rows = self._validate(raw)
+            current = [self._continuity_key(r) for r in rows]
             if self._identity is None:
                 self._identity, self._rows = identity, current
                 self._remember_rows(rows)
@@ -237,11 +263,12 @@ class ReadSession:
             # observations. Evicted tokens remain known for this session.
             self._check_appended(appended)
             observations = []
-            for _, _, kind, text in appended:
+            for row in appended:
+                kind, text = row[2:4]
                 self._sequence += 1
                 if kind == 'text' and text.strip():
                     self._texts += 1
-                    observations.append(Observation(self._epoch+':'+str(self._sequence),text))
+                    observations.append(Observation(self._epoch+':'+str(self._sequence),text,self._direction(row)))
             if overlap < len(self._rows):
                 self._front_evictions += 1
             self._rows = current
@@ -302,6 +329,49 @@ class OccurrenceSession(ReadSession):
         return report
 
 
+class VisualOccurrenceSession(OccurrenceSession):
+    """Joined candidates; unknown visibility never erases known direction."""
+    def __init__(self):
+        super().__init__()
+        self._direction_counts = {'incoming_candidate':0,'self_candidate':0,'unknown':0}
+        self._known_directions = {}
+        self._pending_directions = {}
+
+    def _validate(self, raw):
+        identity, rows = validate_visual_text_snapshot(raw)
+        for row in rows:
+            key, direction = (row[0],row[1]), row[4]
+            if direction != 'unknown':
+                previous = self._known_directions.get(key)
+                if previous is not None and previous != direction:
+                    raise ReadError('message_continuity_lost')
+                self._pending_directions[key] = direction
+        return identity, rows
+
+    def _direction(self, row):
+        return row[4]
+
+    def accept(self, raw):
+        try:
+            observations = super().accept(raw)
+            # Only committed rows may strengthen the direction evidence. This
+            # dictionary shares the 4096 occurrence bound with pair history.
+            self._known_directions.update(self._pending_directions)
+            for observation in observations:
+                self._direction_counts[observation.direction] += 1
+            return observations
+        finally:
+            self._pending_directions.clear()
+
+    def report(self):
+        report = super().report()
+        report.update(mode='visual_occurrence_candidates',
+                      incoming_candidate_texts=self._direction_counts['incoming_candidate'],
+                      self_candidate_texts=self._direction_counts['self_candidate'],
+                      unknown_candidate_texts=self._direction_counts['unknown'])
+        return report
+
+
 class NativeReader:
     def __init__(self, client_path):
         try:
@@ -348,9 +418,9 @@ class NativeReader:
             finally:
                 self._temporary = None
 
-    def read(self, *, layout=False, capabilities=False, visual=False):
+    def read(self, *, layout=False, capabilities=False, visual=False, visual_text=False):
         try:
-            if sum(bool(value) for value in (layout,capabilities,visual))>1:
+            if sum(bool(value) for value in (layout,capabilities,visual,visual_text))>1:
                 raise ReadError('invalid_snapshot')
             command = [str(self.executable),self.client_path]
             if layout:
@@ -359,6 +429,8 @@ class NativeReader:
                 command.append('--capabilities')
             if visual:
                 command.append('--visual')
+            if visual_text:
+                command.append('--visual-text')
             done = subprocess.run(command,
                                   input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=8,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -378,6 +450,8 @@ class NativeReader:
                     capability_report(raw)
                 elif visual:
                     visual_report(raw)
+                elif visual_text:
+                    validate_visual_text_snapshot(raw)
                 else:
                     validate_snapshot(raw)
             except ReadError:
@@ -402,10 +476,12 @@ def main(argv=None):
     inspections.add_argument('--inspect-capabilities',action='store_true',help='Report UIA metadata availability without exporting its values.')
     inspections.add_argument('--inspect-visual',action='store_true',help='Report conservative direction hints from an in-memory window image.')
     inspections.add_argument('--observe-occurrences',action='store_true',help='Observe local UI occurrence candidates, including reused tokens with changed content; never verify new messages.')
+    inspections.add_argument('--observe-visual-occurrences',action='store_true',help='Observe text and direction candidates from a single bounded read; never verify senders or new messages.')
     args = parser.parse_args(argv)
     if not 1 <= args.seconds <= 300:
         parser.error('seconds must be between 1 and 300')
-    session = OccurrenceSession() if args.observe_occurrences else ReadSession()
+    session = (VisualOccurrenceSession() if args.observe_visual_occurrences
+               else OccurrenceSession() if args.observe_occurrences else ReadSession())
     try:
         with NativeReader(args.client_path) as reader:
             if args.inspect_layout:
@@ -419,7 +495,7 @@ def main(argv=None):
                 return 0
             deadline = time.monotonic()+args.seconds
             while True:
-                session.accept(reader.read())
+                session.accept(reader.read(visual_text=True) if args.observe_visual_occurrences else reader.read())
                 print(json.dumps(session.report(),sort_keys=True),flush=True)
                 if time.monotonic() >= deadline:
                     break

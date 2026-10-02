@@ -1,0 +1,42 @@
+{
+  "version": "0.1.9",
+  "full_suite": {
+    "tests": 180,
+    "passed": 180,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 33.6
+  },
+  "review_findings": [],
+  "package_verified": true,
+  "live_baselines": [
+    {
+      "evidence": "126-live-occurrence-monitor.txt",
+      "snapshots": 224,
+      "candidate_texts": 0,
+      "seconds": 300,
+      "exit_code": 0
+    },
+    {
+      "evidence": "130-live-visual-occurrence-monitor.txt",
+      "snapshots": 217,
+      "candidate_texts": 0,
+      "seconds": 300,
+      "exit_code": 0
+    }
+  ],
+  "joined_baseline_counts": {
+    "incoming": 4,
+    "self": 1,
+    "unknown": 2,
+    "repeated_snapshots": 3
+  },
+  "new_message_acceptance_verified": false,
+  "sender_verified": false,
+  "history_boundary_verified": false,
+  "server_message_ids_available": false,
+  "real_send_supported": false,
+  "model_called": false,
+  "screenshots_saved": false
+}

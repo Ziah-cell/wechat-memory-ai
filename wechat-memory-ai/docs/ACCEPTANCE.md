@@ -1,6 +1,6 @@
 # 本轮验收
 
-当前代码 v0.1.8，完整168项回归通过；新增方向候选和控件复用出现候选均经独立审查。实机视觉3次为5来信候选/1自身候选/1未知；候选监听启动时未找到唯一独立测试窗口，未建立基线。**尚不能开始自动回复**。此前固定收发验收[78](evidence/78-live-exchange.json)仍有效，本轮未发送。详见 [READ_CANDIDATES.md](READ_CANDIDATES.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
+当前代码v0.1.9，完整180项回归与独立审查通过。已恢复测试窗口并完成普通/联合候选的300秒基线观察；尚未观察到新文本，真实连发、历史和自身过滤未完成。**尚不能开始自动回复**。本轮没有发送，详见 [READ_CANDIDATES.md](READ_CANDIDATES.md) 和 [TEST_RESULTS.md](TEST_RESULTS.md)。
 
 | 任务书要求 | 实现/实际结果 | 证据 |
 |---|---|---|
@@ -20,6 +20,7 @@
 | 停止原因与只读能力检查 | 固定原因、计数原子性、布局/属性存在性检查；不输出正文或属性值 | test_live_read、evidence/95、100、101、102 |
 | 只读视觉方向候选 | 内存捕获、正证据分类、未知保留；实机仅当前浅色150%三次5/1/1 | test_visual_direction、evidence/113、114 |
 | 控件复用出现候选 | 显式模式保留连续锚点、旧组合/超限整批停止；真实监听未建立基线 | test_occurrence_read、evidence/118、120、121 |
+| 联合正文/方向候选 | 原生前后复核；unknown可见性变化/跨unknown方向冲突回归通过；实机基线稳定、新文本待验收 | test_visual_occurrences、evidence/130、131、133、134 |
 | 假模型与可替换接口 | 已实现，真实 HTTP 可选并默认禁止 | models.py、test_models |
 | 上下文窗口与摘要 | 有界历史/摘录和有限相关记忆 | test_engine、test_memory |
 | 长期偏好、事件、来源与时间 | 显式指令写入；普通临时对话不固化 | test_memory |

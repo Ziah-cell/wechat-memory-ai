@@ -1,0 +1,15 @@
+test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry (test_visual_occurrences.NativeVisualTextTests.test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry) ... ok
+test_real_native_joined_mode_rejects_missing_client_and_cleans_up (test_visual_occurrences.NativeVisualTextTests.test_real_native_joined_mode_rejects_missing_client_and_cleans_up) ... ok
+test_anchor_direction_change_stops_without_partial_counts (test_visual_occurrences.VisualOccurrenceTests.test_anchor_direction_change_stops_without_partial_counts) ... ok
+test_bad_protocol_is_sanitized_and_terminal (test_visual_occurrences.VisualOccurrenceTests.test_bad_protocol_is_sanitized_and_terminal) ... ok
+test_baseline_is_not_replayed_and_same_text_keeps_its_own_direction (test_visual_occurrences.VisualOccurrenceTests.test_baseline_is_not_replayed_and_same_text_keeps_its_own_direction) ... ok
+test_cli_outputs_only_counts_and_uses_the_joined_reader (test_visual_occurrences.VisualOccurrenceTests.test_cli_outputs_only_counts_and_uses_the_joined_reader) ... ok
+test_native_protocol_retains_target_binding_and_rejects_unjoined_output (test_visual_occurrences.VisualOccurrenceTests.test_native_protocol_retains_target_binding_and_rejects_unjoined_output) ... ok
+test_plain_visual_and_joined_modes_cannot_be_interchanged (test_visual_occurrences.VisualOccurrenceTests.test_plain_visual_and_joined_modes_cannot_be_interchanged) ... ok
+test_recycled_new_content_can_be_candidate_but_old_pair_with_new_direction_cannot (test_visual_occurrences.VisualOccurrenceTests.test_recycled_new_content_can_be_candidate_but_old_pair_with_new_direction_cannot) ... ok
+test_unknown_nontext_and_blank_rows_do_not_promote_to_incoming_text (test_visual_occurrences.VisualOccurrenceTests.test_unknown_nontext_and_blank_rows_do_not_promote_to_incoming_text) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.613s
+
+OK
