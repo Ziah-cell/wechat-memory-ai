@@ -1,0 +1,51 @@
+{
+  "status": "self_visual_rejection_diagnostics",
+  "checks": [
+    {
+      "matching_texts": 1,
+      "joint_directions": [
+        "unknown"
+      ],
+      "separate_diagnostic_same_row_order": true,
+      "separate_diagnostic_reasons": [
+        {
+          "direction": "unknown",
+          "reason": "edges_inconsistent"
+        }
+      ],
+      "capture_attempts": 1
+    },
+    {
+      "matching_texts": 1,
+      "joint_directions": [
+        "unknown"
+      ],
+      "separate_diagnostic_same_row_order": true,
+      "separate_diagnostic_reasons": [
+        {
+          "direction": "unknown",
+          "reason": "edges_inconsistent"
+        }
+      ],
+      "capture_attempts": 1
+    },
+    {
+      "matching_texts": 1,
+      "joint_directions": [
+        "unknown"
+      ],
+      "separate_diagnostic_same_row_order": true,
+      "separate_diagnostic_reasons": [
+        {
+          "direction": "unknown",
+          "reason": "edges_inconsistent"
+        }
+      ],
+      "capture_attempts": 1
+    }
+  ],
+  "separate_reads_not_atomic": true,
+  "model_called": false,
+  "real_sent": 0,
+  "memory_written": false
+}

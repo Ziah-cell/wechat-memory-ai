@@ -1,0 +1,708 @@
+test_binding_is_required_validated_and_defensively_copied_before_first_read (test_live_source.LiveSourceTests.test_binding_is_required_validated_and_defensively_copied_before_first_read) ... FAIL
+test_candidate_is_frozen_local_time_and_hides_private_fields_in_repr (test_live_source.LiveSourceTests.test_candidate_is_frozen_local_time_and_hides_private_fields_in_repr) ... FAIL
+test_cleanup_failure_still_revokes_objects_and_does_not_retry_cleanup (test_live_source.LiveSourceTests.test_cleanup_failure_still_revokes_objects_and_does_not_retry_cleanup) ... FAIL
+test_close_before_enter_is_terminal_without_constructing_reader (test_live_source.LiveSourceTests.test_close_before_enter_is_terminal_without_constructing_reader) ... FAIL
+test_context_exception_is_not_suppressed_and_closes_source (test_live_source.LiveSourceTests.test_context_exception_is_not_suppressed_and_closes_source) ... FAIL
+test_current_query_observes_expiry_without_another_poll (test_live_source.LiveSourceTests.test_current_query_observes_expiry_without_another_poll) ... FAIL
+test_duration_requires_finite_nonboolean_number_within_bounds (test_live_source.LiveSourceTests.test_duration_requires_finite_nonboolean_number_within_bounds) ... FAIL
+test_empty_baseline_marker_batch_and_duplicates_use_same_preflight (test_live_source.LiveSourceTests.test_empty_baseline_marker_batch_and_duplicates_use_same_preflight) ... FAIL
+test_enter_failure_is_terminal_and_does_not_call_unentered_exit (test_live_source.LiveSourceTests.test_enter_failure_is_terminal_and_does_not_call_unentered_exit) ... FAIL
+test_expiry_before_read_does_not_read_and_invalidates_issued_objects (test_live_source.LiveSourceTests.test_expiry_before_read_does_not_read_and_invalidates_issued_objects) ... FAIL
+test_expiry_during_read_discards_whole_batch_before_preflight_accept (test_live_source.LiveSourceTests.test_expiry_during_read_discards_whole_batch_before_preflight_accept) ... FAIL
+test_invalid_local_wall_time_discards_batch_and_closes (test_live_source.LiveSourceTests.test_invalid_local_wall_time_discards_batch_and_closes) ... FAIL
+test_invalid_monotonic_clock_closes_before_reader_construction (test_live_source.LiveSourceTests.test_invalid_monotonic_clock_closes_before_reader_construction) ... FAIL
+test_issued_registry_does_not_retain_delivered_plaintext_objects (test_live_source.LiveSourceTests.test_issued_registry_does_not_retain_delivered_plaintext_objects) ... FAIL
+test_only_exact_issued_objects_are_current_and_close_invalidates (test_live_source.LiveSourceTests.test_only_exact_issued_objects_are_current_and_close_invalidates) ... FAIL
+test_owner_thread_checks_enter_poll_and_close_without_touching_reader (test_live_source.LiveSourceTests.test_owner_thread_checks_enter_poll_and_close_without_touching_reader) ... FAIL
+test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) ... 
+  test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='window_minimized') ... FAIL
+  test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='source_read_failed') ... FAIL
+  test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='source_read_failed') ... FAIL
+test_reentrant_poll_is_rejected_and_outer_read_closes (test_live_source.LiveSourceTests.test_reentrant_poll_is_rejected_and_outer_read_closes) ... FAIL
+test_send_always_rejects_without_reading_changing_state_or_calling_native_send (test_live_source.LiveSourceTests.test_send_always_rejects_without_reading_changing_state_or_calling_native_send) ... FAIL
+test_source_enters_once_and_cannot_poll_before_enter_or_reopen (test_live_source.LiveSourceTests.test_source_enters_once_and_cannot_poll_before_enter_or_reopen) ... FAIL
+test_unknown_marker_closes_source_without_emitting (test_live_source.LiveSourceTests.test_unknown_marker_closes_source_without_emitting) ... FAIL
+test_wrong_binding_is_rejected_before_session_baseline (test_live_source.LiveSourceTests.test_wrong_binding_is_rejected_before_session_baseline) ... FAIL
+
+======================================================================
+FAIL: test_binding_is_required_validated_and_defensively_copied_before_first_read (test_live_source.LiveSourceTests.test_binding_is_required_validated_and_defensively_copied_before_first_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 67, in test_binding_is_required_validated_and_defensively_copied_before_first_read
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_candidate_is_frozen_local_time_and_hides_private_fields_in_repr (test_live_source.LiveSourceTests.test_candidate_is_frozen_local_time_and_hides_private_fields_in_repr)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 144, in test_candidate_is_frozen_local_time_and_hides_private_fields_in_repr
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_cleanup_failure_still_revokes_objects_and_does_not_retry_cleanup (test_live_source.LiveSourceTests.test_cleanup_failure_still_revokes_objects_and_does_not_retry_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 300, in test_cleanup_failure_still_revokes_objects_and_does_not_retry_cleanup
+    with self.opened() as (source, reader, _, factory):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_close_before_enter_is_terminal_without_constructing_reader (test_live_source.LiveSourceTests.test_close_before_enter_is_terminal_without_constructing_reader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 115, in test_close_before_enter_is_terminal_without_constructing_reader
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_context_exception_is_not_suppressed_and_closes_source (test_live_source.LiveSourceTests.test_context_exception_is_not_suppressed_and_closes_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 310, in test_context_exception_is_not_suppressed_and_closes_source
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_current_query_observes_expiry_without_another_poll (test_live_source.LiveSourceTests.test_current_query_observes_expiry_without_another_poll)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 206, in test_current_query_observes_expiry_without_another_poll
+    with self.opened(seconds=5) as (source, reader, clock, _):
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_duration_requires_finite_nonboolean_number_within_bounds (test_live_source.LiveSourceTests.test_duration_requires_finite_nonboolean_number_within_bounds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 89, in test_duration_requires_finite_nonboolean_number_within_bounds
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_empty_baseline_marker_batch_and_duplicates_use_same_preflight (test_live_source.LiveSourceTests.test_empty_baseline_marker_batch_and_duplicates_use_same_preflight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 124, in test_empty_baseline_marker_batch_and_duplicates_use_same_preflight
+    with self.opened() as (source, reader, _, _):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_enter_failure_is_terminal_and_does_not_call_unentered_exit (test_live_source.LiveSourceTests.test_enter_failure_is_terminal_and_does_not_call_unentered_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 266, in test_enter_failure_is_terminal_and_does_not_call_unentered_exit
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_expiry_before_read_does_not_read_and_invalidates_issued_objects (test_live_source.LiveSourceTests.test_expiry_before_read_does_not_read_and_invalidates_issued_objects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 182, in test_expiry_before_read_does_not_read_and_invalidates_issued_objects
+    with self.opened(seconds=5) as (source, reader, clock, factory):
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_expiry_during_read_discards_whole_batch_before_preflight_accept (test_live_source.LiveSourceTests.test_expiry_during_read_discards_whole_batch_before_preflight_accept)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 193, in test_expiry_during_read_discards_whole_batch_before_preflight_accept
+    with self.opened(seconds=5) as (source, reader, clock, _):
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_invalid_local_wall_time_discards_batch_and_closes (test_live_source.LiveSourceTests.test_invalid_local_wall_time_discards_batch_and_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 244, in test_invalid_local_wall_time_discards_batch_and_closes
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_invalid_monotonic_clock_closes_before_reader_construction (test_live_source.LiveSourceTests.test_invalid_monotonic_clock_closes_before_reader_construction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 256, in test_invalid_monotonic_clock_closes_before_reader_construction
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_issued_registry_does_not_retain_delivered_plaintext_objects (test_live_source.LiveSourceTests.test_issued_registry_does_not_retain_delivered_plaintext_objects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 172, in test_issued_registry_does_not_retain_delivered_plaintext_objects
+    with self.opened() as (source, reader, _, _):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_only_exact_issued_objects_are_current_and_close_invalidates (test_live_source.LiveSourceTests.test_only_exact_issued_objects_are_current_and_close_invalidates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 160, in test_only_exact_issued_objects_are_current_and_close_invalidates
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_owner_thread_checks_enter_poll_and_close_without_touching_reader (test_live_source.LiveSourceTests.test_owner_thread_checks_enter_poll_and_close_without_touching_reader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 277, in test_owner_thread_checks_enter_poll_and_close_without_touching_reader
+    with self.opened() as (source, reader, _, factory):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='window_minimized')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 225, in test_reader_errors_close_and_never_expose_external_messages
+    with self.subTest(expected=expected), self.opened() as (source, reader, _, factory):
+                                          ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='source_read_failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 225, in test_reader_errors_close_and_never_expose_external_messages
+    with self.subTest(expected=expected), self.opened() as (source, reader, _, factory):
+                                          ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_reader_errors_close_and_never_expose_external_messages (test_live_source.LiveSourceTests.test_reader_errors_close_and_never_expose_external_messages) (expected='source_read_failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 225, in test_reader_errors_close_and_never_expose_external_messages
+    with self.subTest(expected=expected), self.opened() as (source, reader, _, factory):
+                                          ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_reentrant_poll_is_rejected_and_outer_read_closes (test_live_source.LiveSourceTests.test_reentrant_poll_is_rejected_and_outer_read_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 293, in test_reentrant_poll_is_rejected_and_outer_read_closes
+    with self.opened() as (source, reader, _, _):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_send_always_rejects_without_reading_changing_state_or_calling_native_send (test_live_source.LiveSourceTests.test_send_always_rejects_without_reading_changing_state_or_calling_native_send)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 321, in test_send_always_rejects_without_reading_changing_state_or_calling_native_send
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_source_enters_once_and_cannot_poll_before_enter_or_reopen (test_live_source.LiveSourceTests.test_source_enters_once_and_cannot_poll_before_enter_or_reopen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 100, in test_source_enters_once_and_cannot_poll_before_enter_or_reopen
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_unknown_marker_closes_source_without_emitting (test_live_source.LiveSourceTests.test_unknown_marker_closes_source_without_emitting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 234, in test_unknown_marker_closes_source_without_emitting
+    with self.opened() as (source, reader, _, _):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+======================================================================
+FAIL: test_wrong_binding_is_rejected_before_session_baseline (test_live_source.LiveSourceTests.test_wrong_binding_is_rejected_before_session_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 34, in module
+    return importlib.import_module('wechat_memory.live_source')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.live_source'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[project]\tests\test_live_source.py", line 214, in test_wrong_binding_is_rejected_before_session_baseline
+    with self.opened() as (source, reader, _, _):
+         ^^^^^^^^^^^^^
+  File "[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 40, in opened
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "[project]\tests\test_live_source.py", line 36, in module
+    self.fail('The bound read-only source is not implemented')
+AssertionError: The bound read-only source is not implemented
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.082s
+
+FAILED (failures=24)

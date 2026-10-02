@@ -1,0 +1,11 @@
+{
+  "status": "visible_test_text_is_incoming_side",
+  "visible_side": "left",
+  "bubble": "neutral",
+  "native_checks_agree_incoming": 3,
+  "self_sample_confirmed": false,
+  "images_saved": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_sent": 0
+}

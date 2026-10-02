@@ -1,0 +1,15 @@
+test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint (test_visual_resample.VisualResampleTests.test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint) ... ok
+test_changed_binding_after_a_transient_is_not_retried_or_committed (test_visual_resample.VisualResampleTests.test_changed_binding_after_a_transient_is_not_retried_or_committed) ... ok
+test_child_time_and_waits_reduce_one_original_eight_second_budget (test_visual_resample.VisualResampleTests.test_child_time_and_waits_reduce_one_original_eight_second_budget) ... ok
+test_exhausted_budget_does_not_wait_or_start_another_child (test_visual_resample.VisualResampleTests.test_exhausted_budget_does_not_wait_or_start_another_child) ... ok
+test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative (test_visual_resample.VisualResampleTests.test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative) ... ok
+test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) ... ok
+test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) ... ok
+test_success_returned_after_the_shared_deadline_is_not_delivered (test_visual_resample.VisualResampleTests.test_success_returned_after_the_shared_deadline_is_not_delivered) ... ok
+test_three_torn_children_stop_with_the_original_error_and_no_rebinding (test_visual_resample.VisualResampleTests.test_three_torn_children_stop_with_the_original_error_and_no_rebinding) ... ok
+test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry (test_visual_resample.VisualResampleTests.test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.028s
+
+OK

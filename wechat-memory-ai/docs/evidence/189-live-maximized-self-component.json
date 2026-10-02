@@ -1,0 +1,33 @@
+{
+  "status": "maximized_self_component_passed",
+  "checks": [
+    {
+      "matching_texts": 1,
+      "self_candidates": 1,
+      "incoming_candidates": 0,
+      "unknown_candidates": 0,
+      "shared_filter_returned": 0
+    },
+    {
+      "matching_texts": 1,
+      "self_candidates": 1,
+      "incoming_candidates": 0,
+      "unknown_candidates": 0,
+      "shared_filter_returned": 0
+    },
+    {
+      "matching_texts": 1,
+      "self_candidates": 1,
+      "incoming_candidates": 0,
+      "unknown_candidates": 0,
+      "shared_filter_returned": 0
+    }
+  ],
+  "window_maximized": true,
+  "component_only": true,
+  "new_arrival_captured": false,
+  "full_armed_session_self_event_verified": false,
+  "model_called": false,
+  "real_sent": 0,
+  "memory_written": false
+}

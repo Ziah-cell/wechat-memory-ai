@@ -1,0 +1,13 @@
+{
+  "config_exists": true,
+  "env_file_exists": false,
+  "process_key_present": false,
+  "real_model_called": false,
+  "config_parseable": true,
+  "configured_mock_adapter": true,
+  "real_send_disabled": true,
+  "configured_fake_model": true,
+  "model_network_enabled": false,
+  "model_endpoint_present": false,
+  "model_name_present": false
+}

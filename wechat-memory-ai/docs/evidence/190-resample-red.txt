@@ -1,0 +1,253 @@
+test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint (test_visual_resample.VisualResampleTests.test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint) ... ERROR
+test_changed_binding_after_a_transient_is_not_retried_or_committed (test_visual_resample.VisualResampleTests.test_changed_binding_after_a_transient_is_not_retried_or_committed) ... FAIL
+test_child_time_and_waits_reduce_one_original_eight_second_budget (test_visual_resample.VisualResampleTests.test_child_time_and_waits_reduce_one_original_eight_second_budget) ... ERROR
+test_exhausted_budget_does_not_wait_or_start_another_child (test_visual_resample.VisualResampleTests.test_exhausted_budget_does_not_wait_or_start_another_child) ... FAIL
+test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative (test_visual_resample.VisualResampleTests.test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative) ... ERROR
+test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) ... 
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_minimized') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_or_list_changed') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='visual_capture_unavailable') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_or_list_changed') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_timeout') ... ERROR
+  test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable') ... ERROR
+test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) ... 
+  test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={}) ... ERROR
+  test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'layout': True}) ... ERROR
+  test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'capabilities': True}) ... ERROR
+  test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'visual': True}) ... ERROR
+  test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=False, options={'visual_text': True}) ... ERROR
+test_three_torn_children_stop_with_the_original_error_and_no_rebinding (test_visual_resample.VisualResampleTests.test_three_torn_children_stop_with_the_original_error_and_no_rebinding) ... FAIL
+test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry (test_visual_resample.VisualResampleTests.test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry) ... FAIL
+
+======================================================================
+ERROR: test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint (test_visual_resample.VisualResampleTests.test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 73, in test_bound_torn_snapshot_recovers_without_changing_the_session_checkpoint
+    raw = native.read(visual_text=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\live_read.py", line 470, in read
+    raise ReadError(raw['reason'])
+wechat_memory.live_read.ReadError: visual_snapshot_changed
+
+======================================================================
+ERROR: test_child_time_and_waits_reduce_one_original_eight_second_budget (test_visual_resample.VisualResampleTests.test_child_time_and_waits_reduce_one_original_eight_second_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 114, in test_child_time_and_waits_reduce_one_original_eight_second_budget
+    self.assertEqual(native.read(visual_text=True), snapshot('a'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\live_read.py", line 470, in read
+    raise ReadError(raw['reason'])
+wechat_memory.live_read.ReadError: visual_snapshot_changed
+
+======================================================================
+ERROR: test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative (test_visual_resample.VisualResampleTests.test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 214, in test_learned_binding_enables_retries_on_later_reads_and_counter_is_cumulative
+    self.assertEqual(native.read(visual_text=True), snapshot('a', 'b'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\live_read.py", line 470, in read
+    raise ReadError(raw['reason'])
+wechat_memory.live_read.ReadError: visual_snapshot_changed
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_minimized')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_or_list_changed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='visual_capture_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='window_or_list_changed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_timeout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried (test_visual_resample.VisualResampleTests.test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried) (reason='native_reader_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 184, in test_other_native_errors_timeouts_protocol_errors_and_binding_changes_are_not_retried
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 202, in test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'layout': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 202, in test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'capabilities': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 202, in test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=True, options={'visual': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 202, in test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+ERROR: test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call (test_visual_resample.VisualResampleTests.test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call) (bound=False, options={'visual_text': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 202, in test_plain_diagnostics_and_first_unbound_joint_read_keep_one_exact_eight_second_call
+    self.assertEqual(native.snapshot_change_retries, 0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'snapshot_change_retries'
+
+======================================================================
+FAIL: test_changed_binding_after_a_transient_is_not_retried_or_committed (test_visual_resample.VisualResampleTests.test_changed_binding_after_a_transient_is_not_retried_or_committed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 230, in test_changed_binding_after_a_transient_is_not_retried_or_committed
+    self.assertEqual(str(error.exception), 'window_or_list_changed')
+AssertionError: 'visual_snapshot_changed' != 'window_or_list_changed'
+- visual_snapshot_changed
++ window_or_list_changed
+
+
+======================================================================
+FAIL: test_exhausted_budget_does_not_wait_or_start_another_child (test_visual_resample.VisualResampleTests.test_exhausted_budget_does_not_wait_or_start_another_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 152, in test_exhausted_budget_does_not_wait_or_start_another_child
+    self.assertEqual(str(error.exception), 'native_reader_timeout')
+AssertionError: 'visual_snapshot_changed' != 'native_reader_timeout'
+- visual_snapshot_changed
++ native_reader_timeout
+
+
+======================================================================
+FAIL: test_three_torn_children_stop_with_the_original_error_and_no_rebinding (test_visual_resample.VisualResampleTests.test_three_torn_children_stop_with_the_original_error_and_no_rebinding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 95, in test_three_torn_children_stop_with_the_original_error_and_no_rebinding
+    self.assertEqual(run.call_count, 3)
+AssertionError: 1 != 3
+
+======================================================================
+FAIL: test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry (test_visual_resample.VisualResampleTests.test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 133, in test_wait_is_capped_by_remaining_budget_and_no_child_starts_after_expiry
+    self.assertEqual(str(error.exception), 'native_reader_timeout')
+AssertionError: 'visual_snapshot_changed' != 'native_reader_timeout'
+- visual_snapshot_changed
++ native_reader_timeout
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.053s
+
+FAILED (failures=4, errors=18)
+test_success_returned_after_the_shared_deadline_is_not_delivered (test_visual_resample.VisualResampleTests.test_success_returned_after_the_shared_deadline_is_not_delivered) ... FAIL
+
+======================================================================
+FAIL: test_success_returned_after_the_shared_deadline_is_not_delivered (test_visual_resample.VisualResampleTests.test_success_returned_after_the_shared_deadline_is_not_delivered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_visual_resample.py", line 167, in test_success_returned_after_the_shared_deadline_is_not_delivered
+    with self.assertRaises(live_read.ReadError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ReadError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

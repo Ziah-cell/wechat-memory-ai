@@ -39,6 +39,24 @@ class PreflightTests(unittest.TestCase):
         self.assertTrue(session.report()['marker_boundary_observed'])
         return session, rows
 
+    def test_shared_filter_preserves_objects_order_duplicates_and_inputs(self):
+        first = live_read.Observation('one', 'same', 'incoming_candidate')
+        second = live_read.Observation('two', 'same', 'incoming_candidate')
+        own = live_read.Observation('self', 'same', 'self_candidate')
+        unknown = live_read.Observation('unknown', 'same', 'unknown')
+        observations = [first, own, unknown, second, first]
+        original_sequence = observations.copy()
+        original_values = [vars(item).copy() for item in observations]
+        result = self.module().filter_incoming(observations)
+        self.assertEqual(len(result), 3)
+        for actual, expected in zip(result, (first, second, first)):
+            self.assertIs(actual, expected)
+        self.assertEqual(len(observations), len(original_sequence))
+        for actual, expected in zip(observations, original_sequence):
+            self.assertIs(actual, expected)
+        self.assertEqual([vars(item) for item in observations], original_values)
+        self.assertEqual(self.module().filter_incoming([own, unknown]), [])
+
     def test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart(self):
         session = self.session()
         self.assertIsNone(session.challenge_text)

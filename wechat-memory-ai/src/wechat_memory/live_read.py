@@ -386,15 +386,32 @@ class VisualOccurrenceSession(OccurrenceSession):
         return report
 
 
+def validate_binding(raw):
+    """Validate an explicit target using the existing snapshot identity rules."""
+    if not isinstance(raw,dict) or set(raw) != {'process','started','window','root','list_token'}:
+        raise ReadError('invalid_snapshot')
+    validate_snapshot(dict(raw,status='snapshot',rows=[]))
+    return dict(raw)
+
+
 class NativeReader:
-    def __init__(self, client_path):
+    def __init__(self, client_path, *, expected_binding=None):
         try:
             self.client_path = str(Path(client_path).resolve())
         except (OSError,ValueError,TypeError):
             raise ReadError('invalid_client_path') from None
         self.executable = None
         self._temporary = None
-        self._binding = None
+        self._binding = validate_binding(expected_binding) if expected_binding is not None else None
+        self._snapshot_change_retries = 0
+
+    @property
+    def binding(self):
+        return dict(self._binding) if self._binding is not None else None
+
+    @property
+    def snapshot_change_retries(self):
+        return self._snapshot_change_retries
 
     def __enter__(self):
         if os.name != 'nt':
@@ -433,6 +450,32 @@ class NativeReader:
                 self._temporary = None
 
     def read(self, *, layout=False, capabilities=False, visual=False, visual_text=False):
+        options = dict(layout=layout, capabilities=capabilities, visual=visual, visual_text=visual_text)
+        if not visual_text or self._binding is None:
+            return self._read_once(**options)
+        # Resample only a torn joint read of the already-bound target. The
+        # caller's accepted session checkpoint never sees intermediate errors.
+        deadline = time.monotonic() + 8
+        for attempt in range(3):
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise ReadError('native_reader_timeout')
+            if attempt:
+                self._snapshot_change_retries += 1
+            try:
+                raw = self._read_once(**options, _timeout=remaining)
+                if time.monotonic() >= deadline:
+                    raise ReadError('native_reader_timeout')
+                return raw
+            except ReadError as error:
+                if str(error) != 'visual_snapshot_changed' or attempt == 2:
+                    raise
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise ReadError('native_reader_timeout')
+            time.sleep(min(0.05, remaining))
+
+    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, _timeout=8):
         try:
             if sum(bool(value) for value in (layout,capabilities,visual,visual_text))>1:
                 raise ReadError('invalid_snapshot')
@@ -446,7 +489,7 @@ class NativeReader:
             if visual_text:
                 command.append('--visual-text')
             done = subprocess.run(command,
-                                  input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=8,
+                                  input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=_timeout,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
             if len(done.stdout) > 4_000_000:
                 raise ReadError('native_reader_unavailable')

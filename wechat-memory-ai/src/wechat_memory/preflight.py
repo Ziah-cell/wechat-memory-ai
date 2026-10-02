@@ -8,6 +8,11 @@ import secrets
 from .live_read import ReadError, VisualOccurrenceSession
 
 
+def filter_incoming(observations):
+    """Keep current incoming candidates in order, without changing observations."""
+    return [item for item in observations if item.direction == 'incoming_candidate']
+
+
 class PreflightSession:
     def __init__(self):
         self._session = VisualOccurrenceSession()
@@ -66,7 +71,7 @@ class PreflightSession:
             return []
         if markers:
             self._reject('preflight_marker_repeated')
-        incoming = [item for item in observations if item.direction == 'incoming_candidate']
+        incoming = filter_incoming(observations)
         self._incoming += len(incoming)
         self._self += sum(item.direction == 'self_candidate' for item in observations)
         self._unknown += sum(item.direction == 'unknown' for item in observations)

@@ -1,0 +1,55 @@
+{
+  "independent_review_scope": [
+    "native_expected_binding",
+    "bound_visual_text_resampling"
+  ],
+  "actionable_findings": 0,
+  "binding_checks": {
+    "existing_identity_contract_reused": true,
+    "input_and_property_defensive_copies": true,
+    "first_native_request_carries_expected_binding": true,
+    "native_binding_checks_precede_message_body_reads": true,
+    "changed_identity_not_committed": true,
+    "default_unbound_reader_behavior_preserved": true
+  },
+  "resampling_checks": {
+    "only_already_bound_joint_mode": true,
+    "only_sanitized_visual_snapshot_changed": true,
+    "maximum_child_calls": 3,
+    "shared_budget_seconds": 8,
+    "waits_decrease_remaining_budget": true,
+    "late_success_not_delivered": true,
+    "same_binding_on_every_child": true,
+    "session_checkpoint_unchanged_until_success": true,
+    "other_errors_not_retried": true,
+    "retry_count_tracks_additional_child_starts": true,
+    "no_output_body_or_binding": true
+  },
+  "pure_python_tests": {
+    "modules": [
+      "test_bound_reader",
+      "test_visual_resample"
+    ],
+    "tests_run": 18,
+    "tests_passed": 18,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 0.045
+  },
+  "source_lifecycle_review": {
+    "reported_by": "root",
+    "actionable_findings_reported": 0,
+    "independently_repeated_by_source_implementer": false
+  },
+  "real_evidence_limits": {
+    "187_arrival_capture_passed": false,
+    "189_component_only": true,
+    "189_new_arrival_captured": false,
+    "189_full_armed_session_self_event_verified": false,
+    "new_retry_real_recovery_verified_by_this_review": false
+  },
+  "native_fixture_runs": 0,
+  "full_suite_runs": 0,
+  "ui_actions": 0,
+  "message_sends": 0
+}

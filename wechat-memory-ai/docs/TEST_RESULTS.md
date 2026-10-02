@@ -1,8 +1,28 @@
-# Windows 测试结果（当前 v0.1.12）
+# Windows 测试结果（当前 v0.1.13）
 
-最新执行日期：2026-10-02（Asia/Shanghai）；以下历史阶段另有2026-10-01记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
+最新执行日期：2026-10-03（Asia/Shanghai）；以下历史阶段另有2026-10-01/02记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.12 真实双消息、历史负例与只读准入
+## v0.1.13 显式绑定消息源与有界重取
+
+最新发现250项，实际选定执行 **237/237，58.384秒，0失败/错误/跳过**：[194](evidence/194-source-final-regression.txt)、[195范围清单](evidence/195-source-final-regression-scope.json)。195的外层单调时钟为58.390秒，与194为同一轮。仍排除4类13项原生测试（NativeOcrCheckTests 4、VisualBitmapTests 3、NativeVisualTextTests 2、NativeProbeTests 4），不是完整250项通过；未重跑此前被拒夹具。
+
+新增43项纯Python测试：共享来信过滤新增1项，连同既有预检共14项通过[178](evidence/178-shared-filter-targeted.txt)；显式绑定8项先失败[179](evidence/179-bound-reader-red.txt)、再通过[180](evidence/180-bound-reader-targeted.txt)；消息源24项先失败[181](evidence/181-source-red.txt)、再通过[182](evidence/182-source-targeted.txt)；重取10项先失败[190](evidence/190-resample-red.txt)、再通过[191](evidence/191-resample-targeted.txt)。覆盖绑定输入验证与防御性复制、首次私有管道约束、来源生命周期/线程/期限/候选失效、关闭拒绝，以及仅对已绑定联合读取的瞬态变化重取。失败证据中的本机绝对路径已脱敏，失败结果保留。
+
+`ReadOnlyWeChatSource`为库级封装，要求调用方提供expected_binding，首次原生读取前即检查同一窗口实例；沿用每次新标记准入。没有接入Engine、模型、SQLite/记忆或发送。已绑定联合读取只对原生`visual_snapshot_changed`最多尝试3次子调用，共享原8秒单调时钟预算和同一Python会话检查点；其余错误及首次未绑定读取不重取。[192](evidence/192-binding-source-review.json)独立审查无待修复发现，绑定与重取18项纯Python联合复验通过；不代表真实重取恢复已验证。
+
+| 实机证据 | 结果与范围 |
+| --- | --- |
+| [177](evidence/177-live-preflight-incoming-pass.json) | v0.1.12预检369次快照，完整标记批次丢弃1文本，之后2条来信候选达到目标、关闭并退出0。正向准入通过；旧data日志已完成，不再是等待会话。 |
+| [183](evidence/183-live-self-listener-timeout.json)、[184](evidence/184-live-self-filter-component.json)、[185](evidence/185-self-sample-direction-check.json) | 第一次自身监听99快照后超时、无候选；随后样本3次判incoming，目视核查确认它实际在左侧，并非自身样本，不能记为自身验证。 |
+| [187](evidence/187-live-self-filter-inconclusive.json)、[188](evidence/188-live-self-visual-reasons.json) | 真正自身到达期间31快照后以`visual_snapshot_changed`停止、无新增，验收未通过。后续联合检查为unknown，另次纯视觉读取显示`edges_inconsistent`；两次读取不构成原子诊断。 |
+| [189](evidence/189-live-maximized-self-component.json) | 最大化后已可见自身消息3/3判self，共享过滤返回0。只验证历史消息组件，未验证新自身事件到达或已解锁会话中的过滤；分类阈值未改。 |
+| [193](evidence/193-live-bound-source-baseline.json) | 显式绑定消息源三次基线零交付、关闭后poll/send拒绝、错误窗口绑定拒绝通过；没有验证该封装中新候选实际交付。 |
+
+真实自身新增过滤、消息源新候选交付及真实重取恢复仍缺证据；任意历史同步、锁屏/RDP与长期可靠性也未全面实测。没有可信到底信号，祖先滚动条诊断暂缓；当前只限同一授权窗口、有人监督且不翻历史。所有原验证/模型/发送标志保持false。[186](evidence/186-local-model-configuration-presence.json)仅确认现配置为fake模型、网络关闭且无模型名称/端点；用户自然聊天偏好是后续需求，不是模型已选定或已调用。
+
+v0.1.13离线打包及临时安装验证通过：[196](evidence/196-source-package.json)。前两次构建退出1，诊断发现输出路径长266字符；改用data内更短的受控临时路径后，第3次构建/安装退出0。确认20个Python模块、5个原生源码资源、安装版本0.1.13、两个已安装CLI的帮助及3种缺失绑定拒绝（NativeReader调用0次），临时目录已清理。未执行原生程序、访问UI或用户配置、调用模型或写入记忆；前两次失败仍保留。
+
+## v0.1.12 真实双消息、历史负例与只读准入（历史记录）
 
 1005监听真实到达验收通过：[159](evidence/159-live-1005-arrivals.json)，1028次接受快照、2条incoming候选、1次复用token，目标完成退出0。该会话启动于v0.1.10，没有在升级时替换基线。v0.1.11重新启动及窗口恢复的两个会话各连续3次均返回0（160/162）。最小化以`window_minimized`、历史上翻及一次实际最大化布局变化以连续性丢失停止（161）；错误码3，停止前均无候选。最初误将最大化当作最小化的操作另列，未虚报成功。
 
@@ -14,7 +34,7 @@
 
 v0.1.12离线构建与临时安装验证版本、preflight模块、原生源码资源和已安装CLI帮助，未访问网络或微信、未编译原生程序，临时目录已清理：[175](evidence/175-preflight-package.json)。失败记录165/169的本机绝对路径已脱敏，原始异常与行号保留。
 
-新实际正向准入仍在等待本次受控输入；[176](evidence/176-live-preflight-pending.json)只保存不含实际验证文字的基线与阶段快照，不是完成证据。不能用旧1005文字解锁新会话。所有原验证标志保持false，当前真实自身新增过滤、任意历史同步、窗口重建/会话切换、锁屏或远程桌面断开尚未全面实测。纯Python过滤回归不能替代这些实机项目。
+当时正向准入尚在等待受控输入；[176](evidence/176-live-preflight-pending.json)只保存不含实际验证文字的基线与阶段快照。随后[177](evidence/177-live-preflight-incoming-pass.json)已完成本轮新标记及两条后续来信的正向准入，旧会话已关闭。没有用旧1005文字解锁新会话。所有原验证标志保持false；纯Python过滤回归不能替代尚缺的实机项目，最新结果见顶部。
 
 ## v0.1.11 视觉诊断及空证据恢复
 
@@ -24,7 +44,7 @@ v0.1.12离线构建与临时安装验证版本、preflight模块、原生源码�
 
 实际产品读取器编译和只读诊断成功。实现前150为12次中一次5条头像不确定；153细分后为30次中一次5条前景证据全零，**153尚未启用重取**。实现后[154](evidence/154-live-visual-recovery.json)60次全部5来信候选/1几何未知，59次一次捕获、1次两次捕获恢复。只验证当前测试窗口，不证明底层根因或全面稳定。纯诊断没有读取Name、保存图像/正文或接入模型/记忆/发送。
 
-独立源代码审查无待修复发现，范围与限制见[157](evidence/157-visual-recovery-review.json)。1005原长监听没有重启，仍使用v0.1.10；它的到达验收状态只以活动日志与进程为准。
+独立源代码审查无待修复发现，范围与限制见[157](evidence/157-visual-recovery-review.json)。当时1005原长监听没有重启，仍使用v0.1.10；随后已完成并退出，见159，不再视为活动监听。
 
 v0.1.11离线构建/临时安装后，版本、两个C#源码资源、重取源码打包、已安装Python诊断协议及临时清理通过，[158](evidence/158-visual-recovery-package.json)。该包检查没有编译/执行原生读取器或访问微信；实际源码产品读取见154。
 
@@ -38,7 +58,7 @@ v0.1.11离线构建/临时安装后，版本、两个C#源码资源、重取源�
 
 v0.1.10临时离线构建/安装后核验版本、C#资源、CLI帮助与零秒无目标的拒绝；临时目录清理通过，[147](evidence/147-listener-wait-package.json)。这次包检查没有编译或执行原生读取器，也没有访问真实微信。
 
-实机1003/1004监听均已到时结束且新增0，之后可见测试文字不能补记成到达事件；1004视觉方向四次有明确/未知波动，见[138](evidence/138-late-live-inputs.json)。持续等待1005另起基线，当前运行证据需查忽略目录data中的日志。所有验证标志仍false；未调用模型、写入记忆或发送。
+实机1003/1004监听均已到时结束且新增0，之后可见测试文字不能补记成到达事件；1004视觉方向四次有明确/未知波动，见[138](evidence/138-late-live-inputs.json)。随后另起基线的1005持续等待已完成，见159，忽略目录data中的日志为历史记录。所有验证标志仍false；未调用模型、写入记忆或发送。
 
 ## v0.1.9 联合候选与方向可见性（历史记录）
 

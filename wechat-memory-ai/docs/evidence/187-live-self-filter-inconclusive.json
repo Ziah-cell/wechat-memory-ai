@@ -1,0 +1,74 @@
+{
+  "status": "self_check_needs_review",
+  "arrival_capture_passed": false,
+  "initial_report": {
+    "candidate_rows": 0,
+    "candidate_texts": 0,
+    "front_evictions": 0,
+    "history_boundary_verified": false,
+    "incoming_candidate_texts": 0,
+    "mode": "visual_occurrence_candidates",
+    "model_called": false,
+    "real_send_supported": false,
+    "reused_token_candidates": 0,
+    "seen_occurrences": 8,
+    "seen_tokens": 8,
+    "self_candidate_texts": 0,
+    "sender_verified": false,
+    "server_message_ids_available": false,
+    "snapshots": 1,
+    "status": "reading",
+    "stop_reason": null,
+    "unknown_candidate_texts": 0,
+    "window_bound": true
+  },
+  "final_report": {
+    "candidate_rows": 0,
+    "candidate_texts": 0,
+    "front_evictions": 0,
+    "history_boundary_verified": false,
+    "incoming_candidate_texts": 0,
+    "mode": "visual_occurrence_candidates",
+    "model_called": false,
+    "real_send_supported": false,
+    "reused_token_candidates": 0,
+    "seen_occurrences": 8,
+    "seen_tokens": 8,
+    "self_candidate_texts": 0,
+    "sender_verified": false,
+    "server_message_ids_available": false,
+    "snapshots": 31,
+    "status": "stopped",
+    "stop_reason": "visual_snapshot_changed",
+    "unknown_candidate_texts": 0,
+    "window_bound": true
+  },
+  "component_checks": [
+    {
+      "matching_texts": 1,
+      "self_candidates": 0,
+      "incoming_candidates": 0,
+      "unknown_candidates": 1,
+      "shared_filter_returned": 0
+    },
+    {
+      "matching_texts": 1,
+      "self_candidates": 0,
+      "incoming_candidates": 0,
+      "unknown_candidates": 1,
+      "shared_filter_returned": 0
+    },
+    {
+      "matching_texts": 1,
+      "self_candidates": 0,
+      "incoming_candidates": 0,
+      "unknown_candidates": 1,
+      "shared_filter_returned": 0
+    }
+  ],
+  "component_passed": false,
+  "full_armed_session_self_event_verified": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_sent": 0
+}

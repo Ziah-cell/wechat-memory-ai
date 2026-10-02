@@ -1,4 +1,4 @@
-# v0.1.12 有人监督的只读预检与方向候选
+# v0.1.13 有人监督的只读预检与方向候选
 
 这些模式用于继续验证普通个人微信接入，均未接入 Engine、模型、记忆或发送器。`sender_verified/history_boundary_verified/real_send_supported/model_called` 始终为 false。原视觉诊断和普通内容观察仍独立；v0.1.9新增同一次有界调用内的正文/方向联合候选，不能将其当作已确认来信。
 
@@ -21,7 +21,13 @@ v0.1.12新增显式 `--preflight`，由 `PreflightSession` 包装联合候选会
 
 此模式必须有人监督，会话期间不得浏览历史。现有能力检查没有可信的到底信号：列表无 `ScrollPattern`（[101](evidence/101-live-identifier-capabilities.json)），祖先滚动容器/相关垂直滚动条诊断暂缓，尚未实现。随机验证文字不证明服务器时间、发送方身份或排除随后同步的历史；`sender_verified/history_boundary_verified/server_message_ids_available/real_send_supported/model_called` 继续为false，没有 Engine、模型、记忆或发送调用。普通报告不输出聊天正文、联系人或UI令牌；单独的 `preflight_challenge` 事件只提供程序生成的本轮验证文字。
 
-本轮已启动的实机预检日志位于被Git忽略的 `data/live-preflight-20261002.jsonl`，本次记录时仍在 `waiting_marker` 等待用户发送本轮新文字。不要重复启动，也不要把该等待状态记为正向验收通过；后续以日志最后一条完整JSON及进程状态为准。本文不保存实际验证文字。
+这次实机预检已按[177](evidence/177-live-preflight-incoming-pass.json)完成：369次快照，完整标记批次丢弃1文本，之后2条来信候选达到目标、关闭并退出0。被Git忽略的 `data/live-preflight-20261002.jsonl` 是已完成的历史日志；176的等待状态已被后续结果取代，不要重复该次验收。每次新会话仍需新标记，本文不保存实际验证文字。
+
+## 指定窗口消息源与读取期间变化
+
+v0.1.13新增库级`ReadOnlyWeChatSource`，必须显式提供同一授权窗口的expected_binding。`NativeReader`首次原生调用即经私有管道携带该约束，既有C#在读取消息Name前校验；失败不改绑其他窗口。源只在创建线程中串行poll，期限1–3600秒，沿用上述新标记和永久方向过滤规则。关闭、到期或错误后，源的`is_current(candidate)`检查返回false，send始终拒绝。它没有CLI接入，也未接入Engine、模型、SQLite/记忆或发送；接口见 [LIVE_SOURCE.md](LIVE_SOURCE.md)。绑定约束只确认当前窗口实例，不证明联系人身份。
+
+已绑定的联合读取只对原生`visual_snapshot_changed`最多尝试3次子调用；所有调用及等待共享原8秒单调时钟预算，等待最多50毫秒且不超过剩余时间。每次保持同一绑定，中间失败不提交Python会话检查点，超过预算的成功结果也不交付。首次未绑定读取、普通/诊断模式，以及其他错误、超时、协议或绑定失败均不重取，不自动重新建立基线或解锁。只读属性`snapshot_change_retries`累计实际额外子调用。该机制与下节原生进程内的空前景捕获重取不同；目前只有纯Python重取测试，尚未取得真实恢复证据。
 
 ## 已取得的实机证据与历史反例
 
@@ -32,6 +38,11 @@ v0.1.12新增显式 `--preflight`，由 `PreflightSession` 包装联合候选会
 | [161](evidence/161-live-window-history-stops.json)、[163](evidence/163-live-older-history-negative.json) | 所测历史上下滚动及一次最大化布局变化以 `message_continuity_lost` 停止；最小化以 `window_minimized` 停止。这些有限负例不覆盖所有历史导航。 |
 | [164](evidence/164-live-deeper-history-negative.json) | 更深历史视口滚动后，底层联合会话仍接受2条旧文本为未知方向候选，返回2观察。连续性通过不等于新到达，不能将此结果抹去或推广为已阻止历史。 |
 | [171](evidence/171-live-preflight-history-negative.json) | 预检重现相同的旧历史追加形状：底层2条候选、预检返回0、`pre_marker_discarded_texts=2`，仍为 `waiting_marker`。仅验证标记之前的阻挡，未验证标记之后的历史隔离或正向放行。 |
+| [177](evidence/177-live-preflight-incoming-pass.json) | 新随机标记和后续两条来信正向准入通过，达到目标并关闭；不证明任意历史或稳定发送方身份。 |
+| [183](evidence/183-live-self-listener-timeout.json)、[184](evidence/184-live-self-filter-component.json)、[185](evidence/185-self-sample-direction-check.json) | 首次监听超时无新增；随后样本3次判incoming，核查确认实际是左侧消息，并非自身样本。 |
+| [187](evidence/187-live-self-filter-inconclusive.json)、[188](evidence/188-live-self-visual-reasons.json) | 真正自身到达期间31快照后因`visual_snapshot_changed`停止、无新增，尚未通过。之后联合分类unknown，另次纯视觉检查为`edges_inconsistent`；两次读取不是原子证据。 |
+| [189](evidence/189-live-maximized-self-component.json) | 最大化后已可见自身消息3/3判self，共享过滤返回0，仅历史消息组件通过；未验证新自身到达或已解锁会话过滤，分类阈值未改。 |
+| [193](evidence/193-live-bound-source-baseline.json) | 显式绑定消息源三次基线零交付、关闭后poll/send拒绝、错误窗口绑定拒绝通过；新候选实际交付未验证。 |
 
 ## 视觉失败原因与空证据重取
 
@@ -129,10 +140,12 @@ v0.1.8当时实际启动返回 `private_window_not_unique`，快照0、未绑定
 
 ## 验证与剩余工作
 
-v0.1.12预检先有[165](evidence/165-preflight-red.txt)预期失败，再有[166](evidence/166-preflight-targeted.txt)定向通过；ASCII输出兼容补测先失败[169](evidence/169-preflight-ascii-red.txt)，当前13项预检测试通过[170](evidence/170-preflight-ascii-green.txt)。覆盖新标记生成、基线碰撞、整批丢弃、后续方向过滤、重复/歧义标记、关闭与有限等待。实机负例见171；最终回归范围与结果以 [TEST_RESULTS.md](TEST_RESULTS.md) 为准，不能把13项预检测试说成完整原生/UI场景已验证。
+v0.1.13新增共享过滤1项后，预检14项通过[178](evidence/178-shared-filter-targeted.txt)；显式绑定8项、消息源24项、重取10项分别通过180/182/191。独立审查192重复18项绑定/重取纯Python测试，无待修复发现。最新发现250项、选定237/237通过58.384秒，原4类13项原生测试未重跑；范围与证据见 [TEST_RESULTS.md](TEST_RESULTS.md)。这些结果不替代真实新自身到达、消息源新候选交付或重取恢复实测。
+
+v0.1.12历史预检先有[165](evidence/165-preflight-red.txt)预期失败，再有[166](evidence/166-preflight-targeted.txt)定向通过；ASCII输出兼容补测先失败[169](evidence/169-preflight-ascii-red.txt)，当时13项预检测试通过[170](evidence/170-preflight-ascii-green.txt)。覆盖新标记生成、基线碰撞、整批丢弃、后续方向过滤、重复/歧义标记、关闭与有限等待。实机负例见171，后续正向准入见177。
 
 新增视觉7项、出现候选11项；候选测试先失败[116](evidence/116-occurrence-red.txt)、测试契约修正后仍失败[117](evidence/117-occurrence-contract-red.txt)、实现后11项通过[118](evidence/118-occurrence-targeted.txt)。原严格监听33项通过[119](evidence/119-strict-live-regression.txt)。完整168项通过[121](evidence/121-occurrence-visual-full-suite.txt)，具体环境与审查以 [TEST_RESULTS.md](TEST_RESULTS.md) 为准。
 
 v0.1.9新增12项，先失败[127](evidence/127-visual-occurrence-red.txt)与[132](evidence/132-visual-unknown-transition-red.txt)，定向12/12通过[133](evidence/133-visual-unknown-transition-fixed.txt)。包括原生行值复核、严格联合协议、模式隔离、方向计数、旧组合重现、未知转变及跨未知状态的方向冲突。完整测试以 [TEST_RESULTS.md](TEST_RESULTS.md) 为准。
 
-后续先完成本轮新验证文字及之后来信候选的实机预检，并验证标记后的自身/未知永久过滤。1005已提供一次两条受控来信的到达捕获证据，但历史反例仍在；锁屏/RDP、其他窗口变化、长期运行及标记后的历史同步均未完整验证。没有可信到底信号，不在预检中浏览历史，不复用旧验证文字；不将候选接入 Engine、模型、记忆或发送。
+正向准入已完成；后续仍需取得标记后新自身事件过滤、消息源实际交付新候选及有界重取真实恢复的证据。1005与177提供受控来信到达/准入证据，不能消除164的历史反例；锁屏/RDP、其他窗口变化、长期运行及标记后的历史同步均未完整验证。没有可信到底信号，不在预检中浏览历史，不复用旧验证文字；不将候选接入 Engine、模型、记忆或发送。用户自然聊天偏好见 [CHAT_EXPERIENCE.md](CHAT_EXPERIENCE.md)，尚未据此选择或配置真实模型。

@@ -1,0 +1,654 @@
+test_binding_uses_the_existing_snapshot_identity_contract (test_bound_reader.BoundReaderTests.test_binding_uses_the_existing_snapshot_identity_contract) ... ERROR
+test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) ... 
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='NoneType') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='list') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='str') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+  test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict') ... ERROR
+test_binding_validation_returns_an_independent_copy (test_bound_reader.BoundReaderTests.test_binding_validation_returns_an_independent_copy) ... ERROR
+test_caller_and_property_mutations_cannot_change_the_native_binding (test_bound_reader.BoundReaderTests.test_caller_and_property_mutations_cannot_change_the_native_binding) ... ERROR
+test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) ... 
+  test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='process') ... ERROR
+  test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='started') ... ERROR
+  test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='window') ... ERROR
+  test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='root') ... ERROR
+  test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='list_token') ... ERROR
+test_default_reader_still_binds_to_its_first_valid_response (test_bound_reader.BoundReaderTests.test_default_reader_still_binds_to_its_first_valid_response) ... 
+  test_default_reader_still_binds_to_its_first_valid_response (test_bound_reader.BoundReaderTests.test_default_reader_still_binds_to_its_first_valid_response) (explicit_none=False) ... ERROR
+  test_default_reader_still_binds_to_its_first_valid_response (test_bound_reader.BoundReaderTests.test_default_reader_still_binds_to_its_first_valid_response) (explicit_none=True) ... ERROR
+test_first_native_request_includes_the_expected_private_binding (test_bound_reader.BoundReaderTests.test_first_native_request_includes_the_expected_private_binding) ... ERROR
+test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) ... 
+  test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict') ... ERROR
+  test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='list') ... ERROR
+  test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='str') ... ERROR
+  test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict') ... ERROR
+  test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict') ... ERROR
+
+======================================================================
+ERROR: test_binding_uses_the_existing_snapshot_identity_contract (test_bound_reader.BoundReaderTests.test_binding_uses_the_existing_snapshot_identity_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 55, in test_binding_uses_the_existing_snapshot_identity_contract
+    self.assertEqual(live_read.validate_binding(raw), raw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='NoneType')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='str')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_rejects_missing_extra_and_malformed_values (test_bound_reader.BoundReaderTests.test_binding_validation_rejects_missing_extra_and_malformed_values) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 47, in test_binding_validation_rejects_missing_extra_and_malformed_values
+    live_read.validate_binding(raw)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_binding_validation_returns_an_independent_copy (test_bound_reader.BoundReaderTests.test_binding_validation_returns_an_independent_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 26, in test_binding_validation_returns_an_independent_copy
+    validated = live_read.validate_binding(original)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'validate_binding'
+
+======================================================================
+ERROR: test_caller_and_property_mutations_cannot_change_the_native_binding (test_bound_reader.BoundReaderTests.test_caller_and_property_mutations_cannot_change_the_native_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 88, in test_caller_and_property_mutations_cannot_change_the_native_binding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=original)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='process')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 76, in test_changed_native_identity_is_rejected_without_rebinding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='started')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 76, in test_changed_native_identity_is_rejected_without_rebinding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='window')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 76, in test_changed_native_identity_is_rejected_without_rebinding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='root')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 76, in test_changed_native_identity_is_rejected_without_rebinding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_changed_native_identity_is_rejected_without_rebinding (test_bound_reader.BoundReaderTests.test_changed_native_identity_is_rejected_without_rebinding) (field='list_token')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 76, in test_changed_native_identity_is_rejected_without_rebinding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_default_reader_still_binds_to_its_first_valid_response (test_bound_reader.BoundReaderTests.test_default_reader_still_binds_to_its_first_valid_response) (explicit_none=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 111, in test_default_reader_still_binds_to_its_first_valid_response
+    self.assertIsNone(reader.binding)
+                      ^^^^^^^^^^^^^^
+AttributeError: 'NativeReader' object has no attribute 'binding'. Did you mean: '_binding'?
+
+======================================================================
+ERROR: test_default_reader_still_binds_to_its_first_valid_response (test_bound_reader.BoundReaderTests.test_default_reader_still_binds_to_its_first_valid_response) (explicit_none=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 110, in test_default_reader_still_binds_to_its_first_valid_response
+    reader = live_read.NativeReader('D:/Weixin.exe', **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_first_native_request_includes_the_expected_private_binding (test_bound_reader.BoundReaderTests.test_first_native_request_includes_the_expected_private_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 59, in test_first_native_request_includes_the_expected_private_binding
+    reader = live_read.NativeReader('D:/Weixin.exe', expected_binding=expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 104, in test_malformed_explicit_binding_fails_before_any_subprocess
+    live_read.NativeReader('D:/Weixin.exe', expected_binding=raw)
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 104, in test_malformed_explicit_binding_fails_before_any_subprocess
+    live_read.NativeReader('D:/Weixin.exe', expected_binding=raw)
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='str')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 104, in test_malformed_explicit_binding_fails_before_any_subprocess
+    live_read.NativeReader('D:/Weixin.exe', expected_binding=raw)
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 104, in test_malformed_explicit_binding_fails_before_any_subprocess
+    live_read.NativeReader('D:/Weixin.exe', expected_binding=raw)
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+======================================================================
+ERROR: test_malformed_explicit_binding_fails_before_any_subprocess (test_bound_reader.BoundReaderTests.test_malformed_explicit_binding_fails_before_any_subprocess) (binding_type='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_bound_reader.py", line 104, in test_malformed_explicit_binding_fails_before_any_subprocess
+    live_read.NativeReader('D:/Weixin.exe', expected_binding=raw)
+TypeError: NativeReader.__init__() got an unexpected keyword argument 'expected_binding'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.081s
+
+FAILED (errors=65)
