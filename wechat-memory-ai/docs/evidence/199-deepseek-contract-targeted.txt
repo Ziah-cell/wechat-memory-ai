@@ -1,0 +1,26 @@
+test_credential_is_local_and_not_in_repr (test_config.ConfigTests.test_credential_is_local_and_not_in_repr) ... ok
+test_deepseek_accepts_only_the_two_explicit_official_endpoints (test_config.ConfigTests.test_deepseek_accepts_only_the_two_explicit_official_endpoints) ... ok
+test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided (test_config.ConfigTests.test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided) ... ok
+test_deepseek_requires_opt_in_and_local_credential (test_config.ConfigTests.test_deepseek_requires_opt_in_and_local_credential) ... ok
+test_default_is_offline_and_paths_relative_to_config (test_config.ConfigTests.test_default_is_offline_and_paths_relative_to_config) ... ok
+test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail (test_config.ConfigTests.test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail) ... ok
+test_network_requires_explicit_opt_in_and_credential (test_config.ConfigTests.test_network_requires_explicit_opt_in_and_credential) ... ok
+test_plain_http_remote_url_userinfo_and_query_rejected (test_config.ConfigTests.test_plain_http_remote_url_userinfo_and_query_rejected) ... ok
+test_real_send_and_unsupported_adapters_fail_closed (test_config.ConfigTests.test_real_send_and_unsupported_adapters_fail_closed) ... ok
+test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) ... ok
+test_deepseek_non_thinking_payload_and_complete_text_contract (test_models.ModelHTTPTests.test_deepseek_non_thinking_payload_and_complete_text_contract) ... ok
+test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence (test_models.ModelHTTPTests.test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence) ... ok
+test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry (test_models.ModelHTTPTests.test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry) ... ok
+test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) ... ok
+test_empty_malformed_and_nontext_responses_fail (test_models.ModelHTTPTests.test_empty_malformed_and_nontext_responses_fail) ... ok
+test_external_service_unreachable (test_models.ModelHTTPTests.test_external_service_unreachable) ... ok
+test_http_contract_no_tools_no_secret_in_body (test_models.ModelHTTPTests.test_http_contract_no_tools_no_secret_in_body) ... ok
+test_http_error_mapping_and_no_retry (test_models.ModelHTTPTests.test_http_error_mapping_and_no_retry) ... ok
+test_network_is_disabled_at_client_boundary (test_models.ModelHTTPTests.test_network_is_disabled_at_client_boundary) ... ok
+test_redirect_is_not_followed_with_credentials (test_models.ModelHTTPTests.test_redirect_is_not_followed_with_credentials) ... ok
+test_timeout_returns_safe_code (test_models.ModelHTTPTests.test_timeout_returns_safe_code) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 10.375s
+
+OK

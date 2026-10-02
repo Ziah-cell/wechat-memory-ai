@@ -62,6 +62,70 @@ class ModelHTTPTests(unittest.TestCase):
         self.assertNotIn('tools', request['body'])
         self.assertNotIn('TEST_ONLY_KEY', json.dumps(request['body']))
 
+    def deepseek_config(self, **changes):
+        return replace(self.config, provider='deepseek', name='deepseek-flash', **changes)
+
+    def deepseek_response(self, *, finish='stop', content='模拟的自然回复', **fields):
+        return json.dumps({'choices':[{'finish_reason':finish,
+                          'message':dict(content=content, **fields)}]}).encode('utf-8')
+
+    def test_deepseek_non_thinking_payload_and_complete_text_contract(self):
+        type(self).body = b'\n \n' + self.deepseek_response(reasoning_content=None)
+        messages = [{'role':'system','content':'虚构测试上下文'}, {'role':'user','content':'你好'}]
+        result = ChatCompletionsModel(self.deepseek_config(max_completion_tokens=128)).complete(messages)
+        self.assertEqual(result, '模拟的自然回复')
+        self.assertEqual(len(self.requests), 1)
+        self.assertEqual(self.requests[0]['body'], {
+            'model':'deepseek-flash', 'messages':messages, 'stream':False,
+            'max_tokens':128, 'thinking':{'type':'disabled'}})
+        self.assertEqual(self.requests[0]['auth'], 'Bearer TEST_ONLY_KEY')
+
+    def test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply(self):
+        for reason in ('length', 'content_filter', 'tool_calls', 'insufficient_system_resource', None):
+            type(self).body = self.deepseek_response(finish=reason, content='PRIVATE_PARTIAL')
+            with self.subTest(reason=reason):
+                with self.assertRaises(ModelError) as error:
+                    ChatCompletionsModel(self.deepseek_config()).complete([{'role':'user','content':'fixture'}])
+                self.assertEqual(error.exception.code, 'truncated' if reason == 'length' else 'format')
+                self.assertNotIn('PRIVATE_PARTIAL', str(error.exception))
+        type(self).body = b'{"choices":[{"message":{"content":"PRIVATE_PARTIAL"}}]}'
+        with self.assertRaises(ModelError) as error:
+            ChatCompletionsModel(self.deepseek_config()).complete([{'role':'user','content':'fixture'}])
+        self.assertEqual(error.exception.code, 'format')
+
+    def test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them(self):
+        for fields in ({'reasoning_content':'PRIVATE_REASON'}, {'reasoning_content':[]},
+                       {'tool_calls':[{'function':{'name':'PRIVATE_ACTION'}}]},
+                       {'function_call':{'name':'PRIVATE_ACTION'}}):
+            type(self).body = self.deepseek_response(**fields)
+            with self.subTest(field=next(iter(fields))):
+                with self.assertRaises(ModelError) as error:
+                    ChatCompletionsModel(self.deepseek_config()).complete([{'role':'user','content':'fixture'}])
+                self.assertEqual(error.exception.code, 'format')
+                self.assertNotIn('PRIVATE_', str(error.exception))
+
+    def test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence(self):
+        type(self).body = self.deepseek_response(content='字'*101)
+        with self.assertRaises(ModelError) as error:
+            ChatCompletionsModel(self.deepseek_config(max_reply_chars=100)).complete(
+                [{'role':'user','content':'fixture'}])
+        self.assertEqual(error.exception.code, 'truncated')
+
+    def test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry(self):
+        with self.assertRaises(ModelError) as error:
+            ChatCompletionsModel(self.deepseek_config(allow_network=False)).complete(
+                [{'role':'user','content':'fixture'}])
+        self.assertEqual(error.exception.code, 'network_disabled')
+        self.assertEqual(self.requests, [])
+        for status, code in ((401,'auth'), (429,'quota'), (503,'server')):
+            type(self).status = status
+            before = len(self.requests)
+            with self.subTest(status=status):
+                with self.assertRaises(ModelError) as error:
+                    ChatCompletionsModel(self.deepseek_config()).complete([{'role':'user','content':'fixture'}])
+                self.assertEqual(error.exception.code, code)
+                self.assertEqual(len(self.requests), before+1)
+
     def test_http_error_mapping_and_no_retry(self):
         for status, code in [(401,'auth'), (403,'auth'), (402,'quota'), (429,'quota'), (500,'server')]:
             type(self).status = status

@@ -1,0 +1,64 @@
+{
+  "status": "independent_contract_review_passed",
+  "actionable_findings": 0,
+  "implementation_files_changed_by_reviewer": 0,
+  "configuration_checks": {
+    "default_provider_remains_fake": true,
+    "network_requires_explicit_opt_in_and_local_credential": true,
+    "official_endpoint_exact_allowlist": true,
+    "accepted_endpoint_count": 2,
+    "rejected_endpoint_variant_count": 10,
+    "user_deepseek_loopback_configuration_rejected": true,
+    "mock_adapter_and_real_send_locks_preserved": true,
+    "draft_remains_offline": true,
+    "credential_excluded_from_repr_and_errors": true
+  },
+  "request_and_response_checks": {
+    "minimal_deepseek_payload": true,
+    "thinking_explicitly_disabled": true,
+    "reasoning_effort_omitted": true,
+    "max_tokens_mapped_from_existing_limit": true,
+    "deepseek_omits_store_and_max_completion_tokens": true,
+    "generic_payload_and_reply_behavior_preserved": true,
+    "only_stop_finish_reason_accepted": true,
+    "nonempty_reasoning_and_actions_rejected": true,
+    "nontext_and_empty_content_rejected": true,
+    "length_and_oversized_content_rejected_as_truncated": true,
+    "rejected_content_not_returned_or_logged": true,
+    "nonstreaming_leading_whitespace_accepted": true,
+    "no_redirect_or_automatic_retry_preserved": true,
+    "overall_deadline_and_cancellable_worker_preserved_by_source_review": true,
+    "credentials_remain_in_private_stdin_and_authorization_header": true
+  },
+  "independent_targeted_tests": {
+    "configuration_tests": 9,
+    "loopback_model_tests": 12,
+    "tests_run": 21,
+    "tests_passed": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "runner_elapsed_seconds": 12.185
+  },
+  "natural_prompt_review": {
+    "text_only_permissions_preserved": true,
+    "memory_remains_data_not_authority": true,
+    "current_explicit_style_preferences_take_priority": true,
+    "truthfulness_and_permission_constraints_preserved": true,
+    "maximum_persona_system_characters": 908,
+    "reserved_system_characters": 1000,
+    "pure_fixture_budget_check_passed": true,
+    "natural_conversation_quality_verified_with_real_model": false
+  },
+  "verification_boundaries": {
+    "source_diff_check_passed": true,
+    "real_service_compatibility_verified": false,
+    "real_model_called": false,
+    "actual_credentials_read": false,
+    "user_configuration_read": false,
+    "real_memory_accessed_or_written": false,
+    "native_or_ui_executed": false,
+    "real_sent": 0,
+    "full_suite_runs": 0
+  }
+}

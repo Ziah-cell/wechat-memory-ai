@@ -73,6 +73,65 @@ class ConfigTests(unittest.TestCase):
                 self.load(base.replace('https://api.example.invalid/v1/chat/completions', url),
                           {'WECHAT_AI_API_KEY': 'test-only'})
 
+    def deepseek_config(self):
+        return self.network_config().replace('provider = "chat_completions"', 'provider = "deepseek"').replace(
+            'https://api.example.invalid/v1/chat/completions', 'https://api.deepseek.com/chat/completions').replace(
+            'name = "configured-model"', 'name = "deepseek-flash"')
+
+    def test_deepseek_requires_opt_in_and_local_credential(self):
+        for text, env in ((self.deepseek_config(), {'WECHAT_AI_API_KEY':'TEST_ONLY'}),
+                          (self.deepseek_config().replace('allow_network = false', 'allow_network = true'), {})):
+            with self.assertRaisesRegex(ConfigError, 'network model requires opt-in'):
+                self.load(text, env)
+
+    def test_deepseek_accepts_only_the_two_explicit_official_endpoints(self):
+        base = self.deepseek_config().replace('allow_network = false', 'allow_network = true')
+        for endpoint in ('https://api.deepseek.com/chat/completions',
+                         'https://api.deepseek.com/v1/chat/completions'):
+            try:
+                c = self.load(base.replace('https://api.deepseek.com/chat/completions', endpoint),
+                              {'WECHAT_AI_API_KEY':'TEST_ONLY'})
+            except ConfigError:
+                self.fail('The DeepSeek profile does not accept its official endpoint')
+            self.assertEqual(c.model.provider, 'deepseek')
+            self.assertEqual(c.model.endpoint, endpoint)
+            self.assertFalse(c.real_send)
+            self.assertEqual(c.adapter, 'mock')
+        for endpoint in ('https://api.example.invalid/chat/completions',
+                         'http://api.deepseek.com/chat/completions',
+                         'http://127.0.0.1/chat/completions',
+                         'https://api.deepseek.com:444/chat/completions',
+                         'https://api.deepseek.com/chat/completions?key=PRIVATE',
+                         'https://api.deepseek.com/chat/completions#PRIVATE',
+                         'https://PRIVATE@api.deepseek.com/chat/completions',
+                         'https://api.deepseek.com/other/chat/completions',
+                         'https://api.deepseek.com/chat/completions/',
+                         'https://api.deepseek.com:443/chat/completions'):
+            with self.subTest(endpoint=endpoint):
+                with self.assertRaises(ConfigError) as error:
+                    self.load(base.replace('https://api.deepseek.com/chat/completions', endpoint),
+                              {'WECHAT_AI_API_KEY':'TEST_ONLY'})
+                self.assertNotIn('PRIVATE', str(error.exception))
+
+    def test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided(self):
+        template = Path(__file__).parents[1] / 'config.deepseek.example.toml'
+        self.assertTrue(template.is_file(), 'The inactive DeepSeek configuration draft is missing')
+        text = template.read_text('utf-8')
+        c = self.load(text)
+        self.assertEqual(c.model.provider, 'fake')
+        self.assertFalse(c.model.allow_network)
+        self.assertEqual(c.model.name, 'deepseek-flash')
+        self.assertEqual(c.model.endpoint, 'https://api.deepseek.com/chat/completions')
+        self.assertTrue(c.dry_run)
+        self.assertFalse(c.real_send)
+        active = text.replace('provider = "fake"', 'provider = "deepseek"').replace(
+            'allow_network = false', 'allow_network = true')
+        with self.assertRaises(ConfigError):
+            self.load(active)
+        c = self.load(active, {'WECHAT_AI_API_KEY':'TEST_ONLY'})
+        self.assertEqual(c.model.provider, 'deepseek')
+        self.assertNotIn('TEST_ONLY', repr(c))
+
 
 if __name__ == '__main__':
     unittest.main()

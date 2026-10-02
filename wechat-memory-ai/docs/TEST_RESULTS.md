@@ -1,8 +1,20 @@
-# Windows 测试结果（当前 v0.1.13）
+# Windows 测试结果（当前 v0.1.14）
 
 最新执行日期：2026-10-03（Asia/Shanghai）；以下历史阶段另有2026-10-01/02记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.13 显式绑定消息源与有界重取
+## v0.1.14 DeepSeek适配与自然聊天提示
+
+最新发现258项，选定执行**245/245，43.862秒，0失败/错误/跳过**：[201](evidence/201-deepseek-final-regression.txt)、[202范围](evidence/202-deepseek-final-regression-scope.json)。202外部单调时钟43.859秒与runner使用的时钟略有差异，为同一轮。继续排除原4类13项原生测试，未重跑被拒夹具，不能说258项全套通过。
+
+新增8项请求/配置测试，验证DeepSeek精确非思考载荷、输出上限映射、异常终止及非空推理/工具响应拒绝、过长回复不截断交付、网络显式开启/凭据/官方端点约束、未激活草稿。197首次7失败和2个测试subTest作用域错误；修正测试后仍有15个失败子项、0错误，证明功能缺失，随后实现。定向21/21通过10.375秒：[199](evidence/199-deepseek-contract-targeted.txt)。请求仅发往loopback假服务，未调用真实DeepSeek。
+
+自然聊天提示使用既有Engine/Memory38项验证（198），未添加只镜像提示词的测试。最长合法persona时系统提示908字符，小于既有1000字符预留；模型失败用例补入truncated，确认空回复、不发送、不自动重试。200独立审查及21项定向复验通过，无待修复发现。
+
+[203离线打包](evidence/203-deepseek-package.json)一次构建/安装通过；20个Python模块、5个原生资源、安装版本0.1.14和两个CLI帮助正确。将仓库草稿复制到临时目录，以安装版配置加载器验证：默认fake/网络关闭；只有虚构凭据仍未开启；虚构凭据和两个显式开关齐备后才可解析DeepSeek。没有HTTP、原生/UI或实际模型/记忆调用，临时目录清理。草稿为仓库文件，不在wheel中。
+
+上述测试不能证明真实云API可用、模型自然度或实际延迟。现有个人配置未覆盖；本机仅创建空密钥占位文件，不在Git中。微信自身新事件/真实源交付等未验证边界保持下述记录。
+
+## v0.1.13 显式绑定消息源与有界重取（历史记录）
 
 最新发现250项，实际选定执行 **237/237，58.384秒，0失败/错误/跳过**：[194](evidence/194-source-final-regression.txt)、[195范围清单](evidence/195-source-final-regression-scope.json)。195的外层单调时钟为58.390秒，与194为同一轮。仍排除4类13项原生测试（NativeOcrCheckTests 4、VisualBitmapTests 3、NativeVisualTextTests 2、NativeProbeTests 4），不是完整250项通过；未重跑此前被拒夹具。
 

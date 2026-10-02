@@ -1,0 +1,38 @@
+# DeepSeek 非思考模式准备稿；当前仍为离线假模型，不会请求网络。
+# 后续启用云模型需 provider="deepseek"、allow_network=true 及本机密钥。
+# dry_run 只禁止发送，不禁止云请求或本地模拟记忆；不要用它代替网络开关。
+[app]
+adapter = "mock"
+peer_id = "mock:owner"
+data_dir = "data/deepseek-evaluation"
+dry_run = true
+real_send = false
+proactive = false
+max_concurrency = 1
+max_input_chars = 1600
+
+[persona]
+address = ""
+tone = "自然、尊重、中文交流，不确定时明确说明"
+reply_style = "日常简短口语，复杂问题按需展开，不擅自设定恋爱关系"
+
+[model]
+provider = "fake"
+allow_network = false
+endpoint = "https://api.deepseek.com/chat/completions"
+name = "deepseek-flash"
+api_key_env = "WECHAT_AI_API_KEY"
+timeout_seconds = 20.0
+context_chars = 6000
+history_messages = 12
+summary_chars = 700
+memory_chars = 1200
+max_reply_chars = 1500
+max_completion_tokens = 512 # deepseek 请求中映射为 max_tokens
+
+[limits]
+daily_calls = 50
+per_call_estimate = 0.02 # 本地保守估计，不是服务商实际账单
+daily_estimate = 2.0
+currency = "USD"
+timezone = "Asia/Shanghai"

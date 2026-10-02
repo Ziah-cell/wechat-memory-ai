@@ -1,0 +1,348 @@
+test_credential_is_local_and_not_in_repr (test_config.ConfigTests.test_credential_is_local_and_not_in_repr) ... ok
+test_deepseek_accepts_only_the_two_explicit_official_endpoints (test_config.ConfigTests.test_deepseek_accepts_only_the_two_explicit_official_endpoints) ... FAIL
+test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided (test_config.ConfigTests.test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided) ... FAIL
+test_deepseek_requires_opt_in_and_local_credential (test_config.ConfigTests.test_deepseek_requires_opt_in_and_local_credential) ... FAIL
+test_default_is_offline_and_paths_relative_to_config (test_config.ConfigTests.test_default_is_offline_and_paths_relative_to_config) ... ok
+test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail (test_config.ConfigTests.test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail) ... ok
+test_network_requires_explicit_opt_in_and_credential (test_config.ConfigTests.test_network_requires_explicit_opt_in_and_credential) ... ok
+test_plain_http_remote_url_userinfo_and_query_rejected (test_config.ConfigTests.test_plain_http_remote_url_userinfo_and_query_rejected) ... ok
+test_real_send_and_unsupported_adapters_fail_closed (test_config.ConfigTests.test_real_send_and_unsupported_adapters_fail_closed) ... ok
+test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) ... 
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='length') ... FAIL
+test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) ... ERROR
+test_deepseek_non_thinking_payload_and_complete_text_contract (test_models.ModelHTTPTests.test_deepseek_non_thinking_payload_and_complete_text_contract) ... FAIL
+test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence (test_models.ModelHTTPTests.test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence) ... FAIL
+test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry (test_models.ModelHTTPTests.test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry) ... ok
+test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) ... 
+  test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content') ... FAIL
+test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) ... ERROR
+test_empty_malformed_and_nontext_responses_fail (test_models.ModelHTTPTests.test_empty_malformed_and_nontext_responses_fail) ... ok
+test_external_service_unreachable (test_models.ModelHTTPTests.test_external_service_unreachable) ... ok
+test_http_contract_no_tools_no_secret_in_body (test_models.ModelHTTPTests.test_http_contract_no_tools_no_secret_in_body) ... ok
+test_http_error_mapping_and_no_retry (test_models.ModelHTTPTests.test_http_error_mapping_and_no_retry) ... ok
+test_network_is_disabled_at_client_boundary (test_models.ModelHTTPTests.test_network_is_disabled_at_client_boundary) ... ok
+test_redirect_is_not_followed_with_credentials (test_models.ModelHTTPTests.test_redirect_is_not_followed_with_credentials) ... ok
+test_timeout_returns_safe_code (test_models.ModelHTTPTests.test_timeout_returns_safe_code) ... ok
+
+======================================================================
+ERROR: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 88, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    self.assertEqual(error.exception.code, 'truncated' if reason == 'length' else 'format')
+                     ^^^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+======================================================================
+ERROR: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 102, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    self.assertEqual(error.exception.code, 'format')
+                     ^^^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+======================================================================
+FAIL: test_deepseek_accepts_only_the_two_explicit_official_endpoints (test_config.ConfigTests.test_deepseek_accepts_only_the_two_explicit_official_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 92, in test_deepseek_accepts_only_the_two_explicit_official_endpoints
+    c = self.load(base.replace('https://api.deepseek.com/chat/completions', endpoint),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\tests\test_config.py", line 18, in load
+    return load_config(self.path, environ={} if env is None else env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\config.py", line 157, in load_config
+    return validate(Config(**a, persona=Persona(**p), model=ModelConfig(**m), limits=Limits(**lim)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\config.py", line 92, in validate
+    raise ConfigError('model provider or allow_network invalid')
+wechat_memory.config.ConfigError: model provider or allow_network invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 95, in test_deepseek_accepts_only_the_two_explicit_official_endpoints
+    self.fail('The DeepSeek profile does not accept its official endpoint')
+AssertionError: The DeepSeek profile does not accept its official endpoint
+
+======================================================================
+FAIL: test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided (test_config.ConfigTests.test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 117, in test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided
+    self.assertTrue(template.is_file(), 'The inactive DeepSeek configuration draft is missing')
+AssertionError: False is not true : The inactive DeepSeek configuration draft is missing
+
+======================================================================
+FAIL: test_deepseek_requires_opt_in_and_local_credential (test_config.ConfigTests.test_deepseek_requires_opt_in_and_local_credential)
+----------------------------------------------------------------------
+wechat_memory.config.ConfigError: model provider or allow_network invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 84, in test_deepseek_requires_opt_in_and_local_credential
+    with self.assertRaisesRegex(ConfigError, 'network model requires opt-in'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "network model requires opt-in" does not match "model provider or allow_network invalid"
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 86, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.subTest(reason=reason), self.assertRaises(ModelError) as error:
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_non_thinking_payload_and_complete_text_contract (test_models.ModelHTTPTests.test_deepseek_non_thinking_payload_and_complete_text_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 78, in test_deepseek_non_thinking_payload_and_complete_text_contract
+    self.assertEqual(self.requests[0]['body'], {
+AssertionError: {'mod[120 chars]m': False, 'max_completion_tokens': 128, 'store': False} != {'mod[120 chars]m': False, 'max_tokens': 128, 'thinking': {'type': 'disabled'}}
+- {'max_completion_tokens': 128,
+?      -----------
+
++ {'max_tokens': 128,
+   'messages': [{'content': '虚构测试上下文', 'role': 'system'},
+                {'content': '你好', 'role': 'user'}],
+   'model': 'deepseek-flash',
+-  'store': False,
+-  'stream': False}
+?                 ^
+
++  'stream': False,
+?                 ^
+
++  'thinking': {'type': 'disabled'}}
+
+======================================================================
+FAIL: test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence (test_models.ModelHTTPTests.test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 107, in test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 100, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    with self.subTest(field=next(iter(fields))), self.assertRaises(ModelError) as error:
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+----------------------------------------------------------------------
+Ran 21 tests in 9.216s
+
+FAILED (failures=7, errors=2)
+
+After correcting subtest assertion scope; product still unchanged:
+test_credential_is_local_and_not_in_repr (test_config.ConfigTests.test_credential_is_local_and_not_in_repr) ... ok
+test_deepseek_accepts_only_the_two_explicit_official_endpoints (test_config.ConfigTests.test_deepseek_accepts_only_the_two_explicit_official_endpoints) ... FAIL
+test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided (test_config.ConfigTests.test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided) ... FAIL
+test_deepseek_requires_opt_in_and_local_credential (test_config.ConfigTests.test_deepseek_requires_opt_in_and_local_credential) ... FAIL
+test_default_is_offline_and_paths_relative_to_config (test_config.ConfigTests.test_default_is_offline_and_paths_relative_to_config) ... ok
+test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail (test_config.ConfigTests.test_missing_peer_unknown_fields_wrong_types_and_nonfinite_fail) ... ok
+test_network_requires_explicit_opt_in_and_credential (test_config.ConfigTests.test_network_requires_explicit_opt_in_and_credential) ... ok
+test_plain_http_remote_url_userinfo_and_query_rejected (test_config.ConfigTests.test_plain_http_remote_url_userinfo_and_query_rejected) ... ok
+test_real_send_and_unsupported_adapters_fail_closed (test_config.ConfigTests.test_real_send_and_unsupported_adapters_fail_closed) ... ok
+test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) ... 
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='length') ... FAIL
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='content_filter') ... FAIL
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='tool_calls') ... FAIL
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='insufficient_system_resource') ... FAIL
+  test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason=None) ... FAIL
+test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) ... FAIL
+test_deepseek_non_thinking_payload_and_complete_text_contract (test_models.ModelHTTPTests.test_deepseek_non_thinking_payload_and_complete_text_contract) ... FAIL
+test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence (test_models.ModelHTTPTests.test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence) ... FAIL
+test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry (test_models.ModelHTTPTests.test_deepseek_retains_opt_in_error_mapping_and_no_automatic_retry) ... ok
+test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) ... 
+  test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content') ... FAIL
+  test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content') ... FAIL
+  test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='tool_calls') ... FAIL
+  test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='function_call') ... FAIL
+test_empty_malformed_and_nontext_responses_fail (test_models.ModelHTTPTests.test_empty_malformed_and_nontext_responses_fail) ... ok
+test_external_service_unreachable (test_models.ModelHTTPTests.test_external_service_unreachable) ... ok
+test_http_contract_no_tools_no_secret_in_body (test_models.ModelHTTPTests.test_http_contract_no_tools_no_secret_in_body) ... ok
+test_http_error_mapping_and_no_retry (test_models.ModelHTTPTests.test_http_error_mapping_and_no_retry) ... ok
+test_network_is_disabled_at_client_boundary (test_models.ModelHTTPTests.test_network_is_disabled_at_client_boundary) ... ok
+test_redirect_is_not_followed_with_credentials (test_models.ModelHTTPTests.test_redirect_is_not_followed_with_credentials) ... ok
+test_timeout_returns_safe_code (test_models.ModelHTTPTests.test_timeout_returns_safe_code) ... ok
+
+======================================================================
+FAIL: test_deepseek_accepts_only_the_two_explicit_official_endpoints (test_config.ConfigTests.test_deepseek_accepts_only_the_two_explicit_official_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 92, in test_deepseek_accepts_only_the_two_explicit_official_endpoints
+    c = self.load(base.replace('https://api.deepseek.com/chat/completions', endpoint),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\tests\test_config.py", line 18, in load
+    return load_config(self.path, environ={} if env is None else env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\config.py", line 157, in load_config
+    return validate(Config(**a, persona=Persona(**p), model=ModelConfig(**m), limits=Limits(**lim)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\config.py", line 92, in validate
+    raise ConfigError('model provider or allow_network invalid')
+wechat_memory.config.ConfigError: model provider or allow_network invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 95, in test_deepseek_accepts_only_the_two_explicit_official_endpoints
+    self.fail('The DeepSeek profile does not accept its official endpoint')
+AssertionError: The DeepSeek profile does not accept its official endpoint
+
+======================================================================
+FAIL: test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided (test_config.ConfigTests.test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 118, in test_deepseek_draft_remains_offline_until_both_switches_and_a_key_are_provided
+    self.assertTrue(template.is_file(), 'The inactive DeepSeek configuration draft is missing')
+AssertionError: False is not true : The inactive DeepSeek configuration draft is missing
+
+======================================================================
+FAIL: test_deepseek_requires_opt_in_and_local_credential (test_config.ConfigTests.test_deepseek_requires_opt_in_and_local_credential)
+----------------------------------------------------------------------
+wechat_memory.config.ConfigError: model provider or allow_network invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<project>\tests\test_config.py", line 84, in test_deepseek_requires_opt_in_and_local_credential
+    with self.assertRaisesRegex(ConfigError, 'network model requires opt-in'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "network model requires opt-in" does not match "model provider or allow_network invalid"
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 87, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='content_filter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 87, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='tool_calls')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 87, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason='insufficient_system_resource')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 87, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply) (reason=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 87, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply (test_models.ModelHTTPTests.test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 92, in test_deepseek_incomplete_or_missing_finish_reason_never_returns_partial_reply
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_non_thinking_payload_and_complete_text_contract (test_models.ModelHTTPTests.test_deepseek_non_thinking_payload_and_complete_text_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 78, in test_deepseek_non_thinking_payload_and_complete_text_contract
+    self.assertEqual(self.requests[0]['body'], {
+AssertionError: {'mod[120 chars]m': False, 'max_completion_tokens': 128, 'store': False} != {'mod[120 chars]m': False, 'max_tokens': 128, 'thinking': {'type': 'disabled'}}
+- {'max_completion_tokens': 128,
+?      -----------
+
++ {'max_tokens': 128,
+   'messages': [{'content': '虚构测试上下文', 'role': 'system'},
+                {'content': '你好', 'role': 'user'}],
+   'model': 'deepseek-flash',
+-  'store': False,
+-  'stream': False}
+?                 ^
+
++  'stream': False,
+?                 ^
+
++  'thinking': {'type': 'disabled'}}
+
+======================================================================
+FAIL: test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence (test_models.ModelHTTPTests.test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 109, in test_deepseek_oversized_reply_is_rejected_instead_of_cut_mid_sentence
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 102, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='reasoning_content')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 102, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='tool_calls')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 102, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them (test_models.ModelHTTPTests.test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them) (field='function_call')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_models.py", line 102, in test_deepseek_unexpected_reasoning_or_actions_are_rejected_without_exposing_them
+    with self.assertRaises(ModelError) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ModelError not raised
+
+----------------------------------------------------------------------
+Ran 21 tests in 7.796s
+
+FAILED (failures=15)

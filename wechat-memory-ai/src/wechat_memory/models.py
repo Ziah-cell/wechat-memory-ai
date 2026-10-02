@@ -16,7 +16,7 @@ from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 class ModelError(RuntimeError):
     def __init__(self, code):
-        allowed = {'timeout','auth','quota','network','server','format','empty','network_disabled','model_failure','cancelled'}
+        allowed = {'timeout','auth','quota','network','server','format','empty','network_disabled','model_failure','cancelled','truncated'}
         self.code = code if code in allowed else 'model_failure'
         super().__init__(self.code)
 
@@ -45,9 +45,14 @@ class NoRedirect(HTTPRedirectHandler):
 
 
 def _http_request(c, messages):
-    payload = json.dumps({'model':c.name, 'messages':messages, 'stream':False,
-                          'max_completion_tokens':c.max_completion_tokens,
-                          'store':False}, ensure_ascii=False).encode('utf-8')
+    request_body = {'model':c.name, 'messages':messages, 'stream':False}
+    if c.provider == 'deepseek':
+        request_body.update(max_tokens=c.max_completion_tokens, thinking={'type':'disabled'})
+    elif c.provider == 'chat_completions':
+        request_body.update(max_completion_tokens=c.max_completion_tokens, store=False)
+    else:
+        raise ModelError('model_failure')
+    payload = json.dumps(request_body, ensure_ascii=False).encode('utf-8')
     try:
         request = Request(c.endpoint, data=payload, headers={'Content-Type':'application/json',
                           'Authorization':'Bearer '+c.api_key}, method='POST')
@@ -56,11 +61,22 @@ def _http_request(c, messages):
         if len(body)>1_048_576:
             raise ModelError('format')
         obj = json.loads(body)
-        reply = obj['choices'][0]['message']['content']
+        choice = obj['choices'][0]
+        message = choice['message']
+        reply = message['content']
         if not isinstance(reply,str):
             raise ModelError('format')
         if not reply.strip():
             raise ModelError('empty')
+        if c.provider == 'deepseek':
+            if choice.get('finish_reason') == 'length':
+                raise ModelError('truncated')
+            if (choice.get('finish_reason') != 'stop'
+                    or message.get('reasoning_content') not in (None, '')
+                    or message.get('tool_calls') or message.get('function_call')):
+                raise ModelError('format')
+            if len(reply.strip()) > c.max_reply_chars:
+                raise ModelError('truncated')
         return reply.strip()[:c.max_reply_chars]
     except HTTPError as error:
         code = 'auth' if error.code in (401,403) else 'quota' if error.code in (402,429) else 'server'

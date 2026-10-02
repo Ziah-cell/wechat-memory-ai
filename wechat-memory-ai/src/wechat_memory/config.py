@@ -88,7 +88,7 @@ def validate(c):
     for name in ('endpoint', 'name', 'api_key_env'):
         if not isinstance(getattr(m, name), str):
             raise ConfigError('model string field invalid')
-    if m.provider not in ('fake', 'chat_completions') or type(m.allow_network) is not bool:
+    if m.provider not in ('fake', 'chat_completions', 'deepseek') or type(m.allow_network) is not bool:
         raise ConfigError('model provider or allow_network invalid')
     if not re.fullmatch(r'[A-Z_][A-Z0-9_]*', m.api_key_env):
         raise ConfigError('api_key_env invalid')
@@ -104,9 +104,13 @@ def validate(c):
         _integer(getattr(m, name), name, low, high)
     if c.max_input_chars + m.memory_chars + m.summary_chars + 1000 > m.context_chars:
         raise ConfigError('context_chars too small for configured components')
-    if m.provider == 'chat_completions':
+    if m.provider in ('chat_completions', 'deepseek'):
         if not m.allow_network or not m.api_key.strip() or not m.name.strip():
             raise ConfigError('network model requires opt-in, model name and a local credential')
+        if m.provider == 'deepseek' and m.endpoint not in (
+                'https://api.deepseek.com/chat/completions',
+                'https://api.deepseek.com/v1/chat/completions'):
+            raise ConfigError('deepseek requires an official HTTPS chat endpoint')
         try:
             url = urlsplit(m.endpoint)
             valid = url.scheme == 'https' or (url.scheme == 'http' and url.hostname in ('127.0.0.1', '::1', 'localhost'))

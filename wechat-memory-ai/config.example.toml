@@ -15,9 +15,9 @@ tone = "自然、尊重、中文交流，不确定时明确说明"
 reply_style = "尽量简短，不擅自设定恋爱关系"
 
 [model]
-provider = "fake" # fake 或 chat_completions
+provider = "fake" # fake、chat_completions 或 deepseek
 allow_network = false
-endpoint = "" # 填写服务商核验过的完整 /v1/chat/completions 地址
+endpoint = "" # 填写服务商核验过的完整 chat/completions 地址
 name = "" # 由用户按服务商实际可用模型填写
 api_key_env = "WECHAT_AI_API_KEY"
 timeout_seconds = 20.0

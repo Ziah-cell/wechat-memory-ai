@@ -153,11 +153,15 @@ class EngineTests(unittest.TestCase):
 
     def test_model_errors_empty_and_invalid_response_are_terminal_without_retry(self):
         for n, response in enumerate([ModelError('timeout'), ModelError('auth'), ModelError('quota'),
-                                      ModelError('network'), '', {'bad':'format'}, RuntimeError('SECRET')]):
+                                      ModelError('network'), ModelError('truncated'), '', {'bad':'format'}, RuntimeError('SECRET')]):
             model = CaptureModel(response)
             engine = self.live_mock(model=model)
             event = self.event(f'e{n}')
-            self.assertEqual(engine.process(event).status, 'model_failed')
+            result = engine.process(event)
+            self.assertEqual(result.status, 'model_failed')
+            self.assertEqual(result.reply, '')
+            if isinstance(response, ModelError):
+                self.assertEqual(result.code, response.code)
             self.assertEqual(engine.process(event).status, 'duplicate')
             self.assertEqual(len(model.calls), 1)
         self.assertEqual(self.adapter.sent, [])
