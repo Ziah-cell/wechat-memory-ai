@@ -1,9 +1,21 @@
-"""Explicit memory commands only; ordinary conversation never becomes a fact."""
+"""Explicit memory writes and bounded recall; ordinary conversation never becomes a fact."""
 import re
 
 
 SENSITIVE = re.compile(r'密码|口令|密钥|令牌|身份证|银行卡|手机号|病历|诊断|性取向|宗教|账户余额|'
                        r'password|api[ _-]?key|secret|token|sk-[A-Za-z0-9]|\b1[3-9]\d{9}\b|\b\d{16,19}\b', re.I)
+
+# Whole questions only: recommendations, quotations and mixed requests stay outside
+# this deliberately narrow recall path. Missing records never imply a past deletion.
+_DRINK_KEYS = frozenset(('饮品偏好', '饮料偏好', '饮品喜好', '饮料喜好'))
+_DRINK_RECALL = re.compile(
+    r'(?:我(?:平时)?(?:最)?喜欢喝什么|你(?:还)?记得我(?:平时)?(?:最)?喜欢喝什么吗|'
+    r'我的(?:饮品|饮料)偏好是什么)[？?。.]?')
+_DRINK_STATUS = re.compile(
+    r'(?:你(?:还)?(?:记得|记着|保存着?)我的(?:饮品|饮料)偏好吗|'
+    r'我的(?:饮品|饮料)偏好(?:还(?:保存着|记着)吗|(?:已经)?删除了吗)|'
+    r'(?:刚才那条|那条|这条)(?:饮品|饮料)偏好你还记着吗'
+    r'(?:[？?，,]\s*说清楚是否已经删除)?)[？?。.]?')
 
 
 def sensitive(text):
@@ -48,6 +60,9 @@ class MemoryService:
         nickname = re.fullmatch(r'以后不要叫[^，,]+[，,]\s*改叫([^，,。]+)[。]?', text)
         if nickname:
             return self._save(session, [('preference', '称呼', nickname.group(1).strip())], source)
+        recall = self._recall_drink(session, text)
+        if recall is not None:
+            return recall
         if not (text.startswith('记住') or text.startswith('/记住')):
             return None
         if sensitive(text):
@@ -70,6 +85,21 @@ class MemoryService:
             else:
                 return '请明确记忆内容，例如：记住：称呼我为小禾，回复尽量简短；或 /记住 event 考试=下周复习。'
         return self._save(session, items, source)
+
+    def _recall_drink(self, session, text):
+        status = _DRINK_STATUS.fullmatch(text) is not None
+        if not status and _DRINK_RECALL.fullmatch(text) is None:
+            return None
+        rows = [row for row in self.store.memories(session)
+                if row['session'] == session and row['status'] == 'active'
+                and row['kind'] == 'preference' and row['certainty'] == 'explicit'
+                and row['key'] in _DRINK_KEYS]
+        if not rows:
+            return '目前没有保存这项饮品偏好。' if status else '这点我现在不太确定。'
+        if len(rows) > 1:
+            return '保存了多条饮品偏好，我不能确定你指的是哪一条。'
+        prefix = '目前保存的' if status else '你说过的'
+        return prefix + '饮品偏好是：' + rows[0]['value'] + '。'
 
     def _save(self, session, items, source):
         if any(sensitive(key + '=' + value) for _, key, value in items):

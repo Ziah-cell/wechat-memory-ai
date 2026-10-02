@@ -1,8 +1,24 @@
-# Windows 测试结果（当前 v0.1.14）
+# Windows 测试结果（当前 v0.1.15）
 
 最新执行日期：2026-10-03（Asia/Shanghai）；以下历史阶段另有2026-10-01/02记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.14 DeepSeek适配与自然聊天提示
+## v0.1.15 真实模型评估与有限饮品回忆
+
+发现272项，选定执行 **259/259，155.633秒，0失败/错误/跳过**：[209](evidence/209-memory-recall-final-regression.txt)、[210范围](evidence/210-memory-recall-final-regression-scope.json)。210外部计时155.641秒为同一轮；继续排除NativeProbeTests、NativeOcrCheckTests、NativeVisualTextTests、VisualBitmapTests共13项，没有重跑被拒夹具，不能说全套272项通过。
+
+真实API评估共8次，仅使用临时隔离数据库内的虚构对话。首6次[204](evidence/204-live-model-synthetic-evaluation.json)技术成功，中位1.369秒、最慢2.390秒，覆盖接话、Engine重新实例化后偏好、纠正、遗忘及详细回答；Engine重建不等同于操作系统进程重启。明确记忆/纠正/遗忘命令各0次模型调用，实际请求上下文验证旧值移除。风格审查[205](evidence/205-live-model-style-review.json)为助手审查，非用户验收。
+
+调整提示后再请求2次[206](evidence/206-live-model-style-follow-up.json)，技术成功但质量失败：无记录时编造饮品偏好，下一轮又声称删除该虚构偏好。8次总范围0.697–2.390秒，为模型完整请求的小样本耗时，不是微信端到端测速、稳定P95或自然度通过。真实API测试已经停止；没有再次付费调用以掩盖失败。所有临时库已清理，未读取微信、写真实聊天记忆或发送；主配置未覆盖，本机评估配置与密钥被Git忽略。
+
+随后新增12项有限饮品回忆测试：完整问句与4个键别名、仅当前会话active/explicit/preference、忽略助手历史/摘要、空记录与歧义不调用模型、纠正/遗忘及Store关闭重开、跨会话隔离、查询不修改结构化偏好、推荐/引用/混合请求沿原路由。首轮11项有18个预期失败子项、0错误；审查发现删除A而保留B时状态措辞误指旧记录，再补第12项先失败后修复，均保留于[211](evidence/211-memory-recall-red.txt)。[212](evidence/212-memory-recall-targeted.txt)保留首轮49/49及最终联合既有Engine/Memory **50/50，19.750秒**。
+
+[213独立审查](evidence/213-memory-recall-review.json)复验12/12、4.582秒及2项额外边界检查，1项发现已修复、剩余0。新分支只陈述当前保存记录，不推断缺失等于删除、不把单条偏好提升为最爱；普通推荐、其他主题与复杂问法仍可能走模型，不能推广为所有个人信息均不猜测。自动偏好提取仍未实现，Engine照常保存模拟回复历史。
+
+另补固定`truncated`审计原因白名单，任意外部字段仍脱敏；2项审计回归先失败[207](evidence/207-audit-truncated-red.txt)、再通过[208](evidence/208-audit-truncated-targeted.txt)。提示仅增加不解释内部处理和不无端断言用户从未说过的要求；最大合法persona系统提示962字符，小于1000字符预留，206已证明提示本身不足以保证事实正确。
+
+[214离线打包](evidence/214-memory-recall-package.json)一次构建/隔离安装通过：版本0.1.15、20个模块源码匹配、5个原生资源、两个已安装CLI帮助及临时Store中4项饮品核对通过。模型/网络/原生/UI调用均0，未读取实际.env或个人配置，临时目录清理。仓库草稿仅复制到临时目录核验fake/off，不在wheel中。以上没有改变自身新事件、真实源交付和自动回复仍未通过的边界。
+
+## v0.1.14 DeepSeek适配与自然聊天提示（历史记录）
 
 最新发现258项，选定执行**245/245，43.862秒，0失败/错误/跳过**：[201](evidence/201-deepseek-final-regression.txt)、[202范围](evidence/202-deepseek-final-regression-scope.json)。202外部单调时钟43.859秒与runner使用的时钟略有差异，为同一轮。继续排除原4类13项原生测试，未重跑被拒夹具，不能说258项全套通过。
 

@@ -1,0 +1,215 @@
+Stage: RED, before deterministic beverage preference recall implementation.
+Scope: new MemoryRecallTests only; temporary stores, synthetic messages, counting fake model.
+No real API, network, native fixtures, UI, credentials or actual chat memory.
+Tests run: 11; failures: 18; errors: 0; skipped: 0.
+Runner elapsed: 3.656s.
+
+test_assistant_history_and_summary_do_not_become_preference (test_memory_recall.MemoryRecallTests.test_assistant_history_and_summary_do_not_become_preference) ... FAIL
+test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) ... 
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我喜欢喝什么') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我最喜欢喝什么?') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还记得我平时喜欢喝什么吗？') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮料偏好是什么。') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='  我的饮品偏好是什么？  ') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还记得我的饮品偏好吗？') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还保存着我的饮料偏好吗？') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮品偏好还保存着吗？') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮料偏好已经删除了吗？') ... FAIL
+  test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='刚才那条饮品偏好你还记着吗？') ... FAIL
+test_correction_uses_only_new_value_before_and_after_restart (test_memory_recall.MemoryRecallTests.test_correction_uses_only_new_value_before_and_after_restart) ... FAIL
+test_forgetting_stays_unknown_after_restart_without_claiming_deletion (test_memory_recall.MemoryRecallTests.test_forgetting_stays_unknown_after_restart_without_claiming_deletion) ... FAIL
+test_multiple_related_records_do_not_choose_or_merge_values (test_memory_recall.MemoryRecallTests.test_multiple_related_records_do_not_choose_or_merge_values) ... FAIL
+test_original_unknown_recall_and_status_never_call_model (test_memory_recall.MemoryRecallTests.test_original_unknown_recall_and_status_never_call_model) ... FAIL
+test_other_topics_quotes_and_hypotheticals_are_not_swallowed (test_memory_recall.MemoryRecallTests.test_other_topics_quotes_and_hypotheticals_are_not_swallowed) ... ok
+test_recall_is_session_isolated_and_does_not_mutate_memory_or_history (test_memory_recall.MemoryRecallTests.test_recall_is_session_isolated_and_does_not_mutate_memory_or_history) ... FAIL
+test_recommendations_continue_to_model (test_memory_recall.MemoryRecallTests.test_recommendations_continue_to_model) ... ok
+test_single_explicit_preference_uses_value_without_claiming_favorite (test_memory_recall.MemoryRecallTests.test_single_explicit_preference_uses_value_without_claiming_favorite) ... FAIL
+test_unrelated_event_inactive_or_nonexplicit_records_do_not_answer (test_memory_recall.MemoryRecallTests.test_unrelated_event_inactive_or_nonexplicit_records_do_not_answer) ... FAIL
+
+======================================================================
+FAIL: test_assistant_history_and_summary_do_not_become_preference (test_memory_recall.MemoryRecallTests.test_assistant_history_and_summary_do_not_become_preference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 71, in test_assistant_history_and_summary_do_not_become_preference
+    self.assertEqual(self.process(RECALL), '这点我现在不太确定。')
+AssertionError: '这是离线推荐样例。' != '这点我现在不太确定。'
+- 这是离线推荐样例。
++ 这点我现在不太确定。
+
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我喜欢喝什么')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 157, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我最喜欢喝什么?')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 157, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还记得我平时喜欢喝什么吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 157, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮料偏好是什么。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 157, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='  我的饮品偏好是什么？  ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 157, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还记得我的饮品偏好吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 162, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '目前没有保存这项饮品偏好。')
+AssertionError: None != '目前没有保存这项饮品偏好。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='你还保存着我的饮料偏好吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 162, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '目前没有保存这项饮品偏好。')
+AssertionError: None != '目前没有保存这项饮品偏好。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮品偏好还保存着吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 162, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '目前没有保存这项饮品偏好。')
+AssertionError: None != '目前没有保存这项饮品偏好。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='我的饮料偏好已经删除了吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 162, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '目前没有保存这项饮品偏好。')
+AssertionError: None != '目前没有保存这项饮品偏好。'
+
+======================================================================
+FAIL: test_common_explicit_forms_and_terminal_punctuation (test_memory_recall.MemoryRecallTests.test_common_explicit_forms_and_terminal_punctuation) (text='刚才那条饮品偏好你还记着吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 162, in test_common_explicit_forms_and_terminal_punctuation
+    self.assertEqual(self.memory.handle(self.session, text, 'query'), '目前没有保存这项饮品偏好。')
+AssertionError: None != '目前没有保存这项饮品偏好。'
+
+======================================================================
+FAIL: test_correction_uses_only_new_value_before_and_after_restart (test_memory_recall.MemoryRecallTests.test_correction_uses_only_new_value_before_and_after_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 109, in test_correction_uses_only_new_value_before_and_after_restart
+    self.assertEqual(self.process(RECALL), '你说过的饮品偏好是：温乌龙茶。')
+AssertionError: '这是离线推荐样例。' != '你说过的饮品偏好是：温乌龙茶。'
+- 这是离线推荐样例。
++ 你说过的饮品偏好是：温乌龙茶。
+
+
+======================================================================
+FAIL: test_forgetting_stays_unknown_after_restart_without_claiming_deletion (test_memory_recall.MemoryRecallTests.test_forgetting_stays_unknown_after_restart_without_claiming_deletion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 122, in test_forgetting_stays_unknown_after_restart_without_claiming_deletion
+    self.assertEqual(self.process(RECALL), '这点我现在不太确定。')
+AssertionError: '这是离线推荐样例。' != '这点我现在不太确定。'
+- 这是离线推荐样例。
++ 这点我现在不太确定。
+
+
+======================================================================
+FAIL: test_multiple_related_records_do_not_choose_or_merge_values (test_memory_recall.MemoryRecallTests.test_multiple_related_records_do_not_choose_or_merge_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 102, in test_multiple_related_records_do_not_choose_or_merge_values
+    self.assertEqual(reply, '保存了多条饮品偏好，我不能确定你指的是哪一条。')
+AssertionError: '这是离线推荐样例。' != '保存了多条饮品偏好，我不能确定你指的是哪一条。'
+- 这是离线推荐样例。
++ 保存了多条饮品偏好，我不能确定你指的是哪一条。
+
+
+======================================================================
+FAIL: test_original_unknown_recall_and_status_never_call_model (test_memory_recall.MemoryRecallTests.test_original_unknown_recall_and_status_never_call_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 62, in test_original_unknown_recall_and_status_never_call_model
+    self.assertEqual(self.process(RECALL), '这点我现在不太确定。')
+AssertionError: '这是离线推荐样例。' != '这点我现在不太确定。'
+- 这是离线推荐样例。
++ 这点我现在不太确定。
+
+
+======================================================================
+FAIL: test_recall_is_session_isolated_and_does_not_mutate_memory_or_history (test_memory_recall.MemoryRecallTests.test_recall_is_session_isolated_and_does_not_mutate_memory_or_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 148, in test_recall_is_session_isolated_and_does_not_mutate_memory_or_history
+    self.assertEqual(self.memory.handle(self.session, RECALL, 'query'), '这点我现在不太确定。')
+AssertionError: None != '这点我现在不太确定。'
+
+======================================================================
+FAIL: test_single_explicit_preference_uses_value_without_claiming_favorite (test_memory_recall.MemoryRecallTests.test_single_explicit_preference_uses_value_without_claiming_favorite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 80, in test_single_explicit_preference_uses_value_without_claiming_favorite
+    self.assertEqual(reply, '你说过的饮品偏好是：热柠檬水。')
+AssertionError: None != '你说过的饮品偏好是：热柠檬水。'
+
+======================================================================
+FAIL: test_unrelated_event_inactive_or_nonexplicit_records_do_not_answer (test_memory_recall.MemoryRecallTests.test_unrelated_event_inactive_or_nonexplicit_records_do_not_answer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 93, in test_unrelated_event_inactive_or_nonexplicit_records_do_not_answer
+    self.assertEqual(self.process(RECALL), '这点我现在不太确定。')
+AssertionError: '这是离线推荐样例。' != '这点我现在不太确定。'
+- 这是离线推荐样例。
++ 这点我现在不太确定。
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.648s
+
+FAILED (failures=18)
+
+Review follow-up RED: deleted alias A, surviving alias B must not imply A is still saved.
+Tests run: 1; failures: 1; errors: 0.
+test_status_reports_current_record_without_assuming_deleted_referent (test_memory_recall.MemoryRecallTests.test_status_reports_current_record_without_assuming_deleted_referent) ... FAIL
+
+======================================================================
+FAIL: test_status_reports_current_record_without_assuming_deleted_referent (test_memory_recall.MemoryRecallTests.test_status_reports_current_record_without_assuming_deleted_referent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_memory_recall.py", line 109, in test_status_reports_current_record_without_assuming_deleted_referent
+    self.assertEqual(self.process(STATUS), '目前保存的饮品偏好是：温乌龙茶。')
+AssertionError: '目前还保存着。你说过的饮品偏好是：温乌龙茶。' != '目前保存的饮品偏好是：温乌龙茶。'
+- 目前还保存着。你说过的饮品偏好是：温乌龙茶。
+?   -  -----
++ 目前保存的饮品偏好是：温乌龙茶。
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.144s
+
+FAILED (failures=1)

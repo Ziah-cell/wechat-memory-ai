@@ -1,6 +1,6 @@
-# 普通个人微信长期记忆 AI · 模型接入准备 v0.1.14
+# 普通个人微信长期记忆 AI · 真实模型评估 v0.1.15
 
-新增DeepSeek非思考模式适配、官方端点校验和自然聊天提示；请求格式及异常响应处理已通过本地假HTTP服务验证。[DeepSeek配置草稿](config.deepseek.example.toml)已预填端点与模型名，仍保持fake/网络关闭，未覆盖个人配置、调用真实API或启用自动回复。选定245项回归通过，13项原生测试未重跑。接入条件见[DEEPSEEK.md](docs/DEEPSEEK.md)，自然聊天与记忆范围见[CHAT_EXPERIENCE.md](docs/CHAT_EXPERIENCE.md)。
+DeepSeek非思考模式已完成8次虚构对话的真实请求，完整模型请求耗时0.697–2.390秒；这是小样本，不是微信端到端延迟。后两次出现凭空偏好及删除状态断言，质量验收未通过；现在对有限饮品回忆问句直接查询本地明确记忆，未知或歧义不猜。真实微信自动回复仍关闭。默认配置和[配置草稿](config.deepseek.example.toml)保持fake/网络关闭，本机另有被Git忽略的模型评估配置。接入及实际结果见[DEEPSEEK.md](docs/DEEPSEEK.md)，能力边界见[CHAT_EXPERIENCE.md](docs/CHAT_EXPERIENCE.md)。
 
 核心聊天入口仍是**控制台模拟器**。随机标记之后两条相同真实来信的只读准入已通过。v0.1.13把这条路径封装为必须指定窗口实例的只读消息源；到期、关闭或失败后失效，发送始终拒绝。已绑定联合读取只在快照前后变化时有限重取，保持原基线。该阶段选定237项回归通过。**尚不能开始自动回复**；真实自身新事件的完整过滤验收仍未通过。详见 [测试结果](docs/TEST_RESULTS.md)、[只读消息源](docs/LIVE_SOURCE.md) 和 [候选模式说明](docs/READ_CANDIDATES.md)。
 
@@ -16,7 +16,7 @@ v0.1.4 增加 `.\scripts\windows.ps1 -Action ocr-check`：只用内存生成的�
 
 此前在独立 `.ocr-env` 实测免费 RapidOCR 候选，固定样例的中文和字母数字识别改善，但气泡边缘误检与真实符号漏字仍存在，结果为 `review_required` / 退出码 3。该阶段 117 项测试通过，详见 [docs/OCR_CANDIDATE.md](docs/OCR_CANDIDATE.md)。当前只读连接直接使用 UIA，不依赖 OCR。
 
-本轮不需要微信账号、密码、模型 API Key 或外部服务。测试用户“小禾 / 阿禾”等都是任务书提供的样例，不代表你的真实偏好。
+离线模拟无需微信账号或模型密钥；真实模型评估使用用户已在本机填写的密钥。测试中的称呼、饮品和经历均为虚构，不代表用户真实偏好。
 
 ## 现在如何运行
 

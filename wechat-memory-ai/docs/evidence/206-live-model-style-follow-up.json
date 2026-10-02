@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "follow_up_to": 204,
+  "maximum_additional_cloud_attempts": 2,
+  "calls": [
+    {
+      "case_id": "natural_uncertainty_after_forget",
+      "status": "ok",
+      "reply_chars": 12,
+      "elapsed_seconds": 2.185
+    },
+    {
+      "case_id": "explicit_memory_management",
+      "status": "ok",
+      "reply_chars": 27,
+      "elapsed_seconds": 1.586
+    }
+  ],
+  "context_checks": {
+    "forgotten_value_absent_from_request": true,
+    "memory_empty": true
+  },
+  "real_messages_sent": 0,
+  "real_wechat_accessed": false,
+  "real_chat_memory_written": false,
+  "temporary_cleanup_verified": true,
+  "personal_default_config_changed": false,
+  "local_evaluation_profile_used": true,
+  "maximum_persona_system_chars": 962,
+  "attempted_calls": 2,
+  "successful_calls": 2,
+  "quality_review": {
+    "reviewer_kind": "assistant",
+    "passed": false,
+    "fabricated_preference_in_first_reply": true,
+    "unsupported_deletion_claim_in_second_reply": true,
+    "unsupported_preference_repeated_in_second_reply": true,
+    "technical_success_does_not_mean_quality_pass": true,
+    "additional_real_model_calls_stopped": true
+  }
+}

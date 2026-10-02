@@ -20,7 +20,7 @@ class Audit:
         allowed = {'rejected','duplicate','dry_run','simulated','model_failed','budget_blocked',
                    'identity_blocked','unknown','review_required','paused','stopped','interrupted'}
         safe_codes = {'timeout','auth','quota','network','server','format','empty','network_disabled',
-                      'model_failure','invalid_event','history','not_allowed','target_changed',
+                      'model_failure','truncated','invalid_event','history','not_allowed','target_changed',
                       'send_failure','cost_limit','call_limit',''}
         item = {'time': datetime.now(timezone.utc).isoformat(),
                 'status': status if status in allowed else 'rejected',

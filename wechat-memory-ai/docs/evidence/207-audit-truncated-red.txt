@@ -1,0 +1,18 @@
+test_truncated_model_failure_keeps_its_fixed_reason (test_audit.AuditTests.test_truncated_model_failure_keeps_its_fixed_reason) ... FAIL
+test_unknown_values_are_normalized_without_logging_private_text (test_audit.AuditTests.test_unknown_values_are_normalized_without_logging_private_text) ... ok
+
+======================================================================
+FAIL: test_truncated_model_failure_keeps_its_fixed_reason (test_audit.AuditTests.test_truncated_model_failure_keeps_its_fixed_reason)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>\tests\test_audit.py", line 25, in test_truncated_model_failure_keeps_its_fixed_reason
+    self.assertEqual(record['code'], 'truncated')
+AssertionError: 'model_failure' != 'truncated'
+- model_failure
++ truncated
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.111s
+
+FAILED (failures=1)

@@ -1,0 +1,79 @@
+{
+  "status": "completed",
+  "credential_present": true,
+  "model": "deepseek-flash",
+  "maximum_cloud_attempts": 6,
+  "calls": [
+    {
+      "case_id": "small_talk",
+      "status": "ok",
+      "elapsed_seconds": 2.257,
+      "reply_chars": 29
+    },
+    {
+      "case_id": "follow_up",
+      "status": "ok",
+      "elapsed_seconds": 1.875,
+      "reply_chars": 32
+    },
+    {
+      "case_id": "preference_after_engine_restart",
+      "status": "ok",
+      "elapsed_seconds": 0.85,
+      "reply_chars": 24
+    },
+    {
+      "case_id": "corrected_preference",
+      "status": "ok",
+      "elapsed_seconds": 0.862,
+      "reply_chars": 12
+    },
+    {
+      "case_id": "after_forget",
+      "status": "ok",
+      "elapsed_seconds": 0.697,
+      "reply_chars": 51
+    },
+    {
+      "case_id": "explicit_detail",
+      "status": "ok",
+      "elapsed_seconds": 2.39,
+      "reply_chars": 412
+    }
+  ],
+  "memory_commands": [
+    {
+      "case_id": "remember",
+      "successful": true,
+      "cloud_attempts": 0
+    },
+    {
+      "case_id": "correct",
+      "successful": true,
+      "cloud_attempts": 0
+    },
+    {
+      "case_id": "forget",
+      "successful": true,
+      "cloud_attempts": 0
+    }
+  ],
+  "context_checks": {
+    "saved_preference_in_request": true,
+    "corrected_value_in_request": true,
+    "old_value_absent_after_correction": true,
+    "all_preference_values_absent_after_forget": true,
+    "memory_empty_after_forget": true
+  },
+  "real_wechat_accessed": false,
+  "real_messages_sent": 0,
+  "real_chat_memory_written": false,
+  "synthetic_store_used": true,
+  "temporary_cleanup_verified": true,
+  "personal_config_changed": false,
+  "attempted_calls": 6,
+  "successful_calls": 6,
+  "successful_median_seconds": 1.369,
+  "successful_slowest_seconds": 2.39,
+  "human_style_review_completed": false
+}

@@ -1,14 +1,20 @@
-# DeepSeek 非思考模式接入准备
+# DeepSeek 非思考模式接入与评估
 
-v0.1.14已增加专用请求适配与自然聊天提示。当前使用本地假HTTP服务验收，尚未调用真实DeepSeek API；真实速度、自然度和服务端兼容性仍待实际评估。微信消息源未接入模型，自动回复和实际聊天记忆写入保持关闭。
+v0.1.15已完成隔离虚构对话的8次真实DeepSeek API技术调用，但后续质量检查发现模型编造偏好及删除断言，不能判为聊天质量通过。本轮测试已结束，不再调用API。微信消息源未接入模型，自动回复和实际聊天记忆写入保持关闭。
 
 ## 已准备的配置
 
-仓库中的[config.deepseek.example.toml](../config.deepseek.example.toml)预填官方端点与`deepseek-flash`，但仍为`provider="fake"`、`allow_network=false`。默认`config.example.toml`和现有个人配置不被自动覆盖。草稿使用独立的模拟评估数据目录。
+仓库中的[config.deepseek.example.toml](../config.deepseek.example.toml)预填官方端点与`deepseek-flash`，但仍为`provider="fake"`、`allow_network=false`；默认`config.example.toml`和主`config.toml`同样保持fake、关闭网络。本机另有被Git忽略的`config.local.deepseek.toml`评估配置，已启用DeepSeek网络请求，仍限定`adapter="mock"`、`dry_run=true`、`real_send=false`。
 
-接入真实模型时，需要本机同时满足三个条件：`provider="deepseek"`、`allow_network=true`，以及环境变量或同目录`.env`中的`WECHAT_AI_API_KEY`。缺少任何必要条件都不能运行DeepSeek配置。`.env`已被Git忽略，密钥不写进TOML、日志或聊天；用户只需在自己的本机填写密钥，配置切换与后续测试可由开发任务继续完成。
+真实模型需要本机同时满足三个条件：`provider="deepseek"`、`allow_network=true`，以及环境变量或同目录`.env`中的`WECHAT_AI_API_KEY`。用户已在本机填写密钥；`.env`被Git忽略，密钥内容不输出到工具结果、TOML、日志、聊天或Git。
 
 `dry_run=true`只禁止发送，不禁止模型请求、额度消耗或本地模拟记忆。它不能代替网络开关。当前代码只允许mock适配器，`real_send=true`仍明确拒绝；填写密钥不等于启用微信自动回复。
+
+## 已完成的隔离评估
+
+[204](evidence/204-live-model-synthetic-evaluation.json)的6次虚构对话和[206](evidence/206-live-model-style-follow-up.json)的2次复测均返回完整文本，完整模型请求耗时为0.697–2.390秒。这是8次小样本，不是微信端到端延迟或稳定速度承诺。测试使用临时Store，虚构记忆数据已清理，没有读取微信、写入实际聊天记忆或发送消息。
+
+[205](evidence/205-live-model-style-review.json)指出首轮回复对内部记忆过程解释过多；提示调整后的206仍在记录为空时编造饮品偏好，并声称该虚构偏好已删除。因此技术成功不等于质量通过，提示词不足以阻止此类猜测。现已对有限饮品回忆问句增加结构化查询，12项定向测试及[213独立审查](evidence/213-memory-recall-review.json)通过；这是局部离线修复，未再次调用真实模型验证，也不代表其他主题回忆已可靠。
 
 ## 请求和响应契约
 
@@ -25,8 +31,8 @@ DeepSeek配置只接受两个明确的官方HTTPS端点：
 
 ## 聊天与记忆范围
 
-系统提示默认日常一到三句、自然口语，复杂问题按需展开；配置、当前明确表达要求和更新后的偏好可以调整默认习惯。已有明确记忆、纠正和遗忘继续生效；日常聊天自动提取长期偏好尚未实现。完整要求见[CHAT_EXPERIENCE.md](CHAT_EXPERIENCE.md)。
+系统提示默认日常一到三句、自然口语，复杂问题按需展开。有限饮品回忆查询只读取当前会话已保存的明确偏好，未知或多条记录不交给模型猜测；状态回答只描述当前记录，不推断删除历史。已有明确记忆、纠正和遗忘继续生效；自动提取日常偏好、一般事实回忆与自然度验收仍待完成。支持范围见[CHAT_EXPERIENCE.md](CHAT_EXPERIENCE.md)。
 
-真实模型评估先使用虚构对话并禁止发送到微信。模型最终用于真实聊天时，本轮正文及选中的上下文会发送给服务商；本地持久保存记忆不等于所有生成均在本地完成。
+模型将来用于真实聊天时，本轮正文及选中的上下文会发送给服务商；本地持久保存记忆不等于所有生成均在本地完成。
 
 官方契约核对日期2026-10-03：[请求参数与响应](https://api-docs.deepseek.com/api/create-chat-completion/)、[非思考开关](https://api-docs.deepseek.com/guides/thinking_mode/)、[兼容端点示例](https://api-docs.deepseek.com/quick_start/agent_integrations/workbuddy/)、[连接保活](https://api-docs.deepseek.com/quick_start/rate_limit/)。`deepseek-flash`是服务商模型别名，不保证永远指向同一版本。

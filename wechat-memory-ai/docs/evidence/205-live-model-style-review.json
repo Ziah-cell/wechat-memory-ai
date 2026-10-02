@@ -1,0 +1,23 @@
+{
+  "source_evidence": 204,
+  "reviewer_kind": "assistant_independent_review",
+  "synthetic_replies_reviewed": 6,
+  "human_style_review_completed": false,
+  "broad_naturalness_verified": false,
+  "findings": {
+    "topic_follow_up_observed": true,
+    "saved_preference_used": true,
+    "corrected_preference_used": true,
+    "forgotten_preference_not_invented": true,
+    "explicit_detail_request_answered": true,
+    "unnecessary_memory_process_explanation_after_forget": true,
+    "minor_awkward_or_forced_phrasing": true
+  },
+  "planned_follow_up": {
+    "prompt_change_scope": "explain_uncertainty_without_internal_memory_details_unless_asked",
+    "maximum_additional_cloud_attempts": 2,
+    "original_six_call_results_rewritten": false
+  },
+  "real_chat_data_reviewed": false,
+  "real_messages_sent": 0
+}
