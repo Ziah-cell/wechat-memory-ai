@@ -1,0 +1,33 @@
+{
+  "review_scope": "source and saved evidence only; no fixture execution or app access by reviewer",
+  "actionable_findings": 0,
+  "checks": {
+    "direction_thresholds_preserved": true,
+    "fixed_baseline_on_every_attempt": true,
+    "binding_checked_around_every_capture": true,
+    "whole_frame_replacement_without_stitching": true,
+    "three_attempt_maximum": true,
+    "mixed_or_other_failure_reasons_not_retried": true,
+    "eight_second_outer_timeout_preserved": true,
+    "joint_protocol_unchanged": true,
+    "pure_visual_does_not_read_names": true,
+    "strict_reason_direction_kind_and_attempt_validation": true
+  },
+  "live_evidence": {
+    "153_is_before_retry_implementation": true,
+    "154_is_after_retry_implementation": true,
+    "after_checks": 60,
+    "one_capture_checks": 59,
+    "two_capture_recovery_checks": 1,
+    "all_after_checks_incoming_candidates": 5,
+    "all_after_checks_geometry_unknowns": 1
+  },
+  "limits": {
+    "exhaustion_and_mutation_during_retry_injection_tested": false,
+    "capture_root_cause_proven": false,
+    "all_environments_validated": false,
+    "denied_bitmap_fixture_rerun": false,
+    "temporary_value_only_fixture_compilation_failed_before_execution": true,
+    "temporary_value_only_fixture_removed_without_rerun": true
+  }
+}

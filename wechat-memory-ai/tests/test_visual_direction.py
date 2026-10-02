@@ -15,12 +15,12 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def visual_snapshot():
-    return dict(status='visual_snapshot',process=12,started='123456',window=34,
+    return dict(status='visual_snapshot',process=12,started='123456',window=34,capture_attempts=1,
                 root='ChatSingleWindowwxid_fixture',list_token='1.2.3',rows=[
-                    dict(token='1',kind='text',direction='incoming_candidate'),
-                    dict(token='2',kind='text',direction='self_candidate'),
-                    dict(token='3',kind='text',direction='unknown'),
-                    dict(token='4',kind='other',direction='unknown')])
+                    dict(token='1',kind='text',direction='incoming_candidate',reason='incoming_evidence'),
+                    dict(token='2',kind='text',direction='self_candidate',reason='self_evidence'),
+                    dict(token='3',kind='text',direction='unknown',reason='avatar_inconclusive'),
+                    dict(token='4',kind='other',direction='unknown',reason='not_text')])
 
 
 @unittest.skipUnless(os.name=='nt','Windows .NET bitmap fixture required')

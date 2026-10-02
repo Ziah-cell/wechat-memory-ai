@@ -1,6 +1,7 @@
 // Conservative visual hints, not sender identity or message identity.
 // The caller owns the in-memory bitmap. No image or pixel data is persisted.
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
@@ -49,6 +50,23 @@ public static class VisualCapture {
     }
 }
 
+public sealed class VisualClassification {
+    public readonly string Direction, Reason;
+    public VisualClassification(string direction, string reason) { Direction=direction; Reason=reason; }
+}
+
+public static class VisualRetry {
+    public static bool ShouldRetry(IList<VisualClassification> rows, int attempts) {
+        if(attempts<1 || attempts>=3) return false;
+        bool absent=false;
+        foreach(var row in rows) {
+            if(row.Reason=="foreground_evidence_absent") absent=true;
+            else if(row.Reason!="geometry_invalid" && row.Reason!="not_text") return false;
+        }
+        return absent;
+    }
+}
+
 public static class VisualDirection {
     static int Distance(Color a, Color b) {
         return Math.Max(Math.Abs(a.R-b.R),Math.Max(Math.Abs(a.G-b.G),Math.Abs(a.B-b.B)));
@@ -69,34 +87,49 @@ public static class VisualDirection {
         return count;
     }
     public static string Classify(Bitmap image, Rectangle list, Rectangle row, double scale) {
+        return Analyze(image,list,row,scale).Direction;
+    }
+    // Reasons name the first unmet gate, not a proven capture/rendering cause.
+    public static VisualClassification Analyze(Bitmap image, Rectangle list, Rectangle row, double scale) {
         if(image==null || Double.IsNaN(scale) || Double.IsInfinity(scale) || scale<0.75 || scale>3
                 || list.Width<=0 || list.Height<=0 || row.Width<300*scale || row.Height<36*scale
                 || !new Rectangle(0,0,image.Width,image.Height).Contains(list) || !list.Contains(row)
                 || Math.Abs(row.Left-list.Left)>2*scale || Math.Abs(row.Right-list.Right)>2*scale)
-            return "unknown";
+            return new VisualClassification("unknown","geometry_invalid");
         int left=row.Left+(int)Math.Round(8*scale), right=row.Right-(int)Math.Round(8*scale)-1;
         Color background=image.GetPixel(left,row.Top+row.Height/2);
-        if(!Neutral(background) || !(background.R>=235 || (background.R>=20 && background.R<=45))) return "unknown";
+        if(!Neutral(background) || !(background.R>=235 || (background.R>=20 && background.R<=45)))
+            return new VisualClassification("unknown","background_unsupported");
         int matches=0, samples=0;
         for(int y=row.Top; y<row.Bottom; y+=3) {
             samples+=2;
             if(Distance(image.GetPixel(left,y),background)<=4) matches++;
             if(Distance(image.GetPixel(right,y),background)<=4) matches++;
         }
-        if(matches<samples*0.95) return "unknown";
+        if(matches<samples*0.95) return new VisualClassification("unknown","edges_inconsistent");
         // Require an avatar on exactly one side AND a compatible bubble there.
         // A missing green bubble alone must never imply an incoming message.
         int width=(int)Math.Round(row.Width/scale);
         double threshold=30*scale*scale, empty=5*scale*scale;
         int leftAvatar=Count(image,row,scale,14,62,background,0);
         int rightAvatar=Count(image,row,scale,width-62,width-14,background,0);
-        if(leftAvatar>=threshold && rightAvatar<=empty
-                && Count(image,row,scale,64,165,background,1)>=threshold
-                && Count(image,row,scale,64,165,background,2)<=empty)
-            return "incoming_candidate";
-        if(rightAvatar>=threshold && leftAvatar<=empty
-                && Count(image,row,scale,width-165,width-64,background,2)>=threshold)
-            return "self_candidate";
-        return "unknown";
+        if(leftAvatar>=threshold && rightAvatar<=empty) {
+            if(Count(image,row,scale,64,165,background,1)<threshold)
+                return new VisualClassification("unknown","incoming_bubble_unconfirmed");
+            if(Count(image,row,scale,64,165,background,2)>empty)
+                return new VisualClassification("unknown","incoming_green_conflict");
+            return new VisualClassification("incoming_candidate","incoming_evidence");
+        }
+        if(rightAvatar>=threshold && leftAvatar<=empty) {
+            if(Count(image,row,scale,width-165,width-64,background,2)<threshold)
+                return new VisualClassification("unknown","self_bubble_unconfirmed");
+            return new VisualClassification("self_candidate","self_evidence");
+        }
+        if(leftAvatar==0 && rightAvatar==0
+                && Count(image,row,scale,64,165,background,1)==0
+                && Count(image,row,scale,64,165,background,2)==0
+                && Count(image,row,scale,width-165,width-64,background,2)==0)
+            return new VisualClassification("unknown","foreground_evidence_absent");
+        return new VisualClassification("unknown","avatar_inconclusive");
     }
 }

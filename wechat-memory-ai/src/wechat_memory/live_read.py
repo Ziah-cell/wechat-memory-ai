@@ -150,24 +150,37 @@ def capability_report(raw):
     return report
 
 
+_VISUAL_REASONS = {
+    'geometry_invalid':'unknown', 'background_unsupported':'unknown',
+    'edges_inconsistent':'unknown', 'avatar_inconclusive':'unknown', 'foreground_evidence_absent':'unknown',
+    'incoming_bubble_unconfirmed':'unknown', 'incoming_green_conflict':'unknown',
+    'self_bubble_unconfirmed':'unknown', 'incoming_evidence':'incoming_candidate',
+    'self_evidence':'self_candidate', 'not_text':'unknown',
+}
+
+
 def visual_report(raw):
     """Visual hints cannot promote rows to verified incoming messages."""
     if (not isinstance(raw,dict) or raw.get('status') != 'visual_snapshot'
+            or type(raw.get('capture_attempts')) is not int or not 1 <= raw['capture_attempts'] <= 3
             or not isinstance(raw.get('rows'),list) or len(raw['rows'])>256):
         raise ReadError('invalid_snapshot')
     validation_rows=[]
     for row in raw['rows']:
-        if (not isinstance(row,dict) or set(row) != {'token','kind','direction'}
-                or row['direction'] not in ('incoming_candidate','self_candidate','unknown')
-                or (row['kind']!='text' and row['direction']!='unknown')):
+        if (not isinstance(row,dict) or set(row) != {'token','kind','direction','reason'}
+                or not isinstance(row['reason'],str) or row['reason'] not in _VISUAL_REASONS
+                or row['direction'] != _VISUAL_REASONS[row['reason']]
+                or (row['kind']=='other') != (row['reason']=='not_text')):
             raise ReadError('invalid_snapshot')
         validation_rows.append(dict(token=row['token'],kind=row['kind'],text=''))
-    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+    validation={key:value for key,value in raw.items() if key!='capture_attempts'}
+    validate_snapshot(dict(validation,status='snapshot',rows=validation_rows))
     text_rows=[row for row in raw['rows'] if row['kind']=='text']
-    return dict(status='visual_observed',rows=len(raw['rows']),text_rows=len(text_rows),
+    return dict(status='visual_observed',rows=len(raw['rows']),text_rows=len(text_rows),capture_attempts=raw['capture_attempts'],
                 incoming_candidates=sum(row['direction']=='incoming_candidate' for row in text_rows),
                 self_candidates=sum(row['direction']=='self_candidate' for row in text_rows),
                 unknown_texts=sum(row['direction']=='unknown' for row in text_rows),
+                reason_counts={reason:sum(row['reason']==reason for row in raw['rows']) for reason in _VISUAL_REASONS},
                 sender_verified=False,history_boundary_verified=False,
                 real_send_supported=False,model_called=False)
 

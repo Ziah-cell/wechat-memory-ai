@@ -1,0 +1,213 @@
+test_capture_attempts_are_bounded_and_required_only_for_pure_diagnostics (test_visual_reasons.VisualReasonTests.test_capture_attempts_are_bounded_and_required_only_for_pure_diagnostics) ... ERROR
+test_counts_include_zero_reasons_and_do_not_export_private_values (test_visual_reasons.VisualReasonTests.test_counts_include_zero_reasons_and_do_not_export_private_values) ... ERROR
+test_diagnostics_cannot_enter_plain_or_joint_observation_protocols (test_visual_reasons.VisualReasonTests.test_diagnostics_cannot_enter_plain_or_joint_observation_protocols) ... ok
+test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) ... 
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='geometry_invalid', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='background_unsupported', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='edges_inconsistent', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='foreground_evidence_absent', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='avatar_inconclusive', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_bubble_unconfirmed', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_green_conflict', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='self_bubble_unconfirmed', direction='unknown', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_evidence', direction='incoming_candidate', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='self_evidence', direction='self_candidate', kind='text') ... ERROR
+  test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='not_text', direction='unknown', kind='other') ... ERROR
+test_malformed_or_missing_reasons_fail_with_a_sanitized_error (test_visual_reasons.VisualReasonTests.test_malformed_or_missing_reasons_fail_with_a_sanitized_error) ... ok
+test_retry_requires_an_entire_eligible_batch_and_never_exceeds_three_captures (test_visual_retry.NativeRetryPolicyTests.test_retry_requires_an_entire_eligible_batch_and_never_exceeds_three_captures) ... FAIL
+
+======================================================================
+ERROR: test_capture_attempts_are_bounded_and_required_only_for_pure_diagnostics (test_visual_reasons.VisualReasonTests.test_capture_attempts_are_bounded_and_required_only_for_pure_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 62, in test_capture_attempts_are_bounded_and_required_only_for_pure_diagnostics
+    self.assertEqual(live_read.visual_report(raw)['capture_attempts'],attempts)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_counts_include_zero_reasons_and_do_not_export_private_values (test_visual_reasons.VisualReasonTests.test_counts_include_zero_reasons_and_do_not_export_private_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 34, in test_counts_include_zero_reasons_and_do_not_export_private_values
+    report=live_read.visual_report(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='geometry_invalid', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='background_unsupported', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='edges_inconsistent', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='foreground_evidence_absent', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 173, in visual_report
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='avatar_inconclusive', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_bubble_unconfirmed', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_green_conflict', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='self_bubble_unconfirmed', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='incoming_evidence', direction='incoming_candidate', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='self_evidence', direction='self_candidate', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+ERROR: test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) (reason='not_text', direction='unknown', kind='other')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_reasons.py", line 28, in test_every_reason_direction_kind_combination_is_validated
+    self.assertEqual(live_read.visual_report(raw)['reason_counts'][reason],1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 175, in visual_report
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 51, in validate_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+======================================================================
+FAIL: test_retry_requires_an_entire_eligible_batch_and_never_exceeds_three_captures (test_visual_retry.NativeRetryPolicyTests.test_retry_requires_an_entire_eligible_batch_and_never_exceeds_three_captures)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_retry.py", line 24, in test_retry_requires_an_entire_eligible_batch_and_never_exceeds_three_captures
+    self.assertEqual(compiled.returncode,0,compiled.stdout.decode(errors='replace'))
+AssertionError: 1 != 0 : tests\fixtures\visual_retry_policy_fixture.cs(14,26): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(15,33): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(16,33): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(17,34): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(18,30): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(19,32): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(20,39): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+tests\fixtures\visual_retry_policy_fixture.cs(24,38): error CS0103: ��ǰ�������в��������ơ�VisualRetry��
+
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.134s
+
+FAILED (failures=1, errors=13)

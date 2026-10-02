@@ -1,6 +1,26 @@
-# v0.1.10 只读方向与控件复用候选
+# v0.1.11 只读方向与控件复用候选
 
 这些模式用于继续验证普通个人微信接入，均未接入 Engine、模型、记忆或发送器。`sender_verified/history_boundary_verified/real_send_supported/model_called` 始终为 false。原视觉诊断和普通内容观察仍独立；v0.1.9新增同一次有界调用内的正文/方向联合候选，不能将其当作已确认来信。
+
+## 视觉失败原因与空证据重取
+
+v0.1.11的 `--inspect-visual` 另报告 `capture_attempts`（1–3）及11个固定原因的 `reason_counts`，包括零计数。原因只表示首个未通过的检查，不能单独证明捕获API或微信渲染的根因：
+
+| 原因 | 含义 |
+| --- | --- |
+| `geometry_invalid` | 位置、范围或缩放不符合分类条件 |
+| `background_unsupported` / `edges_inconsistent` | 背景或边缘检查未通过 |
+| `avatar_inconclusive` | 左右头像证据不能唯一支持一个方向 |
+| `foreground_evidence_absent` | 几何/背景/边缘已通过，两个头像及三个气泡采样计数全零 |
+| `incoming_bubble_unconfirmed` / `incoming_green_conflict` | 左侧中性气泡证据不足或绿色证据冲突 |
+| `self_bubble_unconfirmed` | 右侧绿色气泡证据不足 |
+| `incoming_evidence` / `self_evidence` / `not_text` | 已取得对应候选证据或属于非文本行 |
+
+纯视觉协议严格校验原因、方向、类型及捕获次数；纯视觉分支仍不读取Name，不输出令牌、正文、图像或逐像素值。联合正文协议保持原结构，不加入这些诊断字段。
+
+只有整批中至少一条 `foreground_evidence_absent`，且其他行仅为该原因、几何不适用或非文本，才允许下一次捕获。最多三次，相邻重取等待50毫秒；仍受原8秒子进程超时约束，不能保证阻塞API调用能完成三次。每次前后复核原始绑定、列表、顺序、token、类型、矩形（联合模式再核正文）；有变化立即停止，不重建基线、不输出半批。每次清除上次结果，返回一整张最终捕获的分类，绝不拼接各次的有利结果。其他未知或混合证据不触发重取，耗尽后仍保持未知。
+
+实现前[150](evidence/150-live-visual-reasons.json)的12次有一次5条头像不确定；进一步细分后的[153](evidence/153-live-empty-evidence.json)为30次中一次5条前景证据全零，该记录尚未启用重取。实现后[154](evidence/154-live-visual-recovery.json)60次全部5来信/1几何未知，59次首取、1次第二次捕获恢复。未证明三次耗尽、瞬态变更/恢复、其他主题/窗口状态或任意头像场景；所有验证标志不变。当前1005长监听仍是此前启动的v0.1.10，会话基线未被本次更新替换。
 
 ## 等待受控新输入
 

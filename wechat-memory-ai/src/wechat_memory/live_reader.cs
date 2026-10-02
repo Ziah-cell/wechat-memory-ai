@@ -60,6 +60,37 @@ public static class LiveReader {
         if (expected != null && (!expected.ContainsKey(key) || Convert.ToString(expected[key],System.Globalization.CultureInfo.InvariantCulture)
             != Convert.ToString(value,System.Globalization.CultureInfo.InvariantCulture))) throw Failure("window_or_list_changed");
     }
+    static void RecheckBinding(Process selected, IntPtr handle, uint owner, long started,
+            AutomationElement root, string rootId, AutomationElement messageList, string listToken) {
+        failureReason = "window_binding_unavailable";
+        selected.Refresh();
+        uint after;
+        GetWindowThreadProcessId(handle,out after);
+        if(IsIconic(handle)) throw Failure("window_minimized");
+        if(selected.HasExited || selected.StartTime.ToUniversalTime().Ticks!=started || after!=owner || !IsWindowVisible(handle)
+                || Property(root,AutomationElement.AutomationIdProperty)!=rootId || Token(messageList)!=listToken)
+            throw Failure("window_or_list_changed");
+    }
+    static void RecheckVisualRows(AutomationElement messageList, Rect listBounds,
+            List<VisualRow> visualRows, uint owner, bool visualText, TreeWalker walker) {
+        failureReason = "visual_snapshot_changed";
+        if((Rect)messageList.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty)!=listBounds)
+            throw new InvalidOperationException();
+        int indexAfter=0;
+        for(var child=walker.GetFirstChild(messageList); child!=null; child=walker.GetNextSibling(child)) {
+            if(indexAfter>=visualRows.Count) throw new InvalidOperationException();
+            SameProcess(child,(int)owner);
+            if((ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty)!=ControlType.ListItem)
+                throw new InvalidOperationException();
+            string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
+            var afterRow=new VisualRow(Token(child),kind,
+                visualText ? Property(child,AutomationElement.NameProperty) : null,
+                (Rect)child.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty));
+            if(!visualRows[indexAfter].Matches(afterRow)) throw new InvalidOperationException();
+            indexAfter++;
+        }
+        if(indexAfter!=visualRows.Count) throw new InvalidOperationException();
+    }
     public static object Snapshot(string client, Dictionary<string,object> expected, string mode) {
         bool layout = mode == "--layout";
         bool capabilities = mode == "--capabilities";
@@ -211,49 +242,43 @@ public static class LiveReader {
             if (text.Length>10000) throw new InvalidOperationException();
             rows.Add(new {token=Token(child),text=text,kind=kind});
         }
+        int visualCaptureAttempts=0;
         if (visual) {
-            failureReason = "visual_capture_unavailable";
-            using(var frame=VisualCapture.Take(handle)) {
-                rows.Clear();
-                var listRect=ImageRect(listBounds,frame.Bounds);
-                foreach(var row in visualRows) {
-                    var rowRect=ImageRect(row.Bounds,frame.Bounds);
-                    string direction=row.Kind=="text" ? VisualDirection.Classify(frame.Image,listRect,rowRect,frame.Scale) : "unknown";
-                    if(visualText) rows.Add(new {token=row.Token,kind=row.Kind,text=row.Text,direction=direction});
-                    else rows.Add(new {token=row.Token,kind=row.Kind,direction=direction});
+            for(int attempt=1; attempt<=3; attempt++) {
+                visualCaptureAttempts=attempt;
+                RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken);
+                RecheckVisualRows(messageList,listBounds,visualRows,owner,visualText,walker);
+                failureReason = "visual_capture_unavailable";
+                var classifications=new List<VisualClassification>();
+                using(var frame=VisualCapture.Take(handle)) {
+                    // Each attempt wholly replaces the preceding frame's rows.
+                    rows.Clear();
+                    var listRect=ImageRect(listBounds,frame.Bounds);
+                    foreach(var row in visualRows) {
+                        var rowRect=ImageRect(row.Bounds,frame.Bounds);
+                        var classification=row.Kind=="text" ? VisualDirection.Analyze(frame.Image,listRect,rowRect,frame.Scale)
+                            : new VisualClassification("unknown","not_text");
+                        classifications.Add(classification);
+                        if(visualText) rows.Add(new {token=row.Token,kind=row.Kind,text=row.Text,direction=classification.Direction});
+                        else rows.Add(new {token=row.Token,kind=row.Kind,direction=classification.Direction,reason=classification.Reason});
+                    }
                 }
+                RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken);
+                RecheckVisualRows(messageList,listBounds,visualRows,owner,visualText,walker);
+                RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken);
+                // Other unknowns and mixed evidence are never retried/promoted.
+                if(!VisualRetry.ShouldRetry(classifications,attempt)) break;
+                System.Threading.Thread.Sleep(50);
             }
-            failureReason = "visual_snapshot_changed";
-            if((Rect)messageList.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty)!=listBounds)
-                throw new InvalidOperationException();
-            int indexAfter=0;
-            for(var child=walker.GetFirstChild(messageList); child!=null; child=walker.GetNextSibling(child)) {
-                if(indexAfter>=visualRows.Count) throw new InvalidOperationException();
-                SameProcess(child,(int)owner);
-                if((ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty)!=ControlType.ListItem)
-                    throw new InvalidOperationException();
-                string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
-                var afterRow=new VisualRow(Token(child),kind,
-                    visualText ? Property(child,AutomationElement.NameProperty) : null,
-                    (Rect)child.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty));
-                if(!visualRows[indexAfter].Matches(afterRow))
-                    throw new InvalidOperationException();
-                indexAfter++;
-            }
-            if(indexAfter!=visualRows.Count) throw new InvalidOperationException();
         }
-        failureReason = "window_binding_unavailable";
-        selected.Refresh();
-        uint after;
-        GetWindowThreadProcessId(handle,out after);
-        if (IsIconic(handle)) throw Failure("window_minimized");
-        if (selected.HasExited || selected.StartTime.ToUniversalTime().Ticks!=started || after!=owner || !IsWindowVisible(handle)
-            || Property(root,AutomationElement.AutomationIdProperty)!=rootId || Token(messageList)!=listToken)
-            throw Failure("window_or_list_changed");
+        RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken);
         if (capabilities)
             return new {status="capability_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                 root=rootId,list_token=listToken,rows=rows,scroll_pattern=scrollAvailable,
                 vertical_scrollable=verticalScrollable,vertical_scroll_percent=verticalPercent,distinct_automation_ids=rowIds.Count};
+        if (visual && !visualText)
+            return new {status="visual_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+                root=rootId,list_token=listToken,rows=rows,capture_attempts=visualCaptureAttempts};
         return new {status=layout ? "layout_snapshot" : visualText ? "visual_text_snapshot" : visual ? "visual_snapshot" : "snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                     root=rootId,list_token=listToken,rows=rows};
     }

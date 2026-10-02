@@ -1,0 +1,13 @@
+test_counts_include_zero_reasons_and_do_not_export_private_values (test_visual_reasons.VisualReasonTests.test_counts_include_zero_reasons_and_do_not_export_private_values) ... ok
+test_diagnostics_cannot_enter_plain_or_joint_observation_protocols (test_visual_reasons.VisualReasonTests.test_diagnostics_cannot_enter_plain_or_joint_observation_protocols) ... ok
+test_every_reason_direction_kind_combination_is_validated (test_visual_reasons.VisualReasonTests.test_every_reason_direction_kind_combination_is_validated) ... ok
+test_malformed_or_missing_reasons_fail_with_a_sanitized_error (test_visual_reasons.VisualReasonTests.test_malformed_or_missing_reasons_fail_with_a_sanitized_error) ... ok
+test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot (test_visual_direction.VisualProtocolTests.test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot) ... ok
+test_visual_cli_is_one_shot_and_cannot_feed_the_read_session (test_visual_direction.VisualProtocolTests.test_visual_cli_is_one_shot_and_cannot_feed_the_read_session) ... ok
+test_visual_hints_are_counted_without_verified_sender_or_identity (test_visual_direction.VisualProtocolTests.test_visual_hints_are_counted_without_verified_sender_or_identity) ... ok
+test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion (test_visual_direction.VisualProtocolTests.test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK
