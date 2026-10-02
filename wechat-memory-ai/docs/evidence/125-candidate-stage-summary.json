@@ -1,0 +1,28 @@
+{
+  "version": "0.1.8",
+  "full_suite": {
+    "tests": 168,
+    "passed": 168,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 32.469
+  },
+  "independent_reviews": 2,
+  "unresolved_code_findings": 0,
+  "package_verified": true,
+  "visual_candidate_counts": {
+    "incoming": 5,
+    "self": 1,
+    "unknown": 1,
+    "repeated_snapshots": 3
+  },
+  "live_occurrence_baseline_established": false,
+  "live_occurrence_stop_reason": "private_window_not_unique",
+  "sender_verified": false,
+  "history_boundary_verified": false,
+  "server_message_ids_available": false,
+  "real_send_supported": false,
+  "model_called": false,
+  "screenshots_saved": false
+}

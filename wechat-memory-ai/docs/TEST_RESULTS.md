@@ -1,8 +1,18 @@
-# Windows 测试结果（当前 v0.1.7）
+# Windows 测试结果（当前 v0.1.8）
 
-执行日期：2026-10-01（Asia/Shanghai）。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
+最新执行日期：2026-10-02（Asia/Shanghai）；以下历史阶段另有2026-10-01记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.7 真实监听与停止诊断
+## v0.1.8 视觉与出现候选
+
+现有Python执行 `python -X utf8 scripts/test.py`，完整 **168/168，32.469秒，0失败/错误/跳过**：[121](evidence/121-occurrence-visual-full-suite.txt)。此前仅视觉改动时157/157、34.406秒：[115](evidence/115-visual-full-suite.txt)。最终逻辑测试之后只更新版本和文档；没有新增运行依赖或生成ZIP。
+
+新增视觉7项、出现候选11项。视觉实际原生编译、内存位图18种场景、屏幕内虚构窗口捕获、严格协议和CLI隔离见[114](evidence/114-visual-fullcontent-fixture-fixed.txt)。候选11/11、0.039秒见[118](evidence/118-occurrence-targeted.txt)，原严格监听33/33、2.262秒见[119](evidence/119-strict-live-regression.txt)。覆盖重复文字、旧token新内容、旧组合回放、容量与批次原子性、基线/重启及终止状态。105/107和116/117保留预期失败，112保留离屏夹具与新捕获模式不兼容的失败。
+
+视觉独立审查7/7通过，并在临时项目构建wheel验证两个C#资源、安装资源编译和清理；候选独立审查11/11与33/33通过，补充内存边界检查通过。两者均无待修复发现，未访问真实UI，分别见[122](evidence/122-visual-review.json)、[124](evidence/124-occurrence-review.json)。v0.1.8安装包复验见[123](evidence/123-candidate-package.json)。
+
+真实视觉3次计数5来信候选/1自身候选/1未知（113），只覆盖当前浅色150%环境；候选监听120在建立基线前因private_window_not_unique停止，尚未完成真实连发验收。完整测试不能改变该实机状态。未发送、调用真实模型或写入记忆；详细限制见 [READ_CANDIDATES.md](READ_CANDIDATES.md)。
+
+## v0.1.7 真实监听与停止诊断（历史记录）
 
 通过 Windows 项目入口 `scripts/windows.ps1 -Action test -Python <现有解释器>` 执行完整 **150/150，77.271秒，0失败/错误/跳过**：[102](evidence/102-live-diagnostics-full-suite.txt)。产品逻辑测试后仅更新版本和文档；`pyproject.toml` 与运行时版本为0.1.7，未安装依赖、构建新包或生成ZIP。
 

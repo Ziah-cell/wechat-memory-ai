@@ -1,0 +1,33 @@
+test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels (test_visual_direction.VisualBitmapTests.test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels) ... FAIL
+test_positive_and_ambiguous_synthetic_rows (test_visual_direction.VisualBitmapTests.test_positive_and_ambiguous_synthetic_rows) ... ok
+test_real_native_visual_mode_keeps_client_scope_and_cleanup (test_visual_direction.VisualBitmapTests.test_real_native_visual_mode_keeps_client_scope_and_cleanup) ... FAIL
+test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot (test_visual_direction.VisualProtocolTests.test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot) ... ok
+test_visual_cli_is_one_shot_and_cannot_feed_the_read_session (test_visual_direction.VisualProtocolTests.test_visual_cli_is_one_shot_and_cannot_feed_the_read_session) ... ok
+test_visual_hints_are_counted_without_verified_sender_or_identity (test_visual_direction.VisualProtocolTests.test_visual_hints_are_counted_without_verified_sender_or_identity) ... ok
+test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion (test_visual_direction.VisualProtocolTests.test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion) ... ok
+
+======================================================================
+FAIL: test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels (test_visual_direction.VisualBitmapTests.test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 39, in test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels
+    self.assertEqual(compiled.returncode,0,compiled.stdout.decode(errors='replace'))
+AssertionError: 1 != 0 : tests\fixtures\visual_capture_fixture.cs(29,29): error CS0103: \ufffd\ufffd\u01f0\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd��\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u01a1\ufffdVisualCapture\ufffd\ufffd
+
+
+
+======================================================================
+FAIL: test_real_native_visual_mode_keeps_client_scope_and_cleanup (test_visual_direction.VisualBitmapTests.test_real_native_visual_mode_keeps_client_scope_and_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 49, in test_real_native_visual_mode_keeps_client_scope_and_cleanup
+    self.assertEqual(str(error.exception),'client_unavailable')
+AssertionError: 'native_reader_unavailable' != 'client_unavailable'
+- native_reader_unavailable
++ client_unavailable
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.158s
+
+FAILED (failures=2)

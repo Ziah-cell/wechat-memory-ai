@@ -1,0 +1,14 @@
+{
+  "scope": "explicit_occurrence_candidates",
+  "findings": [],
+  "occurrence_tests": 11,
+  "strict_tests": 33,
+  "supplemental_memory_checks_passed": true,
+  "full_suite_rechecked_by_reviewer": false,
+  "real_wechat_accessed": false,
+  "limitations": [
+    "live_candidate_baseline_not_established",
+    "server_identity_sender_history_unverified",
+    "visual_mode_reviewed_separately"
+  ]
+}

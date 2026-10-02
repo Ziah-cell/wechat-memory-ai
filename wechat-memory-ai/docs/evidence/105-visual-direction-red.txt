@@ -1,0 +1,68 @@
+test_positive_and_ambiguous_synthetic_rows (test_visual_direction.VisualBitmapTests.test_positive_and_ambiguous_synthetic_rows) ... FAIL
+test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot (test_visual_direction.VisualProtocolTests.test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot) ... ERROR
+test_visual_cli_is_one_shot_and_cannot_feed_the_read_session (test_visual_direction.VisualProtocolTests.test_visual_cli_is_one_shot_and_cannot_feed_the_read_session) ... usage: python.exe -m unittest [-h] --client-path CLIENT_PATH
+                              [--seconds SECONDS]
+                              [--inspect-layout | --inspect-capabilities]
+python.exe -m unittest: error: unrecognized arguments: --inspect-visual
+ERROR
+test_visual_hints_are_counted_without_verified_sender_or_identity (test_visual_direction.VisualProtocolTests.test_visual_hints_are_counted_without_verified_sender_or_identity) ... ERROR
+test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion (test_visual_direction.VisualProtocolTests.test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion) ... ERROR
+
+======================================================================
+ERROR: test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot (test_visual_direction.VisualProtocolTests.test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 87, in test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot
+    reader.read(visual=True)
+TypeError: NativeReader.read() got an unexpected keyword argument 'visual'
+
+======================================================================
+ERROR: test_visual_cli_is_one_shot_and_cannot_feed_the_read_session (test_visual_direction.VisualProtocolTests.test_visual_cli_is_one_shot_and_cannot_feed_the_read_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 74, in test_visual_cli_is_one_shot_and_cannot_feed_the_read_session
+    result=live_read.main(['--client-path','fixture.exe','--inspect-visual'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 331, in main
+    args = parser.parse_args(argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 1908, in parse_args
+    self.error(msg)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_visual_hints_are_counted_without_verified_sender_or_identity (test_visual_direction.VisualProtocolTests.test_visual_hints_are_counted_without_verified_sender_or_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 55, in test_visual_hints_are_counted_without_verified_sender_or_identity
+    report=live_read.visual_report(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'visual_report'
+
+======================================================================
+ERROR: test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion (test_visual_direction.VisualProtocolTests.test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 68, in test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion
+    with self.assertRaises(live_read.ReadError): live_read.visual_report(raw)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wechat_memory.live_read' has no attribute 'visual_report'
+
+======================================================================
+FAIL: test_positive_and_ambiguous_synthetic_rows (test_visual_direction.VisualBitmapTests.test_positive_and_ambiguous_synthetic_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visual_direction.py", line 39, in test_positive_and_ambiguous_synthetic_rows
+    self.assertEqual(compiled.returncode,0,compiled.stdout.decode(errors='replace'))
+AssertionError: 1 != 0 : error CS2001: ��\ufffd\ufffd\ufffd\u04b5\ufffd\u0534\ufffd\u013c\ufffd\ufffd\ufffdC:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\visual_direction.cs\ufffd\ufffd
+
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.099s
+
+FAILED (failures=1, errors=4)

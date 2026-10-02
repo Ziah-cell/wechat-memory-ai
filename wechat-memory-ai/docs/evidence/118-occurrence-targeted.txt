@@ -1,0 +1,16 @@
+test_anchor_changes_weak_overlap_and_removal_never_become_candidates (test_occurrence_read.OccurrenceTests.test_anchor_changes_weak_overlap_and_removal_never_become_candidates) ... ok
+test_baseline_and_restart_do_not_replay_visible_history (test_occurrence_read.OccurrenceTests.test_baseline_and_restart_do_not_replay_visible_history) ... ok
+test_binding_change_invalid_and_visual_snapshots_stop_without_private_output (test_occurrence_read.OccurrenceTests.test_binding_change_invalid_and_visual_snapshots_stop_without_private_output) ... ok
+test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure (test_occurrence_read.OccurrenceTests.test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure) ... ok
+test_empty_initialization_waits_for_a_nonempty_baseline (test_occurrence_read.OccurrenceTests.test_empty_initialization_waits_for_a_nonempty_baseline) ... ok
+test_later_generation_does_not_forget_an_earlier_token_content_pair (test_occurrence_read.OccurrenceTests.test_later_generation_does_not_forget_an_earlier_token_content_pair) ... ok
+test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates (test_occurrence_read.OccurrenceTests.test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates) ... ok
+test_occurrence_capacity_counts_recycled_generations_and_is_atomic (test_occurrence_read.OccurrenceTests.test_occurrence_capacity_counts_recycled_generations_and_is_atomic) ... ok
+test_old_token_and_content_reappearance_stops_whole_batch (test_occurrence_read.OccurrenceTests.test_old_token_and_content_reappearance_stops_whole_batch) ... ok
+test_recycled_tokens_and_same_text_keep_distinct_local_occurrences (test_occurrence_read.OccurrenceTests.test_recycled_tokens_and_same_text_keep_distinct_local_occurrences) ... ok
+test_strict_default_still_rejects_recycled_tokens_with_changed_content (test_occurrence_read.OccurrenceTests.test_strict_default_still_rejects_recycled_tokens_with_changed_content) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.039s
+
+OK

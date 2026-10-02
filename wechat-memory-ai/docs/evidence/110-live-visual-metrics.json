@@ -1,0 +1,66 @@
+{
+  "exit": 0,
+  "rows": [
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    },
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    },
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    },
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    },
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    },
+    {
+      "left_avatar": 0,
+      "left_gray": 0,
+      "left_green": 0,
+      "right_avatar": 0,
+      "right_green": 0,
+      "row_height": 84,
+      "row_width": 897,
+      "scale": 1.5
+    }
+  ],
+  "status": "visual_metrics_observed"
+}

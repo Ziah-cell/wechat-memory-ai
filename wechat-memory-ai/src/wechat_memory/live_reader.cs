@@ -35,6 +35,14 @@ public static class LiveReader {
         return String.Join(".",Array.ConvertAll(ids, value => value.ToString(System.Globalization.CultureInfo.InvariantCulture)));
     }
 
+    static System.Drawing.Rectangle ImageRect(Rect rect, System.Drawing.Rectangle window) {
+        if(rect.IsEmpty || Double.IsNaN(rect.X) || Double.IsNaN(rect.Y) || Double.IsNaN(rect.Width) || Double.IsNaN(rect.Height)
+                || rect.Width<=0 || rect.Height<=0 || rect.Width>100000 || rect.Height>100000
+                || Math.Abs(rect.X)>100000 || Math.Abs(rect.Y)>100000) throw Failure("visual_capture_unavailable");
+        return new System.Drawing.Rectangle((int)Math.Round(rect.X-window.X),(int)Math.Round(rect.Y-window.Y),
+                                             (int)Math.Round(rect.Width),(int)Math.Round(rect.Height));
+    }
+
     static void CheckBinding(Dictionary<string,object> expected, string key, object value) {
         if (expected != null && (!expected.ContainsKey(key) || Convert.ToString(expected[key],System.Globalization.CultureInfo.InvariantCulture)
             != Convert.ToString(value,System.Globalization.CultureInfo.InvariantCulture))) throw Failure("window_or_list_changed");
@@ -42,6 +50,11 @@ public static class LiveReader {
     public static object Snapshot(string client, Dictionary<string,object> expected, string mode) {
         bool layout = mode == "--layout";
         bool capabilities = mode == "--capabilities";
+        bool visual = mode == "--visual";
+        if(visual) {
+            failureReason = "visual_capture_unavailable";
+            VisualCapture.UsePhysicalCoordinates();
+        }
         failureReason = "client_unavailable";
         string path = Path.GetFullPath(client);
         if (!File.Exists(path) || !String.Equals(Path.GetFileName(path),"Weixin.exe",StringComparison.OrdinalIgnoreCase))
@@ -114,6 +127,10 @@ public static class LiveReader {
         string listToken = Token(messageList);
         CheckBinding(expected,"list_token",listToken);
         var rows = new List<object>();
+        var visualItems = new List<AutomationElement>();
+        var visualBounds = new List<Rect>();
+        var visualTokens = new List<string>();
+        var visualKinds = new List<string>();
         var rowIds = new HashSet<string>(StringComparer.Ordinal);
         bool scrollAvailable = false;
         bool? verticalScrollable = null;
@@ -129,7 +146,7 @@ public static class LiveReader {
             }
         }
         Rect listBounds = Rect.Empty;
-        if (layout) {
+        if (layout || visual) {
             failureReason = "layout_unavailable";
             listBounds = (Rect)messageList.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty);
             if (listBounds.IsEmpty || listBounds.Width <= 0) throw new InvalidOperationException();
@@ -141,6 +158,17 @@ public static class LiveReader {
             var type = (ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty);
             if (type != ControlType.ListItem) throw new InvalidOperationException();
             string kind = Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
+            if (visual) {
+                failureReason = "visual_capture_unavailable";
+                visualItems.Add(child);
+                visualBounds.Add((Rect)child.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty));
+                visualTokens.Add(Token(child));
+                visualKinds.Add(kind);
+                // Count still bounds enumeration even before visual rows exist.
+                rows.Add(null);
+                failureReason = "message_rows_unavailable";
+                continue;
+            }
             if (capabilities) {
                 failureReason = "capabilities_unavailable";
                 string rowId = Property(child,AutomationElement.AutomationIdProperty);
@@ -172,6 +200,32 @@ public static class LiveReader {
             if (text.Length>10000) throw new InvalidOperationException();
             rows.Add(new {token=Token(child),text=text,kind=kind});
         }
+        if (visual) {
+            failureReason = "visual_capture_unavailable";
+            using(var frame=VisualCapture.Take(handle)) {
+                rows.Clear();
+                var listRect=ImageRect(listBounds,frame.Bounds);
+                for(int index=0; index<visualItems.Count; index++) {
+                    var rowRect=ImageRect(visualBounds[index],frame.Bounds);
+                    string direction=visualKinds[index]=="text" ? VisualDirection.Classify(frame.Image,listRect,rowRect,frame.Scale) : "unknown";
+                    rows.Add(new {token=visualTokens[index],kind=visualKinds[index],direction=direction});
+                }
+            }
+            failureReason = "visual_snapshot_changed";
+            if((Rect)messageList.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty)!=listBounds)
+                throw new InvalidOperationException();
+            int indexAfter=0;
+            for(var child=walker.GetFirstChild(messageList); child!=null; child=walker.GetNextSibling(child)) {
+                if(indexAfter>=visualItems.Count) throw new InvalidOperationException();
+                SameProcess(child,(int)owner);
+                string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
+                if(Token(child)!=visualTokens[indexAfter] || kind!=visualKinds[indexAfter]
+                        || (Rect)child.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty)!=visualBounds[indexAfter])
+                    throw new InvalidOperationException();
+                indexAfter++;
+            }
+            if(indexAfter!=visualItems.Count) throw new InvalidOperationException();
+        }
         failureReason = "window_binding_unavailable";
         selected.Refresh();
         uint after;
@@ -184,14 +238,14 @@ public static class LiveReader {
             return new {status="capability_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                 root=rootId,list_token=listToken,rows=rows,scroll_pattern=scrollAvailable,
                 vertical_scrollable=verticalScrollable,vertical_scroll_percent=verticalPercent,distinct_automation_ids=rowIds.Count};
-        return new {status=layout ? "layout_snapshot" : "snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+        return new {status=layout ? "layout_snapshot" : visual ? "visual_snapshot" : "snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                     root=rootId,list_token=listToken,rows=rows};
     }
 
     [STAThread] public static int Main(string[] args) {
         Console.OutputEncoding = new UTF8Encoding(false);
         try {
-            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities"))) return 3;
+            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual"))) return 3;
             var serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength=4000000;
             string input = Console.In.ReadToEnd();

@@ -1,6 +1,13 @@
 # 项目开发约定
 
-- 当前 v0.1.7 新增固定白名单停止诊断、已接受顶部移除/已见 token 计数、--inspect-layout 与 --inspect-capabilities。诊断不读消息 Name，只输出计数/布尔，不输出属性值、身份或正文。默认连续性规则保持 v0.1.6：至少两个 token/摘要后缀锚点且有追加才接受顶部移除；已见 token 重现或超过 4096 个整批停止。见 docs/LIVE_READ.md。
+- 当前 v0.1.8：新增 `--inspect-visual`（内存 PrintWindow 完整内容、头像与气泡正证据、只输出方向候选计数）和显式 `--observe-occurrences`（控件复用出现候选）。视觉与正文目前独立，不能拼接成已确认来信；所有发送方/历史/发送/模型标志仍 false。详见 docs/READ_CANDIDATES.md。
+- 默认 ReadSession 规则不变；候选模式只在既有连续锚点下允许旧token的新内容。曾见token/内容组合重现或超过4096个组合仍整批停止；本地UUID/序号、内容摘要及UI token均不是微信消息ID。
+- 新增18项、完整168/168通过；视觉与候选模式独立审查均无待修复发现。当前视觉实测3次一致：5来信候选/1自身候选/1未知，仅覆盖当前浅色150%环境，不代表各种主题/头像/历史正确。
+- 候选监听本轮实机启动未建立基线（120：private_window_not_unique；桌面工具只返回微信主窗口），已请求重新打开同一个独立测试窗口。不要把此前1001/1002发送确认当成本版候选监听通过；无需重登或重做固定回复。真实自动回复仍关闭。
+
+## v0.1.7及此前记录
+
+- v0.1.7 新增固定白名单停止诊断、已接受顶部移除/已见 token 计数、--inspect-layout 与 --inspect-capabilities。诊断不读消息 Name，只输出计数/布尔，不输出属性值、身份或正文。默认连续性规则保持 v0.1.6：至少两个 token/摘要后缀锚点且有追加才接受顶部移除；已见 token 重现或超过 4096 个整批停止。见 docs/LIVE_READ.md。
 - 真实新消息监听未通过：证据92接受第一条测试来信后，第二条因 message_token_reused 停止。95/101确认7文本项全宽无子控件；9行中有7行共用1个非空 AutomationId（两项汇总不能推断逐行交叉分布）。无 TextPattern、HelpText/ItemStatus/ItemType/LabeledBy 或列表 ScrollPattern。不把 RuntimeId、共享 AutomationId、正文哈希或截图猜测当成稳定消息ID；不能直接放宽保护后宣称自动回复就绪。
 - v0.1.7 新增14项回归，完整150/150通过；独立审查未发现代码缺陷，已修正文档的汇总计数推断。证据与限制以 docs/TEST_RESULTS.md、docs/LIVE_READ.md 为准。
 - 用户已授权自主推进至自动回复启用前，无需重复确认常规开发/只读验证权限。真实固定文本收发此前已通过（证据78），一次固定回复授权已用完；无需重登或重做。本轮没有再次发送，自动 AI、项目发送适配器及真实模型未启用；sender_verified/history_boundary_verified 仍 false，不接入 Engine/模型/记忆。

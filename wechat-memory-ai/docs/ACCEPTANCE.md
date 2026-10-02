@@ -1,6 +1,6 @@
 # 本轮验收
 
-当前代码 v0.1.7，完整150项回归通过。真实4.1.15.50唯一测试私聊已可读；连续监听实测第一条来信接受、第二条因RuntimeId复用停止。布局/属性检查未提供足够的发送方与历史边界证据，**尚不能开始自动回复**。此前两条相同来信与一次授权固定回复验收仍有效，见 [78](evidence/78-live-exchange.json)。本轮未再发送，详见 [LIVE_READ.md](LIVE_READ.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
+当前代码 v0.1.8，完整168项回归通过；新增方向候选和控件复用出现候选均经独立审查。实机视觉3次为5来信候选/1自身候选/1未知；候选监听启动时未找到唯一独立测试窗口，未建立基线。**尚不能开始自动回复**。此前固定收发验收[78](evidence/78-live-exchange.json)仍有效，本轮未发送。详见 [READ_CANDIDATES.md](READ_CANDIDATES.md) 与 [TEST_RESULTS.md](TEST_RESULTS.md)。
 
 | 任务书要求 | 实现/实际结果 | 证据 |
 |---|---|---|
@@ -18,6 +18,8 @@
 | 真实普通个人号固定文本收发 | 两条相同来信、一次 Computer Use 固定回复，用户确认收到；该次发送授权已用完 | evidence/78 |
 | 顶部旧行移出后的连续读取 | 第一次实机顶部移除接受；第二条因已见token复用停止，未通过 | test_live_read、evidence/92 |
 | 停止原因与只读能力检查 | 固定原因、计数原子性、布局/属性存在性检查；不输出正文或属性值 | test_live_read、evidence/95、100、101、102 |
+| 只读视觉方向候选 | 内存捕获、正证据分类、未知保留；实机仅当前浅色150%三次5/1/1 | test_visual_direction、evidence/113、114 |
+| 控件复用出现候选 | 显式模式保留连续锚点、旧组合/超限整批停止；真实监听未建立基线 | test_occurrence_read、evidence/118、120、121 |
 | 假模型与可替换接口 | 已实现，真实 HTTP 可选并默认禁止 | models.py、test_models |
 | 上下文窗口与摘要 | 有界历史/摘录和有限相关记忆 | test_engine、test_memory |
 | 长期偏好、事件、来源与时间 | 显式指令写入；普通临时对话不固化 | test_memory |

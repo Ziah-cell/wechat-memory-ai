@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wechat-memory-ai"
-version = "0.1.7"
+version = "0.1.8"
 description = "Offline memory core and an independent read-only WeChat connection; no real sends"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -18,4 +18,4 @@ wechat-memory-listen = "wechat_memory.live_read:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-wechat_memory = ["uia_*.ps1", "ocr_*.ps1", "live_reader.cs"]
+wechat_memory = ["uia_*.ps1", "ocr_*.ps1", "live_reader.cs", "visual_direction.cs"]

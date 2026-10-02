@@ -1,0 +1,137 @@
+test_anchor_changes_weak_overlap_and_removal_never_become_candidates (test_occurrence_read.OccurrenceTests.test_anchor_changes_weak_overlap_and_removal_never_become_candidates) ... FAIL
+test_baseline_and_restart_do_not_replay_visible_history (test_occurrence_read.OccurrenceTests.test_baseline_and_restart_do_not_replay_visible_history) ... FAIL
+test_binding_change_invalid_and_visual_snapshots_stop_without_private_output (test_occurrence_read.OccurrenceTests.test_binding_change_invalid_and_visual_snapshots_stop_without_private_output) ... FAIL
+test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure (test_occurrence_read.OccurrenceTests.test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure) ... usage: python.exe -m unittest [-h] --client-path CLIENT_PATH
+                              [--seconds SECONDS]
+                              [--inspect-layout | --inspect-capabilities | --inspect-visual]
+python.exe -m unittest: error: unrecognized arguments: --observe-occurrences
+ERROR
+test_empty_initialization_waits_for_a_nonempty_baseline (test_occurrence_read.OccurrenceTests.test_empty_initialization_waits_for_a_nonempty_baseline) ... FAIL
+test_later_generation_does_not_forget_an_earlier_token_content_pair (test_occurrence_read.OccurrenceTests.test_later_generation_does_not_forget_an_earlier_token_content_pair) ... FAIL
+test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates (test_occurrence_read.OccurrenceTests.test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates) ... FAIL
+test_occurrence_capacity_counts_recycled_generations_and_is_atomic (test_occurrence_read.OccurrenceTests.test_occurrence_capacity_counts_recycled_generations_and_is_atomic) ... FAIL
+test_old_token_and_content_reappearance_stops_whole_batch (test_occurrence_read.OccurrenceTests.test_old_token_and_content_reappearance_stops_whole_batch) ... FAIL
+test_recycled_tokens_and_same_text_keep_distinct_local_occurrences (test_occurrence_read.OccurrenceTests.test_recycled_tokens_and_same_text_keep_distinct_local_occurrences) ... FAIL
+test_strict_default_still_rejects_recycled_tokens_with_changed_content (test_occurrence_read.OccurrenceTests.test_strict_default_still_rejects_recycled_tokens_with_changed_content) ... ok
+
+======================================================================
+ERROR: test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure (test_occurrence_read.OccurrenceTests.test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 152, in test_cli_explicit_candidate_mode_reports_counts_and_preserves_native_failure
+    result=live_read.main(['--client-path','fixture.exe','--observe-occurrences'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 361, in main
+    args = parser.parse_args(argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 1908, in parse_args
+    self.error(msg)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+FAIL: test_anchor_changes_weak_overlap_and_removal_never_become_candidates (test_occurrence_read.OccurrenceTests.test_anchor_changes_weak_overlap_and_removal_never_become_candidates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 89, in test_anchor_changes_weak_overlap_and_removal_never_become_candidates
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_baseline_and_restart_do_not_replay_visible_history (test_occurrence_read.OccurrenceTests.test_baseline_and_restart_do_not_replay_visible_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 34, in test_baseline_and_restart_do_not_replay_visible_history
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_binding_change_invalid_and_visual_snapshots_stop_without_private_output (test_occurrence_read.OccurrenceTests.test_binding_change_invalid_and_visual_snapshots_stop_without_private_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 99, in test_binding_change_invalid_and_visual_snapshots_stop_without_private_output
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_empty_initialization_waits_for_a_nonempty_baseline (test_occurrence_read.OccurrenceTests.test_empty_initialization_waits_for_a_nonempty_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 43, in test_empty_initialization_waits_for_a_nonempty_baseline
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_later_generation_does_not_forget_an_earlier_token_content_pair (test_occurrence_read.OccurrenceTests.test_later_generation_does_not_forget_an_earlier_token_content_pair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 76, in test_later_generation_does_not_forget_an_earlier_token_content_pair
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates (test_occurrence_read.OccurrenceTests.test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 126, in test_nontext_and_blank_rows_count_but_do_not_produce_text_candidates
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_occurrence_capacity_counts_recycled_generations_and_is_atomic (test_occurrence_read.OccurrenceTests.test_occurrence_capacity_counts_recycled_generations_and_is_atomic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 109, in test_occurrence_capacity_counts_recycled_generations_and_is_atomic
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_old_token_and_content_reappearance_stops_whole_batch (test_occurrence_read.OccurrenceTests.test_old_token_and_content_reappearance_stops_whole_batch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 63, in test_old_token_and_content_reappearance_stops_whole_batch
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+======================================================================
+FAIL: test_recycled_tokens_and_same_text_keep_distinct_local_occurrences (test_occurrence_read.OccurrenceTests.test_recycled_tokens_and_same_text_keep_distinct_local_occurrences)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 50, in test_recycled_tokens_and_same_text_keep_distinct_local_occurrences
+    session=self.session()
+            ^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_occurrence_read.py", line 29, in session
+    self.assertIsNotNone(OccurrenceSession, 'occurrence observer is missing')
+AssertionError: unexpectedly None : occurrence observer is missing
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.032s
+
+FAILED (failures=9, errors=1)

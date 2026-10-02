@@ -4,7 +4,7 @@
 
 ## 当前可用阶段
 
-当前 v0.1.7 的独立 `listen-wechat` 使用系统.NET/UIA，无第三方运行依赖。实机第一条来信通过顶部移除衔接，第二条因RuntimeId复用停止；新增诊断还确认共享AutomationId和不足的方向/滚动能力，现有UIA-only路线尚不满足自动回复条件。此前两条相同来信与一次 Computer Use 固定回复验收仍有效，本轮未再发送。详见 [LIVE_READ.md](LIVE_READ.md)。
+当前v0.1.8使用系统.NET/UIA与内存PrintWindow，无第三方运行依赖。新增方向候选与控件复用出现候选；完整168项回归通过，真实方向检查3次为5/1/1，候选监听仍待唯一独立测试窗口恢复后建基线。默认严格监听及真实发送关闭边界保持；候选不证明新消息来源、发送方或历史边界。详见 [READ_CANDIDATES.md](READ_CANDIDATES.md)。
 
 最新增加独立 RapidOCR 候选实验：项目 `.ocr-env` 安装免费依赖，核心仍无第三方依赖。固定样例的中文/字母数字识别改善，但过滤误检会漏掉真实符号，结果 **review_required / 3**，不接入自动监听/回复。完整回归 117 项通过；来源、实际结果和局限见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。
 

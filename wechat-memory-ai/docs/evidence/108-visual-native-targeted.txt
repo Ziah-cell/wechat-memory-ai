@@ -1,0 +1,12 @@
+test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels (test_visual_direction.VisualBitmapTests.test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels) ... ok
+test_positive_and_ambiguous_synthetic_rows (test_visual_direction.VisualBitmapTests.test_positive_and_ambiguous_synthetic_rows) ... ok
+test_real_native_visual_mode_keeps_client_scope_and_cleanup (test_visual_direction.VisualBitmapTests.test_real_native_visual_mode_keeps_client_scope_and_cleanup) ... ok
+test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot (test_visual_direction.VisualProtocolTests.test_native_visual_mode_preserves_bound_target_and_rejects_plain_snapshot) ... ok
+test_visual_cli_is_one_shot_and_cannot_feed_the_read_session (test_visual_direction.VisualProtocolTests.test_visual_cli_is_one_shot_and_cannot_feed_the_read_session) ... ok
+test_visual_hints_are_counted_without_verified_sender_or_identity (test_visual_direction.VisualProtocolTests.test_visual_hints_are_counted_without_verified_sender_or_identity) ... ok
+test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion (test_visual_direction.VisualProtocolTests.test_visual_protocol_rejects_extra_data_unknown_direction_and_nontext_promotion) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.983s
+
+OK

@@ -26,6 +26,7 @@ _NATIVE_REASONS = frozenset({
     'private_window_not_unique', 'window_minimized', 'window_binding_unavailable',
     'window_or_list_changed', 'message_tree_unavailable', 'message_list_unavailable',
     'message_rows_unavailable', 'layout_unavailable', 'capabilities_unavailable', 'native_reader_failed',
+    'visual_capture_unavailable', 'visual_snapshot_changed',
 })
 
 _STOP_REASONS = _NATIVE_REASONS | frozenset({
@@ -34,6 +35,7 @@ _STOP_REASONS = _NATIVE_REASONS | frozenset({
     'session_token_limit', 'windows_required', 'invalid_client_path',
     'reader_build_failed', 'reader_cleanup_failed', 'native_reader_unavailable',
     'interrupted', 'read_failed', 'native_reader_timeout',
+    'occurrence_reappeared', 'session_occurrence_limit',
 })
 
 
@@ -148,6 +150,28 @@ def capability_report(raw):
     return report
 
 
+def visual_report(raw):
+    """Visual hints cannot promote rows to verified incoming messages."""
+    if (not isinstance(raw,dict) or raw.get('status') != 'visual_snapshot'
+            or not isinstance(raw.get('rows'),list) or len(raw['rows'])>256):
+        raise ReadError('invalid_snapshot')
+    validation_rows=[]
+    for row in raw['rows']:
+        if (not isinstance(row,dict) or set(row) != {'token','kind','direction'}
+                or row['direction'] not in ('incoming_candidate','self_candidate','unknown')
+                or (row['kind']!='text' and row['direction']!='unknown')):
+            raise ReadError('invalid_snapshot')
+        validation_rows.append(dict(token=row['token'],kind=row['kind'],text=''))
+    validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))
+    text_rows=[row for row in raw['rows'] if row['kind']=='text']
+    return dict(status='visual_observed',rows=len(raw['rows']),text_rows=len(text_rows),
+                incoming_candidates=sum(row['direction']=='incoming_candidate' for row in text_rows),
+                self_candidates=sum(row['direction']=='self_candidate' for row in text_rows),
+                unknown_texts=sum(row['direction']=='unknown' for row in text_rows),
+                sender_verified=False,history_boundary_verified=False,
+                real_send_supported=False,model_called=False)
+
+
 class ReadSession:
     def __init__(self):
         self._identity = None
@@ -160,6 +184,16 @@ class ReadSession:
         self._front_evictions = 0
         self._stop_reason = None
         self._state = 'waiting'
+
+    def _check_appended(self, appended):
+        new_tokens = {r[0] for r in appended}
+        if new_tokens & self._seen_tokens:
+            raise ReadError('message_token_reused')
+        if len(self._seen_tokens) + len(new_tokens) > 4096:
+            raise ReadError('session_token_limit')
+
+    def _remember_rows(self, rows, *, appended=False):
+        self._seen_tokens.update(r[0] for r in rows)
 
     def stop(self, reason):
         # Preserve the first failure, including when the CLI catches the
@@ -176,7 +210,7 @@ class ReadSession:
             current = [(r[0],r[1]) for r in rows]
             if self._identity is None:
                 self._identity, self._rows = identity, current
-                self._seen_tokens.update(r[0] for r in current)
+                self._remember_rows(rows)
                 self._state = 'reading' if current else 'initializing'
                 self._snapshots += 1
                 return []
@@ -184,7 +218,7 @@ class ReadSession:
                 raise ReadError('window_or_list_changed')
             if self._state == 'initializing':
                 self._rows = current
-                self._seen_tokens.update(r[0] for r in current)
+                self._remember_rows(rows)
                 self._state = 'reading' if current else 'initializing'
                 self._snapshots += 1
                 return []
@@ -199,13 +233,9 @@ class ReadSession:
                 else:
                     raise ReadError('message_continuity_lost')
             appended = rows[overlap:]
-            new_tokens = {r[0] for r in appended}
             # Validate the entire batch before advancing counters or returning
             # observations. Evicted tokens remain known for this session.
-            if new_tokens & self._seen_tokens:
-                raise ReadError('message_token_reused')
-            if len(self._seen_tokens) + len(new_tokens) > 4096:
-                raise ReadError('session_token_limit')
+            self._check_appended(appended)
             observations = []
             for _, _, kind, text in appended:
                 self._sequence += 1
@@ -215,7 +245,7 @@ class ReadSession:
             if overlap < len(self._rows):
                 self._front_evictions += 1
             self._rows = current
-            self._seen_tokens.update(new_tokens)
+            self._remember_rows(appended,appended=True)
             self._snapshots += 1
             return observations
         except ReadError as error:
@@ -234,6 +264,42 @@ class ReadSession:
                     sender_verified=False, server_message_ids_available=False,
                     history_boundary_verified=False,
                     real_send_supported=False, model_called=False)
+
+
+class OccurrenceSession(ReadSession):
+    """Opt-in UI occurrence candidates, never durable message identities.
+
+    Keep the same binding/suffix rules as ReadSession. A recycled token with a
+    different payload may be another UI occurrence; it is not proof of a newly
+    received message. A previously seen token/payload pair is ambiguous and
+    stops the session, even if it might also be a legitimate repeated message.
+    """
+    def __init__(self):
+        super().__init__()
+        self._seen_occurrences = set()
+        self._reused_token_candidates = 0
+
+    def _check_appended(self, appended):
+        occurrences = {(r[0],r[1]) for r in appended}
+        if occurrences & self._seen_occurrences:
+            raise ReadError('occurrence_reappeared')
+        if len(self._seen_occurrences) + len(occurrences) > 4096:
+            raise ReadError('session_occurrence_limit')
+
+    def _remember_rows(self, rows, *, appended=False):
+        if appended:
+            self._reused_token_candidates += sum(r[0] in self._seen_tokens for r in rows)
+        self._seen_occurrences.update((r[0],r[1]) for r in rows)
+        super()._remember_rows(rows,appended=appended)
+
+    def report(self):
+        report = super().report()
+        report['mode'] = 'occurrence_candidates'
+        report['candidate_rows'] = report.pop('observed_new_rows')
+        report['candidate_texts'] = report.pop('observed_new_texts')
+        report['seen_occurrences'] = len(self._seen_occurrences)
+        report['reused_token_candidates'] = self._reused_token_candidates
+        return report
 
 
 class NativeReader:
@@ -257,10 +323,12 @@ class NativeReader:
             self._temporary = tempfile.TemporaryDirectory(prefix='wechat-read-')
             self.executable = Path(self._temporary.name)/'reader.exe'
             args = [str(compiler),'/nologo','/target:exe','/platform:x64',
-                    '/out:'+str(self.executable),'/reference:'+str(framework/'System.Web.Extensions.dll')]
+                    '/out:'+str(self.executable),'/reference:'+str(framework/'System.Web.Extensions.dll'),
+                    '/reference:'+str(framework/'System.Drawing.dll')]
             args += ['/reference:'+str(framework/'WPF'/name) for name in
                      ('UIAutomationClient.dll','UIAutomationTypes.dll','WindowsBase.dll')]
             args.append(str(Path(__file__).with_name('live_reader.cs')))
+            args.append(str(Path(__file__).with_name('visual_direction.cs')))
             done = subprocess.run(args,stdin=subprocess.DEVNULL,capture_output=True,timeout=25,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
             if done.returncode or not self.executable.is_file():
@@ -280,15 +348,17 @@ class NativeReader:
             finally:
                 self._temporary = None
 
-    def read(self, *, layout=False, capabilities=False):
+    def read(self, *, layout=False, capabilities=False, visual=False):
         try:
-            if layout and capabilities:
+            if sum(bool(value) for value in (layout,capabilities,visual))>1:
                 raise ReadError('invalid_snapshot')
             command = [str(self.executable),self.client_path]
             if layout:
                 command.append('--layout')
             if capabilities:
                 command.append('--capabilities')
+            if visual:
+                command.append('--visual')
             done = subprocess.run(command,
                                   input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=8,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -306,6 +376,8 @@ class NativeReader:
                     layout_report(raw)
                 elif capabilities:
                     capability_report(raw)
+                elif visual:
+                    visual_report(raw)
                 else:
                     validate_snapshot(raw)
             except ReadError:
@@ -328,10 +400,12 @@ def main(argv=None):
     inspections=parser.add_mutually_exclusive_group()
     inspections.add_argument('--inspect-layout',action='store_true',help='Report geometry counts without reading message text.')
     inspections.add_argument('--inspect-capabilities',action='store_true',help='Report UIA metadata availability without exporting its values.')
+    inspections.add_argument('--inspect-visual',action='store_true',help='Report conservative direction hints from an in-memory window image.')
+    inspections.add_argument('--observe-occurrences',action='store_true',help='Observe local UI occurrence candidates, including reused tokens with changed content; never verify new messages.')
     args = parser.parse_args(argv)
     if not 1 <= args.seconds <= 300:
         parser.error('seconds must be between 1 and 300')
-    session = ReadSession()
+    session = OccurrenceSession() if args.observe_occurrences else ReadSession()
     try:
         with NativeReader(args.client_path) as reader:
             if args.inspect_layout:
@@ -339,6 +413,9 @@ def main(argv=None):
                 return 0
             if args.inspect_capabilities:
                 print(json.dumps(capability_report(reader.read(capabilities=True)),sort_keys=True),flush=True)
+                return 0
+            if args.inspect_visual:
+                print(json.dumps(visual_report(reader.read(visual=True)),sort_keys=True),flush=True)
                 return 0
             deadline = time.monotonic()+args.seconds
             while True:

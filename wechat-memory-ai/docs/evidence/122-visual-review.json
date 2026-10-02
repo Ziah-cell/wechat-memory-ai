@@ -1,0 +1,18 @@
+{
+  "scope": "standalone_visual_candidates",
+  "findings": [],
+  "targeted_tests": 7,
+  "targeted_passed": 7,
+  "wheel_resources_verified": true,
+  "installed_native_compile_verified": true,
+  "missing_client_rejected": true,
+  "cleanup_verified": true,
+  "real_wechat_accessed": false,
+  "limitations": [
+    "production_dpi_transitions_not_forced",
+    "native_capture_failure_transitions_not_forced",
+    "real_classifier_accuracy_beyond_current_fixture_unverified",
+    "sender_and_history_unverified",
+    "occurrence_mode_reviewed_separately"
+  ]
+}
