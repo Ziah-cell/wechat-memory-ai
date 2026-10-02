@@ -1,0 +1,29 @@
+{
+  "initial_independent_review": {
+    "actionable_findings": 0,
+    "targeted_tests": 7,
+    "targeted_seconds": 2.7,
+    "scope": "CLI, Windows duration range, synthetic and missing-client tests",
+    "documentation_followup": "old duration and completion semantics corrected"
+  },
+  "zero_seconds_delta": {
+    "implemented_by_initial_reviewer": true,
+    "reviewed_by_primary_agent": true,
+    "targeted_tests": 9,
+    "targeted_seconds": 1.806,
+    "full_suite_tests": 189,
+    "full_suite_seconds": 37.232,
+    "actionable_findings": 0
+  },
+  "separate_visual_diagnosis": {
+    "source_and_existing_evidence_only": true,
+    "new_fixture_attempt": "compile and execute existing synthetic bitmap fixture",
+    "automatic_approval_result": "blocked by policy",
+    "attempt_executed": false,
+    "retried": false,
+    "root_cause_proven": false,
+    "thresholds_changed": false
+  },
+  "real_send_supported": false,
+  "model_called": false
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-02",
+  "test_1003": {
+    "monitor_seconds": 300,
+    "accepted_snapshots": 218,
+    "new_text_candidates": 0,
+    "monitor_exit_code": 0,
+    "monitor_had_finished_before_followup": true,
+    "later_visible_matching_rows": 2,
+    "later_incoming_candidates": 2,
+    "later_self_candidates": 0,
+    "later_unknown_candidates": 0,
+    "arrival_capture_passed": false
+  },
+  "test_1004": {
+    "monitor_seconds": 3600,
+    "accepted_snapshots": 2301,
+    "new_text_candidates": 0,
+    "monitor_exit_code": 0,
+    "completion_reason": "deadline_reached",
+    "monitor_had_finished_before_followup": true,
+    "later_visible_matching_rows": 2,
+    "later_direction_counts_incoming_self_unknown": [[1, 0, 1], [2, 0, 0], [2, 0, 0], [0, 0, 2]],
+    "arrival_capture_passed": false,
+    "direction_stability_passed": false
+  },
+  "actual_arrival_times_known": false,
+  "raw_message_content_saved": false,
+  "screenshot_files_saved": false,
+  "real_send_supported": false,
+  "model_called": false,
+  "memory_written": false
+}

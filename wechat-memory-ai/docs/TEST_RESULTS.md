@@ -1,8 +1,20 @@
-# Windows 测试结果（当前 v0.1.9）
+# Windows 测试结果（当前 v0.1.10）
 
 最新执行日期：2026-10-02（Asia/Shanghai）；以下历史阶段另有2026-10-01记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.9 联合候选与方向可见性
+## v0.1.10 等待目标数量与明确完成原因
+
+最终 `python -X utf8 scripts/test.py`：**189/189，37.232秒，0失败/错误/跳过**，[145](evidence/145-listener-wait-final-suite.txt)。此前增加正数等待上限/数量目标的完整187项为50.433秒，[142](evidence/142-listener-wait-full-suite.txt)；随后增加显式零秒持续等待的两个回归。
+
+新增9项覆盖基线/空白/非文本不计数、相同文本各自计数、三个模式整批接受、超时与目标完成原因、默认30秒、错误/中断清理、非法参数在创建读取器前拒绝，以及双PowerShell入口3600秒参数。139为预期失败；140保留测试误用既有计数字段名称的失败，纠正后141为7项通过。持续等待先失败[143](evidence/143-listener-until-target-red.txt)，实现后[144](evidence/144-listener-until-target-fixed.txt)为9/9、1.806秒。
+
+独立初审7/7、2.700秒，无待修复发现；审查者随后实现零秒增量，由主任务复核并执行189项完整回归。审查与限制见[146](evidence/146-listener-wait-review.json)。本轮视觉波动诊断仅依据代码/已有证据；另一次独立诊断尝试的合成位图编译执行被自动审批拒绝，未执行或重试，不计入测试通过数。
+
+v0.1.10临时离线构建/安装后核验版本、C#资源、CLI帮助与零秒无目标的拒绝；临时目录清理通过，[147](evidence/147-listener-wait-package.json)。这次包检查没有编译或执行原生读取器，也没有访问真实微信。
+
+实机1003/1004监听均已到时结束且新增0，之后可见测试文字不能补记成到达事件；1004视觉方向四次有明确/未知波动，见[138](evidence/138-late-live-inputs.json)。持续等待1005另起基线，当前运行证据需查忽略目录data中的日志。所有验证标志仍false；未调用模型、写入记忆或发送。
+
+## v0.1.9 联合候选与方向可见性（历史记录）
 
 现有Python执行 `python -X utf8 scripts/test.py`，最终 **180/180，33.600秒，0失败/错误/跳过**：[134](evidence/134-visual-occurrence-final-suite.txt)。先前联合版本178/178、34.004秒见[129](evidence/129-visual-occurrence-full-suite.txt)，随后补入两个未知方向转变回归并修复，未覆盖原始结果。
 

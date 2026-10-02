@@ -34,9 +34,13 @@
 .\scripts\windows.ps1 -Action listen-wechat -ClientPath 'D:\软件\Weixin\Weixin.exe' -ListenSeconds 30
 ```
 
-时长可设 1–300 秒；Ctrl+C 停止。首次建立基线，之后每秒尝试读取一次；系统 UIA 单次调用可能使实际间隔变长。编译最多 25 秒，每次读取最多 8 秒，异常即停止。源码入口是 `scripts/listen-wechat.py`，安装后的命令为 `wechat-memory-listen --client-path ... --seconds 30`。
+v0.1.10时长可设1–3600秒，默认仍为30秒；Ctrl+C停止。Python入口可另用 `--until-texts 2` 在接受至少两条新增非空文本后结束；基线、空文本与非文本行不计入，同批超过目标也整批保留。所有方向均计入目标数量，达到数量不代表来信识别通过。单次诊断不接受该参数。
 
-`status=reading` 与 `window_bound=true` 表示当前窗口已绑定；`observed_new_rows/texts` 是相对于基线新增的 UI 列表项/文本项计数。初始化时列表为空则保持 `initializing`，首批非空行只建立基线。正常结束退出码 0，读取失败或中止为 3；退出码 0 不表示真实收发验收通过。
+验收需等待用户输入时，可显式使用 `--seconds 0 --until-texts 2`：不设置整体等待时限，直到目标数量、读取错误或中断。零秒不能单独使用，也不能用于单次诊断。Windows包装入口的 `-ListenSeconds` 支持1–3600秒；持续等待请使用Python入口，见 [READ_CANDIDATES.md](READ_CANDIDATES.md)。没有自动重启或重新建立基线。
+
+首次建立基线，之后每秒尝试读取一次；系统 UIA 单次调用可能使实际间隔变长。编译最多25秒，每次读取最多8秒，异常即停止；这两个超时和会话4096项容量在持续等待模式仍生效。正数等待时限在每次读取后检查，最后一次读取可能跨过时限。源码入口是 `scripts/listen-wechat.py`，安装后的命令为 `wechat-memory-listen --client-path ... --seconds 30`。
+
+`status=reading` 与 `window_bound=true` 表示当前窗口已绑定；`observed_new_rows/texts` 是相对于基线新增的 UI 列表项/文本项计数。初始化时列表为空则保持 `initializing`，首批非空行只建立基线。v0.1.10正常结束的最后一条报告为 `status=completed`，`completion_reason` 区分 `text_limit_reached` 与 `deadline_reached`；后者不能算收到目标数量。正常结束退出码0，读取失败或中止仍为 `stopped` / 3，不带正常完成原因。退出码0不表示真实收发验收通过。
 
 `stop_reason` 在正常读取时为 null，停止时只输出固定错误代码。第一次停止原因保留，未知异常转为 `read_failed`；不输出异常正文。`front_evictions` 只累计接受的顶部移除，`seen_tokens` 包含基线及已移出项；失败批次不增加计数。
 

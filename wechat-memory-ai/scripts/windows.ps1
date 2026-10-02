@@ -6,7 +6,7 @@ param(
     [string]$Guard = '',
     [switch]$Confirm,
     [string]$ClientPath = '',
-    [ValidateRange(1,300)][int]$ListenSeconds = 30,
+    [ValidateRange(1,3600)][int]$ListenSeconds = 30,
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'

@@ -1,0 +1,12 @@
+test_bad_limits_and_inspection_target_are_rejected_before_reader_creation (test_listener_wait.ListenerWaitTests.test_bad_limits_and_inspection_target_are_rejected_before_reader_creation) ... ok
+test_deadline_without_arrivals_is_not_reported_as_target_reached (test_listener_wait.ListenerWaitTests.test_deadline_without_arrivals_is_not_reported_as_target_reached) ... ok
+test_default_duration_remains_thirty_seconds (test_listener_wait.ListenerWaitTests.test_default_duration_remains_thirty_seconds) ... ok
+test_failure_never_becomes_normal_completion (test_listener_wait.ListenerWaitTests.test_failure_never_becomes_normal_completion) ... ok
+test_target_ignores_baseline_blank_and_nontext_and_keeps_both_duplicates (test_listener_wait.ListenerWaitTests.test_target_ignores_baseline_blank_and_nontext_and_keeps_both_duplicates) ... ok
+test_target_preserves_whole_accepted_batch_in_all_observation_modes (test_listener_wait.ListenerWaitTests.test_target_preserves_whole_accepted_batch_in_all_observation_modes) ... ok
+test_windows_wrappers_accept_one_hour_and_preserve_native_failure (test_listener_wait.ListenerWaitTests.test_windows_wrappers_accept_one_hour_and_preserve_native_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.617s
+
+OK

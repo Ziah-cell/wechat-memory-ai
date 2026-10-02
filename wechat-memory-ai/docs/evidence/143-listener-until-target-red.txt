@@ -1,0 +1,144 @@
+test_bad_limits_and_inspection_target_are_rejected_before_reader_creation (test_listener_wait.ListenerWaitTests.test_bad_limits_and_inspection_target_are_rejected_before_reader_creation) ... ok
+test_deadline_without_arrivals_is_not_reported_as_target_reached (test_listener_wait.ListenerWaitTests.test_deadline_without_arrivals_is_not_reported_as_target_reached) ... ok
+test_default_duration_remains_thirty_seconds (test_listener_wait.ListenerWaitTests.test_default_duration_remains_thirty_seconds) ... ok
+test_failure_never_becomes_normal_completion (test_listener_wait.ListenerWaitTests.test_failure_never_becomes_normal_completion) ... ok
+test_target_ignores_baseline_blank_and_nontext_and_keeps_both_duplicates (test_listener_wait.ListenerWaitTests.test_target_ignores_baseline_blank_and_nontext_and_keeps_both_duplicates) ... ok
+test_target_preserves_whole_accepted_batch_in_all_observation_modes (test_listener_wait.ListenerWaitTests.test_target_preserves_whole_accepted_batch_in_all_observation_modes) ... ok
+test_windows_wrappers_accept_one_hour_and_preserve_native_failure (test_listener_wait.ListenerWaitTests.test_windows_wrappers_accept_one_hour_and_preserve_native_failure) ... ok
+test_zero_seconds_error_and_interrupt_stop_and_release_reader (test_listener_wait.ListenerWaitTests.test_zero_seconds_error_and_interrupt_stop_and_release_reader) ... 
+  test_zero_seconds_error_and_interrupt_stop_and_release_reader (test_listener_wait.ListenerWaitTests.test_zero_seconds_error_and_interrupt_stop_and_release_reader) (reason='client_unavailable') ... FAIL
+  test_zero_seconds_error_and_interrupt_stop_and_release_reader (test_listener_wait.ListenerWaitTests.test_zero_seconds_error_and_interrupt_stop_and_release_reader) (reason='interrupted') ... FAIL
+test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) ... 
+  test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=[]) ... FAIL
+  test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=['--observe-occurrences']) ... FAIL
+  test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=['--observe-visual-occurrences']) ... FAIL
+
+======================================================================
+FAIL: test_zero_seconds_error_and_interrupt_stop_and_release_reader (test_listener_wait.ListenerWaitTests.test_zero_seconds_error_and_interrupt_stop_and_release_reader) (reason='client_unavailable')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 38, in run_listener
+    result = live_read.main(['--client-path', 'fixture.exe', *arguments])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 483, in main
+    parser.error('seconds must be between 1 and 3600')
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 118, in test_zero_seconds_error_and_interrupt_stop_and_release_reader
+    code, reports, reader = self.run_listener([raw,raw,error],
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 40, in run_listener
+    self.fail(f'Valid listener arguments were rejected with exit code {error.code}')
+AssertionError: Valid listener arguments were rejected with exit code 2
+
+======================================================================
+FAIL: test_zero_seconds_error_and_interrupt_stop_and_release_reader (test_listener_wait.ListenerWaitTests.test_zero_seconds_error_and_interrupt_stop_and_release_reader) (reason='interrupted')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 38, in run_listener
+    result = live_read.main(['--client-path', 'fixture.exe', *arguments])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 483, in main
+    parser.error('seconds must be between 1 and 3600')
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 118, in test_zero_seconds_error_and_interrupt_stop_and_release_reader
+    code, reports, reader = self.run_listener([raw,raw,error],
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 40, in run_listener
+    self.fail(f'Valid listener arguments were rejected with exit code {error.code}')
+AssertionError: Valid listener arguments were rejected with exit code 2
+
+======================================================================
+FAIL: test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 38, in run_listener
+    result = live_read.main(['--client-path', 'fixture.exe', *arguments])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 483, in main
+    parser.error('seconds must be between 1 and 3600')
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 103, in test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes
+    code, reports, reader = self.run_listener(snapshots,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 40, in run_listener
+    self.fail(f'Valid listener arguments were rejected with exit code {error.code}')
+AssertionError: Valid listener arguments were rejected with exit code 2
+
+======================================================================
+FAIL: test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=['--observe-occurrences'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 38, in run_listener
+    result = live_read.main(['--client-path', 'fixture.exe', *arguments])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 483, in main
+    parser.error('seconds must be between 1 and 3600')
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 103, in test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes
+    code, reports, reader = self.run_listener(snapshots,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 40, in run_listener
+    self.fail(f'Valid listener arguments were rejected with exit code {error.code}')
+AssertionError: Valid listener arguments were rejected with exit code 2
+
+======================================================================
+FAIL: test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes (test_listener_wait.ListenerWaitTests.test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes) (mode=['--observe-visual-occurrences'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 38, in run_listener
+    result = live_read.main(['--client-path', 'fixture.exe', *arguments])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 483, in main
+    parser.error('seconds must be between 1 and 3600')
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 103, in test_zero_seconds_waits_past_one_hour_until_text_target_in_all_modes
+    code, reports, reader = self.run_listener(snapshots,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_listener_wait.py", line 40, in run_listener
+    self.fail(f'Valid listener arguments were rejected with exit code {error.code}')
+AssertionError: Valid listener arguments were rejected with exit code 2
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.975s
+
+FAILED (failures=5)
