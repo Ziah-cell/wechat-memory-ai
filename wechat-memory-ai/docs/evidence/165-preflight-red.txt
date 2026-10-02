@@ -1,0 +1,535 @@
+test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart (test_preflight.PreflightTests.test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart) ... FAIL
+test_cli_challenge_once_and_target_counts_only_post_marker_incoming (test_preflight.PreflightTests.test_cli_challenge_once_and_target_counts_only_post_marker_incoming) ... FAIL
+test_cli_deadline_or_reader_error_never_leaves_gate_armed (test_preflight.PreflightTests.test_cli_deadline_or_reader_error_never_leaves_gate_armed) ... FAIL
+test_cli_requires_bounded_time_and_cannot_combine_modes (test_preflight.PreflightTests.test_cli_requires_bounded_time_and_cannot_combine_modes) ... FAIL
+test_completion_closes_gate_and_rejects_further_accepts (test_preflight.PreflightTests.test_completion_closes_gate_and_rejects_further_accepts) ... FAIL
+test_entire_marker_batch_is_discarded_then_only_subsequent_incoming_passes (test_preflight.PreflightTests.test_entire_marker_batch_is_discarded_then_only_subsequent_incoming_passes) ... FAIL
+test_history_scroll_shape_cannot_unlock_even_with_incoming_directions (test_preflight.PreflightTests.test_history_scroll_shape_cannot_unlock_even_with_incoming_directions) ... 
+  test_history_scroll_shape_cannot_unlock_even_with_incoming_directions (test_preflight.PreflightTests.test_history_scroll_shape_cannot_unlock_even_with_incoming_directions) (direction='unknown') ... FAIL
+  test_history_scroll_shape_cannot_unlock_even_with_incoming_directions (test_preflight.PreflightTests.test_history_scroll_shape_cannot_unlock_even_with_incoming_directions) (direction='incoming_candidate') ... FAIL
+test_marker_in_generated_baseline_collision_stops_without_unlocking (test_preflight.PreflightTests.test_marker_in_generated_baseline_collision_stops_without_unlocking) ... FAIL
+test_repeated_marker_is_control_only_and_stops_without_partial_delivery (test_preflight.PreflightTests.test_repeated_marker_is_control_only_and_stops_without_partial_delivery) ... FAIL
+test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) ... 
+  test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='self_candidate') ... FAIL
+  test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='unknown') ... FAIL
+  test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='duplicate') ... FAIL
+  test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='nonlast') ... FAIL
+test_unknown_is_dropped_permanently_and_self_cannot_make_reply_loop (test_preflight.PreflightTests.test_unknown_is_dropped_permanently_and_self_cannot_make_reply_loop) ... FAIL
+test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) ... 
+  test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='window') ... FAIL
+  test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='rows') ... FAIL
+  test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='explicit') ... FAIL
+
+======================================================================
+FAIL: test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart (test_preflight.PreflightTests.test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 43, in test_challenge_is_generated_only_after_nonempty_baseline_and_changes_on_restart
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_cli_challenge_once_and_target_counts_only_post_marker_incoming (test_preflight.PreflightTests.test_cli_challenge_once_and_target_counts_only_post_marker_incoming)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 160, in test_cli_challenge_once_and_target_counts_only_post_marker_incoming
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_cli_deadline_or_reader_error_never_leaves_gate_armed (test_preflight.PreflightTests.test_cli_deadline_or_reader_error_never_leaves_gate_armed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 202, in test_cli_deadline_or_reader_error_never_leaves_gate_armed
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_cli_requires_bounded_time_and_cannot_combine_modes (test_preflight.PreflightTests.test_cli_requires_bounded_time_and_cannot_combine_modes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 192, in test_cli_requires_bounded_time_and_cannot_combine_modes
+    self.module()
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_completion_closes_gate_and_rejects_further_accepts (test_preflight.PreflightTests.test_completion_closes_gate_and_rejects_further_accepts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 153, in test_completion_closes_gate_and_rejects_further_accepts
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_entire_marker_batch_is_discarded_then_only_subsequent_incoming_passes (test_preflight.PreflightTests.test_entire_marker_batch_is_discarded_then_only_subsequent_incoming_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 72, in test_entire_marker_batch_is_discarded_then_only_subsequent_incoming_passes
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_history_scroll_shape_cannot_unlock_even_with_incoming_directions (test_preflight.PreflightTests.test_history_scroll_shape_cannot_unlock_even_with_incoming_directions) (direction='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 60, in test_history_scroll_shape_cannot_unlock_even_with_incoming_directions
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_history_scroll_shape_cannot_unlock_even_with_incoming_directions (test_preflight.PreflightTests.test_history_scroll_shape_cannot_unlock_even_with_incoming_directions) (direction='incoming_candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 60, in test_history_scroll_shape_cannot_unlock_even_with_incoming_directions
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_marker_in_generated_baseline_collision_stops_without_unlocking (test_preflight.PreflightTests.test_marker_in_generated_baseline_collision_stops_without_unlocking)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 96, in test_marker_in_generated_baseline_collision_stops_without_unlocking
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_repeated_marker_is_control_only_and_stops_without_partial_delivery (test_preflight.PreflightTests.test_repeated_marker_is_control_only_and_stops_without_partial_delivery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 132, in test_repeated_marker_is_control_only_and_stops_without_partial_delivery
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='self_candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 107, in test_self_unknown_duplicate_or_nonlast_marker_stops_atomically
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 107, in test_self_unknown_duplicate_or_nonlast_marker_stops_atomically
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='duplicate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 107, in test_self_unknown_duplicate_or_nonlast_marker_stops_atomically
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_self_unknown_duplicate_or_nonlast_marker_stops_atomically (test_preflight.PreflightTests.test_self_unknown_duplicate_or_nonlast_marker_stops_atomically) (case='nonlast')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 107, in test_self_unknown_duplicate_or_nonlast_marker_stops_atomically
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_unknown_is_dropped_permanently_and_self_cannot_make_reply_loop (test_preflight.PreflightTests.test_unknown_is_dropped_permanently_and_self_cannot_make_reply_loop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 124, in test_unknown_is_dropped_permanently_and_self_cannot_make_reply_loop
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='window')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 141, in test_window_change_continuity_loss_and_explicit_stop_close_without_rearming
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='rows')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 141, in test_window_change_continuity_loss_and_explicit_stop_close_without_rearming
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+======================================================================
+FAIL: test_window_change_continuity_loss_and_explicit_stop_close_without_rearming (test_preflight.PreflightTests.test_window_change_continuity_loss_and_explicit_stop_close_without_rearming) (failure='explicit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 25, in module
+    return importlib.import_module('wechat_memory.preflight')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'wechat_memory.preflight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tests\test_preflight.py", line 141, in test_window_change_continuity_loss_and_explicit_stop_close_without_rearming
+    session, rows = self.armed()
+                    ^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 33, in armed
+    session = self.session()
+              ^^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 30, in session
+    return self.module().PreflightSession()
+           ^^^^^^^^^^^^^
+  File "tests\test_preflight.py", line 27, in module
+    self.fail('The read-only preflight boundary is not implemented')
+AssertionError: The read-only preflight boundary is not implemented
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.035s
+
+FAILED (failures=18)

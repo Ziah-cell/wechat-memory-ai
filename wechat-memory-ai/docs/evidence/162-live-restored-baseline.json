@@ -1,0 +1,81 @@
+{
+  "status": "restored_baseline_checked",
+  "checks": [
+    {
+      "returned_observations": 0,
+      "report": {
+        "status": "reading",
+        "snapshots": 1,
+        "stop_reason": null,
+        "front_evictions": 0,
+        "seen_tokens": 8,
+        "window_bound": true,
+        "sender_verified": false,
+        "server_message_ids_available": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false,
+        "mode": "visual_occurrence_candidates",
+        "candidate_rows": 0,
+        "candidate_texts": 0,
+        "seen_occurrences": 8,
+        "reused_token_candidates": 0,
+        "incoming_candidate_texts": 0,
+        "self_candidate_texts": 0,
+        "unknown_candidate_texts": 0
+      }
+    },
+    {
+      "returned_observations": 0,
+      "report": {
+        "status": "reading",
+        "snapshots": 2,
+        "stop_reason": null,
+        "front_evictions": 0,
+        "seen_tokens": 8,
+        "window_bound": true,
+        "sender_verified": false,
+        "server_message_ids_available": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false,
+        "mode": "visual_occurrence_candidates",
+        "candidate_rows": 0,
+        "candidate_texts": 0,
+        "seen_occurrences": 8,
+        "reused_token_candidates": 0,
+        "incoming_candidate_texts": 0,
+        "self_candidate_texts": 0,
+        "unknown_candidate_texts": 0
+      }
+    },
+    {
+      "returned_observations": 0,
+      "report": {
+        "status": "reading",
+        "snapshots": 3,
+        "stop_reason": null,
+        "front_evictions": 0,
+        "seen_tokens": 8,
+        "window_bound": true,
+        "sender_verified": false,
+        "server_message_ids_available": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false,
+        "mode": "visual_occurrence_candidates",
+        "candidate_rows": 0,
+        "candidate_texts": 0,
+        "seen_occurrences": 8,
+        "reused_token_candidates": 0,
+        "incoming_candidate_texts": 0,
+        "self_candidate_texts": 0,
+        "unknown_candidate_texts": 0
+      }
+    }
+  ],
+  "auto_resumed": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_sent": 0
+}

@@ -1,0 +1,10 @@
+{
+  "version": "0.1.12",
+  "native_compile_attempted": false,
+  "real_wechat_accessed": false,
+  "network_used": false,
+  "wheel_resources_verified": true,
+  "temporary_install": true,
+  "installed_version_and_preflight_verified": true,
+  "temporary_cleanup_verified": true
+}

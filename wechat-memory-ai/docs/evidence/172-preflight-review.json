@@ -1,0 +1,21 @@
+{
+  "source_review": true,
+  "findings_fixed": 1,
+  "findings_open": 0,
+  "fixed_files": [
+    "src/wechat_memory/live_read.py",
+    "tests/test_preflight.py"
+  ],
+  "failure_evidence": "169-preflight-ascii-red.txt",
+  "passing_evidence": "170-preflight-ascii-green.txt",
+  "test_file": "tests/test_preflight.py",
+  "tests_run": 13,
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "test_errors": 0,
+  "test_seconds": 0.013,
+  "native_runs": 0,
+  "full_suite_runs": 0,
+  "ui_actions": 0,
+  "message_sends": 0
+}

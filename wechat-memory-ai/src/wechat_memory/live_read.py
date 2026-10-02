@@ -36,6 +36,7 @@ _STOP_REASONS = _NATIVE_REASONS | frozenset({
     'reader_build_failed', 'reader_cleanup_failed', 'native_reader_unavailable',
     'interrupted', 'read_failed', 'native_reader_timeout',
     'occurrence_reappeared', 'session_occurrence_limit',
+    'preflight_marker_in_baseline', 'preflight_marker_ambiguous', 'preflight_marker_repeated',
 })
 
 
@@ -484,25 +485,33 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description='Read only one independent WeChat private-chat window.')
     parser.add_argument('--client-path',required=True)
     parser.add_argument('--seconds',type=int,default=30,help='Maximum observation wait, 1–3600 seconds (default: 30); 0 requires --until-texts and waits until the target, an error or interruption.')
-    parser.add_argument('--until-texts',type=int,help='Finish after 1–256 new nonblank text observations of any direction; baseline rows do not count.')
+    parser.add_argument('--until-texts',type=int,help='Finish after 1–256 new nonblank text observations; preflight counts only incoming candidates after its marker, other modes count any direction.')
     inspections=parser.add_mutually_exclusive_group()
     inspections.add_argument('--inspect-layout',action='store_true',help='Report geometry counts without reading message text.')
     inspections.add_argument('--inspect-capabilities',action='store_true',help='Report UIA metadata availability without exporting its values.')
     inspections.add_argument('--inspect-visual',action='store_true',help='Report conservative direction hints from an in-memory window image.')
     inspections.add_argument('--observe-occurrences',action='store_true',help='Observe local UI occurrence candidates, including reused tokens with changed content; never verify new messages.')
     inspections.add_argument('--observe-visual-occurrences',action='store_true',help='Observe text and direction candidates from a single bounded read; never verify senders or new messages.')
+    inspections.add_argument('--preflight',action='store_true',help='Supervised read-only check: wait for a fresh generated marker, then count subsequent incoming candidates. No model, memory or sending; do not navigate history during the session.')
     args = parser.parse_args(argv)
     if not 0 <= args.seconds <= 3600:
         parser.error('seconds must be between 1 and 3600, or 0 with until-texts')
     if args.seconds == 0 and args.until_texts is None:
         parser.error('seconds 0 requires until-texts')
+    if args.preflight and args.seconds == 0:
+        parser.error('preflight requires a bounded wait of 1 to 3600 seconds')
     if args.until_texts is not None:
         if not 1 <= args.until_texts <= 256:
             parser.error('until-texts must be between 1 and 256')
         if args.inspect_layout or args.inspect_capabilities or args.inspect_visual:
             parser.error('until-texts requires an observation mode')
-    session = (VisualOccurrenceSession() if args.observe_visual_occurrences
-               else OccurrenceSession() if args.observe_occurrences else ReadSession())
+    if args.preflight:
+        from .preflight import PreflightSession
+        session = PreflightSession()
+    else:
+        session = (VisualOccurrenceSession() if args.observe_visual_occurrences
+                   else OccurrenceSession() if args.observe_occurrences else ReadSession())
+    challenge_announced = False
     try:
         with NativeReader(args.client_path) as reader:
             if args.inspect_layout:
@@ -517,9 +526,14 @@ def main(argv=None):
             deadline = None if args.seconds == 0 else time.monotonic()+args.seconds
             observed_texts = 0
             while True:
-                observed_texts += len(session.accept(reader.read(visual_text=True) if args.observe_visual_occurrences else reader.read()))
+                observed_texts += len(session.accept(reader.read(visual_text=True) if args.observe_visual_occurrences or args.preflight else reader.read()))
+                if args.preflight and not challenge_announced and session.challenge_text:
+                    print(json.dumps(dict(status='preflight_challenge', challenge=session.challenge_text)),flush=True)
+                    challenge_announced = True
                 elapsed = deadline is not None and time.monotonic() >= deadline
                 reached = args.until_texts is not None and observed_texts >= args.until_texts
+                if args.preflight and (reached or elapsed):
+                    session.close()
                 report = session.report()
                 if reached or elapsed:
                     report.update(status='completed',completion_reason='text_limit_reached' if reached else 'deadline_reached')
