@@ -12,7 +12,7 @@ import subprocess
 import sys
 import time
 
-from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, BackgroundOccurrenceSession, _STOP_REASONS
+from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, BackgroundOccurrenceSession, reader_diagnostics, _STOP_REASONS
 from .runtime import AlreadyRunning, Controller, InstanceLock, atomic_json, runtime_status, send_control
 
 
@@ -36,6 +36,7 @@ def _public_status(raw):
     result['reader_mode'] = mode if isinstance(mode,str) and mode in ('selection','background') else 'visual'
     result['minimized_observation_enabled'] = result['reader_mode'] in ('selection','background')
     result['window_minimized'] = raw.get('window_minimized') is True
+    result['reader_diagnostics'] = reader_diagnostics(raw.get('reader_diagnostics'))
     for key in _COUNTS:
         value = raw.get(key, 0)
         result[key] = value if type(value) is int and 0 <= value < 2**63 else 0
@@ -72,7 +73,8 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
 
             def publish(phase, reason=None):
                 atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
-                            phase=phase, stop_reason=reason, **counts))
+                            phase=phase, stop_reason=reason,
+                            reader_diagnostics=reader_diagnostics(getattr(reader,'diagnostics',None)), **counts))
 
             def stopped():
                 return controller.poll() == 'stop'

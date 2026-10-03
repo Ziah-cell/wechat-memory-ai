@@ -1,0 +1,33 @@
+{
+  "scope": "independent_readonly_code_and_documentation_review",
+  "base_commit": "d914b5ac514246583cf3aaea23751b9d22bc972f",
+  "reviewed_work": "background_native_timing_and_recovery_boundaries",
+  "targeted_test_runs": [
+    {"tests_run": 48, "elapsed_seconds": 2.609, "successful": true},
+    {"tests_run": 10, "elapsed_seconds": 0.031, "successful": true}
+  ],
+  "tests_run_independently": 58,
+  "code_findings": 0,
+  "documentation_findings_initially": 2,
+  "documentation_findings_resolved": 2,
+  "corrections": [
+    "restart_skips_only_visible_baseline_later_synced_history_may_be_unknown",
+    "no_requested_or_observed_arrivals_does_not_prove_no_message_arrived"
+  ],
+  "remaining_findings": 0,
+  "recorded_regression_reviewed": {"discovered": 347, "selected_passed": 334, "excluded": 13},
+  "recorded_package_and_native_samples_reviewed": true,
+  "documentation_followup_reran_tests": false,
+  "native_or_ui_executed_by_reviewer": false,
+  "active_monitor_touched_by_reviewer": false,
+  "reviewer_mutated_files_or_git": false,
+  "outside_review": [
+    "native_execution_and_excluded_fixtures",
+    "current_monitor_state_after_checkpoint_272",
+    "historical_timeout_root_cause_and_long_term_reliability",
+    "real_arrivals_sender_identity_history_model_memory_and_sending",
+    "independent_reproduction_of_sampling_statistics_and_package_execution"
+  ],
+  "ready_for_diagnostic_stage_delivery": true,
+  "automatic_reply_ready": false
+}

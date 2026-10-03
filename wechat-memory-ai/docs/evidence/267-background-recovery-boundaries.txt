@@ -1,0 +1,9 @@
+test_explicit_restart_discards_downtime_text_and_never_promotes_self_or_history (test_background_recovery.BackgroundRecoveryTests.test_explicit_restart_discards_downtime_text_and_never_promotes_self_or_history) ... ok
+test_lost_viewport_is_terminal_even_if_old_anchor_later_returns (test_background_recovery.BackgroundRecoveryTests.test_lost_viewport_is_terminal_even_if_old_anchor_later_returns) ... ok
+test_monitor_stops_after_timeout_or_continuity_loss_without_automatic_rebaseline (test_background_recovery.BackgroundRecoveryTests.test_monitor_stops_after_timeout_or_continuity_loss_without_automatic_rebaseline) ... ok
+test_torn_read_recovers_only_same_binding_with_old_checkpoint_and_unknown_output (test_background_recovery.BackgroundRecoveryTests.test_torn_read_recovers_only_same_binding_with_old_checkpoint_and_unknown_output) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.074s
+
+OK

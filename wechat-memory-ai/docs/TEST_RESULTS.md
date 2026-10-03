@@ -1,4 +1,18 @@
-# Windows 测试结果（当前 v0.1.18）
+# Windows 测试结果（当前 v0.1.19）
+
+## v0.1.19 后台时序与恢复边界
+
+最新发现347项，选定 **334/334通过，75.767秒，0失败/错误/跳过**：[269](evidence/269-reader-timing-regression.txt)、[270范围](evidence/270-reader-timing-regression-scope.json)。继续排除原4类13项原生夹具，不称全套通过，没有重试被拒MSAA/合成位图。
+
+[264](evidence/264-reader-timing-red.txt)为新增7项因缺少诊断接口而失败，不声称当时已验证每项业务断言；[265](evidence/265-reader-timing-targeted.txt)定向60项通过，包括真实Python子进程的超时管道读取、失败阶段保留、畸形记录脱敏与旧重读期限。没有原生UI/位图夹具。[267](evidence/267-background-recovery-boundaries.txt)新增4项验证既有恢复保护，均通过；同绑定重读保留旧会话检查点，失去锚点为终态，重启基线不回放，自身/同步历史/未知均不能提升为来信。
+
+[266](evidence/266-background-native-timing.json)为现有产品Scoped NativeReader实际编译/运行，5次非最小化快照，0候选，0.803–1.071秒。随后Computer Use两次最小化按钮操作均报`coordinate input geometry is unavailable`，未确认成功；用户手动最小化后，新时序监听原生状态才确认最小化。[268](evidence/268-minimized-timing-sample.json)90.937秒采样取得48个不同子调用，0.706–1.357秒、中位0.8555秒；采样结束148次快照全部最小化、0新文本、0超时。阶段外时间包含未观测的启动/调度/结束，不能全部归为启动成本。
+
+[272](evidence/272-timing-monitor-checkpoint.json)检查时新监听仍活动，285次快照全部最小化，0新文本/超时，旧两处监听均停止。保留新监听以收集后续失败阶段，继续前先查状态。259旧超时本轮未复现，根因未确定；本轮未请求新消息，未观察到新文本，因此不是到达、方向或长期稳定验收。
+
+[271离线安装](evidence/271-reader-timing-package.json)版本0.1.19，22模块/5原生资源逐字节匹配，3入口帮助通过。仅复制源码/README/构建声明到临时目录，未读取个人配置或.env，无网络/UI/原生执行，临时目录已清理。
+
+[273独立审查](evidence/273-reader-timing-review.json)58项定向通过，无代码发现。两处文档表述已修正并复审：重启只保证跳过已可见基线；未观察到新增不等于证明没有消息到达。最终无剩余代码/文档发现。审查没有运行原生/UI/API或操作活动监听；包与实机结果仅复核已有证据。本轮没有真实模型调用、实际聊天记忆写入或微信发送。详细语义与范围见[READER_TIMING.md](READER_TIMING.md)。以下为历史结果。
 
 ## v0.1.18普通窗口后台文本
 

@@ -1,0 +1,165 @@
+{
+  "scope": "sampled_sanitized_monitor_status_only",
+  "elapsed_seconds": 90.937,
+  "status": {
+    "mode": "continuous_readonly_observation",
+    "active": true,
+    "phase": "observing",
+    "stop_reason": null,
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "background",
+    "minimized_observation_enabled": true,
+    "window_minimized": true,
+    "reader_diagnostics": {
+      "child_calls": 148,
+      "child_timeouts": 0,
+      "last_call_ms": 706,
+      "max_call_ms": 1357,
+      "last_call_timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 2,
+        "request_read": 3,
+        "client_lookup": 83,
+        "process_lookup": 83,
+        "window_lookup": 95,
+        "binding_check": 220,
+        "tree_lookup": 224,
+        "list_binding": 433,
+        "rows_first": 435,
+        "binding_middle": 449,
+        "rows_second": 450,
+        "rows_compare": 463,
+        "binding_final": 463,
+        "snapshot_ready": 463,
+        "serializing": 463,
+        "completed": 487
+      }
+    },
+    "snapshots": 148,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 148
+  },
+  "unique_sampled_calls": 48,
+  "child_wall_time": {
+    "count": 48,
+    "minimum_ms": 706,
+    "median_ms": 855.5,
+    "maximum_ms": 1357
+  },
+  "phase_times": {
+    "started": {
+      "count": 48,
+      "minimum_ms": 0,
+      "median_ms": 1.0,
+      "maximum_ms": 2
+    },
+    "request_read": {
+      "count": 48,
+      "minimum_ms": 78,
+      "median_ms": 108.0,
+      "maximum_ms": 153
+    },
+    "client_lookup": {
+      "count": 48,
+      "minimum_ms": 0,
+      "median_ms": 0.0,
+      "maximum_ms": 0
+    },
+    "process_lookup": {
+      "count": 48,
+      "minimum_ms": 11,
+      "median_ms": 14.0,
+      "maximum_ms": 19
+    },
+    "window_lookup": {
+      "count": 48,
+      "minimum_ms": 114,
+      "median_ms": 157.0,
+      "maximum_ms": 189
+    },
+    "binding_check": {
+      "count": 48,
+      "minimum_ms": 4,
+      "median_ms": 6.0,
+      "maximum_ms": 8
+    },
+    "tree_lookup": {
+      "count": 48,
+      "minimum_ms": 180,
+      "median_ms": 211.5,
+      "maximum_ms": 301
+    },
+    "list_binding": {
+      "count": 48,
+      "minimum_ms": 1,
+      "median_ms": 2.0,
+      "maximum_ms": 4
+    },
+    "rows_first": {
+      "count": 48,
+      "minimum_ms": 12,
+      "median_ms": 15.0,
+      "maximum_ms": 21
+    },
+    "binding_middle": {
+      "count": 48,
+      "minimum_ms": 1,
+      "median_ms": 2.0,
+      "maximum_ms": 3
+    },
+    "rows_second": {
+      "count": 48,
+      "minimum_ms": 10,
+      "median_ms": 13.0,
+      "maximum_ms": 24
+    },
+    "rows_compare": {
+      "count": 48,
+      "minimum_ms": 0,
+      "median_ms": 0.0,
+      "maximum_ms": 1
+    },
+    "binding_final": {
+      "count": 48,
+      "minimum_ms": 0,
+      "median_ms": 0.0,
+      "maximum_ms": 1
+    },
+    "snapshot_ready": {
+      "count": 48,
+      "minimum_ms": 0,
+      "median_ms": 0.0,
+      "maximum_ms": 1
+    },
+    "serializing": {
+      "count": 48,
+      "minimum_ms": 18,
+      "median_ms": 25.0,
+      "maximum_ms": 33
+    }
+  },
+  "outside_native_checkpoints": {
+    "count": 48,
+    "minimum_ms": 219,
+    "median_ms": 279.0,
+    "maximum_ms": 916
+  },
+  "uninstrumented_time_is_not_pure_process_startup": true,
+  "arrival_acceptance_passed": false,
+  "continuous_run_acceptance_passed": false,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0
+}

@@ -1,0 +1,195 @@
+{
+  "scope": "scoped_product_background_reader_timing",
+  "records": [
+    {
+      "minimized": false,
+      "candidate_texts": 0,
+      "diagnostics": {
+        "child_calls": 1,
+        "child_timeouts": 0,
+        "last_call_ms": 1071,
+        "max_call_ms": 1071,
+        "last_call_timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 3,
+          "request_read": 4,
+          "client_lookup": 46,
+          "process_lookup": 47,
+          "window_lookup": 61,
+          "binding_check": 291,
+          "tree_lookup": 300,
+          "list_binding": 513,
+          "rows_first": 515,
+          "binding_middle": 528,
+          "rows_second": 529,
+          "rows_compare": 539,
+          "binding_final": 540,
+          "snapshot_ready": 540,
+          "serializing": 540,
+          "completed": 615
+        }
+      }
+    },
+    {
+      "minimized": false,
+      "candidate_texts": 0,
+      "diagnostics": {
+        "child_calls": 2,
+        "child_timeouts": 0,
+        "last_call_ms": 945,
+        "max_call_ms": 1071,
+        "last_call_timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 4,
+          "request_read": 4,
+          "client_lookup": 124,
+          "process_lookup": 124,
+          "window_lookup": 139,
+          "binding_check": 330,
+          "tree_lookup": 337,
+          "list_binding": 580,
+          "rows_first": 582,
+          "binding_middle": 599,
+          "rows_second": 600,
+          "rows_compare": 617,
+          "binding_final": 618,
+          "snapshot_ready": 618,
+          "serializing": 618,
+          "completed": 653
+        }
+      }
+    },
+    {
+      "minimized": false,
+      "candidate_texts": 0,
+      "diagnostics": {
+        "child_calls": 3,
+        "child_timeouts": 0,
+        "last_call_ms": 931,
+        "max_call_ms": 1071,
+        "last_call_timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 5,
+          "request_read": 6,
+          "client_lookup": 151,
+          "process_lookup": 151,
+          "window_lookup": 166,
+          "binding_check": 329,
+          "tree_lookup": 335,
+          "list_binding": 559,
+          "rows_first": 561,
+          "binding_middle": 577,
+          "rows_second": 579,
+          "rows_compare": 591,
+          "binding_final": 592,
+          "snapshot_ready": 592,
+          "serializing": 592,
+          "completed": 618
+        }
+      }
+    },
+    {
+      "minimized": false,
+      "candidate_texts": 0,
+      "diagnostics": {
+        "child_calls": 4,
+        "child_timeouts": 0,
+        "last_call_ms": 873,
+        "max_call_ms": 1071,
+        "last_call_timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 3,
+          "request_read": 4,
+          "client_lookup": 122,
+          "process_lookup": 122,
+          "window_lookup": 136,
+          "binding_check": 297,
+          "tree_lookup": 304,
+          "list_binding": 528,
+          "rows_first": 531,
+          "binding_middle": 546,
+          "rows_second": 547,
+          "rows_compare": 561,
+          "binding_final": 562,
+          "snapshot_ready": 562,
+          "serializing": 562,
+          "completed": 589
+        }
+      }
+    },
+    {
+      "minimized": false,
+      "candidate_texts": 0,
+      "diagnostics": {
+        "child_calls": 5,
+        "child_timeouts": 0,
+        "last_call_ms": 803,
+        "max_call_ms": 1071,
+        "last_call_timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 4,
+          "request_read": 4,
+          "client_lookup": 124,
+          "process_lookup": 124,
+          "window_lookup": 139,
+          "binding_check": 300,
+          "tree_lookup": 307,
+          "list_binding": 499,
+          "rows_first": 501,
+          "binding_middle": 514,
+          "rows_second": 515,
+          "rows_compare": 525,
+          "binding_final": 526,
+          "snapshot_ready": 526,
+          "serializing": 526,
+          "completed": 550
+        }
+      }
+    }
+  ],
+  "stop_reason": null,
+  "final_diagnostics": {
+    "child_calls": 5,
+    "child_timeouts": 0,
+    "last_call_ms": 803,
+    "max_call_ms": 1071,
+    "last_call_timed_out": false,
+    "native_trace_valid": true,
+    "last_native_stage": "completed",
+    "native_checkpoints_ms": {
+      "started": 4,
+      "request_read": 4,
+      "client_lookup": 124,
+      "process_lookup": 124,
+      "window_lookup": 139,
+      "binding_check": 300,
+      "tree_lookup": 307,
+      "list_binding": 499,
+      "rows_first": 501,
+      "binding_middle": 514,
+      "rows_second": 515,
+      "rows_compare": 525,
+      "binding_final": 526,
+      "snapshot_ready": 526,
+      "serializing": 526,
+      "completed": 550
+    }
+  },
+  "reader_closed": true,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0,
+  "window_actions": 0,
+  "arrival_acceptance_passed": false,
+  "continuous_run_acceptance_passed": false
+}

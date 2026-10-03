@@ -35,6 +35,17 @@ public sealed class SelectionRow {
 }
 
 public static class LiveReader {
+    static bool timingEnabled;
+    static readonly Stopwatch timingClock = Stopwatch.StartNew();
+    // Only literals are passed here; no UI values, identity or exception text.
+    // Flush each boundary so a killed child can still explain its last stage.
+    static void Timing(string stage) {
+        if(!timingEnabled) return;
+        try {
+            Console.Error.WriteLine("wmrd1:"+stage+":"+timingClock.ElapsedMilliseconds.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            Console.Error.Flush();
+        } catch { /* Diagnostics cannot change snapshot acceptance. */ }
+    }
     // Fixed stage names only. External exception messages never leave the child.
     static string failureReason = "native_reader_failed";
     static Exception Failure(string reason) {
@@ -135,10 +146,12 @@ public static class LiveReader {
             failureReason = "visual_capture_unavailable";
             VisualCapture.UsePhysicalCoordinates();
         }
+        Timing("client_lookup");
         failureReason = "client_unavailable";
         string path = Path.GetFullPath(client);
         if (!File.Exists(path) || !String.Equals(Path.GetFileName(path),"Weixin.exe",StringComparison.OrdinalIgnoreCase))
             throw new InvalidOperationException();
+        Timing("process_lookup");
         var processes = new Dictionary<int,Process>();
         failureReason = "process_inspection_failed";
         foreach (var process in Process.GetProcessesByName("Weixin")) {
@@ -147,6 +160,7 @@ public static class LiveReader {
                     processes.Add(process.Id,process);
             } catch { throw new InvalidOperationException(); }
         }
+        Timing("window_lookup");
         var targets = new List<IntPtr>();
         Exception failure = null;
         failureReason = "window_discovery_failed";
@@ -166,6 +180,7 @@ public static class LiveReader {
         if (targets.Count != 1) throw Failure("private_window_not_unique");
         bool minimized = IsIconic(targets[0]);
         if (minimized && !windowState && !selectionText && !backgroundText) throw Failure("window_minimized");
+        Timing("binding_check");
         failureReason = "window_binding_unavailable";
         IntPtr handle = targets[0];
         uint owner;
@@ -179,6 +194,7 @@ public static class LiveReader {
         CheckBinding(expected,"started",started.ToString());
         CheckBinding(expected,"window",handle.ToInt64());
         CheckBinding(expected,"root",rootId);
+        Timing("tree_lookup");
         var walker = TreeWalker.RawViewWalker;
         failureReason = "message_tree_unavailable";
         var pending = new Queue<KeyValuePair<AutomationElement,int>>();
@@ -208,6 +224,7 @@ public static class LiveReader {
         }
         if ((!selectionText && !input) || messageList == null) throw Failure("message_list_unavailable");
         if(selectionText && (!cancelSelection || input)) throw Failure("selection_mode_required");
+        Timing("list_binding");
         failureReason = "message_list_unavailable";
         string listToken = Token(messageList);
         CheckBinding(expected,"list_token",listToken);
@@ -216,9 +233,13 @@ public static class LiveReader {
             string peer=selectionText ? Property(root,AutomationElement.NameProperty) : null;
             if(selectionText && (String.IsNullOrWhiteSpace(peer) || peer.Length>256 || peer.IndexOfAny(new char[]{'\r','\n','\t','\0'})>=0))
                 throw Failure("selection_mode_required");
+            Timing("rows_first");
             var before=AccessibleRows(messageList,owner,walker,selectionText);
+            Timing("binding_middle");
             RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            Timing("rows_second");
             var after=AccessibleRows(messageList,owner,walker,selectionText);
+            Timing("rows_compare");
             string changedReason=selectionText ? "selection_snapshot_changed" : "background_snapshot_changed";
             if(before.Count!=after.Count) throw Failure(changedReason);
             var selectionRows=new List<object>();
@@ -226,9 +247,11 @@ public static class LiveReader {
                 if(!before[i].Matches(after[i])) throw Failure(changedReason);
                 selectionRows.Add(new {token=before[i].Token,kind=before[i].Kind,text=before[i].Text});
             }
+            Timing("binding_final");
             RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
             if((selectionText && Property(root,AutomationElement.NameProperty)!=peer) || IsIconic(handle)!=minimized)
                 throw Failure(changedReason);
+            Timing("snapshot_ready");
             if(backgroundText)
                 return new {status="background_text_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                     root=rootId,list_token=listToken,minimized=minimized,rows=selectionRows};
@@ -378,14 +401,21 @@ public static class LiveReader {
 
     [STAThread] public static int Main(string[] args) {
         Console.OutputEncoding = new UTF8Encoding(false);
+        timingEnabled = args.Length==2 && args[1]=="--background-text";
+        Timing("started");
         try {
             if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text" && args[1]!="--background-text"))) return 3;
             var serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength=4000000;
+            Timing("request_read");
             string input = Console.In.ReadToEnd();
             if (input.Length>4096) return 3;
             var expected=serializer.Deserialize<Dictionary<string,object>>(input);
-            Console.WriteLine(serializer.Serialize(Snapshot(args[0],expected,args.Length==2 ? args[1] : "")));
+            object snapshot = Snapshot(args[0],expected,args.Length==2 ? args[1] : "");
+            Timing("serializing");
+            Console.WriteLine(serializer.Serialize(snapshot));
+            Console.Out.Flush();
+            Timing("completed");
             return 0;
         } catch {
             var serializer = new JavaScriptSerializer();

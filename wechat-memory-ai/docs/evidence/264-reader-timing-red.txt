@@ -1,0 +1,68 @@
+test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded (test_reader_timing.ReaderTimingTests.test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded) ... FAIL
+test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics (test_reader_timing.ReaderTimingTests.test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics) ... FAIL
+test_os_error_discards_prior_trace_and_does_not_publish_exception (test_reader_timing.ReaderTimingTests.test_os_error_discards_prior_trace_and_does_not_publish_exception) ... FAIL
+test_real_python_child_timeout_preserves_flushed_phase_without_ui (test_reader_timing.ReaderTimingTests.test_real_python_child_timeout_preserves_flushed_phase_without_ui) ... FAIL
+test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints (test_reader_timing.ReaderTimingTests.test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints) ... FAIL
+test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception (test_reader_timing.ReaderTimingTests.test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception) ... FAIL
+test_trace_is_replaced_each_call_and_counters_include_failed_children (test_reader_timing.ReaderTimingTests.test_trace_is_replaced_each_call_and_counters_include_failed_children) ... FAIL
+
+======================================================================
+FAIL: test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded (test_reader_timing.ReaderTimingTests.test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics (test_reader_timing.ReaderTimingTests.test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_os_error_discards_prior_trace_and_does_not_publish_exception (test_reader_timing.ReaderTimingTests.test_os_error_discards_prior_trace_and_does_not_publish_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_real_python_child_timeout_preserves_flushed_phase_without_ui (test_reader_timing.ReaderTimingTests.test_real_python_child_timeout_preserves_flushed_phase_without_ui)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints (test_reader_timing.ReaderTimingTests.test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception (test_reader_timing.ReaderTimingTests.test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+======================================================================
+FAIL: test_trace_is_replaced_each_call_and_counters_include_failed_children (test_reader_timing.ReaderTimingTests.test_trace_is_replaced_each_call_and_counters_include_failed_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_reader_timing.py", line 33, in setUp
+    self.assertTrue(hasattr(native(), 'diagnostics'), 'reader timing diagnostics are missing')
+AssertionError: False is not true : reader timing diagnostics are missing
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.008s
+
+FAILED (failures=7)

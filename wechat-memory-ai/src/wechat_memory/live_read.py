@@ -475,6 +475,56 @@ def window_state_report(raw):
                 real_send_supported=False, model_called=False)
 
 
+_NATIVE_STAGES = ('started', 'request_read', 'client_lookup', 'process_lookup',
+                  'window_lookup', 'binding_check', 'tree_lookup', 'list_binding',
+                  'rows_first', 'binding_middle', 'rows_second', 'rows_compare',
+                  'binding_final', 'snapshot_ready', 'serializing', 'completed')
+_MAX_TIMING_MS = 86_400_000
+
+
+def reader_diagnostics(raw=None):
+    """Reconstruct a public report; arbitrary pipe/status fields never survive."""
+    raw = raw if isinstance(raw, dict) else {}
+    report = {}
+    for key in ('child_calls', 'child_timeouts', 'last_call_ms', 'max_call_ms'):
+        value = raw.get(key, 0)
+        maximum = _MAX_TIMING_MS if key.endswith('_ms') else 2**63-1
+        report[key] = value if type(value) is int and 0 <= value <= maximum else 0
+    report['last_call_timed_out'] = raw.get('last_call_timed_out') is True
+    checkpoints = raw.get('native_checkpoints_ms')
+    valid = (isinstance(checkpoints, dict) and 0 < len(checkpoints) <= len(_NATIVE_STAGES)
+             and set(checkpoints) == set(_NATIVE_STAGES[:len(checkpoints)]))
+    previous = 0
+    if valid:
+        for stage in _NATIVE_STAGES[:len(checkpoints)]:
+            value = checkpoints[stage]
+            if type(value) is not int or not previous <= value <= _MAX_TIMING_MS:
+                valid = False
+                break
+            previous = value
+    report['native_trace_valid'] = bool(valid)
+    report['last_native_stage'] = _NATIVE_STAGES[len(checkpoints)-1] if valid else 'not_reported'
+    report['native_checkpoints_ms'] = dict(checkpoints) if valid else {}
+    return report
+
+
+def _native_checkpoints(stderr):
+    # Require a complete prefix of the fixed sequence. Unknown, partial or
+    # oversized output is discarded in full, without retaining external text.
+    if not isinstance(stderr, bytes) or not stderr or len(stderr) > 4096 or not stderr.endswith(b'\n'):
+        return {}
+    lines = stderr.splitlines()
+    if not 0 < len(lines) <= len(_NATIVE_STAGES):
+        return {}
+    result = {}
+    for stage, line in zip(_NATIVE_STAGES, lines):
+        match = re.fullmatch(b'wmrd1:' + stage.encode('ascii') + rb':([0-9]{1,8})', line)
+        if match is None:
+            return {}
+        result[stage] = int(match[1])
+    return reader_diagnostics({'native_checkpoints_ms': result})['native_checkpoints_ms']
+
+
 class NativeReader:
     def __init__(self, client_path, *, expected_binding=None):
         try:
@@ -485,6 +535,11 @@ class NativeReader:
         self._temporary = None
         self._binding = validate_binding(expected_binding) if expected_binding is not None else None
         self._snapshot_change_retries = 0
+        self._diagnostics = reader_diagnostics()
+
+    @property
+    def diagnostics(self):
+        return reader_diagnostics(self._diagnostics)
 
     @property
     def binding(self):
@@ -593,9 +648,24 @@ class NativeReader:
                 command.append('--selection-text')
             if background_text:
                 command.append('--background-text')
-            done = subprocess.run(command,
-                                  input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=_timeout,
-                                  creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+            stderr, timed_out = None, False
+            started = time.perf_counter()
+            try:
+                done = subprocess.run(command,
+                                      input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=_timeout,
+                                      creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+                stderr = done.stderr
+            except subprocess.TimeoutExpired as error:
+                stderr, timed_out = error.stderr, True
+                raise
+            finally:
+                elapsed = min(_MAX_TIMING_MS, max(0, round((time.perf_counter()-started)*1000)))
+                self._diagnostics.update(
+                    child_calls=self._diagnostics['child_calls']+1,
+                    child_timeouts=self._diagnostics['child_timeouts']+int(timed_out),
+                    last_call_timed_out=timed_out, last_call_ms=elapsed,
+                    max_call_ms=max(elapsed,self._diagnostics['max_call_ms']),
+                    native_checkpoints_ms=_native_checkpoints(stderr))
             if len(done.stdout) > 4_000_000:
                 raise ReadError('native_reader_unavailable')
             raw = json.loads(done.stdout.decode('utf-8-sig'))

@@ -1,0 +1,26 @@
+{
+  "discovered": 347,
+  "selected": 334,
+  "excluded": 13,
+  "excluded_test_ids": [
+    "test_ocr_check.NativeOcrCheckTests.test_blank_synthetic_pixels_cannot_pass_recognition",
+    "test_ocr_check.NativeOcrCheckTests.test_builtin_ocr_with_synthetic_pixels",
+    "test_ocr_check.NativeOcrCheckTests.test_entry_shells_do_not_load_config_or_create_data",
+    "test_ocr_check.NativeOcrCheckTests.test_real_child_timeout",
+    "test_visual_direction.VisualBitmapTests.test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels",
+    "test_visual_direction.VisualBitmapTests.test_positive_and_ambiguous_synthetic_rows",
+    "test_visual_direction.VisualBitmapTests.test_real_native_visual_mode_keeps_client_scope_and_cleanup",
+    "test_visual_occurrences.NativeVisualTextTests.test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry",
+    "test_visual_occurrences.NativeVisualTextTests.test_real_native_joined_mode_rejects_missing_client_and_cleans_up",
+    "test_wechat_probe.NativeProbeTests.test_actual_child_timeout_is_terminated_without_forwarding_output",
+    "test_wechat_probe.NativeProbeTests.test_missing_client_both_entry_shells_no_config_or_data_created",
+    "test_wechat_probe.NativeProbeTests.test_native_tree_is_read_only_scoped_and_bounded_with_private_fixture",
+    "test_wechat_probe.NativeProbeTests.test_provider_process_path_scope_with_synthetic_executable"
+  ],
+  "tests_run": 334,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 75.767,
+  "successful": true
+}
