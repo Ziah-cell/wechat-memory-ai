@@ -1,0 +1,39 @@
+{
+  "scope": "independent_readonly_slowest_call_review",
+  "base_commit": "29645f2b38bc2ce46cf7f9cbe9b3e45beac9c146",
+  "independent_tests_run": 45,
+  "independent_tests_passed": 45,
+  "independent_test_seconds": 5.578,
+  "maximum_value_runtime_fixture_bytes": 1752,
+  "runtime_status_byte_limit": 4096,
+  "copy_isolation_checks_passed": true,
+  "code_findings": 0,
+  "initial_documentation_findings": 2,
+  "resolved_documentation_findings": 2,
+  "documentation_corrections": [
+    "scope_old_no_arrival_request_statement_to_version_0_1_19",
+    "scope_no_text_or_identity_statement_to_diagnostic_records"
+  ],
+  "remaining_findings": 0,
+  "final_regression_evidence_reviewed": {
+    "discovered": 353,
+    "passed": 340,
+    "excluded": 13,
+    "elapsed_seconds": 321.639,
+    "runner_seconds": 321.635
+  },
+  "package_evidence_reviewed": true,
+  "monitor_checkpoint_evidence_reviewed": true,
+  "native_ui_or_api_executed_by_reviewer": false,
+  "live_monitor_queried_or_changed_by_reviewer": false,
+  "files_or_git_mutated_by_reviewer": false,
+  "outside_review": [
+    "current_live_state_after_checkpoint_282",
+    "native_ui_api_execution_and_excluded_fixtures",
+    "historical_timeout_root_cause_and_performance_improvement",
+    "real_arrivals_sender_identity_history_correctness_and_sending",
+    "independent_rerun_of_full_regression_and_package_check"
+  ],
+  "ready_for_diagnostic_stage_delivery": true,
+  "automatic_reply_ready": false
+}

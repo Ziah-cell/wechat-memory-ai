@@ -1,0 +1,59 @@
+test_fast_followup_does_not_erase_slow_phase_evidence (test_slowest_read.SlowestReadTests.test_fast_followup_does_not_erase_slow_phase_evidence) ... FAIL
+test_larger_call_replaces_record_but_equal_duration_retains_first (test_slowest_read.SlowestReadTests.test_larger_call_replaces_record_but_equal_duration_retains_first) ... FAIL
+test_legacy_monitor_status_does_not_invent_slowest_trace (test_slowest_read.SlowestReadTests.test_legacy_monitor_status_does_not_invent_slowest_trace) ... FAIL
+test_public_status_sanitizes_record_and_rejects_inconsistent_metadata (test_slowest_read.SlowestReadTests.test_public_status_sanitizes_record_and_rejects_inconsistent_metadata) ... FAIL
+test_reports_are_independent_and_only_keep_one_bounded_record (test_slowest_read.SlowestReadTests.test_reports_are_independent_and_only_keep_one_bounded_record) ... FAIL
+test_slow_timeout_or_os_failure_replaces_success_without_leaking_error (test_slowest_read.SlowestReadTests.test_slow_timeout_or_os_failure_replaces_success_without_leaking_error) ... FAIL
+
+======================================================================
+FAIL: test_fast_followup_does_not_erase_slow_phase_evidence (test_slowest_read.SlowestReadTests.test_fast_followup_does_not_erase_slow_phase_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+======================================================================
+FAIL: test_larger_call_replaces_record_but_equal_duration_retains_first (test_slowest_read.SlowestReadTests.test_larger_call_replaces_record_but_equal_duration_retains_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+======================================================================
+FAIL: test_legacy_monitor_status_does_not_invent_slowest_trace (test_slowest_read.SlowestReadTests.test_legacy_monitor_status_does_not_invent_slowest_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+======================================================================
+FAIL: test_public_status_sanitizes_record_and_rejects_inconsistent_metadata (test_slowest_read.SlowestReadTests.test_public_status_sanitizes_record_and_rejects_inconsistent_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+======================================================================
+FAIL: test_reports_are_independent_and_only_keep_one_bounded_record (test_slowest_read.SlowestReadTests.test_reports_are_independent_and_only_keep_one_bounded_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+======================================================================
+FAIL: test_slow_timeout_or_os_failure_replaces_success_without_leaking_error (test_slowest_read.SlowestReadTests.test_slow_timeout_or_os_failure_replaces_success_without_leaking_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 15, in setUp
+    self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
+AssertionError: 'slowest_call' not found in {'child_calls': 0, 'child_timeouts': 0, 'last_call_ms': 0, 'max_call_ms': 0, 'last_call_timed_out': False, 'native_trace_valid': False, 'last_native_stage': 'not_reported', 'native_checkpoints_ms': {}} : slowest native call is not retained
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.028s
+
+FAILED (failures=6)

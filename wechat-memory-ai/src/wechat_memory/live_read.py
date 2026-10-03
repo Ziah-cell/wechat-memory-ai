@@ -482,16 +482,8 @@ _NATIVE_STAGES = ('started', 'request_read', 'client_lookup', 'process_lookup',
 _MAX_TIMING_MS = 86_400_000
 
 
-def reader_diagnostics(raw=None):
-    """Reconstruct a public report; arbitrary pipe/status fields never survive."""
-    raw = raw if isinstance(raw, dict) else {}
+def _checkpoint_diagnostics(checkpoints):
     report = {}
-    for key in ('child_calls', 'child_timeouts', 'last_call_ms', 'max_call_ms'):
-        value = raw.get(key, 0)
-        maximum = _MAX_TIMING_MS if key.endswith('_ms') else 2**63-1
-        report[key] = value if type(value) is int and 0 <= value <= maximum else 0
-    report['last_call_timed_out'] = raw.get('last_call_timed_out') is True
-    checkpoints = raw.get('native_checkpoints_ms')
     valid = (isinstance(checkpoints, dict) and 0 < len(checkpoints) <= len(_NATIVE_STAGES)
              and set(checkpoints) == set(_NATIVE_STAGES[:len(checkpoints)]))
     previous = 0
@@ -505,6 +497,29 @@ def reader_diagnostics(raw=None):
     report['native_trace_valid'] = bool(valid)
     report['last_native_stage'] = _NATIVE_STAGES[len(checkpoints)-1] if valid else 'not_reported'
     report['native_checkpoints_ms'] = dict(checkpoints) if valid else {}
+    return report
+
+
+def reader_diagnostics(raw=None):
+    """Reconstruct a public report; arbitrary pipe/status fields never survive."""
+    raw = raw if isinstance(raw, dict) else {}
+    report = {}
+    for key in ('child_calls', 'child_timeouts', 'last_call_ms', 'max_call_ms'):
+        value = raw.get(key, 0)
+        maximum = _MAX_TIMING_MS if key.endswith('_ms') else 2**63-1
+        report[key] = value if type(value) is int and 0 <= value <= maximum else 0
+    report['last_call_timed_out'] = raw.get('last_call_timed_out') is True
+    report.update(_checkpoint_diagnostics(raw.get('native_checkpoints_ms')))
+    report['slowest_call'] = None
+    slowest = raw.get('slowest_call')
+    if (isinstance(slowest, dict) and type(slowest.get('child_call')) is int
+            and 1 <= slowest['child_call'] <= report['child_calls']
+            and type(raw.get('max_call_ms')) is int and 0 <= raw['max_call_ms'] <= _MAX_TIMING_MS
+            and type(slowest.get('call_ms')) is int and slowest['call_ms'] == report['max_call_ms']
+            and type(slowest.get('timed_out')) is bool):
+        report['slowest_call'] = dict(child_call=slowest['child_call'], call_ms=slowest['call_ms'],
+                                      timed_out=slowest['timed_out'],
+                                      **_checkpoint_diagnostics(slowest.get('native_checkpoints_ms')))
     return report
 
 
@@ -522,7 +537,7 @@ def _native_checkpoints(stderr):
         if match is None:
             return {}
         result[stage] = int(match[1])
-    return reader_diagnostics({'native_checkpoints_ms': result})['native_checkpoints_ms']
+    return _checkpoint_diagnostics(result)['native_checkpoints_ms']
 
 
 class NativeReader:
@@ -660,12 +675,20 @@ class NativeReader:
                 raise
             finally:
                 elapsed = min(_MAX_TIMING_MS, max(0, round((time.perf_counter()-started)*1000)))
+                checkpoints = _native_checkpoints(stderr)
+                # Retain one slow-call checkpoint, including failures. Later
+                # fast calls must not erase the phase evidence for an outlier.
+                # Equal rounded durations keep the first sample deterministically.
+                if self._diagnostics['slowest_call'] is None or elapsed > self._diagnostics['max_call_ms']:
+                    self._diagnostics['slowest_call'] = dict(
+                        child_call=self._diagnostics['child_calls']+1, call_ms=elapsed,
+                        timed_out=timed_out, native_checkpoints_ms=checkpoints)
                 self._diagnostics.update(
                     child_calls=self._diagnostics['child_calls']+1,
                     child_timeouts=self._diagnostics['child_timeouts']+int(timed_out),
                     last_call_timed_out=timed_out, last_call_ms=elapsed,
                     max_call_ms=max(elapsed,self._diagnostics['max_call_ms']),
-                    native_checkpoints_ms=_native_checkpoints(stderr))
+                    native_checkpoints_ms=checkpoints)
             if len(done.stdout) > 4_000_000:
                 raise ReadError('native_reader_unavailable')
             raw = json.loads(done.stdout.decode('utf-8-sig'))

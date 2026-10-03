@@ -1,0 +1,15 @@
+{
+  "version": "0.1.20",
+  "python_modules": 22,
+  "native_resources": 5,
+  "entry_points": 3,
+  "installed_sources_match": true,
+  "help_checks_passed": true,
+  "network_used": false,
+  "personal_configuration_read": false,
+  "native_or_ui_executed": false,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0,
+  "temporary_directory_removed": true
+}

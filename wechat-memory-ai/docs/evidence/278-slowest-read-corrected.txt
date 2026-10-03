@@ -1,0 +1,18 @@
+test_fast_followup_does_not_erase_slow_phase_evidence (test_slowest_read.SlowestReadTests.test_fast_followup_does_not_erase_slow_phase_evidence) ... ok
+test_larger_call_replaces_record_but_equal_duration_retains_first (test_slowest_read.SlowestReadTests.test_larger_call_replaces_record_but_equal_duration_retains_first) ... ok
+test_legacy_monitor_status_does_not_invent_slowest_trace (test_slowest_read.SlowestReadTests.test_legacy_monitor_status_does_not_invent_slowest_trace) ... ok
+test_public_status_sanitizes_record_and_rejects_inconsistent_metadata (test_slowest_read.SlowestReadTests.test_public_status_sanitizes_record_and_rejects_inconsistent_metadata) ... ok
+test_reports_are_independent_and_only_keep_one_bounded_record (test_slowest_read.SlowestReadTests.test_reports_are_independent_and_only_keep_one_bounded_record) ... ok
+test_slow_timeout_or_os_failure_replaces_success_without_leaking_error (test_slowest_read.SlowestReadTests.test_slow_timeout_or_os_failure_replaces_success_without_leaking_error) ... ok
+test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded (test_reader_timing.ReaderTimingTests.test_malformed_unknown_oversized_and_out_of_order_traces_are_discarded) ... ok
+test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics (test_reader_timing.ReaderTimingTests.test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics) ... ok
+test_os_error_discards_prior_trace_and_does_not_publish_exception (test_reader_timing.ReaderTimingTests.test_os_error_discards_prior_trace_and_does_not_publish_exception) ... ok
+test_real_python_child_timeout_preserves_flushed_phase_without_ui (test_reader_timing.ReaderTimingTests.test_real_python_child_timeout_preserves_flushed_phase_without_ui) ... ok
+test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints (test_reader_timing.ReaderTimingTests.test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints) ... ok
+test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception (test_reader_timing.ReaderTimingTests.test_timeout_keeps_partial_stderr_but_never_partial_stdout_or_exception) ... ok
+test_trace_is_replaced_each_call_and_counters_include_failed_children (test_reader_timing.ReaderTimingTests.test_trace_is_replaced_each_call_and_counters_include_failed_children) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.359s
+
+OK

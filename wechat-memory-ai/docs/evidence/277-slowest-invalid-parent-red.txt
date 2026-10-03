@@ -1,0 +1,14 @@
+test_public_status_sanitizes_record_and_rejects_inconsistent_metadata (test_slowest_read.SlowestReadTests.test_public_status_sanitizes_record_and_rejects_inconsistent_metadata) ... FAIL
+
+======================================================================
+FAIL: test_public_status_sanitizes_record_and_rejects_inconsistent_metadata (test_slowest_read.SlowestReadTests.test_public_status_sanitizes_record_and_rejects_inconsistent_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_slowest_read.py", line 81, in test_public_status_sanitizes_record_and_rejects_inconsistent_metadata
+    self.assertIsNone(monitor._public_status({'reader_diagnostics':raw})['reader_diagnostics']['slowest_call'])
+AssertionError: {'child_call': 3, 'call_ms': 0, 'timed_out': False, 'native_trace_valid': True, 'last_native_stage': 'request_read', 'native_checkpoints_ms': {'started': 0, 'request_read': 1}} is not None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (failures=1)
