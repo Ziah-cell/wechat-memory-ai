@@ -1,0 +1,68 @@
+test_background_late_result_is_not_delivered (test_background_read.BackgroundReadTests.test_background_late_result_is_not_delivered) ... FAIL
+test_changed_window_and_old_occurrence_reappearance_still_stop (test_background_read.BackgroundReadTests.test_changed_window_and_old_occurrence_reappearance_still_stop) ... FAIL
+test_monitor_counts_new_text_without_claiming_incoming_or_self (test_background_read.BackgroundReadTests.test_monitor_counts_new_text_without_claiming_incoming_or_self) ... FAIL
+test_old_viewport_is_skipped_and_two_equal_text_arrivals_remain_distinct (test_background_read.BackgroundReadTests.test_old_viewport_is_skipped_and_two_equal_text_arrivals_remain_distinct) ... FAIL
+test_only_bound_torn_reads_retry_with_same_binding (test_background_read.BackgroundReadTests.test_only_bound_torn_reads_retry_with_same_binding) ... FAIL
+test_other_protocols_or_extra_sender_fields_cannot_be_promoted (test_background_read.BackgroundReadTests.test_other_protocols_or_extra_sender_fields_cannot_be_promoted) ... FAIL
+test_read_uses_separate_native_mode_without_visual_fallback (test_background_read.BackgroundReadTests.test_read_uses_separate_native_mode_without_visual_fallback) ... FAIL
+
+======================================================================
+FAIL: test_background_late_result_is_not_delivered (test_background_read.BackgroundReadTests.test_background_late_result_is_not_delivered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_changed_window_and_old_occurrence_reappearance_still_stop (test_background_read.BackgroundReadTests.test_changed_window_and_old_occurrence_reappearance_still_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_monitor_counts_new_text_without_claiming_incoming_or_self (test_background_read.BackgroundReadTests.test_monitor_counts_new_text_without_claiming_incoming_or_self)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_old_viewport_is_skipped_and_two_equal_text_arrivals_remain_distinct (test_background_read.BackgroundReadTests.test_old_viewport_is_skipped_and_two_equal_text_arrivals_remain_distinct)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_only_bound_torn_reads_retry_with_same_binding (test_background_read.BackgroundReadTests.test_only_bound_torn_reads_retry_with_same_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_other_protocols_or_extra_sender_fields_cannot_be_promoted (test_background_read.BackgroundReadTests.test_other_protocols_or_extra_sender_fields_cannot_be_promoted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+======================================================================
+FAIL: test_read_uses_separate_native_mode_without_visual_fallback (test_background_read.BackgroundReadTests.test_read_uses_separate_native_mode_without_visual_fallback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_background_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read,'validate_background_snapshot',None)),
+AssertionError: False is not true : normal minimized text reader is not implemented
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=7)

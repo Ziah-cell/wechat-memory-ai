@@ -12,7 +12,7 @@ import subprocess
 import sys
 import time
 
-from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, _STOP_REASONS
+from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, BackgroundOccurrenceSession, _STOP_REASONS
 from .runtime import AlreadyRunning, Controller, InstanceLock, atomic_json, runtime_status, send_control
 
 
@@ -32,8 +32,9 @@ def _public_status(raw):
                   sender_verified=False, history_boundary_verified=False,
                   real_send_supported=False, model_called=False, memory_written=False,
                   minimized_supported=False, reply_ready=False)
-    result['reader_mode'] = 'selection' if raw.get('reader_mode') == 'selection' else 'visual'
-    result['minimized_observation_enabled'] = result['reader_mode'] == 'selection'
+    mode = raw.get('reader_mode')
+    result['reader_mode'] = mode if isinstance(mode,str) and mode in ('selection','background') else 'visual'
+    result['minimized_observation_enabled'] = result['reader_mode'] in ('selection','background')
     result['window_minimized'] = raw.get('window_minimized') is True
     for key in _COUNTS:
         value = raw.get(key, 0)
@@ -52,7 +53,7 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
     rebind, history replay, model callback, or send operation is provided.
     """
     directory = Path(directory)
-    if reader_mode not in ('visual','selection'):
+    if reader_mode not in ('visual','selection','background'):
         return 2
     if run_id is not None and not re.fullmatch(r'[a-f0-9]{32}', run_id):
         return 2
@@ -61,7 +62,8 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
             controller = Controller(directory)
             if run_id is not None:
                 controller.run_id = run_id
-            session = SelectionOccurrenceSession() if reader_mode == 'selection' else VisualOccurrenceSession()
+            session = {'visual':VisualOccurrenceSession, 'selection':SelectionOccurrenceSession,
+                       'background':BackgroundOccurrenceSession}[reader_mode]()
             reader = None
             counts = dict.fromkeys(_COUNTS, 0)
             counts['baseline_ready'] = False
@@ -82,7 +84,12 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
                     while True:
                         if stopped():
                             break
-                        raw = reader.read_selection_text() if reader_mode == 'selection' else reader.read(visual_text=True)
+                        if reader_mode == 'selection':
+                            raw = reader.read_selection_text()
+                        elif reader_mode == 'background':
+                            raw = reader.read_background_text()
+                        else:
+                            raw = reader.read(visual_text=True)
                         if stopped():
                             break
                         observations = session.accept(raw)
@@ -183,8 +190,8 @@ def main(argv=None):
     for action in ('start', 'run'):
         item = actions.add_parser(action)
         item.add_argument('--client-path', required=True)
-        item.add_argument('--reader', choices=('visual','selection'), default='visual',
-                          help='selection reads multiselect labels without pixels, including minimized windows; candidates only.')
+        item.add_argument('--reader', choices=('visual','selection','background'), default='visual',
+                          help='background reads normal-window text; selection reads multiselect labels; both allow minimization and never verify a sender.')
         if action == 'run':
             item.add_argument('--run-id', help=argparse.SUPPRESS)
     actions.add_parser('status')

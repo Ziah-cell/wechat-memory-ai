@@ -8,7 +8,7 @@ param(
     [string]$ClientPath = '',
     [ValidateRange(1,3600)][int]$ListenSeconds = 30,
     [string]$ListenerData = 'data/listener',
-    [ValidateSet('visual','selection')][string]$ListenerReader = 'visual',
+    [ValidateSet('visual','selection','background')][string]$ListenerReader = 'visual',
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'

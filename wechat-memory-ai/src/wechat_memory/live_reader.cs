@@ -103,16 +103,16 @@ public static class LiveReader {
         }
         if(indexAfter!=visualRows.Count) throw new InvalidOperationException();
     }
-    static List<SelectionRow> SelectionRows(AutomationElement list, uint owner, TreeWalker walker) {
+    static List<SelectionRow> AccessibleRows(AutomationElement list, uint owner, TreeWalker walker, bool multiselect) {
         var rows = new List<SelectionRow>();
         for(var child=walker.GetFirstChild(list); child!=null; child=walker.GetNextSibling(child)) {
             if(rows.Count>=256) throw Failure("message_rows_unavailable");
             SameProcess(child,(int)owner);
             var type=(ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty);
             string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
-            if((kind=="text" && type!=ControlType.CheckBox)
-                    || (type!=ControlType.CheckBox && type!=ControlType.ListItem))
-                throw Failure("selection_mode_required");
+            if(multiselect ? (kind=="text" && type!=ControlType.CheckBox)
+                    || (type!=ControlType.CheckBox && type!=ControlType.ListItem) : type!=ControlType.ListItem)
+                throw Failure(multiselect ? "selection_mode_required" : "background_mode_required");
             // No pixel capture, layout inference, input, or sender guessing.
             string label=Property(child,AutomationElement.NameProperty);
             if(label.Length>10000) throw Failure("message_rows_unavailable");
@@ -126,6 +126,7 @@ public static class LiveReader {
         bool visualText = mode == "--visual-text";
         bool windowState = mode == "--window-state";
         bool selectionText = mode == "--selection-text";
+        bool backgroundText = mode == "--background-text";
         // This explicit, already-bound diagnostic reads neither Name nor pixels.
         // The separate multiselect path reads labels; capture paths still reject minimization.
         if(windowState && expected==null) throw Failure("window_binding_unavailable");
@@ -164,7 +165,7 @@ public static class LiveReader {
         if (failure != null) throw new InvalidOperationException();
         if (targets.Count != 1) throw Failure("private_window_not_unique");
         bool minimized = IsIconic(targets[0]);
-        if (minimized && !windowState && !selectionText) throw Failure("window_minimized");
+        if (minimized && !windowState && !selectionText && !backgroundText) throw Failure("window_minimized");
         failureReason = "window_binding_unavailable";
         IntPtr handle = targets[0];
         uint owner;
@@ -210,23 +211,27 @@ public static class LiveReader {
         failureReason = "message_list_unavailable";
         string listToken = Token(messageList);
         CheckBinding(expected,"list_token",listToken);
-        if(selectionText) {
+        if(selectionText || backgroundText) {
             failureReason="message_rows_unavailable";
-            string peer=Property(root,AutomationElement.NameProperty);
-            if(String.IsNullOrWhiteSpace(peer) || peer.Length>256 || peer.IndexOfAny(new char[]{'\r','\n','\t','\0'})>=0)
+            string peer=selectionText ? Property(root,AutomationElement.NameProperty) : null;
+            if(selectionText && (String.IsNullOrWhiteSpace(peer) || peer.Length>256 || peer.IndexOfAny(new char[]{'\r','\n','\t','\0'})>=0))
                 throw Failure("selection_mode_required");
-            var before=SelectionRows(messageList,owner,walker);
+            var before=AccessibleRows(messageList,owner,walker,selectionText);
             RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
-            var after=SelectionRows(messageList,owner,walker);
-            if(before.Count!=after.Count) throw Failure("selection_snapshot_changed");
+            var after=AccessibleRows(messageList,owner,walker,selectionText);
+            string changedReason=selectionText ? "selection_snapshot_changed" : "background_snapshot_changed";
+            if(before.Count!=after.Count) throw Failure(changedReason);
             var selectionRows=new List<object>();
             for(int i=0;i<before.Count;i++) {
-                if(!before[i].Matches(after[i])) throw Failure("selection_snapshot_changed");
+                if(!before[i].Matches(after[i])) throw Failure(changedReason);
                 selectionRows.Add(new {token=before[i].Token,kind=before[i].Kind,text=before[i].Text});
             }
             RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
-            if(Property(root,AutomationElement.NameProperty)!=peer || IsIconic(handle)!=minimized)
-                throw Failure("selection_snapshot_changed");
+            if((selectionText && Property(root,AutomationElement.NameProperty)!=peer) || IsIconic(handle)!=minimized)
+                throw Failure(changedReason);
+            if(backgroundText)
+                return new {status="background_text_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+                    root=rootId,list_token=listToken,minimized=minimized,rows=selectionRows};
             return new {status="selection_text_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
                 root=rootId,list_token=listToken,peer_name=peer,minimized=minimized,rows=selectionRows};
         }
@@ -374,7 +379,7 @@ public static class LiveReader {
     [STAThread] public static int Main(string[] args) {
         Console.OutputEncoding = new UTF8Encoding(false);
         try {
-            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text"))) return 3;
+            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text" && args[1]!="--background-text"))) return 3;
             var serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength=4000000;
             string input = Console.In.ReadToEnd();

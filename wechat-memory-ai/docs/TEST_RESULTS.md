@@ -1,4 +1,18 @@
-# Windows 测试结果（当前 v0.1.17）
+# Windows 测试结果（当前 v0.1.18）
+
+## v0.1.18普通窗口后台文本
+
+最新发现336项，选定 **323/323通过，76.531秒，0失败/错误/跳过**：[260](evidence/260-background-final-regression.txt)、[261范围](evidence/261-background-final-regression-scope.json)。继续排除原4类13项原生测试，不能称全套通过。
+
+[255](evidence/255-background-read-red.txt)新增7项先7失败0错误；[256](evidence/256-background-read-targeted.txt)联合48项通过，涵盖基线不回放、两条相同文本、全部unknown、其他协议拒绝、绑定变化与旧组合拒绝、同绑定有界重读、期限后不交付和状态不含正文。
+
+[254](evidence/254-minimized-arrival-incomplete.json)：旧多选监听6755次后window_or_list_changed，0候选；用户确认操作过窗口，恢复检查已有两条文字，但不能算捕获成功。[257](evidence/257-background-monitor-start.json)普通模式可启动；[258](evidence/258-background-minimize-transition.json)操作窗口时连续性丢失，随后原生检查仍minimized=false，不能算最小化转换。[259](evidence/259-background-minimized-timeout.json)准确最小化后另一常驻运行3927次，0新文本，最后native_reader_timeout；当前已停止。它证明最小化静态文本可读，不证明来信捕获、长期稳定、方向/身份或后台发送。
+
+[262离线安装](evidence/262-background-package.json)一次构建/隔离安装通过：版本0.1.18，22个模块和5个原生资源逐字节匹配，3个入口及后台模式帮助通过。未读取个人配置或.env、未执行原生/UI/模型/实际记忆/发送，临时目录已清理。
+
+[263独立审查](evidence/263-background-review.json)选定67项纯Python测试通过（1.561秒），另核验4096容量拒绝的计数原子性和后台协议不能进入准入；代码及最终文档均无待修复发现。未运行原生/UI/API，真实最小化来信、恢复、身份/历史及发送不在其验证范围。提交前再次查询确认两处监听均已停止。
+
+没有调用模型、写实际聊天记忆或发送。原4类13项原生夹具继续排除。以下为旧阶段记录。
 
 ## 常驻只读与多选模式
 

@@ -1,0 +1,31 @@
+{
+  "scope": "Actual ordinary-window background monitor, started already minimized; no arrivals observed",
+  "status": {
+    "mode": "continuous_readonly_observation",
+    "active": false,
+    "phase": "stopped",
+    "stop_reason": "native_reader_timeout",
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "background",
+    "minimized_observation_enabled": true,
+    "window_minimized": true,
+    "snapshots": 3927,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 3927
+  },
+  "arrival_acceptance_passed": false,
+  "continuous_run_acceptance_passed": false,
+  "new_messages_sent": 0,
+  "model_called": false,
+  "memory_written": false
+}

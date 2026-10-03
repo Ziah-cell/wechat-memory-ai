@@ -1,5 +1,11 @@
 # Windows 后续执行清单
 
+## 当前v0.1.18交接状态
+
+当前没有活动监听。data/background-listener-20261003最后是3927次最小化读取后native_reader_timeout；旧data/minimized-listener-20261003是6755次后window_or_list_changed（用户确认操作过窗口）。先查状态，不把迟到发送确认补记为捕获通过。
+
+普通窗口只读命令是`-Action start-listener -ListenerReader background -ClientPath <本机Weixin.exe>`，不要求多选，不恢复窗口。当前所有文本unknown，仅计数；原视觉/多选保留独立边界。下一任务优先原生超时及窗口变化恢复，随后才验收真实新事件及发送。以下是旧阶段状态。
+
 更新日期：2026-10-03；当前代码v0.1.17。旧1005及早先随机标记会话均已完成，不再是活动监听；不要按下面的历史清单重复启动或重做固定回复。
 
 指定窗口只读源中的自身新事件过滤和随后来信交付已由224补验通过：103快照、154.297秒，1自身过滤、1来信交付，关闭后候选失效；该次有界来源已关闭。223保留前一次最小化停止。不要重复这些已通过的输入；新增常驻selection模式正在data/minimized-listener-20261003作最小化只读观察，先查状态，不要重复启动。最小化新来信尚待一次受控输入；普通视觉准入仍须先绑定和新标记、可见不最小化、不翻历史，两个模式不能混用。详见[CONTINUOUS_LISTENER.md](CONTINUOUS_LISTENER.md)。实际结果见[STATUS.md](STATUS.md)和[验收总览](ACCEPTANCE.md)。

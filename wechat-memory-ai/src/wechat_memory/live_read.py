@@ -28,6 +28,7 @@ _NATIVE_REASONS = frozenset({
     'message_rows_unavailable', 'layout_unavailable', 'capabilities_unavailable', 'native_reader_failed',
     'visual_capture_unavailable', 'visual_snapshot_changed',
     'selection_mode_required', 'selection_snapshot_changed',
+    'background_mode_required', 'background_snapshot_changed',
 })
 
 _STOP_REASONS = _NATIVE_REASONS | frozenset({
@@ -425,6 +426,26 @@ class SelectionOccurrenceSession(OccurrenceSession):
         return dict(super().report(), mode='selection_occurrence_candidates')
 
 
+def validate_background_snapshot(raw):
+    if (not isinstance(raw,dict) or raw.get('status') != 'background_text_snapshot'
+            or type(raw.get('minimized')) is not bool):
+        raise ReadError('invalid_snapshot')
+    base = {k:v for k,v in raw.items() if k != 'minimized'}
+    return validate_snapshot(dict(base,status='snapshot'))
+
+
+class BackgroundOccurrenceSession(OccurrenceSession):
+    """Normal-window text changes with no evidence of sender direction."""
+    def _validate(self, raw):
+        return validate_background_snapshot(raw)
+
+    def _direction(self, row):
+        return 'unknown'
+
+    def report(self):
+        return dict(super().report(), mode='background_occurrence_candidates')
+
+
 def validate_binding(raw):
     """Validate an explicit target using the existing snapshot identity rules."""
     if not isinstance(raw,dict) or set(raw) != {'process','started','window','root','list_token'}:
@@ -548,9 +569,14 @@ class NativeReader:
             return self._read_once(selection_text=True)
         return self._read_consistent(dict(selection_text=True), 'selection_snapshot_changed')
 
-    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, window_state=False, selection_text=False, _timeout=8):
+    def read_background_text(self):
+        if self._binding is None:
+            return self._read_once(background_text=True)
+        return self._read_consistent(dict(background_text=True), 'background_snapshot_changed')
+
+    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, window_state=False, selection_text=False, background_text=False, _timeout=8):
         try:
-            if sum(bool(value) for value in (layout,capabilities,visual,visual_text,window_state,selection_text))>1:
+            if sum(bool(value) for value in (layout,capabilities,visual,visual_text,window_state,selection_text,background_text))>1:
                 raise ReadError('invalid_snapshot')
             command = [str(self.executable),self.client_path]
             if layout:
@@ -565,6 +591,8 @@ class NativeReader:
                 command.append('--window-state')
             if selection_text:
                 command.append('--selection-text')
+            if background_text:
+                command.append('--background-text')
             done = subprocess.run(command,
                                   input=json.dumps(self._binding).encode('utf-8'),capture_output=True,timeout=_timeout,
                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -578,7 +606,9 @@ class NativeReader:
                     raise ReadError(raw['reason'])
                 raise ReadError('native_reader_unavailable')
             try:
-                if selection_text:
+                if background_text:
+                    validate_background_snapshot(raw)
+                elif selection_text:
                     validate_selection_snapshot(raw)
                 elif window_state:
                     window_state_report(raw)

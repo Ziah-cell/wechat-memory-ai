@@ -1,0 +1,32 @@
+{
+  "status": {
+    "mode": "continuous_readonly_observation",
+    "active": false,
+    "phase": "stopped",
+    "stop_reason": "message_continuity_lost",
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "background",
+    "minimized_observation_enabled": true,
+    "window_minimized": false,
+    "snapshots": 41,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 0
+  },
+  "scope": "Window-control attempt stopped on changed viewport; not a successful minimized transition",
+  "new_message_tested": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_messages_sent": 0,
+  "subsequent_read_minimized": false,
+  "subsequent_read_rows": 16
+}
