@@ -1,0 +1,6 @@
+test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.789s
+
+OK

@@ -22,6 +22,18 @@ public sealed class VisualRow {
     }
 }
 
+public sealed class SelectionRow {
+    public readonly string Token, Kind, Text;
+    public readonly int ControlTypeId;
+    public SelectionRow(string token, string kind, string text, int controlTypeId) {
+        Token=token; Kind=kind; Text=text; ControlTypeId=controlTypeId;
+    }
+    public bool Matches(SelectionRow other) {
+        return other!=null && Token==other.Token && Kind==other.Kind && Text==other.Text
+            && ControlTypeId==other.ControlTypeId;
+    }
+}
+
 public static class LiveReader {
     // Fixed stage names only. External exception messages never leave the child.
     static string failureReason = "native_reader_failed";
@@ -61,12 +73,12 @@ public static class LiveReader {
             != Convert.ToString(value,System.Globalization.CultureInfo.InvariantCulture))) throw Failure("window_or_list_changed");
     }
     static void RecheckBinding(Process selected, IntPtr handle, uint owner, long started,
-            AutomationElement root, string rootId, AutomationElement messageList, string listToken) {
+            AutomationElement root, string rootId, AutomationElement messageList, string listToken, bool allowMinimized=false) {
         failureReason = "window_binding_unavailable";
         selected.Refresh();
         uint after;
         GetWindowThreadProcessId(handle,out after);
-        if(IsIconic(handle)) throw Failure("window_minimized");
+        if(!allowMinimized && IsIconic(handle)) throw Failure("window_minimized");
         if(selected.HasExited || selected.StartTime.ToUniversalTime().Ticks!=started || after!=owner || !IsWindowVisible(handle)
                 || Property(root,AutomationElement.AutomationIdProperty)!=rootId || Token(messageList)!=listToken)
             throw Failure("window_or_list_changed");
@@ -91,10 +103,32 @@ public static class LiveReader {
         }
         if(indexAfter!=visualRows.Count) throw new InvalidOperationException();
     }
+    static List<SelectionRow> SelectionRows(AutomationElement list, uint owner, TreeWalker walker) {
+        var rows = new List<SelectionRow>();
+        for(var child=walker.GetFirstChild(list); child!=null; child=walker.GetNextSibling(child)) {
+            if(rows.Count>=256) throw Failure("message_rows_unavailable");
+            SameProcess(child,(int)owner);
+            var type=(ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty);
+            string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
+            if((kind=="text" && type!=ControlType.CheckBox)
+                    || (type!=ControlType.CheckBox && type!=ControlType.ListItem))
+                throw Failure("selection_mode_required");
+            // No pixel capture, layout inference, input, or sender guessing.
+            string label=Property(child,AutomationElement.NameProperty);
+            if(label.Length>10000) throw Failure("message_rows_unavailable");
+            rows.Add(new SelectionRow(Token(child),kind,label,type.Id));
+        }
+        return rows;
+    }
     public static object Snapshot(string client, Dictionary<string,object> expected, string mode) {
         bool layout = mode == "--layout";
         bool capabilities = mode == "--capabilities";
         bool visualText = mode == "--visual-text";
+        bool windowState = mode == "--window-state";
+        bool selectionText = mode == "--selection-text";
+        // This explicit, already-bound diagnostic reads neither Name nor pixels.
+        // The separate multiselect path reads labels; capture paths still reject minimization.
+        if(windowState && expected==null) throw Failure("window_binding_unavailable");
         bool visual = mode == "--visual" || visualText;
         if(visual) {
             failureReason = "visual_capture_unavailable";
@@ -129,7 +163,8 @@ public static class LiveReader {
         },IntPtr.Zero);
         if (failure != null) throw new InvalidOperationException();
         if (targets.Count != 1) throw Failure("private_window_not_unique");
-        if (IsIconic(targets[0])) throw Failure("window_minimized");
+        bool minimized = IsIconic(targets[0]);
+        if (minimized && !windowState && !selectionText) throw Failure("window_minimized");
         failureReason = "window_binding_unavailable";
         IntPtr handle = targets[0];
         uint owner;
@@ -150,6 +185,7 @@ public static class LiveReader {
         AutomationElement messageList = null;
         int count = 0;
         bool input = false;
+        bool cancelSelection = false;
         while (pending.Count > 0) {
             var current = pending.Dequeue();
             if (++count > 1024 || current.Value > 48) throw new InvalidOperationException();
@@ -157,6 +193,8 @@ public static class LiveReader {
             SameProcess(node,(int)owner);
             string id = Property(node,AutomationElement.AutomationIdProperty);
             if (id == "chat_input_field") input = true;
+            if(selectionText && (ControlType)node.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty)==ControlType.Button
+                    && Property(node,AutomationElement.NameProperty)=="取消多选") cancelSelection=true;
             if (id == "chat_message_list") {
                 if (messageList != null) throw new InvalidOperationException();
                 messageList = node;
@@ -167,10 +205,60 @@ public static class LiveReader {
                 pending.Enqueue(new KeyValuePair<AutomationElement,int>(child,current.Value+1));
             }
         }
-        if (!input || messageList == null) throw Failure("message_list_unavailable");
+        if ((!selectionText && !input) || messageList == null) throw Failure("message_list_unavailable");
+        if(selectionText && (!cancelSelection || input)) throw Failure("selection_mode_required");
         failureReason = "message_list_unavailable";
         string listToken = Token(messageList);
         CheckBinding(expected,"list_token",listToken);
+        if(selectionText) {
+            failureReason="message_rows_unavailable";
+            string peer=Property(root,AutomationElement.NameProperty);
+            if(String.IsNullOrWhiteSpace(peer) || peer.Length>256 || peer.IndexOfAny(new char[]{'\r','\n','\t','\0'})>=0)
+                throw Failure("selection_mode_required");
+            var before=SelectionRows(messageList,owner,walker);
+            RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            var after=SelectionRows(messageList,owner,walker);
+            if(before.Count!=after.Count) throw Failure("selection_snapshot_changed");
+            var selectionRows=new List<object>();
+            for(int i=0;i<before.Count;i++) {
+                if(!before[i].Matches(after[i])) throw Failure("selection_snapshot_changed");
+                selectionRows.Add(new {token=before[i].Token,kind=before[i].Kind,text=before[i].Text});
+            }
+            RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            if(Property(root,AutomationElement.NameProperty)!=peer || IsIconic(handle)!=minimized)
+                throw Failure("selection_snapshot_changed");
+            return new {status="selection_text_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+                root=rootId,list_token=listToken,peer_name=peer,minimized=minimized,rows=selectionRows};
+        }
+        if(windowState) {
+            failureReason = "capabilities_unavailable";
+            int total=0, texts=0, offscreen=0, bounded=0, textPatterns=0, childTexts=0;
+            Rect bounds=(Rect)messageList.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty);
+            bool boundsUsable=!bounds.IsEmpty && bounds.Width>0 && bounds.Height>0
+                && !Double.IsInfinity(bounds.Width) && !Double.IsInfinity(bounds.Height)
+                && !Double.IsNaN(bounds.Width) && !Double.IsNaN(bounds.Height);
+            object pattern;
+            bool scroll=messageList.TryGetCurrentPattern(ScrollPattern.Pattern,out pattern);
+            for(var child=walker.GetFirstChild(messageList); child!=null; child=walker.GetNextSibling(child)) {
+                if(++total>256) throw new InvalidOperationException();
+                SameProcess(child,(int)owner);
+                if(Property(child,AutomationElement.ClassNameProperty)!="mmui::ChatTextItemView") continue;
+                texts++;
+                if((bool)child.GetCurrentPropertyValue(AutomationElement.IsOffscreenProperty)) offscreen++;
+                Rect rowBounds=(Rect)child.GetCurrentPropertyValue(AutomationElement.BoundingRectangleProperty);
+                if(!rowBounds.IsEmpty && rowBounds.Width>0 && rowBounds.Height>0
+                    && !Double.IsInfinity(rowBounds.Width) && !Double.IsInfinity(rowBounds.Height)
+                    && !Double.IsNaN(rowBounds.Width) && !Double.IsNaN(rowBounds.Height)) bounded++;
+                if(child.TryGetCurrentPattern(TextPattern.Pattern,out pattern)) textPatterns++;
+                if(walker.GetFirstChild(child)!=null) childTexts++;
+            }
+            RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            if(IsIconic(handle)!=minimized) throw Failure("window_or_list_changed");
+            return new {status="window_state_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+                root=rootId,list_token=listToken,minimized=minimized,list_bounds_usable=boundsUsable,list_scroll_pattern=scroll,
+                rows=total,text_rows=texts,offscreen_text_rows=offscreen,bounded_text_rows=bounded,
+                text_pattern_rows=textPatterns,child_text_rows=childTexts};
+        }
         var rows = new List<object>();
         var visualRows = new List<VisualRow>();
         var rowIds = new HashSet<string>(StringComparer.Ordinal);
@@ -286,7 +374,7 @@ public static class LiveReader {
     [STAThread] public static int Main(string[] args) {
         Console.OutputEncoding = new UTF8Encoding(false);
         try {
-            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text"))) return 3;
+            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text"))) return 3;
             var serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength=4000000;
             string input = Console.In.ReadToEnd();

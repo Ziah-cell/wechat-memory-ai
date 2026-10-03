@@ -1,0 +1,77 @@
+test_bad_protocol_and_other_modes_cannot_enter_selection_session (test_selection_read.SelectionReadTests.test_bad_protocol_and_other_modes_cannot_enter_selection_session) ... FAIL
+test_baseline_then_same_text_distinct_rows_without_replay (test_selection_read.SelectionReadTests.test_baseline_then_same_text_distinct_rows_without_replay) ... FAIL
+test_lost_overlap_and_reappearing_occurrences_still_stop (test_selection_read.SelectionReadTests.test_lost_overlap_and_reappearing_occurrences_still_stop) ... FAIL
+test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops (test_selection_read.SelectionReadTests.test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops) ... FAIL
+test_monitor_selection_mode_tracks_minimized_without_model_or_persistence (test_selection_read.SelectionReadTests.test_monitor_selection_mode_tracks_minimized_without_model_or_persistence) ... FAIL
+test_native_mode_stays_separate_and_keeps_binding_private (test_selection_read.SelectionReadTests.test_native_mode_stays_separate_and_keeps_binding_private) ... FAIL
+test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified (test_selection_read.SelectionReadTests.test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified) ... FAIL
+test_selection_failure_is_fixed_reason_and_is_never_retried (test_selection_read.SelectionReadTests.test_selection_failure_is_fixed_reason_and_is_never_retried) ... FAIL
+
+======================================================================
+FAIL: test_bad_protocol_and_other_modes_cannot_enter_selection_session (test_selection_read.SelectionReadTests.test_bad_protocol_and_other_modes_cannot_enter_selection_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_baseline_then_same_text_distinct_rows_without_replay (test_selection_read.SelectionReadTests.test_baseline_then_same_text_distinct_rows_without_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_lost_overlap_and_reappearing_occurrences_still_stop (test_selection_read.SelectionReadTests.test_lost_overlap_and_reappearing_occurrences_still_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops (test_selection_read.SelectionReadTests.test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_monitor_selection_mode_tracks_minimized_without_model_or_persistence (test_selection_read.SelectionReadTests.test_monitor_selection_mode_tracks_minimized_without_model_or_persistence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_native_mode_stays_separate_and_keeps_binding_private (test_selection_read.SelectionReadTests.test_native_mode_stays_separate_and_keeps_binding_private)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified (test_selection_read.SelectionReadTests.test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+======================================================================
+FAIL: test_selection_failure_is_fixed_reason_and_is_never_retried (test_selection_read.SelectionReadTests.test_selection_failure_is_fixed_reason_and_is_never_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 22, in setUp
+    self.assertTrue(callable(getattr(live_read, 'validate_selection_snapshot', None)),
+AssertionError: False is not true : selection text reading is not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+FAILED (failures=8)

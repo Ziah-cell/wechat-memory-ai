@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "action": "start",
+      "exit_code": 0,
+      "report": {
+        "active": true,
+        "baseline_ready": true,
+        "filtered_self_texts": 0,
+        "filtered_unknown_texts": 0,
+        "history_boundary_verified": false,
+        "incoming_candidates": 0,
+        "memory_written": false,
+        "minimized_supported": false,
+        "mode": "continuous_readonly_observation",
+        "model_called": false,
+        "phase": "observing",
+        "real_send_supported": false,
+        "reply_ready": false,
+        "sender_verified": false,
+        "snapshot_change_retries": 0,
+        "snapshots": 1,
+        "stop_reason": null
+      }
+    },
+    {
+      "action": "status",
+      "exit_code": 0,
+      "report": {
+        "active": true,
+        "baseline_ready": true,
+        "filtered_self_texts": 0,
+        "filtered_unknown_texts": 0,
+        "history_boundary_verified": false,
+        "incoming_candidates": 0,
+        "memory_written": false,
+        "minimized_supported": false,
+        "mode": "continuous_readonly_observation",
+        "model_called": false,
+        "phase": "observing",
+        "real_send_supported": false,
+        "reply_ready": false,
+        "sender_verified": false,
+        "snapshot_change_retries": 0,
+        "snapshots": 4,
+        "stop_reason": null
+      }
+    },
+    {
+      "action": "stop",
+      "exit_code": 0,
+      "report": {
+        "active": false,
+        "baseline_ready": true,
+        "filtered_self_texts": 0,
+        "filtered_unknown_texts": 0,
+        "history_boundary_verified": false,
+        "incoming_candidates": 0,
+        "memory_written": false,
+        "minimized_supported": false,
+        "mode": "continuous_readonly_observation",
+        "model_called": false,
+        "phase": "stopped",
+        "real_send_supported": false,
+        "reply_ready": false,
+        "sender_verified": false,
+        "snapshot_change_retries": 0,
+        "snapshots": 4,
+        "stop_reason": "requested"
+      }
+    }
+  ],
+  "final": {
+    "action": "status",
+    "exit_code": 0,
+    "report": {
+      "active": false,
+      "baseline_ready": true,
+      "filtered_self_texts": 0,
+      "filtered_unknown_texts": 0,
+      "history_boundary_verified": false,
+      "incoming_candidates": 0,
+      "memory_written": false,
+      "minimized_supported": false,
+      "mode": "continuous_readonly_observation",
+      "model_called": false,
+      "phase": "stopped",
+      "real_send_supported": false,
+      "reply_ready": false,
+      "sender_verified": false,
+      "snapshot_change_retries": 0,
+      "snapshots": 4,
+      "stop_reason": "requested"
+    }
+  },
+  "memory_written": false,
+  "model_called": false,
+  "real_messages_sent": 0,
+  "status": "passed"
+}

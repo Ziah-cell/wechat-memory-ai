@@ -1,0 +1,40 @@
+test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) ... 
+  test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe') ... FAIL
+  test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) (shell='[USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe') ... FAIL
+
+======================================================================
+FAIL: test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) (shell='C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_windows_scripts.py", line 80, in test_listener_controls_ignore_config_and_preserve_stopped_status
+    self.assertEqual(status.returncode, 0, status.stderr.decode('utf-8','replace'))
+AssertionError: 1 != 0 : [PROJECT]\scripts\windows.ps1 : Cannot validate argument on parameter
+
+ 'Action'. The argument "listener-status" does not belong to the set "run,status,pause,resume,stop,diagnose,test,backup
+
+,restore,review,probe-wechat,offline-check,ocr-check,listen-wechat" specified by the ValidateSet attribute. Supply an a
+
+rgument that is in the set and then try the command again.
+
+    + CategoryInfo          : InvalidData: (:) [windows.ps1], ParentContainsErrorRecordException
+
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,windows.ps1
+
+ 
+
+
+
+======================================================================
+FAIL: test_listener_controls_ignore_config_and_preserve_stopped_status (test_windows_scripts.WindowsScriptTests.test_listener_controls_ignore_config_and_preserve_stopped_status) (shell='[USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_windows_scripts.py", line 80, in test_listener_controls_ignore_config_and_preserve_stopped_status
+    self.assertEqual(status.returncode, 0, status.stderr.decode('utf-8','replace'))
+AssertionError: 1 != 0 : windows.ps1: Cannot validate argument on parameter 'Action'. The argument "listener-status" does not belong to the set "run,status,pause,resume,stop,diagnose,test,backup,restore,review,probe-wechat,offline-check,ocr-check,listen-wechat" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
+
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.311s
+
+FAILED (failures=2)

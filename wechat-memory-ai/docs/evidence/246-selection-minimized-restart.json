@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "action": "stop",
+      "exit_code": 0,
+      "report": {
+        "active": false,
+        "baseline_ready": true,
+        "filtered_self_texts": 0,
+        "filtered_unknown_texts": 0,
+        "history_boundary_verified": false,
+        "incoming_candidates": 0,
+        "memory_written": false,
+        "minimized_observation_enabled": true,
+        "minimized_snapshots": 115,
+        "minimized_supported": false,
+        "mode": "continuous_readonly_observation",
+        "model_called": false,
+        "phase": "stopped",
+        "reader_mode": "selection",
+        "real_send_supported": false,
+        "reply_ready": false,
+        "sender_verified": false,
+        "snapshot_change_retries": 0,
+        "snapshots": 115,
+        "stop_reason": "requested",
+        "window_minimized": true
+      }
+    },
+    {
+      "action": "start",
+      "exit_code": 0,
+      "report": {
+        "active": true,
+        "baseline_ready": true,
+        "filtered_self_texts": 0,
+        "filtered_unknown_texts": 0,
+        "history_boundary_verified": false,
+        "incoming_candidates": 0,
+        "memory_written": false,
+        "minimized_observation_enabled": true,
+        "minimized_snapshots": 1,
+        "minimized_supported": false,
+        "mode": "continuous_readonly_observation",
+        "model_called": false,
+        "phase": "observing",
+        "reader_mode": "selection",
+        "real_send_supported": false,
+        "reply_ready": false,
+        "sender_verified": false,
+        "snapshot_change_retries": 0,
+        "snapshots": 1,
+        "stop_reason": null,
+        "window_minimized": true
+      }
+    }
+  ],
+  "scope": "Restart with bounded resampling code; initial old viewport skipped; not a new-message acceptance"
+}

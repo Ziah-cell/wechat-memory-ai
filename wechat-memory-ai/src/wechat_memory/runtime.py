@@ -65,7 +65,17 @@ def atomic_json(path, value):
             json.dump(value, target, ensure_ascii=False)
             target.flush()
             os.fsync(target.fileno())
-        os.replace(temporary, path)
+        # Windows readers can briefly deny replacement of an open status file.
+        # Keep the last complete JSON until publication succeeds, and never
+        # spin indefinitely on a persistent permission or sharing failure.
+        for attempt in range(20):
+            try:
+                os.replace(temporary, path)
+                break
+            except PermissionError:
+                if attempt == 19:
+                    raise
+                time.sleep(.01)
     finally:
         if os.path.exists(temporary):
             os.unlink(temporary)

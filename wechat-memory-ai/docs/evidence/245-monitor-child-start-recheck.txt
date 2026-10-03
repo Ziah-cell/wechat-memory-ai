@@ -1,0 +1,7 @@
+test_background_start_waits_for_readiness_and_stop_uses_real_child (test_monitor.MonitorTests.test_background_start_waits_for_readiness_and_stop_uses_real_child) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.234s
+
+OK
+[[0, {"mode": "continuous_readonly_observation", "active": true, "phase": "observing", "stop_reason": null, "baseline_ready": true, "sender_verified": false, "history_boundary_verified": false, "real_send_supported": false, "model_called": false, "memory_written": false, "minimized_supported": false, "reply_ready": false, "reader_mode": "visual", "minimized_observation_enabled": false, "window_minimized": false, "snapshots": 1, "incoming_candidates": 0, "filtered_self_texts": 0, "filtered_unknown_texts": 0, "snapshot_change_retries": 0, "minimized_snapshots": 0}]]

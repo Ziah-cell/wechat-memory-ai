@@ -1,0 +1,28 @@
+{
+  "scope": "Actual continuous selection-mode reading started with WeChat already minimized",
+  "status": {
+    "mode": "continuous_readonly_observation",
+    "active": true,
+    "phase": "observing",
+    "stop_reason": null,
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "selection",
+    "minimized_observation_enabled": true,
+    "window_minimized": true,
+    "snapshots": 58,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 58
+  },
+  "new_message_tested": false,
+  "real_send": false
+}

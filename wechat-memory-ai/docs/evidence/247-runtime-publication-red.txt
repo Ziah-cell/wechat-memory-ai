@@ -1,0 +1,48 @@
+test_held_status_reader_released_during_retry_allows_atomic_update (test_runtime_publication.RuntimePublicationTests.test_held_status_reader_released_during_retry_allows_atomic_update) ... FAIL
+test_monitor_survives_status_read_overlap_and_stops_on_requested_interrupt (test_runtime_publication.RuntimePublicationTests.test_monitor_survives_status_read_overlap_and_stops_on_requested_interrupt) ... ERROR
+test_persistent_permission_failure_is_bounded_and_preserves_last_status (test_runtime_publication.RuntimePublicationTests.test_persistent_permission_failure_is_bounded_and_preserves_last_status) ... FAIL
+
+======================================================================
+ERROR: test_monitor_survives_status_read_overlap_and_stops_on_requested_interrupt (test_runtime_publication.RuntimePublicationTests.test_monitor_survives_status_read_overlap_and_stops_on_requested_interrupt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_runtime_publication.py", line 63, in test_monitor_survives_status_read_overlap_and_stops_on_requested_interrupt
+    code=monitor.run_monitor('fixture.exe',temp)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\monitor.py", line 120, in run_monitor
+    publish('stopped', reason)
+  File "<project>\src\wechat_memory\monitor.py", line 72, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "<project>\src\wechat_memory\runtime.py", line 68, in atomic_json
+    os.replace(temporary, path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\zhihua\\AppData\\Local\\Temp\\tmp0krtmxgy\\.control-1f0lqg7g' -> 'C:\\Users\\zhihua\\AppData\\Local\\Temp\\tmp0krtmxgy\\runtime.json'
+
+======================================================================
+FAIL: test_held_status_reader_released_during_retry_allows_atomic_update (test_runtime_publication.RuntimePublicationTests.test_held_status_reader_released_during_retry_allows_atomic_update)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_runtime_publication.py", line 23, in test_held_status_reader_released_during_retry_allows_atomic_update
+    runtime.atomic_json(path,{'snapshots':2})
+  File "<project>\src\wechat_memory\runtime.py", line 68, in atomic_json
+    os.replace(temporary, path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\zhihua\\AppData\\Local\\Temp\\tmpk0kwd0c_\\.control-7sbqa97m' -> 'C:\\Users\\zhihua\\AppData\\Local\\Temp\\tmpk0kwd0c_\\runtime.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<project>\tests\test_runtime_publication.py", line 25, in test_held_status_reader_released_during_retry_allows_atomic_update
+    self.fail('a brief concurrent status read prevented publication')
+AssertionError: a brief concurrent status read prevented publication
+
+======================================================================
+FAIL: test_persistent_permission_failure_is_bounded_and_preserves_last_status (test_runtime_publication.RuntimePublicationTests.test_persistent_permission_failure_is_bounded_and_preserves_last_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_runtime_publication.py", line 39, in test_persistent_permission_failure_is_bounded_and_preserves_last_status
+    self.assertGreater(replace.call_count,1)
+AssertionError: 1 not greater than 1
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.027s
+
+FAILED (failures=2, errors=1)

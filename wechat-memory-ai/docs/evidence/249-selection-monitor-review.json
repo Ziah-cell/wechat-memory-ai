@@ -1,0 +1,28 @@
+{
+  "scope": "Incremental independent review of selection-mode continuous read-only candidates",
+  "initial_findings": [
+    {
+      "priority": "P2",
+      "issue": "Windows status read handle can deny atomic status replacement",
+      "status": "fixed_with_bounded_retry_and_real_file_overlap_tests"
+    },
+    {
+      "priority": "P3",
+      "issue": "Nontext UIA ControlType was not compared across selection reads",
+      "status": "fixed_with_SelectionRow_ControlTypeId"
+    }
+  ],
+  "remaining_confirmed_findings": 0,
+  "final_tests_run": 31,
+  "final_elapsed_seconds": 1.145,
+  "final_exit_code": 0,
+  "reviewer_native_executed": false,
+  "reviewer_ui_accessed": false,
+  "model_called": false,
+  "limits": [
+    "190ms is requested retry sleep, excluding IO and scheduling",
+    "Permanent sharing or permission failure still fails",
+    "No real minimized arrival, identity or reply acceptance in this review",
+    "Prior intermittent child-start failure cause was not established"
+  ]
+}

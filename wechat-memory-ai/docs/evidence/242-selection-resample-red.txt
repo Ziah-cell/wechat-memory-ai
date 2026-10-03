@@ -1,0 +1,47 @@
+test_bad_protocol_and_other_modes_cannot_enter_selection_session (test_selection_read.SelectionReadTests.test_bad_protocol_and_other_modes_cannot_enter_selection_session) ... ok
+test_baseline_then_same_text_distinct_rows_without_replay (test_selection_read.SelectionReadTests.test_baseline_then_same_text_distinct_rows_without_replay) ... ok
+test_bound_selection_retries_are_bounded_and_other_errors_still_stop (test_selection_read.SelectionReadTests.test_bound_selection_retries_are_bounded_and_other_errors_still_stop) ... FAIL
+test_bound_selection_transition_resamples_same_target_before_commit (test_selection_read.SelectionReadTests.test_bound_selection_transition_resamples_same_target_before_commit) ... ERROR
+test_lost_overlap_and_reappearing_occurrences_still_stop (test_selection_read.SelectionReadTests.test_lost_overlap_and_reappearing_occurrences_still_stop) ... ok
+test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops (test_selection_read.SelectionReadTests.test_minimized_transitions_do_not_rebaseline_but_peer_rename_stops) ... ok
+test_monitor_selection_mode_tracks_minimized_without_model_or_persistence (test_selection_read.SelectionReadTests.test_monitor_selection_mode_tracks_minimized_without_model_or_persistence) ... ok
+test_native_mode_stays_separate_and_keeps_binding_private (test_selection_read.SelectionReadTests.test_native_mode_stays_separate_and_keeps_binding_private) ... ok
+test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified (test_selection_read.SelectionReadTests.test_nonpeer_names_never_assumed_self_and_nested_prefix_stays_unverified) ... ok
+test_selection_failure_is_fixed_reason_and_is_never_retried (test_selection_read.SelectionReadTests.test_selection_failure_is_fixed_reason_and_is_never_retried) ... ok
+test_selection_late_success_is_discarded_at_shared_deadline (test_selection_read.SelectionReadTests.test_selection_late_success_is_discarded_at_shared_deadline) ... FAIL
+
+======================================================================
+ERROR: test_bound_selection_transition_resamples_same_target_before_commit (test_selection_read.SelectionReadTests.test_bound_selection_transition_resamples_same_target_before_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 146, in test_bound_selection_transition_resamples_same_target_before_commit
+    self.assertEqual(reader.read_selection_text(),raw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\live_read.py", line 544, in read_selection_text
+    return self._read_once(selection_text=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\src\wechat_memory\live_read.py", line 573, in _read_once
+    raise ReadError(raw['reason'])
+wechat_memory.live_read.ReadError: selection_snapshot_changed
+
+======================================================================
+FAIL: test_bound_selection_retries_are_bounded_and_other_errors_still_stop (test_selection_read.SelectionReadTests.test_bound_selection_retries_are_bounded_and_other_errors_still_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 160, in test_bound_selection_retries_are_bounded_and_other_errors_still_stop
+    self.assertEqual(run.call_count,calls)
+AssertionError: 1 != 3
+
+======================================================================
+FAIL: test_selection_late_success_is_discarded_at_shared_deadline (test_selection_read.SelectionReadTests.test_selection_late_success_is_discarded_at_shared_deadline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<project>\tests\test_selection_read.py", line 170, in test_selection_late_success_is_discarded_at_shared_deadline
+    with self.assertRaisesRegex(live_read.ReadError,'^native_reader_timeout$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ReadError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.043s
+
+FAILED (failures=2, errors=1)

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wechat-memory-ai"
-version = "0.1.16"
+version = "0.1.17"
 description = "Offline memory core and an independent read-only WeChat connection; no real sends"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -13,6 +13,7 @@ dependencies = []
 [project.scripts]
 wechat-memory = "wechat_memory.cli:main"
 wechat-memory-listen = "wechat_memory.live_read:main"
+wechat-memory-monitor = "wechat_memory.monitor:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

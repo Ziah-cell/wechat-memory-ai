@@ -1,0 +1,47 @@
+{
+  "scope": "Final compiled production reader, actual minimized test window, baseline only",
+  "checks": [
+    {
+      "minimized": true,
+      "rows": 16,
+      "text_rows": 11,
+      "delivered": 0
+    },
+    {
+      "minimized": true,
+      "rows": 16,
+      "text_rows": 11,
+      "delivered": 0
+    },
+    {
+      "minimized": true,
+      "rows": 16,
+      "text_rows": 11,
+      "delivered": 0
+    }
+  ],
+  "report": {
+    "status": "reading",
+    "snapshots": 3,
+    "stop_reason": null,
+    "front_evictions": 0,
+    "seen_tokens": 16,
+    "window_bound": true,
+    "sender_verified": false,
+    "server_message_ids_available": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "mode": "selection_occurrence_candidates",
+    "candidate_rows": 0,
+    "candidate_texts": 0,
+    "seen_occurrences": 16,
+    "reused_token_candidates": 0
+  },
+  "normal_visual_guard": "window_minimized",
+  "model_called": false,
+  "memory_written": false,
+  "real_messages_sent": 0,
+  "native_reader_closed": true,
+  "passed": true
+}

@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check','ocr-check','listen-wechat')]
+    [ValidateSet('run','status','pause','resume','stop','diagnose','test','backup','restore','review','probe-wechat','offline-check','ocr-check','listen-wechat','start-listener','listener-status','stop-listener')]
     [string]$Action = 'run',
     [string]$Config = 'config.toml',
     [string]$Path = '',
@@ -7,6 +7,8 @@ param(
     [switch]$Confirm,
     [string]$ClientPath = '',
     [ValidateRange(1,3600)][int]$ListenSeconds = 30,
+    [string]$ListenerData = 'data/listener',
+    [ValidateSet('visual','selection')][string]$ListenerReader = 'visual',
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'
@@ -55,6 +57,16 @@ if (!$PythonExe) {
 }
 Push-Location $ProjectRoot
 try {
+    if ($Action -in @('start-listener','listener-status','stop-listener')) {
+        $MonitorAction = @{ 'start-listener'='start'; 'listener-status'='status'; 'stop-listener'='stop' }[$Action]
+        $MonitorArgs = @('-X','utf8','scripts/monitor-wechat.py','--data-dir',$ListenerData,$MonitorAction)
+        if ($MonitorAction -eq 'start') {
+            if (!$ClientPath) { throw 'Use -ClientPath with the installed Weixin.exe.' }
+            $MonitorArgs += @('--client-path',$ClientPath,'--reader',$ListenerReader)
+        }
+        & $PythonExe @MonitorArgs
+        exit $LASTEXITCODE
+    }
     if ($Action -eq 'test') {
         & $PythonExe -X utf8 'scripts/test.py'
         exit $LASTEXITCODE

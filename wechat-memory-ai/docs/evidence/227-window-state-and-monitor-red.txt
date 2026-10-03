@@ -1,0 +1,85 @@
+test_bound_diagnostic_uses_private_stdin_and_retains_binding (test_window_state.WindowStateTests.test_bound_diagnostic_uses_private_stdin_and_retains_binding) ... FAIL
+test_changed_binding_and_bad_diagnostic_do_not_replace_target (test_window_state.WindowStateTests.test_changed_binding_and_bad_diagnostic_do_not_replace_target) ... FAIL
+test_diagnostic_cannot_enter_message_sessions (test_window_state.WindowStateTests.test_diagnostic_cannot_enter_message_sessions) ... FAIL
+test_fixed_report_omits_binding_and_never_claims_minimized_support (test_window_state.WindowStateTests.test_fixed_report_omits_binding_and_never_claims_minimized_support) ... FAIL
+test_malformed_counts_flags_and_extra_fields_are_rejected (test_window_state.WindowStateTests.test_malformed_counts_flags_and_extra_fields_are_rejected) ... FAIL
+test_reader_requires_existing_binding_before_any_native_call (test_window_state.WindowStateTests.test_reader_requires_existing_binding_before_any_native_call) ... FAIL
+test_malformed_status_values_are_sanitized_without_breaking_controls (test_monitor.MonitorTests.test_malformed_status_values_are_sanitized_without_breaking_controls) ... ERROR
+test_empty_viewport_does_not_claim_ready_baseline (test_monitor.MonitorTests.test_empty_viewport_does_not_claim_ready_baseline) ... ERROR
+
+======================================================================
+ERROR: test_malformed_status_values_are_sanitized_without_breaking_controls (test_monitor.MonitorTests.test_malformed_status_values_are_sanitized_without_breaking_controls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 152, in test_malformed_status_values_are_sanitized_without_breaking_controls
+    status = self.monitor.monitor_status(self.directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PROJECT]\src\wechat_memory\monitor.py", line 40, in monitor_status
+    return _public_status(runtime_status(directory))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[PROJECT]\src\wechat_memory\monitor.py", line 29, in _public_status
+    stop_reason=raw.get('stop_reason') if raw.get('stop_reason') in _REASONS else None,
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'dict'
+
+======================================================================
+ERROR: test_empty_viewport_does_not_claim_ready_baseline (test_monitor.MonitorTests.test_empty_viewport_does_not_claim_ready_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 162, in test_empty_viewport_does_not_claim_ready_baseline
+    self.assertFalse(status['baseline_ready'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'baseline_ready'
+
+======================================================================
+FAIL: test_bound_diagnostic_uses_private_stdin_and_retains_binding (test_window_state.WindowStateTests.test_bound_diagnostic_uses_private_stdin_and_retains_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+======================================================================
+FAIL: test_changed_binding_and_bad_diagnostic_do_not_replace_target (test_window_state.WindowStateTests.test_changed_binding_and_bad_diagnostic_do_not_replace_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+======================================================================
+FAIL: test_diagnostic_cannot_enter_message_sessions (test_window_state.WindowStateTests.test_diagnostic_cannot_enter_message_sessions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+======================================================================
+FAIL: test_fixed_report_omits_binding_and_never_claims_minimized_support (test_window_state.WindowStateTests.test_fixed_report_omits_binding_and_never_claims_minimized_support)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+======================================================================
+FAIL: test_malformed_counts_flags_and_extra_fields_are_rejected (test_window_state.WindowStateTests.test_malformed_counts_flags_and_extra_fields_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+======================================================================
+FAIL: test_reader_requires_existing_binding_before_any_native_call (test_window_state.WindowStateTests.test_reader_requires_existing_binding_before_any_native_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_window_state.py", line 23, in setUp
+    self.assertTrue(callable(getattr(live_read, 'window_state_report', None)),
+AssertionError: False is not true : metadata-only window state diagnostic is not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.027s
+
+FAILED (failures=6, errors=2)

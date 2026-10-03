@@ -69,6 +69,23 @@ class WindowsScriptTests(unittest.TestCase):
                 self.assertNotIn(b'PRIVATE-MARKER', result.stdout+result.stderr)
                 self.assertEqual(self.config.read_bytes(), original)
 
+    def test_listener_controls_ignore_config_and_preserve_stopped_status(self):
+        self.config.write_text('PRIVATE_INVALID_CONFIG', 'utf-8')
+        original = self.config.read_bytes()
+        state_dir = Path(self.tmp.name)/'listener state'
+        for shell in SHELLS:
+            with self.subTest(shell=shell):
+                status = self.invoke(shell, 'windows.ps1', '-Action', 'listener-status',
+                                     '-ListenerData', str(state_dir))
+                self.assertEqual(status.returncode, 0, status.stderr.decode('utf-8','replace'))
+                self.assertFalse(json.loads(status.stdout)['active'])
+                self.assertFalse(json.loads(status.stdout)['reply_ready'])
+                stopped = self.invoke(shell, 'windows.ps1', '-Action', 'stop-listener',
+                                      '-ListenerData', str(state_dir))
+                self.assertEqual(stopped.returncode, 4)
+                self.assertEqual(json.loads(stopped.stdout)['stop_reason'], 'not_running')
+                self.assertEqual(self.config.read_bytes(), original)
+
     def test_broken_venv_falls_back_to_working_python(self):
         project = Path(self.tmp.name)/'isolated project'
         scripts = project/'scripts'

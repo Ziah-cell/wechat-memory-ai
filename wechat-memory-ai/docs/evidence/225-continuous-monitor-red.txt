@@ -1,0 +1,86 @@
+test_background_start_waits_for_readiness_and_stop_uses_real_child (test_monitor.MonitorTests.test_background_start_waits_for_readiness_and_stop_uses_real_child) ... FAIL
+test_baseline_skipped_duplicates_preserved_self_and_unknown_filtered (test_monitor.MonitorTests.test_baseline_skipped_duplicates_preserved_self_and_unknown_filtered) ... FAIL
+test_cli_status_and_stop_do_not_load_personal_configuration (test_monitor.MonitorTests.test_cli_status_and_stop_do_not_load_personal_configuration) ... FAIL
+test_competing_instance_cannot_overwrite_owner_status_or_read (test_monitor.MonitorTests.test_competing_instance_cannot_overwrite_owner_status_or_read) ... FAIL
+test_control_stop_during_read_discards_that_uncommitted_batch (test_monitor.MonitorTests.test_control_stop_during_read_discards_that_uncommitted_batch) ... FAIL
+test_minimize_and_binding_change_stop_without_rebinding (test_monitor.MonitorTests.test_minimize_and_binding_change_stop_without_rebinding) ... FAIL
+test_stale_stop_command_cannot_stop_new_generation (test_monitor.MonitorTests.test_stale_stop_command_cannot_stop_new_generation) ... FAIL
+test_status_whitelists_file_fields_and_detects_dead_worker (test_monitor.MonitorTests.test_status_whitelists_file_fields_and_detects_dead_worker) ... FAIL
+test_unexpected_external_error_is_redacted_and_releases_lock (test_monitor.MonitorTests.test_unexpected_external_error_is_redacted_and_releases_lock) ... FAIL
+
+======================================================================
+FAIL: test_background_start_waits_for_readiness_and_stop_uses_real_child (test_monitor.MonitorTests.test_background_start_waits_for_readiness_and_stop_uses_real_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_baseline_skipped_duplicates_preserved_self_and_unknown_filtered (test_monitor.MonitorTests.test_baseline_skipped_duplicates_preserved_self_and_unknown_filtered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_cli_status_and_stop_do_not_load_personal_configuration (test_monitor.MonitorTests.test_cli_status_and_stop_do_not_load_personal_configuration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_competing_instance_cannot_overwrite_owner_status_or_read (test_monitor.MonitorTests.test_competing_instance_cannot_overwrite_owner_status_or_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_control_stop_during_read_discards_that_uncommitted_batch (test_monitor.MonitorTests.test_control_stop_during_read_discards_that_uncommitted_batch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_minimize_and_binding_change_stop_without_rebinding (test_monitor.MonitorTests.test_minimize_and_binding_change_stop_without_rebinding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_stale_stop_command_cannot_stop_new_generation (test_monitor.MonitorTests.test_stale_stop_command_cannot_stop_new_generation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_status_whitelists_file_fields_and_detects_dead_worker (test_monitor.MonitorTests.test_status_whitelists_file_fields_and_detects_dead_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+======================================================================
+FAIL: test_unexpected_external_error_is_redacted_and_releases_lock (test_monitor.MonitorTests.test_unexpected_external_error_is_redacted_and_releases_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[PROJECT]\tests\test_monitor.py", line 33, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('wechat_memory.monitor'),
+AssertionError: unexpectedly None : continuous read-only monitor is not implemented
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (failures=9)

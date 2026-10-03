@@ -1,0 +1,25 @@
+{
+  "expected_result": "minimized startup is rejected; not background reply support",
+  "monitor": {
+    "active": false,
+    "baseline_ready": false,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "history_boundary_verified": false,
+    "incoming_candidates": 0,
+    "memory_written": false,
+    "minimized_supported": false,
+    "mode": "continuous_readonly_observation",
+    "model_called": false,
+    "phase": "stopped",
+    "real_send_supported": false,
+    "reply_ready": false,
+    "sender_verified": false,
+    "snapshot_change_retries": 0,
+    "snapshots": 0,
+    "stop_reason": "window_minimized"
+  },
+  "real_messages_sent": 0,
+  "start_exit_code": 3,
+  "status": "observed"
+}

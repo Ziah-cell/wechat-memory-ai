@@ -1,0 +1,29 @@
+{
+  "scope": "Actual selection-mode reader stopped while window was being minimized; subcause not distinguished",
+  "status": {
+    "mode": "continuous_readonly_observation",
+    "active": false,
+    "phase": "stopped",
+    "stop_reason": "selection_snapshot_changed",
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "selection",
+    "minimized_observation_enabled": true,
+    "window_minimized": false,
+    "snapshots": 15,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 0
+  },
+  "new_message_tested": false,
+  "auto_recovery": false,
+  "real_send": false
+}
