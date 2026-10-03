@@ -1,0 +1,500 @@
+Stage: RED before natural preference observation and management implementation.
+Only fictional values and temporary stores; no configuration, credentials, API, network, UI or native runs.
+Tests run: 15; failures: 4; errors: 45; skipped: 0.
+Elapsed: 0.828s.
+
+test_capacity_blocks_new_slot_but_allows_existing_slot_update (test_natural_preferences.NaturalPreferenceTests.test_capacity_blocks_new_slot_but_allows_existing_slot_update) ... ERROR
+test_current_guard_blocks_old_backup_after_natural_correction_or_forgetting (test_natural_preferences.NaturalPreferenceTests.test_current_guard_blocks_old_backup_after_natural_correction_or_forgetting) ... ERROR
+test_event_or_nonexplicit_slot_conflicts_do_not_get_rewritten_or_forgotten (test_natural_preferences.NaturalPreferenceTests.test_event_or_nonexplicit_slot_conflicts_do_not_get_rewritten_or_forgotten) ... ERROR
+test_finite_sugar_and_length_forms_normalize_without_general_extraction (test_natural_preferences.NaturalPreferenceTests.test_finite_sugar_and_length_forms_normalize_without_general_extraction) ... ERROR
+test_multiple_aliases_block_precheck_commit_correction_and_forgetting (test_natural_preferences.NaturalPreferenceTests.test_multiple_aliases_block_precheck_commit_correction_and_forgetting) ... ERROR
+test_named_forgetting_purges_context_and_stays_forgotten_after_restart (test_natural_preferences.NaturalPreferenceTests.test_named_forgetting_purges_context_and_stays_forgotten_after_restart) ... ERROR
+test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) ... 
+  test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='饮品偏好') ... FAIL
+  test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='咖啡加糖') ... FAIL
+  test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='回复长度') ... FAIL
+test_precheck_has_no_writes_then_commit_has_same_success_result (test_natural_preferences.NaturalPreferenceTests.test_precheck_has_no_writes_then_commit_has_same_success_result) ... ERROR
+test_queries_do_not_promote_assistant_history_or_other_session_values (test_natural_preferences.NaturalPreferenceTests.test_queries_do_not_promote_assistant_history_or_other_session_values) ... ERROR
+test_same_value_is_idempotent_and_preserves_history_and_source (test_natural_preferences.NaturalPreferenceTests.test_same_value_is_idempotent_and_preserves_history_and_source) ... ERROR
+test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) ... 
+  test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='饮品偏好') ... ERROR
+  test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='咖啡加糖') ... ERROR
+  test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='回复长度') ... ERROR
+test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) ... FAIL
+test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) ... 
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我今天喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我今天只想喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时可能喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='假如我平时喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='如果我喝咖啡不加糖。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='她说我平时喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='“我平时喜欢喝茶。”') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='请翻译：我平时喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我不喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我不是喜欢喝茶。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶？') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶，但今天不想喝。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶。帮我选一杯。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶\n帮我选一杯') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='这次回复我简短一点。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='今天以后回复我简短一点。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我喝咖啡不加糖，但今天例外。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶；我喝咖啡少糖。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水是假话。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水只是举例。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水但最近不喝了。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='今天我喝咖啡不加糖。') ... ERROR
+  test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='以后回复我简短一点，除非我问细节。') ... ERROR
+test_unique_legacy_alias_updates_original_key_and_erases_old_context (test_natural_preferences.NaturalPreferenceTests.test_unique_legacy_alias_updates_original_key_and_erases_old_context) ... ERROR
+test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) ... 
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我平时喜欢喝百香果双拼。') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我喝咖啡超级多糖。') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='下午推荐喝什么？') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='照我的口味推荐一杯。') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我的饮品偏好改成茶吗？') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='忘记我的饮品偏好吗？') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我的饮品偏好改成茶，密码是虚构样例。') ... ERROR
+  test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='忘记我的饮品偏好，密钥是虚构样例。') ... ERROR
+test_vague_management_asks_for_slot_without_mutating (test_natural_preferences.NaturalPreferenceTests.test_vague_management_asks_for_slot_without_mutating) ... ERROR
+
+======================================================================
+ERROR: test_capacity_blocks_new_slot_but_allows_existing_slot_update (test_natural_preferences.NaturalPreferenceTests.test_capacity_blocks_new_slot_but_allows_existing_slot_update)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 134, in test_capacity_blocks_new_slot_but_allows_existing_slot_update
+    check = self.memory.observe('s', '我喝咖啡不加糖。', 'new', check_only=True)
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_current_guard_blocks_old_backup_after_natural_correction_or_forgetting (test_natural_preferences.NaturalPreferenceTests.test_current_guard_blocks_old_backup_after_natural_correction_or_forgetting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 173, in test_current_guard_blocks_old_backup_after_natural_correction_or_forgetting
+    self.memory.observe(session, '我平时喜欢喝热柠檬水。', 'initial')
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_event_or_nonexplicit_slot_conflicts_do_not_get_rewritten_or_forgotten (test_natural_preferences.NaturalPreferenceTests.test_event_or_nonexplicit_slot_conflicts_do_not_get_rewritten_or_forgotten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 123, in test_event_or_nonexplicit_slot_conflicts_do_not_get_rewritten_or_forgotten
+    self.assertIsInstance(self.memory.observe(session, '我喝咖啡不加糖。', 'new', check_only=True), str)
+                          ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_finite_sugar_and_length_forms_normalize_without_general_extraction (test_natural_preferences.NaturalPreferenceTests.test_finite_sugar_and_length_forms_normalize_without_general_extraction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 213, in test_finite_sugar_and_length_forms_normalize_without_general_extraction
+    self.assertIsNone(self.memory.observe(session, text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_multiple_aliases_block_precheck_commit_correction_and_forgetting (test_natural_preferences.NaturalPreferenceTests.test_multiple_aliases_block_precheck_commit_correction_and_forgetting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 109, in test_multiple_aliases_block_precheck_commit_correction_and_forgetting
+    check = self.memory.observe('s', '我平时喜欢喝温乌龙茶。', 'new', check_only=True)
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_named_forgetting_purges_context_and_stays_forgotten_after_restart (test_natural_preferences.NaturalPreferenceTests.test_named_forgetting_purges_context_and_stays_forgotten_after_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 159, in test_named_forgetting_purges_context_and_stays_forgotten_after_restart
+    self.memory.observe('s', '我喝咖啡不加糖。', 'initial')
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_precheck_has_no_writes_then_commit_has_same_success_result (test_natural_preferences.NaturalPreferenceTests.test_precheck_has_no_writes_then_commit_has_same_success_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 77, in test_precheck_has_no_writes_then_commit_has_same_success_result
+    self.assertIsNone(self.memory.observe('s', '我平时喜欢喝茶。', 'm', check_only=True))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_queries_do_not_promote_assistant_history_or_other_session_values (test_natural_preferences.NaturalPreferenceTests.test_queries_do_not_promote_assistant_history_or_other_session_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 195, in test_queries_do_not_promote_assistant_history_or_other_session_values
+    self.memory.observe('other', '我喝咖啡不加糖。', 'other')
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_same_value_is_idempotent_and_preserves_history_and_source (test_natural_preferences.NaturalPreferenceTests.test_same_value_is_idempotent_and_preserves_history_and_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 83, in test_same_value_is_idempotent_and_preserves_history_and_source
+    self.memory.observe('s', '我平时喜欢喝茶。', 'original')
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='饮品偏好')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 36, in test_stable_statements_store_three_explicit_slots_with_provenance
+    self.assertIsNone(self.memory.observe('s', text, f'm{n}'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='咖啡加糖')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 36, in test_stable_statements_store_three_explicit_slots_with_provenance
+    self.assertIsNone(self.memory.observe('s', text, f'm{n}'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance) (key='回复长度')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 36, in test_stable_statements_store_three_explicit_slots_with_provenance
+    self.assertIsNone(self.memory.observe('s', text, f'm{n}'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我今天喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我今天只想喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时可能喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='假如我平时喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='如果我喝咖啡不加糖。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='她说我平时喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='“我平时喜欢喝茶。”')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='请翻译：我平时喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我不喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我不是喜欢喝茶。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶，但今天不想喝。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶。帮我选一杯。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶\n帮我选一杯')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='这次回复我简短一点。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='今天以后回复我简短一点。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我喝咖啡不加糖，但今天例外。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝茶；我喝咖啡少糖。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水是假话。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水只是举例。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='我平时喜欢喝热柠檬水但最近不喝了。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='今天我喝咖啡不加糖。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write (test_natural_preferences.NaturalPreferenceTests.test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write) (text='以后回复我简短一点，除非我问细节。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 60, in test_temporary_hypothetical_quoted_negative_and_mixed_text_does_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'message'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unique_legacy_alias_updates_original_key_and_erases_old_context (test_natural_preferences.NaturalPreferenceTests.test_unique_legacy_alias_updates_original_key_and_erases_old_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 96, in test_unique_legacy_alias_updates_original_key_and_erases_old_context
+    self.assertIsNone(self.memory.observe('s', '我平时喜欢喝温乌龙茶。', 'new'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我平时喜欢喝百香果双拼。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我喝咖啡超级多糖。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='下午推荐喝什么？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='照我的口味推荐一杯。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我的饮品偏好改成茶吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='忘记我的饮品偏好吗？')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='我的饮品偏好改成茶，密码是虚构样例。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_unsupported_values_recommendations_and_management_questions_do_not_write (test_natural_preferences.NaturalPreferenceTests.test_unsupported_values_recommendations_and_management_questions_do_not_write) (text='忘记我的饮品偏好，密钥是虚构样例。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 71, in test_unsupported_values_recommendations_and_management_questions_do_not_write
+    self.assertIsNone(self.memory.observe('s', text, 'm'))
+                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+ERROR: test_vague_management_asks_for_slot_without_mutating (test_natural_preferences.NaturalPreferenceTests.test_vague_management_asks_for_slot_without_mutating)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 185, in test_vague_management_asks_for_slot_without_mutating
+    self.memory.observe('s', '我平时喜欢喝茶。', 'initial')
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryService' object has no attribute 'observe'
+
+======================================================================
+FAIL: test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='饮品偏好')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 150, in test_named_natural_management_and_recall_cover_all_three_slots
+    self.assertIsInstance(self.memory.handle('s', change, 'change'), str)
+AssertionError: None is not an instance of <class 'str'>
+
+======================================================================
+FAIL: test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='咖啡加糖')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 150, in test_named_natural_management_and_recall_cover_all_three_slots
+    self.assertIsInstance(self.memory.handle('s', change, 'change'), str)
+AssertionError: None is not an instance of <class 'str'>
+
+======================================================================
+FAIL: test_named_natural_management_and_recall_cover_all_three_slots (test_natural_preferences.NaturalPreferenceTests.test_named_natural_management_and_recall_cover_all_three_slots) (key='回复长度')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 150, in test_named_natural_management_and_recall_cover_all_three_slots
+    self.assertIsInstance(self.memory.handle('s', change, 'change'), str)
+AssertionError: None is not an instance of <class 'str'>
+
+======================================================================
+FAIL: test_stable_statements_store_three_explicit_slots_with_provenance (test_natural_preferences.NaturalPreferenceTests.test_stable_statements_store_three_explicit_slots_with_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[project]\tests\test_natural_preferences.py", line 42, in test_stable_statements_store_three_explicit_slots_with_provenance
+    self.assertEqual(len(self.store.memories('s')), 3)
+AssertionError: 0 != 3
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.828s
+
+FAILED (failures=4, errors=45)

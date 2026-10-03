@@ -1,8 +1,22 @@
-# Windows 测试结果（当前 v0.1.15）
+# Windows 测试结果（当前 v0.1.16）
 
 最新执行日期：2026-10-03（Asia/Shanghai）；以下历史阶段另有2026-10-01/02记录。Windows 11 家庭版中文版 build 26200，Python 3.12.14，SQLite 3.53.1；PowerShell 5.1 和 7.6.5。
 
-## v0.1.15 真实模型评估与有限饮品回忆
+## v0.1.16 有限日常偏好与自然管理
+
+发现297项，最终选定执行 **284/284，31.078秒，0失败/错误/跳过**：[220](evidence/220-natural-memory-final-regression.txt)、[221范围](evidence/221-natural-memory-final-regression-scope.json)。继续排除NativeProbeTests、NativeOcrCheckTests、NativeVisualTextTests、VisualBitmapTests共13项，未重跑被拒夹具，不能称全套297项通过。220/221还保留首次284/284、32.430秒的结果；随后将三个既有测试的仓库示例加载改为显式虚构凭据，避免顺带读取本机.env，再执行最终复验。该调整只影响测试夹具，没有更改产品凭据加载行为。
+
+新增15项服务测试，验证三个主题的有限完整句式、来源/持久化、预检无写、同值幂等、唯一旧别名更新、歧义/类型冲突/容量拒绝、命名管理、未知查询、会话隔离、重启和最新遗忘账本下旧备份不复活。缺少observe时预期失败：[215](evidence/215-natural-preferences-red.txt)，15项含4个断言失败及45个缺失方法错误子项；实现后与既有Memory/MemoryRecall共 **44/44，2.598秒**：[216](evidence/216-natural-preferences-targeted.txt)。216头部外部计时2.594秒与runner计时来自同一轮。
+
+新增10项Engine集成测试先出现8个预期断言失败、0错误：[217](evidence/217-preference-engine-red.txt)；实现后 **10/10，0.966秒**：[218](evidence/218-preference-engine-targeted.txt)。验证当前用户陈述进入同一轮模型上下文且只调用一次、过滤/身份/暂停/预算拒绝不提取、歧义/容量澄清不占模型预算、重复事件不重写、模型失败保留已接受事实、助手输出不形成偏好，以及配额耗尽后的本地纠正/遗忘/查询。测试使用直接Config、临时Store与假模型，不读取实际密钥。
+
+[219独立审查](evidence/219-natural-memory-review.json)无代码发现；修正了一处文档过度承诺，不将全文规则说成能理解玩笑/反讽。独立复验37/37、2.790秒，另3项临时边界检查通过，覆盖金额预算、敏感混合文本和额度用完后的本地管理。它没有重复全回归，也没有读取实际配置或密钥。
+
+[222离线安装](evidence/222-natural-memory-package.json)一次构建/安装通过：版本0.1.16、21个Python模块源码匹配、5个原生资源、两个已安装CLI帮助，以及三个主题各六阶段共18项临时Store验证。仓库草稿仅在临时目录读取，保持fake/off且无凭据；模型与socket调用均0，临时目录已清理。草稿不在wheel中。
+
+本轮没有新增真实API请求、实际微信访问、真实聊天记忆或发送。支持范围仅饮品、咖啡加糖和回复长度；额外结构不匹配时不提取，恰好等于支持句式的玩笑/反讽仍可能保存。无法据此认为任意事实理解、自然度或真实微信自动回复已经通过；此前206质量失败保留。具体表达和失败语义见[NATURAL_PREFERENCES.md](NATURAL_PREFERENCES.md)。
+
+## v0.1.15 真实模型评估与有限饮品回忆（历史记录）
 
 发现272项，选定执行 **259/259，155.633秒，0失败/错误/跳过**：[209](evidence/209-memory-recall-final-regression.txt)、[210范围](evidence/210-memory-recall-final-regression-scope.json)。210外部计时155.641秒为同一轮；继续排除NativeProbeTests、NativeOcrCheckTests、NativeVisualTextTests、VisualBitmapTests共13项，没有重跑被拒夹具，不能说全套272项通过。
 

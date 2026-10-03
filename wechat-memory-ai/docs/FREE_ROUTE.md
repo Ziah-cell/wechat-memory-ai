@@ -4,7 +4,7 @@
 
 ## 当前可用阶段
 
-微信读取部分沿用v0.1.13的系统.NET/UIA与内存PrintWindow，无第三方运行依赖。随机标记后双来信只读准入已通过，指定窗口实例的只读消息源已实现；未知/矛盾/旧组合保护保留，真实自身到达过滤仍待完整验收。v0.1.15已完成8次虚构对话的真实DeepSeek请求，发现偏好猜测后增加有限饮品回忆的本地核对；一般质量仍待验收，微信源未接入模型或发送。最新回归范围见TEST_RESULTS.md，13项原生测试继续排除。详见 [LIVE_SOURCE.md](LIVE_SOURCE.md)、[READ_CANDIDATES.md](READ_CANDIDATES.md)与[DEEPSEEK.md](DEEPSEEK.md)。免费接入指微信连接路线；未来选用云模型时，其API费用另计。
+微信读取部分沿用v0.1.13的系统.NET/UIA与内存PrintWindow，无第三方运行依赖。随机标记后双来信只读准入已通过，指定窗口实例的只读消息源已实现；未知/矛盾/旧组合保护保留，真实自身到达过滤仍待完整验收。v0.1.16增加有限日常偏好提取与自然管理。此前8次虚构DeepSeek请求暴露的偏好猜测仍作为质量失败保留；本轮未新增真实API请求，一般质量仍待验收，微信源未接入模型或发送。最新回归范围见TEST_RESULTS.md，13项原生测试继续排除。详见 [LIVE_SOURCE.md](LIVE_SOURCE.md)、[READ_CANDIDATES.md](READ_CANDIDATES.md)与[DEEPSEEK.md](DEEPSEEK.md)。免费接入指微信连接路线；未来选用云模型时，其API费用另计。
 
 最新增加独立 RapidOCR 候选实验：项目 `.ocr-env` 安装免费依赖，核心仍无第三方依赖。固定样例的中文/字母数字识别改善，但过滤误检会漏掉真实符号，结果 **review_required / 3**，不接入自动监听/回复。完整回归 117 项通过；来源、实际结果和局限见 [OCR_CANDIDATE.md](OCR_CANDIDATE.md)。
 

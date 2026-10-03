@@ -1,0 +1,15 @@
+test_ambiguous_aliases_clarify_without_model_or_budget (test_preference_engine.PreferenceEngineTests.test_ambiguous_aliases_clarify_without_model_or_budget) ... ok
+test_budget_blocked_declaration_does_not_extract (test_preference_engine.PreferenceEngineTests.test_budget_blocked_declaration_does_not_extract) ... ok
+test_declaration_is_grounded_in_same_single_reply_request (test_preference_engine.PreferenceEngineTests.test_declaration_is_grounded_in_same_single_reply_request) ... ok
+test_duplicate_does_not_repeat_write_or_request (test_preference_engine.PreferenceEngineTests.test_duplicate_does_not_repeat_write_or_request) ... ok
+test_filtered_paused_and_identity_blocked_events_do_not_extract (test_preference_engine.PreferenceEngineTests.test_filtered_paused_and_identity_blocked_events_do_not_extract) ... ok
+test_full_memory_clarifies_without_model_or_budget (test_preference_engine.PreferenceEngineTests.test_full_memory_clarifies_without_model_or_budget) ... ok
+test_model_failure_keeps_user_fact_and_never_retries (test_preference_engine.PreferenceEngineTests.test_model_failure_keeps_user_fact_and_never_retries) ... ok
+test_natural_correction_forget_and_recall_are_local (test_preference_engine.PreferenceEngineTests.test_natural_correction_forget_and_recall_are_local) ... ok
+test_only_user_declaration_is_observed_not_model_output (test_preference_engine.PreferenceEngineTests.test_only_user_declaration_is_observed_not_model_output) ... ok
+test_reply_length_is_saved_without_replacing_the_natural_reply (test_preference_engine.PreferenceEngineTests.test_reply_length_is_saved_without_replacing_the_natural_reply) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.966s
+
+OK

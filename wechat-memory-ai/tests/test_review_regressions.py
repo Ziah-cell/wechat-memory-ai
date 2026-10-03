@@ -154,7 +154,7 @@ class DeadlineReviewTests(unittest.TestCase):
         thread.start()
         self.addCleanup(server.server_close)
         self.addCleanup(server.shutdown)
-        c=load_config(ROOT/'config.example.toml',environ={}).model
+        c=load_config(ROOT/'config.example.toml',environ={'WECHAT_AI_API_KEY': 'fixture-key'}).model
         c=replace(c,provider='chat_completions',allow_network=True,api_key='TEST_ONLY',name='test',
                   endpoint=f'http://127.0.0.1:{server.server_port}/v1/chat/completions',timeout_seconds=.4)
         started=time.monotonic()

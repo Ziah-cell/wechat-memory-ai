@@ -2,6 +2,8 @@
 
 v0.1.15已完成隔离虚构对话的8次真实DeepSeek API技术调用，但后续质量检查发现模型编造偏好及删除断言，不能判为聊天质量通过。本轮测试已结束，不再调用API。微信消息源未接入模型，自动回复和实际聊天记忆写入保持关闭。
 
+v0.1.16另加入有限日常偏好的本地提取与命名管理，见[NATURAL_PREFERENCES.md](NATURAL_PREFERENCES.md)。这次更新只用虚构数据和假模型验证，没有新增真实API请求，也不代表此前质量失败已经全面解决。
+
 ## 已准备的配置
 
 仓库中的[config.deepseek.example.toml](../config.deepseek.example.toml)预填官方端点与`deepseek-flash`，但仍为`provider="fake"`、`allow_network=false`；默认`config.example.toml`和主`config.toml`同样保持fake、关闭网络。本机另有被Git忽略的`config.local.deepseek.toml`评估配置，已启用DeepSeek网络请求，仍限定`adapter="mock"`、`dry_run=true`、`real_send=false`。
@@ -31,7 +33,7 @@ DeepSeek配置只接受两个明确的官方HTTPS端点：
 
 ## 聊天与记忆范围
 
-系统提示默认日常一到三句、自然口语，复杂问题按需展开。有限饮品回忆查询只读取当前会话已保存的明确偏好，未知或多条记录不交给模型猜测；状态回答只描述当前记录，不推断删除历史。已有明确记忆、纠正和遗忘继续生效；自动提取日常偏好、一般事实回忆与自然度验收仍待完成。支持范围见[CHAT_EXPERIENCE.md](CHAT_EXPERIENCE.md)。
+系统提示默认日常一到三句、自然口语，复杂问题按需展开。有限饮品回忆查询只读取当前会话已保存的明确偏好，未知或多条记录不交给模型猜测；状态回答只描述当前记录，不推断删除历史。已有明确记忆、纠正和遗忘继续生效；v0.1.16已支持三个主题的有限日常表达提取，通用提取、一般事实回忆与自然度验收仍待完成。支持范围见[CHAT_EXPERIENCE.md](CHAT_EXPERIENCE.md)。
 
 模型将来用于真实聊天时，本轮正文及选中的上下文会发送给服务商；本地持久保存记忆不等于所有生成均在本地完成。
 

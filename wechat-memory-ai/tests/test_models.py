@@ -48,7 +48,8 @@ class ModelHTTPTests(unittest.TestCase):
         type(self).status = 200
         type(self).delay = 0
         type(self).body = json.dumps({'choices':[{'message':{'content':'真实 HTTP，本地假服务'}}]}).encode()
-        c = load_config(Path(__file__).parents[1] / 'config.example.toml', environ={})
+        c = load_config(Path(__file__).parents[1] / 'config.example.toml',
+                        environ={'WECHAT_AI_API_KEY': 'fixture-key'})
         self.config = replace(c.model, provider='chat_completions', allow_network=True, api_key='TEST_ONLY_KEY',
                               endpoint=f'http://127.0.0.1:{self.server.server_port}/v1/chat/completions', name='test-model')
 

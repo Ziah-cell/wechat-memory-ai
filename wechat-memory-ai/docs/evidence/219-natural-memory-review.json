@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "review": "natural_preference_independent_review",
+  "version": "0.1.16",
+  "passed": true,
+  "implementation_modified_by_reviewer": false,
+  "reviewed_files": [
+    "src/wechat_memory/preferences.py",
+    "src/wechat_memory/memory.py",
+    "src/wechat_memory/engine.py",
+    "tests/test_natural_preferences.py",
+    "tests/test_preference_engine.py",
+    "docs/NATURAL_PREFERENCES.md"
+  ],
+  "findings": {
+    "code_findings": 0,
+    "documentation_findings_identified": 1,
+    "documentation_findings_closed": 1,
+    "remaining_findings": 0,
+    "closed_reason": "documentation_now_limits_exclusion_to_unmatched_structures_and_disclaims_semantic_joke_or_sarcasm_detection"
+  },
+  "contract_checks": {
+    "finite_whole_input_rules": true,
+    "slot_count": 3,
+    "drink_value_count": 11,
+    "normalized_sugar_value_count": 3,
+    "reply_length_value_count": 2,
+    "user_input_only_observed": true,
+    "filter_identity_sensitive_checks_precede_preview": true,
+    "preview_does_not_remember": true,
+    "clarification_does_not_reserve_or_call_model": true,
+    "budget_rejection_does_not_save_fact": true,
+    "apply_after_reserve_and_before_context": true,
+    "accepted_fact_retained_after_model_failure": true,
+    "ordinary_declaration_calls_model_once": true,
+    "management_and_query_use_no_model_calls": true,
+    "same_value_preserves_record_and_context": true,
+    "single_alias_keeps_original_key": true,
+    "ambiguous_or_nonexplicit_records_not_overwritten": true,
+    "correction_and_forgetting_use_existing_erasure_guard": true,
+    "current_facts_not_assistant_history_used_for_recall": true
+  },
+  "verification": {
+    "targeted_modules": [
+      "test_natural_preferences",
+      "test_preference_engine",
+      "test_memory_recall"
+    ],
+    "targeted_tests": 37,
+    "targeted_failures": 0,
+    "targeted_errors": 0,
+    "targeted_skips": 0,
+    "targeted_elapsed_seconds": 2.790,
+    "additional_ephemeral_tests": 3,
+    "additional_failures": 0,
+    "additional_errors": 0,
+    "additional_elapsed_seconds": 0.168,
+    "additional_cases": [
+      "cost_budget_rejection_prevents_fact_and_model_call",
+      "sensitive_mixed_declaration_prevents_fact_and_model_call",
+      "named_management_and_recall_work_after_model_quota_exhaustion"
+    ],
+    "scoped_diff_check_passed": true
+  },
+  "isolation": {
+    "direct_config_and_temporary_fictional_stores": true,
+    "fake_models_only": true,
+    "actual_credentials_read": false,
+    "actual_profile_read": false,
+    "actual_memory_read_or_written": false,
+    "real_model_calls": 0,
+    "native_calls": 0,
+    "ui_calls": 0,
+    "wechat_sends": 0,
+    "full_suite_run": false
+  },
+  "limitations": [
+    "finite_three_slot_rules_do_not_establish_general_language_understanding",
+    "supported_literal_sentences_can_still_express_unmarked_jokes_or_sarcasm",
+    "no_new_cloud_conversation_quality_or_real_wechat_integration_validation"
+  ]
+}

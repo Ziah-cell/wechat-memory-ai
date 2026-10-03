@@ -126,9 +126,13 @@ class Engine:
             if reply is None and sensitive(event.text):
                 reply = '这条消息可能包含敏感信息，本版未保存正文或调用模型。请去除相关信息后重发。'
             if reply is None:
+                reply = self.memory.observe(self.session, event.text, key, check_only=True)
+            if reply is None:
                 limit = self.ops.reserve(self.config.limits)
                 if limit:
                     return self._result('budget_blocked', key, code=limit)
+                reply = self.memory.observe(self.session, event.text, key)
+            if reply is None:
                 context = self.context(event.text)
                 self.store.add_turn(self.session, key, 'user', event.text)
                 try:

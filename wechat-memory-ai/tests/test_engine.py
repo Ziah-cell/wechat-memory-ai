@@ -35,7 +35,7 @@ class EngineTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
         template = Path(__file__).parents[1] / 'config.example.toml'
-        self.config = replace(load_config(template, environ={}), data_dir=self.root)
+        self.config = replace(load_config(template, environ={'WECHAT_AI_API_KEY': 'fixture-key'}), data_dir=self.root)
         self.store = Store(self.root)
         self.addCleanup(lambda: self.store.close())
         self.adapter = MockAdapter(self.config.peer_id)

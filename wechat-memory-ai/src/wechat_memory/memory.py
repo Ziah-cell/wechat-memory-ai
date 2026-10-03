@@ -1,5 +1,7 @@
-"""Explicit memory writes and bounded recall; ordinary conversation never becomes a fact."""
+"""Explicit commands, finite direct self-statements and bounded local recall."""
 import re
+
+from .preferences import SLOT_KEYS, parse_preference
 
 
 SENSITIVE = re.compile(r'密码|口令|密钥|令牌|身份证|银行卡|手机号|病历|诊断|性取向|宗教|账户余额|'
@@ -7,7 +9,7 @@ SENSITIVE = re.compile(r'密码|口令|密钥|令牌|身份证|银行卡|手机�
 
 # Whole questions only: recommendations, quotations and mixed requests stay outside
 # this deliberately narrow recall path. Missing records never imply a past deletion.
-_DRINK_KEYS = frozenset(('饮品偏好', '饮料偏好', '饮品喜好', '饮料喜好'))
+_DRINK_KEYS = SLOT_KEYS['饮品偏好']
 _DRINK_RECALL = re.compile(
     r'(?:我(?:平时)?(?:最)?喜欢喝什么|你(?:还)?记得我(?:平时)?(?:最)?喜欢喝什么吗|'
     r'我的(?:饮品|饮料)偏好是什么)[？?。.]?')
@@ -63,6 +65,9 @@ class MemoryService:
         recall = self._recall_drink(session, text)
         if recall is not None:
             return recall
+        natural = self._handle_preference(session, text, source)
+        if natural is not None:
+            return natural
         if not (text.startswith('记住') or text.startswith('/记住')):
             return None
         if sensitive(text):
@@ -85,6 +90,59 @@ class MemoryService:
             else:
                 return '请明确记忆内容，例如：记住：称呼我为小禾，回复尽量简短；或 /记住 event 考试=下周复习。'
         return self._save(session, items, source)
+
+    def observe(self, session, text, source, *, check_only=False):
+        """Recognize one direct statement; a successful observation still gets a model reply."""
+        intent = parse_preference(text)
+        if intent is None or intent.action != 'observe':
+            return None
+        if sensitive(text):
+            return '这可能包含敏感信息，本版不写入长期记忆。'
+        return self._write_preference(session, intent.slot, intent.value, source, check_only=check_only)
+
+    def _slot_state(self, session, slot):
+        all_rows = self.store.memories(session)
+        rows = [row for row in all_rows if row['key'] in SLOT_KEYS[slot]]
+        if len(rows) > 1:
+            return all_rows, None, '这项偏好有多条记录，请先查看并明确要修改哪一条。'
+        row = rows[0] if rows else None
+        if row and (row['kind'] != 'preference' or row['certainty'] != 'explicit'):
+            return all_rows, None, '这项记录不是明确偏好，请先查看并指定要修改的记录。'
+        return all_rows, row, None
+
+    def _write_preference(self, session, slot, value, source, *, check_only=False):
+        all_rows, row, error = self._slot_state(session, slot)
+        if error:
+            return error
+        if row is None and len(all_rows) >= 100:
+            return '长期记忆已达 100 条，请先删除不用的条目。'
+        if not check_only and (row is None or row['value'] != value):
+            self.store.remember(session, row['key'] if row else slot, value, 'preference', source)
+        return None
+
+    def _handle_preference(self, session, text, source):
+        intent = parse_preference(text)
+        if intent is None or intent.action == 'observe':
+            return None
+        if sensitive(text):
+            return '这可能包含敏感信息，本版不写入长期记忆。'
+        if intent.action == 'clarify':
+            return '你指的是哪项偏好？请说清饮品偏好、咖啡加糖或回复长度。'
+        if intent.action == 'set':
+            error = self._write_preference(session, intent.slot, intent.value, source)
+            return error or '好，' + intent.slot + '记为' + intent.value + '。'
+        _, row, error = self._slot_state(session, intent.slot)
+        if error:
+            return error
+        if intent.action == 'forget':
+            if row is None:
+                return '目前没有保存这项偏好。'
+            self.store.forget(session, row['id'])
+            return '已删除这项偏好，并清理此前会话历史与摘要。'
+        if row is None:
+            return '目前没有保存这项偏好。' if intent.action == 'status' else '这点我现在不太确定。'
+        prefix = '目前保存的' if intent.action == 'status' else '你说过的'
+        return prefix + intent.slot + '是：' + row['value'] + '。'
 
     def _recall_drink(self, session, text):
         status = _DRINK_STATUS.fullmatch(text) is not None
