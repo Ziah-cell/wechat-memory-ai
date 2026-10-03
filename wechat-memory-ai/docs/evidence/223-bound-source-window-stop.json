@@ -1,0 +1,33 @@
+{
+  "status": "incomplete",
+  "date": "2026-10-03",
+  "version": "0.1.16",
+  "mode": "supervised_readonly_bound_source",
+  "configured_duration_seconds": 900,
+  "snapshots": 39,
+  "marker_boundary_observed": false,
+  "self_target_observed": 0,
+  "self_target_filtered": false,
+  "incoming_target_delivered": 0,
+  "candidate_current_before_close": false,
+  "candidate_invalid_after_close": false,
+  "unexpected_self_delivery": false,
+  "filtered_self_texts": 0,
+  "filtered_unknown_texts": 0,
+  "emitted_candidates": 0,
+  "snapshot_change_retries": 0,
+  "stop_reason": "window_minimized",
+  "source_closed": true,
+  "model_called": false,
+  "memory_written": false,
+  "real_messages_sent": 0,
+  "sender_verified": false,
+  "history_boundary_verified": false,
+  "notes": [
+    "The configured deadline is not elapsed runtime.",
+    "The acceptance harness exited zero, but the acceptance did not pass.",
+    "The later user confirmation and visible marker cannot establish an event in the closed source.",
+    "No candidate existed for testing revocation; false does not indicate a failed revocation test.",
+    "Window bindings, message text, challenge values, identity values and screenshots are omitted."
+  ]
+}
