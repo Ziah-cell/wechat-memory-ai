@@ -1,0 +1,15 @@
+{
+  "scope": "user-reported result of manual ordinary-account web-login eligibility check",
+  "recorded_at_utc": "2026-10-04T17:44:28.934059+00:00",
+  "user_report": "能登录，但是网页版不支持使用了",
+  "result_source": "user report; agent browser remained blocked",
+  "usable_web_chat_channel_established": false,
+  "provider_compatibility_verified": false,
+  "exact_server_error_collected": false,
+  "global_web_service_unavailability_claimed": false,
+  "route_decision": "exclude Web provider from current implementation candidates based on reported unusability; retain Windows personal-account friend-chat target",
+  "agent_account_login_completed": false,
+  "chat_content_collected": false,
+  "third_party_framework_executed": false,
+  "messages_sent": 0
+}
