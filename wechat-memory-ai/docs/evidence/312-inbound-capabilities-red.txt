@@ -1,0 +1,131 @@
+test_all_metadata_present_and_bottom_scroll_still_reject (test_inbound_capabilities.InboundCapabilityTests.test_all_metadata_present_and_bottom_scroll_still_reject) ... FAIL
+test_bad_result_never_rebinds (test_inbound_capabilities.InboundCapabilityTests.test_bad_result_never_rebinds) ... FAIL
+test_bad_rows_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_rows_are_rejected) ... FAIL
+test_bad_scroll_path_and_values_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_scroll_path_and_values_are_rejected) ... FAIL
+test_bad_top_level_fields_and_counts_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_top_level_fields_and_counts_are_rejected) ... FAIL
+test_bound_read_uses_private_stdin_and_default_timeout (test_inbound_capabilities.InboundCapabilityTests.test_bound_read_uses_private_stdin_and_default_timeout) ... FAIL
+test_capabilities_cannot_enter_any_message_session (test_inbound_capabilities.InboundCapabilityTests.test_capabilities_cannot_enter_any_message_session) ... FAIL
+test_empty_rows_are_valid_but_not_ready (test_inbound_capabilities.InboundCapabilityTests.test_empty_rows_are_valid_but_not_ready) ... FAIL
+test_metadata_change_is_rejected_without_retry (test_inbound_capabilities.InboundCapabilityTests.test_metadata_change_is_rejected_without_retry) ... FAIL
+test_nontext_metadata_does_not_become_text_evidence (test_inbound_capabilities.InboundCapabilityTests.test_nontext_metadata_does_not_become_text_evidence) ... FAIL
+test_read_requires_binding_before_subprocess (test_inbound_capabilities.InboundCapabilityTests.test_read_requires_binding_before_subprocess) ... FAIL
+test_report_is_independent_from_native_input (test_inbound_capabilities.InboundCapabilityTests.test_report_is_independent_from_native_input) ... FAIL
+test_report_is_redacted_and_no_capability_is_an_admission (test_inbound_capabilities.InboundCapabilityTests.test_report_is_redacted_and_no_capability_is_an_admission) ... FAIL
+test_scroll_no_scroll_sentinel_requires_not_scrollable (test_inbound_capabilities.InboundCapabilityTests.test_scroll_no_scroll_sentinel_requires_not_scrollable) ... FAIL
+
+======================================================================
+FAIL: test_all_metadata_present_and_bottom_scroll_still_reject (test_inbound_capabilities.InboundCapabilityTests.test_all_metadata_present_and_bottom_scroll_still_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_bad_result_never_rebinds (test_inbound_capabilities.InboundCapabilityTests.test_bad_result_never_rebinds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_bad_rows_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_rows_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_bad_scroll_path_and_values_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_scroll_path_and_values_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_bad_top_level_fields_and_counts_are_rejected (test_inbound_capabilities.InboundCapabilityTests.test_bad_top_level_fields_and_counts_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_bound_read_uses_private_stdin_and_default_timeout (test_inbound_capabilities.InboundCapabilityTests.test_bound_read_uses_private_stdin_and_default_timeout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_capabilities_cannot_enter_any_message_session (test_inbound_capabilities.InboundCapabilityTests.test_capabilities_cannot_enter_any_message_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_empty_rows_are_valid_but_not_ready (test_inbound_capabilities.InboundCapabilityTests.test_empty_rows_are_valid_but_not_ready)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_metadata_change_is_rejected_without_retry (test_inbound_capabilities.InboundCapabilityTests.test_metadata_change_is_rejected_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_nontext_metadata_does_not_become_text_evidence (test_inbound_capabilities.InboundCapabilityTests.test_nontext_metadata_does_not_become_text_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_read_requires_binding_before_subprocess (test_inbound_capabilities.InboundCapabilityTests.test_read_requires_binding_before_subprocess)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_report_is_independent_from_native_input (test_inbound_capabilities.InboundCapabilityTests.test_report_is_independent_from_native_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_report_is_redacted_and_no_capability_is_an_admission (test_inbound_capabilities.InboundCapabilityTests.test_report_is_redacted_and_no_capability_is_an_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+======================================================================
+FAIL: test_scroll_no_scroll_sentinel_requires_not_scrollable (test_inbound_capabilities.InboundCapabilityTests.test_scroll_no_scroll_sentinel_requires_not_scrollable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_inbound_capabilities.py", line 29, in setUp
+    self.assertTrue(callable(getattr(live_read.NativeReader, 'read_inbound_capabilities', None)),
+AssertionError: False is not true : bound inbound capability diagnostic is not implemented
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+FAILED (failures=14)

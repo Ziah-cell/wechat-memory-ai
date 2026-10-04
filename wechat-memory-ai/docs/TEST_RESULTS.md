@@ -1,4 +1,20 @@
-# Windows 测试结果（当前 v0.1.21）
+# Windows 测试结果（当前源码 v0.1.22）
+
+## 最小化入站元数据检查
+
+[324独立复审](evidence/324-inbound-review.json)确认异常整数修复与正文读取范围说明准确，14项纯Python测试通过、无剩余发现；未另做原生/UI、配置/真实数据、监听或外网调用。全回归/安装/实机结果仅核对保存证据。325最终状态：原监听活动1670次、1606次最小化，当前最小化，unknown仍1、0超时、防待机请求活动，未重启。
+
+[312](evidence/312-inbound-capabilities-red.txt)新增14项因接口缺失先失败；[313](evidence/313-inbound-capabilities-targeted.txt)与后台读取、恢复、绑定、窗口状态共39项通过0.076秒。覆盖严格字段/类型/计数、元数据不是准入、空列表/到底仍拒绝、协议不能进入消息会话、绑定必须先存在、绑定变化拒绝、元数据变化不自动重试。
+
+[314](evidence/314-live-inbound-capabilities.json)保留首次实机探测未进入读取的编译失败；[315](evidence/315-inbound-native-build-failure.txt)定位为不存在的AutomationElement.Compare，改用相等运算符后[316](evidence/316-live-inbound-capabilities.json)取得3次最小化结果。第一次探测脚本还先发生一次monitor状态函数名导入错误，未执行原生调用；编译诊断初次输出解码也失败，随后315完整保留编译错误。没有用重试成功抹掉失败。
+
+自查及独立审查发现超大整数百分比经math.isfinite会抛OverflowError；[319](evidence/319-inbound-large-percent-red.txt)保留复现。改为直接检查有限范围，巨型整数/NaN/Infinity均固定ReadError。最终[321](evidence/321-inbound-final-regression.txt)/[322范围](evidence/322-inbound-final-scope.json)：**382中选369/369通过，36.625秒，0失败/错误/跳过**，原NativeProbeTests、NativeOcrCheckTests、NativeVisualTextTests、VisualBitmapTests共13项继续排除，不称全套通过。317/318是补异常整数前的首次369项结果37.079秒。
+
+[320最终原生检查](evidence/320-live-inbound-final.json)在先确认祖先路径到达绑定根、再查询祖先属性的修订后，再次3/3最小化成功。每次8行含5文本，5文本都有AutomationId但全行仅1个非空ID；辅助属性/TextPattern/子控件均0，列表到窗口根8节点均无ScrollPattern；耗时343/329/343ms仅为诊断单次耗时，不是来信延迟或后台回复验收。绑定获取使用现有background在内存读基线正文后丢弃，不能把整个过程称作从未读正文；三次诊断本身只读元数据。未输出/保存正文、绑定或截图，没有UI操作、模型调用、真实聊天记忆或发送。
+
+[323](evidence/323-inbound-package.json)离线构建安装24模块、5原生资源、3入口帮助通过，安装源码逐字节相同，模块和发行包版本均0.1.22，临时目录清理。没有安装外部依赖或读取个人配置/.env，没有网络/原生/UI执行。之前模块__version__滞后于发行版的问题同步修正。
+
+原监听未重启，仍运行v0.1.21和防待机；320检查点活动1376次/1312次最小化，unknown仍1、0超时。新报告不接monitor/Engine，真实收发方向、联系人认证、历史和消息身份均未完成，详见[入站准入](INBOUND_ADMISSION.md)。
 
 ## 自动回复检查与受控最小化新增文本
 

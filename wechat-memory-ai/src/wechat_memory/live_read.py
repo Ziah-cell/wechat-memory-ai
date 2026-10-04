@@ -29,6 +29,7 @@ _NATIVE_REASONS = frozenset({
     'visual_capture_unavailable', 'visual_snapshot_changed',
     'selection_mode_required', 'selection_snapshot_changed',
     'background_mode_required', 'background_snapshot_changed',
+    'inbound_capabilities_changed',
 })
 
 _STOP_REASONS = _NATIVE_REASONS | frozenset({
@@ -634,6 +635,12 @@ class NativeReader:
             raise ReadError('window_binding_unavailable')
         return self._read_once(window_state=True)
 
+    def read_inbound_capabilities(self):
+        """Bound metadata inspection, with no retry, rebind or message delivery."""
+        if self._binding is None:
+            raise ReadError('window_binding_unavailable')
+        return self._read_once(inbound_capabilities=True)
+
     def read_selection_text(self):
         if self._binding is None:
             return self._read_once(selection_text=True)
@@ -644,9 +651,9 @@ class NativeReader:
             return self._read_once(background_text=True)
         return self._read_consistent(dict(background_text=True), 'background_snapshot_changed')
 
-    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, window_state=False, selection_text=False, background_text=False, _timeout=8):
+    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, window_state=False, selection_text=False, background_text=False, inbound_capabilities=False, _timeout=8):
         try:
-            if sum(bool(value) for value in (layout,capabilities,visual,visual_text,window_state,selection_text,background_text))>1:
+            if sum(bool(value) for value in (layout,capabilities,visual,visual_text,window_state,selection_text,background_text,inbound_capabilities))>1:
                 raise ReadError('invalid_snapshot')
             command = [str(self.executable),self.client_path]
             if layout:
@@ -663,6 +670,8 @@ class NativeReader:
                 command.append('--selection-text')
             if background_text:
                 command.append('--background-text')
+            if inbound_capabilities:
+                command.append('--inbound-capabilities')
             stderr, timed_out = None, False
             started = time.perf_counter()
             try:
@@ -699,7 +708,10 @@ class NativeReader:
                     raise ReadError(raw['reason'])
                 raise ReadError('native_reader_unavailable')
             try:
-                if background_text:
+                if inbound_capabilities:
+                    from .inbound_capabilities import inbound_capability_report
+                    inbound_capability_report(raw)
+                elif background_text:
                     validate_background_snapshot(raw)
                 elif selection_text:
                     validate_selection_snapshot(raw)

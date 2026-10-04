@@ -1,0 +1,16 @@
+{
+  "network_used": false,
+  "personal_configuration_read": false,
+  "native_or_ui_executed": false,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0,
+  "version": "0.1.22",
+  "python_modules": 24,
+  "native_resources": 5,
+  "entry_points": 3,
+  "installed_sources_match": true,
+  "help_checks_passed": true,
+  "module_and_distribution_version_match": true,
+  "temporary_directory_removed": true
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "independent review of code, synthetic tests, updated documentation, and saved evidence",
+  "initial_findings": [
+    {
+      "severity": "P3",
+      "issue": "oversized integer percent could raise OverflowError",
+      "resolved": true
+    },
+    {
+      "severity": "documentation",
+      "issue": "distinguish baseline body read from metadata-only samples",
+      "resolved": true
+    }
+  ],
+  "final_findings": [],
+  "focused_tests_passed": 14,
+  "native_or_ui_executed": false,
+  "monitor_operated": false,
+  "personal_configuration_read": false,
+  "external_sources_independently_checked": false,
+  "full_regression_rerun_by_reviewer": false,
+  "full_regression_evidence_reviewed": "321/322",
+  "package_evidence_reviewed": "323",
+  "real_admission_ready": false,
+  "real_auto_reply_authorized": false
+}

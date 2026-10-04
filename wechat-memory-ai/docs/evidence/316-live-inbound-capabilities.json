@@ -1,0 +1,422 @@
+{
+  "scope": "authorized_single_test_window; baseline body read in memory for binding, followed by metadata-only diagnostics",
+  "monitor_before": {
+    "mode": "continuous_readonly_observation",
+    "active": true,
+    "phase": "observing",
+    "stop_reason": null,
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "background",
+    "minimized_observation_enabled": true,
+    "window_minimized": true,
+    "keep_awake_requested": true,
+    "keep_awake_request_active": true,
+    "reader_diagnostics": {
+      "child_calls": 1123,
+      "child_timeouts": 0,
+      "last_call_ms": 322,
+      "max_call_ms": 498,
+      "last_call_timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 1,
+        "request_read": 2,
+        "client_lookup": 41,
+        "process_lookup": 41,
+        "window_lookup": 49,
+        "binding_check": 110,
+        "tree_lookup": 113,
+        "list_binding": 195,
+        "rows_first": 196,
+        "binding_middle": 201,
+        "rows_second": 202,
+        "rows_compare": 206,
+        "binding_final": 206,
+        "snapshot_ready": 206,
+        "serializing": 206,
+        "completed": 215
+      },
+      "slowest_call": {
+        "child_call": 14,
+        "call_ms": 498,
+        "timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 4,
+          "request_read": 4,
+          "client_lookup": 80,
+          "process_lookup": 80,
+          "window_lookup": 105,
+          "binding_check": 212,
+          "tree_lookup": 215,
+          "list_binding": 344,
+          "rows_first": 345,
+          "binding_middle": 350,
+          "rows_second": 351,
+          "rows_compare": 356,
+          "binding_final": 357,
+          "snapshot_ready": 357,
+          "serializing": 357,
+          "completed": 376
+        }
+      }
+    },
+    "snapshots": 1123,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 1,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 1059
+  },
+  "reports": [
+    {
+      "sample": 1,
+      "elapsed_ms": 344,
+      "status": "inbound_capabilities_observed",
+      "minimized": true,
+      "rows": 8,
+      "text_rows": 5,
+      "automation_id_rows": 5,
+      "has_children_rows": 0,
+      "help_text_rows": 0,
+      "item_status_rows": 0,
+      "item_type_rows": 0,
+      "labeled_by_rows": 0,
+      "text_pattern_rows": 0,
+      "distinct_automation_ids": 1,
+      "list_scroll_pattern": false,
+      "ancestor_scroll_patterns": 0,
+      "scroll_nodes": [
+        {
+          "depth": 0,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 1,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 2,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 3,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 4,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 5,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 6,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 7,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        }
+      ],
+      "admission": "rejected",
+      "rejection_reasons": [
+        "direction_unverified",
+        "target_identity_unverified",
+        "history_boundary_unverified",
+        "message_identity_unverified"
+      ],
+      "sender_verified": false,
+      "history_boundary_verified": false,
+      "message_identity_verified": false,
+      "message_text_read": false,
+      "model_called": false,
+      "memory_written": false,
+      "real_send_supported": false,
+      "reply_ready": false
+    },
+    {
+      "sample": 2,
+      "elapsed_ms": 328,
+      "status": "inbound_capabilities_observed",
+      "minimized": true,
+      "rows": 8,
+      "text_rows": 5,
+      "automation_id_rows": 5,
+      "has_children_rows": 0,
+      "help_text_rows": 0,
+      "item_status_rows": 0,
+      "item_type_rows": 0,
+      "labeled_by_rows": 0,
+      "text_pattern_rows": 0,
+      "distinct_automation_ids": 1,
+      "list_scroll_pattern": false,
+      "ancestor_scroll_patterns": 0,
+      "scroll_nodes": [
+        {
+          "depth": 0,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 1,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 2,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 3,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 4,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 5,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 6,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 7,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        }
+      ],
+      "admission": "rejected",
+      "rejection_reasons": [
+        "direction_unverified",
+        "target_identity_unverified",
+        "history_boundary_unverified",
+        "message_identity_unverified"
+      ],
+      "sender_verified": false,
+      "history_boundary_verified": false,
+      "message_identity_verified": false,
+      "message_text_read": false,
+      "model_called": false,
+      "memory_written": false,
+      "real_send_supported": false,
+      "reply_ready": false
+    },
+    {
+      "sample": 3,
+      "elapsed_ms": 328,
+      "status": "inbound_capabilities_observed",
+      "minimized": true,
+      "rows": 8,
+      "text_rows": 5,
+      "automation_id_rows": 5,
+      "has_children_rows": 0,
+      "help_text_rows": 0,
+      "item_status_rows": 0,
+      "item_type_rows": 0,
+      "labeled_by_rows": 0,
+      "text_pattern_rows": 0,
+      "distinct_automation_ids": 1,
+      "list_scroll_pattern": false,
+      "ancestor_scroll_patterns": 0,
+      "scroll_nodes": [
+        {
+          "depth": 0,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 1,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 2,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 3,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 4,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 5,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 6,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        },
+        {
+          "depth": 7,
+          "scroll_pattern": false,
+          "vertical_scrollable": null,
+          "vertical_scroll_percent": null
+        }
+      ],
+      "admission": "rejected",
+      "rejection_reasons": [
+        "direction_unverified",
+        "target_identity_unverified",
+        "history_boundary_unverified",
+        "message_identity_unverified"
+      ],
+      "sender_verified": false,
+      "history_boundary_verified": false,
+      "message_identity_verified": false,
+      "message_text_read": false,
+      "model_called": false,
+      "memory_written": false,
+      "real_send_supported": false,
+      "reply_ready": false
+    }
+  ],
+  "listener_restarted": false,
+  "window_operated": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_sent": false,
+  "binding_acquisition": {
+    "reader": "background",
+    "minimized": true,
+    "rows": 8,
+    "body_read_in_memory_only": true,
+    "body_output_or_saved": false,
+    "used_as_incoming": false
+  },
+  "status": "completed",
+  "monitor_after": {
+    "mode": "continuous_readonly_observation",
+    "active": true,
+    "phase": "observing",
+    "stop_reason": null,
+    "baseline_ready": true,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false,
+    "memory_written": false,
+    "minimized_supported": false,
+    "reply_ready": false,
+    "reader_mode": "background",
+    "minimized_observation_enabled": true,
+    "window_minimized": true,
+    "keep_awake_requested": true,
+    "keep_awake_request_active": true,
+    "reader_diagnostics": {
+      "child_calls": 1124,
+      "child_timeouts": 0,
+      "last_call_ms": 328,
+      "max_call_ms": 498,
+      "last_call_timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 1,
+        "request_read": 1,
+        "client_lookup": 40,
+        "process_lookup": 40,
+        "window_lookup": 48,
+        "binding_check": 108,
+        "tree_lookup": 111,
+        "list_binding": 198,
+        "rows_first": 199,
+        "binding_middle": 206,
+        "rows_second": 207,
+        "rows_compare": 211,
+        "binding_final": 211,
+        "snapshot_ready": 212,
+        "serializing": 212,
+        "completed": 221
+      },
+      "slowest_call": {
+        "child_call": 14,
+        "call_ms": 498,
+        "timed_out": false,
+        "native_trace_valid": true,
+        "last_native_stage": "completed",
+        "native_checkpoints_ms": {
+          "started": 4,
+          "request_read": 4,
+          "client_lookup": 80,
+          "process_lookup": 80,
+          "window_lookup": 105,
+          "binding_check": 212,
+          "tree_lookup": 215,
+          "list_binding": 344,
+          "rows_first": 345,
+          "binding_middle": 350,
+          "rows_second": 351,
+          "rows_compare": 356,
+          "binding_final": 357,
+          "snapshot_ready": 357,
+          "serializing": 357,
+          "completed": 376
+        }
+      }
+    },
+    "snapshots": 1124,
+    "incoming_candidates": 0,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 1,
+    "snapshot_change_retries": 0,
+    "minimized_snapshots": 1060
+  }
+}

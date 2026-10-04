@@ -131,6 +131,76 @@ public static class LiveReader {
         }
         return rows;
     }
+
+    sealed class InboundCapabilities {
+        public object Rows, ScrollNodes;
+        public int DistinctIds;
+        public string Signature;
+    }
+    static InboundCapabilities InspectInboundCapabilities(AutomationElement list, AutomationElement root,
+            uint owner, TreeWalker walker) {
+        failureReason="capabilities_unavailable";
+        var rows=new List<object>();
+        var ids=new HashSet<string>(StringComparer.Ordinal);
+        var privateValues=new List<object>();
+        for(var child=walker.GetFirstChild(list); child!=null; child=walker.GetNextSibling(child)) {
+            if(rows.Count>=256) throw new InvalidOperationException();
+            SameProcess(child,(int)owner);
+            if((ControlType)child.GetCurrentPropertyValue(AutomationElement.ControlTypeProperty)!=ControlType.ListItem)
+                throw Failure("background_mode_required");
+            string kind=Property(child,AutomationElement.ClassNameProperty)=="mmui::ChatTextItemView" ? "text" : "other";
+            string id=Property(child,AutomationElement.AutomationIdProperty);
+            string help=Property(child,AutomationElement.HelpTextProperty);
+            string status=Property(child,AutomationElement.ItemStatusProperty);
+            string type=Property(child,AutomationElement.ItemTypeProperty);
+            if(id.Length>10000 || help.Length>10000 || status.Length>10000 || type.Length>10000)
+                throw new InvalidOperationException();
+            if(id.Length>0) ids.Add(id);
+            var label=child.GetCurrentPropertyValue(AutomationElement.LabeledByProperty) as AutomationElement;
+            var firstChild=walker.GetFirstChild(child);
+            if(firstChild!=null) SameProcess(firstChild,(int)owner);
+            object pattern;
+            bool textPattern=child.TryGetCurrentPattern(TextPattern.Pattern,out pattern);
+            rows.Add(new {token=Token(child),kind=kind,automation_id=id.Length>0,
+                help_text=help.Length>0,item_status=status.Length>0,item_type=type.Length>0,
+                labeled_by=label!=null,text_pattern=textPattern,has_children=firstChild!=null});
+            // Private, in-memory comparison only. Never serialize these values to stdout.
+            // No Name, TextPattern content, pixels, or semantic guesses are read here.
+            privateValues.Add(new {id=id,help=help,status=status,type=type});
+        }
+        var scrollNodes=new List<object>();
+        var pathTokens=new List<string>();
+        var ancestors=new List<AutomationElement>();
+        var node=list;
+        for(int depth=0;;depth++) {
+            if(node==null || depth>48) throw new InvalidOperationException();
+            ancestors.Add(node);
+            if(node==root) break;
+            node=walker.GetParent(node);
+        }
+        // Prove the path reaches the bound root before reading any ancestor
+        // properties. A detached/reparented list must not inspect another window.
+        for(int depth=0;depth<ancestors.Count;depth++) {
+            node=ancestors[depth];
+            SameProcess(node,(int)owner);
+            pathTokens.Add(Token(node));
+            object pattern;
+            bool available=node.TryGetCurrentPattern(ScrollPattern.Pattern,out pattern);
+            bool? vertical=null;
+            double? percent=null;
+            if(available) {
+                var info=((ScrollPattern)pattern).Current;
+                vertical=info.VerticallyScrollable;
+                percent=info.VerticalScrollPercent;
+            }
+            scrollNodes.Add(new {depth=depth,scroll_pattern=available,
+                vertical_scrollable=vertical,vertical_scroll_percent=percent});
+        }
+        var serializer=new JavaScriptSerializer();
+        serializer.MaxJsonLength=4000000;
+        return new InboundCapabilities {Rows=rows,ScrollNodes=scrollNodes,DistinctIds=ids.Count,
+            Signature=serializer.Serialize(new {rows=rows,values=privateValues,path=pathTokens,scroll=scrollNodes})};
+    }
     public static object Snapshot(string client, Dictionary<string,object> expected, string mode) {
         bool layout = mode == "--layout";
         bool capabilities = mode == "--capabilities";
@@ -138,9 +208,10 @@ public static class LiveReader {
         bool windowState = mode == "--window-state";
         bool selectionText = mode == "--selection-text";
         bool backgroundText = mode == "--background-text";
+        bool inboundCapabilities = mode == "--inbound-capabilities";
         // This explicit, already-bound diagnostic reads neither Name nor pixels.
         // The separate multiselect path reads labels; capture paths still reject minimization.
-        if(windowState && expected==null) throw Failure("window_binding_unavailable");
+        if((windowState || inboundCapabilities) && expected==null) throw Failure("window_binding_unavailable");
         bool visual = mode == "--visual" || visualText;
         if(visual) {
             failureReason = "visual_capture_unavailable";
@@ -179,7 +250,7 @@ public static class LiveReader {
         if (failure != null) throw new InvalidOperationException();
         if (targets.Count != 1) throw Failure("private_window_not_unique");
         bool minimized = IsIconic(targets[0]);
-        if (minimized && !windowState && !selectionText && !backgroundText) throw Failure("window_minimized");
+        if (minimized && !windowState && !selectionText && !backgroundText && !inboundCapabilities) throw Failure("window_minimized");
         Timing("binding_check");
         failureReason = "window_binding_unavailable";
         IntPtr handle = targets[0];
@@ -228,6 +299,17 @@ public static class LiveReader {
         failureReason = "message_list_unavailable";
         string listToken = Token(messageList);
         CheckBinding(expected,"list_token",listToken);
+        if(inboundCapabilities) {
+            var before=InspectInboundCapabilities(messageList,root,owner,walker);
+            RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            var after=InspectInboundCapabilities(messageList,root,owner,walker);
+            if(before.Signature!=after.Signature) throw Failure("inbound_capabilities_changed");
+            RecheckBinding(selected,handle,owner,started,root,rootId,messageList,listToken,true);
+            if(IsIconic(handle)!=minimized) throw Failure("inbound_capabilities_changed");
+            return new {status="inbound_capability_snapshot",process=(int)owner,started=started.ToString(),window=handle.ToInt64(),
+                root=rootId,list_token=listToken,minimized=minimized,rows=before.Rows,
+                distinct_automation_ids=before.DistinctIds,scroll_nodes=before.ScrollNodes};
+        }
         if(selectionText || backgroundText) {
             failureReason="message_rows_unavailable";
             string peer=selectionText ? Property(root,AutomationElement.NameProperty) : null;
@@ -404,7 +486,7 @@ public static class LiveReader {
         timingEnabled = args.Length==2 && args[1]=="--background-text";
         Timing("started");
         try {
-            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text" && args[1]!="--background-text"))) return 3;
+            if (args.Length!=1 && (args.Length!=2 || (args[1]!="--layout" && args[1]!="--capabilities" && args[1]!="--visual" && args[1]!="--visual-text" && args[1]!="--window-state" && args[1]!="--selection-text" && args[1]!="--background-text" && args[1]!="--inbound-capabilities"))) return 3;
             var serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength=4000000;
             Timing("request_read");

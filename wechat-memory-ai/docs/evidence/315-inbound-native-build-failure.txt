@@ -1,0 +1,2 @@
+reader_build_failed
+src\wechat_memory\live_reader.cs(190,34): error CS0117: “System.Windows.Automation.AutomationElement”并不包含“Compare”的定义
