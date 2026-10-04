@@ -1,0 +1,21 @@
+{
+  "scope": "authorized ordinary-account web-login eligibility probe",
+  "recorded_at_utc": "2026-10-04T17:40:38.744885+00:00",
+  "user_authorized_login_eligibility_check": true,
+  "user_performs_qr_scan": true,
+  "requested_url": "https://wx.qq.com/",
+  "requested_browser_surface": "iab",
+  "navigation_completed": false,
+  "blocked_by": "browser site-safety policy",
+  "reported_reason": "Browser use is not permitted on https://wx.qq.com",
+  "auto_review_attempted": false,
+  "tool_user_permission_prompt_attempted": false,
+  "qr_code_observed": false,
+  "account_login_completed_by_agent": false,
+  "account_eligibility_determined": false,
+  "alternate_tool_or_browser_workaround_attempted": false,
+  "manual_user_result_pending": true,
+  "third_party_framework_executed": false,
+  "chat_content_collected": false,
+  "messages_sent": 0
+}
