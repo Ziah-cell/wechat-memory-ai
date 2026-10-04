@@ -1,0 +1,12 @@
+{
+  "acquired": true,
+  "released": true,
+  "elapsed_ms": 0,
+  "persistent_power_plan_changed": false,
+  "display_required_added": false,
+  "manual_sleep_tested": false,
+  "standby_prevention_validated": false,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0
+}

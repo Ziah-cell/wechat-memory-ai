@@ -9,6 +9,7 @@ param(
     [ValidateRange(1,3600)][int]$ListenSeconds = 30,
     [string]$ListenerData = 'data/listener',
     [ValidateSet('visual','selection','background')][string]$ListenerReader = 'visual',
+    [switch]$KeepAwake,
     [string]$Python = $env:WECHAT_MEMORY_PYTHON
 )
 $ErrorActionPreference = 'Stop'
@@ -63,6 +64,7 @@ try {
         if ($MonitorAction -eq 'start') {
             if (!$ClientPath) { throw 'Use -ClientPath with the installed Weixin.exe.' }
             $MonitorArgs += @('--client-path',$ClientPath,'--reader',$ListenerReader)
+            if ($KeepAwake) { $MonitorArgs += '--keep-awake' }
         }
         & $PythonExe @MonitorArgs
         exit $LASTEXITCODE

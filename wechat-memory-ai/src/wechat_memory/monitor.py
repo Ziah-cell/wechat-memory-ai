@@ -14,13 +14,15 @@ import time
 
 from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, BackgroundOccurrenceSession, reader_diagnostics, _STOP_REASONS
 from .runtime import AlreadyRunning, Controller, InstanceLock, atomic_json, runtime_status, send_control
+from .power import KeepAwake, PowerRequestError
 
 
 _COUNTS = ('snapshots', 'incoming_candidates', 'filtered_self_texts',
            'filtered_unknown_texts', 'snapshot_change_retries', 'minimized_snapshots')
 _PHASES = frozenset({'starting', 'waiting_baseline', 'observing', 'stopped', 'busy'})
 _REASONS = _STOP_REASONS | frozenset({'requested', 'already_running', 'startup_failed',
-                                    'startup_timeout', 'stop_pending', 'not_running', 'monitor_failed'})
+                                    'startup_timeout', 'stop_pending', 'not_running', 'monitor_failed',
+                                    'keep_awake_failed'})
 
 
 def _public_status(raw):
@@ -36,6 +38,9 @@ def _public_status(raw):
     result['reader_mode'] = mode if isinstance(mode,str) and mode in ('selection','background') else 'visual'
     result['minimized_observation_enabled'] = result['reader_mode'] in ('selection','background')
     result['window_minimized'] = raw.get('window_minimized') is True
+    result['keep_awake_requested'] = raw.get('keep_awake_requested') is True
+    result['keep_awake_request_active'] = (result['active'] and result['keep_awake_requested']
+                                            and raw.get('keep_awake_request_active') is True)
     result['reader_diagnostics'] = reader_diagnostics(raw.get('reader_diagnostics'))
     for key in _COUNTS:
         value = raw.get(key, 0)
@@ -47,12 +52,14 @@ def monitor_status(directory):
     return _public_status(runtime_status(directory))
 
 
-def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
+def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual', keep_awake=False):
     """Observe one current private window until stop or the first read failure.
 
     The first accepted snapshot is a baseline, never an arrival. No background
     rebind, history replay, model callback, or send operation is provided.
     """
+    if type(keep_awake) is not bool:
+        return 2
     directory = Path(directory)
     if reader_mode not in ('visual','selection','background'):
         return 2
@@ -66,6 +73,7 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
             session = {'visual':VisualOccurrenceSession, 'selection':SelectionOccurrenceSession,
                        'background':BackgroundOccurrenceSession}[reader_mode]()
             reader = None
+            power = KeepAwake(keep_awake)
             counts = dict.fromkeys(_COUNTS, 0)
             counts['baseline_ready'] = False
             counts['reader_mode'] = reader_mode
@@ -74,6 +82,8 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
             def publish(phase, reason=None):
                 atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
                             phase=phase, stop_reason=reason,
+                            keep_awake_requested=keep_awake,
+                            keep_awake_request_active=power.active,
                             reader_diagnostics=reader_diagnostics(getattr(reader,'diagnostics',None)), **counts))
 
             def stopped():
@@ -82,7 +92,7 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
             publish('starting')
             reason, code = 'requested', 0
             try:
-                with NativeReader(client_path) as reader:
+                with power, NativeReader(client_path) as reader:
                     while True:
                         if stopped():
                             break
@@ -114,6 +124,8 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
                             time.sleep(.1)
             except KeyboardInterrupt:
                 reason = 'interrupted'
+            except PowerRequestError:
+                reason, code = 'keep_awake_failed', 3
             except ReadError as error:
                 reason = str(error)
                 if reason == 'read_session_stopped':
@@ -132,7 +144,9 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual'):
         return 3
 
 
-def _start(client_path, directory, *, reader_mode='visual'):
+def _start(client_path, directory, *, reader_mode='visual', keep_awake=False):
+    if type(keep_awake) is not bool:
+        raise ValueError('invalid_keep_awake')
     directory = Path(directory).resolve()
     if runtime_status(directory)['active']:
         return 3, dict(monitor_status(directory), stop_reason='already_running')
@@ -142,6 +156,8 @@ def _start(client_path, directory, *, reader_mode='visual'):
     command = [sys.executable, '-X', 'utf8', '-m', 'wechat_memory.monitor',
                '--data-dir', str(directory), 'run', '--client-path', str(Path(client_path).resolve()),
                '--run-id', token, '--reader', reader_mode]
+    if keep_awake:
+        command.append('--keep-awake')
     env = dict(os.environ)
     source_root = str(Path(__file__).resolve().parent.parent)
     env['PYTHONPATH'] = source_root + (os.pathsep+env['PYTHONPATH'] if env.get('PYTHONPATH') else '')
@@ -192,6 +208,8 @@ def main(argv=None):
     for action in ('start', 'run'):
         item = actions.add_parser(action)
         item.add_argument('--client-path', required=True)
+        item.add_argument('--keep-awake', action='store_true',
+                          help='Request Windows idle-sleep prevention while observing; display, manual sleep and lid behavior are unchanged.')
         item.add_argument('--reader', choices=('visual','selection','background'), default='visual',
                           help='background reads normal-window text; selection reads multiselect labels; both allow minimization and never verify a sender.')
         if action == 'run':
@@ -201,11 +219,11 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.action == 'start':
-            code, status = _start(args.client_path, args.data_dir, reader_mode=args.reader)
+            code, status = _start(args.client_path, args.data_dir, reader_mode=args.reader, keep_awake=args.keep_awake)
         elif args.action == 'stop':
             code, status = _stop(args.data_dir)
         elif args.action == 'run':
-            code = run_monitor(args.client_path, args.data_dir, run_id=args.run_id, reader_mode=args.reader)
+            code = run_monitor(args.client_path, args.data_dir, run_id=args.run_id, reader_mode=args.reader, keep_awake=args.keep_awake)
             status = monitor_status(args.data_dir)
         else:
             code, status = 0, monitor_status(args.data_dir)

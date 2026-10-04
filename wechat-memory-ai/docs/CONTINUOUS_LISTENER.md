@@ -1,8 +1,10 @@
-# 常驻只读监听与最小化验证（v0.1.20）
+# 常驻只读监听与最小化验证（v0.1.21）
 
-v0.1.20增加一份`slowest_call`阶段记录，不修改原生读取或监听边界。`data/timing-listener-20261004`仍是已启动的v0.1.19进程，本轮在活跃最小化基线后请求了一条普通测试来信；274采样结束仍0新增、发送确认未收到，状态为等待。不要为了加载新版而打断这轮等待；旧进程的`slowest_call=null`表示没有记录，不能拿最近阶段追补旧慢读。接续时先查询最新状态及用户发送确认。
+v0.1.21增加默认关闭的防自动待机请求，显式启动时传`-KeepAwake`或`--keep-awake`；停止或退出时释放。它不修改电源计划，不保证手动睡眠、合盖或电池Modern Standby下继续运行。详见[POWER_MANAGEMENT.md](POWER_MANAGEMENT.md)。旧`data/timing-listener-20261004`已在2266次最小化快照后超时停止（284），本次调用跨过系统待机；没有发送确认，不追认来信成功或失败。
 
-目标是启动一次后持续监听，并支持微信真正最小化到任务栏。当前已有隐藏工作进程、状态查询和停止控制；`background`模式直接读取普通聊天窗口的文本，无需进入多选。v0.1.19新增固定原生阶段与耗时诊断，新的时序监听在272检查点仍活动、285次快照全部最小化。旧普通监听3927次后超时的具体根因仍未知。**真实新来信、长期稳定运行和最小化自动回复尚未验收。**
+292已显式新启动`data/standby-listener-20261004`，运行v0.1.21，首快照确认最小化、0新增，`slowest_call`有效。299检查点活动241次全最小化、0新增/超时。防待机开关仍关闭；新会话跳过当时已可见基线，不补处理停机内容。该进程早于Python参数严格校验补丁，已有CLI布尔参数不受影响。接续时先查这个新目录的最新状态。
+
+目标是启动一次后持续监听，并支持微信真正最小化到任务栏。当前已有隐藏工作进程、状态查询和停止控制；`background`模式直接读取普通聊天窗口的文本，无需进入多选。旧259的3927次后超时原因仍未知。**真实新来信、长期稳定运行和最小化自动回复尚未验收。**
 
 ## 运行
 
@@ -14,9 +16,9 @@ v0.1.20增加一份`slowest_call`阶段记录，不修改原生读取或监听�
 .\scripts\windows.ps1 -Action stop-listener
 ```
 
-默认状态目录是`data/listener`，用`-ListenerData`指定其他目录时，启动/状态/停止须一致。v0.1.19时序监听目录为`data/timing-listener-20261004`，272检查点仍活动、285次快照全部最小化，保留运行以收集后续故障。旧普通模式`data/background-listener-20261003`及旧多选模式`data/minimized-listener-20261003`均已停止。继续前先查相应目录，不把旧状态视为当前运行状态。
+默认状态目录是`data/listener`，用`-ListenerData`指定其他目录时，启动/状态/停止须一致。当前新目录为`data/standby-listener-20261004`。旧`data/timing-listener-20261004`、`data/background-listener-20261003`及`data/minimized-listener-20261003`均已停止。继续前先查相应目录，不把旧状态视为当前运行状态。
 
-当前诊断实例的查询命令为 `./scripts/windows.ps1 -Action listener-status -ListenerData data/timing-listener-20261004`；停止时使用同一目录及 `-Action stop-listener`。默认目录的命令不会查询或停止该实例。
+当前诊断实例的查询命令为 `./scripts/windows.ps1 -Action listener-status -ListenerData data/standby-listener-20261004`；停止时使用同一目录及 `-Action stop-listener`。默认目录的命令不会查询或停止该实例。
 
 源码入口为`python scripts/monitor-wechat.py --data-dir data/listener start --reader background --client-path <本机Weixin.exe路径>`。安装入口`wechat-memory-monitor`使用相同参数。`start`隐藏启动工作进程，并等待该次启动的基线状态；`status`只读固定字段；`stop`向当前代际发送本地停止指令，不按状态文件中的PID杀进程。
 

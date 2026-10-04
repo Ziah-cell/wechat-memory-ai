@@ -1,0 +1,235 @@
+test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) ... 
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value='false') ... FAIL
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=0) ... FAIL
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=1) ... FAIL
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=None) ... FAIL
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=[]) ... FAIL
+  test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value={}) ... FAIL
+test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) ... 
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value='false') ... ERROR
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=0) ... ERROR
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=1) ... ERROR
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=None) ... ERROR
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=[]) ... ERROR
+  test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value={}) ... ERROR
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value='false')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+ERROR: test_invalid_monitor_options_rejected_before_file_or_process_creation (test_keep_awake.KeepAwakeTests.test_invalid_monitor_options_rejected_before_file_or_process_creation) (value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 169, in test_invalid_monitor_options_rejected_before_file_or_process_creation
+    self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=invalid), 2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 139, in run_monitor
+    publish('stopped', reason)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\monitor.py", line 81, in publish
+    atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\runtime.py", line 65, in atomic_json
+    json.dump(value, target, ensure_ascii=False)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\zhihua\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type MagicMock is not JSON serializable
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value='false')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_option_never_acquires_power_request (test_keep_awake.KeepAwakeTests.test_invalid_option_never_acquires_power_request) (value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 160, in test_invalid_option_never_acquires_power_request
+    with self.assertRaisesRegex(ValueError, '^invalid_keep_awake$'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.063s
+
+FAILED (failures=6, errors=6)

@@ -1,0 +1,78 @@
+{
+  "running_source_version": "0.1.19",
+  "status": {
+    "active": false,
+    "baseline_ready": true,
+    "filtered_self_texts": 0,
+    "filtered_unknown_texts": 0,
+    "history_boundary_verified": false,
+    "incoming_candidates": 0,
+    "memory_written": false,
+    "minimized_observation_enabled": true,
+    "minimized_snapshots": 2266,
+    "minimized_supported": false,
+    "mode": "continuous_readonly_observation",
+    "model_called": false,
+    "phase": "stopped",
+    "reader_diagnostics": {
+      "child_calls": 2267,
+      "child_timeouts": 1,
+      "last_call_ms": 1806710,
+      "last_call_timed_out": true,
+      "last_native_stage": "completed",
+      "max_call_ms": 1806710,
+      "native_checkpoints_ms": {
+        "binding_check": 1780,
+        "binding_final": 2768,
+        "binding_middle": 2752,
+        "client_lookup": 441,
+        "completed": 2791,
+        "list_binding": 2735,
+        "process_lookup": 442,
+        "request_read": 13,
+        "rows_compare": 2768,
+        "rows_first": 2737,
+        "rows_second": 2753,
+        "serializing": 2768,
+        "snapshot_ready": 2768,
+        "started": 12,
+        "tree_lookup": 1840,
+        "window_lookup": 466
+      },
+      "native_trace_valid": true,
+      "slowest_call": null
+    },
+    "reader_mode": "background",
+    "real_send_supported": false,
+    "reply_ready": false,
+    "sender_verified": false,
+    "snapshot_change_retries": 0,
+    "snapshots": 2266,
+    "stop_reason": "native_reader_timeout",
+    "window_minimized": true
+  },
+  "power_events": [
+    {
+      "event_id": 507,
+      "milliseconds_before_status": 2932.0,
+      "mentions_standby": true,
+      "mentions_enter": false,
+      "mentions_exit": true
+    },
+    {
+      "event_id": 506,
+      "milliseconds_before_status": 1807151.0,
+      "mentions_standby": true,
+      "mentions_enter": true,
+      "mentions_exit": false
+    }
+  ],
+  "event_query_read_only": true,
+  "user_sleep_confirmation_received": false,
+  "message_send_confirmation_received": false,
+  "earlier_timeout_cause_established": false,
+  "native_completion_before_standby_established": false,
+  "model_called": false,
+  "memory_written": false,
+  "sent_messages": 0
+}

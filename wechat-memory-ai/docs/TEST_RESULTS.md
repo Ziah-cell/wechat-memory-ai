@@ -1,4 +1,20 @@
-# Windows 测试结果（当前 v0.1.20）
+# Windows 测试结果（当前 v0.1.21）
+
+## v0.1.21 待机证据与可选电源请求
+
+[284](evidence/284-standby-timeout.json)记录v0.1.19监听2266次全最小化后停止，0新增；第2267次外层耗时1806710ms并超时，原生completed2791ms。脱敏Windows事件表明待机持续1804219ms，退出比停止状态早2932ms。只确认本次调用跨过待机，不确定原生完成与待机的绝对先后，不归因旧259，也不将无发送确认的零新增视为来信失败。
+
+[285](evidence/285-keep-awake-red.txt)新增10项因缺少API/字段而失败；[286](evidence/286-keep-awake-targeted.txt)联合34项通过，补正常停止/活动状态、非Windows与实际PowerShell转发后，[287](evidence/287-keep-awake-targeted-final.txt)43项通过。测试替换电源调用，覆盖默认off、申请失败先于Reader、读取失败/正常停止释放、先前线程状态恢复、释放失败保留既有错误、旧状态/畸形值和隐藏子进程参数传递。
+
+首次366项中选353通过36.895秒（288/289），290离线安装通过。独立审查随后发现Python调用入口把字符串`"false"`当成启用且写入状态；CLI的布尔开关不受影响。现三个入口在任何电源/文件/进程操作前拒绝非bool。[293](evidence/293-keep-awake-invalid-red.txt)保留首次复现：新增监控测试遗漏电源mock，两个truthy子例短时调用了本机申请/释放，Reader/Popen仍被替换；修正夹具后，[294](evidence/294-keep-awake-invalid-mocked-red.txt)全mock重现相同失败，[295](evidence/295-keep-awake-fixed.txt)修复后45项通过。
+
+最终368项中选 **355/355通过，36.912秒，0失败/错误/跳过**：[296](evidence/296-keep-awake-final-regression.txt)、[297范围](evidence/297-keep-awake-final-scope.json)。仍排除原4类13项原生夹具，没有重试被拒MSAA/合成位图。[298最终离线安装](evidence/298-keep-awake-final-package.json)23模块/5原生资源逐字节匹配，3入口帮助通过，无配置/网络/原生/UI执行，临时目录已清理。
+
+[291](evidence/291-power-request-lifecycle.json)为本机电源API瞬时申请和释放成功；没有修改电源计划或附加屏幕常亮，未验证实际防待机效果。[292](evidence/292-standby-listener-start.json)显式新启动v0.1.21普通后台监听，首快照最小化、0新增、最慢诊断有效，防待机仍off。旧故障证据保留，首视口只作基线。没有模型/聊天记忆/发送；新来信、长期稳定及自动回复仍未验收。
+
+[299检查点](evidence/299-keep-awake-monitor-checkpoint.json)新监听活动、241次全最小化、0新增/超时，最高414ms，旧3处监听均停止。工作进程启动于Python参数严格校验补丁之前，其CLI参数为有效bool，当前路径不受该补丁影响；未为加载此检查打断基线。未收到发送/睡眠操作确认，不据此推断不存在来信或睡眠原因。
+
+[300独立复审](evidence/300-keep-awake-review.json)43项通过4.081秒，非bool问题修复后无剩余代码/文档发现。完整回归、安装和监听检查点仅复核上述证据，未另跑真实电源/原生/UI、模型或操作监听。文档明确293夹具遗漏及API成功不等于防待机效果；没有将本次证据扩展为新来信、旧259原因或自动回复通过。
 
 ## v0.1.20 最慢子调用阶段保留
 

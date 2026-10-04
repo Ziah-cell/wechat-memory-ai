@@ -107,3 +107,24 @@ class WindowsScriptTests(unittest.TestCase):
                     env=env, capture_output=True, timeout=20)
                 self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
                 self.assertEqual(json.loads(result.stdout)['adapter'], 'mock')
+
+    def test_listener_start_forwards_keep_awake_only_when_requested(self):
+        project = Path(self.tmp.name)/'isolated listener'
+        scripts = project/'scripts'
+        scripts.mkdir(parents=True)
+        shutil.copy2(ROOT/'scripts/windows.ps1', scripts/'windows.ps1')
+        (scripts/'monitor-wechat.py').write_text('import json,sys\nprint(json.dumps(sys.argv[1:]))\n', 'utf-8')
+        for shell in SHELLS:
+            for enabled in (False, True):
+                with self.subTest(shell=shell, enabled=enabled):
+                    command = [shell, '-NoProfile', '-NonInteractive', '-File', str(scripts/'windows.ps1'),
+                               '-Python', sys.executable, '-Action', 'start-listener',
+                               '-ListenerReader', 'background', '-ClientPath', 'fixture path.exe']
+                    if enabled:
+                        command.append('-KeepAwake')
+                    result = subprocess.run(command, capture_output=True, timeout=20)
+                    self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', 'replace'))
+                    args = json.loads(result.stdout)
+                    self.assertEqual('--keep-awake' in args, enabled)
+                    self.assertEqual(args[args.index('--client-path')+1], 'fixture path.exe')
+                    self.assertFalse((project/'config.toml').exists())

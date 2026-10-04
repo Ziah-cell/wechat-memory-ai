@@ -1,0 +1,119 @@
+test_body_failure_still_releases_request (test_keep_awake.KeepAwakeTests.test_body_failure_still_releases_request) ... ERROR
+test_disabled_does_not_load_or_call_windows_api (test_keep_awake.KeepAwakeTests.test_disabled_does_not_load_or_call_windows_api) ... ERROR
+test_failed_acquisition_is_fixed_error_and_never_claims_active (test_keep_awake.KeepAwakeTests.test_failed_acquisition_is_fixed_error_and_never_claims_active) ... ERROR
+test_monitor_holds_request_before_reader_and_releases_on_read_failure (test_keep_awake.KeepAwakeTests.test_monitor_holds_request_before_reader_and_releases_on_read_failure) ... ERROR
+test_power_failure_stops_before_reader_and_releases_instance_lock (test_keep_awake.KeepAwakeTests.test_power_failure_stops_before_reader_and_releases_instance_lock) ... ERROR
+test_release_failure_reported_without_masking_existing_read_error (test_keep_awake.KeepAwakeTests.test_release_failure_reported_without_masking_existing_read_error) ... ERROR
+test_request_only_system_and_restore_prior_thread_state (test_keep_awake.KeepAwakeTests.test_request_only_system_and_restore_prior_thread_state) ... ERROR
+test_start_cli_parses_explicit_opt_in_and_default_off (test_keep_awake.KeepAwakeTests.test_start_cli_parses_explicit_opt_in_and_default_off) ... ERROR
+test_start_propagates_opt_in_to_hidden_child_only_when_enabled (test_keep_awake.KeepAwakeTests.test_start_propagates_opt_in_to_hidden_child_only_when_enabled) ... ERROR
+test_status_request_is_boolean_and_never_active_after_process_exit (test_keep_awake.KeepAwakeTests.test_status_request_is_boolean_and_never_active_after_process_exit) ... ERROR
+
+======================================================================
+ERROR: test_body_failure_still_releases_request (test_keep_awake.KeepAwakeTests.test_body_failure_still_releases_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 35, in test_body_failure_still_releases_request
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_disabled_does_not_load_or_call_windows_api (test_keep_awake.KeepAwakeTests.test_disabled_does_not_load_or_call_windows_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 20, in test_disabled_does_not_load_or_call_windows_api
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_failed_acquisition_is_fixed_error_and_never_claims_active (test_keep_awake.KeepAwakeTests.test_failed_acquisition_is_fixed_error_and_never_claims_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 43, in test_failed_acquisition_is_fixed_error_and_never_claims_active
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_monitor_holds_request_before_reader_and_releases_on_read_failure (test_keep_awake.KeepAwakeTests.test_monitor_holds_request_before_reader_and_releases_on_read_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 67, in test_monitor_holds_request_before_reader_and_releases_on_read_failure
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_power_failure_stops_before_reader_and_releases_instance_lock (test_keep_awake.KeepAwakeTests.test_power_failure_stops_before_reader_and_releases_instance_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 88, in test_power_failure_stops_before_reader_and_releases_instance_lock
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_release_failure_reported_without_masking_existing_read_error (test_keep_awake.KeepAwakeTests.test_release_failure_reported_without_masking_existing_read_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 56, in test_release_failure_reported_without_masking_existing_read_error
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_request_only_system_and_restore_prior_thread_state (test_keep_awake.KeepAwakeTests.test_request_only_system_and_restore_prior_thread_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 26, in test_request_only_system_and_restore_prior_thread_state
+    power = self.power()
+            ^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 16, in power
+    from wechat_memory import power
+ImportError: cannot import name 'power' from 'wechat_memory' (C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\__init__.py)
+
+======================================================================
+ERROR: test_start_cli_parses_explicit_opt_in_and_default_off (test_keep_awake.KeepAwakeTests.test_start_cli_parses_explicit_opt_in_and_default_off)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 119, in test_start_cli_parses_explicit_opt_in_and_default_off
+    self.assertIs(start.call_args.kwargs['keep_awake'], expected)
+                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'keep_awake'
+
+======================================================================
+ERROR: test_start_propagates_opt_in_to_hidden_child_only_when_enabled (test_keep_awake.KeepAwakeTests.test_start_propagates_opt_in_to_hidden_child_only_when_enabled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 111, in test_start_propagates_opt_in_to_hidden_child_only_when_enabled
+    code, _ = monitor._start('fixture.exe', directory, reader_mode='background', keep_awake=enabled)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: _start() got an unexpected keyword argument 'keep_awake'
+
+======================================================================
+ERROR: test_status_request_is_boolean_and_never_active_after_process_exit (test_keep_awake.KeepAwakeTests.test_status_request_is_boolean_and_never_active_after_process_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_keep_awake.py", line 101, in test_status_request_is_boolean_and_never_active_after_process_exit
+    self.assertEqual(status['keep_awake_request_active'], expected)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'keep_awake_request_active'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.007s
+
+FAILED (errors=10)
