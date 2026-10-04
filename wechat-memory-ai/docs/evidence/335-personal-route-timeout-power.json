@@ -1,0 +1,38 @@
+{
+  "scope": "read-only power-event correlation for timeout 333",
+  "checkpoint_utc": "2026-10-04T15:31:34.4639959Z",
+  "query_window_minutes_before": 16,
+  "query_window_seconds_after": 15,
+  "power_events": [
+    {
+      "event_id": 507,
+      "milliseconds_before_status": 1637.0,
+      "mentions_standby": true,
+      "mentions_enter": false,
+      "mentions_exit": true
+    }
+  ],
+  "listener_restarted": false,
+  "window_operated": false,
+  "power_configuration_changed": false,
+  "keys_accessed": false,
+  "sent_messages": 0,
+  "expanded_query_minutes_before": 240,
+  "expanded_query_max_events": 12,
+  "expanded_power_events": [
+    {
+      "event_id": 507,
+      "milliseconds_before_status": 1637.0,
+      "mentions_standby": true,
+      "mentions_enter": false,
+      "mentions_exit": true
+    },
+    {
+      "event_id": 506,
+      "milliseconds_before_status": 1063720.0,
+      "mentions_standby": true,
+      "mentions_enter": true,
+      "mentions_exit": false
+    }
+  ]
+}

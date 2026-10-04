@@ -1,0 +1,14 @@
+{
+  "scope": "independent documentation and saved power-event evidence review",
+  "findings": [],
+  "ordinary_personal_account_scope_preserved": true,
+  "standby_interval_ms_checked": 1062083,
+  "wake_to_stopped_file_ms_checked": 1637,
+  "timeout_root_cause_not_overclaimed": true,
+  "web_login_probe_unapproved_and_unexecuted": true,
+  "git_diff_check_passed": true,
+  "network_accessed": false,
+  "live_monitor_or_event_log_accessed": false,
+  "personal_configuration_accessed": false,
+  "code_or_tests_executed": false
+}
