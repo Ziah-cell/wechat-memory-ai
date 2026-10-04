@@ -1,0 +1,27 @@
+{
+  "reviewed_source_revision": "d9a44da21f99f91504c6e5c1c6b82f51930c0935",
+  "product_version": "0.1.21",
+  "real_auto_reply_ready": false,
+  "new_defects_against_existing_contract": 0,
+  "remaining_documentation_findings": 0,
+  "missing_capabilities": [
+    "verified_real_inbound_admission",
+    "real_source_to_engine_bridge",
+    "target_bound_real_send_adapter"
+  ],
+  "source_is_current_is_not_send_authorization": true,
+  "mock_identity_conversion_is_not_valid_bridge": true,
+  "controlled_minimized_new_text_evidence_reviewed": true,
+  "message_body_matched": false,
+  "sender_or_history_verified": false,
+  "real_model_quality_passed": false,
+  "rehearsal_checks_reviewed": 10,
+  "targeted_tests_reviewed": 157,
+  "reviewer_tests_run": 0,
+  "reviewer_changed_files": false,
+  "reviewer_operated_listener": false,
+  "reviewer_executed_power_native_or_ui": false,
+  "real_model_called": false,
+  "real_chat_memory_written": false,
+  "real_messages_sent": 0
+}

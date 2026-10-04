@@ -1,0 +1,28 @@
+{
+  "modules": [
+    "test_engine",
+    "test_preference_engine",
+    "test_natural_preferences",
+    "test_memory_recall",
+    "test_memory",
+    "test_callback_inbox",
+    "test_config",
+    "test_models",
+    "test_live_source",
+    "test_preflight",
+    "test_background_read",
+    "test_background_recovery"
+  ],
+  "selected": 157,
+  "tests_run": 157,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 12.029,
+  "successful": true,
+  "excluded_native_classes_run": false,
+  "full_suite": false,
+  "real_model_called": false,
+  "real_chat_memory_written": false,
+  "real_messages_sent": 0
+}

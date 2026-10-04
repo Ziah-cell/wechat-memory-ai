@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "source": "synthetic_callbacks",
+  "network_enabled": false,
+  "real_wechat_verified": false,
+  "real_send_supported": false,
+  "checks": {
+    "callbacks_enqueue_without_processing": true,
+    "same_text_with_distinct_ids_preserved": true,
+    "duplicate_filtered": true,
+    "self_history_other_peer_filtered": true,
+    "no_sends": true,
+    "restart_dedup": true,
+    "old_callback_revoked": true,
+    "old_backlog_discarded": true,
+    "overflow_stops_and_discards": true,
+    "closed_callbacks_rejected": true
+  }
+}
