@@ -1,0 +1,403 @@
+{
+  "scope": "public-source static non-UIA route assessment",
+  "checked_at_utc": "2026-10-04T16:18:13.306869+00:00",
+  "user_scope": "retain true minimization; expand static assessment of non-UIA options",
+  "source_files": 47,
+  "repositories": [
+    {
+      "repository": "fanyuantaier/wechatauto-replica",
+      "commit": "91dc0e1a601013b759b261061d8f7642f736af90",
+      "commit_date": "2026-10-03T04:24:08Z",
+      "files": [
+        {
+          "path": "README.zh-CN.md",
+          "local_file": "README.zh-CN.md",
+          "sha256": "075a0f1e729802aad9514b93bf8735cdf89c14a9c72ba43d0387fed087cdeb14",
+          "size_bytes": 101657,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/README.zh-CN.md"
+        },
+        {
+          "path": "wechatauto/db.py",
+          "local_file": "wechatauto__db.py",
+          "sha256": "3d388d611cc6a9a7eef8b6af498821bb190ba8a934aeaac4b4e2ada60242a8b0",
+          "size_bytes": 133164,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/wechatauto/db.py"
+        },
+        {
+          "path": "wechatauto/sender.py",
+          "local_file": "wechatauto__sender.py",
+          "sha256": "0e562c9b0ec2623933f2e3f5db933c9a4a9e4eb9c046fab68608a048c63063b9",
+          "size_bytes": 7165,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/wechatauto/sender.py"
+        },
+        {
+          "path": "wechatauto/uia_driver.py",
+          "local_file": "wechatauto__uia_driver.py",
+          "sha256": "9e6f8b9fc84254c07e0c10281547b2ffe3a828313818653a3acfc49aa050a20a",
+          "size_bytes": 86500,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/wechatauto/uia_driver.py"
+        },
+        {
+          "path": "wechatauto/guia.py",
+          "local_file": "wechatauto__guia.py",
+          "sha256": "bc82faf45ff27d3ce6989c7efeccdc6a6c753c825bbfc971fe2fde1bb79f629d",
+          "size_bytes": 111871,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/wechatauto/guia.py"
+        },
+        {
+          "path": "wechatauto/wx.py",
+          "local_file": "wechatauto__wx.py",
+          "sha256": "851f4222a937f74862a22f941af14f813eff9a79ae7501f93b56bcb81a546176",
+          "size_bytes": 44500,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/wechatauto/wx.py"
+        },
+        {
+          "path": "LICENSE",
+          "local_file": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/LICENSE"
+        },
+        {
+          "path": "pyproject.toml",
+          "local_file": "pyproject.toml",
+          "sha256": "af52cf0126d8776e01ab4e4bbb2f14620100b6751eba80469f710bce00ba62fb",
+          "size_bytes": 2176,
+          "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/91dc0e1a601013b759b261061d8f7642f736af90/pyproject.toml"
+        }
+      ],
+      "local_directory": "data/non-uia-audit-20261004/fanyuantaier__wechatauto-replica"
+    },
+    {
+      "repository": "miloira/wxhook",
+      "commit": "d6d1cecd7c13f347b776a49442ecadadae55d5ec",
+      "commit_date": "2026-09-17T01:41:37Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md",
+          "sha256": "3ee431609a047c372c10abae918f0a227fe784cc82076b13acd6ff8567b758e2",
+          "size_bytes": 6544,
+          "url": "https://raw.githubusercontent.com/miloira/wxhook/d6d1cecd7c13f347b776a49442ecadadae55d5ec/README.md"
+        },
+        {
+          "path": "wxhook/core.py",
+          "local_file": "wxhook__core.py",
+          "sha256": "7fb704ccf92e826097a7669123908a400a177d6341959c6f68434302bba3b36b",
+          "size_bytes": 16114,
+          "url": "https://raw.githubusercontent.com/miloira/wxhook/d6d1cecd7c13f347b776a49442ecadadae55d5ec/wxhook/core.py"
+        },
+        {
+          "path": "wxhook/model.py",
+          "local_file": "wxhook__model.py",
+          "sha256": "f953af9ebd70cee304920deeab29e102b587f24f30c1e3d455e8e450575dd672",
+          "size_bytes": 3824,
+          "url": "https://raw.githubusercontent.com/miloira/wxhook/d6d1cecd7c13f347b776a49442ecadadae55d5ec/wxhook/model.py"
+        },
+        {
+          "path": "setup.py",
+          "local_file": "setup.py",
+          "sha256": "b03d6ca71fd245483122d91d366f9e0a558bf0f11a46c0d2c6ddeeef5e9aa293",
+          "size_bytes": 3795,
+          "url": "https://raw.githubusercontent.com/miloira/wxhook/d6d1cecd7c13f347b776a49442ecadadae55d5ec/setup.py"
+        }
+      ],
+      "local_directory": "data/non-uia-audit-20261004/miloira__wxhook"
+    },
+    {
+      "repository": "mosheng20205/WechatHook4.1.10.27",
+      "commit": "713ec7d6f01d858e067a623c9bf2cda64d0d3e19",
+      "commit_date": "2026-07-18T11:01:38Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md",
+          "sha256": "0463b4cdb8095e5760d71d7fc6a1d8c52ae5e215916bc2e485efd0915a02fbc5",
+          "size_bytes": 11831,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/README.md"
+        },
+        {
+          "path": "docs/STATUS_AND_TESTING.md",
+          "local_file": "docs__STATUS_AND_TESTING.md",
+          "sha256": "11d9c9225c2f8b6f4b87d6f16a992a125064326f331a00044fcfcd593386f8aa",
+          "size_bytes": 1870,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/docs/STATUS_AND_TESTING.md"
+        },
+        {
+          "path": "docs/RECEIVE_MESSAGE_NOTES_4.1.10.27.md",
+          "local_file": "docs__RECEIVE_MESSAGE_NOTES_4.1.10.27.md",
+          "sha256": "1b42b2c984a593092293329bc11d0c46b7fd7b5e884d0c843f8a84ab7413324a",
+          "size_bytes": 5041,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/docs/RECEIVE_MESSAGE_NOTES_4.1.10.27.md"
+        },
+        {
+          "path": "docs/SEND_MESSAGE_NOTES_4.1.10.27.md",
+          "local_file": "docs__SEND_MESSAGE_NOTES_4.1.10.27.md",
+          "sha256": "b91710957412e7efb29ab383d3754d5cb81dafd6ce16dd6f1bd5e1f22d3f6faa",
+          "size_bytes": 4600,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/docs/SEND_MESSAGE_NOTES_4.1.10.27.md"
+        },
+        {
+          "path": "src/Hook_Method.cpp",
+          "local_file": "src__Hook_Method.cpp",
+          "sha256": "807d097d75170518cefeef03df31527126c2bc768c792d9c129e3426dd2af6ec",
+          "size_bytes": 15047,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/Hook_Method.cpp"
+        },
+        {
+          "path": "src/wx_send.cpp",
+          "local_file": "src__wx_send.cpp",
+          "sha256": "1930ae135d44e1ca4cfae7663ce6cbd704b1cc7b7462b02131cfa2150a275a52",
+          "size_bytes": 50926,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/wx_send.cpp"
+        },
+        {
+          "path": "src/SendTextMsg.cpp",
+          "local_file": "src__SendTextMsg.cpp",
+          "sha256": "ceb16ad5cbb9f225da110368443959aac17cd1f1463d502fb0c8fe9085d62f48",
+          "size_bytes": 4039,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/SendTextMsg.cpp"
+        },
+        {
+          "path": "src/requests.cpp",
+          "local_file": "src__requests.cpp",
+          "sha256": "3cf5492b3cfef2994b76f10afa12d63e84dcf3033fdcb7fab2d15ff414503b58",
+          "size_bytes": 5097,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/requests.cpp"
+        },
+        {
+          "path": "src/http_post.cpp",
+          "local_file": "src__http_post.cpp",
+          "sha256": "aa3bedab0852fc13f9aa460bde70be54869f984a79f0cc762bd6da3041f8de2e",
+          "size_bytes": 8662,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/http_post.cpp"
+        },
+        {
+          "path": "src/HookManager.cpp",
+          "local_file": "src__HookManager.cpp",
+          "sha256": "6c1f38f8575a5a8d9260c58c6204627ec5ef1b87877496ac7ee801b6f7e7affd",
+          "size_bytes": 1298,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/HookManager.cpp"
+        },
+        {
+          "path": "include/Hook_Method.h",
+          "local_file": "include__Hook_Method.h",
+          "sha256": "d35813600543329fc1170f624b11ac473f1d97e17f1468935a79e82a2a79af34",
+          "size_bytes": 904,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/include/Hook_Method.h"
+        },
+        {
+          "path": "src/auto_reply.cpp",
+          "local_file": "src__auto_reply.cpp",
+          "sha256": "5a16f1c6c52ad794519cf2ba0f7935df0dfdc45c7a13819cd16501d1e6cc651b",
+          "size_bytes": 12931,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/auto_reply.cpp"
+        },
+        {
+          "path": "src/http_routes.cpp",
+          "local_file": "src__http_routes.cpp",
+          "sha256": "a83f7c769bd8b568fb11df948a4cfc43f8938f7e708d7fc995175b21bb8bcc20",
+          "size_bytes": 14314,
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/http_routes.cpp"
+        },
+        {
+          "path": "dllmain.cpp",
+          "local_file": "dllmain.cpp",
+          "size_bytes": 4441,
+          "sha256": "4df00d5328132105d06abecc6c61b3505ebc4a0be8c974a88786de91fb87ceec",
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/dllmain.cpp"
+        },
+        {
+          "path": "src/hook_xlog.cpp",
+          "local_file": "src__hook_xlog.cpp",
+          "size_bytes": 1579,
+          "sha256": "755202c10dc7721848ba04f2d445ab99f7d6989004002d7f472a88161cd1217f",
+          "url": "https://raw.githubusercontent.com/mosheng20205/WechatHook4.1.10.27/713ec7d6f01d858e067a623c9bf2cda64d0d3e19/src/hook_xlog.cpp"
+        }
+      ],
+      "local_directory": "data/non-uia-audit-20261004/mosheng20205__WechatHook4.1.10.27"
+    },
+    {
+      "repository": "Tencent/openclaw-weixin",
+      "commit": "24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c",
+      "commit_date": "2026-09-21T14:23:14Z",
+      "files": [
+        {
+          "path": "README.zh_CN.md",
+          "local_file": "README.zh_CN.md",
+          "sha256": "167a4a7f90c244a41eed9b513b1ccda958cad510eadf6fac98b99de22c22e0bc",
+          "size_bytes": 5820,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/README.zh_CN.md"
+        },
+        {
+          "path": "docs/protocol_zh_CN.md",
+          "local_file": "docs__protocol_zh_CN.md",
+          "sha256": "774ecb258ec9147d833335711cbb0d51fb40de3cb26113394b2427c191a735a0",
+          "size_bytes": 17430,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/docs/protocol_zh_CN.md"
+        },
+        {
+          "path": "src/api/types.ts",
+          "local_file": "src__api__types.ts",
+          "sha256": "9e321e1a79bd7ec385b8e2b9695f1d87507282ff33f9cfdafbe4e33aea5387ac",
+          "size_bytes": 7546,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/api/types.ts"
+        },
+        {
+          "path": "src/api/api.ts",
+          "local_file": "src__api__api.ts",
+          "sha256": "7a808846a33c70423b4a4a5fcf3c1a45f885d005994218ef5f4db663d4e6e935",
+          "size_bytes": 22100,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/api/api.ts"
+        },
+        {
+          "path": "src/monitor/monitor.ts",
+          "local_file": "src__monitor__monitor.ts",
+          "sha256": "a8689853b464cea3bd12932fc97055dbcac2ec1386d1a7a39a81cb8e291f3704",
+          "size_bytes": 8458,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/monitor/monitor.ts"
+        },
+        {
+          "path": "src/messaging/inbound.ts",
+          "local_file": "src__messaging__inbound.ts",
+          "sha256": "696d3b949ebcc9750801165443366f83bed7b3ae6793d131ac7132cac74f6212",
+          "size_bytes": 14591,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/messaging/inbound.ts"
+        },
+        {
+          "path": "src/messaging/process-message.ts",
+          "local_file": "src__messaging__process-message.ts",
+          "sha256": "05f4bb55cb74c014a22b879c75a0a1dc2084d4d1c6120fcaa18d84464a3a6efa",
+          "size_bytes": 21980,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/messaging/process-message.ts"
+        },
+        {
+          "path": "src/messaging/send.ts",
+          "local_file": "src__messaging__send.ts",
+          "sha256": "2f33e3e9cccb18ef03620669deb1c415749f6ac3835f4ff24f25847ecb753f4d",
+          "size_bytes": 11710,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/messaging/send.ts"
+        },
+        {
+          "path": "src/storage/sync-buf.ts",
+          "local_file": "src__storage__sync-buf.ts",
+          "sha256": "200a87fd48fd379dcdf37d5f997e13903e89bf44e765533e4216848a87325507",
+          "size_bytes": 2692,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/storage/sync-buf.ts"
+        },
+        {
+          "path": "src/channel.ts",
+          "local_file": "src__channel.ts",
+          "sha256": "4d0127f20172911dc9a2117aa2cf44dc1310dc18436e18a4aab251dcd15066b4",
+          "size_bytes": 23544,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/channel.ts"
+        },
+        {
+          "path": "src/auth/login-qr.ts",
+          "local_file": "src__auth__login-qr.ts",
+          "sha256": "1347ceff3da2fc0df82aefff684be2c12870778d026b1cbe063226dfa9bea0c4",
+          "size_bytes": 17029,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/src/auth/login-qr.ts"
+        },
+        {
+          "path": "LICENSE",
+          "local_file": "LICENSE",
+          "sha256": "7f1e8cf099cf03de7c775e33e97e3c950c3a56a9616bb4de6b14d3c911bc5573",
+          "size_bytes": 1301,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/LICENSE"
+        },
+        {
+          "path": "package.json",
+          "local_file": "package.json",
+          "sha256": "95586c60a7699b60e3b2f20a1ad031050f4e7c3a4c81ee47c241397f9ce21c3f",
+          "size_bytes": 1921,
+          "url": "https://raw.githubusercontent.com/Tencent/openclaw-weixin/24de5c9eb0dd5e595d7e2d090ed8a3f82870d42c/package.json"
+        }
+      ],
+      "local_directory": "data/non-uia-audit-20261004/Tencent__openclaw-weixin"
+    },
+    {
+      "repository": "wechaty/wechaty-puppet-wechat",
+      "commit": "09fedb147bebee1e28ac03c50debb7267af4b3d9",
+      "commit_date": "2022-07-14T03:42:35Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md",
+          "sha256": "c97d2d6f20bcbba3991d5c7f93ce7c8fa39997cd175a253c33ca536a7734b406",
+          "size_bytes": 7754,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/README.md"
+        },
+        {
+          "path": "src/pure-function-helpers/message-raw-payload-parser.ts",
+          "local_file": "src__pure-function-helpers__message-raw-payload-parser.ts",
+          "sha256": "64f6260d75833b7998d380c93a0a4d2c09c19579987c268813b98f36b20bf376",
+          "size_bytes": 2413,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/pure-function-helpers/message-raw-payload-parser.ts"
+        },
+        {
+          "path": "src/puppet-wechat.ts",
+          "local_file": "src__puppet-wechat.ts",
+          "sha256": "da18df16d3ebc86d5cf48754fb08c88c10c52c30be3220566d5ea3189454f8f1",
+          "size_bytes": 50613,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/puppet-wechat.ts"
+        },
+        {
+          "path": "src/bridge.ts",
+          "local_file": "src__bridge.ts",
+          "sha256": "02f81fd37c91e518543b3da2e4d3e3ebaa2cd4cc6442b04933b08d901528a4c4",
+          "size_bytes": 34380,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/bridge.ts"
+        },
+        {
+          "path": "src/web-schemas.ts",
+          "local_file": "src__web-schemas.ts",
+          "sha256": "6331b06ecbb227663b41ee28d379d0853572b6858944909fee122970d4561c4b",
+          "size_bytes": 12602,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/web-schemas.ts"
+        },
+        {
+          "path": "package.json",
+          "local_file": "package.json",
+          "sha256": "2ca7b8ed289349fd690ec9b4848fc3263689e002d6e8270cebd86b01f3d0fb0d",
+          "size_bytes": 2946,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/package.json"
+        },
+        {
+          "path": "LICENSE",
+          "local_file": "LICENSE",
+          "sha256": "ed6188de11882778fa527e254b0e093564025378e2ba0fbec1ca6cf74d330a57",
+          "size_bytes": 11359,
+          "url": "https://raw.githubusercontent.com/wechaty/wechaty-puppet-wechat/09fedb147bebee1e28ac03c50debb7267af4b3d9/LICENSE"
+        }
+      ],
+      "local_directory": "data/non-uia-audit-20261004/wechaty__wechaty-puppet-wechat"
+    }
+  ],
+  "web_documents": [
+    {
+      "url": "https://wechaty.js.org/docs/puppet-providers/wechat/",
+      "use": "provider eligibility and session-scoped IDs; no live account verification"
+    },
+    {
+      "url": "https://wechaty.js.org/docs/puppet-services/tokens",
+      "use": "published token categories, not current price or user eligibility"
+    },
+    {
+      "url": "https://wechaty.js.org/docs/specs/service/",
+      "use": "service transport does not identify a proven backend"
+    }
+  ],
+  "unavailable_documents": [
+    "https://developer.work.weixin.qq.com/document/path/94670",
+    "https://developer.work.weixin.qq.com/document/path/94677",
+    "https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Receiving_standard_messages.html"
+  ],
+  "third_party_imported_or_executed": false,
+  "credentials_or_keys_accessed": false,
+  "client_modified": false,
+  "account_login_attempted": false,
+  "live_compatibility_verified": false,
+  "product_source_changed": false,
+  "product_tests_rerun": false
+}

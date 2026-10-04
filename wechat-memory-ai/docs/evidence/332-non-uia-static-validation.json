@@ -1,0 +1,10 @@
+{
+  "scope": "static provenance, line-anchor and local document-link validation only",
+  "checked_at_utc": "2026-10-04T16:26:39.303485+00:00",
+  "source_file_hashes_and_sizes_verified": 47,
+  "pinned_source_blob_links_verified": 36,
+  "local_document_links_valid": true,
+  "third_party_executed": false,
+  "product_tests_run": 0,
+  "live_compatibility_verified": false
+}
