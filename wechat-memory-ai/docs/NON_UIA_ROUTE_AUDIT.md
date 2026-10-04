@@ -1,10 +1,12 @@
 # 真正最小化：非 UIA 来源静态评估
 
+最新扩展（2026-10-05）：[NON_UIA_SEND_AUDIT](NON_UIA_SEND_AUDIT.md)新增5仓库46份固定文本（339），补齐内部发送、返回值与恢复行为；仍无本机4.1.15.50完整双向来源。aixed为4.1.10.27、navysoto为4.1.11.52，均未证明本机真正最小化收发。WeChatFerry本次native常量是3.9.12.51，不能被此前Node文档的.17概括。Web本次已由338排除，Bot/企业/公众号转换也已排除；下一项优先取得.50发送兼容性材料，不重复这些路线评估。
+
 后续决定（2026-10-05）：用户坚持普通个人号好友会话，不接受Bot产品转换。因此本文iLink仅保留为静态比较结果，不进入当前实施主线；见[个人号接入决定](PERSONAL_ACCOUNT_ROUTE.md)。监听超时的后续只读电源证据见[335](evidence/335-personal-route-timeout-power.json)，未重启。
 
 2026-10-04 至 05 日（北京时间）。用户已选择“保留真正最小化，扩大非 UIA 方案的静态评估”。本报告保留普通个人微信既有好友会话、免费接入的目标；仅查公开资料和固定源码，不表示允许账号接入、安装、提取本机密钥、注入、改写客户端或发送。产品仍 v0.1.22。本轮未操作原 v0.1.21 监听，但最终检查发现它已超时停止，见末节。
 
-**结论：非 UIA 路线能提供更好的结构化字段，但本轮没有找到已验证满足“本机 4.1.15.50、既有好友会话、免费、全程真正最小化收发”的可直接接入方案。** 这只限于下列来源，不是所有方案都不可能。官方 iLink 值得保留为独立机器人产品候选；数据库读取值得继续研究入站；网页协议有账号资格前提；所查 Hook 缺本机版本证据。
+**结论：非 UIA 路线能提供更好的结构化字段，但本轮没有找到已验证满足“本机 4.1.15.50、既有好友会话、免费、全程真正最小化收发”的可直接接入方案。** 这只限于所查来源，不是所有方案都不可能。数据库读取仍值得研究入站；所查 Hook 缺本机版本证据。iLink与Web的源码内容仅保留历史比较，不作为当前实施候选。
 
 ## 比较结果
 
@@ -12,9 +14,9 @@
 
 | 路线 | 会话与身份范围 | 接收 / 发送是否依赖桌面微信界面 | 当前主要缺口 | 本项目决定 |
 | --- | --- | --- | --- | --- |
-| Tencent 官方 iLink Bot | Bot 账号、iLink 用户、Bot 直接会话；未见接管个人号既有好友聊天的接口证据 | HTTP 长轮询 / HTTP 发送，所查路径独立于窗口 | 产品会话范围不同；字段必填、游标恢复、发送结果须另验 | 保留为另一个产品方向，不能替换现有好友自动回复 |
+| Tencent 官方 iLink Bot | Bot 账号、iLink 用户、Bot 直接会话；未见接管个人号既有好友聊天的接口证据 | HTTP 长轮询 / HTTP 发送，所查路径独立于窗口 | 产品会话范围不同；字段必填、游标恢复、发送结果须另验 | 用户已排除产品转换，仅保留历史比较 |
 | wechatauto-replica 数据库路线 | 本机普通聊天库、会话 username、发送者映射 | DB/WAL 读取独立于窗口；已查发送仍激活窗口/UIA/输入 | 4.1.15.13 声明不证明 .50；方向假设、消息 ID 丢失、序号边界和密钥获取 | 只作为入站研究候选，不能称全程最小化收发方案 |
-| Wechaty Web provider | 登录网页微信后取得的好友/群与会话内 ID | 独立 Chromium，可 headless；发送走网页 bridge | 账号是否能登录未知，联系人 ID 跨登录变化，固定源码较旧 | 作为有条件候选；本轮未扫码，不认定可用 |
+| Wechaty Web provider | 登录网页微信后取得的好友/群与会话内 ID | 独立 Chromium，可 headless；发送走网页 bridge | 用户本次可登录但不支持网页使用，未形成聊天通道；ID与旧源码限制仍在 | 338已排除本次候选，不重复扫码或绕过访问限制 |
 | Wechaty Puppet Service | 取决于具体 provider，不由统一 SDK 保证 | gRPC 服务；底层可能是网页、Pad 或 Windows | 长期免费资格、账号支持、底层实现与恢复语义均需逐 provider 证明 | “有 SDK / 有 token”不足以准入，不默认采购 |
 | PC Hook：4.1.10.27 源码与 wxhook | 普通客户端内的接收/发送路径 | 所查 native 发送不靠输入框；真正最小化仍待实测 | 精确版本不匹配；回调/历史语义及结果确认未完成 | 不安装、不降级、不注入；不把 4.x 宣传当 .50 兼容 |
 
@@ -51,7 +53,7 @@
 
 固定 [wechaty-puppet-wechat@09fedb14](https://github.com/wechaty/wechaty-puppet-wechat/tree/09fedb147bebee1e28ac03c50debb7267af4b3d9)，HEAD 提交日期为 2022-07-14。解析器取 `MsgId`、`MMActualSender`、`ToUserName`、`MMDisplayTime`；时间来自 Web 层显示字段，不能直接认证服务器新到达。发送使用 conversation ID 调用 browser bridge，浏览器可 headless，因此架构上不必恢复 PC 微信窗口。[解析](https://github.com/wechaty/wechaty-puppet-wechat/blob/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/pure-function-helpers/message-raw-payload-parser.ts#L18-L79)、[发送](https://github.com/wechaty/wechaty-puppet-wechat/blob/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/puppet-wechat.ts#L470-L482)、[浏览器](https://github.com/wechaty/wechaty-puppet-wechat/blob/09fedb147bebee1e28ac03c50debb7267af4b3d9/src/bridge.ts#L128-L151)。
 
-维护方文档仍列出部分账号不能登录 Web、联系人/群 ID 跨登录变化、UOS 登录补丁不能继续使用等限制。固定仓库的旧 README 第21行却仍称 UOS 已解决登录问题，两处资料不一致。它们不是对用户账号的检测结果，也不能保证 2026 年服务可用。未来若获得登录授权，首个实验应只验证账号资格与会话身份变化，不能扫码后直接连接模型或处理积压消息。[provider 文档](https://wechaty.js.org/docs/puppet-providers/wechat/)、[旧README](https://github.com/wechaty/wechaty-puppet-wechat/blob/09fedb147bebee1e28ac03c50debb7267af4b3d9/README.md#L17-L23)。
+维护方文档仍列出部分账号不能登录 Web、联系人/群 ID 跨登录变化、UOS 登录补丁不能继续使用等限制。固定仓库的旧 README 第21行却仍称 UOS 已解决登录问题，两处资料不一致。它们不是对用户账号的检测结果，也不能保证 2026 年服务可用。后续337/338已完成限定资格检查过程，本次未形成可用聊天通道，不再安排同一实验，也未连接模型或处理积压消息。[provider 文档](https://wechaty.js.org/docs/puppet-providers/wechat/)、[旧README](https://github.com/wechaty/wechaty-puppet-wechat/blob/09fedb147bebee1e28ac03c50debb7267af4b3d9/README.md#L17-L23)。
 
 Puppet Service 则是 SDK 到具体服务的授权通道，不能把接口结构当底层实现证据。维护方文档将 token 分为短期试用、贡献者长期免费和付费；不能把短期试用算作用户要求的长期免费。未申请 token、联系服务商或比较实时售价。[token 说明](https://wechaty.js.org/docs/puppet-services/tokens)、[服务机制](https://wechaty.js.org/docs/specs/service/)。
 
@@ -65,9 +67,9 @@ Puppet Service 则是 SDK 到具体服务的授权通道，不能把接口结构
 
 ## 后续可审阅的验证顺序
 
-保留既有好友会话目标时，先把数据库候选限定为只读入站研究：补齐服务器 ID/分片身份、显式 unknown、同序号游标和历史同步边界，再考虑是否值得申请最小范围运行验证。它仍需要独立的非 UI 发送来源；目前所查 Hook 版本不匹配，因此不能承诺用“DB + Hook”直接拼出可用方案。
+数据库候选继续限定为只读入站研究：服务器 ID/分片身份、显式 unknown、同序号游标和历史同步边界仍需补齐。当前优先验证非 UI 发送来源的精确版本依据；所查 Hook 版本不匹配，不能承诺用“DB + Hook”直接拼出可用方案，也不先申请密钥读取来代替发送兼容性验证。
 
-网页路线只有确认账号可登录后才值得集成；官方 iLink 只有在用户另选 Bot 会话产品时才成为优先候选。无需为本次静态评估重复征求开发权限；任何登录、密钥读取或客户端修改都不是本轮实施步骤。真实自动回复继续按既有约定，在具体功能和方案完成、可审阅后取得最终确认。
+Web本次检查已排除，官方Bot转换也已被用户排除。当前先按[新增发送核查](NON_UIA_SEND_AUDIT.md)补精确.50兼容性证据。无需为静态评估重复征求开发权限；登录、密钥读取或客户端修改均不是本轮实施步骤。真实自动回复继续按既有约定，在具体功能和方案完成、可审阅后取得最终确认。
 
 所有候选至少要提供：账号和目标绑定、方向及未知拒绝、来源消息身份、启动/重连积压边界、失败可恢复的处理游标、发送结果不明后的停止策略。`ret=0`、本地 queued、本地新 ID 或收到回调，都不能单独代表对端送达或实时新消息。
 

@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 扩展非 UIA 发送静态核查（2026-10-05）
+
+[339](evidence/339-non-uia-expansion-manifest.json)固定新增5仓库46份公开文本与树元数据；[340](evidence/340-hook-static-traces.json)保存上一ID去重、零ID正文前缀、129条覆盖128槽、超时后完成以及先出队再发送的静态推演。它们不是执行第三方代码、性能测试或本机微信复现。具体结论见[NON_UIA_SEND_AUDIT](NON_UIA_SEND_AUDIT.md)。
+
+[341](evidence/341-non-uia-expansion-validation.json)记录新旧固定文件哈希/大小、固定源码行号和文档链接检查；仅主执行者自查，无新增独立复审。[342](evidence/342-non-uia-expansion-checkpoint.json)再次读取保存状态仍stopped/native_reader_timeout，未重新探测窗口或重启监听。
+
+本轮仅文档和脱敏证据变化，源码仍v0.1.22。未重跑产品回归/安装/原生测试，369/369是321/322的既有结果，13项原生继续排除。没有候选安装、导入、编译、执行、密钥读取、客户端注入或写入、真实模型/聊天记忆/发送。静态核查没有使任何候选获得本机准入。
+
 ## 个人号目标确认与只读故障调查（2026-10-05）
 
 [338](evidence/338-web-login-user-result.json)保存用户手工检查反馈：可登录但网页版不支持使用。作为当前Web候选未形成可用通道的依据，非程序独立验证；没有消息收发、真实模型或聊天记忆验收，也不外推全体账号。

@@ -1,0 +1,117 @@
+{
+  "scope": "Static control-flow traces of pinned public source; no third-party code execution",
+  "date_local": "2026-10-05",
+  "timezone": "Asia/Shanghai",
+  "basis": "339-non-uia-expansion-manifest.json",
+  "runtime_validation": false,
+  "cases": [
+    {
+      "id": "non_adjacent_id_replay",
+      "repository": "navysoto/wxhook",
+      "path": "WeixinHookCs/src/WeixinHook.Native/MsgRecvHook.cs",
+      "lines": [
+        150,
+        161
+      ],
+      "input": "Nonzero message IDs A, B, A, with no concurrency",
+      "derived_result": "All three pass a comparison against only the immediately preceding ID; this is not durable deduplication.",
+      "not_proven": "No claim that this sequence was observed on WeChat."
+    },
+    {
+      "id": "zero_id_same_prefix",
+      "repository": "navysoto/wxhook",
+      "path": "WeixinHookCs/src/WeixinHook.Native/MsgRecvHook.cs",
+      "lines": [
+        140,
+        161
+      ],
+      "input": "Two distinct messages have ID 0, same type and identical first 64 UTF-8 content bytes; initial fingerprint differs.",
+      "derived_result": "The second is suppressed by the previous fingerprint even when the peer or later bytes differ.",
+      "not_proven": "No real identity or content was read; invented input only."
+    },
+    {
+      "id": "ring_129_before_drain",
+      "repository": "navysoto/wxhook",
+      "path": "WeixinHookCs/src/WeixinHook.Native/MsgRecvHook.cs",
+      "lines": [
+        163,
+        175,
+        204,
+        228
+      ],
+      "input": "129 distinct accepted IDs captured sequentially without ProcessPending in between; initial readIdx/writeIdx are zero.",
+      "derived_result": "Capture 129 overwrites slot 0 containing capture 1. The consumer reads slot 0's newer content on its first iteration; the first event is lost.",
+      "not_proven": "This scheduling is a static counterexample, not measured throughput or runtime failure."
+    },
+    {
+      "id": "native_success_is_call_return",
+      "repository": "navysoto/wxhook",
+      "path": "WeixinHookCs/src/WeixinHook.Native/native/seh_bridge.c",
+      "lines": [
+        77,
+        80,
+        164,
+        175
+      ],
+      "input": "DoSend returns without a caught structured exception.",
+      "derived_result": "CallDoSend returns 1 without propagating DoSend's internal result; no server message ID or recipient receipt is established."
+    },
+    {
+      "id": "outer_timeout_late_completion",
+      "repository": "navysoto/wxhook",
+      "paths": [
+        "WeixinHookCs/src/WeixinHook.Shared/WxHookSession.cs",
+        "WeixinHookCs/src/WeixinHook.Shared/ShmClient.cs",
+        "WeixinHookCs/src/WeixinHook.Native/MsgSendHook.cs",
+        "WeixinHookCs/src/WeixinHook.Native/native/seh_bridge.c"
+      ],
+      "input": "Coro thread capture takes 10 seconds and native completion occurs 28 seconds after enqueue, beyond the UI client's 35-second wait.",
+      "derived_result": "The outer client can time out while the native operation remains in flight. It has no request cancellation/ID and releases the local semaphore. Late completion must be classified unknown, not safely unsent.",
+      "qualification": "The inner Seh_Wait does clear pending upon its own timeout. That does not retroactively cancel a request already taken by DrainThunk, and outer timeout does not imply inner timeout. This is not a reproduced client issue."
+    },
+    {
+      "id": "ferry_pop_before_transport",
+      "repository": "lich0821/WeChatFerry",
+      "paths": [
+        "WeChatFerry/spy/message_handler.cpp",
+        "WeChatFerry/spy/rpc_server.cpp"
+      ],
+      "input": "A popped message fails protobuf encoding or nng_send.",
+      "derived_result": "The inspected callback continues or logs the error without restoring the popped item. No durable acknowledgement/replay contract is established."
+    }
+  ],
+  "send_semantics": [
+    {
+      "repository": "aixed/WeChat-Hook",
+      "path": "src/SendTextMsg.cpp",
+      "lines": [
+        28,
+        38
+      ],
+      "result": "ret=0/success assigned after void SendText; not recipient delivery"
+    },
+    {
+      "repository": "lich0821/WeChatFerry",
+      "path": "WeChatFerry/spy/message_sender.cpp",
+      "lines": [
+        251,
+        262
+      ],
+      "result": "Nonempty text and receiver followed by send_text return cause status=0; no per-send receipt"
+    },
+    {
+      "repository": "ttttupup/wxhelper",
+      "path": "src/manager.cc",
+      "lines": [
+        222,
+        244
+      ],
+      "result": "Internal return ignored; success=1 assigned; not recipient delivery"
+    }
+  ],
+  "product_modified": false,
+  "third_party_installed": false,
+  "third_party_imported": false,
+  "third_party_executed": false,
+  "real_messages_sent": 0
+}

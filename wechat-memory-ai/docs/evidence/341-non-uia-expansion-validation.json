@@ -1,0 +1,35 @@
+{
+  "scope": "Local integrity/link/changed-path validation and primary-agent semantic self-review",
+  "checked_at_utc": "2026-10-04T18:05:55.0679973Z",
+  "status": "passed",
+  "new_source_files_verified": 46,
+  "prior_source_files_verified": 47,
+  "tree_snapshots_verified": 5,
+  "fixed_source_line_references_checked": 69,
+  "local_document_links_checked": 394,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/NON_UIA_SEND_AUDIT.md",
+    "docs/NON_UIA_ROUTE_AUDIT.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/PLAN.md",
+    "docs/STATUS.md",
+    "docs/TEST_RESULTS.md"
+  ],
+  "diff_whitespace_check": "passed",
+  "changed_path_scope": "documentation and redacted evidence only",
+  "semantic_review": [
+    "native version constants distinguished from SDK guide versions",
+    "success/call return not classified as recipient delivery",
+    "inner pending cleanup retained in timeout discussion",
+    "static traces distinguished from reproduced failures",
+    "current Web exclusion and stopped listener override historical plans",
+    "no independent reviewer claimed"
+  ],
+  "independent_review_performed": false,
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "third_party_code_executed": false,
+  "source_http_links_requeried": false,
+  "limitation": "Line anchors are checked against downloaded pinned files; this is not a runtime, ABI, memory-safety, or minimized delivery certification."
+}

@@ -1,0 +1,432 @@
+{
+  "scope": "Additional public-source static assessment, emphasizing minimized send semantics",
+  "checked_at_utc": "2026-10-04T18:01:00.1365197Z",
+  "date_local": "2026-10-05",
+  "timezone": "Asia/Shanghai",
+  "client_target": "Windows WeChat 4.1.15.50",
+  "source_files": 46,
+  "repositories": [
+    {
+      "repository": "aixed/WeChat-Hook",
+      "commit": "e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6",
+      "commit_date": "2026-09-15T02:56:10Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md.txt",
+          "sha256": "e2a166ac3563c7422b3b6364ccf259718829d6c7b8d48138f52f9dc050a11d9b",
+          "size_bytes": 5392,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/README.md"
+        },
+        {
+          "path": "other_version_fix.md",
+          "local_file": "other_version_fix.md.txt",
+          "sha256": "9e739d9c70e2785a273b6fc17285bceaff952bb78425e00b43b10c4471c474a7",
+          "size_bytes": 208,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/other_version_fix.md"
+        },
+        {
+          "path": "src/SendTextMsg.cpp",
+          "local_file": "src__SendTextMsg.cpp.txt",
+          "sha256": "9419b082e1fd3aebe36d728ff76c283a4c0aa0da00fbe37380a1019544b353f7",
+          "size_bytes": 2009,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/SendTextMsg.cpp"
+        },
+        {
+          "path": "src/wx_send.cpp",
+          "local_file": "src__wx_send.cpp.txt",
+          "sha256": "6776d531ec1e8bbc29ba9d4ea823f6088aefb491275d81b1d47e25f85ff5720f",
+          "size_bytes": 16221,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/wx_send.cpp"
+        },
+        {
+          "path": "include/wx_send.h",
+          "local_file": "include__wx_send.h.txt",
+          "sha256": "5bf7913db0c7fe516793d00cb45ffabc92e2308844620065b94be7acbc6fbfce",
+          "size_bytes": 298,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/include/wx_send.h"
+        },
+        {
+          "path": "src/HookManager.cpp",
+          "local_file": "src__HookManager.cpp.txt",
+          "sha256": "6c1f38f8575a5a8d9260c58c6204627ec5ef1b87877496ac7ee801b6f7e7affd",
+          "size_bytes": 1298,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/HookManager.cpp"
+        },
+        {
+          "path": "src/Hook_Method.cpp",
+          "local_file": "src__Hook_Method.cpp.txt",
+          "sha256": "807d097d75170518cefeef03df31527126c2bc768c792d9c129e3426dd2af6ec",
+          "size_bytes": 15047,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/Hook_Method.cpp"
+        },
+        {
+          "path": "src/inline_weixin_dll_load.cpp",
+          "local_file": "src__inline_weixin_dll_load.cpp.txt",
+          "sha256": "1ca09a156d38f2600e708eb4aeee8d0ad394dab629780b52437aaba2c042eaa6",
+          "size_bytes": 5283,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/inline_weixin_dll_load.cpp"
+        },
+        {
+          "path": "src/http_routes.cpp",
+          "local_file": "src__http_routes.cpp.txt",
+          "sha256": "f9d98cb9d4cb7e69c3f732b6f738b23806222b06d5870b9ababd1554740f4b48",
+          "size_bytes": 364,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/http_routes.cpp"
+        },
+        {
+          "path": "src/http_post.cpp",
+          "local_file": "src__http_post.cpp.txt",
+          "sha256": "aa3bedab0852fc13f9aa460bde70be54869f984a79f0cc762bd6da3041f8de2e",
+          "size_bytes": 8662,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/http_post.cpp"
+        },
+        {
+          "path": "src/global.cpp",
+          "local_file": "src__global.cpp.txt",
+          "sha256": "138d4d7760b6f8d04d91f12aaa1deb1b5e155630ca58858e73698458317e9b51",
+          "size_bytes": 682,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/global.cpp"
+        },
+        {
+          "path": "dllmain.cpp",
+          "local_file": "dllmain.cpp.txt",
+          "sha256": "4df00d5328132105d06abecc6c61b3505ebc4a0be8c974a88786de91fb87ceec",
+          "size_bytes": 4441,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/dllmain.cpp"
+        },
+        {
+          "path": "src/GetSelfProfile.cpp",
+          "local_file": "src__GetSelfProfile.cpp.txt",
+          "sha256": "412cffd9af27ce02328853fd0d6c91f40e6f2835a831abe5355b2451ff9b8791",
+          "size_bytes": 1052,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/GetSelfProfile.cpp"
+        },
+        {
+          "path": "src/http_server.cpp",
+          "local_file": "src__http_server.cpp.txt",
+          "sha256": "18de18a05db810003f504f6398aeb469945787df7f54bb2c17de155772889969",
+          "size_bytes": 1808,
+          "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/src/http_server.cpp"
+        }
+      ]
+    },
+    {
+      "repository": "navysoto/wxhook",
+      "commit": "fbccd52713f8cc7cd1023f852bf625af4fe38624",
+      "commit_date": "2026-08-18T06:41:06Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md.txt",
+          "sha256": "06c67c72a84272069414fb6bd2fb2885bccb5cb68734db87e107d409d240eeea",
+          "size_bytes": 5604,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/README.md"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/WeixinOffsets.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__WeixinOffsets.cs.txt",
+          "sha256": "6ef75306a7d4b50f5fcb187e647122589bec48835d13da23a556e043054bb9a1",
+          "size_bytes": 1212,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/WeixinOffsets.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/MsgSendHook.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__MsgSendHook.cs.txt",
+          "sha256": "25faa2aacabc0576bdcd8b520d9cf2dc4fb5b361dd6ee63e7e19759d9289dea5",
+          "size_bytes": 9804,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/MsgSendHook.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/MsgRecvHook.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__MsgRecvHook.cs.txt",
+          "sha256": "3076b7bc5be67a83b7dab8706a478f029d4cf9e9f17c02544a2109ad4de14faf",
+          "size_bytes": 8871,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/MsgRecvHook.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/HookUtils.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__HookUtils.cs.txt",
+          "sha256": "ee405a84d067c1549e41e2be21bad082ba3a7fcb4695b756ae6504db7f2cca32",
+          "size_bytes": 5583,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/HookUtils.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/NativeEntry.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__NativeEntry.cs.txt",
+          "sha256": "2c626f03591d7b36a57399fe4ad7657343826ebb0fd6a23b33f276a1a1aaa98f",
+          "size_bytes": 1686,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/NativeEntry.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/ShmServer.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__ShmServer.cs.txt",
+          "sha256": "076f9c27a2e53b75c0b9480bde02df6539254cd0e68c93674d04dd540a55903a",
+          "size_bytes": 7887,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/ShmServer.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/NativeApi.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__NativeApi.cs.txt",
+          "sha256": "13c4e1125426643a7f982bc6087533c05f054bcebd59dd101ce098c799e7474d",
+          "size_bytes": 7712,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/NativeApi.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Shared/Injector.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Shared__Injector.cs.txt",
+          "sha256": "cb0a9a94cab81f7e1c7cc8fa0c569485b4db9bd56a829575dcb90864c5d4c021",
+          "size_bytes": 4186,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Shared/Injector.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Shared/WxHookSession.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Shared__WxHookSession.cs.txt",
+          "sha256": "bc5d7329216d7129a1f6a69cabe13e53802186dcbfa26a5bbd0427f682603075",
+          "size_bytes": 4367,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Shared/WxHookSession.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Shared/ShmClient.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Shared__ShmClient.cs.txt",
+          "sha256": "b4dccbd77208e62f2a095e0c15685107eda05e3eaeb73abdd18a54fc0bfd84b5",
+          "size_bytes": 6191,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Shared/ShmClient.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Client/Models/ApiModels.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Client__Models__ApiModels.cs.txt",
+          "sha256": "d74ae4a374053fef4f717c54150c5fc8837afee33afa2c107a5e4f70731e8178",
+          "size_bytes": 1789,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Client/Models/ApiModels.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/SehBridge.cs",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__SehBridge.cs.txt",
+          "sha256": "4963cfa9d5d24d46077a8abbcd0a9b1c10fcf7cc4867a2b039c41c1ba510bf86",
+          "size_bytes": 1664,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/SehBridge.cs"
+        },
+        {
+          "path": "WeixinHookCs/src/WeixinHook.Native/native/seh_bridge.c",
+          "local_file": "WeixinHookCs__src__WeixinHook.Native__native__seh_bridge.c.txt",
+          "sha256": "d83828cd2c1a0339908f81cf6f4e7bc5a042ab37007ccc14061517ec4b557484",
+          "size_bytes": 13162,
+          "url": "https://raw.githubusercontent.com/navysoto/wxhook/fbccd52713f8cc7cd1023f852bf625af4fe38624/WeixinHookCs/src/WeixinHook.Native/native/seh_bridge.c"
+        }
+      ]
+    },
+    {
+      "repository": "lich0821/WeChatFerry",
+      "commit": "0f5c60a034fcac234cabd000b49c9200defa7f7d",
+      "commit_date": "2026-03-21T07:45:27Z",
+      "files": [
+        {
+          "path": "README.MD",
+          "local_file": "README.MD.txt",
+          "sha256": "c886c0fb6358630d045aff2520489e34967d9168a8dcf37c773e5ba7f09187cd",
+          "size_bytes": 8220,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/README.MD"
+        },
+        {
+          "path": "LICENSE",
+          "local_file": "LICENSE.txt",
+          "sha256": "672ce29efa6c310a5f390c43e8abcab1be4c7690a775f0334de8892aefacebce",
+          "size_bytes": 1065,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/LICENSE"
+        },
+        {
+          "path": "WeChatFerry/spy/offsets.h",
+          "local_file": "WeChatFerry__spy__offsets.h.txt",
+          "sha256": "cfd3b7bc93376ffb37431d35c52eac6b476ea449b1b0d861cc0b0fd5f87d928e",
+          "size_bytes": 6010,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/offsets.h"
+        },
+        {
+          "path": "WeChatFerry/spy/message_sender.cpp",
+          "local_file": "WeChatFerry__spy__message_sender.cpp.txt",
+          "sha256": "f8b5e5121d2fc1eaee87f9e0b31c2ab334a7dd74a9a527439fb212ae3c7fc0f0",
+          "size_bytes": 12169,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/message_sender.cpp"
+        },
+        {
+          "path": "WeChatFerry/spy/message_handler.cpp",
+          "local_file": "WeChatFerry__spy__message_handler.cpp.txt",
+          "sha256": "54eee7254d57b0036e6bbc420c82fc86a8717e51bb81e14f6ca33203f613e4d9",
+          "size_bytes": 8856,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/message_handler.cpp"
+        },
+        {
+          "path": "WeChatFerry/spy/rpc_server.cpp",
+          "local_file": "WeChatFerry__spy__rpc_server.cpp.txt",
+          "sha256": "30df85614979e7ad7f8e92ef9b9e9daf0a9408c0ca23fdbfed3025d47621dae9",
+          "size_bytes": 14660,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/rpc_server.cpp"
+        },
+        {
+          "path": "WeChatFerry/spy/spy.cpp",
+          "local_file": "WeChatFerry__spy__spy.cpp.txt",
+          "sha256": "1f194c3e694cf015115fde9b03c0b7beae28fae11c0e85ff99dc73862e5b2cee",
+          "size_bytes": 1124,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/spy.cpp"
+        },
+        {
+          "path": "WeChatFerry/rpc/proto/wcf.proto",
+          "local_file": "WeChatFerry__rpc__proto__wcf.proto.txt",
+          "sha256": "38c9c34d8e7e2c9c2cb4be2810ed26dcf1eeb87616770458658bed2515b8ee13",
+          "size_bytes": 7719,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/rpc/proto/wcf.proto"
+        },
+        {
+          "path": "WeChatFerry/spy/spy.h",
+          "local_file": "WeChatFerry__spy__spy.h.txt",
+          "sha256": "527eb0d020973cbfe694df84b9bb969b3ddc498685c40025897d135b411bd350",
+          "size_bytes": 502,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/spy/spy.h"
+        },
+        {
+          "path": "WeChatFerry/sdk/sdk.cpp",
+          "local_file": "WeChatFerry__sdk__sdk.cpp.txt",
+          "sha256": "901f5aad9826d66a8c13b3a821e3b4a943c807ff6654cc01a96c3e79a9de1e12",
+          "size_bytes": 4447,
+          "url": "https://raw.githubusercontent.com/lich0821/WeChatFerry/0f5c60a034fcac234cabd000b49c9200defa7f7d/WeChatFerry/sdk/sdk.cpp"
+        }
+      ]
+    },
+    {
+      "repository": "ttttupup/wxhelper",
+      "commit": "fa90a0ea87c9b4ca9c63a1e8385293159167f367",
+      "commit_date": "2025-04-23T09:25:30Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md.txt",
+          "sha256": "99478a2c1eaca2bb1e549f9be085c9910f61c95706845e5ff2fd8c378eca1232",
+          "size_bytes": 8381,
+          "url": "https://raw.githubusercontent.com/ttttupup/wxhelper/fa90a0ea87c9b4ca9c63a1e8385293159167f367/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_file": "LICENSE.txt",
+          "sha256": "eb4b5a95df5aa70416b678ea20de4b134689fabd67db1aae2c4d80f66452eec6",
+          "size_bytes": 1065,
+          "url": "https://raw.githubusercontent.com/ttttupup/wxhelper/fa90a0ea87c9b4ca9c63a1e8385293159167f367/LICENSE"
+        },
+        {
+          "path": "src/wechat_function.h",
+          "local_file": "src__wechat_function.h.txt",
+          "sha256": "cb61b70510dc1f14323d87a4f3e63f2a473b9c06f0a69858fbfc932dd62dfe66",
+          "size_bytes": 14875,
+          "url": "https://raw.githubusercontent.com/ttttupup/wxhelper/fa90a0ea87c9b4ca9c63a1e8385293159167f367/src/wechat_function.h"
+        },
+        {
+          "path": "src/manager.cc",
+          "local_file": "src__manager.cc.txt",
+          "sha256": "218d40144503011ab66a0938aafa7ec05a06a88fffbe3c2d586d6d94c79c9ef1",
+          "size_bytes": 51981,
+          "url": "https://raw.githubusercontent.com/ttttupup/wxhelper/fa90a0ea87c9b4ca9c63a1e8385293159167f367/src/manager.cc"
+        },
+        {
+          "path": "src/hooks.cc",
+          "local_file": "src__hooks.cc.txt",
+          "sha256": "a651e8ae93e59be2d9ee6ec6a7e71d706bb2839b3197b9ed2bc85f06fddef320",
+          "size_bytes": 9908,
+          "url": "https://raw.githubusercontent.com/ttttupup/wxhelper/fa90a0ea87c9b4ca9c63a1e8385293159167f367/src/hooks.cc"
+        }
+      ]
+    },
+    {
+      "repository": "LTEnjoy/easyChat",
+      "commit": "70f6f4122cbe18bc10ebe84527031627555a7824",
+      "commit_date": "2026-09-15T09:29:36Z",
+      "files": [
+        {
+          "path": "README.md",
+          "local_file": "README.md.txt",
+          "sha256": "ad4e97e89965a590909c780fa70a94d3a1cd2e681f464054421c50cc1981db25",
+          "size_bytes": 13312,
+          "url": "https://raw.githubusercontent.com/LTEnjoy/easyChat/70f6f4122cbe18bc10ebe84527031627555a7824/README.md"
+        },
+        {
+          "path": "automation.py",
+          "local_file": "automation.py.txt",
+          "sha256": "e9b7207694de75d6a97e8622357ccfedb434153ba4d4259706ff33eefa9cabde",
+          "size_bytes": 4776,
+          "url": "https://raw.githubusercontent.com/LTEnjoy/easyChat/70f6f4122cbe18bc10ebe84527031627555a7824/automation.py"
+        },
+        {
+          "path": "versions/wechat_4_1_15_8.py",
+          "local_file": "versions__wechat_4_1_15_8.py.txt",
+          "sha256": "8e2f211a67b0aaf7f84964e8e1e5f664579ffe2f2396995b08c29a39298c483b",
+          "size_bytes": 21958,
+          "url": "https://raw.githubusercontent.com/LTEnjoy/easyChat/70f6f4122cbe18bc10ebe84527031627555a7824/versions/wechat_4_1_15_8.py"
+        }
+      ]
+    }
+  ],
+  "trees": [
+    {
+      "repository": "aixed/WeChat-Hook",
+      "url": "https://api.github.com/repos/aixed/WeChat-Hook/git/trees/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6?recursive=1",
+      "local_file": "aixed__WeChat-Hook-tree.json",
+      "sha256": "4f57a71541a9ce30aa77ff20fec92ca8e17e416949f086742d89d16a63903ada",
+      "tree_sha": "e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6",
+      "truncated": false,
+      "license_paths": [
+        "minhook/LICENSE.txt"
+      ]
+    },
+    {
+      "repository": "navysoto/wxhook",
+      "url": "https://api.github.com/repos/navysoto/wxhook/git/trees/fbccd52713f8cc7cd1023f852bf625af4fe38624?recursive=1",
+      "local_file": "navysoto__wxhook-tree.json",
+      "sha256": "4fb462bad9456b75fedfeeb6ed20e94db20bdf31a7a95568dfaa682202975d23",
+      "tree_sha": "fbccd52713f8cc7cd1023f852bf625af4fe38624",
+      "truncated": false,
+      "license_paths": []
+    },
+    {
+      "repository": "lich0821/WeChatFerry",
+      "url": "https://api.github.com/repos/lich0821/WeChatFerry/git/trees/0f5c60a034fcac234cabd000b49c9200defa7f7d?recursive=1",
+      "local_file": "lich0821__WeChatFerry-tree.json",
+      "sha256": "1d9169c40f80cc14f6d9a1e71a5730e3095820b70741f3bb9525cd2aeaa109d1",
+      "tree_sha": "0f5c60a034fcac234cabd000b49c9200defa7f7d",
+      "truncated": false,
+      "license_paths": [
+        "LICENSE",
+        "WeChatFerry/license_check.bat",
+        "clients/go/LICENSE"
+      ]
+    },
+    {
+      "repository": "ttttupup/wxhelper",
+      "url": "https://api.github.com/repos/ttttupup/wxhelper/git/trees/fa90a0ea87c9b4ca9c63a1e8385293159167f367?recursive=1",
+      "local_file": "ttttupup__wxhelper-tree.json",
+      "sha256": "a42f40d79a936b9bdca3ee14e7ebc3899acf5e26b5829db6c873b56322c7684b",
+      "tree_sha": "fa90a0ea87c9b4ca9c63a1e8385293159167f367",
+      "truncated": false,
+      "license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repository": "LTEnjoy/easyChat",
+      "url": "https://api.github.com/repos/LTEnjoy/easyChat/git/trees/70f6f4122cbe18bc10ebe84527031627555a7824?recursive=1",
+      "local_file": "LTEnjoy__easyChat-tree.json",
+      "sha256": "03bc5637f0b33d68fab52e2ca1c936d8aed81cc071572680362494359d6a25b2",
+      "tree_sha": "70f6f4122cbe18bc10ebe84527031627555a7824",
+      "truncated": false,
+      "license_paths": []
+    }
+  ],
+  "cache_directory": "data/non-uia-expansion-20261005",
+  "binary_assets_downloaded": false,
+  "third_party_executed": false,
+  "search_scope": [
+    "Weixin 4.1.15.50 GitHub",
+    "WeChat 4.1.15 hook send",
+    "Windows WeChat 4.1 minimized send",
+    "WeChatFerry wxhelper native version"
+  ],
+  "scope_limit": "Search is not exhaustive; no claim that all projects or all versions lack support."
+}
