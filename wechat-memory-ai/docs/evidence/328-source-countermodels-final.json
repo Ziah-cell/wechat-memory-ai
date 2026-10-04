@@ -1,0 +1,29 @@
+{
+  "scope": "synthetic decision-rule projections and current pure-Python guards",
+  "countermodels": 8,
+  "current_guard_checks": 4,
+  "checks_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "upstream_code_executed": false,
+  "network_used": false,
+  "native_or_ui_executed": false,
+  "model_called": false,
+  "real_memory_written": false,
+  "message_sent": false,
+  "cases": [
+    "test_count_growth_with_history_prepend_delivers_old_tail (__main__.Countermodels.test_count_growth_with_history_prepend_delivers_old_tail) ... ok",
+    "test_history_prepend_is_not_distinguished_from_arrival (__main__.Countermodels.test_history_prepend_is_not_distinguished_from_arrival) ... ok",
+    "test_history_returning_to_viewport_is_reported_new (__main__.Countermodels.test_history_returning_to_viewport_is_reported_new) ... ok",
+    "test_nested_self_display_name_matches_peer_prefix (__main__.Countermodels.test_nested_self_display_name_matches_peer_prefix) ... ok",
+    "test_reused_runtime_id_hides_changed_body (__main__.Countermodels.test_reused_runtime_id_hides_changed_body) ... ok",
+    "test_same_display_name_cannot_distinguish_self_from_peer (__main__.Countermodels.test_same_display_name_cannot_distinguish_self_from_peer) ... ok",
+    "test_tail_only_mcp_projection_misses_a_burst (__main__.Countermodels.test_tail_only_mcp_projection_misses_a_burst) ... ok",
+    "test_unknown_label_is_forced_to_self (__main__.Countermodels.test_unknown_label_is_forced_to_self) ... ok",
+    "test_history_prepend_stops_instead_of_delivering (__main__.CurrentProjectGuards.test_history_prepend_stops_instead_of_delivering) ... ok",
+    "test_old_occurrence_return_stops (__main__.CurrentProjectGuards.test_old_occurrence_return_stops) ... ok",
+    "test_prefix_and_self_looking_texts_still_have_unknown_direction (__main__.CurrentProjectGuards.test_prefix_and_self_looking_texts_still_have_unknown_direction) ... ok",
+    "test_reused_token_with_new_body_is_only_unknown_occurrence (__main__.CurrentProjectGuards.test_reused_token_with_new_body_is_only_unknown_occurrence) ... ok"
+  ]
+}

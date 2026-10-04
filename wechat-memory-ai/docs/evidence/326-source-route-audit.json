@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-04",
+  "scope": "pinned public source inspection, not installation or live client verification",
+  "personal_data_uploaded": false,
+  "third_party_code_imported_or_executed": false,
+  "package_installed": false,
+  "wechat_operated": false,
+  "sources": [
+    {
+      "repository": "Hello-Mr-Crab/pywechat",
+      "commit": "8589baa049bb91d3a500602c167f07b2f8397a13",
+      "files": [
+        {
+          "path": "Mcp/pyweixin_rpa/pyweixin/WeChatAuto.py",
+          "sha256": "a34867b17acc123769d1f34f970e9d0d83198efa07da786d8b7cd69f4b1d3128",
+          "bytes": 232905,
+          "url": "https://raw.githubusercontent.com/Hello-Mr-Crab/pywechat/8589baa049bb91d3a500602c167f07b2f8397a13/Mcp/pyweixin_rpa/pyweixin/WeChatAuto.py",
+          "findings": [
+            {
+              "start": 4145,
+              "end": 4170,
+              "topic": "bundled tail-only RuntimeId detection"
+            }
+          ]
+        },
+        {
+          "path": "src/pyweixin/WeChatAuto.py",
+          "sha256": "128431100260ce104323224344ed10a12ee8a0fa0350ea060133d9b32eb26ac7",
+          "bytes": 268404,
+          "url": "https://raw.githubusercontent.com/Hello-Mr-Crab/pywechat/8589baa049bb91d3a500602c167f07b2f8397a13/src/pyweixin/WeChatAuto.py",
+          "findings": [
+            {
+              "start": 4309,
+              "end": 4330,
+              "topic": "display-prefix sender inference"
+            },
+            {
+              "start": 4367,
+              "end": 4402,
+              "topic": "viewport RuntimeId differences and end-of-duration return"
+            }
+          ]
+        },
+        {
+          "path": "src/pyweixin/WeChatTools.py",
+          "sha256": "13caf8f001f182ba2f6ebd707f52c5c8ba2987d1d158e545d38eff91e3cf224f",
+          "bytes": 85298,
+          "url": "https://raw.githubusercontent.com/Hello-Mr-Crab/pywechat/8589baa049bb91d3a500602c167f07b2f8397a13/src/pyweixin/WeChatTools.py",
+          "findings": [
+            {
+              "start": 1374,
+              "end": 1461,
+              "topic": "name-based search, selection and minimization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "FreeWisdom/wxauto-4.0",
+      "commit": "bd7c5233e79c0a185638a325bf6d30607244dfa8",
+      "files": [
+        {
+          "path": "wxauto4/ui/chatbox.py",
+          "sha256": "bc99b0ec4613e890a9a758e5112071b18e61fbfce3a00537418176d59f8f1ae4",
+          "bytes": 15941,
+          "url": "https://raw.githubusercontent.com/FreeWisdom/wxauto-4.0/bd7c5233e79c0a185638a325bf6d30607244dfa8/wxauto4/ui/chatbox.py",
+          "findings": [
+            {
+              "start": 219,
+              "end": 301,
+              "topic": "RuntimeId and count-tail new-message rules"
+            }
+          ]
+        },
+        {
+          "path": "wxauto4/msgs/base.py",
+          "sha256": "51e85169cef95bace93a17e80da0efa17c803027740706ad115003b5a4e300c6",
+          "bytes": 8542,
+          "url": "https://raw.githubusercontent.com/FreeWisdom/wxauto-4.0/bd7c5233e79c0a185638a325bf6d30607244dfa8/wxauto4/msgs/base.py",
+          "findings": [
+            {
+              "start": 151,
+              "end": 166,
+              "topic": "UI runtimeid and content/geometry hash"
+            }
+          ]
+        },
+        {
+          "path": "wxauto4/msgs/msg.py",
+          "sha256": "f9a2cda05609d2bb53aa15033c74e5ecf9f862cee727550d827407905df3a4c1",
+          "bytes": 3936,
+          "url": "https://raw.githubusercontent.com/FreeWisdom/wxauto-4.0/bd7c5233e79c0a185638a325bf6d30607244dfa8/wxauto4/msgs/msg.py",
+          "findings": [
+            {
+              "start": 28,
+              "end": 54,
+              "topic": "screenshot-based direction"
+            }
+          ]
+        },
+        {
+          "path": "README.md",
+          "sha256": "8d9109606deb8eb9b5032acc0af95e2eb32caa0068c8dec5beba63ea4e7fa6cc",
+          "bytes": 15035,
+          "url": "https://raw.githubusercontent.com/FreeWisdom/wxauto-4.0/bd7c5233e79c0a185638a325bf6d30607244dfa8/README.md",
+          "findings": [
+            {
+              "start": 14,
+              "end": 14,
+              "topic": "4.0.5 support statement"
+            },
+            {
+              "start": 511,
+              "end": 514,
+              "topic": "minimized listener limitation"
+            }
+          ]
+        },
+        {
+          "path": "wxauto4/utils/tools.py",
+          "sha256": "faf62b6b9b8275da4d08b9349fb28b9aa8afb884da729f4f59d8ce937ebf33e2",
+          "bytes": 19709,
+          "url": "https://raw.githubusercontent.com/FreeWisdom/wxauto-4.0/bd7c5233e79c0a185638a325bf6d30607244dfa8/wxauto4/utils/tools.py",
+          "findings": [
+            {
+              "start": 141,
+              "end": 200,
+              "topic": "pixel direction and right-side fallback"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

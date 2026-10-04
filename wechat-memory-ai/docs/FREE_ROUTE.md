@@ -1,5 +1,9 @@
 # 免费微信接入路线
 
+## 最新：固定源码核查与反例
+
+已追踪pyweixin主源码/MCP副本及FreeWisdom/wxauto-4.0的具体发送人、ID和方向来源。两条已查路径均不能直接满足当前严格最小化入站条件；没有安装/运行第三方代码。固定提交、8文件哈希及12项离线检查见[SOURCE_ROUTE_AUDIT](SOURCE_ROUTE_AUDIT.md)。后续需要用户对接入路线或窗口要求作明确取舍，答复前保持既定正常UI/免费/真正最小化范围。
+
 ## 2026-10-04 最小化入站能力核查
 
 v0.1.22实机确认当前UIA文本项共享AutomationId、所查方向辅助字段缺失，消息列表及到绑定窗口根的祖先均无ScrollPattern。需要真实事件来源证据，不能靠unknown计数接入回复。已重新核对wxauto免费版兼容说明及wechatferry Node文档，暂未找到已验证可替代本机4.1.15.50的免费来源；没有安装、降级、注入、提取密钥或购买Plus。具体证据、准入条件与替代路线见[INBOUND_ADMISSION](INBOUND_ADMISSION.md)。

@@ -2,6 +2,8 @@
 
 2026-10-04，v0.1.22。**当前普通最小化 UIA 来源仍拒绝进入回复核心。** 本版新增的是可复查的能力检查和拒绝报告，没有实现可接受真实消息的桥接或发送器。
 
+后续已完成两候选固定源码和规则反例核查，未找到可直接采用的来源；证据及范围见[SOURCE_ROUTE_AUDIT](SOURCE_ROUTE_AUDIT.md)。产品源码和现有监听未改，后续路线取舍已询问用户。
+
 ## 实机发现
 
 [316](evidence/316-live-inbound-capabilities.json)的三次独立诊断均确认最小化，结果一致：8 行中有 5 个文本项，5 个文本项都有 AutomationId，而所有行的非空 AutomationId 总共只有 1 个；文本项没有 HelpText、ItemStatus、ItemType、LabeledBy、TextPattern 或子控件。消息列表及向上直到已绑定窗口根的 7 层祖先，共 8 个节点，都没有 ScrollPattern。

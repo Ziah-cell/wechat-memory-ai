@@ -1,0 +1,17 @@
+{
+  "scope": "independent pinned-source and synthetic-countermodel review",
+  "findings": [],
+  "source_hash_and_size_checks": 8,
+  "offline_checks_run": 12,
+  "offline_checks_passed": 12,
+  "product_source_changed": false,
+  "version_changed": false,
+  "third_party_code_imported_or_executed": false,
+  "network_accessed": false,
+  "monitor_accessed_or_operated": false,
+  "personal_configuration_read": false,
+  "native_or_ui_executed": false,
+  "model_called": false,
+  "real_data_read": false,
+  "live_compatibility_verified": false
+}
