@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-10-05T14:47:06.528814+00:00",
+  "status": "passed",
+  "scope": "Same-executor static revalidation; no runtime, malformed-network, concurrency or product testing",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 19,
+  "unique_anchored_leaves_checked": 5,
+  "unique_direct_edges_with_raw_rel32_math": 9,
+  "unique_tables_checked": 6,
+  "unique_instruction_observations_checked": 109,
+  "rip_references_with_raw_displacement_math": 6,
+  "branch_and_field_assertions": 49,
+  "serialization_field_pairs_checked": 8,
+  "local_links_checked": 441,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md"
+  ],
+  "saved_listener_state_unchanged": true,
+  "diff_check": "passed",
+  "change_scope": "documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Some methods have no unwind entry; helpers reported NO_UNWIND_START, then bounded leaf decodes used existing direct-call/table anchors.",
+    "Initial document reads used incorrect parent paths and failed; corrected explicit app/docs paths were read.",
+    "ASCII-only literal probes returned None; no business field names were invented from missing strings."
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-response-items-20261005/verify_evidence.py",
+      "sha256": "ada1181b1cbf32a7d8f86998d52f6c577b66aad8869dd983de2800898327daa7"
+    },
+    {
+      "cache_path": "data/send-response-items-20261005/write_evidence.py",
+      "sha256": "ddd9b86fc1789e479a1a3efd7be9a51d00afd878656120e3e4589d020d9a8558"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-result-20261005/verify_result_evidence.py",
+      "sha256": "0f9a594ddae78dd64804ff389fb8b202eb390d5b1010becd4c572a4262f2f939"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ],
+  "remaining": [
+    "coroutine executor, timer and lifetime",
+    "network-core dispatch upstream of OnTaskEnd and runtime replacement",
+    "request/response identity matching and full message-ID semantics",
+    "observable parse validity and structural checks",
+    "account/recipient/inbound direction/history and real minimized operation"
+  ]
+}

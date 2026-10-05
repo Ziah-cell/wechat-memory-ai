@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 逐条响应、解析与回调桥静态复核（2026-10-05）
+
+[362](evidence/362-send-response-items.json)记录7区间/1叶函数/1直接边/2表/44观察；[363](evidence/363-send-response-parse-failure.json)记录6区间/3直接边/2表/34观察；[364](evidence/364-send-callback-registration.json)记录7区间/4叶函数/5直接边/3表/31观察。包含重叠节点，不把相加数视为独立函数数。结论涉及字段布局、单消息首条消费、解析返回覆盖与默认回调注册链。
+
+[366](evidence/366-send-response-items-validation.json)保存固定DLL哈希、完整解码、叶函数锚点、指令/表/独立位移算术、选定分支及文档范围复核；同一执行者，无新增独立审查。研究探针给无异常表的短方法时返回NO_UNWIND_START，后按已有调用/表锚点单独解码；不存在据此补造异常表边界。部分初次文档读取使用了错误目录并报文件不存在，随后在wechat-memory-ai/docs读取；不属于产品失败。
+
+[365](evidence/365-send-response-items-checkpoint.json)只读保存状态仍停止，最小化字段仅最后观察。产品仍0.1.22，未运行产品回归、原生测试、异常网络响应或真实收发；旧369项结果不外推。完整边界见[兼容性报告](SEND_COMPATIBILITY_4_1_15_50.md)。
+
 ## 响应与取消静态复核（2026-10-05）
 
 [358](evidence/358-send-response-promise-contract.json)记录13区间/2叶函数/10直接边/3表/45观察；[359](evidence/359-send-cancel-timeout-contract.json)记录15区间/2叶函数/7直接边/7表/44观察，两份包含重叠节点。核查任务映射、结果状态优先级、promise pending转换及停止hook。未执行微信候选，不把静态反汇编当作运行或竞态测试。

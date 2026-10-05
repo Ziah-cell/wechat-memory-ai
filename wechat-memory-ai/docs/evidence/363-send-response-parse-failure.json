@@ -1,0 +1,382 @@
+{
+  "checked_at_utc": "2026-10-05T14:43:09.308113+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x113d70",
+      "end": "0x113db0",
+      "role_inference": "wrapper response parser; discards generic parse boolean and returns true",
+      "instruction_count": 23,
+      "disk_range_sha256": "71259a57c7570234c3cfed074e43bcada297747a92abffa8e062576b229c3adb",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694800",
+      "end": "0x694891",
+      "role_inference": "clear, parse/initialization check, complete-buffer check; returns boolean",
+      "instruction_count": 39,
+      "disk_range_sha256": "ce4c6158df07995fe218f7fa93610f56ea8f1a8e45e446b86795352c6063d0ab",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694240",
+      "end": "0x69454c",
+      "role_inference": "calls parser and required-field validator; returns false on parse or initialization failure",
+      "instruction_count": 209,
+      "disk_range_sha256": "a9df929eb0a3c8941d0970915296700661868ab42d29f6e2a275358bf389c77b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2f03360",
+      "end": "0x2f036e7",
+      "role_inference": "outer response parser appends items before their parse success is known",
+      "instruction_count": 259,
+      "disk_range_sha256": "7f0d82a4f2f3516829f565ad369b715d76f4be3d059d3fb394b262aa6c5ef0f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35dfe0",
+      "end": "0x35e6a4",
+      "role_inference": "task completion service; outer-envelope and inner-payload parser paths",
+      "instruction_count": 405,
+      "disk_range_sha256": "44dfd589b1a5eb186afe50b2a7ff5aa2f6cff308ba8f36f51ecc2f3a47e7d0dc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6c500",
+      "end": "0x3a6c6ee",
+      "role_inference": "response copy and completion settlement without separate parser outcome",
+      "instruction_count": 146,
+      "disk_range_sha256": "b71f7b8b88292bd1909acebd3e39da0ba83f8213f4e45bc89b38f4f002f0fc93",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x113da1",
+      "kind": "call",
+      "to": "0x694800"
+    },
+    {
+      "at": "0x694870",
+      "kind": "call",
+      "to": "0x694240"
+    },
+    {
+      "at": "0x35e306",
+      "kind": "call",
+      "to": "0x694800"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96d8ca8",
+      "role_inference": "newsendmsg wrapper parser",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x113d70"
+        }
+      ]
+    },
+    {
+      "rva": "0x9590308",
+      "role_inference": "outer response parser",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x38",
+          "target": "0x2f03360"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x113d7d",
+      "mnemonic": "add",
+      "operands": "rdi, 0xd8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "response member at wrapper +0xd8"
+    },
+    {
+      "at": "0x113da1",
+      "mnemonic": "call",
+      "operands": "0x694800",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "generic response parsing call"
+    },
+    {
+      "at": "0x113da6",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unconditionally replaces parse return AL with 1 after normal return"
+    },
+    {
+      "at": "0x694865",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clears destination message before parse"
+    },
+    {
+      "at": "0x694870",
+      "mnemonic": "call",
+      "operands": "0x694240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "generic parse and initialized-field validation"
+    },
+    {
+      "at": "0x694876",
+      "mnemonic": "and",
+      "operands": "al, byte ptr [rbp - 0x34]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combines result with complete-buffer flag"
+    },
+    {
+      "at": "0x694884",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returns saved parse result"
+    },
+    {
+      "at": "0x694269",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls concrete parser at table +0x38"
+    },
+    {
+      "at": "0x69426e",
+      "mnemonic": "je",
+      "operands": "0x694536",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false parser result goes to false return"
+    },
+    {
+      "at": "0x69427a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls required-field validator at table +0x20"
+    },
+    {
+      "at": "0x694536",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false return after parse/required-field failure"
+    },
+    {
+      "at": "0x2f035a6",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 0x18], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reused item branch increments actual length before parsing item"
+    },
+    {
+      "at": "0x2f03609",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 0x18], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "new item branch increments actual length before parsing item"
+    },
+    {
+      "at": "0x2f0360c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + rcx*8], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores new item pointer before parsing"
+    },
+    {
+      "at": "0x2f03668",
+      "mnemonic": "call",
+      "operands": "0x2f02810",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "parses the appended item"
+    },
+    {
+      "at": "0x2f0366f",
+      "mnemonic": "je",
+      "operands": "0x2f036cc",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item parser false branches to outer false"
+    },
+    {
+      "at": "0x2f036cc",
+      "mnemonic": "xor",
+      "operands": "r13d, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer parser false return without rollback in this exit"
+    },
+    {
+      "at": "0x35e27b",
+      "mnemonic": "call",
+      "operands": "0x10680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "task map node already removed before response parsing"
+    },
+    {
+      "at": "0x35e306",
+      "mnemonic": "call",
+      "operands": "0x694800",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "parses outer response envelope"
+    },
+    {
+      "at": "0x35e312",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tests envelope parse result"
+    },
+    {
+      "at": "0x35e314",
+      "mnemonic": "je",
+      "operands": "0x35e394",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "failure enters logging/cleanup path"
+    },
+    {
+      "at": "0x35e394",
+      "mnemonic": "test",
+      "operands": "ecx, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "failure path tests existing callback statuses; does not assign a new parser error"
+    },
+    {
+      "at": "0x35e396",
+      "mnemonic": "jne",
+      "operands": "0x35e5e7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing nonzero statuses skip to envelope cleanup"
+    },
+    {
+      "at": "0x35e3a8",
+      "mnemonic": "je",
+      "operands": "0x35e5e7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging-disabled parse failure skips to cleanup"
+    },
+    {
+      "at": "0x35e587",
+      "mnemonic": "test",
+      "operands": "al, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "envelope field presence check for inner payload"
+    },
+    {
+      "at": "0x35e589",
+      "mnemonic": "je",
+      "operands": "0x35e5e7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing payload skips parsing"
+    },
+    {
+      "at": "0x35e592",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "inner payload must be nonempty"
+    },
+    {
+      "at": "0x35e597",
+      "mnemonic": "je",
+      "operands": "0x35e5e7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "empty payload skips parsing"
+    },
+    {
+      "at": "0x35e5da",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls wrapper parser"
+    },
+    {
+      "at": "0x35e5de",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "next action is temporary buffer cleanup, without AL test"
+    },
+    {
+      "at": "0x35e5f3",
+      "mnemonic": "cmp",
+      "operands": "r13d, -0xd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing status normalization begins after envelope cleanup"
+    },
+    {
+      "at": "0x35e655",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal completion callback still reached with current status values"
+    },
+    {
+      "at": "0x3a6c58f",
+      "mnemonic": "call",
+      "operands": "0x2f038a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copies response object independent of parser boolean"
+    },
+    {
+      "at": "0x3a6c647",
+      "mnemonic": "call",
+      "operands": "0x3a6c750",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "settles result through promise helper"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The generic parser can return false; the wrapper normal-return path replaces that result with true, and the service also does not test the wrapper return.",
+    "Envelope parse failure has a diagnostic/cleanup path without synthesizing a parser status. Missing or empty inner payload skips the wrapper parser. These observations are local; no malformed network response was injected or reproduced.",
+    "Outer parsing may retain appended or partly populated items on a false return; it is not an all-or-nothing response transaction.",
+    "Do not invent a parse_ok runtime flag from callback completion, initialized/default object values, repeated-item presence or an all-zero status pair.",
+    "Until an observable valid-parse and structural/correlation contract exists, failure or missing proof stays unknown and must not trigger automatic retry."
+  ]
+}

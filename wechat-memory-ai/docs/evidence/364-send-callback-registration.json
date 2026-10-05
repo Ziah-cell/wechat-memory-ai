@@ -1,0 +1,500 @@
+{
+  "checked_at_utc": "2026-10-05T14:43:09.308113+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x356200",
+      "end": "0x3566da",
+      "role_inference": "construct primary service, callback proxy and STN manager; registers proxy",
+      "instruction_count": 321,
+      "disk_range_sha256": "f14327a150d49046e7c1ea8c7a4362be6caf26e1f69158f9d822634caaf6c1b6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xdf4130",
+      "end": "0xdf42c9",
+      "role_inference": "mars::stn::SetCallback lookup and setter",
+      "instruction_count": 97,
+      "disk_range_sha256": "3940860c69ae4cedef15d683992b90b8c5641e29c71686c09a54987ab3734c3a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xde89d0",
+      "end": "0xde8a48",
+      "role_inference": "create or obtain callback bridge under lock",
+      "instruction_count": 39,
+      "disk_range_sha256": "2347e4c6363d8f1a89e1cf27bcc26b1e9e57a903f6b0e654073ed8435061b4be",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x28958d0",
+      "end": "0x28959a6",
+      "role_inference": "StnCallbackBridge::SetCallback stores callback proxy in bridge +8",
+      "instruction_count": 47,
+      "disk_range_sha256": "1bd9c125a0c91c703067b50155c31124a5008febd96e0cdfb34669163cf67fc3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xde9710",
+      "end": "0xde98de",
+      "role_inference": "StnManager::OnTaskEnd invokes installed bridge table +0x48",
+      "instruction_count": 106,
+      "disk_range_sha256": "17bc99f946d9c79ec88a8f3c9da067eb7e4155a4f117774a7d0a9ae249eec1bd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2896460",
+      "end": "0x2896712",
+      "role_inference": "StnCallbackBridge::OnTaskEnd invokes callback proxy table +0x40",
+      "instruction_count": 171,
+      "disk_range_sha256": "9c92dd916661d7a8bc7835c3896c4feb65a2add1d9c95cefa43add307a9d7aca",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35dfe0",
+      "end": "0x35e6a4",
+      "role_inference": "primary service task completion handler",
+      "instruction_count": 405,
+      "disk_range_sha256": "44dfd589b1a5eb186afe50b2a7ff5aa2f6cff308ba8f36f51ecc2f3a47e7d0dc",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xddf5d0",
+      "size": 18,
+      "anchor": "direct call at service construction 0x35632e",
+      "instructions": [
+        {
+          "at": "0xddf5d0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0xddf5d3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x834bfee]"
+        },
+        {
+          "at": "0xddf5da",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0xddf5dd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0xddf5e1",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xde89c0",
+      "size": 9,
+      "anchor": "direct call from SetCallback at 0xdf41d7",
+      "instructions": [
+        {
+          "at": "0xde89c0",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 0x50], rdx"
+        },
+        {
+          "at": "0xde89c4",
+          "mnemonic": "jmp",
+          "operands": "0xde89d0"
+        }
+      ]
+    },
+    {
+      "rva": "0x28958c0",
+      "size": 14,
+      "anchor": "direct call from bridge factory at 0xde8a13",
+      "instructions": [
+        {
+          "at": "0x28958c0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x28958c3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x6c5a30e]"
+        },
+        {
+          "at": "0x28958ca",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x28958cd",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x5ccf10",
+      "size": 11,
+      "anchor": "callback proxy table 0x912b5c8 +0x40",
+      "instructions": [
+        {
+          "at": "0x5ccf10",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x5ccf14",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx]"
+        },
+        {
+          "at": "0x5ccf17",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 8]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x35632e",
+      "kind": "call",
+      "to": "0xddf5d0"
+    },
+    {
+      "at": "0x3564ad",
+      "kind": "call",
+      "to": "0xdf4130"
+    },
+    {
+      "at": "0xdf41d7",
+      "kind": "call",
+      "to": "0xde89c0"
+    },
+    {
+      "at": "0xde8a13",
+      "kind": "call",
+      "to": "0x28958c0"
+    },
+    {
+      "at": "0xde89c4",
+      "kind": "jmp",
+      "to": "0xde89d0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x912b5c8",
+      "role_inference": "callback proxy",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x40",
+          "target": "0x5ccf10"
+        }
+      ]
+    },
+    {
+      "rva": "0x94efbd8",
+      "role_inference": "STN callback bridge",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x28958d0"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x2896460"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5338",
+      "role_inference": "primary service completion handler",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x35dfe0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x356309",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 8], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "saves primary object pointer; later RSI loaded from this slot"
+    },
+    {
+      "at": "0x356327",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbp - 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads primary object as proxy capture source"
+    },
+    {
+      "at": "0x35632e",
+      "mnemonic": "call",
+      "operands": "0xddf5d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructs callback proxy with primary service pointer"
+    },
+    {
+      "at": "0x356338",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores proxy as service +0x30"
+    },
+    {
+      "at": "0xddf5d3",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x834bfee]",
+      "rip_targets": [
+        "0x912b5c8"
+      ],
+      "public_static_strings": [],
+      "observation": "sets proxy table"
+    },
+    {
+      "at": "0xddf5dd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "captures primary service at proxy +8"
+    },
+    {
+      "at": "0x3564a9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads proxy for SetCallback registration"
+    },
+    {
+      "at": "0x3564ad",
+      "mnemonic": "call",
+      "operands": "0xdf4130",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls public STN SetCallback wrapper"
+    },
+    {
+      "at": "0xdf41d4",
+      "mnemonic": "mov",
+      "operands": "rdx, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "passes same proxy pointer to manager setter"
+    },
+    {
+      "at": "0xdf41d7",
+      "mnemonic": "call",
+      "operands": "0xde89c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls manager callback setter"
+    },
+    {
+      "at": "0xde89c0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x50], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores proxy in manager +0x50"
+    },
+    {
+      "at": "0xde89c4",
+      "mnemonic": "jmp",
+      "operands": "0xde89d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ensures callback bridge exists"
+    },
+    {
+      "at": "0xde8a13",
+      "mnemonic": "call",
+      "operands": "0x28958c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructs default callback bridge on null branch"
+    },
+    {
+      "at": "0x28958c3",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x6c5a30e]",
+      "rip_targets": [
+        "0x94efbd8"
+      ],
+      "public_static_strings": [],
+      "observation": "default bridge table assignment"
+    },
+    {
+      "at": "0xde8a1d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x58], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores bridge in manager +0x58"
+    },
+    {
+      "at": "0xde8a21",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads manager callback proxy"
+    },
+    {
+      "at": "0xde8a28",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "bridge table +8 registers proxy"
+    },
+    {
+      "at": "0x2895996",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 8], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "bridge stores proxy at +8"
+    },
+    {
+      "at": "0xde9752",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8342e90]",
+      "rip_targets": [
+        "0x912c5e9"
+      ],
+      "public_static_strings": [
+        "mars::stn::StnManager::OnTaskEnd"
+      ],
+      "observation": "public StnManager::OnTaskEnd diagnostic name"
+    },
+    {
+      "at": "0xde97b9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r14 + 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads manager bridge +0x58"
+    },
+    {
+      "at": "0xde97e8",
+      "mnemonic": "mov",
+      "operands": "r10, qword ptr [r10 + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads bridge OnTaskEnd at table +0x48"
+    },
+    {
+      "at": "0xde9800",
+      "mnemonic": "mov",
+      "operands": "edx, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserves task key EDX"
+    },
+    {
+      "at": "0xde9808",
+      "mnemonic": "call",
+      "operands": "r10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invokes bridge"
+    },
+    {
+      "at": "0x28964a6",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6c599ad]",
+      "rip_targets": [
+        "0x94efe5a"
+      ],
+      "public_static_strings": [
+        "virtual mars::stn::StnCallbackBridge::OnTaskEnd"
+      ],
+      "observation": "public StnCallbackBridge::OnTaskEnd diagnostic name"
+    },
+    {
+      "at": "0x2896681",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads callback proxy from bridge +8"
+    },
+    {
+      "at": "0x2896688",
+      "mnemonic": "mov",
+      "operands": "r10, qword ptr [r9 + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads proxy table +0x40"
+    },
+    {
+      "at": "0x28966a3",
+      "mnemonic": "mov",
+      "operands": "edx, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserves task key EDX"
+    },
+    {
+      "at": "0x28966ab",
+      "mnemonic": "call",
+      "operands": "r10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invokes proxy"
+    },
+    {
+      "at": "0x5ccf10",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "proxy loads captured primary service"
+    },
+    {
+      "at": "0x5ccf17",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tail-forwards to primary service table +8"
+    },
+    {
+      "at": "0x35e00d",
+      "mnemonic": "mov",
+      "operands": "ebx, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "handler preserves incoming task key for local map lookup"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The selected default constructor/registration branch statically connects StnManager::OnTaskEnd -> default bridge -> captured primary service 0x35dfe0, including task-key forwarding.",
+    "The bridge factory has a preexisting-bridge branch. Runtime replacement, initialization failure, lifetime, network-core-to-OnTaskEnd dispatch and scheduling are not certified.",
+    "These are disk initial tables and code only; no live object or callback invocation was observed."
+  ]
+}
