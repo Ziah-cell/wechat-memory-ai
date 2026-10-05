@@ -1,0 +1,18 @@
+{
+  "phase": "stopped",
+  "stop_reason": "native_reader_timeout",
+  "snapshots": 24569,
+  "minimized_snapshots": 24505,
+  "filtered_unknown_texts": 1,
+  "keep_awake_request_active": false,
+  "checked_at_utc": "2026-10-05T09:44:28.676719+00:00",
+  "scope": "Saved listener status file only",
+  "last_observed_window_minimized": true,
+  "current_window_verified": false,
+  "listener_restarted": false,
+  "window_operated": false,
+  "credentials_read": false,
+  "client_modified": false,
+  "real_messages_sent": 0,
+  "analysis_dependency_added": "task-local capstone wheel; not a WeChat framework"
+}

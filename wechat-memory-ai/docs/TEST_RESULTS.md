@@ -1,5 +1,11 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## .50 离线反汇编验证（2026-10-05）
+
+[349](evidence/349-offline-disassembler-tool.json)固定隔离Capstone依赖；[350](evidence/350-decoded-send-anchor-references.json)记录76原始位移候选中的41解码引用、旧地址的指令边界；[351](evidence/351-send-candidate-callgraph.json)记录28解码区间、28直接边、6有另外锚点的叶函数候选、3类型表、16条指令观察与7字段关系。是静态研究，不是运行兼容或发送测试。
+
+[353](evidence/353-send-disassembly-validation.json)重新校验模块/工具哈希、28区间和28边、类型表、SIMD位移的单独算术复核、字段证据及文档链接。未跑产品回归/原生测试、独立人员审查或微信框架；旧369项结果不扩张为本轮结果。工具分析库在临时目录执行过，不能笼统声称本轮没有执行任何第三方代码；Weixin.dll未加载、微信进程未读写。[352](evidence/352-send-disassembly-checkpoint.json)保存监听仍停止，未操作窗口或发送。详细证据与未解析间接调用见[报告](SEND_COMPATIBILITY_4_1_15_50.md)。
+
 ## .50 磁盘静态兼容性核查（2026-10-05）
 
 [343](evidence/343-disk-client-pe-compatibility.json)记录本机EXE/DLL版本、哈希、PE节与旧RVA对照；[344](evidence/344-send-compat-public-refs.json)记录公开refs及额外固定头文件；[345](evidence/345-disk-send-literal-anchors.json)是公开字面量与有限字节扫描结果，未找到可调用入口。[346](evidence/346-disk-pe-crosscheck.json)通过第二种实现复核两个哈希/版本与10个代码位置的异常表区间，同一执行者，不是独立人员复审或实机运行测试。

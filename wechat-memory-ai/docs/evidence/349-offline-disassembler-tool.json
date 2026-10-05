@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-05T09:29:12.586079+00:00",
+  "name": "capstone",
+  "version": "5.0.9",
+  "wheel": "capstone-5.0.9-py3-none-win_amd64.whl",
+  "url": "https://files.pythonhosted.org/packages/50/e6/6f06fdb6a9ed32b2f7cd9c036b92d5324112c3ef7080f2c71efc367d40dd/capstone-5.0.9-py3-none-win_amd64.whl",
+  "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0",
+  "size": 1273459,
+  "installation": "wheel unpacked into ignored task-local data/send-disasm-20261005/deps; no global environment change",
+  "purpose": "decode disk byte arrays only; Weixin.dll never loaded as a library",
+  "official_docs": [
+    "https://www.capstone-engine.org/lang_python.html",
+    "https://www.capstone-engine.org/download.html"
+  ],
+  "distribution_version": "5.0.9",
+  "binding_version": "5.0.7",
+  "native_api_version": [
+    5,
+    0,
+    1280
+  ],
+  "analysis_decoder_executed": true,
+  "third_party_wechat_framework_installed": false,
+  "weixin_dll_loaded": false,
+  "version_note": "Wheel distribution is 5.0.9; its binding reports 5.0.7 and native API reports 5.0. Both are recorded, not treated as equal.",
+  "files": [
+    {
+      "relative_file": "capstone/__init__.py",
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f"
+    },
+    {
+      "relative_file": "capstone/lib/capstone.dll",
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    }
+  ]
+}

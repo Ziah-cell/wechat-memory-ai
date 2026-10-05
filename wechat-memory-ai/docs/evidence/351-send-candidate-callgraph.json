@@ -1,0 +1,966 @@
+{
+  "checked_at_utc": "2026-10-05T09:44:28.676719+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Static candidate subgraph and layout observations, not an executable adapter",
+  "unwind_anchored_nodes": [
+    {
+      "rva": "0x2f02010",
+      "end_rva": "0x2f02065",
+      "role_inference": "SendMsgRequestNew copy construction",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 85,
+      "disk_range_sha256": "71a800f59c7b7ccabdba25adef9e178642df0728d1b6ce53ed849b16e31b682c"
+    },
+    {
+      "rva": "0x2f020a0",
+      "end_rva": "0x2f0212b",
+      "role_inference": "outer container merge",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 139,
+      "disk_range_sha256": "129984cb8c083785845a1f00ba58ab524258b045a684df7b248a42d09b26068c"
+    },
+    {
+      "rva": "0x2f080a0",
+      "end_rva": "0x2f0817a",
+      "role_inference": "repeated element merge",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 218,
+      "disk_range_sha256": "50b0d03f17b1c7b958e30ed6029bdf69e3f4ffd45bf0b52a2ac018747b86d65e"
+    },
+    {
+      "rva": "0x2f01360",
+      "end_rva": "0x2f015f2",
+      "role_inference": "MicroMsgRequestNew element copy",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 658,
+      "disk_range_sha256": "76d78d0a9170747b1e6d55ae2dd34fa527a1485c7e404d5eb12966e090de1c01"
+    },
+    {
+      "rva": "0x2f02210",
+      "end_rva": "0x2f02488",
+      "role_inference": "outer parser allocating nested elements",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 632,
+      "disk_range_sha256": "1572cec7fac0186c403531133d26322d79da4fa015153907574b6a767fd5ac57"
+    },
+    {
+      "rva": "0x2f01850",
+      "end_rva": "0x2f01cc3",
+      "role_inference": "nested element parser",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 1139,
+      "disk_range_sha256": "529dcf2dec86cc93420be6c50a1564e831aecdf18a4b37d7345b95aad29a1354"
+    },
+    {
+      "rva": "0x2f01d10",
+      "end_rva": "0x2f01e0d",
+      "role_inference": "element field-number serialization",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 253,
+      "disk_range_sha256": "2d9bde0819bcd7a7f8318dc96babda5a2ce48a0df9d4fb225123eb4b11562a9a"
+    },
+    {
+      "rva": "0x2f02490",
+      "end_rva": "0x2f02514",
+      "role_inference": "outer encoded size calculation",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 132,
+      "disk_range_sha256": "347fb9eb1f34bb3c799e484c451d43ecb4573c8a43ce1087a91c19d2cb0c6a84"
+    },
+    {
+      "rva": "0x2f01e10",
+      "end_rva": "0x2f01f94",
+      "role_inference": "element encoded size calculation",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 388,
+      "disk_range_sha256": "0169dbe28d9604bc00093e1a29519b40cc530962795f3091ba8182ddac343ffa"
+    },
+    {
+      "rva": "0x2f02530",
+      "end_rva": "0x2f0255f",
+      "role_inference": "outer clear then merge",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 47,
+      "disk_range_sha256": "3592509dc500e616d62883f930e6f0ee3faefee77af485981daec40a59a656e9"
+    },
+    {
+      "rva": "0x2f01750",
+      "end_rva": "0x2f01793",
+      "role_inference": "element allocate/init 0x38",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 67,
+      "disk_range_sha256": "268859853e95e0bf42660281e110b22273b9ae5e29a4dacfb76953156bbb3e4e"
+    },
+    {
+      "rva": "0x2f021d0",
+      "end_rva": "0x2f0220a",
+      "role_inference": "outer allocate/init 0x30",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 58,
+      "disk_range_sha256": "bbbe2b06641014d47c5a73fe20c25a5b78f69aafff5510c27d81bbe9daae3e74"
+    },
+    {
+      "rva": "0x2f01fc0",
+      "end_rva": "0x2f0200f",
+      "role_inference": "MicroMsgRequestNew type-name materialization",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 79,
+      "disk_range_sha256": "ae38183370266b3f39b8e8446d972b571da7110bcd1799239463eeaea6476208"
+    },
+    {
+      "rva": "0x2f02560",
+      "end_rva": "0x2f025af",
+      "role_inference": "SendMsgRequestNew type-name materialization",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 79,
+      "disk_range_sha256": "d9cb5ac17d72af405d2592ef771f73ba1afe54d831176bf7540da0e5f07bc50e"
+    },
+    {
+      "rva": "0x2f03950",
+      "end_rva": "0x2f0399f",
+      "role_inference": "SendMsgResponseNew type-name materialization",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 79,
+      "disk_range_sha256": "a7ff7c3f14968e225edb1684d25a3ee7a02e86d0933c44c63e262c870dbd1621"
+    },
+    {
+      "rva": "0x3a65aa0",
+      "end_rva": "0x3a66ff8",
+      "role_inference": "one-element request construction candidate",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 5464,
+      "disk_range_sha256": "98356c1701de4d95febc1fa75ca5fcd2247c32ef8d205fafb7b2728375dfa1e3"
+    },
+    {
+      "rva": "0x3a675c0",
+      "end_rva": "0x3a68075",
+      "role_inference": "CoCgiSendRequest-related wrapper candidate",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 2741,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf"
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end_rva": "0x3a6a7cf",
+      "role_inference": "service/callback wrapper with unresolved indirect dispatch",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 1295,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3"
+    },
+    {
+      "rva": "0x3a6ace0",
+      "end_rva": "0x3a6aeae",
+      "role_inference": "captured outer request copy",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 462,
+      "disk_range_sha256": "59f09cffdd2d0a2fe18da65b9ac6b5b0185dbb84f5ee18f82866efc9f20f6621"
+    },
+    {
+      "rva": "0x3a6af10",
+      "end_rva": "0x3a6af98",
+      "role_inference": "callback object construction",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 136,
+      "disk_range_sha256": "674f1b0c611e5748d43640bd5841f33ba05a1a105a07d39c10cfbc3737733451"
+    },
+    {
+      "rva": "0x3a6b270",
+      "end_rva": "0x3a6b42a",
+      "role_inference": "callback body candidate",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 442,
+      "disk_range_sha256": "41cbb41fc992cf6356b28b5a83662a5a482c24e46c33414632aa3ff69a7aa7e0"
+    },
+    {
+      "rva": "0x3a6b9e0",
+      "end_rva": "0x3a6ba52",
+      "role_inference": "callback invocation wrapper",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 114,
+      "disk_range_sha256": "31af5129f94cfdea9f397267256a92299d38c43b9de0e2d0f1e1142324751c5a"
+    },
+    {
+      "rva": "0x3a6ba70",
+      "end_rva": "0x3a6bda5",
+      "role_inference": "request scheduling wrapper candidate",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 821,
+      "disk_range_sha256": "1510503327910c5aa3fd780905475b1221f9f46b6a0c5e0be81278ab41de222a"
+    },
+    {
+      "rva": "0x3a6beb0",
+      "end_rva": "0x3a6c13c",
+      "role_inference": "newsendmsg request packaging and dispatch candidate",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 652,
+      "disk_range_sha256": "60064633ee6e3b627d9ece74146fdde505128ce7fbd3f8ce2f7c707d7854b404"
+    },
+    {
+      "rva": "0x3a6c1f0",
+      "end_rva": "0x3a6c32d",
+      "role_inference": "request/response wrapper construction",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 317,
+      "disk_range_sha256": "d35b5123bfd6c35d2ef166d86b78eca17aac91bb9dc749c7187fbcbb15bf9e5c"
+    },
+    {
+      "rva": "0x68f7c0",
+      "end_rva": "0x68fdb1",
+      "role_inference": "shared downstream helper; role not established",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 1521,
+      "disk_range_sha256": "c3c9ab51d0edbef48e0f5d605a4acfcdeb145084e57b435651a3602604ba1dec"
+    },
+    {
+      "rva": "0x3a72550",
+      "end_rva": "0x3a8255b",
+      "role_inference": "additional caller, not fully semantically analyzed",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 65547,
+      "disk_range_sha256": "3e97b3f40ca09a95d33de8dbc36df36a1afc2a765856163c335109bf44e4cd53"
+    },
+    {
+      "rva": "0x5ae0380",
+      "end_rva": "0x5ae1b5d",
+      "role_inference": "additional caller, not fully semantically analyzed",
+      "boundary_anchor": "RUNTIME_FUNCTION begin",
+      "fully_decoded": true,
+      "size_bytes": 6109,
+      "disk_range_sha256": "f4113b45f1c704ebc8e2259010bea52220462a02bed9454cccb2b8eb628c8e46"
+    }
+  ],
+  "direct_edges": [
+    {
+      "from": "0x2f02010",
+      "at": "0x2f02055",
+      "to": "0x2f020a0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x2f020a0",
+      "at": "0x2f0210d",
+      "to": "0x2f080a0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x2f080a0",
+      "at": "0x2f080f6",
+      "to": "0x2f01360",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x2f02210",
+      "at": "0x2f0240a",
+      "to": "0x2f01850",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x2f02490",
+      "at": "0x2f024e8",
+      "to": "0x2f01e10",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x2f02530",
+      "at": "0x2f02553",
+      "to": "0x2f020a0",
+      "kind": "jmp",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a65aa0",
+      "at": "0x3a65b7c",
+      "to": "0x2f00ec0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a65aa0",
+      "at": "0x3a65bf5",
+      "to": "0x2f00e80",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a65aa0",
+      "at": "0x3a66023",
+      "to": "0x3a675c0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a675c0",
+      "at": "0x3a67755",
+      "to": "0x2f02010",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a675c0",
+      "at": "0x3a67943",
+      "to": "0x3a6a2c0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6a2c0",
+      "at": "0x3a6a3e4",
+      "to": "0x3a6ace0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6a2c0",
+      "at": "0x3a6a3f2",
+      "to": "0x3a6af10",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6ace0",
+      "at": "0x3a6ad01",
+      "to": "0x2f02010",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6af10",
+      "at": "0x3a6af7f",
+      "to": "0x3a6ace0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6b9e0",
+      "at": "0x3a6ba26",
+      "to": "0x3a6ba70",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6ba70",
+      "at": "0x3a6bc02",
+      "to": "0x3a6beb0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6beb0",
+      "at": "0x3a6bfa4",
+      "to": "0x3a6c1f0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6beb0",
+      "at": "0x3a6bfbf",
+      "to": "0x2f02530",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6beb0",
+      "at": "0x3a6c0c6",
+      "to": "0x68f7c0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6c1f0",
+      "at": "0x3a6c280",
+      "to": "0x2f00ec0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a6c1f0",
+      "at": "0x3a6c295",
+      "to": "0x2f00ef0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a72550",
+      "at": "0x3a77ae5",
+      "to": "0x2f00ec0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a72550",
+      "at": "0x3a7810b",
+      "to": "0x2f00e80",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x3a72550",
+      "at": "0x3a799a8",
+      "to": "0x3a675c0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x5ae0380",
+      "at": "0x5ae0461",
+      "to": "0x2f00ec0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x5ae0380",
+      "at": "0x5ae0653",
+      "to": "0x2f00e80",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    },
+    {
+      "from": "0x5ae0380",
+      "at": "0x5ae0a05",
+      "to": "0x3a675c0",
+      "kind": "call",
+      "instruction_boundary_checked": true
+    }
+  ],
+  "leaf_candidates": [
+    {
+      "rva": "0x2f00ec0",
+      "role_inference": "outer default initialization",
+      "size_decoded": 43,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x2f00ec0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x2f00ec3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x668f31e]"
+        },
+        {
+          "at": "0x2f00eca",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x2f00ecd",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2f00ed0",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2f00ed4",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x18], 0"
+        },
+        {
+          "at": "0x2f00edb",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], 0"
+        },
+        {
+          "at": "0x2f00ee3",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x28], 0"
+        },
+        {
+          "at": "0x2f00eea",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x2f00e80",
+      "role_inference": "element default initialization",
+      "size_decoded": 52,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x2f00e80",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x2f00e83",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x668f2ce]"
+        },
+        {
+          "at": "0x2f00e8a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x2f00e8d",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], 0"
+        },
+        {
+          "at": "0x2f00e95",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x8c656d4]"
+        },
+        {
+          "at": "0x2f00e9c",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x10], rcx"
+        },
+        {
+          "at": "0x2f00ea0",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], 0"
+        },
+        {
+          "at": "0x2f00ea8",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], rcx"
+        },
+        {
+          "at": "0x2f00eac",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2f00eaf",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x28], xmm0"
+        },
+        {
+          "at": "0x2f00eb3",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x2f00ef0",
+      "role_inference": "response default initialization",
+      "size_decoded": 40,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x2f00ef0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x2f00ef3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x668f40e]"
+        },
+        {
+          "at": "0x2f00efa",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x2f00efd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x28], 0"
+        },
+        {
+          "at": "0x2f00f05",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x30], 0"
+        },
+        {
+          "at": "0x2f00f0c",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2f00f0f",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2f00f13",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x14], xmm0"
+        },
+        {
+          "at": "0x2f00f17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x113db0",
+      "role_inference": "request member address accessor",
+      "size_decoded": 8,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x113db0",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0xa8]"
+        },
+        {
+          "at": "0x113db7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x113dc0",
+      "role_inference": "response member address accessor",
+      "size_decoded": 8,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x113dc0",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0xd8]"
+        },
+        {
+          "at": "0x113dc7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3a6b120",
+      "role_inference": "callback adjustment thunk",
+      "size_decoded": 9,
+      "boundary_anchor": "validated direct call target or typed vtable pointer; no unwind entry",
+      "instructions": [
+        {
+          "at": "0x3a6b120",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x3a6b124",
+          "mnemonic": "jmp",
+          "operands": "0x3a6b270"
+        }
+      ]
+    }
+  ],
+  "typed_tables": [
+    {
+      "rva": "0x9590158",
+      "type_name": "micromsg.MicroMsgRequestNew",
+      "type_name_materializer": "0x2f01fc0",
+      "slot_rvas": [
+        "0x2f081e0",
+        "0x2f01fc0",
+        "0x2f01750",
+        "0x2f017a0",
+        "0x2f01fb0",
+        "0x6941e0",
+        "0x2f01fa0",
+        "0x2f01850",
+        "0x2f01e10",
+        "0x2f01d10",
+        "0x6948d0",
+        "0x58b760"
+      ],
+      "association": "table +8 points to function materializing the exact public type name; constructor writes table to object +0"
+    },
+    {
+      "rva": "0x95901e8",
+      "type_name": "micromsg.SendMsgRequestNew",
+      "type_name_materializer": "0x2f02560",
+      "slot_rvas": [
+        "0x2f08220",
+        "0x2f02560",
+        "0x2f021d0",
+        "0xf25ed0",
+        "0xf26280",
+        "0x6941e0",
+        "0x2f02520",
+        "0x2f02210",
+        "0x2f02490",
+        "0xf26180",
+        "0x6948d0",
+        "0x515910"
+      ],
+      "association": "table +8 points to function materializing the exact public type name; constructor writes table to object +0"
+    },
+    {
+      "rva": "0x9590308",
+      "type_name": "micromsg.SendMsgResponseNew",
+      "type_name_materializer": "0x2f03950",
+      "slot_rvas": [
+        "0x2f08310",
+        "0x2f03950",
+        "0x2f03320",
+        "0x199e2e0",
+        "0x2f038d0",
+        "0x6941e0",
+        "0x2f03890",
+        "0x2f03360",
+        "0x2f037c0",
+        "0x2f03730",
+        "0x6948d0",
+        "0x541e80"
+      ],
+      "association": "table +8 points to function materializing the exact public type name; constructor writes table to object +0"
+    }
+  ],
+  "auxiliary_tables": [
+    {
+      "rva": "0x96d8ca8",
+      "role_inference": "request wrapper table",
+      "slot_rvas": [
+        "0x3a6c3c0",
+        "0x48e670",
+        "0x113d70",
+        "0x113db0",
+        "0x113dc0"
+      ]
+    },
+    {
+      "rva": "0x96d8b68",
+      "role_inference": "callback object table",
+      "slot_rvas": [
+        "0x3a6b110",
+        "0xaf10",
+        "0x3a6b120",
+        "0x3a6b130",
+        "0x3a6b140",
+        "0x9ec0"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a6c280",
+      "mnemonic": "call",
+      "operands": "0x2f00ec0",
+      "observation": "wrapper +0xa8 gets outer request initialization"
+    },
+    {
+      "at": "0x3a6c295",
+      "mnemonic": "call",
+      "operands": "0x2f00ef0",
+      "observation": "wrapper +0xd8 gets response initialization"
+    },
+    {
+      "at": "0x113db0",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0xa8]",
+      "observation": "request accessor returns member address"
+    },
+    {
+      "at": "0x113dc0",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0xd8]",
+      "observation": "response accessor returns member address"
+    },
+    {
+      "at": "0x3a6bfb5",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "observation": "wrapper request accessor used before outer clear/merge"
+    },
+    {
+      "at": "0x3a6bfbf",
+      "mnemonic": "call",
+      "operands": "0x2f02530",
+      "observation": "copy into embedded request"
+    },
+    {
+      "at": "0x3a6c0b2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "observation": "service indirect call; implementation and thread contract unresolved"
+    },
+    {
+      "at": "0x3a6c0cc",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [r12 + 8]",
+      "observation": "return source is wrapper 32-bit field +8"
+    },
+    {
+      "at": "0x3a6c125",
+      "mnemonic": "mov",
+      "operands": "eax, esi",
+      "observation": "returns saved +8 field, not an observed delivery receipt"
+    },
+    {
+      "at": "0x3a6a473",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "observation": "indirect service dispatch in other wrapper, not resolved to packaging path"
+    },
+    {
+      "at": "0x3a65c32",
+      "mnemonic": "lea",
+      "operands": "r9, [rdi + 0x180]",
+      "observation": "upstream string B is copied into element field 2 at +0x10"
+    },
+    {
+      "at": "0x3a65d94",
+      "mnemonic": "lea",
+      "operands": "r9, [r12 + 0x38]",
+      "observation": "upstream string A is copied into nested wrapper of element field 1"
+    },
+    {
+      "at": "0x3a65edf",
+      "mnemonic": "lea",
+      "operands": "r9, [r12 + 0x1c0]",
+      "observation": "upstream string C is copied into element field 6 at +0x20"
+    },
+    {
+      "at": "0x3a65e36",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r13 + 0x18], eax",
+      "observation": "element field 3 populated from upstream +0xc"
+    },
+    {
+      "at": "0x3a65e49",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r13 + 0x1c], eax",
+      "observation": "element field 4 populated from upstream +0x164"
+    },
+    {
+      "at": "0x3a65e79",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r13 + 0x28], eax",
+      "observation": "element field 5 populated from helper result; not authenticated message ID"
+    }
+  ],
+  "element_presence_bits_offset": "0x34",
+  "element_serializer_fields": [
+    {
+      "protobuf_field": 1,
+      "element_offset": "0x8",
+      "presence_bit": "0x1",
+      "load_at": "0x2f01d4e",
+      "field_number_at": "0x2f01d62",
+      "serialization_call_at": "0x2f01d6a",
+      "presence_test_at": "0x2f01d1f",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 2,
+      "element_offset": "0x10",
+      "presence_bit": "0x2",
+      "load_at": "0x2f01d76",
+      "field_number_at": "0x2f01d7a",
+      "serialization_call_at": "0x2f01d82",
+      "presence_test_at": "0x2f01d23",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 3,
+      "element_offset": "0x18",
+      "presence_bit": "0x4",
+      "load_at": "0x2f01d8e",
+      "field_number_at": "0x2f01d91",
+      "serialization_call_at": "0x2f01d99",
+      "presence_test_at": "0x2f01d27",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 4,
+      "element_offset": "0x1c",
+      "presence_bit": "0x8",
+      "load_at": "0x2f01da5",
+      "field_number_at": "0x2f01da8",
+      "serialization_call_at": "0x2f01db0",
+      "presence_test_at": "0x2f01d2b",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 5,
+      "element_offset": "0x28",
+      "presence_bit": "0x10",
+      "load_at": "0x2f01dc0",
+      "field_number_at": "0x2f01dc3",
+      "serialization_call_at": "0x2f01dcb",
+      "presence_test_at": "0x2f01d2f",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 6,
+      "element_offset": "0x20",
+      "presence_bit": "0x20",
+      "load_at": "0x2f01ddb",
+      "field_number_at": "0x2f01ddf",
+      "serialization_call_at": "0x2f01de7",
+      "presence_test_at": "0x2f01d37",
+      "runtime_field_name_verified": false
+    },
+    {
+      "protobuf_field": 7,
+      "element_offset": "0x2c",
+      "presence_bit": "0x40",
+      "load_at": "0x2f01df7",
+      "field_number_at": "0x2f01dfa",
+      "serialization_call_at": "0x2f01e08",
+      "presence_test_at": "0x2f01d3f",
+      "runtime_field_name_verified": false
+    }
+  ],
+  "unresolved_edges": [
+    {
+      "from": "0x3a6a2c0",
+      "to": "0x3a6ba70",
+      "reason": "same request family, but callback/service indirect dispatch not fully resolved; do not render as proven call"
+    },
+    {
+      "from": "0x3a6beb0",
+      "at": "0x3a6c0b2",
+      "reason": "service object/vtable +0x28 target, ownership and thread contract unknown"
+    }
+  ],
+  "not_established": [
+    "runtime recipient/account identity",
+    "semantic field names on this build",
+    "live object acquisition and lifetime",
+    "required coroutine/thread context",
+    "delivery receipt/request correlation",
+    "minimized bidirectional operation"
+  ],
+  "callable_send_entry_verified": false,
+  "framework_installed": false,
+  "client_code_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0
+}

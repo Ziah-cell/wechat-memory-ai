@@ -1,0 +1,118 @@
+{
+  "checked_at_utc": "2026-10-05T09:44:29.698693+00:00",
+  "status": "passed",
+  "scope": "Same-executor static revalidation; no product/native/runtime compatibility testing",
+  "module_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "analysis_wheel_hash_verified": true,
+  "installed_analysis_files_equal_wheel": 2,
+  "unwind_ranges_checked": 28,
+  "direct_edges_with_separate_rel32_math": 28,
+  "rip_references_checked": 41,
+  "simd_references_with_separate_fixed_encoding_math": 15,
+  "type_tables_checked": 3,
+  "auxiliary_tables_checked": 2,
+  "leaf_candidates_with_call_or_table_anchors": 6,
+  "instruction_observations_checked": 16,
+  "element_fields_checked": 7,
+  "old_code_locations_checked": 10,
+  "local_links_checked": 409,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "changed_scope": "documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "analysis_scripts": [
+    {
+      "cache_file": "analyze.py",
+      "sha256": "00eeca1f08dafbabb60266e8a6fa79b28f619ac48c3d21d890cf2f436dacbf4e"
+    },
+    {
+      "cache_file": "inspect_bridge.py",
+      "sha256": "eb3295fe025659432ecfda134aad39216a7a0acf57441348f1c64c5880c3475a"
+    },
+    {
+      "cache_file": "inspect_builders.py",
+      "sha256": "2b7e830ef3a0e1435700867b68519527d13fd55efb83f5ca9bcfa82f877d29d1"
+    },
+    {
+      "cache_file": "inspect_callback.py",
+      "sha256": "aad9bd27186c770d6a79bd9b7e7d1170f1f4666ba767e1c1247060be3cbda6f1"
+    },
+    {
+      "cache_file": "inspect_callback_chain.py",
+      "sha256": "5bbb79798f862844887c48647e5ce81c19966fca059de3450625e978bf729544"
+    },
+    {
+      "cache_file": "inspect_candidates.py",
+      "sha256": "6f684f0ab29ad4c5451a7bd50afea4daa50d7794a3b1cf32f3a7f57979f810a2"
+    },
+    {
+      "cache_file": "inspect_edges.py",
+      "sha256": "e64116ec4642c9eed0ed1e1329c7adc077ad78981deacdad58c45174ba046b4b"
+    },
+    {
+      "cache_file": "inspect_fields.py",
+      "sha256": "6175bce323854b715699208950bcaf5c6c9606444486a7c1ca0789acc4116641"
+    },
+    {
+      "cache_file": "inspect_graph.py",
+      "sha256": "6f1757aaf7490188dec0ada3e22bfca1f1cd39dbea01c2d98341cc9781eb318e"
+    },
+    {
+      "cache_file": "inspect_leaf.py",
+      "sha256": "ace461c56f30109f163a2598add0491bc7fa83da92ec41ac1d2cc36a2fdd59b8"
+    },
+    {
+      "cache_file": "inspect_metadata.py",
+      "sha256": "ff1b1e0f74be2b6fed407d23cb737460f155e2cf1190a34c332fd11594a91290"
+    },
+    {
+      "cache_file": "inspect_nested.py",
+      "sha256": "510e6e6481274fe2522a0d3a5d7f85a5ad1045ce841453cea9e398179074f2fb"
+    },
+    {
+      "cache_file": "pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    },
+    {
+      "cache_file": "prepare_tool.py",
+      "sha256": "ed2e6dd83586fcc9758938e8c231f30f47e0d7dc2f1e58a98dd7cfdcaa068d07"
+    },
+    {
+      "cache_file": "scan_callers.py",
+      "sha256": "2d82b8db18c88d52beeb703a8f5b47453103f4e2d2fc21e63ed12e5e3d0fb4b0"
+    },
+    {
+      "cache_file": "scan_displacements.ps1",
+      "sha256": "c37434435bec7ec44adf1a16f666009a01c64e4bc7c208f62603da919592aea3"
+    },
+    {
+      "cache_file": "validate_displacements.py",
+      "sha256": "b5e9be378bf0bc9f4e2f365253ab703b3c26a302e341779a81b23df0813d5742"
+    },
+    {
+      "cache_file": "verify_evidence.py",
+      "sha256": "cc1f9584b956b2250a2ae1815fdb5f1822da60d4f5979dfa0b56a55c15acd722"
+    },
+    {
+      "cache_file": "write_evidence.py",
+      "sha256": "dbf40b2dbb6b45f9b6ba59ea8cbc2bb39174bd270f8c9205505a8d16509dc857"
+    }
+  ],
+  "limitations": [
+    "Instruction decoding is not runtime reachability or a complete control-flow proof.",
+    "Semantic role labels are static inferences; unresolved indirect edges remain unresolved.",
+    "Recipient/account identity, thread/lifetime/ABI and delivery remain unverified."
+  ]
+}

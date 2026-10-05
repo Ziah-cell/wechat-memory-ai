@@ -1,0 +1,601 @@
+{
+  "checked_at_utc": "2026-10-05T09:32:41.972059+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "raw_candidates": 76,
+  "unowned_candidates": 7,
+  "decoded_matches": [
+    {
+      "at": "0x2f00c22",
+      "target": "0x9590158",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668f52f]",
+      "range_begin": "0x2f00ba0",
+      "range_end": "0x2f00e52",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f00c60",
+      "target": "0x95901e8",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668f581]",
+      "range_begin": "0x2f00ba0",
+      "range_end": "0x2f00e52",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f00c95",
+      "target": "0x9590278",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668f5dc]",
+      "range_begin": "0x2f00ba0",
+      "range_end": "0x2f00e52",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f00cbc",
+      "target": "0x9590308",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668f645]",
+      "range_begin": "0x2f00ba0",
+      "range_end": "0x2f00e52",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f00cee",
+      "target": "0x9590398",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668f6a3]",
+      "range_begin": "0x2f00ba0",
+      "range_end": "0x2f00e52",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0133d",
+      "target": "0x9590138",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668edf4]",
+      "range_begin": "0x2f01310",
+      "range_end": "0x2f0135b",
+      "string": "micromsg.PubKeyInfo",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0175e",
+      "target": "0x9590158",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668e9f3]",
+      "range_begin": "0x2f01750",
+      "range_end": "0x2f01793",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f01fed",
+      "target": "0x95901b8",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668e1c4]",
+      "range_begin": "0x2f01fc0",
+      "range_end": "0x2f0200f",
+      "string": "micromsg.MicroMsgRequestNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f01ff7",
+      "target": "0x95901c3",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668e1c5]",
+      "range_begin": "0x2f01fc0",
+      "range_end": "0x2f0200f",
+      "string": "croMsgRequestNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f02022",
+      "target": "0x95901e8",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668e1bf]",
+      "range_begin": "0x2f02010",
+      "range_end": "0x2f02065",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f02169",
+      "target": "0x95901e8",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668e078]",
+      "range_begin": "0x2f02160",
+      "range_end": "0x2f021c3",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f021de",
+      "target": "0x95901e8",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668e003]",
+      "range_begin": "0x2f021d0",
+      "range_end": "0x2f0220a",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f02370",
+      "target": "0x9590158",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668dde1]",
+      "range_begin": "0x2f02210",
+      "range_end": "0x2f02488",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0258d",
+      "target": "0x9590248",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668dcb4]",
+      "range_begin": "0x2f02560",
+      "range_end": "0x2f025af",
+      "string": "micromsg.SendMsgRequestNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f02597",
+      "target": "0x9590252",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668dcb4]",
+      "range_begin": "0x2f02560",
+      "range_end": "0x2f025af",
+      "string": "endMsgRequestNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0279e",
+      "target": "0x9590278",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668dad3]",
+      "range_begin": "0x2f02790",
+      "range_end": "0x2f027bc",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0304d",
+      "target": "0x95902d8",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668d284]",
+      "range_begin": "0x2f03020",
+      "range_end": "0x2f0306f",
+      "string": "micromsg.MicroMsgResponseNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f03057",
+      "target": "0x95902e4",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668d286]",
+      "range_begin": "0x2f03020",
+      "range_end": "0x2f0306f",
+      "string": "roMsgResponseNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f03102",
+      "target": "0x9590278",
+      "mnemonic": "lea",
+      "operands": "r15, [rip + 0x668d16f]",
+      "range_begin": "0x2f03070",
+      "range_end": "0x2f0320e",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f03299",
+      "target": "0x9590308",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668d068]",
+      "range_begin": "0x2f03290",
+      "range_end": "0x2f03313",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0332e",
+      "target": "0x9590308",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668cfd3]",
+      "range_begin": "0x2f03320",
+      "range_end": "0x2f03357",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f035e5",
+      "target": "0x9590278",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668cc8c]",
+      "range_begin": "0x2f03360",
+      "range_end": "0x2f036e7",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0397d",
+      "target": "0x9590368",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668c9e4]",
+      "range_begin": "0x2f03950",
+      "range_end": "0x2f0399f",
+      "string": "micromsg.SendMsgResponseNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f03987",
+      "target": "0x9590373",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668c9e5]",
+      "range_begin": "0x2f03950",
+      "range_end": "0x2f0399f",
+      "string": "ndMsgResponseNew",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f039b2",
+      "target": "0x9590398",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668c9df]",
+      "range_begin": "0x2f039a0",
+      "range_end": "0x2f03a24",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f043c8",
+      "target": "0x9590398",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x668bfc9]",
+      "range_begin": "0x2f043c0",
+      "range_end": "0x2f043e4",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0470e",
+      "target": "0x9590398",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x668bc83]",
+      "range_begin": "0x2f04700",
+      "range_end": "0x2f04771",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0628d",
+      "target": "0x95903f8",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668a164]",
+      "range_begin": "0x2f06260",
+      "range_end": "0x2f062af",
+      "string": "micromsg.UploadVoiceRequest",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f06297",
+      "target": "0x9590403",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x668a165]",
+      "range_begin": "0x2f06260",
+      "range_end": "0x2f062af",
+      "string": "loadVoiceRequest",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f080cd",
+      "target": "0x9590158",
+      "mnemonic": "lea",
+      "operands": "r14, [rip + 0x6688084]",
+      "range_begin": "0x2f080a0",
+      "range_end": "0x2f0817a",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f081eb",
+      "target": "0x9590158",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6687f66]",
+      "range_begin": "0x2f081e0",
+      "range_end": "0x2f0821a",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0822c",
+      "target": "0x95901e8",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6687fb5]",
+      "range_begin": "0x2f08220",
+      "range_end": "0x2f082a6",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f082bb",
+      "target": "0x9590278",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6687fb6]",
+      "range_begin": "0x2f082b0",
+      "range_end": "0x2f08301",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f0831c",
+      "target": "0x9590308",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6687fe5]",
+      "range_begin": "0x2f08310",
+      "range_end": "0x2f083a6",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x2f083bb",
+      "target": "0x9590398",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x6687fd6]",
+      "range_begin": "0x2f083b0",
+      "range_end": "0x2f083ea",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a67a83",
+      "target": "0x96d8fc0",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x5c71536]",
+      "range_begin": "0x3a675c0",
+      "range_end": "0x3a68075",
+      "string": "g-bin/newsendmsg",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a67a8e",
+      "target": "0x96d8fb0",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x5c7151b]",
+      "range_begin": "0x3a675c0",
+      "range_end": "0x3a68075",
+      "string": "/cgi-bin/micromsg-bin/newsendmsg",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a69e03",
+      "target": "0x96d8fe8",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5c6f1de]",
+      "range_begin": "0x3a69dd0",
+      "range_end": "0x3a69ead",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a6a446",
+      "target": "0x96d8f18",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x5c6eacb]",
+      "range_begin": "0x3a6a2c0",
+      "range_end": "0x3a6a7cf",
+      "string": null,
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a6bf24",
+      "target": "0x96d8fc0",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x5c6d095]",
+      "range_begin": "0x3a6beb0",
+      "range_end": "0x3a6c13c",
+      "string": "g-bin/newsendmsg",
+      "range_fully_decoded": true
+    },
+    {
+      "at": "0x3a6bf2f",
+      "target": "0x96d8fb0",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x5c6d07a]",
+      "range_begin": "0x3a6beb0",
+      "range_end": "0x3a6c13c",
+      "string": "/cgi-bin/micromsg-bin/newsendmsg",
+      "range_fully_decoded": true
+    }
+  ],
+  "scope": "Disk-only x86-64 decoding, instruction boundaries anchored at registered unwind starts; no runtime validation",
+  "decoder_evidence": "349-offline-disassembler-tool.json",
+  "old_code_locations": [
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "DoAddMsg",
+      "old_rva": "0x179d6ef",
+      "range_begin": "0x179d6e0",
+      "range_end": "0x179d708",
+      "decoded_bytes": 40,
+      "range_size": 40,
+      "at_instruction_boundary": false,
+      "containing_instruction": {
+        "address": "0x179d6ec",
+        "mnemonic": "lea",
+        "operands": "rbp, [rdx + 0x80]"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "GetCoroCtx",
+      "old_rva": "0x42010",
+      "range_begin": "0x41fd0",
+      "range_end": "0x42024",
+      "decoded_bytes": 84,
+      "range_size": 84,
+      "at_instruction_boundary": true,
+      "containing_instruction": {
+        "address": "0x42010",
+        "mnemonic": "add",
+        "operands": "rsp, 0x28"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "GetMsgSvc",
+      "old_rva": "0x334780",
+      "range_begin": "0x334470",
+      "range_end": "0x3348d1",
+      "decoded_bytes": 1121,
+      "range_size": 1121,
+      "at_instruction_boundary": true,
+      "containing_instruction": {
+        "address": "0x334780",
+        "mnemonic": "test",
+        "operands": "rbx, rbx"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "GetMsgCtx",
+      "old_rva": "0x6c7a80",
+      "range_begin": "0x6c7a70",
+      "range_end": "0x6c7ac6",
+      "decoded_bytes": 86,
+      "range_size": 86,
+      "at_instruction_boundary": true,
+      "containing_instruction": {
+        "address": "0x6c7a80",
+        "mnemonic": "push",
+        "operands": "rbx"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "DoSend",
+      "old_rva": "0x1788af0",
+      "range_begin": "0x1788ae0",
+      "range_end": "0x1788b11",
+      "decoded_bytes": 49,
+      "range_size": 49,
+      "at_instruction_boundary": false,
+      "containing_instruction": {
+        "address": "0x1788aec",
+        "mnemonic": "lea",
+        "operands": "rbp, [rdx + 0x80]"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "SendEntry",
+      "old_rva": "0x17419e0",
+      "range_begin": "0x17419c0",
+      "range_end": "0x1741a1f",
+      "decoded_bytes": 95,
+      "range_size": 95,
+      "at_instruction_boundary": true,
+      "containing_instruction": {
+        "address": "0x17419e0",
+        "mnemonic": "mov",
+        "operands": "rsi, qword ptr [rbp - 0x18]"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "navysoto/wxhook",
+      "symbol": "MsgCtor",
+      "old_rva": "0x72e830",
+      "range_begin": "0x72db40",
+      "range_end": "0x72ea04",
+      "decoded_bytes": 3780,
+      "range_size": 3780,
+      "at_instruction_boundary": false,
+      "containing_instruction": {
+        "address": "0x72e82e",
+        "mnemonic": "xorps",
+        "operands": "xmm0, xmm0"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "aixed/WeChat-Hook",
+      "symbol": "create_param2",
+      "old_rva": "0xdf40",
+      "range_begin": "0xdf10",
+      "range_end": "0xdf57",
+      "decoded_bytes": 71,
+      "range_size": 71,
+      "at_instruction_boundary": false,
+      "containing_instruction": {
+        "address": "0xdf3f",
+        "mnemonic": "mov",
+        "operands": "rax, qword ptr [rcx]"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "aixed/WeChat-Hook",
+      "symbol": "send_message",
+      "old_rva": "0x1677a30",
+      "range_begin": "0x16777e0",
+      "range_end": "0x1677f0a",
+      "decoded_bytes": 1834,
+      "range_size": 1834,
+      "at_instruction_boundary": false,
+      "containing_instruction": {
+        "address": "0x1677a2d",
+        "mnemonic": "mov",
+        "operands": "qword ptr [rbp + 0x490], rax"
+      },
+      "function_identity_verified": false
+    },
+    {
+      "source": "aixed/WeChat-Hook",
+      "symbol": "txt_message_ctr",
+      "old_rva": "0x6b2c30",
+      "range_begin": "0x6b2c20",
+      "range_end": "0x6b32de",
+      "decoded_bytes": 1726,
+      "range_size": 1726,
+      "at_instruction_boundary": true,
+      "containing_instruction": {
+        "address": "0x6b2c30",
+        "mnemonic": "mov",
+        "operands": "r15, r9"
+      },
+      "function_identity_verified": false
+    }
+  ],
+  "public_type_names": [
+    "/cgi-bin/micromsg-bin/newsendmsg",
+    "micromsg.SendMsgRequestNew",
+    "micromsg.MicroMsgRequestNew",
+    "micromsg.SendMsgResponseNew"
+  ],
+  "old_function_offsets_inside_instruction": 4,
+  "old_hook_offset_inside_instruction": true,
+  "scan_coverage": {
+    "executable_sections": [
+      ".text",
+      "malloc_h"
+    ],
+    "all_four_byte_displacements": true,
+    "radius_bytes": 160,
+    "exact_instruction_validation": "decode whole containing unwind range, then match RIP memory operand",
+    "unowned_candidates_not_counted_as_validated": 7
+  },
+  "limitation": "Linear decoding from unwind starts is static instruction evidence, not proof of runtime reachability; raw matches outside those ranges excluded from this scan result."
+}
