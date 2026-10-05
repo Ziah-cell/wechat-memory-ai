@@ -1,0 +1,445 @@
+{
+  "checked_at_utc": "2026-10-05T15:13:13.357497+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0xda4a10",
+      "end": "0xda4c72",
+      "role_inference": "job start keeps shared job in heap capture",
+      "instruction_count": 165,
+      "disk_range_sha256": "9b609f715ce1075f6547ba7ca8fc4ae3ba6ae42030260b8714ad5dc26089b5aa",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49de10",
+      "end": "0x49e1ea",
+      "role_inference": "resume work-item keeps shared coroutine",
+      "instruction_count": 237,
+      "disk_range_sha256": "954dd804fc10432a6615c112237bd12664d482a971ebfa26f716005c2882919d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a1be0",
+      "end": "0x4a1c4b",
+      "role_inference": "resume work-item destructor releases shared coroutine and predicate",
+      "instruction_count": 41,
+      "disk_range_sha256": "9291ca73fc57cfdbdbd433ed7cac1e4c5d48be1cbfd8fcb2e2fa9232fa36145a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda59c0",
+      "end": "0xda5afb",
+      "role_inference": "job body cleanup and completion",
+      "instruction_count": 73,
+      "disk_range_sha256": "5b52b9004a4a4ae354a3af4e682502cd69423580db0428d9800ea390d932fdcf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda6120",
+      "end": "0xda61cd",
+      "role_inference": "one-shot local job completion guard and join promise resolve",
+      "instruction_count": 48,
+      "disk_range_sha256": "f062a0e173fac74d7592d887cdd4099a8c09b7a0a42e179ebafdca91b968de3d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a27c0",
+      "end": "0x4a2c46",
+      "role_inference": "normal co_main cleanup callback",
+      "instruction_count": 231,
+      "disk_range_sha256": "452141ed6e81b3681208a6f2feeaa24f73672fe8b5ae8dbb31874c83dc2c56c1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda5960",
+      "end": "0xda59ac",
+      "role_inference": "registered capture cleanup releases shared job and heap capture",
+      "instruction_count": 29,
+      "disk_range_sha256": "80ecc85038720d2cb4c546fdcd7b17c70b8060deff78e80ad37ef154a4190814",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda5140",
+      "end": "0xda541f",
+      "role_inference": "join wrapper",
+      "instruction_count": 159,
+      "disk_range_sha256": "5978e74497ac6717380b2c29eaa9f93d94824228cb8089172e80a2b715deb2f9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda6c40",
+      "end": "0xda74f9",
+      "role_inference": "join context branches and same-executor check",
+      "instruction_count": 463,
+      "disk_range_sha256": "8ef620a738a0c13b42bcb3b5cc65d380339447cad81c6d6df99fe5e4103ee4cd",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xf88250",
+      "size": 27,
+      "anchor": "direct call 0xda6fc9 retrieves executor-context TLS slot",
+      "instructions": [
+        {
+          "at": "0xf88250",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rip + 0xabdb5ca]"
+        },
+        {
+          "at": "0xf88256",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr gs:[0x58]"
+        },
+        {
+          "at": "0xf8825f",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx + rax*8]"
+        },
+        {
+          "at": "0xf88263",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rax + 0x570]"
+        },
+        {
+          "at": "0xf8826a",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0xda5ab0",
+      "kind": "call",
+      "to": "0xda6120"
+    },
+    {
+      "at": "0xda5392",
+      "kind": "call",
+      "to": "0xda6c40"
+    },
+    {
+      "at": "0xda6fc9",
+      "kind": "call",
+      "to": "0xf88250"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8fb9c58",
+      "role_inference": "resume work-item destroy",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x4a1be0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9126068",
+      "role_inference": "job start/cancel/join",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xda4a10"
+        },
+        {
+          "offset": "0x10",
+          "target": "0xda4cc0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xda5140"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0xda4a45",
+      "mnemonic": "call",
+      "operands": "0x7524b2c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "allocate 16-byte shared-job capture"
+    },
+    {
+      "at": "0xda4a7b",
+      "mnemonic": "lock cmpxchg",
+      "operands": "dword ptr [rcx + 8], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "acquire live shared-job reference via compare/exchange"
+    },
+    {
+      "at": "0xda4a89",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store shared-job pointer/control pair in capture"
+    },
+    {
+      "at": "0xda4aa0",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0xeb9]",
+      "rip_targets": [
+        "0xda5960"
+      ],
+      "public_static_strings": [],
+      "observation": "register capture cleanup da5960"
+    },
+    {
+      "at": "0x49e01b",
+      "mnemonic": "lock cmpxchg",
+      "operands": "dword ptr [rcx + 8], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "acquire live shared-coroutine reference"
+    },
+    {
+      "at": "0x49e12a",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi + 0x48], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "transfer reference pair into submitted work item"
+    },
+    {
+      "at": "0x4a1bec",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rcx + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destructor loads work-item shared control block"
+    },
+    {
+      "at": "0x4a1bf5",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "release shared strong reference"
+    },
+    {
+      "at": "0x4a1c28",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy predicate callable"
+    },
+    {
+      "at": "0xda59eb",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 0x17b]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "check cancellation before user closure"
+    },
+    {
+      "at": "0xda59f4",
+      "mnemonic": "jne",
+      "operands": "0xda5a43",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "already-cancelled job skips user closure"
+    },
+    {
+      "at": "0xda5a27",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "otherwise invoke closure; no later cancel flag can undo this call"
+    },
+    {
+      "at": "0xda5a84",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy captured user closure"
+    },
+    {
+      "at": "0xda5a8a",
+      "mnemonic": "call",
+      "operands": "0x7524b68",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "free holder allocation"
+    },
+    {
+      "at": "0xda5a8f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x130], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear job+0x130"
+    },
+    {
+      "at": "0xda5ab0",
+      "mnemonic": "call",
+      "operands": "0xda6120",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "then request local job finalization"
+    },
+    {
+      "at": "0xda6136",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rcx + 0x17a], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "atomic completion flag exchange"
+    },
+    {
+      "at": "0xda613e",
+      "mnemonic": "jne",
+      "operands": "0xda61c5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "already finalized skips repeated local finalization"
+    },
+    {
+      "at": "0xda6186",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "resolve local join promise with a value"
+    },
+    {
+      "at": "0x4a29f1",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 0x358]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load registered capture cleanup callback"
+    },
+    {
+      "at": "0x4a29fd",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x360]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass same capture pointer"
+    },
+    {
+      "at": "0x4a2a04",
+      "mnemonic": "call",
+      "operands": "rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke cleanup"
+    },
+    {
+      "at": "0x4a2a07",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x358], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear cleanup slot after normal return"
+    },
+    {
+      "at": "0xda5974",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture cleanup releases shared job strong reference"
+    },
+    {
+      "at": "0xda59a0",
+      "mnemonic": "jmp",
+      "operands": "0x7524b68",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "free heap capture"
+    },
+    {
+      "at": "0xda5392",
+      "mnemonic": "call",
+      "operands": "0xda6c40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "join wrapper calls context-sensitive join helper"
+    },
+    {
+      "at": "0xda539a",
+      "mnemonic": "js",
+      "operands": "0xda53f1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "negative join result enters exception path"
+    },
+    {
+      "at": "0xda6ee3",
+      "mnemonic": "je",
+      "operands": "0xda6fc9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "no coroutine context enters separate executor/thread handling"
+    },
+    {
+      "at": "0xda6ef0",
+      "mnemonic": "call",
+      "operands": "0x49eae0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "coroutine context awaits join promise"
+    },
+    {
+      "at": "0xda6fd8",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rsi + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "non-coroutine executor context compared with job options executor"
+    },
+    {
+      "at": "0xda6fdf",
+      "mnemonic": "je",
+      "operands": "0xda7246",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same executor enters fatal diagnostic branch"
+    },
+    {
+      "at": "0xda7413",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x837f256]",
+      "rip_targets": [
+        "0x9126670"
+      ],
+      "public_static_strings": [
+        "%@() called from executor context but coroutine to be joined running on the same executor!"
+      ],
+      "observation": "explicit same-executor join diagnostic"
+    },
+    {
+      "at": "0xf88263",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x570]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "context helper reads TLS+0x570, not a static active executor instance"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Shared job capture, shared coroutine work item, user function holder and their selected normal cleanup paths are distinct. Join/finalized state is not delivery evidence and does not by itself prove all queued callbacks have drained.",
+    "A cancellation flag checked before the user closure can skip that call. It does not show cancellation wins a race after the check or retracts network work.",
+    "The normal body destroys and clears the captured function holder before local finalization; co_main later invokes the registered cleanup for the shared-job capture.",
+    "Join distinguishes coroutine, executor and ordinary-thread context; the non-coroutine same-executor case takes an explicit fatal diagnostic branch. Do not block an arbitrary callback/worker to join.",
+    "All exception unwinding, timer callback races, concrete executor destruction/drain, upstream service lifetime and account shutdown remain unverified."
+  ]
+}

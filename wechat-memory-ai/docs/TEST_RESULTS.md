@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 执行器、计时参数与生命周期静态复核（2026-10-05）
+
+[367](evidence/367-send-executor-resume.json)记录12区间/3叶函数/36观察；[368](evidence/368-send-timeout-parameter.json)记录11区间/2叶函数/36观察；[369](evidence/369-send-lifetime-boundaries.json)记录9区间/1叶函数/33观察。节点有重叠，不将相加数视为不同函数总数。内容是条件调用关系、线程检查、原始数值传递、正常清理及join限制，不是执行器或超时运行验收。
+
+[371](evidence/371-send-executor-validation.json)重新核对固定DLL哈希、区间和叶锚点、原始位移/表、导入符号、数值与分支、历史脚本哈希、文档链接和改动范围。同一执行者复核，无独立审查。研究探针对无异常表的TLS短函数先返回NO_UNWIND_START，随后按直接调用锚点解码；叶探针遇jmp提前结束的job thunk沿既有分支锚点核对完整14字节，不虚构异常表范围。复核脚本首遍断言后在汇总阶段因source变量未定义失败，补明确路径后重新完整复核；不是产品/原生测试失败。没有产品改动或故障注入。
+
+[370](evidence/370-send-executor-checkpoint.json)仅只读停止文件，保存状态哈希供复核；没有操作窗口、进程、监听、电源、模型或真实记忆。[观察方案](ISOLATED_OBSERVATION_4_1_15_50.md)未实施。产品仍0.1.22，无产品/原生/异常网络/竞态或真实发送测试，旧369项通过不外推本轮。
+
 ## 逐条响应、解析与回调桥静态复核（2026-10-05）
 
 [362](evidence/362-send-response-items.json)记录7区间/1叶函数/1直接边/2表/44观察；[363](evidence/363-send-response-parse-failure.json)记录6区间/3直接边/2表/34观察；[364](evidence/364-send-callback-registration.json)记录7区间/4叶函数/5直接边/3表/31观察。包含重叠节点，不把相加数视为独立函数数。结论涉及字段布局、单消息首条消费、解析返回覆盖与默认回调注册链。

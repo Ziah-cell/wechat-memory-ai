@@ -1,0 +1,87 @@
+{
+  "checked_at_utc": "2026-10-05T15:19:34.904011+00:00",
+  "status": "passed",
+  "scope": "Same-executor disk-static verification, not runtime or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 28,
+  "unique_anchored_leaves_checked": 6,
+  "unique_direct_edges_with_raw_rel32_math": 23,
+  "unique_tables_checked": 5,
+  "unique_instruction_observations_checked": 103,
+  "rip_references_with_raw_displacement_math": 8,
+  "branch_field_assertions": 34,
+  "selected_default_raw_numeric": 120000,
+  "timeout_unit_verified": false,
+  "import_checked": [
+    {
+      "kind": "normal",
+      "slot": "0x9e4b800",
+      "module": "KERNEL32.dll",
+      "symbol": "GetCurrentThreadId"
+    }
+  ],
+  "previous_analysis_script_hashes_unchanged": 5,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 460,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "TLS helper has no unwind entry; bounded decode uses direct-call anchor.",
+    "Job thunk probe stops at jmp; final evidence includes anchored conditional ret, 14 bytes, as already recorded in 354.",
+    "Earlier writer was not imported/executed; only two pure helper AST definitions were reused.",
+    "First verification completed assertions but summary construction failed because source variable was undefined; fixed explicit helper-source path and reran all checks. No product/native test failure."
+  ],
+  "remaining": [
+    "Concrete executor assignment and actual queue-to-work-item invocation",
+    "Timer unit/clock/special values/removal and drain",
+    "Context switch assembly and exceptional cleanup/races",
+    "Service shutdown/network-core upstream dispatch",
+    "Parsing validity, request/recipient correlation, inbound ID/direction/history"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-executor-20261005/write_evidence.py",
+      "sha256": "209e23493b40f880b1ec8979b4aa413723f7a8f8d85c50e353e89688b861305a"
+    },
+    {
+      "cache_path": "data/send-executor-20261005/verify_evidence.py",
+      "sha256": "39c12bdd98f1fe0c5ae96ee1bbd4ccf893779c91f92b724a0e4a7465b1d2b5a8"
+    },
+    {
+      "cache_path": "data/send-executor-20261005/probe.py",
+      "sha256": "7f8f738e4ece05551eb8680cfbed48846fc8cdec95e756caed11407384ce1d4d"
+    },
+    {
+      "cache_path": "data/send-executor-20261005/read_import.py",
+      "sha256": "c047f3af6a0041c372e92eba65dd840f15c5eeda9c3657039c5e6b0027a234d2"
+    },
+    {
+      "cache_path": "data/send-executor-20261005/search_static.py",
+      "sha256": "489ac4215c31dfb82aff8a18e435d8bd025b89e3f847b75d703521e211897696"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

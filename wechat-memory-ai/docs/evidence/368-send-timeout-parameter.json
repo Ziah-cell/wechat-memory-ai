@@ -1,0 +1,519 @@
+{
+  "checked_at_utc": "2026-10-05T15:13:13.357497+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a65aa0",
+      "end": "0x3a66ff8",
+      "role_inference": "selected single-message caller initializes local options",
+      "instruction_count": 1238,
+      "disk_range_sha256": "98356c1701de4d95febc1fa75ca5fcd2247c32ef8d205fafb7b2728375dfa1e3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a675c0",
+      "end": "0x3a68075",
+      "role_inference": "passes options +4 into with-timeout scope",
+      "instruction_count": 624,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3c9c70",
+      "end": "0x3c9ead",
+      "role_inference": "with-timeout scope constructor copies inherited options and writes timeout field",
+      "instruction_count": 156,
+      "disk_range_sha256": "cea299d13db5e45f6b2f41a59f9c9bcc3e904ddbd4d704e05b8804b31c44b924",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end": "0x3a6a7cf",
+      "role_inference": "register cancel callback, join job, request handle removal",
+      "instruction_count": 329,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca730",
+      "end": "0x3cab6a",
+      "role_inference": "co_launch options fallback and job creation",
+      "instruction_count": 229,
+      "disk_range_sha256": "d34b71e1cab321b4c812fbd04f50e8a099b9fda5b435b1ee38abb400ceaa5071",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca400",
+      "end": "0x3ca503",
+      "role_inference": "global scope initialization",
+      "instruction_count": 48,
+      "disk_range_sha256": "2f45ea21e654f2688980bb33bbd1983be0077acd3fee22cd3cd71e98bcec0bad",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cb040",
+      "end": "0x3cb24f",
+      "role_inference": "global scope virtual +0x10 alternative: launch delayed callable",
+      "instruction_count": 132,
+      "disk_range_sha256": "94978a2a4cd581875b4d1f120bfcbbd8c43ae6614df0004181f7810027a70065",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cb3a0",
+      "end": "0x3cb3cb",
+      "role_inference": "delay helper then original callback",
+      "instruction_count": 14,
+      "disk_range_sha256": "53f4c44cdd9ae6ee78c0a232c88e9be329e5bf7291a1a03814e08600d6073ee8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b21d0",
+      "end": "0x3b2229",
+      "role_inference": "create timeout promise and await",
+      "instruction_count": 31,
+      "disk_range_sha256": "08e1f230bf0b517fc7bfaeadb59a24608bdcfbfa4ab12d6eaf05085161e1cfda",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49eab0",
+      "end": "0x49eae0",
+      "role_inference": "construct timeout promise closure",
+      "instruction_count": 13,
+      "disk_range_sha256": "92251d5ad71724730ff0155a19d5f8fd0d844fc0a75342bf50a19f8525bdf8cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a4da0",
+      "end": "0x4a5127",
+      "role_inference": "timeout promise closure delegates to current coroutine executor +0x10",
+      "instruction_count": 207,
+      "disk_range_sha256": "ab1916723f14694b69e77a11590f873b74eb4379e53a1f44ab34816e45c0885c",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3ca720",
+      "size": 8,
+      "anchor": "direct call 0x3c9cea",
+      "instructions": [
+        {
+          "at": "0x3ca720",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0x120]"
+        },
+        {
+          "at": "0x3ca727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaf20",
+      "size": 1,
+      "anchor": "global scope table 0x8fb02d8 +0x18; one-byte return only",
+      "instructions": [
+        {
+          "at": "0xaf20",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x3a66023",
+      "kind": "call",
+      "to": "0x3a675c0"
+    },
+    {
+      "at": "0x3a67723",
+      "kind": "call",
+      "to": "0x3c9c70"
+    },
+    {
+      "at": "0x3a67943",
+      "kind": "call",
+      "to": "0x3a6a2c0"
+    },
+    {
+      "at": "0x3a67b97",
+      "kind": "call",
+      "to": "0x3b21d0"
+    },
+    {
+      "at": "0x3c9cea",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0x3cb19a",
+      "kind": "call",
+      "to": "0x3ca730"
+    },
+    {
+      "at": "0x3cb3ab",
+      "kind": "call",
+      "to": "0x3b21d0"
+    },
+    {
+      "at": "0x3b21ec",
+      "kind": "call",
+      "to": "0x49eab0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8fb02d8",
+      "role_inference": "global co_scope executor-like interface, not certified active timeout service",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x3cadd0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x3cb040"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xaf20"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb0478",
+      "role_inference": "delayed callable",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3cb3a0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fba4c8",
+      "role_inference": "timeout promise initializer",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x4a4da0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a65e64",
+      "mnemonic": "lea",
+      "operands": "rdi, [rbp + 0x240]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "RDI points to reused local options storage rbp+0x240 before initialization"
+    },
+    {
+      "at": "0x3a65f94",
+      "mnemonic": "movabs",
+      "operands": "rax, 0x1d4c000000000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "packed constant: low DWORD 0, high DWORD 0x1d4c0 (120000)"
+    },
+    {
+      "at": "0x3a65f9e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x240], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store packed options at rbp+0x240"
+    },
+    {
+      "at": "0x3a66003",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass local options address as fifth argument"
+    },
+    {
+      "at": "0x3a6760d",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp + 0x330]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "recover fifth argument"
+    },
+    {
+      "at": "0x3a676c3",
+      "mnemonic": "mov",
+      "operands": "ebx, dword ptr [rdi + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read timeout numeric parameter from options +4"
+    },
+    {
+      "at": "0x3a676fe",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass unchanged DWORD as sixth constructor argument"
+    },
+    {
+      "at": "0x3a67723",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call with-timeout scope constructor"
+    },
+    {
+      "at": "0x3c9ce7",
+      "mnemonic": "mov",
+      "operands": "rcx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "query source scope options"
+    },
+    {
+      "at": "0x3ca720",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0x120]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source options start at scope+0x120"
+    },
+    {
+      "at": "0x3c9d5a",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [r14 + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy inherited option fields +0x20 onward"
+    },
+    {
+      "at": "0x3c9e59",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rbp + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read sixth argument"
+    },
+    {
+      "at": "0x3c9e6c",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r8 + 0x48], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write timeout DWORD at new scope+0x48"
+    },
+    {
+      "at": "0x3a6a419",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r15 + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "timer registration receiver is inherited scope+0x28"
+    },
+    {
+      "at": "0x3a6a46c",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [r15 + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass timeout unchanged"
+    },
+    {
+      "at": "0x3a6a473",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call timer receiver table+0x10"
+    },
+    {
+      "at": "0x3a6a476",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xc8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save opaque returned handle"
+    },
+    {
+      "at": "0x3a6a487",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "join send job"
+    },
+    {
+      "at": "0x3a6a6f3",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0xc8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply saved handle after join"
+    },
+    {
+      "at": "0x3a6a6fa",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call receiver table+0x18; semantics depend on concrete implementation"
+    },
+    {
+      "at": "0x3ca7d5",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "prefer provided options executor"
+    },
+    {
+      "at": "0x3ca8d4",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x140]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "else use source scope executor field +0x140"
+    },
+    {
+      "at": "0x3ca477",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8be5e5a]",
+      "rip_targets": [
+        "0x8fb02d8"
+      ],
+      "public_static_strings": [],
+      "observation": "global scope table assignment"
+    },
+    {
+      "at": "0x3ca488",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rip + 0xb79acc9], xmm0",
+      "rip_targets": [
+        "0xbb65158"
+      ],
+      "public_static_strings": [],
+      "observation": "global options storage initially zero; not runtime object certification"
+    },
+    {
+      "at": "0x3cb0e1",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "global fallback captures raw DWORD parameter"
+    },
+    {
+      "at": "0x3cb19a",
+      "mnemonic": "call",
+      "operands": "0x3ca730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "global fallback launches another coroutine"
+    },
+    {
+      "at": "0x3cb23c",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "global fallback returns zero handle"
+    },
+    {
+      "at": "0x3cb3ab",
+      "mnemonic": "call",
+      "operands": "0x3b21d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "delayed callable uses timeout/await helper first"
+    },
+    {
+      "at": "0x3cb3c1",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "then invokes original callback"
+    },
+    {
+      "at": "0x3b21ec",
+      "mnemonic": "call",
+      "operands": "0x49eab0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct timeout promise"
+    },
+    {
+      "at": "0x49eab8",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8b1ba09]",
+      "rip_targets": [
+        "0x8fba4c8"
+      ],
+      "public_static_strings": [],
+      "observation": "timeout promise closure table"
+    },
+    {
+      "at": "0x49eac4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw DWORD captured unchanged"
+    },
+    {
+      "at": "0x4a4e75",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdi + 0x368]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "find current coroutine executor"
+    },
+    {
+      "at": "0x4a4f8e",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load raw timeout parameter"
+    },
+    {
+      "at": "0x4a4f97",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "delegate to executor table+0x10 without unit conversion here"
+    },
+    {
+      "at": "0xaf20",
+      "mnemonic": "ret",
+      "operands": "",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "this global fallback removal slot is a no-op return; not a universal timer-removal contract"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "selected_callsite_timeout_numeric": 120000,
+  "timeout_unit_verified": false,
+  "conclusions": [
+    "The selected single-message branch locally initializes options+4 to 120000 and forwards it unchanged to scope+0x48 and the timer virtual call. This is a callsite-specific default, not a global network timeout.",
+    "The concrete receiver remains inherited runtime state. Neither unit nor clock source, zero/negative handling, sleep behavior or effective deadline has been certified; do not label this two minutes.",
+    "Global co_scope table provides one static alternative: spawn a delayed coroutine, return zero handle, +0x18 is a no-op. It ultimately delegates timing again to the current coroutine executor. This table has NOT been certified as the sending path active receiver.",
+    "A call with a saved timer handle is only a removal request at the interface level; it does not prove timer destruction, callback quiescence or cancellation-before-delivery."
+  ]
+}

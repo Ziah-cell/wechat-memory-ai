@@ -1,0 +1,558 @@
+{
+  "checked_at_utc": "2026-10-05T15:13:13.357497+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x49de10",
+      "end": "0x49e1ea",
+      "role_inference": "build resume work item and submit to executor +8",
+      "instruction_count": 237,
+      "disk_range_sha256": "954dd804fc10432a6615c112237bd12664d482a971ebfa26f716005c2882919d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a1c50",
+      "end": "0x4a1e48",
+      "role_inference": "resume callable: optional predicate then scheduler",
+      "instruction_count": 107,
+      "disk_range_sha256": "9ba78c113620da0132a8e5fa036d79652a77f242568dbdd3202e9e1ac09f33a6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49fe40",
+      "end": "0x49ffc3",
+      "role_inference": "state-sensitive ready queue or immediate resume",
+      "instruction_count": 112,
+      "disk_range_sha256": "8ae3a8c837e85358342945be9a0aed14c0f4c8564b6f36fa20df79aae9bbe8c6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a0030",
+      "end": "0x4a031c",
+      "role_inference": "drain selected ready queue",
+      "instruction_count": 205,
+      "disk_range_sha256": "22e7903cbea015db4b250e38a38fc81df41e77b0a6abafd761a80c10de50c806",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a1f40",
+      "end": "0x4a26ba",
+      "role_inference": "do_resume_now: first entry, suspended resume and thread guard",
+      "instruction_count": 355,
+      "disk_range_sha256": "4ed61dcdb95e536e305a0c93560d8dd1cc720f5d35e0791fdf6dc6302addcf3c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a27c0",
+      "end": "0x4a2c46",
+      "role_inference": "co_main trampoline",
+      "instruction_count": 231,
+      "disk_range_sha256": "452141ed6e81b3681208a6f2feeaa24f73672fe8b5ae8dbb31874c83dc2c56c1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a3960",
+      "end": "0x4a398a",
+      "role_inference": "invoke registered entry at coroutine +0x350 with +0x360 capture",
+      "instruction_count": 13,
+      "disk_range_sha256": "6e95a609378a86ddbb8718bf48dc10b3ef53cd6a843a39da5f6f5b8e847b1b9f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a3a20",
+      "end": "0x4a409e",
+      "role_inference": "coroutine constructor stores entry/capture/cleanup and executor/allocator",
+      "instruction_count": 336,
+      "disk_range_sha256": "778be046a232892b0c0205edae582733aac5759a0bda54a113d6773b288defbd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda4a10",
+      "end": "0xda4c72",
+      "role_inference": "job start registers entry, capture and cleanup",
+      "instruction_count": 165,
+      "disk_range_sha256": "9b609f715ce1075f6547ba7ca8fc4ae3ba6ae42030260b8714ad5dc26089b5aa",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49db30",
+      "end": "0x49dbc5",
+      "role_inference": "entry registration wrapper",
+      "instruction_count": 43,
+      "disk_range_sha256": "42250deee9a0bea9a2e7e259590871ee891b79d519c8f0a94294f8415110b836",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49dbd0",
+      "end": "0x49dcce",
+      "role_inference": "shared coroutine construction",
+      "instruction_count": 82,
+      "disk_range_sha256": "3cd741b2621338e099bfa73dfc90859d4ae85c7d9cecc0316c2be68311356029",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda59c0",
+      "end": "0xda5afb",
+      "role_inference": "job body calls its captured function holder",
+      "instruction_count": 73,
+      "disk_range_sha256": "5b52b9004a4a4ae354a3af4e682502cd69423580db0428d9800ea390d932fdcf",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x4a1bc0",
+      "size": 9,
+      "anchor": "table 0x8fb9c58 +0x10",
+      "instructions": [
+        {
+          "at": "0x4a1bc0",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x4a1bc4",
+          "mnemonic": "jmp",
+          "operands": "0x4a1c50"
+        }
+      ]
+    },
+    {
+      "rva": "0xda59b0",
+      "size": 14,
+      "anchor": "RIP LEA 0xda4a99; includes null-capture return",
+      "instructions": [
+        {
+          "at": "0xda59b0",
+          "mnemonic": "test",
+          "operands": "rcx, rcx"
+        },
+        {
+          "at": "0xda59b3",
+          "mnemonic": "je",
+          "operands": "0xda59bd"
+        },
+        {
+          "at": "0xda59b5",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx]"
+        },
+        {
+          "at": "0xda59b8",
+          "mnemonic": "jmp",
+          "operands": "0xda59c0"
+        },
+        {
+          "at": "0xda59bd",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x752d520",
+      "size": 7,
+      "anchor": "direct calls 0x4a204b and 0x4a24fd",
+      "instructions": [
+        {
+          "at": "0x752d520",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rip + 0x291e2d9]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x4a1cf1",
+      "kind": "call",
+      "to": "0x49fe40"
+    },
+    {
+      "at": "0x49ff7f",
+      "kind": "call",
+      "to": "0x4a0030"
+    },
+    {
+      "at": "0x49ff98",
+      "kind": "call",
+      "to": "0x4a1f40"
+    },
+    {
+      "at": "0x4a029b",
+      "kind": "call",
+      "to": "0x4a1f40"
+    },
+    {
+      "at": "0x4a204b",
+      "kind": "call",
+      "to": "0x752d520"
+    },
+    {
+      "at": "0x4a24fd",
+      "kind": "call",
+      "to": "0x752d520"
+    },
+    {
+      "at": "0x4a293a",
+      "kind": "call",
+      "to": "0x4a3960"
+    },
+    {
+      "at": "0xda4aab",
+      "kind": "call",
+      "to": "0x49db30"
+    },
+    {
+      "at": "0x49db69",
+      "kind": "call",
+      "to": "0x49dbd0"
+    },
+    {
+      "at": "0x49dc36",
+      "kind": "call",
+      "to": "0x4a3a20"
+    },
+    {
+      "at": "0x4a1bc4",
+      "kind": "jmp",
+      "to": "0x4a1c50"
+    },
+    {
+      "at": "0xda59b8",
+      "kind": "jmp",
+      "to": "0xda59c0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8fb9c58",
+      "role_inference": "resume work-item invoke and destroy methods",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x4a1bc0"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x4a1be0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x49e037",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdi + 0x368]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load executor from coroutine +0x368"
+    },
+    {
+      "at": "0x49e0ce",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8b1bb83]",
+      "rip_targets": [
+        "0x8fb9c58"
+      ],
+      "public_static_strings": [],
+      "observation": "resume work-item table"
+    },
+    {
+      "at": "0x49e12a",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi + 0x48], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "move shared coroutine pair to work-item +0x48/+0x50"
+    },
+    {
+      "at": "0x49e138",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x58], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save resume value in work-item +0x58"
+    },
+    {
+      "at": "0x49e14a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "submit to executor +8; concrete runtime implementation unproven"
+    },
+    {
+      "at": "0x4a1bc0",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "adjust callable this by +8"
+    },
+    {
+      "at": "0x4a1bc4",
+      "mnemonic": "jmp",
+      "operands": "0x4a1c50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tailcall invoke implementation"
+    },
+    {
+      "at": "0x4a1c7d",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "optional predicate call"
+    },
+    {
+      "at": "0x4a1c82",
+      "mnemonic": "je",
+      "operands": "0x4a1d2e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false predicate skips scheduling"
+    },
+    {
+      "at": "0x4a1cc2",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "adjusted this+0x40 is work-item+0x48 coroutine pointer"
+    },
+    {
+      "at": "0x4a1cc6",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rsi + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "adjusted this+0x50 is work-item+0x58 resume value"
+    },
+    {
+      "at": "0x4a1cf1",
+      "mnemonic": "call",
+      "operands": "0x49fe40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "scheduler receives shared coroutine and resume value"
+    },
+    {
+      "at": "0x49fe58",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdi + 0x388]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read coroutine state"
+    },
+    {
+      "at": "0x49fe60",
+      "mnemonic": "je",
+      "operands": "0x49fed6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "state zero enters ready-queue branch"
+    },
+    {
+      "at": "0x49ff7f",
+      "mnemonic": "call",
+      "operands": "0x4a0030",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "drain queue with EDX zero"
+    },
+    {
+      "at": "0x49ff98",
+      "mnemonic": "call",
+      "operands": "0x4a1f40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonzero nonfinished branch calls do_resume_now"
+    },
+    {
+      "at": "0x4a01c0",
+      "mnemonic": "je",
+      "operands": "0x4a01e9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero drain flag selects immediate path"
+    },
+    {
+      "at": "0x4a029b",
+      "mnemonic": "call",
+      "operands": "0x4a1f40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "queued item calls do_resume_now"
+    },
+    {
+      "at": "0x4a201b",
+      "mnemonic": "cmp",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "state 2 is suspended-resume branch"
+    },
+    {
+      "at": "0x4a204b",
+      "mnemonic": "call",
+      "operands": "0x752d520",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "GetCurrentThreadId import thunk"
+    },
+    {
+      "at": "0x4a2050",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0x4c8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare with coroutine saved thread ID"
+    },
+    {
+      "at": "0x4a2056",
+      "mnemonic": "jne",
+      "operands": "0x4a213d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "different thread enters fatal diagnostic path"
+    },
+    {
+      "at": "0x4a2502",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0x4c8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save first-entry thread ID"
+    },
+    {
+      "at": "0x4a2550",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x269]",
+      "rip_targets": [
+        "0x4a27c0"
+      ],
+      "public_static_strings": [],
+      "observation": "register co_main trampoline with context setup"
+    },
+    {
+      "at": "0x4a255d",
+      "mnemonic": "call",
+      "operands": "0x10f1690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "context setup call; implementation not executed or fully audited"
+    },
+    {
+      "at": "0x4a257f",
+      "mnemonic": "call",
+      "operands": "0x10f1660",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "context switch call; assembly implementation not fully audited"
+    },
+    {
+      "at": "0x4a293a",
+      "mnemonic": "call",
+      "operands": "0x4a3960",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "co_main invokes entry bridge"
+    },
+    {
+      "at": "0x4a396d",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x360]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "entry bridge loads capture +0x360"
+    },
+    {
+      "at": "0x4a3974",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x350]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "entry bridge invokes +0x350"
+    },
+    {
+      "at": "0x4a3abc",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x350], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructor stores entry"
+    },
+    {
+      "at": "0x4a3ac3",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x360], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructor stores capture"
+    },
+    {
+      "at": "0x4a3aca",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x358], r9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructor stores cleanup callback"
+    },
+    {
+      "at": "0x4a3dac",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x368], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructor stores options executor in coroutine +0x368"
+    },
+    {
+      "at": "0xda4a99",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0xf10]",
+      "rip_targets": [
+        "0xda59b0"
+      ],
+      "public_static_strings": [],
+      "observation": "job entry thunk anchor"
+    },
+    {
+      "at": "0xda59b8",
+      "mnemonic": "jmp",
+      "operands": "0xda59c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonnull capture unwraps job and enters body"
+    },
+    {
+      "at": "0xda5a27",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "body invokes captured send closure"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "import_resolution": [
+    {
+      "kind": "normal",
+      "slot": "0x9e4b800",
+      "module": "KERNEL32.dll",
+      "symbol": "GetCurrentThreadId"
+    }
+  ],
+  "conclusions": [
+    "Conditional static path after the executor invokes the submitted callable now reaches scheduler, context setup, co_main, registered entry and job body. The concrete executor queue/dispatch implementation and actual runtime object are still unproven.",
+    "Suspended resume compares GetCurrentThreadId with the first-entry saved ID. A different thread enters the explicit fatal diagnostic path; no arbitrary worker-thread calling contract can be inferred.",
+    "Predicate false can skip scheduling. Context-switch assembly, allocator choice and exceptional unwinding remain unaudited. This is not end-to-end runtime reachability or an injection recipe."
+  ]
+}
