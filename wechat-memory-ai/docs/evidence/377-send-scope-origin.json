@@ -1,0 +1,1245 @@
+{
+  "checked_at_utc": "2026-10-05T16:33:53.040701+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x1802d10",
+      "end": "0x1803995",
+      "role_inference": "constructs selected send callable and submits through global owner secondary scope",
+      "instruction_count": 735,
+      "disk_range_sha256": "876ec26e99a15989a0a6dc1f2d9f1f07d6e2e42dedf47fe0bdee62464f425c41",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1865d60",
+      "end": "0x1866683",
+      "role_inference": "send callable body, two conditional calls to the same helper",
+      "instruction_count": 536,
+      "disk_range_sha256": "d1e819850cc63b4ed210019eac6ea8f2ea7ace3b45ad5c1aa587cbadcc716ce4",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1866a60",
+      "end": "0x1866fc4",
+      "role_inference": "helper forwards captured receiver to virtual sending dispatch",
+      "instruction_count": 325,
+      "disk_range_sha256": "8c3b080e1035af04676aa71a8f8bf0428314d5b11fe9025183a918f81c27f248",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c3850",
+      "end": "0x39c3998",
+      "role_inference": "receiver virtual +0xd0 dispatch",
+      "instruction_count": 102,
+      "disk_range_sha256": "d4a8316e9557deba3e5c4016f7da4f4e655adbf1b53cb3aadfc6738616884a49",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38c9e20",
+      "end": "0x38c9f08",
+      "role_inference": "constructs a possible receiver with table 0x96b7a68",
+      "instruction_count": 72,
+      "disk_range_sha256": "d0b73117f5bc06e58548fc978958cac4d01a12226995565ee7c8c39d8b0a27f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a65aa0",
+      "end": "0x3a66ff8",
+      "role_inference": "selected concrete single-message implementation at table +0xd0",
+      "instruction_count": 1238,
+      "disk_range_sha256": "98356c1701de4d95febc1fa75ca5fcd2247c32ef8d205fafb7b2728375dfa1e3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x42350",
+      "end": "0x4281d",
+      "role_inference": "root constructor assigns scope owner shared object to +0x310/+0x318",
+      "instruction_count": 288,
+      "disk_range_sha256": "b7235c20058650298013a8bef91c2addc023848dc52914e7d47a0699b7f58507",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30d010",
+      "end": "0x30d30d",
+      "role_inference": "owner constructs kernel scope and looper, already evidenced in372",
+      "instruction_count": 191,
+      "disk_range_sha256": "46336cf204a29e33dbb0507aa4e51f5f17c1c5af0ee8cf116c7b5e5550a0d121",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30fe10",
+      "end": "0x3102a8",
+      "role_inference": "secondary named scope creation sets parent and same owner looper",
+      "instruction_count": 269,
+      "disk_range_sha256": "4e5ceb84ccf94b5fe8cc31efe899629c77e317a555e2b76489eec5d0f42899d0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30efb0",
+      "end": "0x30f242",
+      "role_inference": "submits supplied callable through owner+0x10",
+      "instruction_count": 153,
+      "disk_range_sha256": "29bb1abc9ba78f973fd4b3f30f4bbf13e448b64990bd34f8bbf8cb91bbe0b185",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30e190",
+      "end": "0x30e799",
+      "role_inference": "rejects absent/cancelled scope, wraps callable, passes zero executor option to co_launch",
+      "instruction_count": 366,
+      "disk_range_sha256": "3e92bb256c3cf8505d375cea32e623b477858d301e9a5ff42b763a63752f25fe",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30f950",
+      "end": "0x30fa94",
+      "role_inference": "moves original holder or wraps it with an optional delay",
+      "instruction_count": 92,
+      "disk_range_sha256": "b8065851c087c0245f1744d389f0a079b10f540cf06daae97729884c619bcd19",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x311410",
+      "end": "0x31145d",
+      "role_inference": "outer job callable invokes captured main callable +0x10",
+      "instruction_count": 19,
+      "disk_range_sha256": "e8f2dc8dabbbbf5af443a4cbc5c55335893ce6afc61cbd132335b983bacc5094",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x310f60",
+      "end": "0x310f8e",
+      "role_inference": "optional wrapper waits then forwards original callable +0x10",
+      "instruction_count": 14,
+      "disk_range_sha256": "7193aed34e4d110560896d611b701e0437c4b68ae5739457c077a768e1d47de0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cacc0",
+      "end": "0x3cad90",
+      "role_inference": "forwards source scope and options into co_launch",
+      "instruction_count": 62,
+      "disk_range_sha256": "a79dbb5302e068183e6ccccb82402b0e1658f5fe535a4bf552ac0f007e090e29",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca730",
+      "end": "0x3cab6a",
+      "role_inference": "co_launch chooses options executor or source scope executor",
+      "instruction_count": 229,
+      "disk_range_sha256": "d34b71e1cab321b4c812fbd04f50e8a099b9fda5b435b1ee38abb400ceaa5071",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda5db0",
+      "end": "0xda5fe8",
+      "role_inference": "creates job child scope and copies options",
+      "instruction_count": 143,
+      "disk_range_sha256": "9c931e13cec4fa1b7fc9efa0d064f67267537921cd92546dbff55baf4c0ac814",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca690",
+      "end": "0x3ca718",
+      "role_inference": "copies job options into child scope",
+      "instruction_count": 41,
+      "disk_range_sha256": "5c30035c441b8861e02f205772921c460875fc037628ef18080de523325f921e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda59c0",
+      "end": "0xda5afb",
+      "role_inference": "installs child scope before invoking job callable",
+      "instruction_count": 73,
+      "disk_range_sha256": "5b52b9004a4a4ae354a3af4e682502cd69423580db0428d9800ea390d932fdcf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca2f0",
+      "end": "0x3ca3c7",
+      "role_inference": "sets scope in current coroutine local storage, or thread-local fallback",
+      "instruction_count": 57,
+      "disk_range_sha256": "ecb8ec7a5c711a1fab7832e5c73b2c0e2c1a76e7f3d999b087634b6de6cdac0c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca1f0",
+      "end": "0x3ca2bf",
+      "role_inference": "gets scope from current coroutine local storage, or thread-local fallback",
+      "instruction_count": 53,
+      "disk_range_sha256": "86cb7ce0d8f94e25a7bb7318ab327993bea9cb5459717613a26e08a6e995f1f7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca5d0",
+      "end": "0x3ca5f4",
+      "role_inference": "returns current scope if nonnull, otherwise global scope",
+      "instruction_count": 10,
+      "disk_range_sha256": "efb073ac1e58898e8ffdb23f92cecda78586836e7050be5156f8b84b24cc000b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3c9c70",
+      "end": "0x3c9ead",
+      "role_inference": "with-timeout constructor gets current scope and inherits executor",
+      "instruction_count": 156,
+      "disk_range_sha256": "cea299d13db5e45f6b2f41a59f9c9bcc3e904ddbd4d704e05b8804b31c44b924",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a675c0",
+      "end": "0x3a68075",
+      "role_inference": "selected sending wrapper supplies no executor override",
+      "instruction_count": 624,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x45d10",
+      "size": 8,
+      "anchor": "direct call 0x18033c5, global getter also in355",
+      "instructions": [
+        {
+          "at": "0x45d10",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rip + 0xbb1bf79]"
+        },
+        {
+          "at": "0x45d17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x47310",
+      "size": 58,
+      "anchor": "direct call 0x18033d5; both shared-control branches through final ret",
+      "instructions": [
+        {
+          "at": "0x47310",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x47313",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x318]"
+        },
+        {
+          "at": "0x4731a",
+          "mnemonic": "test",
+          "operands": "rdx, rdx"
+        },
+        {
+          "at": "0x4731d",
+          "mnemonic": "je",
+          "operands": "0x47339"
+        },
+        {
+          "at": "0x4731f",
+          "mnemonic": "lock inc",
+          "operands": "dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x47323",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x318]"
+        },
+        {
+          "at": "0x4732a",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x310]"
+        },
+        {
+          "at": "0x47331",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x47334",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x47338",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "at": "0x47339",
+          "mnemonic": "xor",
+          "operands": "edx, edx"
+        },
+        {
+          "at": "0x4733b",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x310]"
+        },
+        {
+          "at": "0x47342",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x47345",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x47349",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3ca680",
+      "size": 8,
+      "anchor": "direct call 0x310276",
+      "instructions": [
+        {
+          "at": "0x3ca680",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 0x118], rdx"
+        },
+        {
+          "at": "0x3ca687",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3ca720",
+      "size": 8,
+      "anchor": "direct call 0x310282",
+      "instructions": [
+        {
+          "at": "0x3ca720",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0x120]"
+        },
+        {
+          "at": "0x3ca727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xda90d0",
+      "size": 10,
+      "anchor": "direct call 0x30e1d9",
+      "instructions": [
+        {
+          "at": "0xda90d0",
+          "mnemonic": "movzx",
+          "operands": "eax, byte ptr [rcx + 0xe1]"
+        },
+        {
+          "at": "0xda90d7",
+          "mnemonic": "and",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0xda90d9",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x18033c5",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x18033d5",
+      "kind": "call",
+      "to": "0x47310"
+    },
+    {
+      "at": "0x18037cf",
+      "kind": "call",
+      "to": "0x30efb0"
+    },
+    {
+      "at": "0x186600e",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x18662bc",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x18665cf",
+      "kind": "call",
+      "to": "0x1802d10"
+    },
+    {
+      "at": "0x1866d77",
+      "kind": "call",
+      "to": "0x39c3850"
+    },
+    {
+      "at": "0x3a65ff3",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x3a66023",
+      "kind": "call",
+      "to": "0x3a675c0"
+    },
+    {
+      "at": "0x4264e",
+      "kind": "call",
+      "to": "0x30d010"
+    },
+    {
+      "at": "0x30d1f9",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0x310276",
+      "kind": "call",
+      "to": "0x3ca680"
+    },
+    {
+      "at": "0x310282",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0x30f1eb",
+      "kind": "call",
+      "to": "0x30e190"
+    },
+    {
+      "at": "0x30e1d9",
+      "kind": "call",
+      "to": "0xda90d0"
+    },
+    {
+      "at": "0x30e22c",
+      "kind": "call",
+      "to": "0x30f950"
+    },
+    {
+      "at": "0x30e25c",
+      "kind": "call",
+      "to": "0x30f950"
+    },
+    {
+      "at": "0x30e603",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x3cad60",
+      "kind": "call",
+      "to": "0x3ca730"
+    },
+    {
+      "at": "0x3caa95",
+      "kind": "call",
+      "to": "0xda90d0"
+    },
+    {
+      "at": "0xda5fc6",
+      "kind": "call",
+      "to": "0x3ca690"
+    },
+    {
+      "at": "0xda5a00",
+      "kind": "call",
+      "to": "0xda5db0"
+    },
+    {
+      "at": "0xda5a0f",
+      "kind": "call",
+      "to": "0x3ca2f0"
+    },
+    {
+      "at": "0x3ca5d4",
+      "kind": "call",
+      "to": "0x3ca1f0"
+    },
+    {
+      "at": "0x3c9cda",
+      "kind": "call",
+      "to": "0x3ca5d0"
+    },
+    {
+      "at": "0x3c9cea",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0x3a67723",
+      "kind": "call",
+      "to": "0x3c9c70"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9289c38",
+      "role_inference": "selected sending callable",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x1865d60"
+        }
+      ]
+    },
+    {
+      "rva": "0x96b7a68",
+      "role_inference": "possible concrete sending receiver",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xd0",
+          "target": "0x3a65aa0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa1ec8",
+      "role_inference": "outer job callable",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x311410"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa1c28",
+      "role_inference": "optional delay wrapper",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x310f60"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x18033c5",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "get global root"
+    },
+    {
+      "at": "0x18033d5",
+      "mnemonic": "call",
+      "operands": "0x47310",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy owner shared pair from root+0x310/+0x318"
+    },
+    {
+      "at": "0x18033db",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x180]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "keep owner pointer in RDX"
+    },
+    {
+      "at": "0x18035d4",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x48], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save owner pointer before later allocations"
+    },
+    {
+      "at": "0x1803681",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x7a865b0]",
+      "rip_targets": [
+        "0x9289c38"
+      ],
+      "public_static_strings": [],
+      "observation": "selected closure table 0x9289c38"
+    },
+    {
+      "at": "0x180368f",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rdi + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture first shared object pair at closure+8/+0x10"
+    },
+    {
+      "at": "0x180369a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x18], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture receiver object pointer at closure+0x18"
+    },
+    {
+      "at": "0x180369e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x20], r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture receiver control pointer at closure+0x20"
+    },
+    {
+      "at": "0x18036ac",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x28], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture manager pointer at closure+0x28"
+    },
+    {
+      "at": "0x1803775",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "install closure in holder+0x38"
+    },
+    {
+      "at": "0x18037c7",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp - 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "R9 points to main function holder"
+    },
+    {
+      "at": "0x18037cb",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "RCX is saved scope owner"
+    },
+    {
+      "at": "0x18037cf",
+      "mnemonic": "call",
+      "operands": "0x30efb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "submit selected closure"
+    },
+    {
+      "at": "0x1865fb9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load captured receiver"
+    },
+    {
+      "at": "0x1865fbd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x190], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy it into argument shared pair"
+    },
+    {
+      "at": "0x1866007",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0x190]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass receiver shared pair as R8"
+    },
+    {
+      "at": "0x186600e",
+      "mnemonic": "call",
+      "operands": "0x1866a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first conditional send helper call"
+    },
+    {
+      "at": "0x18662bc",
+      "mnemonic": "call",
+      "operands": "0x1866a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second conditional send helper call; not a new project retry policy"
+    },
+    {
+      "at": "0x1866d2f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load concrete receiver from retained shared pair"
+    },
+    {
+      "at": "0x1866d77",
+      "mnemonic": "call",
+      "operands": "0x39c3850",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call virtual-dispatch helper"
+    },
+    {
+      "at": "0x39c3906",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read same receiver vtable"
+    },
+    {
+      "at": "0x39c3910",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0xd0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call receiver+0xd0"
+    },
+    {
+      "at": "0x38c9e71",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x5dedbf0]",
+      "rip_targets": [
+        "0x96b7a68"
+      ],
+      "public_static_strings": [],
+      "observation": "constructor chooses table 0x96b7a68"
+    },
+    {
+      "at": "0x38c9e7c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write selected table into actual object at allocation+0x10"
+    },
+    {
+      "at": "0x4264e",
+      "mnemonic": "call",
+      "operands": "0x30d010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct owner"
+    },
+    {
+      "at": "0x42663",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x310], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "assign owner pointer to root+0x310"
+    },
+    {
+      "at": "0x4266e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x318], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "assign owner control block to root+0x318"
+    },
+    {
+      "at": "0x4732a",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x310]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "non-null-control branch reads root+0x310"
+    },
+    {
+      "at": "0x4733b",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x310]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "null-control branch reads same root field"
+    },
+    {
+      "at": "0x30d1b0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "owner+0 holds concrete looper pointer"
+    },
+    {
+      "at": "0x30d1ff",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x20], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "kernel scope executor gets same looper"
+    },
+    {
+      "at": "0x310261",
+      "mnemonic": "call",
+      "operands": "0x3ca600",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct secondary scope"
+    },
+    {
+      "at": "0x31026e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save secondary scope at owner+0x10"
+    },
+    {
+      "at": "0x310272",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load kernel parent scope from owner+8"
+    },
+    {
+      "at": "0x310276",
+      "mnemonic": "call",
+      "operands": "0x3ca680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set parent at scope+0x118"
+    },
+    {
+      "at": "0x31027b",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load same owner looper"
+    },
+    {
+      "at": "0x310282",
+      "mnemonic": "call",
+      "operands": "0x3ca720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "get secondary options"
+    },
+    {
+      "at": "0x310287",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x20], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write secondary options executor"
+    },
+    {
+      "at": "0x30f1c1",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "take secondary scope as source"
+    },
+    {
+      "at": "0x30f1eb",
+      "mnemonic": "call",
+      "operands": "0x30e190",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "submit through general helper"
+    },
+    {
+      "at": "0x30e1d0",
+      "mnemonic": "je",
+      "operands": "0x30e1e3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "absent source takes dummy path"
+    },
+    {
+      "at": "0x30e1d9",
+      "mnemonic": "call",
+      "operands": "0xda90d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "check group cancellation flag"
+    },
+    {
+      "at": "0x30e1e1",
+      "mnemonic": "je",
+      "operands": "0x30e1fb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "uncancelled scope continues real launch"
+    },
+    {
+      "at": "0x30e1f0",
+      "mnemonic": "call",
+      "operands": "0x30d5e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "dummy-job branch for missing/cancelled scope"
+    },
+    {
+      "at": "0xda90d0",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 0xe1]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reads group+0xe1 cancellation low bit"
+    },
+    {
+      "at": "0x30e22c",
+      "mnemonic": "call",
+      "operands": "0x30f950",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "move/wrap main holder"
+    },
+    {
+      "at": "0x30e2f8",
+      "mnemonic": "movaps",
+      "operands": "xmmword ptr [rbp + 0x150], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear options+0x20/+0x28 after small name copy"
+    },
+    {
+      "at": "0x30e51a",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c939a7]",
+      "rip_targets": [
+        "0x8fa1ec8"
+      ],
+      "public_static_strings": [],
+      "observation": "outer callable table 0x8fa1ec8"
+    },
+    {
+      "at": "0x30e564",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r12 + 0x60], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store main callable at outer closure+0x60"
+    },
+    {
+      "at": "0x30e5f2",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0x130]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass options at rbp+0x130"
+    },
+    {
+      "at": "0x30e5f9",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp - 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass outer holder"
+    },
+    {
+      "at": "0x30e5fd",
+      "mnemonic": "mov",
+      "operands": "rcx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "launch against supplied secondary scope"
+    },
+    {
+      "at": "0x30e603",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "co_launch forwarding call"
+    },
+    {
+      "at": "0x30f968",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rip + 0xb85462a]",
+      "rip_targets": [
+        "0xbb63f98"
+      ],
+      "public_static_strings": [],
+      "observation": "optional wrapper controlled by static-address global, runtime value not read"
+    },
+    {
+      "at": "0x30f9ac",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "plain branch transfers original heap callable"
+    },
+    {
+      "at": "0x30fa08",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c92219]",
+      "rip_targets": [
+        "0x8fa1c28"
+      ],
+      "public_static_strings": [],
+      "observation": "optional wrapper table"
+    },
+    {
+      "at": "0x30fa2c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x40], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "wrapper stores original callable at +0x40"
+    },
+    {
+      "at": "0x31143d",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer callable loads main callable from +0x60"
+    },
+    {
+      "at": "0x311449",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke main callable +0x10"
+    },
+    {
+      "at": "0x310f6e",
+      "mnemonic": "call",
+      "operands": "0x3b21d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "optional wrapper waits before forwarding"
+    },
+    {
+      "at": "0x310f73",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load wrapped original"
+    },
+    {
+      "at": "0x310f84",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "forward original callable+0x10"
+    },
+    {
+      "at": "0x3cad60",
+      "mnemonic": "call",
+      "operands": "0x3ca730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "co_launch uses same RCX source scope"
+    },
+    {
+      "at": "0x3ca7d5",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load options executor"
+    },
+    {
+      "at": "0x3ca7dc",
+      "mnemonic": "je",
+      "operands": "0x3ca8d4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero executor selects source scope"
+    },
+    {
+      "at": "0x3ca8d4",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x140]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read source scope+0x140"
+    },
+    {
+      "at": "0x3ca8db",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x180], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save chosen executor in resulting job options"
+    },
+    {
+      "at": "0xda5fc6",
+      "mnemonic": "call",
+      "operands": "0x3ca690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy job options into child scope"
+    },
+    {
+      "at": "0x3ca707",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi + 0x140], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy executor into child scope+0x140"
+    },
+    {
+      "at": "0xda5a0f",
+      "mnemonic": "call",
+      "operands": "0x3ca2f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "install child scope"
+    },
+    {
+      "at": "0xda5a27",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke captured outer callable after installing scope"
+    },
+    {
+      "at": "0x3ca33e",
+      "mnemonic": "je",
+      "operands": "0x3ca372",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "setter distinguishes current-coroutine and no-coroutine branches"
+    },
+    {
+      "at": "0x3ca361",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xb79ae48]",
+      "rip_targets": [
+        "0xbb651b0"
+      ],
+      "public_static_strings": [],
+      "observation": "setter uses coroutine local key"
+    },
+    {
+      "at": "0x3ca36b",
+      "mnemonic": "call",
+      "operands": "0x49fad0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set current coroutine local scope"
+    },
+    {
+      "at": "0x3ca385",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0xc8], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "no-coroutine setter uses TLS+0xc8"
+    },
+    {
+      "at": "0x3ca23a",
+      "mnemonic": "je",
+      "operands": "0x3ca26b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "getter distinguishes coroutine and no-coroutine branches"
+    },
+    {
+      "at": "0x3ca25d",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xb79af4c]",
+      "rip_targets": [
+        "0xbb651b0"
+      ],
+      "public_static_strings": [],
+      "observation": "getter uses same coroutine local key"
+    },
+    {
+      "at": "0x3ca264",
+      "mnemonic": "call",
+      "operands": "0x49fc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read current coroutine local scope"
+    },
+    {
+      "at": "0x3ca27e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0xc8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "no-coroutine getter reads TLS+0xc8"
+    },
+    {
+      "at": "0x3ca5d4",
+      "mnemonic": "call",
+      "operands": "0x3ca1f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read current scope"
+    },
+    {
+      "at": "0x3ca5dc",
+      "mnemonic": "je",
+      "operands": "0x3ca5e3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonnull scope returned directly"
+    },
+    {
+      "at": "0x3ca5e3",
+      "mnemonic": "call",
+      "operands": "0x3ca400",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "only null current scope initializes global fallback"
+    },
+    {
+      "at": "0x3c9d5a",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [r14 + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "with-timeout inherits executor"
+    },
+    {
+      "at": "0x3a67702",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected sending call passes null override"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "A statically identified upper path constructs callable table0x9289c38 and submits it through root+0x310 owner, specifically owner+0x10 secondary scope. It is not a direct launch on owner+8 kernel scope.",
+    "The secondary-scope constructor sets parent to owner+8 and executor to owner+0, the same looper constructed in372. General launch supplies zero executor option, so co_launch inherits source+0x140; job installs its child scope before invoking the callable.",
+    "Current-scope resolution prefers the current coroutine local value, uses TLS+0xc8 only without a coroutine, then global fallback if null. TLS+0xc8 scope is distinct from the TLS+0x570 executor in374.",
+    "Callable dispatch reaches0x1866a60 then0x39c3850 virtual+0xd0. Table0x96b7a68 maps that slot to0x3a65aa0 and is written by a real constructor. The captured receiver lookup-to-that-constructor identity is NOT yet closed; this virtual edge remains conditional.",
+    "The optional wrapper can delay before forwarding the original callable; its runtime configuration and exceptional behavior were not read or executed. It does not justify an unconditional execution-time claim.",
+    "These are fixed-file construction and control-flow links, not actual scope/receiver instance, active account, all-caller coverage or runtime reachability proof. The120-second statement remains conditional on the identified implementation and selected default."
+  ],
+  "remaining": [
+    "Captured receiver lookup/creation identity and other receiver types",
+    "Actual runtime scope, overrides, account and request/recipient correlation",
+    "Exceptional wrapper/context-switch and complete shutdown lifetime",
+    "Inbound ID/direction/history contract"
+  ]
+}

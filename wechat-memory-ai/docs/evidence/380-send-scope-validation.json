@@ -1,0 +1,114 @@
+{
+  "checked_at_utc": "2026-10-05T16:41:38.928730+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 35,
+  "unique_anchored_leaves_checked": 6,
+  "unique_direct_edges_with_raw_rel32_math": 36,
+  "unique_tables_checked": 8,
+  "unique_instruction_observations_checked": 126,
+  "rip_references_with_raw_displacement_math": 10,
+  "branch_field_assertions": 77,
+  "explicit_table_targets_checked": 10,
+  "prior_service_subobject_adjustment_field_checks": 3,
+  "shutdown_cases_reviewed": [
+    {
+      "case": "normal root stop",
+      "order": [
+        "service slot+0x28",
+        "secondary cancel/join/destruct",
+        "kernel cancel/join",
+        "adjusted network stop/cleanup"
+      ]
+    },
+    {
+      "case": "group destructor auto-join disabled",
+      "join_called": false
+    },
+    {
+      "case": "auto-join1 and no current coroutine",
+      "join_called": true
+    },
+    {
+      "case": "auto-join1 and current coroutine bit1",
+      "join_called": true
+    },
+    {
+      "case": "auto-join1 and current coroutine bit0",
+      "join_called": false,
+      "diagnostic": "current coroutine is cancelled, skip join"
+    }
+  ],
+  "previous_analysis_script_hashes_unchanged": 9,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 495,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only new ignored scripts changed; old writer not imported or run, only graph/save definitions extracted by AST.",
+    "Direct-edge, virtual-slot and LEA scans only discover candidates; no hits is not a proof of no callers. Pointer matches do not alone establish a table start or runtime receiver type.",
+    "One read_table invocation mistakenly supplied another address as its count; two historical evidence names were initially guessed incorrectly. Corrected using actual schema/file listing; analysis-tool errors only.",
+    "Initial shutdown interpretation used primary-service table; final evidence preserves the +0x10 subobject adjustment from355 and confirms adjusted slot0=0x3575d0 stop/cleanup, not primary destructor.",
+    "Getter leaf0x47310 includes both branches through final ret, not only the first ret. Descriptor text and branch assertions do not substitute for runtime instance proof."
+  ],
+  "remaining": [
+    "Captured receiver lookup/creation identity and other receiver types",
+    "Actual runtime scope, overrides, account and request/recipient correlation",
+    "Exceptional wrapper/context-switch and complete shutdown lifetime",
+    "Inbound ID/direction/history contract",
+    "Concrete looper final quit/join/destruction and indirect network cleanup",
+    "Authorized viable observation method"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-scope-20261006/write_evidence.py",
+      "sha256": "6742457947a8932de8939a226a0ce8eedc470e66d537be631cad7fd8a29f3f5d"
+    },
+    {
+      "cache_path": "data/send-scope-20261006/verify_evidence.py",
+      "sha256": "f7c36cf18dac40a3bfbc8af6c1281b18f46edd16c8a7ffaba00a0fbfb904c702"
+    },
+    {
+      "cache_path": "data/send-scope-20261006/probe.py",
+      "sha256": "653ccb5b718c28501cff1023272db28cf5603c75b78a07723081b997dbb7d034"
+    },
+    {
+      "cache_path": "data/send-scope-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/send-scope-20261006/search_static.py",
+      "sha256": "49b5d3ba4b69928870152d453ed47f48435605fcf795a98437f85c6e64a28b4c"
+    },
+    {
+      "cache_path": "data/send-scope-20261006/scan_edges.py",
+      "sha256": "9607bba279181bf570b7a91f247252aa50fdcd7119da1747e83583612b244068"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

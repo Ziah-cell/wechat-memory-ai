@@ -1,0 +1,611 @@
+{
+  "checked_at_utc": "2026-10-05T16:33:53.040701+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x45e00",
+      "end": "0x46612",
+      "role_inference": "root selected normal shutdown path",
+      "instruction_count": 448,
+      "disk_range_sha256": "756563af7bb83f4a2a9096fd3d6fb6c1f98d21a3f1d0c6dd6cae9504d0411120",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x310860",
+      "end": "0x310a5d",
+      "role_inference": "close owner, cancel/join secondary then kernel group",
+      "instruction_count": 103,
+      "disk_range_sha256": "7904d4858e1e650bddb2d52da4bf42d457afa7ec07340f16cf42a87d7f26ca96",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda88c0",
+      "end": "0xda8c1a",
+      "role_inference": "group cancellation flag and per-job virtual cancel",
+      "instruction_count": 178,
+      "disk_range_sha256": "ddf567966dfc74f7e52005cb1b3d1e430c49582d128147273a0e70529ad69955",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda8420",
+      "end": "0xda87fa",
+      "role_inference": "group join loop releases mutex before per-job join",
+      "instruction_count": 212,
+      "disk_range_sha256": "f52080f4e5a508f08394227011ba3cf14b79b60c4263cb81279ab2667e25a54e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cb3e0",
+      "end": "0x3cb45d",
+      "role_inference": "co_scope destructor delegates to embedded group destructor",
+      "instruction_count": 36,
+      "disk_range_sha256": "a5f9522c051922adb4673359ff030cee442bc71e17faa0aa2a258beff6f16b14",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda7df0",
+      "end": "0xda8328",
+      "role_inference": "group destructor conditionally joins",
+      "instruction_count": 342,
+      "disk_range_sha256": "52cffd076b3a407fa0112dc178cbd9059c3d972cacc056859e75c3e535735699",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda8350",
+      "end": "0xda83f0",
+      "role_inference": "group destructor preliminary list walk calls0x4a7260; not itself queue drain",
+      "instruction_count": 44,
+      "disk_range_sha256": "e248af3dd1a45a48a8a6d6678b784a35443223694d5c5a9f144a85189b9c889e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3575d0",
+      "end": "0x357882",
+      "role_inference": "adjusted network service stop/cleanup method, not primary destructor",
+      "instruction_count": 161,
+      "disk_range_sha256": "7a26c98a5b1f780c897d06bc9b849ca6e698bdaf5054d91eb154361690edbeb6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30d440",
+      "end": "0x30d4a3",
+      "role_inference": "owner destructor releases secondary and kernel scopes, not a demonstrated looper join",
+      "instruction_count": 30,
+      "disk_range_sha256": "820107d0c129727469865995246377941571b74827b1ef172d05c921cd0a3a4d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35ebc0",
+      "end": "0x35ec6c",
+      "role_inference": "separate primary service destructor, retained to distinguish adjusted interface",
+      "instruction_count": 46,
+      "disk_range_sha256": "44b39e71b5dd1b020152f6bbc87a77f6c5315b22e5d1362cef296e8cf6e13df2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x45050",
+      "end": "0x4530c",
+      "role_inference": "constructs and stores adjusted service interface, already in355",
+      "instruction_count": 162,
+      "disk_range_sha256": "1b22f3992c3da2fc9e4e139ab7e651b84c654d4605f38e9316a8d4cd1b025688",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x49eaa0",
+      "size": 13,
+      "anchor": "direct call0xda7fe3 returns current coroutine+0x4f8 low bit",
+      "instructions": [
+        {
+          "at": "0x49eaa0",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx]"
+        },
+        {
+          "at": "0x49eaa3",
+          "mnemonic": "movzx",
+          "operands": "eax, byte ptr [rax + 0x4f8]"
+        },
+        {
+          "at": "0x49eaaa",
+          "mnemonic": "and",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0x49eaac",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x461d5",
+      "kind": "call",
+      "to": "0x310860"
+    },
+    {
+      "at": "0x310891",
+      "kind": "call",
+      "to": "0xda88c0"
+    },
+    {
+      "at": "0x31089e",
+      "kind": "call",
+      "to": "0xda8420"
+    },
+    {
+      "at": "0x3108cf",
+      "kind": "call",
+      "to": "0xda88c0"
+    },
+    {
+      "at": "0x310981",
+      "kind": "call",
+      "to": "0xda8420"
+    },
+    {
+      "at": "0x3cb43a",
+      "kind": "call",
+      "to": "0xda7df0"
+    },
+    {
+      "at": "0xda7fb0",
+      "kind": "call",
+      "to": "0xda8350"
+    },
+    {
+      "at": "0xda7fe3",
+      "kind": "call",
+      "to": "0x49eaa0"
+    },
+    {
+      "at": "0xda7ff0",
+      "kind": "call",
+      "to": "0xda8420"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8fb02d8",
+      "role_inference": "co_scope destructor",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x3cb3e0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9126068",
+      "role_inference": "standard co_job cancel and join",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0xda4cc0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xda5140"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5398",
+      "role_inference": "adjusted service stop/cleanup and submit",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x3575d0"
+        },
+        {
+          "offset": "0x28",
+          "target": "0x35bec0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5338",
+      "role_inference": "primary service destructor, different table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x35ebc0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x460a4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "per-service virtual+0x28 precedes scope group stop"
+    },
+    {
+      "at": "0x461ce",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x310]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load same root scope owner+0x310"
+    },
+    {
+      "at": "0x461d5",
+      "mnemonic": "call",
+      "operands": "0x310860",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cancel/join scope groups"
+    },
+    {
+      "at": "0x462dc",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x2c8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load adjusted network service+0x2c8"
+    },
+    {
+      "at": "0x462e6",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call adjusted interface slot0; selected target0x3575d0, not0x35ebc0"
+    },
+    {
+      "at": "0x310881",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rcx + 0x60], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set owner closing low-byte flag1"
+    },
+    {
+      "at": "0x310891",
+      "mnemonic": "call",
+      "operands": "0xda88c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cancel secondary scope embedded group"
+    },
+    {
+      "at": "0x31089e",
+      "mnemonic": "call",
+      "operands": "0xda8420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "join secondary group"
+    },
+    {
+      "at": "0x3108b4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "then secondary scope destructor"
+    },
+    {
+      "at": "0x3108b6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear owner secondary scope pointer"
+    },
+    {
+      "at": "0x3108cf",
+      "mnemonic": "call",
+      "operands": "0xda88c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cancel kernel scope group"
+    },
+    {
+      "at": "0x310981",
+      "mnemonic": "call",
+      "operands": "0xda8420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "join kernel group; owner+8 retained here"
+    },
+    {
+      "at": "0xda8b29",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "lock group mutex"
+    },
+    {
+      "at": "0xda8b4f",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rsi + 0xe1], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set group+0xe1 cancellation flag; previous value controls iteration"
+    },
+    {
+      "at": "0xda8ba4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cancel each retained job through virtual+0x10"
+    },
+    {
+      "at": "0xda86c0",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rsi + 0xd8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "join loop checks group+0xd8 count"
+    },
+    {
+      "at": "0xda86c8",
+      "mnemonic": "je",
+      "operands": "0xda8773",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "empty group leaves loop"
+    },
+    {
+      "at": "0xda86f3",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain first job object from group list"
+    },
+    {
+      "at": "0xda8702",
+      "mnemonic": "call",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unlock before calling job join"
+    },
+    {
+      "at": "0xda8712",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "per-job virtual+0x18 join"
+    },
+    {
+      "at": "0xda871c",
+      "mnemonic": "call",
+      "operands": "0xda8ce0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "remove joined job from group"
+    },
+    {
+      "at": "0xda875c",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "relock before repeating"
+    },
+    {
+      "at": "0x3cb43a",
+      "mnemonic": "call",
+      "operands": "0xda7df0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy group at scope+8"
+    },
+    {
+      "at": "0xda7fb0",
+      "mnemonic": "call",
+      "operands": "0xda8350",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preliminary per-job walk before optional join"
+    },
+    {
+      "at": "0xda7fb6",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rsi + 0x108], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "auto-join only when group+0x108 equals1"
+    },
+    {
+      "at": "0xda7fbd",
+      "mnemonic": "jne",
+      "operands": "0xda8227",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other flag values skip joining"
+    },
+    {
+      "at": "0xda7fd2",
+      "mnemonic": "call",
+      "operands": "0x49dd00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "obtain current coroutine"
+    },
+    {
+      "at": "0xda7fdd",
+      "mnemonic": "je",
+      "operands": "0xda7fed",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "no current coroutine goes to join branch"
+    },
+    {
+      "at": "0xda7fe3",
+      "mnemonic": "call",
+      "operands": "0x49eaa0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read current-coroutine flag low bit"
+    },
+    {
+      "at": "0xda7feb",
+      "mnemonic": "je",
+      "operands": "0xda7ffb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero bit skips join and logs cancelled-current-coroutine diagnostic"
+    },
+    {
+      "at": "0xda7ff0",
+      "mnemonic": "call",
+      "operands": "0xda8420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "explicit destructor join branch"
+    },
+    {
+      "at": "0xda80d0",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x837e6a9]",
+      "rip_targets": [
+        "0x9126780"
+      ],
+      "public_static_strings": [
+        "%@() \"%_\", current coroutine is cancelled, skip join..."
+      ],
+      "observation": "cancelled current coroutine skip-join diagnostic"
+    },
+    {
+      "at": "0x49eaa3",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rax + 0x4f8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "flag source current coroutine+0x4f8; do not invert interpretation from function name"
+    },
+    {
+      "at": "0x3576f5",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rsi + 8], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stop/cleanup clears adjusted interface+8 flag"
+    },
+    {
+      "at": "0x3576f8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x18], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clears adjusted interface+0x18"
+    },
+    {
+      "at": "0x357700",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0xb8094aa]",
+      "rip_targets": [
+        "0xbb60bb0"
+      ],
+      "public_static_strings": [],
+      "observation": "indirect external cleanup call; full upstream lifetime not certified"
+    },
+    {
+      "at": "0x357831",
+      "mnemonic": "call",
+      "operands": "0x35e940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clears retained task-map nodes via shared map helper"
+    },
+    {
+      "at": "0x357841",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x60], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "sets adjusted map count+0x60 to0"
+    },
+    {
+      "at": "0x30d459",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "owner destructor deletes remaining secondary scope"
+    },
+    {
+      "at": "0x30d474",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "then remaining kernel scope"
+    },
+    {
+      "at": "0x30d499",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "remaining holder cleanup; no complete looper ownership conclusion"
+    },
+    {
+      "at": "0x35ebcb",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c46766]",
+      "rip_targets": [
+        "0x8fa5338"
+      ],
+      "public_static_strings": [],
+      "observation": "primary service destructor table is0x8fa5338, distinct from adjusted0x8fa5398"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Selected normal root shutdown calls per-service+0x28, then0x310860 to cancel/join scope groups, then adjusted network interface slot0. The latter is0x3575d0 under the construction in355, not the primary service destructor0x35ebc0.",
+    "Secondary group is cancelled, joined, then its scope destroyed and owner+0x10 cleared; kernel group is cancelled and joined without destroying owner+8 in0x310860. These are normal-return ordering statements, not exception or race guarantees.",
+    "Group join waits on member jobs outside the group mutex, then removes them and repeats. It is not a demonstrated executor queue drain or proof that every timer/network callback has exited.",
+    "Group destructor skips join when auto-join flag !=1. With flag1, no current coroutine goes to join; current coroutine flag+0x4f8 bit1 goes to join, bit0 follows the explicit cancelled-current-coroutine skip-join diagnostic. Unconditional destructor-waits claims are false for this control flow.",
+    "Owner destructor releases scopes, but its selected body does not establish concrete looper quit/join/destruction. Full network cleanup, external indirect callbacks, outstanding raw/shared captures and exceptional lifetime remain open.",
+    "No cancellation, group join, stop, local completion or cleanup event proves friend delivery, non-delivery or retraction."
+  ],
+  "static_cases": [
+    {
+      "case": "normal root stop",
+      "order": [
+        "service slot+0x28",
+        "secondary cancel/join/destruct",
+        "kernel cancel/join",
+        "adjusted network stop/cleanup"
+      ]
+    },
+    {
+      "case": "group destructor auto-join disabled",
+      "join_called": false
+    },
+    {
+      "case": "auto-join1 and no current coroutine",
+      "join_called": true
+    },
+    {
+      "case": "auto-join1 and current coroutine bit1",
+      "join_called": true
+    },
+    {
+      "case": "auto-join1 and current coroutine bit0",
+      "join_called": false,
+      "diagnostic": "current coroutine is cancelled, skip join"
+    }
+  ]
+}

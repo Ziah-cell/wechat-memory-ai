@@ -1,5 +1,15 @@
 # 项目开发约定
 
+## 最新：上层发送scope与分组停止边界（2026-10-06）
+
+377–380继续固定哈希DLL磁盘只读。1802d10构造表9289c38的发送闭包，经45d10/47310取root+310 owner，再经30efb0→30e190使用owner+10第二scope。30fe10创建该scope时设父scope=owner+8、executor=owner+0同一looper；launch options executor为0，沿用源scope。job安装子scope后调用闭包；当前scope优先协程局部值，无协程才用TLS+c8，空值再取全局。TLS+c8不同于374的executor TLS+570。
+
+闭包1865d60→1866a60→39c3850虚槽+d0；候选表96b7a68+d0=3a65aa0且有构造赋值。**捕获receiver的查找结果与这个构造器尚未闭合**，不能把虚边、真实对象、全部调用者或120秒实际到期宣布已认证。可选延迟包装分支保留。
+
+378确认45e00正常路径先服务+28，再310860：第二scope cancel/join/destruct，kernel scope cancel/join，之后调整后的网络接口表8fa5398+0→3575d0停止/清理。不是主服务表8fa5338+0→35ebc0析构，必须保留355的+10子对象调整。group join只针对成员job，不是整个执行器清空。group析构auto-join不为1或当前协程进入明确cancelled诊断分支时跳过join；完整looper quit/join/销毁和异常路径仍缺。
+
+下一项优先补receiver查找/构造身份与请求/响应目标对应，再补实际scope/覆盖、最终退出链及入站ID/方向/历史。观察方案更新O1/O4，仅设计。379原监听保存状态仍停止；产品0.1.22，自动回复关闭，无运行适配器、进程/密钥访问或产品/原生测试。380同一执行者静态复核通过，旧9脚本哈希未改。新脚本在data/send-scope-20261006，旧writer只AST取纯helper；后续证据从381起。
+
 ## 最新：具体looper、计时单位与取消顺序（2026-10-05）
 
 372–376静态核对同一固定哈希DLL。30d010→da2a20→da2070→da1830构造表9125c18的looper，30d1ff写kernel scope+140；其默认实现表9125858。+8=fc39d0、+10=fc3c80、+18=fc3f30→d9efd0。子scope/with-timeout复制executor，所选发送不覆盖；尚未证明发送当前scope/活跃实例必为此looper。
