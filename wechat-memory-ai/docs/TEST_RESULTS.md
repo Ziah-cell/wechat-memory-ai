@@ -1,5 +1,11 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## .50 磁盘静态兼容性核查（2026-10-05）
+
+[343](evidence/343-disk-client-pe-compatibility.json)记录本机EXE/DLL版本、哈希、PE节与旧RVA对照；[344](evidence/344-send-compat-public-refs.json)记录公开refs及额外固定头文件；[345](evidence/345-disk-send-literal-anchors.json)是公开字面量与有限字节扫描结果，未找到可调用入口。[346](evidence/346-disk-pe-crosscheck.json)通过第二种实现复核两个哈希/版本与10个代码位置的异常表区间，同一执行者，不是独立人员复审或实机运行测试。
+
+[347](evidence/347-send-compat-checkpoint.json)保存原监听仍停止；[348](evidence/348-send-compat-static-validation.json)核对来源常量、JSON结构、链接及文档提交范围。详细局限见[SEND_COMPATIBILITY_4_1_15_50](SEND_COMPATIBILITY_4_1_15_50.md)。本轮临时脚本只读磁盘文件，未加载DLL/读进程内存；未安装分析依赖或运行第三方候选。产品仍0.1.22，未重跑回归/13项原生/安装测试，既有369项结果不扩张为本轮兼容认证；无真实模型、记忆或发送。
+
 ## 扩展非 UIA 发送静态核查（2026-10-05）
 
 [339](evidence/339-non-uia-expansion-manifest.json)固定新增5仓库46份公开文本与树元数据；[340](evidence/340-hook-static-traces.json)保存上一ID去重、零ID正文前缀、129条覆盖128槽、超时后完成以及先出队再发送的静态推演。它们不是执行第三方代码、性能测试或本机微信复现。具体结论见[NON_UIA_SEND_AUDIT](NON_UIA_SEND_AUDIT.md)。

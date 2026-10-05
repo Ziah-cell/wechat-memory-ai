@@ -1,0 +1,54 @@
+{
+  "scope": "Evidence/source-constant and documentation self-validation; no product/native test execution",
+  "checked_at_utc": "2026-10-05T03:57:12.314253+00:00",
+  "status": "passed",
+  "pinned_offset_sources_hash_verified": 2,
+  "source_constants_matched": 16,
+  "function_rvas_interior_to_unwind_ranges": 9,
+  "same_agent_dual_reader_code_ranges": 10,
+  "files_with_matching_version_and_hash": 2,
+  "public_literal_occurrences": 4,
+  "source_line_links_checked": 3,
+  "local_links_checked": 414,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/NON_UIA_ROUTE_AUDIT.md",
+    "docs/NON_UIA_SEND_AUDIT.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "changed_paths_scope": "documentation and redacted static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "third_party_candidate_executed": false,
+  "dll_loaded": false,
+  "process_memory_read": false,
+  "independent_reviewer": false,
+  "analysis_scripts": [
+    {
+      "cache_file": "inspect_disk_pe.py",
+      "sha256": "a3bb8c51c69da38099150b0fb81a7ed70fdbc0083ed0db769d21001756af425c"
+    },
+    {
+      "cache_file": "find_send_anchors.py",
+      "sha256": "5880b3d5d20f4ee409cf2a13fc345a2e9c22d5eb6c7daa2e3a48a755a0ca4dd1"
+    },
+    {
+      "cache_file": "crosscheck-pe.ps1",
+      "sha256": "a3abbe3db414756e2142e7c144c597552156f62dac114e21fcbe58884d414f10"
+    },
+    {
+      "cache_file": "validate_evidence.py",
+      "sha256": "3e552e4fb822551063bf6e6a6dc6fdc384322b125c67406198b6dbbe2d0708eb"
+    }
+  ],
+  "limitations": [
+    "No call instruction boundary, function semantics or ABI was verified.",
+    "Limited pattern absence is not absence of all references.",
+    "Disk metadata does not attest loaded process state or minimized operation."
+  ]
+}

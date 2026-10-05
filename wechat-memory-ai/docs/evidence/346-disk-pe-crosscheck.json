@@ -1,0 +1,33 @@
+{
+  "scope": "Second implementation: PowerShell BinaryReader seeks and binary search, plus Get-FileHash and version resources",
+  "checked_at_utc": "2026-10-04T18:29:55.2887182Z",
+  "status": "passed",
+  "files": [
+    {
+      "relative_file": "Weixin.exe",
+      "file_version": "4.1.15.50",
+      "product_version": "4.1.15.50",
+      "sha256": "a75c86e57a8ec581985f102c04d5125ce1d3f21a4043759a610ba01f06275255",
+      "size_bytes": 3128368,
+      "runtime_function_count": 7298,
+      "code_probe_ranges_crosschecked": 0,
+      "status": "matched"
+    },
+    {
+      "relative_file": "4.1.15.50/Weixin.dll",
+      "file_version": "4.1.15.50",
+      "product_version": "4.1.15.50",
+      "sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+      "size_bytes": 204099112,
+      "runtime_function_count": 513387,
+      "code_probe_ranges_crosschecked": 10,
+      "status": "matched"
+    }
+  ],
+  "same_agent_crosscheck": true,
+  "independent_reviewer": false,
+  "dll_loaded": false,
+  "process_memory_read": false,
+  "binary_uploaded": false,
+  "product_or_native_tests_run": false
+}

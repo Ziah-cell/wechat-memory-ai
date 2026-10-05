@@ -1,0 +1,105 @@
+{
+  "scope": "Public ref enumeration and pinned extra offset header; no releases downloaded",
+  "checked_at_utc": "2026-10-04T18:32:49.2653643Z",
+  "references": [
+    {
+      "repository": "aixed/WeChat-Hook",
+      "branches": [
+        {
+          "name": "add-license-1",
+          "sha": "a8d422d4b3ac5d422ea9961dac0f20bd6d75e596"
+        },
+        {
+          "name": "main",
+          "sha": "e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6"
+        },
+        {
+          "name": "old_version",
+          "sha": "356848c59fbf0948c3b19f22973e3744fb2cbae1"
+        }
+      ],
+      "tags": [
+        {
+          "name": "v411027_",
+          "sha": "53ba84edec4414c48abcbe86d6efa98eac1fcbfd"
+        },
+        {
+          "name": "v4.1.10.27",
+          "sha": "0116a9c69b75dbde541212c8bccad84a634748a5"
+        },
+        {
+          "name": "v3.9.2.23",
+          "sha": "c9e8d9b6464cdb648836bb52e3aaf72263aba69d"
+        },
+        {
+          "name": "v3.8.0.41",
+          "sha": "966e777edc15f733309db0a586e45537ccfc0506"
+        },
+        {
+          "name": "ccd",
+          "sha": "b8ce44ed77d834af902370eb228b88776f9b06a7"
+        },
+        {
+          "name": "微信Hook",
+          "sha": "18f9d2d2d66d3646e2575423f95f57587809b07a"
+        }
+      ],
+      "page_limit": 100,
+      "branch_count": 3,
+      "tag_count": 6
+    },
+    {
+      "repository": "navysoto/wxhook",
+      "branches": [
+        {
+          "name": "main",
+          "sha": "fbccd52713f8cc7cd1023f852bf625af4fe38624"
+        }
+      ],
+      "tags": [],
+      "page_limit": 100,
+      "branch_count": 1,
+      "tag_count": 0
+    },
+    {
+      "repository": "mosheng20205/WechatHook4.1.10.27",
+      "branches": [
+        {
+          "name": "codex/realtime-message-wxid-autoreply",
+          "sha": "f8881ac52a28fb529234543209b7745ec8f911d9"
+        },
+        {
+          "name": "main",
+          "sha": "713ec7d6f01d858e067a623c9bf2cda64d0d3e19"
+        }
+      ],
+      "tags": [],
+      "page_limit": 100,
+      "branch_count": 2,
+      "tag_count": 0
+    }
+  ],
+  "comparison": {
+    "repository": "mosheng20205/WechatHook4.1.10.27",
+    "base": "713ec7d6f01d858e067a623c9bf2cda64d0d3e19",
+    "head": "f8881ac52a28fb529234543209b7745ec8f911d9",
+    "status": "behind",
+    "ahead_by": 0,
+    "behind_by": 5,
+    "changed_files": []
+  },
+  "additional_source": {
+    "repository": "aixed/WeChat-Hook",
+    "commit": "e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6",
+    "path": "include/global.h",
+    "url": "https://raw.githubusercontent.com/aixed/WeChat-Hook/e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6/include/global.h",
+    "local_file": "aixed-global.h.txt",
+    "sha256": "337e826b6e26ff2faae12367e051487fbbf1668b2c82a39d82c18cc87f4ea6b3",
+    "size_bytes": 3378
+  },
+  "existing_sources": {
+    "mosheng_send_notes": "331-non-uia-source-manifest.json",
+    "navysoto_offset_table": "339-non-uia-expansion-manifest.json"
+  },
+  "search_limit": "Exact .50 public queries did not produce a qualified implementation; not an exhaustive absence claim"
+}

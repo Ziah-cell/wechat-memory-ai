@@ -1,0 +1,89 @@
+{
+  "scope": "Public protocol/type literals in installed DLL disk image; raw RIP-LEA byte-pattern candidates only",
+  "checked_at_utc": "2026-10-05T02:28:54.992711+08:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "anchors": [
+    {
+      "public_literal": "/cgi-bin/micromsg-bin/newsendmsg",
+      "occurrences": [
+        {
+          "rva": "0x96d8fb0",
+          "section": ".rdata",
+          "exact_null_terminated": true,
+          "candidate_rip_lea_references": []
+        }
+      ]
+    },
+    {
+      "public_literal": "SendMsgRequestNew",
+      "occurrences": [
+        {
+          "rva": "0x9590251",
+          "section": ".rdata",
+          "exact_null_terminated": true,
+          "candidate_rip_lea_references": []
+        }
+      ]
+    },
+    {
+      "public_literal": "MicroMsgRequestNew",
+      "occurrences": [
+        {
+          "rva": "0x95901c1",
+          "section": ".rdata",
+          "exact_null_terminated": true,
+          "candidate_rip_lea_references": []
+        }
+      ]
+    },
+    {
+      "public_literal": "SendMsgResponseNew",
+      "occurrences": [
+        {
+          "rva": "0x9590371",
+          "section": ".rdata",
+          "exact_null_terminated": true,
+          "candidate_rip_lea_references": []
+        }
+      ]
+    }
+  ],
+  "third_party_code_executed": false,
+  "dll_loaded": false,
+  "process_memory_read": false,
+  "binary_uploaded": false,
+  "callable_entry_identified": false,
+  "limitation": "Raw byte-pattern matches require disassembly, instruction-boundary verification and semantic call-chain analysis; serialization/type strings are not a supported sending interface.",
+  "supplementary_raw_pattern_checks": {
+    "absolute_pointer_search": {
+      "image_base": "0x180000000",
+      "raw_lea_pattern_count": 482725,
+      "rows": [
+        {
+          "literal": "/cgi-bin/micromsg-bin/newsendmsg",
+          "absolute_pointer_rvas": []
+        },
+        {
+          "literal": "SendMsgRequestNew",
+          "absolute_pointer_rvas": []
+        },
+        {
+          "literal": "MicroMsgRequestNew",
+          "absolute_pointer_rvas": []
+        },
+        {
+          "literal": "SendMsgResponseNew",
+          "absolute_pointer_rvas": []
+        }
+      ],
+      "instruction_boundary_verified": false
+    },
+    "near_literal_search": {
+      "scope": "Raw LEA pattern targets within 40 bytes before known public literals; proximity alone does not prove ownership",
+      "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+      "candidates": [],
+      "instruction_boundary_verified": false,
+      "callable_entry_identified": false
+    }
+  }
+}
