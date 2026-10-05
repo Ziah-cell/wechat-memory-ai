@@ -1,0 +1,725 @@
+{
+  "checked_at_utc": "2026-10-05T17:36:59.161011+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a72550",
+      "end": "0x3a8255b",
+      "role_inference": "selected Text entry supplies first options DWORD1 and timeout120000",
+      "instruction_count": 15805,
+      "disk_range_sha256": "3e97b3f40ca09a95d33de8dbc36df36a1afc2a765856163c335109bf44e4cd53",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a65aa0",
+      "end": "0x3a66ff8",
+      "role_inference": "Location supplies first options DWORD0, retained for comparison only",
+      "instruction_count": 1238,
+      "disk_range_sha256": "98356c1701de4d95febc1fa75ca5fcd2247c32ef8d205fafb7b2728375dfa1e3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a675c0",
+      "end": "0x3a68075",
+      "role_inference": "common wrapper retry loop: overall status gate, remaining counter, delay, cleanup, reentry",
+      "instruction_count": 624,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end": "0x3a6a7cf",
+      "role_inference": "launch/join selected request job and return overall result, previously traced downstream",
+      "instruction_count": 329,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2f02010",
+      "end": "0x2f02065",
+      "role_inference": "copies outer request into fresh per-iteration local request",
+      "instruction_count": 20,
+      "disk_range_sha256": "71a800f59c7b7ccabdba25adef9e178642df0728d1b6ce53ed849b16e31b682c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b21d0",
+      "end": "0x3b2229",
+      "role_inference": "creates timeout promise then awaits it",
+      "instruction_count": 31,
+      "disk_range_sha256": "08e1f230bf0b517fc7bfaeadb59a24608bdcfbfa4ab12d6eaf05085161e1cfda",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49eab0",
+      "end": "0x49eae0",
+      "role_inference": "constructs delay callable with captured DWORD",
+      "instruction_count": 13,
+      "disk_range_sha256": "92251d5ad71724730ff0155a19d5f8fd0d844fc0a75342bf50a19f8525bdf8cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b4b40",
+      "end": "0x3b4c57",
+      "role_inference": "immediately invokes supplied callable+0x10 with promise",
+      "instruction_count": 88,
+      "disk_range_sha256": "3ac7c21dc235178096966ddfcd984ec12d734aaabffb1cff8505ee4c24f08215",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a4da0",
+      "end": "0x4a5127",
+      "role_inference": "delay callable reads current coroutine executor and schedules via+0x10",
+      "instruction_count": 207,
+      "disk_range_sha256": "ab1916723f14694b69e77a11590f873b74eb4379e53a1f44ab34816e45c0885c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b1ff0",
+      "end": "0x3b2145",
+      "role_inference": "await wrapper with negative-result exception path, already evidenced in359",
+      "instruction_count": 66,
+      "disk_range_sha256": "e3b33a6ced70d0a367d09b30da452210156e882dd00c35aa82708b9be1efb21f",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x3a799a8",
+      "kind": "call",
+      "to": "0x3a675c0"
+    },
+    {
+      "at": "0x3a66023",
+      "kind": "call",
+      "to": "0x3a675c0"
+    },
+    {
+      "at": "0x3a67755",
+      "kind": "call",
+      "to": "0x2f02010"
+    },
+    {
+      "at": "0x3a67943",
+      "kind": "call",
+      "to": "0x3a6a2c0"
+    },
+    {
+      "at": "0x3a67b97",
+      "kind": "call",
+      "to": "0x3b21d0"
+    },
+    {
+      "at": "0x3b21ec",
+      "kind": "call",
+      "to": "0x49eab0"
+    },
+    {
+      "at": "0x3b21f5",
+      "kind": "call",
+      "to": "0x3b1ff0"
+    },
+    {
+      "at": "0x49ead2",
+      "kind": "call",
+      "to": "0x3b4b40"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8fba4c8",
+      "role_inference": "delay callable created by0x49eab0",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x4a4da0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a79890",
+      "mnemonic": "movabs",
+      "operands": "rax, 0x1d4c000000001",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Text packed options: retry budget1 and timeout120000"
+    },
+    {
+      "at": "0x3a799a8",
+      "mnemonic": "call",
+      "operands": "0x3a675c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected Text common-wrapper call"
+    },
+    {
+      "at": "0x3a65f94",
+      "mnemonic": "movabs",
+      "operands": "rax, 0x1d4c000000000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Location packed options: budget0 and timeout120000"
+    },
+    {
+      "at": "0x3a66023",
+      "mnemonic": "call",
+      "operands": "0x3a675c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Location common-wrapper call"
+    },
+    {
+      "at": "0x3a6760d",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp + 0x330]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load options pointer"
+    },
+    {
+      "at": "0x3a67614",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read original first DWORD"
+    },
+    {
+      "at": "0x3a67616",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x27c], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy remaining budget to rbp+0x27c before loop"
+    },
+    {
+      "at": "0x3a6764d",
+      "mnemonic": "jmp",
+      "operands": "0x3a67668",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "initial jump to attempt setup"
+    },
+    {
+      "at": "0x3a6765f",
+      "mnemonic": "test",
+      "operands": "r13b, r13b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cleanup tail checks repeat flag"
+    },
+    {
+      "at": "0x3a67662",
+      "mnemonic": "je",
+      "operands": "0x3a68035",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "flag0 exits, flag1 falls into new attempt"
+    },
+    {
+      "at": "0x3a67668",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x160], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "attempt setup begins"
+    },
+    {
+      "at": "0x3a67691",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x130], 0xffffff92",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "local fallback statusA=-110"
+    },
+    {
+      "at": "0x3a676a4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x134], 0xfffffbaa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "local fallback statusB=-1110"
+    },
+    {
+      "at": "0x3a676c3",
+      "mnemonic": "mov",
+      "operands": "ebx, dword ptr [rdi + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read timeout anew for this attempt"
+    },
+    {
+      "at": "0x3a67702",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "with-timeout executor override remains null"
+    },
+    {
+      "at": "0x3a67723",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct with-timeout inside loop"
+    },
+    {
+      "at": "0x3a6774e",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x220]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same original request pointer for per-attempt copy"
+    },
+    {
+      "at": "0x3a67755",
+      "mnemonic": "call",
+      "operands": "0x2f02010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy original request each attempt"
+    },
+    {
+      "at": "0x3a67932",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "this attempt timeout object"
+    },
+    {
+      "at": "0x3a67936",
+      "mnemonic": "mov",
+      "operands": "rdx, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall result destination"
+    },
+    {
+      "at": "0x3a67940",
+      "mnemonic": "mov",
+      "operands": "r8, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "this attempt local request"
+    },
+    {
+      "at": "0x3a67943",
+      "mnemonic": "call",
+      "operands": "0x3a6a2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "launch/join common send helper"
+    },
+    {
+      "at": "0x3a679d9",
+      "mnemonic": "call",
+      "operands": "0x2f02160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy this attempt request copy before retry decision"
+    },
+    {
+      "at": "0x3a679ef",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "release retained with-timeout member on normal return"
+    },
+    {
+      "at": "0x3a67afd",
+      "mnemonic": "mov",
+      "operands": "r15d, dword ptr [rdi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read original budget for accounting"
+    },
+    {
+      "at": "0x3a67b03",
+      "mnemonic": "mov",
+      "operands": "r9d, dword ptr [rbp + 0x27c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read remaining budget"
+    },
+    {
+      "at": "0x3a67b0a",
+      "mnemonic": "sub",
+      "operands": "r13d, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "attempt index=original minus remaining"
+    },
+    {
+      "at": "0x3a67b14",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall statusA from result+0"
+    },
+    {
+      "at": "0x3a67b16",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [rcx + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall statusB from result+4"
+    },
+    {
+      "at": "0x3a67b1e",
+      "mnemonic": "or",
+      "operands": "ecx, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine overall statuses"
+    },
+    {
+      "at": "0x3a67b21",
+      "mnemonic": "je",
+      "operands": "0x3a67cb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "both zero skip retry"
+    },
+    {
+      "at": "0x3a67b65",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload statusA after accounting call"
+    },
+    {
+      "at": "0x3a67b67",
+      "mnemonic": "test",
+      "operands": "edx, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test A==0"
+    },
+    {
+      "at": "0x3a67b6c",
+      "mnemonic": "cmp",
+      "operands": "edx, -0x6e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare A==-110"
+    },
+    {
+      "at": "0x3a67b72",
+      "mnemonic": "or",
+      "operands": "cl, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "allow A0 or A-110"
+    },
+    {
+      "at": "0x3a67b74",
+      "mnemonic": "mov",
+      "operands": "r9d, dword ptr [rbp + 0x27c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload remaining counter"
+    },
+    {
+      "at": "0x3a67b7b",
+      "mnemonic": "test",
+      "operands": "r9d, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "budget tested nonzero, not signed-positive"
+    },
+    {
+      "at": "0x3a67b81",
+      "mnemonic": "and",
+      "operands": "al, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine eligible status and remaining budget"
+    },
+    {
+      "at": "0x3a67b85",
+      "mnemonic": "jne",
+      "operands": "0x3a67cb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ineligible exits retry path"
+    },
+    {
+      "at": "0x3a67b8b",
+      "mnemonic": "mov",
+      "operands": "eax, 0x3e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw base delay1000"
+    },
+    {
+      "at": "0x3a67b90",
+      "mnemonic": "mov",
+      "operands": "ecx, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "shift count is attempt index"
+    },
+    {
+      "at": "0x3a67b93",
+      "mnemonic": "shl",
+      "operands": "eax, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "32-bit left shift"
+    },
+    {
+      "at": "0x3a67b97",
+      "mnemonic": "call",
+      "operands": "0x3b21d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "await delay before decrement/reentry"
+    },
+    {
+      "at": "0x3a67b9d",
+      "mnemonic": "dec",
+      "operands": "dword ptr [rbp + 0x27c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "decrement remaining budget only after normal wait return"
+    },
+    {
+      "at": "0x3a67bad",
+      "mnemonic": "mov",
+      "operands": "r13b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "repeat flag1"
+    },
+    {
+      "at": "0x3a67cb0",
+      "mnemonic": "mov",
+      "operands": "bl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "exit path preserves final result"
+    },
+    {
+      "at": "0x3a67cf0",
+      "mnemonic": "xor",
+      "operands": "r13d, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "repeat flag0"
+    },
+    {
+      "at": "0x3a67d3f",
+      "mnemonic": "test",
+      "operands": "bl, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retry cleanup versus final-result preservation"
+    },
+    {
+      "at": "0x3a67dee",
+      "mnemonic": "jb",
+      "operands": "0x3a6765f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal cleanup returns to repeat flag check"
+    },
+    {
+      "at": "0x3a67e28",
+      "mnemonic": "jmp",
+      "operands": "0x3a67cf3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retry branch without logging still enters same cleanup"
+    },
+    {
+      "at": "0x3a68035",
+      "mnemonic": "mov",
+      "operands": "rax, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return final result"
+    },
+    {
+      "at": "0x3b21e3",
+      "mnemonic": "mov",
+      "operands": "edx, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass raw delay"
+    },
+    {
+      "at": "0x3b21ec",
+      "mnemonic": "call",
+      "operands": "0x49eab0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct delay promise"
+    },
+    {
+      "at": "0x3b21f5",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "await; cancellation/exception can prevent next attempt"
+    },
+    {
+      "at": "0x49eab8",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8b1ba09]",
+      "rip_targets": [
+        "0x8fba4c8"
+      ],
+      "public_static_strings": [],
+      "observation": "delay callable table"
+    },
+    {
+      "at": "0x49eac4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture raw DWORD at callable+8"
+    },
+    {
+      "at": "0x49ead2",
+      "mnemonic": "call",
+      "operands": "0x3b4b40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke promise factory"
+    },
+    {
+      "at": "0x3b4bb0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "factory invokes callable+0x10"
+    },
+    {
+      "at": "0x4a4e0d",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 0x1f0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "current coroutine TLS source"
+    },
+    {
+      "at": "0x4a4e75",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdi + 0x368]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "current coroutine executor at+0x368"
+    },
+    {
+      "at": "0x4a4f8e",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read captured delay"
+    },
+    {
+      "at": "0x4a4f97",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "executor virtual+0x10 schedules delay"
+    },
+    {
+      "at": "0x4a50c0",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x8b154b9]",
+      "rip_targets": [
+        "0x8fba580"
+      ],
+      "public_static_strings": [
+        "co_timeout(%_) co_this().exec() == nullptr"
+      ],
+      "observation": "missing executor diagnostic; not a demonstrated safe context-free call"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "normal_retry_gate": {
+    "statuses": "overall result DWORD A/B, not per-item status",
+    "condition": "(A != 0 or B != 0) and (A == 0 or A == -110) and remaining != 0",
+    "default_text_budget": 1,
+    "default_location_budget": 0,
+    "delay_raw_formula": "uint32(1000 << ((original - remaining) & 31))",
+    "scope": "Selected normal-return control flow; no concurrent option mutation or exception; no bound on lower-layer transmissions"
+  },
+  "static_cases": [
+    {
+      "A": 0,
+      "B": 0,
+      "remaining": 1,
+      "reenter": false,
+      "reason": "overall pair zero"
+    },
+    {
+      "A": 0,
+      "B": 7,
+      "remaining": 1,
+      "reenter": true,
+      "reason": "A0 with overall error and remaining budget"
+    },
+    {
+      "A": -110,
+      "B": 0,
+      "remaining": 1,
+      "reenter": true,
+      "reason": "selected A-110 and remaining budget"
+    },
+    {
+      "A": 5,
+      "B": 7,
+      "remaining": 1,
+      "reenter": false,
+      "reason": "other A value"
+    },
+    {
+      "A": 0,
+      "B": 7,
+      "remaining": 0,
+      "reenter": false,
+      "reason": "budget exhausted"
+    },
+    {
+      "A": -110,
+      "B": 7,
+      "remaining": 0,
+      "reenter": false,
+      "reason": "budget exhausted"
+    }
+  ],
+  "conclusions": [
+    "The first options DWORD is a local remaining-retry budget in this common wrapper, not merely a boolean.382 left its meaning open;385 closes the selected counter/decrement/reentry relationship.",
+    "For the selected Text call with budget1, normal gate-eligible failure can cause one additional call to0x3a6a2c0 after raw delay1000. Budget0 Location does not repeat through this loop. This is per invocation of this wrapper, not a global exactly-once or network-transmission bound.",
+    "Retry tests overall A/B only: pair must be nonzero, A must be0 or-110, and remaining must be nonzero. A0/B-nonzero is eligible; a per-item nonzero value alone is not this gate. Enum names and all exceptional/lower-layer retry policies are not certified.",
+    "Each loop pass reconstructs with-timeout using options+4 and copies the original request into a new local object before launching/joining.120000 is an attempt parameter, not a demonstrated end-to-end120-second limit; real duration, additional layers, cancellation and queue delay remain unknown.",
+    "Delay creates a promise and awaits it; selected callable uses current-coroutine executor+0x368 and virtual+0x10.1000 corresponds to1second only if that executor is the previously evidenced millisecond implementation. Normal wait return precedes decrement and reentry; cancellation/exception may stop the path.",
+    "The32-bit shift and nonzero budget test must not be generalized into an unbounded mathematical exponential or arbitrary-budget API. Defaults0/1 suffice for this observation.",
+    "This is client internal behavior found in disk bytes. The project does not add retries, sends, timeouts or runtime options. Unknown-result application retries remain prohibited; cancellation never proves non-delivery."
+  ],
+  "remaining": [
+    "Exceptions/cancellation and other entry/lower-layer repeat policies",
+    "Runtime executor and actual duration",
+    "Logical request to attempt/task/recipient correlation and duplicate-delivery handling"
+  ]
+}

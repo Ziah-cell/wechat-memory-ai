@@ -1,0 +1,469 @@
+{
+  "checked_at_utc": "2026-10-05T17:36:59.161011+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a72550",
+      "end": "0x3a8255b",
+      "role_inference": "Text selected post-common-call consumer, not all Text entry paths",
+      "instruction_count": 15805,
+      "disk_range_sha256": "3e97b3f40ca09a95d33de8dbc36df36a1afc2a765856163c335109bf44e4cd53",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2f02d40",
+      "end": "0x2f02e5f",
+      "role_inference": "item serializer identifies fields1 and8",
+      "instruction_count": 86,
+      "disk_range_sha256": "bd6ac9ddedfafea7b7111383cd5bb768be06e07603e1fc3f14dbb0c2112da696",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2f03730",
+      "end": "0x2f037b9",
+      "role_inference": "outer serializer separates declared count and repeated length",
+      "instruction_count": 46,
+      "disk_range_sha256": "d79c15bee941ec299718cd073a14501b0e36542546656c24706e5e715bdb4338",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2f038d0",
+      "end": "0x2f0394c",
+      "role_inference": "outer required-field validation and per-item iteration",
+      "instruction_count": 49,
+      "disk_range_sha256": "9acfbdbcac6c4cfa530791143ab5870c7ff9a8c22d8116953f663a05423417f7",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x2f03010",
+      "size": 11,
+      "anchor": "MicroMsgResponseNew table+0x20; full leaf through ret",
+      "instructions": [
+        {
+          "at": "0x2f03010",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0x34]"
+        },
+        {
+          "at": "0x2f03013",
+          "mnemonic": "not",
+          "operands": "eax"
+        },
+        {
+          "at": "0x2f03015",
+          "mnemonic": "test",
+          "operands": "al, 0x7f"
+        },
+        {
+          "at": "0x2f03017",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0x2f0301a",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [],
+  "tables": [
+    {
+      "rva": "0x96b69e8",
+      "role_inference": "Text send slot established by381",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xd0",
+          "target": "0x3a72550"
+        }
+      ]
+    },
+    {
+      "rva": "0x9590278",
+      "role_inference": "item required fields and serializer",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x2f03010"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x2f02d40"
+        }
+      ]
+    },
+    {
+      "rva": "0x9590308",
+      "role_inference": "outer required fields and serializer",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x2f038d0"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x2f03730"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a79870",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rbp + 0x98]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "common-result local pointer from rbp+0x98 retained in rbx"
+    },
+    {
+      "at": "0x3a79997",
+      "mnemonic": "mov",
+      "operands": "rcx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "common-result destination argument"
+    },
+    {
+      "at": "0x3a799a8",
+      "mnemonic": "call",
+      "operands": "0x3a675c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "common send returns before selected consumption"
+    },
+    {
+      "at": "0x3a7a008",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbx + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read overallB"
+    },
+    {
+      "at": "0x3a7a00b",
+      "mnemonic": "or",
+      "operands": "eax, dword ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine overallA"
+    },
+    {
+      "at": "0x3a7a00d",
+      "mnemonic": "sete",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "both-zero boolean"
+    },
+    {
+      "at": "0x3a7a09a",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test overall boolean"
+    },
+    {
+      "at": "0x3a7a09c",
+      "mnemonic": "je",
+      "operands": "0x3a7cd9a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall error branches to shared return construction"
+    },
+    {
+      "at": "0x3a7a10a",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbx + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "response pointer at common result+0x28"
+    },
+    {
+      "at": "0x3a7a10e",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "declared count at outer response+0x28"
+    },
+    {
+      "at": "0x3a7a13b",
+      "mnemonic": "test",
+      "operands": "ecx, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test declared count nonzero, not actual repeated length"
+    },
+    {
+      "at": "0x3a7a13d",
+      "mnemonic": "je",
+      "operands": "0x3a7cd9a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero declared count skips first item access"
+    },
+    {
+      "at": "0x3a7a1a3",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "repeated element pointer array at response+0x10"
+    },
+    {
+      "at": "0x3a7a1a7",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "select first array element"
+    },
+    {
+      "at": "0x3a7a1aa",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read first item status DWORD+0x10"
+    },
+    {
+      "at": "0x3a7a23a",
+      "mnemonic": "test",
+      "operands": "ecx, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero/nonzero first item decision"
+    },
+    {
+      "at": "0x3a7a23c",
+      "mnemonic": "je",
+      "operands": "0x3a7a265",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero first-item status enters local writeback path"
+    },
+    {
+      "at": "0x3a7a24d",
+      "mnemonic": "je",
+      "operands": "0x3a7bac3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonzero first-item status enters separate path"
+    },
+    {
+      "at": "0x3a7a27f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xe8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original payload shared pair"
+    },
+    {
+      "at": "0x3a7a286",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original payload pointer"
+    },
+    {
+      "at": "0x3a7a289",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x168], 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set payload DWORD+0x168 to2"
+    },
+    {
+      "at": "0x3a7a293",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read item QWORD+0x28 (field8)"
+    },
+    {
+      "at": "0x3a7a297",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x148], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy field8 to original payload+0x148"
+    },
+    {
+      "at": "0x3a7bac3",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rip + 0x80e96f3]",
+      "rip_targets": [
+        "0xbb651bc"
+      ],
+      "public_static_strings": [],
+      "observation": "nonzero item branch starts here; includes logging before shared output construction"
+    },
+    {
+      "at": "0x3a7bb8c",
+      "mnemonic": "je",
+      "operands": "0x3a7cd9a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging-disabled branch joins shared return construction"
+    },
+    {
+      "at": "0x3a7bd20",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging path reads per-item status separately"
+    },
+    {
+      "at": "0x3a7cdce",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "shared return construction reads overall status pair"
+    },
+    {
+      "at": "0x3a7cdd8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copies pair into handler output; not itself a per-item-to-overall conversion"
+    },
+    {
+      "at": "0x2f02d86",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item DWORD+0x10"
+    },
+    {
+      "at": "0x2f02d89",
+      "mnemonic": "mov",
+      "operands": "ecx, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item field number1"
+    },
+    {
+      "at": "0x2f02e48",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item QWORD+0x28"
+    },
+    {
+      "at": "0x2f02e4c",
+      "mnemonic": "mov",
+      "operands": "ecx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item field number8"
+    },
+    {
+      "at": "0x2f03015",
+      "mnemonic": "test",
+      "operands": "al, 0x7f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "required mask0x7f excludes field8"
+    },
+    {
+      "at": "0x2f03778",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "declared count field source outer+0x28"
+    },
+    {
+      "at": "0x2f0377b",
+      "mnemonic": "mov",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer declared-count field number2"
+    },
+    {
+      "at": "0x2f03790",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer repeated item array"
+    },
+    {
+      "at": "0x2f03798",
+      "mnemonic": "mov",
+      "operands": "ecx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer repeated field number3"
+    },
+    {
+      "at": "0x2f037a8",
+      "mnemonic": "movsxd",
+      "operands": "rax, dword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "actual repeated length source outer+0x18"
+    },
+    {
+      "at": "0x2f038db",
+      "mnemonic": "test",
+      "operands": "al, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer required presence mask3"
+    },
+    {
+      "at": "0x2f038f5",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0x18], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer initialization validation checks actual length separately"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "bounded_consumer_interval": {
+    "begin": "0x3a7a008",
+    "end_exclusive": "0x3a7a29e",
+    "claim": "Selected overall/count/first-item/writeback sequence only; no full large-function CFG or runtime reachability proof",
+    "missing_in_selected_interval": [
+      "comparison of declared count with actual repeated length",
+      "request/recipient equality check",
+      "field8 presence/nonzero check before writeback"
+    ],
+    "not_claimed": [
+      "no validation anywhere upstream",
+      "all Text messages take this path",
+      "overall zero means parse_ok or delivered",
+      "field8 is globally unique message ID",
+      "all final-output or exceptional behavior certified"
+    ]
+  },
+  "conclusions": [
+    "This round directly checks Text instructions instead of importing the Location consumer conclusion. On the selected common-result path, overallA/B must both be zero and declared count must be nonzero before first-item status is read.",
+    "First-item status zero reaches payload+0x168=2 and field8-to-payload+0x148 copy. These are local numeric field writes; exact status names, ID meaning, uniqueness, recipient binding and delivery remain unverified.",
+    "The selected interval reads declared count+0x28 and array+0x10 but does not compare actual repeated length+0x18, identity, or field8 presence. Generated item required-mask0x7f excludes field8; outer initialization iterates actual length separately. Existing parse-failure caveats363 remain.",
+    "Nonzero item status branches separately; a shared output-construction site copies the common overall status pair. That copy alone does not normalize the per-item status. This evidence does not certify the complete return/notification chain or all other branches of the65KB Text body.",
+    "Similar selected writeback to Location is now supported by separate Text instructions, not vtable shape or common response type. Whole Text response matching, actual runtime instance and upstream target identity are still open."
+  ]
+}

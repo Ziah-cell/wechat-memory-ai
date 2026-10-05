@@ -1,0 +1,137 @@
+{
+  "checked_at_utc": "2026-10-05T17:47:53.215724+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; no runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 13,
+  "unique_anchored_leaves_checked": 1,
+  "unique_direct_edges_with_raw_rel32_math": 8,
+  "unique_tables_checked": 4,
+  "unique_instruction_observations_checked": 102,
+  "rip_references_with_raw_displacement_math": 3,
+  "branch_field_assertions": 68,
+  "explicit_table_targets_checked": 6,
+  "derived_retry_cases_checked": [
+    {
+      "A": 0,
+      "B": 0,
+      "remaining": 1,
+      "reenter": false,
+      "reason": "overall pair zero"
+    },
+    {
+      "A": 0,
+      "B": 7,
+      "remaining": 1,
+      "reenter": true,
+      "reason": "A0 with overall error and remaining budget"
+    },
+    {
+      "A": -110,
+      "B": 0,
+      "remaining": 1,
+      "reenter": true,
+      "reason": "selected A-110 and remaining budget"
+    },
+    {
+      "A": 5,
+      "B": 7,
+      "remaining": 1,
+      "reenter": false,
+      "reason": "other A value"
+    },
+    {
+      "A": 0,
+      "B": 7,
+      "remaining": 0,
+      "reenter": false,
+      "reason": "budget exhausted"
+    },
+    {
+      "A": -110,
+      "B": 7,
+      "remaining": 0,
+      "reenter": false,
+      "reason": "budget exhausted"
+    }
+  ],
+  "consumer_interval_checked": {
+    "begin": "0x3a7a008",
+    "end_exclusive": "0x3a7a29e",
+    "claim": "Selected overall/count/first-item/writeback sequence only; no full large-function CFG or runtime reachability proof",
+    "missing_in_selected_interval": [
+      "comparison of declared count with actual repeated length",
+      "request/recipient equality check",
+      "field8 presence/nonzero check before writeback"
+    ],
+    "not_claimed": [
+      "no validation anywhere upstream",
+      "all Text messages take this path",
+      "overall zero means parse_ok or delivered",
+      "field8 is globally unique message ID",
+      "all final-output or exceptional behavior certified"
+    ]
+  },
+  "previous_analysis_script_hashes_unchanged": 8,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 527,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Old scripts preserved; graph/save AST definitions only, no old writer execution. New verifier starts from read-only copied generic validation text.",
+    "One stray string-probe invocation supplied unmapped addresses and failed its read-only-section assertion without reading a string; corrected using RIP targets. No live or writable-string fallback was used.",
+    "A previously unclassified first DWORD now has direct decrement/backedge evidence for the selected retry budget. Delay and timeout units remain conditional on the executor implementation.",
+    "Large Text body only partly analyzed; fresh decode/hash is not full CFG or runtime verification. A shared output pair-copy is not certification of the final output/notification chain."
+  ],
+  "remaining": [
+    "Exceptions/cancellation and other entry/lower-layer repeat policies",
+    "Runtime executor and actual duration",
+    "Logical request to attempt/task/recipient correlation and duplicate-delivery handling",
+    "Text final output/notification and exceptional paths",
+    "Request/recipient matching and inbound ID/direction/history",
+    "Final executor shutdown and viable authorized observation method"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-text-result-20261006/write_evidence.py",
+      "sha256": "1d3a19eeab85649e716db5ad4cf46b234e72a4b629837f48f1381752e29a8d36"
+    },
+    {
+      "cache_path": "data/send-text-result-20261006/verify_evidence.py",
+      "sha256": "dafaa99b12d610866de66f4f74451337690220528902bad47a9a1d74b5b4cae3"
+    },
+    {
+      "cache_path": "data/send-text-result-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/send-text-result-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

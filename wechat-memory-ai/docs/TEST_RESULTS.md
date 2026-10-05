@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 文字重试与响应消费静态复核（2026-10-06）
+
+[385](evidence/385-send-text-retry-budget.json)记录10区间/63观察，[386](evidence/386-send-text-response-consumer.json)记录4区间/1叶函数/40观察，含共享文字函数和共同调用点。[388](evidence/388-send-text-result-validation.json)去重后新读固定DLL，核对13区间、1叶函数、8直接边、4表、102观察、68字段/分支断言、6指定表目标和6个推导重试案例；复算位移、核对计时callable/诊断、默认参数、正常回边及限定消费区间。前轮8脚本哈希不变，同一执行者复核，无独立审查。
+
+推导案例是基于已核分支的离线布尔/计数检查，不执行客户端或模拟网络，不当作重试、取消、超时或送达实测。文字全区间解码仍不是完整CFG认证。一次误入字符串探针的无效地址被只读节断言拒绝，随后按实际RIP引用查询，没有放宽到可写节或活跃进程。历史脚本/证据保持原样，新validator只复制通用校验文本，不执行旧writer顶层。
+
+[387](evidence/387-send-text-result-checkpoint.json)保存监听仍stopped/native_reader_timeout；只读停止文件，不认证当前窗口。未跑产品/原生/并发/网络测试，未加入适配器重试或发送。[观察方案](ISOLATED_OBSERVATION_4_1_15_50.md)仍未实施，自动回复关闭。
+
 ## 文字处理器注册与请求静态复核（2026-10-06）
 
 [381](evidence/381-send-handler-registry.json)记录15区间/78观察，[382](evidence/382-send-text-request.json)记录8区间/4叶函数/83观察。[384](evidence/384-send-target-validation.json)新读固定DLL，核对23区间、4叶函数、123条直接边、5表、161观察、62项字段/分支断言及5个指定表目标；复算RIP/rel32、从只读字节和立即数重建Text/Location名称、确认options两DWORD差异，前轮8脚本哈希不变。同一执行者复核，无独立审查。
