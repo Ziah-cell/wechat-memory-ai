@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 协程与任务号静态复核（2026-10-05）
+
+[354](evidence/354-send-coroutine-dispatch.json)记录32区间/2叶函数/27直接边/3选定表/35指令观察；[355](evidence/355-send-service-task-return.json)记录13区间/3叶函数/16直接边/3选定表/38观察。两份材料有重叠，不把相加数宣称为不同函数总数。查明await协程要求、捕获回调关系、服务来源，以及本地任务号和提交布尔值分离；没有运行候选发送或证明完整执行器路径。
+
+[357](evidence/357-send-dispatch-validation.json)对固定磁盘哈希、解码区间与指令、表指针、直接边rel32单独算术、选定RIP引用及文档链接做同一执行者复核。没有独立人员审查、产品/13项原生回归；旧369项通过不外推。本轮临时分析文件曾命名inspect.py遮蔽标准库，造成Capstone导入NameError，改名后恢复；没有产品改动。
+
+[356](evidence/356-send-dispatch-checkpoint.json)只读保存监听状态仍停止。未加载执行微信DLL、读进程内存/密钥、恢复窗口、重启、连接真实模型记忆或发送。完整结论和剩余条件见[报告](SEND_COMPATIBILITY_4_1_15_50.md)。
+
 ## .50 离线反汇编验证（2026-10-05）
 
 [349](evidence/349-offline-disassembler-tool.json)固定隔离Capstone依赖；[350](evidence/350-decoded-send-anchor-references.json)记录76原始位移候选中的41解码引用、旧地址的指令边界；[351](evidence/351-send-candidate-callgraph.json)记录28解码区间、28直接边、6有另外锚点的叶函数候选、3类型表、16条指令观察与7字段关系。是静态研究，不是运行兼容或发送测试。

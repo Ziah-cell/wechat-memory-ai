@@ -1,0 +1,92 @@
+{
+  "checked_at_utc": "2026-10-05T12:18:30.812386+00:00",
+  "status": "passed",
+  "scope": "Same-executor static revalidation, not runtime reachability, ownership or compatibility proof",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 43,
+  "unique_anchored_leaves_checked": 5,
+  "unique_direct_edges_with_separate_rel32_math": 43,
+  "unique_tables_checked": 6,
+  "unique_instruction_observations_checked": 73,
+  "rip_references_with_raw_displacement_math": 14,
+  "semantic_instruction_assertions": 18,
+  "local_links_checked": 419,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md"
+  ],
+  "saved_listener_state_unchanged": true,
+  "diff_check": "passed",
+  "change_scope": "documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "analysis_scripts": [
+    {
+      "cache_file": "context_probe.py",
+      "sha256": "4f5748c055db304dce313a758a178a5f2924c2acd3f17a903646452515f8f61f"
+    },
+    {
+      "cache_file": "decode_targets.py",
+      "sha256": "60c2a2f64566176a72cc29ae40d05b4ef706ea46748d46711f60594bf80a6dde"
+    },
+    {
+      "cache_file": "inspect_anchored_leaf.py",
+      "sha256": "0a438f78c405b272f1443601ed507d58e87e44dde4c3093bcf1e0f9c42ddfd26"
+    },
+    {
+      "cache_file": "inspect_context_source.py",
+      "sha256": "a98f305890e933ecfcc692154f0f5c553c5654e4736042abee6664a260d03ac2"
+    },
+    {
+      "cache_file": "inspect_dispatch.py",
+      "sha256": "b856afcdb7c80fdff0c69dcdc6f81c92246c3222abde30f1e9fa764dcc1c3f96"
+    },
+    {
+      "cache_file": "inspect_global.py",
+      "sha256": "c69aef4bb046a7e44b6972318141e4e00d8cd8414ab752aff60cf1d69f6a2904"
+    },
+    {
+      "cache_file": "inspect_import.py",
+      "sha256": "c047f3af6a0041c372e92eba65dd840f15c5eeda9c3657039c5e6b0027a234d2"
+    },
+    {
+      "cache_file": "inspect_tables.py",
+      "sha256": "8e021a654abc0c6657781f014d099bcec46740ca7a8531f4c8baf2a20a2715b1"
+    },
+    {
+      "cache_file": "read_context.py",
+      "sha256": "d83c2cc62a9decfedb14f2e4cdb6fbc9c3a62a82938a62d03a44264d84ea60a2"
+    },
+    {
+      "cache_file": "read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_file": "scan_targets.ps1",
+      "sha256": "ec241f125a2ea6a96078484387405a84e5c62d6481f428c52dff57eaa400fffa"
+    },
+    {
+      "cache_file": "verify_dispatch_evidence.py",
+      "sha256": "ca5edc39e2fc99da5cb2b10c5db01066c9decfdc400e1039eff511f898748e82"
+    },
+    {
+      "cache_file": "write_dispatch_evidence.py",
+      "sha256": "3d4d531b784fc98e73b059ec5db56c248b7acfc8f9aa032b8b93fef184abc862"
+    }
+  ],
+  "remaining": [
+    "executor and timeout dispatch",
+    "complete lifecycle, cancellation and exception ABI",
+    "response and promise result correlation",
+    "account/recipient/inbound identity and history",
+    "runtime minimized bidirectional acceptance"
+  ]
+}

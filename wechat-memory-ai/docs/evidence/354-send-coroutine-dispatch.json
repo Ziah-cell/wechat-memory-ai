@@ -1,0 +1,812 @@
+{
+  "checked_at_utc": "2026-10-05T12:14:19.516908+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static metadata; no runtime execution proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a675c0",
+      "end": "0x3a68075",
+      "role_inference": "CoCgiSendRequest-related wrapper; creates a scope",
+      "instruction_count": 624,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3c9c70",
+      "end": "0x3c9ead",
+      "role_inference": "scope initialization with timeout options",
+      "instruction_count": 156,
+      "disk_range_sha256": "cea299d13db5e45f6b2f41a59f9c9bcc3e904ddbd4d704e05b8804b31c44b924",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca5d0",
+      "end": "0x3ca5f4",
+      "role_inference": "current scope or global fallback selection",
+      "instruction_count": 10,
+      "disk_range_sha256": "efb073ac1e58898e8ffdb23f92cecda78586836e7050be5156f8b84b24cc000b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca1f0",
+      "end": "0x3ca2bf",
+      "role_inference": "coroutine-local or TLS scope lookup",
+      "instruction_count": 53,
+      "disk_range_sha256": "86cb7ce0d8f94e25a7bb7318ab327993bea9cb5459717613a26e08a6e995f1f7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca400",
+      "end": "0x3ca503",
+      "role_inference": "global scope fallback",
+      "instruction_count": 48,
+      "disk_range_sha256": "2f45ea21e654f2688980bb33bbd1983be0077acd3fee22cd3cd71e98bcec0bad",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end": "0x3a6a7cf",
+      "role_inference": "captured callback, co_launch, optional timeout/dispatch and join",
+      "instruction_count": 329,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6af10",
+      "end": "0x3a6af98",
+      "role_inference": "captured callback construction",
+      "instruction_count": 37,
+      "disk_range_sha256": "674f1b0c611e5748d43640bd5841f33ba05a1a105a07d39c10cfbc3737733451",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cacc0",
+      "end": "0x3cad90",
+      "role_inference": "co_launch argument move",
+      "instruction_count": 62,
+      "disk_range_sha256": "a79dbb5302e068183e6ccccb82402b0e1658f5fe535a4bf552ac0f007e090e29",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca730",
+      "end": "0x3cab6a",
+      "role_inference": "co_launch, co_scope.cpp",
+      "instruction_count": 229,
+      "disk_range_sha256": "d34b71e1cab321b4c812fbd04f50e8a099b9fda5b435b1ee38abb400ceaa5071",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3e10",
+      "end": "0xda3e7b",
+      "role_inference": "co_job shared factory",
+      "instruction_count": 34,
+      "disk_range_sha256": "7710bea995e20c85e62a139aa9f67398eed20aa024e2acebda94ed64fd411222",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3ed0",
+      "end": "0xda3faf",
+      "role_inference": "shared allocation factory",
+      "instruction_count": 70,
+      "disk_range_sha256": "25646b9eadd77eea6e3beac6e106e242d797f75a428516973100fa76087b53cc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda77c0",
+      "end": "0xda78b5",
+      "role_inference": "in-place object construction",
+      "instruction_count": 65,
+      "disk_range_sha256": "38349ab12336078808b8a000d91611ce81a273e10060a3daf257cebbe84730f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3fe0",
+      "end": "0xda470d",
+      "role_inference": "co_job_impl construction",
+      "instruction_count": 404,
+      "disk_range_sha256": "696df565e2c72677746838e12c96b1d9a85d6511d050622cd198398f433fffe0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda4a10",
+      "end": "0xda4c72",
+      "role_inference": "co_job start and coroutine resume request",
+      "instruction_count": 165,
+      "disk_range_sha256": "9b609f715ce1075f6547ba7ca8fc4ae3ba6ae42030260b8714ad5dc26089b5aa",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda4cc0",
+      "end": "0xda5065",
+      "role_inference": "co_job cancel",
+      "instruction_count": 197,
+      "disk_range_sha256": "937faa62a6205d40e72eff62f35f5e8c0ed317f94dac456d8ce19067f030570d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda5140",
+      "end": "0xda541f",
+      "role_inference": "co_job join",
+      "instruction_count": 159,
+      "disk_range_sha256": "5978e74497ac6717380b2c29eaa9f93d94824228cb8089172e80a2b715deb2f9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49db30",
+      "end": "0x49dbc5",
+      "role_inference": "coroutine shared object factory",
+      "instruction_count": 43,
+      "disk_range_sha256": "42250deee9a0bea9a2e7e259590871ee891b79d519c8f0a94294f8415110b836",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49dbd0",
+      "end": "0x49dcce",
+      "role_inference": "coroutine allocation",
+      "instruction_count": 82,
+      "disk_range_sha256": "3cd741b2621338e099bfa73dfc90859d4ae85c7d9cecc0316c2be68311356029",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a3a20",
+      "end": "0x4a409e",
+      "role_inference": "coroutine object constructor",
+      "instruction_count": 336,
+      "disk_range_sha256": "778be046a232892b0c0205edae582733aac5759a0bda54a113d6773b288defbd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49ddc0",
+      "end": "0x49de10",
+      "role_inference": "resume wrapper",
+      "instruction_count": 19,
+      "disk_range_sha256": "00e5cb7a5520cf86010c0352bf90dae8ed187ac2480fb961fd8efde51892c156",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49de10",
+      "end": "0x49e1ea",
+      "role_inference": "resume_if executor dispatch; actual executor not resolved",
+      "instruction_count": 237,
+      "disk_range_sha256": "954dd804fc10432a6615c112237bd12664d482a971ebfa26f716005c2882919d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda59c0",
+      "end": "0xda5afb",
+      "role_inference": "co_job body invokes captured callback and then releases it",
+      "instruction_count": 73,
+      "disk_range_sha256": "5b52b9004a4a4ae354a3af4e682502cd69423580db0428d9800ea390d932fdcf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6b270",
+      "end": "0x3a6b42a",
+      "role_inference": "send callback body: service lookup, promise creation and await",
+      "instruction_count": 137,
+      "disk_range_sha256": "41cbb41fc992cf6356b28b5a83662a5a482c24e46c33414632aa3ff69a7aa7e0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6b640",
+      "end": "0x3a6b8b7",
+      "role_inference": "promise and send callback construction",
+      "instruction_count": 172,
+      "disk_range_sha256": "2420148dc2c819b7d6e62d4769bfdead54c37ef839601d2e445063aea816f688",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b4b40",
+      "end": "0x3b4c57",
+      "role_inference": "promise creation and immediate callback invocation",
+      "instruction_count": 88,
+      "disk_range_sha256": "3ac7c21dc235178096966ddfcd984ec12d734aaabffb1cff8505ee4c24f08215",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6b9e0",
+      "end": "0x3a6ba52",
+      "role_inference": "send callback thunk",
+      "instruction_count": 30,
+      "disk_range_sha256": "31af5129f94cfdea9f397267256a92299d38c43b9de0e2d0f1e1142324751c5a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6ba70",
+      "end": "0x3a6bda5",
+      "role_inference": "send promise closure body",
+      "instruction_count": 227,
+      "disk_range_sha256": "1510503327910c5aa3fd780905475b1221f9f46b6a0c5e0be81278ab41de222a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6beb0",
+      "end": "0x3a6c13c",
+      "role_inference": "newsendmsg packaging",
+      "instruction_count": 183,
+      "disk_range_sha256": "60064633ee6e3b627d9ece74146fdde505128ce7fbd3f8ce2f7c707d7854b404",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6b490",
+      "end": "0x3a6b63b",
+      "role_inference": "await and extract result",
+      "instruction_count": 114,
+      "disk_range_sha256": "4f3e19993fc5e911613a07dcc55551acf67f258f14da4371b7ccbf35f9e87a4c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b1ff0",
+      "end": "0x3b2145",
+      "role_inference": "await wrapper",
+      "instruction_count": 66,
+      "disk_range_sha256": "e3b33a6ced70d0a367d09b30da452210156e882dd00c35aa82708b9be1efb21f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49eae0",
+      "end": "0x49f3aa",
+      "role_inference": "await_noexcept coroutine requirement",
+      "instruction_count": 514,
+      "disk_range_sha256": "dba6f05b56ababc7fdc8ed2df662f6743bc5e9e5c5fd2958b38068730e071cae",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b4700",
+      "end": "0x3b48a0",
+      "role_inference": "promise value retrieval",
+      "instruction_count": 106,
+      "disk_range_sha256": "176e18177367efb1b49256bea28b15f00644233493b2a3922de562f106dd8f01",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3a6b120",
+      "size": 9,
+      "anchor": "table 0x96d8b68 +0x10",
+      "instructions": [
+        {
+          "at": "0x3a6b120",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x3a6b124",
+          "mnemonic": "jmp",
+          "operands": "0x3a6b270"
+        }
+      ]
+    },
+    {
+      "rva": "0xda59b0",
+      "size": 14,
+      "anchor": "RIP LEA at 0xda4a99 points to this callback thunk",
+      "instructions": [
+        {
+          "at": "0xda59b0",
+          "mnemonic": "test",
+          "operands": "rcx, rcx"
+        },
+        {
+          "at": "0xda59b3",
+          "mnemonic": "je",
+          "operands": "0xda59bd"
+        },
+        {
+          "at": "0xda59b5",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx]"
+        },
+        {
+          "at": "0xda59b8",
+          "mnemonic": "jmp",
+          "operands": "0xda59c0"
+        },
+        {
+          "at": "0xda59bd",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x3a67723",
+      "kind": "call",
+      "to": "0x3c9c70"
+    },
+    {
+      "at": "0x3a67943",
+      "kind": "call",
+      "to": "0x3a6a2c0"
+    },
+    {
+      "at": "0x3c9cda",
+      "kind": "call",
+      "to": "0x3ca5d0"
+    },
+    {
+      "at": "0x3ca5d4",
+      "kind": "call",
+      "to": "0x3ca1f0"
+    },
+    {
+      "at": "0x3ca5e3",
+      "kind": "call",
+      "to": "0x3ca400"
+    },
+    {
+      "at": "0x3a6a3f2",
+      "kind": "call",
+      "to": "0x3a6af10"
+    },
+    {
+      "at": "0x3a6a40a",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x3cad60",
+      "kind": "call",
+      "to": "0x3ca730"
+    },
+    {
+      "at": "0x3ca969",
+      "kind": "call",
+      "to": "0xda3e10"
+    },
+    {
+      "at": "0xda3e32",
+      "kind": "call",
+      "to": "0xda3ed0"
+    },
+    {
+      "at": "0xda3f0e",
+      "kind": "call",
+      "to": "0xda77c0"
+    },
+    {
+      "at": "0xda78a0",
+      "kind": "call",
+      "to": "0xda3fe0"
+    },
+    {
+      "at": "0xda4aab",
+      "kind": "call",
+      "to": "0x49db30"
+    },
+    {
+      "at": "0xda4c1f",
+      "kind": "call",
+      "to": "0x49ddc0"
+    },
+    {
+      "at": "0x49db69",
+      "kind": "call",
+      "to": "0x49dbd0"
+    },
+    {
+      "at": "0x49dc36",
+      "kind": "call",
+      "to": "0x4a3a20"
+    },
+    {
+      "at": "0x49dde4",
+      "kind": "call",
+      "to": "0x49de10"
+    },
+    {
+      "at": "0x3a6b2bf",
+      "kind": "call",
+      "to": "0x3a6b640"
+    },
+    {
+      "at": "0x3a6b2cf",
+      "kind": "call",
+      "to": "0x3a6b490"
+    },
+    {
+      "at": "0x3a6b816",
+      "kind": "call",
+      "to": "0x3b4b40"
+    },
+    {
+      "at": "0x3a6ba26",
+      "kind": "call",
+      "to": "0x3a6ba70"
+    },
+    {
+      "at": "0x3a6bc02",
+      "kind": "call",
+      "to": "0x3a6beb0"
+    },
+    {
+      "at": "0x3a6b4a4",
+      "kind": "call",
+      "to": "0x3b1ff0"
+    },
+    {
+      "at": "0x3a6b4ac",
+      "kind": "call",
+      "to": "0x3b4700"
+    },
+    {
+      "at": "0x3b2016",
+      "kind": "call",
+      "to": "0x49eae0"
+    },
+    {
+      "at": "0x3a6b124",
+      "kind": "jmp",
+      "to": "0x3a6b270"
+    },
+    {
+      "at": "0xda59b8",
+      "kind": "jmp",
+      "to": "0xda59c0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96d8b68",
+      "role_inference": "outer send closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3a6b120"
+        }
+      ]
+    },
+    {
+      "rva": "0x96d8c08",
+      "role_inference": "inner promise callback",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3a6b9e0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9126068",
+      "role_inference": "co_job_impl",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xda4a10"
+        },
+        {
+          "offset": "0x10",
+          "target": "0xda4cc0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xda5140"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a67723",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "creates the stack scope"
+    },
+    {
+      "at": "0x3a6a40a",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls co_launch wrapper with scope and captured function"
+    },
+    {
+      "at": "0x3a6a473",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "scope +0x28 virtual +0x10; this timeout/dispatch implementation is still unresolved"
+    },
+    {
+      "at": "0x3a6a487",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "job virtual +0x18 resolves to join via co_job_impl table"
+    },
+    {
+      "at": "0x3c9cda",
+      "mnemonic": "call",
+      "operands": "0x3ca5d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "chooses scope source"
+    },
+    {
+      "at": "0x3ca969",
+      "mnemonic": "call",
+      "operands": "0xda3e10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructs co_job"
+    },
+    {
+      "at": "0x3caaac",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "job cancel branch (+0x10)"
+    },
+    {
+      "at": "0x3caac8",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "job start branch (+8)"
+    },
+    {
+      "at": "0xda4076",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8381feb]",
+      "rip_targets": [
+        "0x9126068"
+      ],
+      "public_static_strings": [],
+      "observation": "co_job_impl table address"
+    },
+    {
+      "at": "0xda407d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "writes final co_job_impl table"
+    },
+    {
+      "at": "0xda40a3",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x130], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "saves original object base"
+    },
+    {
+      "at": "0xda4375",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r15 + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads captured function from source +0x38"
+    },
+    {
+      "at": "0xda4391",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "moves heap function to holder +0x38"
+    },
+    {
+      "at": "0xda43b9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x38], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clears source function pointer after move"
+    },
+    {
+      "at": "0xda43c1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x130], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores function holder in job +0x130"
+    },
+    {
+      "at": "0xda4a99",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0xf10]",
+      "rip_targets": [
+        "0xda59b0"
+      ],
+      "public_static_strings": [],
+      "observation": "registers job body thunk 0xda59b0"
+    },
+    {
+      "at": "0xda4aab",
+      "mnemonic": "call",
+      "operands": "0x49db30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "creates coroutine with thunk, capture and cleanup"
+    },
+    {
+      "at": "0x4a3abc",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x350], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores coroutine entry function in +0x350"
+    },
+    {
+      "at": "0x4a3ac3",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x360], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores entry argument in +0x360"
+    },
+    {
+      "at": "0xda4c1f",
+      "mnemonic": "call",
+      "operands": "0x49ddc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "requests coroutine resume"
+    },
+    {
+      "at": "0x49e14a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "executor virtual dispatch is not fully resolved"
+    },
+    {
+      "at": "0xda5a14",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x130]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads function holder from job +0x130"
+    },
+    {
+      "at": "0xda5a1b",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads captured closure from holder +0x38"
+    },
+    {
+      "at": "0xda5a27",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "closure virtual +0x10 resolves to 0x3a6b120 for the captured send table"
+    },
+    {
+      "at": "0xda5a84",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invokes closure cleanup virtual +0x20"
+    },
+    {
+      "at": "0xda5a8f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x130], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clears holder after freeing"
+    },
+    {
+      "at": "0xda518d",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x8380af0]",
+      "rip_targets": [
+        "0x9125c84"
+      ],
+      "public_static_strings": [
+        "join"
+      ],
+      "observation": "public join name"
+    },
+    {
+      "at": "0xda5194",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x8380f05]",
+      "rip_targets": [
+        "0x91260a0"
+      ],
+      "public_static_strings": [
+        "co_job.cpp"
+      ],
+      "observation": "public co_job.cpp name"
+    },
+    {
+      "at": "0x3a6b7eb",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5c6d416]",
+      "rip_targets": [
+        "0x96d8c08"
+      ],
+      "public_static_strings": [],
+      "observation": "inner send callback table"
+    },
+    {
+      "at": "0x3a6b816",
+      "mnemonic": "call",
+      "operands": "0x3b4b40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "creates promise and invokes inner callback"
+    },
+    {
+      "at": "0x3b4b9c",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads inner callback pointer"
+    },
+    {
+      "at": "0x3b4bb0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "immediate inner callback virtual +0x10 resolves to 0x3a6b9e0"
+    },
+    {
+      "at": "0x3a6b4a4",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "await before reading promise value"
+    },
+    {
+      "at": "0x3a6b4ac",
+      "mnemonic": "call",
+      "operands": "0x3b4700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extracts promise value; type/error handling still applies"
+    },
+    {
+      "at": "0x49ec90",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x8b1ad89]",
+      "rip_targets": [
+        "0x8fb9a20"
+      ],
+      "public_static_strings": [
+        "%@() must be called from coroutine context"
+      ],
+      "observation": "public diagnostic requires coroutine context"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "interpretation": [
+    "The captured-function construction and invocation sites connect the outer send closure to the inner promise callback and packaging code in the static object model.",
+    "The outer co_job start registers an entry function and requests executor dispatch; the selected executor and its eventual entry invocation are not fully resolved. Do not label every arrow a direct call or claim runtime execution.",
+    "The inner callback invocation in 0x3b4b40 is immediate; it is not evidence of an additional thread hop.",
+    "await_noexcept explicitly requires coroutine context. TLS/global fallback scope lookup is not an authenticated live context or safe arbitrary-thread API.",
+    "Move, reference counting, cleanup and join are observed, but a complete ownership, cancellation, exception and ABI contract remains unverified."
+  ],
+  "remaining": [
+    "executor identity / registered entry invocation",
+    "scope timeout virtual implementation",
+    "valid account/session objects and lifetimes",
+    "promise resolution and response/receipt correlation",
+    "runtime minimized behavior"
+  ]
+}

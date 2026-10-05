@@ -1,0 +1,628 @@
+{
+  "checked_at_utc": "2026-10-05T12:14:19.516908+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static metadata; no runtime execution proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x500e0",
+      "end": "0x50204",
+      "role_inference": "global application service initialization",
+      "instruction_count": 72,
+      "disk_range_sha256": "941a156e2e654e523e8d456ad7a9d28920463269ad836d9a55a556f068ad4bca",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x42350",
+      "end": "0x4281d",
+      "role_inference": "global service constructor",
+      "instruction_count": 288,
+      "disk_range_sha256": "b7235c20058650298013a8bef91c2addc023848dc52914e7d47a0699b7f58507",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x43fd0",
+      "end": "0x44135",
+      "role_inference": "initialization calls member setup",
+      "instruction_count": 95,
+      "disk_range_sha256": "1b0bee9ae5e26009f270230aad01f9a062e474f2deb4ff93d385304c68ae21e6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x45050",
+      "end": "0x4530c",
+      "role_inference": "allocates member service and saves adjusted subobject",
+      "instruction_count": 162,
+      "disk_range_sha256": "1b22f3992c3da2fc9e4e139ab7e651b84c654d4605f38e9316a8d4cd1b025688",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x356200",
+      "end": "0x3566da",
+      "role_inference": "member service constructor and vtables",
+      "instruction_count": 321,
+      "disk_range_sha256": "f14327a150d49046e7c1ea8c7a4362be6caf26e1f69158f9d822634caaf6c1b6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6b270",
+      "end": "0x3a6b42a",
+      "role_inference": "obtains service through global table +0x10",
+      "instruction_count": 137,
+      "disk_range_sha256": "41cbb41fc992cf6356b28b5a83662a5a482c24e46c33414632aa3ff69a7aa7e0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6beb0",
+      "end": "0x3a6c13c",
+      "role_inference": "packaging calls service and returns wrapper +8",
+      "instruction_count": 183,
+      "disk_range_sha256": "60064633ee6e3b627d9ece74146fdde505128ce7fbd3f8ce2f7c707d7854b404",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6c1f0",
+      "end": "0x3a6c32d",
+      "role_inference": "wrapper initializes +8 to zero",
+      "instruction_count": 80,
+      "disk_range_sha256": "d35b5123bfd6c35d2ef166d86b78eca17aac91bb9dc749c7187fbcbb15bf9e5c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35bec0",
+      "end": "0x35cdcf",
+      "role_inference": "service virtual +0x28: task submission and bookkeeping",
+      "instruction_count": 851,
+      "disk_range_sha256": "a98ebade6b19594774e373cbf53c8a0dd00968c9d0c6ce2ca2a422e4916e330a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xe63b30",
+      "end": "0xe63f3e",
+      "role_inference": "task constructor stores supplied local counter in first DWORD",
+      "instruction_count": 179,
+      "disk_range_sha256": "306c3fb920caf8bf9b4c5b26e97776c973d4b5ae687c2885c141cfa4e4bc6dec",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xdf08c0",
+      "end": "0xdf0a5a",
+      "role_inference": "default STN manager wrapper",
+      "instruction_count": 97,
+      "disk_range_sha256": "2bce14dc2bd8bfdb3ab5ca203a6af36a75a860b1cac209cb792c17c4a3afa3cf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xdeb2d0",
+      "end": "0xdeb3b6",
+      "role_inference": "StnManager::StartTask",
+      "instruction_count": 50,
+      "disk_range_sha256": "2b47636827a613252c7b299ed6ae8181fe0d50838af218e535d48bdcccfbea15",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2874830",
+      "end": "0x2874fb6",
+      "role_inference": "NetCore::StartTask",
+      "instruction_count": 432,
+      "disk_range_sha256": "adc395a3f4e4db31ca5ee8c37e619497f800e9a6d2d217059e3a27b7bd7415f6",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x45d10",
+      "size": 8,
+      "anchor": "direct call from 0x3a6b270",
+      "instructions": [
+        {
+          "at": "0x45d10",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rip + 0xbb1bf79]"
+        },
+        {
+          "at": "0x45d17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x469d0",
+      "size": 8,
+      "anchor": "global service table 0x8f294e8 +0x10",
+      "instructions": [
+        {
+          "at": "0x469d0",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx + 0x2c8]"
+        },
+        {
+          "at": "0x469d7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xe63b10",
+      "size": 18,
+      "anchor": "direct task-constructor call at 0x35bf3f",
+      "instructions": [
+        {
+          "at": "0xe63b10",
+          "mnemonic": "mov",
+          "operands": "edx, 1"
+        },
+        {
+          "at": "0xe63b15",
+          "mnemonic": "lock xadd",
+          "operands": "dword ptr [rip + 0xa577d23], edx"
+        },
+        {
+          "at": "0xe63b1d",
+          "mnemonic": "jmp",
+          "operands": "0xe63b30"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x50172",
+      "kind": "call",
+      "to": "0x42350"
+    },
+    {
+      "at": "0x50183",
+      "kind": "call",
+      "to": "0x43fd0"
+    },
+    {
+      "at": "0x44105",
+      "kind": "call",
+      "to": "0x45050"
+    },
+    {
+      "at": "0x4510e",
+      "kind": "call",
+      "to": "0x356200"
+    },
+    {
+      "at": "0x3a6b29c",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x3a6bfa4",
+      "kind": "call",
+      "to": "0x3a6c1f0"
+    },
+    {
+      "at": "0x35bf3f",
+      "kind": "call",
+      "to": "0xe63b10"
+    },
+    {
+      "at": "0x35bfc7",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x35c0a7",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x35c19f",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x35c334",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x35c397",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x35c669",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0xdf0967",
+      "kind": "call",
+      "to": "0xdeb2d0"
+    },
+    {
+      "at": "0xdeb2f9",
+      "kind": "call",
+      "to": "0x2874830"
+    },
+    {
+      "at": "0xe63b1d",
+      "kind": "jmp",
+      "to": "0xe63b30"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8f294e8",
+      "role_inference": "global service getter table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x469d0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5398",
+      "role_inference": "adjusted service subobject table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x28",
+          "target": "0x35bec0"
+        }
+      ]
+    },
+    {
+      "rva": "0xb3d7f00",
+      "role_inference": "on-disk initialized function pointer; not an import-table entry; runtime replacement not excluded",
+      "writable_section": true,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0xdf08c0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x50172",
+      "mnemonic": "call",
+      "operands": "0x42350",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructs global service allocation"
+    },
+    {
+      "at": "0x5017c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rip + 0xbb11b0d], rcx",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "publishes global service pointer at 0xbb61c90"
+    },
+    {
+      "at": "0x423a4",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8ee713d]",
+      "rip_targets": [
+        "0x8f294e8"
+      ],
+      "public_static_strings": [],
+      "observation": "loads global service table"
+    },
+    {
+      "at": "0x423ab",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "writes global service table"
+    },
+    {
+      "at": "0x45d10",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rip + 0xbb1bf79]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "reads global pointer slot"
+    },
+    {
+      "at": "0x469d0",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x2c8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "getter returns application service +0x2c8 member"
+    },
+    {
+      "at": "0x4510a",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructor receives allocation +0x10"
+    },
+    {
+      "at": "0x4510e",
+      "mnemonic": "call",
+      "operands": "0x356200",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructs member service"
+    },
+    {
+      "at": "0x4511e",
+      "mnemonic": "add",
+      "operands": "rax, 0x20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stored service pointer is allocation +0x20"
+    },
+    {
+      "at": "0x45122",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x2c8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "writes adjusted service pointer into application +0x2c8"
+    },
+    {
+      "at": "0x356237",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c4f15a]",
+      "rip_targets": [
+        "0x8fa5398"
+      ],
+      "public_static_strings": [],
+      "observation": "loads adjusted subobject table 0x8fa5398"
+    },
+    {
+      "at": "0x35623e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "writes table at constructed object +0x10"
+    },
+    {
+      "at": "0x3a6b2a7",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "global service virtual +0x10 retrieves send service"
+    },
+    {
+      "at": "0x3a6c0b2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "send service virtual +0x28 resolves to 0x35bec0 on this construction path"
+    },
+    {
+      "at": "0x3a6c20a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "wrapper +8 is initially zero"
+    },
+    {
+      "at": "0x35beed",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "service enabled flag check"
+    },
+    {
+      "at": "0x35bef3",
+      "mnemonic": "je",
+      "operands": "0x35cca1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "disabled service returns before task creation"
+    },
+    {
+      "at": "0x35bef9",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserves wrapper argument as RSI"
+    },
+    {
+      "at": "0x35bf27",
+      "mnemonic": "lea",
+      "operands": "rbx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stack task address"
+    },
+    {
+      "at": "0x35bf3f",
+      "mnemonic": "call",
+      "operands": "0xe63b10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "task constructor obtains local counter"
+    },
+    {
+      "at": "0xe63b15",
+      "mnemonic": "lock xadd",
+      "operands": "dword ptr [rip + 0xa577d23], edx",
+      "rip_targets": [
+        "0xb3db840"
+      ],
+      "public_static_strings": [],
+      "observation": "atomic xadd: EDX receives previous local DWORD counter"
+    },
+    {
+      "at": "0xe63b5a",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "stores supplied counter in task first DWORD"
+    },
+    {
+      "at": "0x35c9c8",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "passes task to indirect submission function"
+    },
+    {
+      "at": "0x35c9cc",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0xb07b52e]",
+      "rip_targets": [
+        "0xb3d7f00"
+      ],
+      "public_static_strings": [],
+      "observation": "calls on-disk function pointer at 0xb3d7f00"
+    },
+    {
+      "at": "0x35c9d3",
+      "mnemonic": "mov",
+      "operands": "ebx, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "saves submission return value separately in EBX"
+    },
+    {
+      "at": "0x35c9d5",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reads task first DWORD"
+    },
+    {
+      "at": "0x35c9d8",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 8], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "writes task number into wrapper +8 regardless of saved return"
+    },
+    {
+      "at": "0x35cab9",
+      "mnemonic": "test",
+      "operands": "bl, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "checks submission boolean only after wrapper +8 has been written"
+    },
+    {
+      "at": "0x35cabb",
+      "mnemonic": "jne",
+      "operands": "0x35cc8c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "success branch skips failure logging"
+    },
+    {
+      "at": "0xdf0967",
+      "mnemonic": "call",
+      "operands": "0xdeb2d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls STN manager StartTask if manager exists"
+    },
+    {
+      "at": "0xdf0a47",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing manager returns false"
+    },
+    {
+      "at": "0xdeb315",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x83415bf]",
+      "rip_targets": [
+        "0x912c8db"
+      ],
+      "public_static_strings": [
+        "mars::stn::StnManager::StartTask"
+      ],
+      "observation": "public StnManager::StartTask name"
+    },
+    {
+      "at": "0xdeb2f9",
+      "mnemonic": "call",
+      "operands": "0x2874830",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls NetCore::StartTask when core exists"
+    },
+    {
+      "at": "0xdeb3a5",
+      "mnemonic": "test",
+      "operands": "rsi, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "checks presence of core"
+    },
+    {
+      "at": "0xdeb3a8",
+      "mnemonic": "setne",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returns core presence as boolean"
+    },
+    {
+      "at": "0x287491d",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x6c793bc]",
+      "rip_targets": [
+        "0x94edce0"
+      ],
+      "public_static_strings": [
+        "mars::stn::NetCore::StartTask"
+      ],
+      "observation": "public NetCore::StartTask name"
+    },
+    {
+      "at": "0x3a6c0cc",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [r12 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reads wrapper task number"
+    },
+    {
+      "at": "0x3a6c125",
+      "mnemonic": "mov",
+      "operands": "eax, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returns saved task number"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "interpretation": [
+    "0x3a6beb0 returns a local task number on the analyzed construction path, not the submission boolean and not a server message ID or delivery receipt.",
+    "A normal-return false result from the submission pointer is saved separately; the task number is copied into wrapper +8 before that result is checked. A nonzero task number therefore cannot prove even submission acceptance.",
+    "The disabled service path returns before task creation, leaving the wrapper initial value untouched. No universal numeric success/failure convention is established.",
+    "The initialized global function pointer and service tables are disk observations, not reads of active runtime objects. Runtime replacement, account/session validity and full call ABI remain unverified."
+  ],
+  "remaining": [
+    "request/response and promise completion correlation",
+    "server result versus delivery acknowledgement",
+    "live service lifecycle / account changes",
+    "recipient identity and incoming event contract"
+  ]
+}
