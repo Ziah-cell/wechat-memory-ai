@@ -1,0 +1,670 @@
+{
+  "checked_at_utc": "2026-10-05T14:18:27.304271+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a6ba70",
+      "end": "0x3a6bda5",
+      "role_inference": "registers a stop closure carrying service pointer and returned task number",
+      "instruction_count": 227,
+      "disk_range_sha256": "1510503327910c5aa3fd780905475b1221f9f46b6a0c5e0be81278ab41de222a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b2c40",
+      "end": "0x3b2db0",
+      "role_inference": "wraps and installs cancellation hook at promise +0xd0",
+      "instruction_count": 102,
+      "disk_range_sha256": "787451c1e1c36ec3dd5916980f74c6146bd71024fc6b6ed586d036568e639c12",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xbf40",
+      "end": "0xc0c1",
+      "role_inference": "swaps function holders; heap-pointer branch exchanges +0x38 pointers",
+      "instruction_count": 101,
+      "disk_range_sha256": "620bb0b0a01b262a1f598d8c7422a4f0e030d1638c63cdf0ea8a4491ccba27b8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b56e0",
+      "end": "0x3b5700",
+      "role_inference": "invokes installed stop closure and returns true after normal return",
+      "instruction_count": 11,
+      "disk_range_sha256": "d0e160c9e5fd64110ce202179b5a1f84390d40e422cb44024133b790e623fa67",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6ca70",
+      "end": "0x3a6cc5a",
+      "role_inference": "stop closure invokes service virtual +0x30 using captured task number",
+      "instruction_count": 111,
+      "disk_range_sha256": "7ae77b431b200d6bce6e1f8c54102e90cd575b5cb7c66994de5630fc98c02cb1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35d970",
+      "end": "0x35dc3b",
+      "role_inference": "StopTask and local map removal",
+      "instruction_count": 164,
+      "disk_range_sha256": "e9d9cbfbcd7055f0bd762eb4a592b9c9b5128927752eab166fbfdea4500a74e5",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xdf0ac0",
+      "end": "0xdf0c57",
+      "role_inference": "default STN manager stop wrapper",
+      "instruction_count": 97,
+      "disk_range_sha256": "22251cf2131b4e1b024d222d967ad158369aa993d54ae847843c263a105ddde0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xdeb3f0",
+      "end": "0xdeb4d0",
+      "role_inference": "public StnManager::StopTask",
+      "instruction_count": 48,
+      "disk_range_sha256": "363c0eb051aa01965c66cabde694c4cbee2040b901ea0d3b63894ead2db53a77",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b2ec0",
+      "end": "0x3b3056",
+      "role_inference": "pending promise cancellation: invoke hook then request rejected state",
+      "instruction_count": 104,
+      "disk_range_sha256": "4884452d92cfd4bdd53bcf36d04420833e3fb83c9fade4a305d6d789d8bd6943",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b3160",
+      "end": "0x3b337a",
+      "role_inference": "pending-only settlement",
+      "instruction_count": 115,
+      "disk_range_sha256": "75044b31b8fce79ef0391e2c54d359431f117826273b3b368293d662e3fa7993",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49eae0",
+      "end": "0x49f3aa",
+      "role_inference": "await_noexcept negative resume requests cancellation of awaited promise",
+      "instruction_count": 514,
+      "disk_range_sha256": "dba6f05b56ababc7fdc8ed2df662f6743bc5e9e5c5fd2958b38068730e071cae",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b1ff0",
+      "end": "0x3b2145",
+      "role_inference": "negative await result builds and throws exception",
+      "instruction_count": 66,
+      "disk_range_sha256": "e3b33a6ced70d0a367d09b30da452210156e882dd00c35aa82708b9be1efb21f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end": "0x3a6a7cf",
+      "role_inference": "scope timeout callback registration and post-join removal; scheduler implementation unresolved",
+      "instruction_count": 329,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda4cc0",
+      "end": "0xda5065",
+      "role_inference": "co_job cancel: set cancellation flag and post work to executor",
+      "instruction_count": 197,
+      "disk_range_sha256": "937faa62a6205d40e72eff62f35f5e8c0ed317f94dac456d8ce19067f030570d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda6b40",
+      "end": "0xda6b93",
+      "role_inference": "posted cancellation requests coroutine resume with -1",
+      "instruction_count": 26,
+      "disk_range_sha256": "96c03c82a33d95e755aa5a15244296b3ac5f39e049bc8802110301ff1ab96d5f",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3a6ca50",
+      "size": 9,
+      "anchor": "stop closure table +0x10",
+      "instructions": [
+        {
+          "at": "0x3a6ca50",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x3a6ca54",
+          "mnemonic": "jmp",
+          "operands": "0x3a6ca70"
+        }
+      ]
+    },
+    {
+      "rva": "0x5c1c0",
+      "size": 11,
+      "anchor": "scope timeout callback table +0x10",
+      "instructions": [
+        {
+          "at": "0x5c1c0",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x5c1c4",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx]"
+        },
+        {
+          "at": "0x5c1c7",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 0x10]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x3a6bc50",
+      "kind": "call",
+      "to": "0x3b2c40"
+    },
+    {
+      "at": "0x3b2d48",
+      "kind": "call",
+      "to": "0xbf40"
+    },
+    {
+      "at": "0xdf0b65",
+      "kind": "call",
+      "to": "0xdeb3f0"
+    },
+    {
+      "at": "0x3b2fff",
+      "kind": "call",
+      "to": "0x3b3160"
+    },
+    {
+      "at": "0x49f1b9",
+      "kind": "call",
+      "to": "0x3b2ec0"
+    },
+    {
+      "at": "0x3b2016",
+      "kind": "call",
+      "to": "0x49eae0"
+    },
+    {
+      "at": "0x3a6ca54",
+      "kind": "jmp",
+      "to": "0x3a6ca70"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96d8e78",
+      "role_inference": "stop closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3a6ca50"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fadbc8",
+      "role_inference": "promise cancellation hook wrapper",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3b56e0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5398",
+      "role_inference": "adjusted send service StopTask slot",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x30",
+          "target": "0x35d970"
+        }
+      ]
+    },
+    {
+      "rva": "0xb3d7f08",
+      "role_inference": "on-disk initialized stop dispatch pointer",
+      "writable_section": true,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0xdf0ac0"
+        }
+      ]
+    },
+    {
+      "rva": "0x96d8f18",
+      "role_inference": "callback passed to scope timeout service",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x5c1c0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9126068",
+      "role_inference": "co_job cancel slot",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0xda4cc0"
+        }
+      ]
+    },
+    {
+      "rva": "0x91264d8",
+      "role_inference": "posted job cancellation closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0xda6b40"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a6bc36",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x5c6d23b]",
+      "rip_targets": [
+        "0x96d8e78"
+      ],
+      "public_static_strings": [],
+      "observation": "stop closure table"
+    },
+    {
+      "at": "0x3a6bc41",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "captures service pointer"
+    },
+    {
+      "at": "0x3a6bc45",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "captures returned task number"
+    },
+    {
+      "at": "0x3a6bc50",
+      "mnemonic": "call",
+      "operands": "0x3b2c40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "installs cancellation hook on same promise state"
+    },
+    {
+      "at": "0x3b2cdb",
+      "mnemonic": "add",
+      "operands": "rsi, 0xd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "promise cancellation holder begins at +0xd0"
+    },
+    {
+      "at": "0x3b2ce2",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8bfaedf]",
+      "rip_targets": [
+        "0x8fadbc8"
+      ],
+      "public_static_strings": [],
+      "observation": "hook wrapper table"
+    },
+    {
+      "at": "0x3b2d06",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x40], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "moves stop closure into wrapper +0x40"
+    },
+    {
+      "at": "0x3b2d48",
+      "mnemonic": "call",
+      "operands": "0xbf40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "swaps hook holder into promise +0xd0, whose callable pointer is +0x108"
+    },
+    {
+      "at": "0xbf6d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x38], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "heap-holder branch saves prior promise hook to temporary holder"
+    },
+    {
+      "at": "0xbf71",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "heap-holder branch installs new hook at promise +0xd0+0x38"
+    },
+    {
+      "at": "0x3b2f09",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "only pending promise invokes cancellation hook"
+    },
+    {
+      "at": "0x3b2f16",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x108]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads hook from +0x108"
+    },
+    {
+      "at": "0x3b2f29",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invokes hook table +0x10"
+    },
+    {
+      "at": "0x3b56f0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "wrapper invokes captured stop closure table +0x10"
+    },
+    {
+      "at": "0x3b56f3",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal-return hook reports true, without inspecting network delivery"
+    },
+    {
+      "at": "0x3a6cc3c",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads captured service"
+    },
+    {
+      "at": "0x3a6cc3f",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads captured task number"
+    },
+    {
+      "at": "0x3a6cc45",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls service +0x30"
+    },
+    {
+      "at": "0x35d9c9",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0xb07a539]",
+      "rip_targets": [
+        "0xb3d7f08"
+      ],
+      "public_static_strings": [],
+      "observation": "calls on-disk stop dispatch slot 0xb3d7f08"
+    },
+    {
+      "at": "0xdf0b65",
+      "mnemonic": "call",
+      "operands": "0xdeb3f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "calls manager stop method"
+    },
+    {
+      "at": "0xdeb435",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x83414c0]",
+      "rip_targets": [
+        "0x912c8fc"
+      ],
+      "public_static_strings": [
+        "mars::stn::StnManager::StopTask"
+      ],
+      "observation": "public StnManager::StopTask name"
+    },
+    {
+      "at": "0x35d9f2",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0x20], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "searches local task map by same key"
+    },
+    {
+      "at": "0x35dbc6",
+      "mnemonic": "cmp",
+      "operands": "esi, dword ptr [rbx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "checks matched key"
+    },
+    {
+      "at": "0x35dbe4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroys selected wrapper"
+    },
+    {
+      "at": "0x35dbec",
+      "mnemonic": "call",
+      "operands": "0x10680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "removes local map node"
+    },
+    {
+      "at": "0x3b2ff9",
+      "mnemonic": "mov",
+      "operands": "r8d, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selects rejected state 2 after allowed cancellation hook"
+    },
+    {
+      "at": "0x3b2fff",
+      "mnemonic": "call",
+      "operands": "0x3b3160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "uses same pending-only promise transition helper"
+    },
+    {
+      "at": "0x49f19c",
+      "mnemonic": "test",
+      "operands": "rsi, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "negative resume result branch"
+    },
+    {
+      "at": "0x49f1ac",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "marks await cancellation indicator"
+    },
+    {
+      "at": "0x49f1b9",
+      "mnemonic": "call",
+      "operands": "0x3b2ec0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cancels awaited promise"
+    },
+    {
+      "at": "0x3b201e",
+      "mnemonic": "js",
+      "operands": "0x3b2126",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "negative await return branches to exception construction"
+    },
+    {
+      "at": "0x3b213f",
+      "mnemonic": "call",
+      "operands": "0x769c574",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "throws constructed await exception"
+    },
+    {
+      "at": "0x3a6a43f",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loads shared job pointer"
+    },
+    {
+      "at": "0x3a6a446",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x5c6eacb]",
+      "rip_targets": [
+        "0x96d8f18"
+      ],
+      "public_static_strings": [],
+      "observation": "scope timeout callback table"
+    },
+    {
+      "at": "0x3a6a451",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "captures job in callback +8"
+    },
+    {
+      "at": "0x3a6a46c",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [r15 + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "passes scope DWORD +0x48 into scheduler call"
+    },
+    {
+      "at": "0x3a6a473",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "registers callback with scope service virtual +0x10; exact timing not established"
+    },
+    {
+      "at": "0x5c1c7",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "callback tail-calls captured job virtual +0x10 (cancel)"
+    },
+    {
+      "at": "0xda4ce4",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rcx + 0x17b], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "sets job cancellation flag atomically"
+    },
+    {
+      "at": "0xda4f54",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x838157d]",
+      "rip_targets": [
+        "0x91264d8"
+      ],
+      "public_static_strings": [],
+      "observation": "posted cancellation callback table"
+    },
+    {
+      "at": "0xda4f88",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "executor virtual dispatch; actual scheduling remains unresolved"
+    },
+    {
+      "at": "0xda6b55",
+      "mnemonic": "mov",
+      "operands": "rdx, 0xffffffffffffffff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "posted job cancellation supplies -1 to coroutine resume helper"
+    },
+    {
+      "at": "0xda6b5c",
+      "mnemonic": "call",
+      "operands": "0x49e3a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "requests resume via 0x49e3a0; full bridge to resumed await not verified"
+    },
+    {
+      "at": "0x3a6a6fa",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "post-join scope service virtual +0x18 with saved registration handle"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The stop closure captures the local task number returned by the packaging function; it does not select a chat or retract a delivered message.",
+    "Cancellation invokes StopTask and removes the local wrapper entry. A true hook return means normal completion of this local hook, not confirmation that no data reached a server or recipient.",
+    "The promise cancellation helper settles pending state as 2 after its hook permits it; response resolution uses state 1. Both use a pending-only transition.",
+    "await_noexcept has a negative-resume path that invokes this cancellation helper; its outer await wrapper throws for a negative result.",
+    "A scope callback statically resolves to co_job cancel, and a posted job-cancel body requests resume with -1. Scheduler timing, units/defaults, executor dispatch and the complete cancellation race contract are not verified."
+  ],
+  "not_established": [
+    "server acceptance or recipient delivery",
+    "effect of cancellation after network submission",
+    "timeout units/default and real timer firing",
+    "all exception/race outcomes",
+    "account/recipient identity and inbound event boundary"
+  ]
+}

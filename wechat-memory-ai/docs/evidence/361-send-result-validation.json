@@ -1,0 +1,71 @@
+{
+  "checked_at_utc": "2026-10-05T14:20:29.245450+00:00",
+  "status": "passed",
+  "scope": "Same-executor static revalidation, not runtime or concurrency testing",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 25,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_separate_rel32_math": 17,
+  "unique_tables_checked": 10,
+  "unique_instruction_observations_checked": 89,
+  "rip_references_with_raw_displacement_math": 8,
+  "branch_and_field_assertions": 45,
+  "prior_object_adjustment_assertions": 2,
+  "local_links_checked": 429,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md"
+  ],
+  "saved_listener_state_unchanged": true,
+  "diff_check": "passed",
+  "change_scope": "documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "exploratory_failures": [
+    {
+      "step": "unwind-only probe given anchored leaf 0x3b3880",
+      "result": "assertion stopped that probe; subsequent leaf decode anchored by direct call; no unwind boundary invented"
+    },
+    {
+      "step": "literal probe given malformed manual hex argument",
+      "result": "ValueError; no result claimed for argument"
+    },
+    {
+      "step": "candidate RTTI/literal request outside read-only section",
+      "result": "read-only string assertion stopped extraction; those strings were not used as evidence"
+    },
+    {
+      "step": "first evidence-generation cancellation leaf size",
+      "result": "incorrect assumed length 10 rejected by full-decode assertion; instruction sizes 4+3+4 verified and corrected to 11 before final generation"
+    }
+  ],
+  "analysis_scripts": [
+    {
+      "cache_file": "probe_result.py",
+      "sha256": "7f8f738e4ece05551eb8680cfbed48846fc8cdec95e756caed11407384ce1d4d"
+    },
+    {
+      "cache_file": "verify_result_evidence.py",
+      "sha256": "0f9a594ddae78dd64804ff389fb8b202eb390d5b1010becd4c572a4262f2f939"
+    },
+    {
+      "cache_file": "write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    }
+  ],
+  "remaining": [
+    "per-message response/request relation",
+    "network completion callback registration and parsing failures",
+    "timer implementation and executor/resume bridge",
+    "full lifetime and races",
+    "account/recipient/inbound identity and real minimized operation"
+  ]
+}
