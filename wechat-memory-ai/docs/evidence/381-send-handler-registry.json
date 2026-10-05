@@ -1,0 +1,1380 @@
+{
+  "checked_at_utc": "2026-10-05T17:08:19.008166+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x1802d10",
+      "end": "0x1803995",
+      "role_inference": "upper send path looks up receiver then captures it in sending closure",
+      "instruction_count": 735,
+      "disk_range_sha256": "876ec26e99a15989a0a6dc1f2d9f1f07d6e2e42dedf47fe0bdee62464f425c41",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17b34b0",
+      "end": "0x17b39d5",
+      "role_inference": "obtains type selectors from request descriptor, including a special normalization to type1",
+      "instruction_count": 302,
+      "disk_range_sha256": "42f71da92bcdf503cd6334d9fd6679ef7f24b856971d335cf401ea8b5dfcf883",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17c5700",
+      "end": "0x17c614d",
+      "role_inference": "two-stage lookup through manager+0xbf8 registry",
+      "instruction_count": 595,
+      "disk_range_sha256": "150a99954bed2d8cfc67f7195e679183cb068f6fc21b15c25ef3673095e49928",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39b4ff0",
+      "end": "0x39b5171",
+      "role_inference": "formats type key; type49 uses subtype suffix",
+      "instruction_count": 100,
+      "disk_range_sha256": "a91460f9c83ef56d5a7c34a44571776c9860ecb20f480f41379a6cc6f18d6039",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x179d710",
+      "end": "0x179e230",
+      "role_inference": "passes registry and registry+0x40 to handler registration",
+      "instruction_count": 651,
+      "disk_range_sha256": "67d2e9bd1eaa89ed2ec889eb69bff082ec382e15558314f5c19555a2239e46f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39b51c0",
+      "end": "0x39b8795",
+      "role_inference": "registers named handlers and type-key to handler-name mappings",
+      "instruction_count": 3291,
+      "disk_range_sha256": "f83c58c2b0356ea56013745165ec4f05d9260e2ccc2adab702aa8299f6379489",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38c9450",
+      "end": "0x38c9538",
+      "role_inference": "TextMessageHandler construction with table0x96b69e8",
+      "instruction_count": 72,
+      "disk_range_sha256": "5d76cff934b4358c3f62da5ab823379077846395e8f4aa235f9f80020bad19f3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38c9e20",
+      "end": "0x38c9f08",
+      "role_inference": "LocationMessageHandler construction with table0x96b7a68",
+      "instruction_count": 72,
+      "disk_range_sha256": "d0b73117f5bc06e58548fc978958cac4d01a12226995565ee7c8c39d8b0a27f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x180e3e0",
+      "end": "0x180e87a",
+      "role_inference": "inserts name to shared handler; duplicate-key branch returns existing node",
+      "instruction_count": 315,
+      "disk_range_sha256": "6fd422390e952145be018ab81e049ad1ddad76c9b18b22360c21543dd421a980",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x18680b0",
+      "end": "0x1868193",
+      "role_inference": "copies name and moves shared handler into node pair",
+      "instruction_count": 69,
+      "disk_range_sha256": "c87be356c5c41b2746f7d20bfbea933dd64c8a8ceffa232bfa79646adf440c4d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x733c80",
+      "end": "0x7340ad",
+      "role_inference": "inserts type key to handler name; duplicate-key branch keeps existing node",
+      "instruction_count": 281,
+      "disk_range_sha256": "a198a4cdcd2368491b54a3892ed881ffa61eaa14b40352e03c00fa487b5a6b4e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1d4800",
+      "end": "0x1d4995",
+      "role_inference": "copies two strings into key/value pair",
+      "instruction_count": 117,
+      "disk_range_sha256": "ecf2745a2b9b4f276dec5a7941077b376c40d629445280ce49fb83b948d12c9c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1865d60",
+      "end": "0x1866683",
+      "role_inference": "captured receiver forwarding body already in377",
+      "instruction_count": 536,
+      "disk_range_sha256": "d1e819850cc63b4ed210019eac6ea8f2ea7ace3b45ad5c1aa587cbadcc716ce4",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1866a60",
+      "end": "0x1866fc4",
+      "role_inference": "forwards retained receiver into virtual-dispatch helper",
+      "instruction_count": 325,
+      "disk_range_sha256": "8c3b080e1035af04676aa71a8f8bf0428314d5b11fe9025183a918f81c27f248",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c3850",
+      "end": "0x39c3998",
+      "role_inference": "invokes actual receiver table+0xd0",
+      "instruction_count": 102,
+      "disk_range_sha256": "d4a8316e9557deba3e5c4016f7da4f4e655adbf1b53cb3aadfc6738616884a49",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x18033a0",
+      "kind": "call",
+      "to": "0x17b34b0"
+    },
+    {
+      "at": "0x17b36f1",
+      "kind": "call",
+      "to": "0x17c5700"
+    },
+    {
+      "at": "0x17c5758",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x179d8fb",
+      "kind": "call",
+      "to": "0x39b51c0"
+    },
+    {
+      "at": "0x39b5206",
+      "kind": "call",
+      "to": "0x38c9450"
+    },
+    {
+      "at": "0x39b5255",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b531f",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b53fa",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b54c5",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b558c",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b55a1",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b567b",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b572a",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b573f",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b5805",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b581a",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b58e0",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b58f5",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b59bb",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b59d0",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b5aab",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b5b78",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b5c50",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b5d1d",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b5de0",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b5ea8",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b5f54",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b5f69",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b602c",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6041",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6104",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6119",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b61dc",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b61f1",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b62b4",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b62c9",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b638c",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b63a1",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6464",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6479",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b653c",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6551",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6614",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6629",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b66ec",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6701",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b67c4",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b67d9",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b689e",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b68b3",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6978",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b698d",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6a50",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6a65",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6b28",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6b3d",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6c00",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6c15",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6cd8",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6ced",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6db0",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6dc5",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6e88",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6e9d",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b6f60",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b6f75",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7038",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b704d",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7112",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b7127",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b71ea",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b71ff",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b72c2",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b72d7",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b739a",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b73af",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7472",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b7487",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b754a",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b755f",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b76e7",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b7892",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b796f",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b7a61",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b7b2f",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7c09",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b7cd4",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7d99",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b7dae",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b7e8a",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b7f57",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b8034",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b8107",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b8192",
+      "kind": "call",
+      "to": "0x38c9e20"
+    },
+    {
+      "at": "0x39b81e1",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b82ac",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b8386",
+      "kind": "call",
+      "to": "0x180e3e0"
+    },
+    {
+      "at": "0x39b844f",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b8531",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b8613",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x39b86d7",
+      "kind": "call",
+      "to": "0x39b4ff0"
+    },
+    {
+      "at": "0x39b86ec",
+      "kind": "call",
+      "to": "0x733c80"
+    },
+    {
+      "at": "0x180e5ed",
+      "kind": "call",
+      "to": "0x18680b0"
+    },
+    {
+      "at": "0x733e83",
+      "kind": "call",
+      "to": "0x1d4800"
+    },
+    {
+      "at": "0x186600e",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x18662bc",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x18665cf",
+      "kind": "call",
+      "to": "0x1802d10"
+    },
+    {
+      "at": "0x1866d77",
+      "kind": "call",
+      "to": "0x39c3850"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9289c38",
+      "role_inference": "upper send closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x1865d60"
+        }
+      ]
+    },
+    {
+      "rva": "0x96b69e8",
+      "role_inference": "TextMessageHandler send slot",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xd0",
+          "target": "0x3a72550"
+        }
+      ]
+    },
+    {
+      "rva": "0x96b7a68",
+      "role_inference": "LocationMessageHandler send slot, historical selected implementation",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xd0",
+          "target": "0x3a65aa0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x180338a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x60], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy request pointer for lookup"
+    },
+    {
+      "at": "0x1803392",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x200]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "lookup output shared pair at rbp+0x200"
+    },
+    {
+      "at": "0x1803399",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "lookup input request shared pair"
+    },
+    {
+      "at": "0x18033a0",
+      "mnemonic": "call",
+      "operands": "0x17b34b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "lookup handler"
+    },
+    {
+      "at": "0x18033a6",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x200], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reject null lookup result"
+    },
+    {
+      "at": "0x1803681",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x7a865b0]",
+      "rip_targets": [
+        "0x9289c38"
+      ],
+      "public_static_strings": [],
+      "observation": "send closure table"
+    },
+    {
+      "at": "0x180369a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x18], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture lookup receiver pointer"
+    },
+    {
+      "at": "0x180369e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x20], r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture receiver control block"
+    },
+    {
+      "at": "0x17b3673",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor virtual+8 first type selector"
+    },
+    {
+      "at": "0x17b3685",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor virtual+0x10 subtype selector"
+    },
+    {
+      "at": "0x17b3697",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor virtual+0x18 third selector"
+    },
+    {
+      "at": "0x17b369b",
+      "mnemonic": "cmp",
+      "operands": "esi, 0x31",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special first selector49 branch"
+    },
+    {
+      "at": "0x17b36a0",
+      "mnemonic": "cmp",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special third selector2 condition"
+    },
+    {
+      "at": "0x17b36ad",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x400000011",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected subtype mask"
+    },
+    {
+      "at": "0x17b36c2",
+      "mnemonic": "cmp",
+      "operands": "edi, 0x8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "additional subtype139 condition"
+    },
+    {
+      "at": "0x17b36ca",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x1c4], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normalize selected cases to first selector1"
+    },
+    {
+      "at": "0x17b36dd",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0x1c4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first selector address"
+    },
+    {
+      "at": "0x17b36e4",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp + 0x1b4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subtype address"
+    },
+    {
+      "at": "0x17b36f1",
+      "mnemonic": "call",
+      "operands": "0x17c5700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "two-stage registry lookup"
+    },
+    {
+      "at": "0x17c5737",
+      "mnemonic": "mov",
+      "operands": "r12, qword ptr [rcx + 0xbf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "registry from manager+0xbf8"
+    },
+    {
+      "at": "0x17c5745",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [r9]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subtype value"
+    },
+    {
+      "at": "0x17c574f",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first selector value"
+    },
+    {
+      "at": "0x17c5758",
+      "mnemonic": "call",
+      "operands": "0x39b4ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "format key"
+    },
+    {
+      "at": "0x17c5824",
+      "mnemonic": "and",
+      "operands": "rcx, qword ptr [r12 + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first lookup uses registry+0x70 mask (map base+0x40)"
+    },
+    {
+      "at": "0x17c58e2",
+      "mnemonic": "mov",
+      "operands": "r15, qword ptr [r12 + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first value string length at node+0x40"
+    },
+    {
+      "at": "0x17c58f3",
+      "mnemonic": "mov",
+      "operands": "r12, qword ptr [r12 + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first value string storage at node+0x30"
+    },
+    {
+      "at": "0x17c5d4f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0xbf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload registry for second lookup"
+    },
+    {
+      "at": "0x17c5d70",
+      "mnemonic": "and",
+      "operands": "rdx, qword ptr [rax + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second map mask at registry+0x30"
+    },
+    {
+      "at": "0x17c5e17",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returned handler control block at node+0x38"
+    },
+    {
+      "at": "0x17c5e24",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returned handler pointer at node+0x30"
+    },
+    {
+      "at": "0x17c5e28",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write output pointer"
+    },
+    {
+      "at": "0x17c5e2f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write output control block"
+    },
+    {
+      "at": "0x39b500d",
+      "mnemonic": "cmp",
+      "operands": "edx, 0x31",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type49 special formatting"
+    },
+    {
+      "at": "0x39b5034",
+      "mnemonic": "mov",
+      "operands": "word ptr [rbp - 0x20], 0x3934",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ASCII49 prefix"
+    },
+    {
+      "at": "0x39b5042",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp - 0x1e], 0x5f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "underscore suffix separator"
+    },
+    {
+      "at": "0x39b5158",
+      "mnemonic": "call",
+      "operands": "0x9ab00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other types go through integer formatter"
+    },
+    {
+      "at": "0x179d8c2",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0xbf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load same registry field"
+    },
+    {
+      "at": "0x179d8f3",
+      "mnemonic": "lea",
+      "operands": "rdx, [rcx + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second map is registry+0x40"
+    },
+    {
+      "at": "0x179d8fb",
+      "mnemonic": "call",
+      "operands": "0x39b51c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "register handlers/maps"
+    },
+    {
+      "at": "0x39b51f9",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain second map argument"
+    },
+    {
+      "at": "0x39b51fc",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain first map argument"
+    },
+    {
+      "at": "0x39b5206",
+      "mnemonic": "call",
+      "operands": "0x38c9450",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct Text handler shared pair"
+    },
+    {
+      "at": "0x39b5222",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], 0x12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Text name length18"
+    },
+    {
+      "at": "0x39b5232",
+      "mnemonic": "movups",
+      "operands": "xmm6, xmmword ptr [rip + 0x5d1234f]",
+      "rip_targets": [
+        "0x96c7588"
+      ],
+      "public_static_strings": [
+        "TextMessageHandler"
+      ],
+      "observation": "Text static name prefix"
+    },
+    {
+      "at": "0x39b523c",
+      "mnemonic": "mov",
+      "operands": "word ptr [rax + 0x10], 0x7265",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Text final er bytes"
+    },
+    {
+      "at": "0x39b524e",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp - 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constructed shared pair passed as value"
+    },
+    {
+      "at": "0x39b5255",
+      "mnemonic": "call",
+      "operands": "0x180e3e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "insert Text name to constructed object"
+    },
+    {
+      "at": "0x39b52fc",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x40], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type-key string length1"
+    },
+    {
+      "at": "0x39b530c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp - 0x50], 0x31",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ASCII1 type key"
+    },
+    {
+      "at": "0x39b531f",
+      "mnemonic": "call",
+      "operands": "0x733c80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "insert type1 to Text name"
+    },
+    {
+      "at": "0x39b5cfc",
+      "mnemonic": "movabs",
+      "operands": "r15, 0x72656c646e614865",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "shared tail bytes eHandler retained in r15"
+    },
+    {
+      "at": "0x39b8192",
+      "mnemonic": "call",
+      "operands": "0x38c9e20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct Location handler shared pair"
+    },
+    {
+      "at": "0x39b81ae",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], 0x16",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Location name length22"
+    },
+    {
+      "at": "0x39b81be",
+      "mnemonic": "movups",
+      "operands": "xmm8, xmmword ptr [rip + 0x5d0f52a]",
+      "rip_targets": [
+        "0x96c76f0"
+      ],
+      "public_static_strings": [
+        "LocationMessageHandler"
+      ],
+      "observation": "Location static name prefix"
+    },
+    {
+      "at": "0x39b81ca",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0xe], r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Location name tail eHandler at offset14"
+    },
+    {
+      "at": "0x39b81e1",
+      "mnemonic": "call",
+      "operands": "0x180e3e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "insert Location name to constructed object"
+    },
+    {
+      "at": "0x39b8287",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x40], 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Location type key length2"
+    },
+    {
+      "at": "0x39b8297",
+      "mnemonic": "mov",
+      "operands": "word ptr [rbp - 0x50], 0x3834",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ASCII48 type key"
+    },
+    {
+      "at": "0x39b82ac",
+      "mnemonic": "call",
+      "operands": "0x733c80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "insert type48 to Location name"
+    },
+    {
+      "at": "0x38c94a1",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x5ded540]",
+      "rip_targets": [
+        "0x96b69e8"
+      ],
+      "public_static_strings": [],
+      "observation": "Text vtable address"
+    },
+    {
+      "at": "0x38c94ac",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "assign Text actual object vtable at control+0x10"
+    },
+    {
+      "at": "0x38c9e71",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x5dedbf0]",
+      "rip_targets": [
+        "0x96b7a68"
+      ],
+      "public_static_strings": [],
+      "observation": "Location vtable address"
+    },
+    {
+      "at": "0x38c9e7c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "assign Location actual object vtable"
+    },
+    {
+      "at": "0x180e56c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbx + 8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing handler-name key returns inserted=false"
+    },
+    {
+      "at": "0x180e570",
+      "mnemonic": "jmp",
+      "operands": "0x180e860",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing-key branch exits without replacing value"
+    },
+    {
+      "at": "0x180e5dc",
+      "mnemonic": "add",
+      "operands": "r15, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "node pair begins at node+0x10"
+    },
+    {
+      "at": "0x180e5ed",
+      "mnemonic": "call",
+      "operands": "0x18680b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct name/shared-handler pair"
+    },
+    {
+      "at": "0x186816a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "handler pointer stored pair+0x20, hence node+0x30"
+    },
+    {
+      "at": "0x1868172",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "control stored pair+0x28, hence node+0x38"
+    },
+    {
+      "at": "0x733e0c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rdi + 8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing type key returns inserted=false"
+    },
+    {
+      "at": "0x733e10",
+      "mnemonic": "jmp",
+      "operands": "0x734099",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing type branch exits"
+    },
+    {
+      "at": "0x733e74",
+      "mnemonic": "add",
+      "operands": "rcx, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "two-string pair at node+0x10"
+    },
+    {
+      "at": "0x733e83",
+      "mnemonic": "call",
+      "operands": "0x1d4800",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct two-string pair"
+    },
+    {
+      "at": "0x1d4952",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "long second string storage at pair+0x20, hence node+0x30"
+    },
+    {
+      "at": "0x1865fb9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load captured receiver pointer"
+    },
+    {
+      "at": "0x186600e",
+      "mnemonic": "call",
+      "operands": "0x1866a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "forward captured receiver"
+    },
+    {
+      "at": "0x1866d77",
+      "mnemonic": "call",
+      "operands": "0x39c3850",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke virtual-dispatch helper"
+    },
+    {
+      "at": "0x39c3910",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0xd0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "actual receiver virtual+0xd0"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "registration_cases": [
+    {
+      "key": "1",
+      "name": "TextMessageHandler",
+      "constructor": "0x38c9450",
+      "table": "0x96b69e8",
+      "send_slot": "0xd0",
+      "entry": "0x3a72550"
+    },
+    {
+      "key": "48",
+      "name": "LocationMessageHandler",
+      "constructor": "0x38c9e20",
+      "table": "0x96b7a68",
+      "send_slot": "0xd0",
+      "entry": "0x3a65aa0"
+    }
+  ],
+  "conclusions": [
+    "Default registration supplies a type-key-to-name map at registry+0x40 and a name-to-shared-handler map at registry+0. The upper sending path reads both and captures the returned receiver before virtual+0xd0 dispatch.",
+    "The previously selected0x3a65aa0 implementation is registered as LocationMessageHandler under key48. TextMessageHandler is registered under key1, constructed by0x38c9450, and has send slot0x3a72550. Historical type-specific response consumption must not be silently generalized to text.",
+    "Selected type49/subtype/third-selector cases normalize to type1, so key1 does not prove every incoming descriptor was ordinary text. Actual descriptor construction, client account and friend identity remain unverified.",
+    "Both insertion helpers retain existing values on duplicate keys. This is a fixed-file default-registration and lookup connection, not proof of an immutable registry, active receiver instance or runtime execution.",
+    "The upper closure/scope flow in377 is shared before the concrete virtual dispatch; each concrete send body still requires its own evidence."
+  ],
+  "remaining": [
+    "Actual descriptor construction and account/friend binding",
+    "Registry prepopulation/replacement and actual receiver type",
+    "Text response-consumption branches and target correlation",
+    "Runtime scope/overrides, final shutdown and inbound contracts"
+  ]
+}

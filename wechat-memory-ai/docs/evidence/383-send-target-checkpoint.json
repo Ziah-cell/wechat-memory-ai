@@ -1,0 +1,23 @@
+{
+  "phase": "stopped",
+  "stop_reason": "native_reader_timeout",
+  "snapshots": 24569,
+  "minimized_snapshots": 24505,
+  "filtered_unknown_texts": 1,
+  "keep_awake_request_active": false,
+  "checked_at_utc": "2026-10-05T17:08:19.008166+00:00",
+  "scope": "Saved file only, no current process/window inspection",
+  "saved_runtime_sha256": "83ad7e3c3d8d26b99f4fdd9856fab9974e06e2a445c7873df26e44962df07f09",
+  "last_observed_window_minimized": true,
+  "current_window_verified": false,
+  "listener_restarted": false,
+  "window_operated": false,
+  "credentials_read": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "product_version": "0.1.22",
+  "auto_reply_enabled": false,
+  "product_tests_run": false,
+  "native_tests_run": false
+}

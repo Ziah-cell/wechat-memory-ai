@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-05T17:21:30.013248+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; no runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 23,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_raw_rel32_math": 123,
+  "unique_tables_checked": 5,
+  "unique_instruction_observations_checked": 161,
+  "rip_references_with_raw_displacement_math": 10,
+  "branch_field_assertions": 62,
+  "explicit_table_targets_checked": 5,
+  "handler_names_reconstructed_from_readonly_literals_and_immediates": [
+    "TextMessageHandler",
+    "LocationMessageHandler"
+  ],
+  "options_checked": {
+    "Text": [
+      1,
+      120000
+    ],
+    "Location": [
+      0,
+      120000
+    ],
+    "first_dword_semantics_verified": false
+  },
+  "previous_analysis_script_hashes_unchanged": 8,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 511,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Old scripts preserved; graph/save AST definitions only, no old writer import/execution.",
+    "Registry evidence corrects the formerly unspecified concrete candidate to Location, with a distinct Text entry. Prior evidence is retained unchanged and its type-specific scope clarified in current docs.",
+    "Leaf probe once interpreted a trailing size as another address, after correctly printing the anchored33-byte leaf; the extra invalid-address assertion was a tool usage error, not a target/runtime failure.",
+    "One handwritten expected capture operand used rax instead of rbx; corrected against the fresh decoded instruction before rerunning all checks.",
+    "Large text-entry branches are only partially traced. Decoding every instruction in its unwind range does not prove all paths, actual reachability or response-consumer equivalence.",
+    "The @weclaw and @qy patterns observed while exploring classification are static client strings, not evidence for adopting a Bot/enterprise route."
+  ],
+  "remaining": [
+    "Actual descriptor construction and account/friend binding",
+    "Registry prepopulation/replacement and actual receiver type",
+    "Text response-consumption branches and target correlation",
+    "Runtime scope/overrides, final shutdown and inbound contracts",
+    "Meaning/control flow of options first DWORD",
+    "Upstream source-field identity, Text response matching and all relevant branches"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-target-20261006/write_evidence.py",
+      "sha256": "a900d8cd8968aa481b55a8bd0a3916149c1fe6a8469e5413882a21c084eadc6b"
+    },
+    {
+      "cache_path": "data/send-target-20261006/verify_evidence.py",
+      "sha256": "10307e8832362dae6e10b36e77dfc85e5bbdad55f5c8ef1d0949d02af3a8e0e7"
+    },
+    {
+      "cache_path": "data/send-target-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/send-target-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/send-target-20261006/search_static.py",
+      "sha256": "49b5d3ba4b69928870152d453ed47f48435605fcf795a98437f85c6e64a28b4c"
+    },
+    {
+      "cache_path": "data/send-target-20261006/scan_edges.py",
+      "sha256": "9607bba279181bf570b7a91f247252aa50fdcd7119da1747e83583612b244068"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}
