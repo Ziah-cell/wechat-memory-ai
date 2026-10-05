@@ -1,0 +1,487 @@
+{
+  "checked_at_utc": "2026-10-05T15:35:09.466856+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0xfc3c80",
+      "end": "0xfc3e69",
+      "role_inference": "looper delayed submission",
+      "instruction_count": 133,
+      "disk_range_sha256": "19bdf45bcdcc241a463c1b0c20c1f2768d4ea1b0d00e536ff3c67fb984c30237",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xd9e9e0",
+      "end": "0xd9ee1b",
+      "role_inference": "default_looper add_task forms deadline and inserts task",
+      "instruction_count": 232,
+      "disk_range_sha256": "71e98ea100881c71369214faca98214d87062416bec39a2c876a2cbeca141e4b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x594b70",
+      "end": "0x594c5b",
+      "role_inference": "performance-counter conversion to integer milliseconds",
+      "instruction_count": 64,
+      "disk_range_sha256": "28be997b36b319fe9034c010c598d9d522b93a4027b21ecd6815c5601e99a5a3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x7529228",
+      "end": "0x7529254",
+      "role_inference": "cached frequency getter",
+      "instruction_count": 10,
+      "disk_range_sha256": "bf938cce76a3d86d39daf4b4016e4684e221d72346d7c93d4a3f22667d9f683d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x752920c",
+      "end": "0x7529225",
+      "role_inference": "performance counter getter",
+      "instruction_count": 6,
+      "disk_range_sha256": "b2aa5336308923a069065333139ba7ebcec109c59e67c7d0ba7906e507f36e8f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xd9f2d0",
+      "end": "0xd9fa0e",
+      "role_inference": "choose wait duration from earliest deadline",
+      "instruction_count": 357,
+      "disk_range_sha256": "6189dc100e01ce856836320075c96d8dd60f848c11ed7e7f9bf3dc796988831c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xd9fb70",
+      "end": "0xd9fdda",
+      "role_inference": "condition-variable wait helper converts millisecond duration to nanoseconds",
+      "instruction_count": 173,
+      "disk_range_sha256": "3ab0c0caee1ff1725c0ca09b16ff644d942efe4b9997ce1ffa9eb38a0a248aea",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a6a2c0",
+      "end": "0x3a6a7cf",
+      "role_inference": "sending scope registers timeout callback and later requests removal",
+      "instruction_count": 329,
+      "disk_range_sha256": "ac005967c81c157c67a2e98783ee0af1a22deddb8328a075542c440eb1dfacd3",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0xd9eb09",
+      "kind": "call",
+      "to": "0x594b70"
+    },
+    {
+      "at": "0x594b75",
+      "kind": "call",
+      "to": "0x7529228"
+    },
+    {
+      "at": "0x594b7d",
+      "kind": "call",
+      "to": "0x752920c"
+    },
+    {
+      "at": "0xd9f34d",
+      "kind": "call",
+      "to": "0x594b70"
+    },
+    {
+      "at": "0xd9f79b",
+      "kind": "call",
+      "to": "0xd9fb70"
+    },
+    {
+      "at": "0xd9fb98",
+      "kind": "call",
+      "to": "0x7529228"
+    },
+    {
+      "at": "0xd9fba0",
+      "kind": "call",
+      "to": "0x752920c"
+    },
+    {
+      "at": "0xd9fc23",
+      "kind": "call",
+      "to": "0x7529228"
+    },
+    {
+      "at": "0xd9fc2b",
+      "kind": "call",
+      "to": "0x752920c"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x3a6a419",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r15 + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "receiver from inherited timeout scope+0x28"
+    },
+    {
+      "at": "0x3a6a46c",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [r15 + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw delay from scope+0x48"
+    },
+    {
+      "at": "0x3a6a473",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "receiver virtual+0x10"
+    },
+    {
+      "at": "0xfc3ca0",
+      "mnemonic": "mov",
+      "operands": "esi, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve raw DWORD delay"
+    },
+    {
+      "at": "0xfc3dec",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x20], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass unchanged delay as fifth add_task argument"
+    },
+    {
+      "at": "0xfc3df0",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "period zero"
+    },
+    {
+      "at": "0xfc3dfb",
+      "mnemonic": "mov",
+      "operands": "r8w, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "task type 1"
+    },
+    {
+      "at": "0xfc3e03",
+      "mnemonic": "call",
+      "operands": "rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call underlying add_task +0x28"
+    },
+    {
+      "at": "0xfc3e58",
+      "mnemonic": "mov",
+      "operands": "rax, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return opaque task id"
+    },
+    {
+      "at": "0xd9eb09",
+      "mnemonic": "call",
+      "operands": "0x594b70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "sample converted performance counter"
+    },
+    {
+      "at": "0xd9eb6d",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x180]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load delay with DWORD zero extension"
+    },
+    {
+      "at": "0xd9eb7a",
+      "mnemonic": "add",
+      "operands": "rcx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "deadline is now plus delay"
+    },
+    {
+      "at": "0xd9eb7d",
+      "mnemonic": "mov",
+      "operands": "edx, 0xffffffff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special delay value is 0xffffffff"
+    },
+    {
+      "at": "0xd9eb8c",
+      "mnemonic": "cmovne",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "select UINT64_MAX for that special value; otherwise computed deadline"
+    },
+    {
+      "at": "0xd9eb90",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x100], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save deadline in timeout item"
+    },
+    {
+      "at": "0xd9ec99",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + rax*8], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "insert task record into slot table by high ID DWORD"
+    },
+    {
+      "at": "0x594b75",
+      "mnemonic": "call",
+      "operands": "0x7529228",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "frequency getter"
+    },
+    {
+      "at": "0x594b7d",
+      "mnemonic": "call",
+      "operands": "0x752920c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "counter getter"
+    },
+    {
+      "at": "0x594b82",
+      "mnemonic": "cmp",
+      "operands": "rsi, 0x989680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "10 MHz frequency fast path"
+    },
+    {
+      "at": "0x594b8b",
+      "mnemonic": "imul",
+      "operands": "rax, rax, 0x64",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "counter times 100 yields nanoseconds on 10 MHz branch"
+    },
+    {
+      "at": "0x594b8f",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x431bde82d7b634db",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "signed division-by-1000000 reciprocal constant"
+    },
+    {
+      "at": "0x594ba3",
+      "mnemonic": "sar",
+      "operands": "rdx, 0x12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "division arithmetic shift 18"
+    },
+    {
+      "at": "0x594bb0",
+      "mnemonic": "cmp",
+      "operands": "rsi, 0x16e3600",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "24 MHz frequency fast path"
+    },
+    {
+      "at": "0x594be7",
+      "mnemonic": "imul",
+      "operands": "rcx, rcx, 0x3b9aca00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "remainder times 1000000000"
+    },
+    {
+      "at": "0x594c2e",
+      "mnemonic": "imul",
+      "operands": "rcx, rax, 0x3b9aca00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "generic whole seconds times 1000000000"
+    },
+    {
+      "at": "0x594c35",
+      "mnemonic": "imul",
+      "operands": "rax, rdx, 0x3b9aca00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "generic remainder times 1000000000 before frequency division"
+    },
+    {
+      "at": "0x594c56",
+      "mnemonic": "jmp",
+      "operands": "0x594b8f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "all converted nanosecond branches use common millisecond divisor"
+    },
+    {
+      "at": "0x752923d",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x2922a4d]",
+      "rip_targets": [
+        "0x9e4bc90"
+      ],
+      "public_static_strings": [],
+      "observation": "IAT QueryPerformanceFrequency"
+    },
+    {
+      "at": "0x7529215",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x2922a6d]",
+      "rip_targets": [
+        "0x9e4bc88"
+      ],
+      "public_static_strings": [],
+      "observation": "IAT QueryPerformanceCounter"
+    },
+    {
+      "at": "0xd9f34d",
+      "mnemonic": "call",
+      "operands": "0x594b70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "sample same millisecond helper before wait"
+    },
+    {
+      "at": "0xd9f35e",
+      "mnemonic": "cmp",
+      "operands": "rdi, -1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "UINT64_MAX deadline chooses infinite-wait branch"
+    },
+    {
+      "at": "0xd9f364",
+      "mnemonic": "sub",
+      "operands": "rdi, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "remaining interval deadline minus now"
+    },
+    {
+      "at": "0xd9f367",
+      "mnemonic": "jbe",
+      "operands": "0xd9f40d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "already due takes wait(0) branch"
+    },
+    {
+      "at": "0xd9f6eb",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "custom wait interface receives remaining DWORD if present"
+    },
+    {
+      "at": "0xd9f78c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x50], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "null-custom branch saves remaining DWORD as QWORD duration"
+    },
+    {
+      "at": "0xd9f79b",
+      "mnemonic": "call",
+      "operands": "0xd9fb70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass to condition-variable helper"
+    },
+    {
+      "at": "0xd9fbe1",
+      "mnemonic": "imul",
+      "operands": "r15, rax, 0xf4240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "duration multiplied by 1000000 before adding nanosecond counter"
+    },
+    {
+      "at": "0xd9fc68",
+      "mnemonic": "imul",
+      "operands": "rax, rdx, 0xf4240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "convert quotient back by times1000000 to detect fractional remainder"
+    },
+    {
+      "at": "0xd9fc75",
+      "mnemonic": "setl",
+      "operands": "r8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "positive fractional remainder rounds wait milliseconds upward"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "import_resolution": [
+    {
+      "kind": "normal",
+      "slot": "0x9e4bc88",
+      "module": "KERNEL32.dll",
+      "symbol": "QueryPerformanceCounter"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4bc90",
+      "module": "KERNEL32.dll",
+      "symbol": "QueryPerformanceFrequency"
+    }
+  ],
+  "clock_contract": {
+    "selected_implementation_unit": "milliseconds",
+    "selected_callsite_default_raw": 120000,
+    "conditional_duration_seconds": 120,
+    "applies_if": "sending scope executor resolves to the selected looper/default_looper implementation",
+    "clock_source": "QueryPerformanceCounter / QueryPerformanceFrequency, converted to integer milliseconds",
+    "deadline": "delay==UINT32_MAX ? UINT64_MAX : now_ms + zero_extend_uint32(delay)",
+    "zero_delay": "deadline equals now; still queued, not inline invocation",
+    "other_negative_signed_interpretations": "not a general immediate-expiry rule; input is read as unsigned DWORD",
+    "runtime_frequency_read": false,
+    "runtime_timer_accuracy_verified": false,
+    "suspend_resume_behavior_verified": false,
+    "all_sends_use_this_executor_verified": false
+  },
+  "reference_semantics": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancefrequency",
+      "checked_date": "2026-10-05",
+      "paraphrase": "Frequency output is counts per second."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter",
+      "checked_date": "2026-10-05",
+      "paraphrase": "Counter output is a performance-counter value in counts, usable for interval measurements."
+    }
+  ],
+  "conclusions": [
+    "Unlike evidence368, the selected concrete looper implementation now has a millisecond unit and QPC-derived clock backed by arithmetic, imports and the wait-helper conversion. 120000 corresponds to 120 seconds only under this implementation condition.",
+    "An expired deadline makes work eligible for the loop; it does not guarantee callback execution at exactly that wall-clock time. Queue load, suspension and actual callback behavior were not measured.",
+    "0xffffffff selects an infinite deadline; zero is queued at the current timestamp. No generic negative-value, global network-timeout or actual-timer-instance claim is made."
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "checked_at_utc": "2026-10-05T15:42:11.999118+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification, not runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 32,
+  "unique_anchored_leaves_checked": 5,
+  "unique_direct_edges_with_raw_rel32_math": 36,
+  "unique_tables_checked": 5,
+  "unique_instruction_observations_checked": 121,
+  "rip_references_with_raw_displacement_math": 13,
+  "branch_field_assertions": 58,
+  "imports_checked": [
+    {
+      "kind": "normal",
+      "slot": "0x9e4b530",
+      "module": "KERNEL32.dll",
+      "symbol": "AcquireSRWLockExclusive"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4b800",
+      "module": "KERNEL32.dll",
+      "symbol": "GetCurrentThreadId"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4bc88",
+      "module": "KERNEL32.dll",
+      "symbol": "QueryPerformanceCounter"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4bc90",
+      "module": "KERNEL32.dll",
+      "symbol": "QueryPerformanceFrequency"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4bce8",
+      "module": "KERNEL32.dll",
+      "symbol": "ReleaseSRWLockExclusive"
+    }
+  ],
+  "nanosecond_division_samples": 9,
+  "synthetic_clock_samples": [
+    {
+      "frequency": 10000000,
+      "synthetic_count": 0,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 1,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 9999999,
+      "milliseconds": 999
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 10000000,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 10000001,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 1200000000,
+      "milliseconds": 120000
+    },
+    {
+      "frequency": 10000000,
+      "synthetic_count": 10000000123456,
+      "milliseconds": 1000000012
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 0,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 1,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 23999999,
+      "milliseconds": 999
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 24000000,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 24000001,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 2880000000,
+      "milliseconds": 120000
+    },
+    {
+      "frequency": 24000000,
+      "synthetic_count": 24000000123456,
+      "milliseconds": 1000000005
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 0,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 1,
+      "milliseconds": 0
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 3579544,
+      "milliseconds": 999
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 3579545,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 3579546,
+      "milliseconds": 1000
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 429545400,
+      "milliseconds": 120000
+    },
+    {
+      "frequency": 3579545,
+      "synthetic_count": 3579545123456,
+      "milliseconds": 1000000034
+    }
+  ],
+  "one_shot_cancel_interleavings_reviewed": [
+    {
+      "case": "remove wins before dequeue",
+      "static_effect": "Matching slot/generation with payload: destroy payload and set null; loop later skips it. Timer heap item is not synchronously removed by this method."
+    },
+    {
+      "case": "dequeue wins before remove",
+      "static_effect": "Loop already nulled slot while holding same lock, then invokes outside lock. Remove finds no slot and can return while callback is pending/running; it is not a drain/join."
+    },
+    {
+      "case": "invalid, stale or reused ID",
+      "static_effect": "Bounds, nonnull and low-generation checks can make removal a no-op; no delivery inference follows."
+    }
+  ],
+  "previous_analysis_script_hashes_unchanged": 7,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 480,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and static metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "runtime_timer_test_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "New ignored scripts only; old writer never imported or executed, only save/graph AST function definitions reused.",
+    "Field displacement scans can include unrelated structures and miss no-unwind leaves; they are candidate discovery, not assignment proof.",
+    "TLS setter uses direct-call anchors and selected leaf extent; functions with unwind entries use their actual ranges.",
+    "Clock cases are bounded arithmetic reconstructions, and cancellation cases are instruction-order reasoning, not target execution or race tests."
+  ],
+  "remaining": [
+    "Actual selected sending caller scope and executor overrides/instance",
+    "Complete service/executor quit, join, destruction and exceptional lifetime",
+    "Context-switch assembly and upstream network-core dispatch",
+    "Parsing validity, request/recipient/account correlation, inbound ID/direction/history",
+    "Authorized viable observation method"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-timer-20261005/write_evidence.py",
+      "sha256": "6cba21b03f9b1b42147fde8b0ac289114e945c31f7c39445dab82204ccb26374"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/verify_evidence.py",
+      "sha256": "927546ee60cca075b1e598c90a0da1bea050f75807d8e4cde6df1e8bdcc323b8"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/probe.py",
+      "sha256": "bf095e89dc6d3780c6d60545549812661e4cd31d30418af828a2c24941fc6e62"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/read_import.py",
+      "sha256": "c047f3af6a0041c372e92eba65dd840f15c5eeda9c3657039c5e6b0027a234d2"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/search_static.py",
+      "sha256": "983032485da4abc7945d0cb0c87f746e1597f128742270d80fe0c23b55749b55"
+    },
+    {
+      "cache_path": "data/send-timer-20261005/scan_edges.py",
+      "sha256": "9607bba279181bf570b7a91f247252aa50fdcd7119da1747e83583612b244068"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

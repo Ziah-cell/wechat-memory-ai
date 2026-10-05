@@ -1,0 +1,479 @@
+{
+  "checked_at_utc": "2026-10-05T15:35:09.466856+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x30d010",
+      "end": "0x30d30d",
+      "role_inference": "kernel scope constructs and assigns a concrete looper",
+      "instruction_count": 191,
+      "disk_range_sha256": "46336cf204a29e33dbb0507aa4e51f5f17c1c5af0ee8cf116c7b5e5550a0d121",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda2a20",
+      "end": "0xda2acc",
+      "role_inference": "looper factory wrapper",
+      "instruction_count": 55,
+      "disk_range_sha256": "141ea6372dcad18a05cd1ae7ca8357ae2c27b90bf2a03e5c4e2061aafd0a34e8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda2070",
+      "end": "0xda26ac",
+      "role_inference": "allocates and constructs looper, returns that object",
+      "instruction_count": 382,
+      "disk_range_sha256": "5943f6b3b55a778ea39ab3f8c458f47fdba8ee3ede7aefeeb5de9f83aabb6958",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda1830",
+      "end": "0xda1a05",
+      "role_inference": "looper constructor",
+      "instruction_count": 114,
+      "disk_range_sha256": "c2f4d90ca250f6fa137afd93df567afceec51ad6bdd626f424d4fea2c2ca96ab",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xd9dae0",
+      "end": "0xd9dec8",
+      "role_inference": "default_looper constructor",
+      "instruction_count": 232,
+      "disk_range_sha256": "25129ab654cc8078b2172ff10bd7f1c8c3e292fe168f6cabbde8f5907520753b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca600",
+      "end": "0x3ca674",
+      "role_inference": "co_scope constructor initially clears options executor",
+      "instruction_count": 21,
+      "disk_range_sha256": "e6bd1865cdacffdf1df27dde3fcb986c1246224e4dff64833ff81b404e5abb10",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda5db0",
+      "end": "0xda5fe8",
+      "role_inference": "job child scope copies job options",
+      "instruction_count": 143,
+      "disk_range_sha256": "9c931e13cec4fa1b7fc9efa0d064f67267537921cd92546dbff55baf4c0ac814",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca690",
+      "end": "0x3ca718",
+      "role_inference": "copy options into co_scope +0x120",
+      "instruction_count": 41,
+      "disk_range_sha256": "5c30035c441b8861e02f205772921c460875fc037628ef18080de523325f921e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda59c0",
+      "end": "0xda5afb",
+      "role_inference": "job body installs child scope before invoking captured closure",
+      "instruction_count": 73,
+      "disk_range_sha256": "5b52b9004a4a4ae354a3af4e682502cd69423580db0428d9800ea390d932fdcf",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3c9c70",
+      "end": "0x3c9ead",
+      "role_inference": "with-timeout copies current scope options; optional fifth argument overrides executor",
+      "instruction_count": 156,
+      "disk_range_sha256": "cea299d13db5e45f6b2f41a59f9c9bcc3e904ddbd4d704e05b8804b31c44b924",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a675c0",
+      "end": "0x3a68075",
+      "role_inference": "selected send scope passes null executor override",
+      "instruction_count": 624,
+      "disk_range_sha256": "89af01e172fb8197d25f1f16ee28b92d1c4b58bc0531cd69d75d5f7f532998cf",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3ca720",
+      "size": 8,
+      "anchor": "direct calls 0x30d1f9 and 0x3c9cea",
+      "instructions": [
+        {
+          "at": "0x3ca720",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0x120]"
+        },
+        {
+          "at": "0x3ca727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x30d067",
+      "kind": "call",
+      "to": "0x3ca600"
+    },
+    {
+      "at": "0x30d1a3",
+      "kind": "call",
+      "to": "0xda2a20"
+    },
+    {
+      "at": "0x30d1f9",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0xda2a9d",
+      "kind": "call",
+      "to": "0xda2070"
+    },
+    {
+      "at": "0xda229c",
+      "kind": "call",
+      "to": "0xda1830"
+    },
+    {
+      "at": "0xda195b",
+      "kind": "call",
+      "to": "0xd9dae0"
+    },
+    {
+      "at": "0xda5f32",
+      "kind": "call",
+      "to": "0x3ca600"
+    },
+    {
+      "at": "0xda5fc6",
+      "kind": "call",
+      "to": "0x3ca690"
+    },
+    {
+      "at": "0xda5a00",
+      "kind": "call",
+      "to": "0xda5db0"
+    },
+    {
+      "at": "0x3c9cea",
+      "kind": "call",
+      "to": "0x3ca720"
+    },
+    {
+      "at": "0x3a67723",
+      "kind": "call",
+      "to": "0x3c9c70"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9125c18",
+      "role_inference": "looper executor methods: immediate, delayed, remove, notification",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xfc39d0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0xfc3c80"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xfc3f30"
+        },
+        {
+          "offset": "0x20",
+          "target": "0xaf20"
+        }
+      ]
+    },
+    {
+      "rva": "0x9125858",
+      "role_inference": "default_looper run, quit, allocate id, add task, remove",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xda11c0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0xda1530"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xd9e780"
+        },
+        {
+          "offset": "0x28",
+          "target": "0xd9e9e0"
+        },
+        {
+          "offset": "0x40",
+          "target": "0xd9efd0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x30d067",
+      "mnemonic": "call",
+      "operands": "0x3ca600",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct kernel co_scope"
+    },
+    {
+      "at": "0x30d19a",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "looper name local address; preceding immediate bytes form coroutine"
+    },
+    {
+      "at": "0x30d1a3",
+      "mnemonic": "call",
+      "operands": "0xda2a20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct looper through factory"
+    },
+    {
+      "at": "0x30d1b0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save returned looper"
+    },
+    {
+      "at": "0x30d1f5",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load previously constructed scope"
+    },
+    {
+      "at": "0x30d1f9",
+      "mnemonic": "call",
+      "operands": "0x3ca720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "get scope options at +0x120"
+    },
+    {
+      "at": "0x30d1ff",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x20], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set options+0x20, hence scope+0x140, to looper pointer"
+    },
+    {
+      "at": "0xda2a92",
+      "mnemonic": "xor",
+      "operands": "ecx, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "factory supplies null custom wait/notify object"
+    },
+    {
+      "at": "0xda2a9d",
+      "mnemonic": "call",
+      "operands": "0xda2070",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call common factory"
+    },
+    {
+      "at": "0xda228c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x88], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve allocated 0x60-byte looper pointer"
+    },
+    {
+      "at": "0xda229c",
+      "mnemonic": "call",
+      "operands": "0xda1830",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call looper constructor"
+    },
+    {
+      "at": "0xda22ad",
+      "mnemonic": "mov",
+      "operands": "r13, qword ptr [rbp + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retrieve same allocation"
+    },
+    {
+      "at": "0xda265e",
+      "mnemonic": "mov",
+      "operands": "rax, r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return constructed looper pointer"
+    },
+    {
+      "at": "0xda185c",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x83843b5]",
+      "rip_targets": [
+        "0x9125c18"
+      ],
+      "public_static_strings": [],
+      "observation": "constructor selects executor table 0x9125c18"
+    },
+    {
+      "at": "0xda195b",
+      "mnemonic": "call",
+      "operands": "0xd9dae0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct default_looper with forwarded second argument"
+    },
+    {
+      "at": "0xda1965",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save default_looper at +0x10"
+    },
+    {
+      "at": "0xda1977",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "executor delegates through same default_looper at +8"
+    },
+    {
+      "at": "0xd9db0c",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8387d45]",
+      "rip_targets": [
+        "0x9125858"
+      ],
+      "public_static_strings": [],
+      "observation": "default_looper table 0x9125858"
+    },
+    {
+      "at": "0xd9dc93",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0xa0], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store custom wait/notify object; null for selected kernel factory branch"
+    },
+    {
+      "at": "0xda5fb9",
+      "mnemonic": "add",
+      "operands": "rsi, 0xf0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "job options source begins at job+0xf0"
+    },
+    {
+      "at": "0xda5fc6",
+      "mnemonic": "call",
+      "operands": "0x3ca690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy job options into new child scope"
+    },
+    {
+      "at": "0x3ca6f8",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rdi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read source options+0x20, including executor"
+    },
+    {
+      "at": "0x3ca707",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi + 0x140], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy to child scope+0x140"
+    },
+    {
+      "at": "0xda5a0f",
+      "mnemonic": "call",
+      "operands": "0x3ca2f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "install child scope before invoking captured function"
+    },
+    {
+      "at": "0x3c9d5a",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [r14 + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read current scope options+0x20"
+    },
+    {
+      "at": "0x3c9d69",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r15], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write inherited executor into local timeout scope+0x28"
+    },
+    {
+      "at": "0x3c9e60",
+      "mnemonic": "test",
+      "operands": "rdx, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test optional executor override"
+    },
+    {
+      "at": "0x3c9e65",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonnull override replaces inherited executor"
+    },
+    {
+      "at": "0x3a67702",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected sending call passes null override"
+    },
+    {
+      "at": "0x3a67723",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct timeout scope"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The selected kernel constructor really allocates a looper with table 0x9125c18 and assigns it to kernel co_scope+0x140. This is stronger than examining an unattached alternative table.",
+    "The looper owns/delegates to default_looper table 0x9125858; selected factory passes null custom wait/notify object.",
+    "Job child-scope propagation and with-timeout copying explain how an executor may reach the sending scope. The selected send call does not override it.",
+    "The actual sending caller current scope, all possible parent scopes/overrides, runtime instance and reachability are not certified. Do not assert every send runs on the kernel looper."
+  ]
+}

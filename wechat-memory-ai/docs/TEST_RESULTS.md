@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## looper构造、时钟和取消静态复核（2026-10-05）
+
+[372](evidence/372-send-looper-assignment.json)记录11区间/1叶函数/30观察；[373](evidence/373-send-looper-clock.json)记录8区间/39观察；[374](evidence/374-send-looper-cancel-dispatch.json)记录14区间/4叶函数/52观察，包含重复节点。内容为具体构造赋值、毫秒换算、闭包派发与取消顺序；不是实机计时或并发测试。
+
+[376](evidence/376-send-looper-validation.json)重新读取固定DLL，核对区间/叶锚点、原始相对位移、表、导入符号、选定字段与分支，检查纳秒到毫秒的整数换算及有限静态顺序案例，保存前轮7个脚本哈希、文档链接和改动范围。仅同一执行者复核，无新增独立审查。字段位移扫描可能匹配无关结构且遗漏无异常表叶函数，未把扫描命中当作赋值证据；TLS setter最终使用直接调用锚点。早期writer未导入/重跑，仅提取两个纯helper定义；历史脚本与证据保持不变。
+
+[375](evidence/375-send-looper-checkpoint.json)仅检查停止文件，未访问进程或窗口。没有产品改动、产品/原生测试、运行计时/并发/网络测试、真实模型记忆或发送；[观察方案](ISOLATED_OBSERVATION_4_1_15_50.md)仍未实施。120秒只在所查具体实现条件下成立，不宣称实际发送时间。
+
 ## 执行器、计时参数与生命周期静态复核（2026-10-05）
 
 [367](evidence/367-send-executor-resume.json)记录12区间/3叶函数/36观察；[368](evidence/368-send-timeout-parameter.json)记录11区间/2叶函数/36观察；[369](evidence/369-send-lifetime-boundaries.json)记录9区间/1叶函数/33观察。节点有重叠，不将相加数视为不同函数总数。内容是条件调用关系、线程检查、原始数值传递、正常清理及join限制，不是执行器或超时运行验收。

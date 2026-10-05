@@ -1,0 +1,824 @@
+{
+  "checked_at_utc": "2026-10-05T15:35:09.466856+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0xfc39d0",
+      "end": "0xfc3bb2",
+      "role_inference": "immediate submission wraps user callable",
+      "instruction_count": 130,
+      "disk_range_sha256": "79b5bdbead953a9ef459c0081b734eff29d72c2e1766bc6afde1bb4160b971d2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xfc3c80",
+      "end": "0xfc3e69",
+      "role_inference": "delayed submission wraps user callable",
+      "instruction_count": 133,
+      "disk_range_sha256": "19bdf45bcdcc241a463c1b0c20c1f2768d4ea1b0d00e536ff3c67fb984c30237",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda1d30",
+      "end": "0xda1e4c",
+      "role_inference": "looper run installs and clears current executor TLS",
+      "instruction_count": 70,
+      "disk_range_sha256": "fa5a3f5ae80f5d213ed66c5ed079e2d7576bdbb83ba8ba842a9e34939362c452",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda11c0",
+      "end": "0xda1496",
+      "role_inference": "default_looper run loop",
+      "instruction_count": 146,
+      "disk_range_sha256": "3f037af2a6f50633adba4c84d8de862533eace1191df9ea8367a81bf0892862a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda0010",
+      "end": "0xda06d3",
+      "role_inference": "dequeue under lock, then invoke one-shot task outside lock",
+      "instruction_count": 372,
+      "disk_range_sha256": "d709842ba1bdc0d7b33bb464d302008f7524734f66583cdb167ce463f94803fd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda09c0",
+      "end": "0xda0e8f",
+      "role_inference": "invoke selected async_task",
+      "instruction_count": 287,
+      "disk_range_sha256": "6c0092bcb5be329285ab9d55ddac5e5d6e375afb38a0572a45a6b5d4c6fa9f4f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca140",
+      "end": "0x3ca165",
+      "role_inference": "async_task virtual+8 calls stored invocation thunk",
+      "instruction_count": 12,
+      "disk_range_sha256": "adee5d8b0cd896fe40df5cf64e5c7108a85081be4d5b945bf00abfbf253a5ad2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca120",
+      "end": "0x3ca13e",
+      "role_inference": "function holder forwards to callable+0x10",
+      "instruction_count": 9,
+      "disk_range_sha256": "f4cce2e135f296340129d0c13bd5999def5bd8a178642d0aef9ddd14df406ce2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4b03b0",
+      "end": "0x4b03ce",
+      "role_inference": "wrapper forwards to original submitted callable+0x10",
+      "instruction_count": 9,
+      "disk_range_sha256": "7475fcf21f07b2545e6ba61306e2b08842008f480f817e23b900b12f9edbe5f2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xd9efd0",
+      "end": "0xd9f084",
+      "role_inference": "lookup matching ID and cancel pending task",
+      "instruction_count": 54,
+      "disk_range_sha256": "45c84655fbe17c04a3a0956916b331a647cdb55e6c61759a90a26b225150ca0c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda1530",
+      "end": "0xda179f",
+      "role_inference": "quit sets flag and notifies",
+      "instruction_count": 117,
+      "disk_range_sha256": "60e5ed546ec941a3464ee0aeb6df71cb073434c4e1a5ebd6d418e51b2412b565",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda1ad0",
+      "end": "0xda1d06",
+      "role_inference": "destructor requires quit/join before destruction",
+      "instruction_count": 126,
+      "disk_range_sha256": "96d4bac13e9fdefb200f888f8976d8473bbb15a503e92d283b08fc2fbe222022",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x7525be0",
+      "end": "0x7525d11",
+      "role_inference": "recursive-count mutex helper ultimately acquires SRW exclusive lock",
+      "instruction_count": 92,
+      "disk_range_sha256": "9b4bae627314cf82dd93c31465113ee7eaed83ebaa81fb39b6e2e47e09499409",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x7525bc0",
+      "end": "0x7525bdf",
+      "role_inference": "mutex release helper",
+      "instruction_count": 9,
+      "disk_range_sha256": "bc87b32207e93b0becfe84a6af6b7d47a76147d902893e27944fc06cb1141c7d",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xfc3f30",
+      "size": 11,
+      "anchor": "executor table 0x9125c18 +0x18",
+      "instructions": [
+        {
+          "at": "0xfc3f30",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0xfc3f34",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx]"
+        },
+        {
+          "at": "0xfc3f37",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 0x40]"
+        }
+      ]
+    },
+    {
+      "rva": "0xf88270",
+      "size": 27,
+      "anchor": "direct calls 0xda1de2 and 0xda1dfd",
+      "instructions": [
+        {
+          "at": "0xf88270",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rip + 0xabdb5aa]"
+        },
+        {
+          "at": "0xf88276",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr gs:[0x58]"
+        },
+        {
+          "at": "0xf8827f",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rdx + rax*8]"
+        },
+        {
+          "at": "0xf88283",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x570], rcx"
+        },
+        {
+          "at": "0xf8828a",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3ca180",
+      "size": 3,
+      "anchor": "RIP LEAs 0xfc3aee and 0xfc3da2",
+      "instructions": [
+        {
+          "at": "0x3ca180",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rdx]"
+        }
+      ]
+    },
+    {
+      "rva": "0x7525b98",
+      "size": 7,
+      "anchor": "direct calls 0xd9efe4 and 0xda0040",
+      "instructions": [
+        {
+          "at": "0x7525b98",
+          "mnemonic": "xor",
+          "operands": "edx, edx"
+        },
+        {
+          "at": "0x7525b9a",
+          "mnemonic": "jmp",
+          "operands": "0x7525be0"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0xda1de2",
+      "kind": "call",
+      "to": "0xf88270"
+    },
+    {
+      "at": "0xda1dfd",
+      "kind": "call",
+      "to": "0xf88270"
+    },
+    {
+      "at": "0xda1263",
+      "kind": "call",
+      "to": "0xda0010"
+    },
+    {
+      "at": "0xda1293",
+      "kind": "call",
+      "to": "0xda0010"
+    },
+    {
+      "at": "0xda0040",
+      "kind": "call",
+      "to": "0x7525b98"
+    },
+    {
+      "at": "0xda0308",
+      "kind": "call",
+      "to": "0x7525bc0"
+    },
+    {
+      "at": "0xda031a",
+      "kind": "call",
+      "to": "0xda09c0"
+    },
+    {
+      "at": "0xda058c",
+      "kind": "call",
+      "to": "0x7525bc0"
+    },
+    {
+      "at": "0xda059e",
+      "kind": "call",
+      "to": "0xda09c0"
+    },
+    {
+      "at": "0xda05a8",
+      "kind": "call",
+      "to": "0x7525b98"
+    },
+    {
+      "at": "0xda0670",
+      "kind": "call",
+      "to": "0x7525bc0"
+    },
+    {
+      "at": "0xd9efe4",
+      "kind": "call",
+      "to": "0x7525b98"
+    },
+    {
+      "at": "0xd9f063",
+      "kind": "jmp",
+      "to": "0x7525bc0"
+    },
+    {
+      "at": "0xda155a",
+      "kind": "call",
+      "to": "0x7525b98"
+    },
+    {
+      "at": "0xda1773",
+      "kind": "call",
+      "to": "0x7525bc0"
+    },
+    {
+      "at": "0x7525b9a",
+      "kind": "jmp",
+      "to": "0x7525be0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9125c18",
+      "role_inference": "looper executor table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xfc39d0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0xfc3c80"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xfc3f30"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb0218",
+      "role_inference": "async_task invoke",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x3ca140"
+        }
+      ]
+    },
+    {
+      "rva": "0x915e278",
+      "role_inference": "immediate callable wrapper",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x4b03b0"
+        }
+      ]
+    },
+    {
+      "rva": "0x915e338",
+      "role_inference": "delayed callable wrapper",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x4b03b0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0xfc3a4f",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x7fec7c2]",
+      "rip_targets": [
+        "0x8fb0218"
+      ],
+      "public_static_strings": [],
+      "observation": "async_task table 0x8fb0218"
+    },
+    {
+      "at": "0xfc3a82",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x819a7ef]",
+      "rip_targets": [
+        "0x915e278"
+      ],
+      "public_static_strings": [],
+      "observation": "immediate wrapper table"
+    },
+    {
+      "at": "0xfc3aa6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x40], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture original callable in wrapper+0x40"
+    },
+    {
+      "at": "0xfc3ade",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x38], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "put wrapper into holder+0x38"
+    },
+    {
+      "at": "0xfc3aea",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x18], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "put holder into async_task+0x18"
+    },
+    {
+      "at": "0xfc3aee",
+      "mnemonic": "lea",
+      "operands": "rax, [rip - 0xbf9975]",
+      "rip_targets": [
+        "0x3ca180"
+      ],
+      "public_static_strings": [],
+      "observation": "invocation thunk 0x3ca180"
+    },
+    {
+      "at": "0xfc3af9",
+      "mnemonic": "lea",
+      "operands": "rax, [rip - 0xbf99e0]",
+      "rip_targets": [
+        "0x3ca120"
+      ],
+      "public_static_strings": [],
+      "observation": "holder forwarding function 0x3ca120"
+    },
+    {
+      "at": "0xfc3b4a",
+      "mnemonic": "xor",
+      "operands": "r8d, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type0 immediate task"
+    },
+    {
+      "at": "0xfc3b50",
+      "mnemonic": "call",
+      "operands": "rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "submit underlying add_task"
+    },
+    {
+      "at": "0xfc3d36",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x819a5fb]",
+      "rip_targets": [
+        "0x915e338"
+      ],
+      "public_static_strings": [],
+      "observation": "delayed wrapper table, same invoke slot as immediate wrapper"
+    },
+    {
+      "at": "0xfc3d5a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x40], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capture delayed user callable"
+    },
+    {
+      "at": "0xda1de2",
+      "mnemonic": "call",
+      "operands": "0xf88270",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "set current TLS executor to looper"
+    },
+    {
+      "at": "0xf88283",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x570], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "TLS+0x570 setter"
+    },
+    {
+      "at": "0xda1df6",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "run underlying loop"
+    },
+    {
+      "at": "0xda1dfd",
+      "mnemonic": "call",
+      "operands": "0xf88270",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear TLS executor after normal loop return"
+    },
+    {
+      "at": "0xda1263",
+      "mnemonic": "call",
+      "operands": "0xda0010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "loop invokes try_run_once"
+    },
+    {
+      "at": "0xda12aa",
+      "mnemonic": "call",
+      "operands": "0xd9f2d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "not ready branch waits"
+    },
+    {
+      "at": "0xda0040",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "take mutex at default_looper+8"
+    },
+    {
+      "at": "0xda0069",
+      "mnemonic": "je",
+      "operands": "0xda066d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "quit flag exits before dequeuing further work"
+    },
+    {
+      "at": "0xda00e7",
+      "mnemonic": "je",
+      "operands": "0xda0173",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "null task payload selects skip-cancelled branch"
+    },
+    {
+      "at": "0xda0107",
+      "mnemonic": "jb",
+      "operands": "0xda0666",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "future deadline returns not ready"
+    },
+    {
+      "at": "0xda0112",
+      "mnemonic": "jne",
+      "operands": "0xda021a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "non-type2 task selects one-shot branch"
+    },
+    {
+      "at": "0xda0221",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + r15*8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear task table slot before releasing mutex and invoking callback"
+    },
+    {
+      "at": "0xda0308",
+      "mnemonic": "call",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "release same mutex"
+    },
+    {
+      "at": "0xda031a",
+      "mnemonic": "call",
+      "operands": "0xda09c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke task after releasing mutex"
+    },
+    {
+      "at": "0xda0336",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy task payload after normal invocation"
+    },
+    {
+      "at": "0xda0384",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x838574d]",
+      "rip_targets": [
+        "0x9125ad8"
+      ],
+      "public_static_strings": [
+        "%_: %@(), skip cancelled task %_"
+      ],
+      "observation": "explicit skip-cancelled diagnostic"
+    },
+    {
+      "at": "0xda0b5b",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke async_task table+8"
+    },
+    {
+      "at": "0x3ca14b",
+      "mnemonic": "lea",
+      "operands": "rdx, [rcx + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pass address of async_task+0x28 forwarding-function slot"
+    },
+    {
+      "at": "0x3ca14f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load holder from async_task+0x18"
+    },
+    {
+      "at": "0x3ca153",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call invocation thunk stored at async_task+0x20"
+    },
+    {
+      "at": "0x3ca180",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tailcall pointer passed in RDX, selected 0x3ca120"
+    },
+    {
+      "at": "0x3ca124",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read callable from holder+0x38"
+    },
+    {
+      "at": "0x3ca134",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tailcall wrapper+0x10"
+    },
+    {
+      "at": "0x4b03b4",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read original callable from wrapper+0x40"
+    },
+    {
+      "at": "0x4b03c4",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tailcall original callable+0x10, connecting to evidence367 work item conditionally"
+    },
+    {
+      "at": "0xfc3f37",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "removal delegates to underlying table+0x40"
+    },
+    {
+      "at": "0xd9efe4",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "take same mutex before ID lookup"
+    },
+    {
+      "at": "0xd9eff9",
+      "mnemonic": "shr",
+      "operands": "rax, 0x20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ID high DWORD is slot index"
+    },
+    {
+      "at": "0xd9f014",
+      "mnemonic": "cmp",
+      "operands": "eax, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "bound check slot index"
+    },
+    {
+      "at": "0xd9f01f",
+      "mnemonic": "je",
+      "operands": "0xd9f059",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "absent slot exits without joining callback"
+    },
+    {
+      "at": "0xd9f021",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rbx + 0xc], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "require low ID DWORD generation match"
+    },
+    {
+      "at": "0xd9f026",
+      "mnemonic": "cmp",
+      "operands": "word ptr [rbx + 4], 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "separate type2 handling"
+    },
+    {
+      "at": "0xd9f046",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pending one-shot payload destructor"
+    },
+    {
+      "at": "0xd9f048",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear payload pointer after destruction"
+    },
+    {
+      "at": "0xd9f052",
+      "mnemonic": "or",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type2 with running flag records cancellation bit instead"
+    },
+    {
+      "at": "0xd9f063",
+      "mnemonic": "jmp",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "release mutex and return; no callback-drain wait on selected path"
+    },
+    {
+      "at": "0x7525c4a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x29258e0]",
+      "rip_targets": [
+        "0x9e4b530"
+      ],
+      "public_static_strings": [],
+      "observation": "null timeout lock path calls AcquireSRWLockExclusive when not already owner"
+    },
+    {
+      "at": "0x7525bd2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x2926110]",
+      "rip_targets": [
+        "0x9e4bce8"
+      ],
+      "public_static_strings": [],
+      "observation": "ReleaseSRWLockExclusive when recursion count reaches zero"
+    },
+    {
+      "at": "0xda1624",
+      "mnemonic": "xchg",
+      "operands": "dword ptr [rsi + 0x128], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "quit atomically sets flag1"
+    },
+    {
+      "at": "0xda1643",
+      "mnemonic": "call",
+      "operands": "0x752d584",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "null-custom branch notifies wait primitive"
+    },
+    {
+      "at": "0xda1c4f",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x8383ff2]",
+      "rip_targets": [
+        "0x9125c48"
+      ],
+      "public_static_strings": [
+        "%_: quit() and join() must be called before destroy looper"
+      ],
+      "observation": "destructor diagnostic requires quit and join before destruction"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "import_resolution": [
+    {
+      "kind": "normal",
+      "slot": "0x9e4b530",
+      "module": "KERNEL32.dll",
+      "symbol": "AcquireSRWLockExclusive"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4b800",
+      "module": "KERNEL32.dll",
+      "symbol": "GetCurrentThreadId"
+    },
+    {
+      "kind": "normal",
+      "slot": "0x9e4bce8",
+      "module": "KERNEL32.dll",
+      "symbol": "ReleaseSRWLockExclusive"
+    }
+  ],
+  "one_shot_cancel_interleavings": [
+    {
+      "case": "remove wins before dequeue",
+      "static_effect": "Matching slot/generation with payload: destroy payload and set null; loop later skips it. Timer heap item is not synchronously removed by this method."
+    },
+    {
+      "case": "dequeue wins before remove",
+      "static_effect": "Loop already nulled slot while holding same lock, then invokes outside lock. Remove finds no slot and can return while callback is pending/running; it is not a drain/join."
+    },
+    {
+      "case": "invalid, stale or reused ID",
+      "static_effect": "Bounds, nonnull and low-generation checks can make removal a no-op; no delivery inference follows."
+    }
+  ],
+  "conclusions": [
+    "Selected concrete loop-to-callable chain is statically connected through async_task, function holder and wrapper into the original callable+0x10. For evidence367 resume work items this reconnects to 0x4a1bc0; actual runtime scope/instance and context-switch assembly remain unverified.",
+    "Pending removal and dequeue use the same default_looper mutex. One-shot dequeue clears the indexed record before unlocking and invoking; removal returning is not proof a callback has drained.",
+    "quit only sets/notifies the selected loop state; destructor includes an explicit quit/join requirement. Complete join, exception unwinding, service/account shutdown and all scheduler lifetime races are not audited.",
+    "These are static control-flow interleavings, not concurrency tests or process observations; none prove friend delivery, non-delivery or retraction."
+  ]
+}
