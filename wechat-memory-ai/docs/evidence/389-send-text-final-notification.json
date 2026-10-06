@@ -1,0 +1,822 @@
+{
+  "checked_at_utc": "2026-10-06T01:44:30.417905+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3a72550",
+      "end": "0x3a8255b",
+      "role_inference": "Text selected common-result output and local notification path; not full CFG",
+      "instruction_count": 15805,
+      "disk_range_sha256": "3e97b3f40ca09a95d33de8dbc36df36a1afc2a765856163c335109bf44e4cd53",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39d3c60",
+      "end": "0x39d3db9",
+      "role_inference": "construct local result payload with metadata pair and preserve supplied overall A/B",
+      "instruction_count": 95,
+      "disk_range_sha256": "ef0f966bcac954b7e81c82207dfa84294c8d007d3a28432dbd64608698d40e50",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x184d030",
+      "end": "0x184d1c9",
+      "role_inference": "optional data assignment; selected empty-to-empty path returns without modifying result A/B",
+      "instruction_count": 120,
+      "disk_range_sha256": "c800262de8030ce168e1d6042a28d2c95178e3b5caba3f4baa049eeceb41703a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c88f0",
+      "end": "0x39c8f04",
+      "role_inference": "payload-based update/notification helper, weak manager acquisition and emission gate",
+      "instruction_count": 354,
+      "disk_range_sha256": "37afba31be6a349176e92213d1c50aee30354ed7d77de2b470ef9600b12d2f33",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39bcb50",
+      "end": "0x39bce8b",
+      "role_inference": "emit selected numeric event through handler member+0x98",
+      "instruction_count": 183,
+      "disk_range_sha256": "cf71780d05910d834c0aadee6c482ad53c643a19fa2655c8ac5dc8518030db1e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17ff430",
+      "end": "0x17ff7a4",
+      "role_inference": "signal emitter with direct callback or executor dispatch branches",
+      "instruction_count": 209,
+      "disk_range_sha256": "d78eb85a7d9b0ebf32201b0c3c7671b2c446ef5c0724dc0e748bf324291f5903",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x3a74b2a",
+      "kind": "call",
+      "to": "0x39d3c60"
+    },
+    {
+      "at": "0x3a77331",
+      "kind": "call",
+      "to": "0x39c88f0"
+    },
+    {
+      "at": "0x3a7f1ec",
+      "kind": "call",
+      "to": "0x39d3c60"
+    },
+    {
+      "at": "0x3a800fe",
+      "kind": "call",
+      "to": "0x39c88f0"
+    },
+    {
+      "at": "0x39d3cfb",
+      "kind": "call",
+      "to": "0x184d030"
+    },
+    {
+      "at": "0x39c8c2f",
+      "kind": "call",
+      "to": "0x39bcb50"
+    },
+    {
+      "at": "0x39bce71",
+      "kind": "call",
+      "to": "0x17ff430"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96b69e8",
+      "role_inference": "Text implementation established by381",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xd0",
+          "target": "0x3a72550"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x3a72584",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xf0], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Text saves output pointer at rbp+0xf0"
+    },
+    {
+      "at": "0x3a727b0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x98], rsp",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "common-result local at rbp+0x98"
+    },
+    {
+      "at": "0x3a7293a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x38], rsp",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "separate synthetic-result local at rbp+0x38"
+    },
+    {
+      "at": "0x3a798e7",
+      "mnemonic": "mov",
+      "operands": "r13, qword ptr [rbp + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "r13 points to synthetic-result local"
+    },
+    {
+      "at": "0x3a7a1aa",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first response item status, as separately evidenced by386"
+    },
+    {
+      "at": "0x3a7a23c",
+      "mnemonic": "je",
+      "operands": "0x3a7a265",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item zero selects local success-field writeback"
+    },
+    {
+      "at": "0x3a7a24d",
+      "mnemonic": "je",
+      "operands": "0x3a7bac3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "item nonzero selects logging branch"
+    },
+    {
+      "at": "0x3a7bb8c",
+      "mnemonic": "je",
+      "operands": "0x3a7cd9a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging-disabled branch joins shared output construction"
+    },
+    {
+      "at": "0x3a7cdce",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read common overall A/B pair"
+    },
+    {
+      "at": "0x3a7cdd8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy common A/B to Text output"
+    },
+    {
+      "at": "0x3a7d169",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xe8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original payload pair"
+    },
+    {
+      "at": "0x3a7d170",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original payload pointer"
+    },
+    {
+      "at": "0x3a7d173",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x168]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read payload numeric state+0x168"
+    },
+    {
+      "at": "0x3a7d1fa",
+      "mnemonic": "cmp",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare payload state with2, separately from overall A/B"
+    },
+    {
+      "at": "0x3a7d1fd",
+      "mnemonic": "je",
+      "operands": "0x3a7fe9a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "state2 skips synthetic-result construction and proceeds toward notification"
+    },
+    {
+      "at": "0x3a7d23b",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0x168], 5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "state-not2 branch writes local numeric state5"
+    },
+    {
+      "at": "0x3a7d2cc",
+      "mnemonic": "je",
+      "operands": "0x3a7f13a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging-disabled branch skips to synthetic-result preparation"
+    },
+    {
+      "at": "0x3a7f1c9",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload Text output"
+    },
+    {
+      "at": "0x3a7f1d0",
+      "mnemonic": "mov",
+      "operands": "r9d, dword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply overall A as fourth argument"
+    },
+    {
+      "at": "0x3a7f1d3",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rax + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply overall B as fifth argument"
+    },
+    {
+      "at": "0x3a7f1da",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x20], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fifth argument on stack"
+    },
+    {
+      "at": "0x3a7f1de",
+      "mnemonic": "mov",
+      "operands": "rcx, r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "synthetic-result destination"
+    },
+    {
+      "at": "0x3a7f1e1",
+      "mnemonic": "mov",
+      "operands": "edx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "local metadata first DWORD3, not overall error A"
+    },
+    {
+      "at": "0x3a7f1e6",
+      "mnemonic": "mov",
+      "operands": "r8d, 0xc",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "local metadata second DWORD12, not overall error B"
+    },
+    {
+      "at": "0x3a7f1ec",
+      "mnemonic": "call",
+      "operands": "0x39d3c60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct local result without receiving per-item status"
+    },
+    {
+      "at": "0x3a7f20f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [r13]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read synthetic A/B pair"
+    },
+    {
+      "at": "0x3a7f21a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "replace Text output pair with constructed pair"
+    },
+    {
+      "at": "0x3a7f5aa",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload separate synthetic-result local"
+    },
+    {
+      "at": "0x3a7f704",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read synthetic result payload, not common protocol response"
+    },
+    {
+      "at": "0x3a7f70f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdx + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "replace Text output shared payload"
+    },
+    {
+      "at": "0x3a7f717",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdx + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "replace shared payload control block"
+    },
+    {
+      "at": "0x3a8004e",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0xe8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original message payload shared pair"
+    },
+    {
+      "at": "0x3a80055",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original message payload object"
+    },
+    {
+      "at": "0x3a80058",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r9], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "notification argument receives original payload"
+    },
+    {
+      "at": "0x3a800ee",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp - 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original Text handler"
+    },
+    {
+      "at": "0x3a800f2",
+      "mnemonic": "mov",
+      "operands": "rdx, r9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "notification shared payload argument"
+    },
+    {
+      "at": "0x3a800f5",
+      "mnemonic": "mov",
+      "operands": "r8d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "notification mode1"
+    },
+    {
+      "at": "0x3a800fb",
+      "mnemonic": "mov",
+      "operands": "r9b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "notification emission flag1"
+    },
+    {
+      "at": "0x3a800fe",
+      "mnemonic": "call",
+      "operands": "0x39c88f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected notification call"
+    },
+    {
+      "at": "0x3a811e2",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal epilogue returns saved output pointer"
+    },
+    {
+      "at": "0x3a81203",
+      "mnemonic": "ret",
+      "operands": "",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal ret; exceptional/other paths not all certified"
+    },
+    {
+      "at": "0x39d3c7d",
+      "mnemonic": "mov",
+      "operands": "esi, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve supplied overall A"
+    },
+    {
+      "at": "0x39d3c83",
+      "mnemonic": "mov",
+      "operands": "ebx, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve metadata first DWORD"
+    },
+    {
+      "at": "0x39d3c8c",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rcx], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "initial zero A/B"
+    },
+    {
+      "at": "0x39d3ccd",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x60], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "synthetic payload optional-data flag0"
+    },
+    {
+      "at": "0x39d3ce5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "attach newly allocated local payload"
+    },
+    {
+      "at": "0x39d3ced",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp - 8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source optional-data flag0"
+    },
+    {
+      "at": "0x39d3cf1",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "metadata first DWORD into local pair"
+    },
+    {
+      "at": "0x39d3cf4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 4], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "metadata second DWORD into local pair"
+    },
+    {
+      "at": "0x39d3cfb",
+      "mnemonic": "call",
+      "operands": "0x184d030",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy optional data, not overall statuses"
+    },
+    {
+      "at": "0x39d3d05",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x68], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "metadata pair stored in allocation+0x68"
+    },
+    {
+      "at": "0x39d3d0d",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall B initialized zero"
+    },
+    {
+      "at": "0x39d3d90",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read fifth argument B"
+    },
+    {
+      "at": "0x39d3d93",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write original overall A"
+    },
+    {
+      "at": "0x39d3d97",
+      "mnemonic": "je",
+      "operands": "0x39d3da2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero B remains zero"
+    },
+    {
+      "at": "0x39d3d9f",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 4], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonzero original B copied"
+    },
+    {
+      "at": "0x184d03c",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read destination optional-data flag"
+    },
+    {
+      "at": "0x184d040",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rdx + 0x50], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read source optional-data flag"
+    },
+    {
+      "at": "0x184d08a",
+      "mnemonic": "je",
+      "operands": "0x184d191",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "empty-to-empty returns without data mutation"
+    },
+    {
+      "at": "0x39c8912",
+      "mnemonic": "mov",
+      "operands": "bl, r9b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain emission flag"
+    },
+    {
+      "at": "0x39c8915",
+      "mnemonic": "mov",
+      "operands": "r14d, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain numeric mode"
+    },
+    {
+      "at": "0x39c8918",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain handler"
+    },
+    {
+      "at": "0x39c8935",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x3a0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "weak manager control block at handler+0x3a0"
+    },
+    {
+      "at": "0x39c8957",
+      "mnemonic": "lock cmpxchg",
+      "operands": "dword ptr [rcx + 8], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "conditional weak-to-shared acquisition"
+    },
+    {
+      "at": "0x39c895e",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rsi + 0x398]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "acquired manager pair from handler+0x398"
+    },
+    {
+      "at": "0x39c8997",
+      "mnemonic": "je",
+      "operands": "0x39c8e97",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing acquired manager skips update/emit"
+    },
+    {
+      "at": "0x39c89b2",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original payload passed to update helper"
+    },
+    {
+      "at": "0x39c89bf",
+      "mnemonic": "call",
+      "operands": "0x38efc20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "update helper boundary; internal store effects not certified here"
+    },
+    {
+      "at": "0x39c89d0",
+      "mnemonic": "call",
+      "operands": "0x17da230",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extract result from update helper output"
+    },
+    {
+      "at": "0x39c89d9",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rax + 0x2e8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "check returned object byte+0x2e8"
+    },
+    {
+      "at": "0x39c89e0",
+      "mnemonic": "je",
+      "operands": "0x39c8c3a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero gate skips selected emission"
+    },
+    {
+      "at": "0x39c8c19",
+      "mnemonic": "je",
+      "operands": "0x39c8e6e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "emission flag0 skips selected emission"
+    },
+    {
+      "at": "0x39c8c1f",
+      "mnemonic": "movabs",
+      "operands": "rdx, 0x800000000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "numeric local event mask0x800000000"
+    },
+    {
+      "at": "0x39c8c2f",
+      "mnemonic": "call",
+      "operands": "0x39bcb50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected event emission helper"
+    },
+    {
+      "at": "0x39bce61",
+      "mnemonic": "add",
+      "operands": "rbx, 0x98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "handler member+0x98 as signal object"
+    },
+    {
+      "at": "0x39bce71",
+      "mnemonic": "call",
+      "operands": "0x17ff430",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "invoke signal emitter"
+    },
+    {
+      "at": "0x17ff4bb",
+      "mnemonic": "je",
+      "operands": "0x17ff698",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "signal gate failure enters diagnostic path"
+    },
+    {
+      "at": "0x17ff52a",
+      "mnemonic": "jne",
+      "operands": "0x17ff588",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "only nonempty subscriber list iterates"
+    },
+    {
+      "at": "0x17ff58b",
+      "mnemonic": "mov",
+      "operands": "r12, qword ptr [rax + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subscriber executor field+0x48"
+    },
+    {
+      "at": "0x17ff592",
+      "mnemonic": "je",
+      "operands": "0x17ff5e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "no executor selects direct callback path"
+    },
+    {
+      "at": "0x17ff5f2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "direct subscriber callback+0x10"
+    },
+    {
+      "at": "0x17ff64f",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other branch dispatches via executor+8"
+    },
+    {
+      "at": "0x17ff71c",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x77b291d]",
+      "rip_targets": [
+        "0x8fb2040"
+      ],
+      "public_static_strings": [
+        "xsignal: emit signal in signal handler will cause infinite loop!"
+      ],
+      "observation": "signal reentrancy diagnostic; not network delivery notification"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "selected_relationships": {
+    "overall_pair": "Common result A/B copied to Text output; selected state-not2 constructor preserves those A/B values.",
+    "local_state": "Payload+0x168 compared with2; if different, writes5. Names and delivery semantics are not certified.",
+    "synthetic_payload": "39d3c60 allocates separate0x70-byte object with empty optional data and numeric metadata[3,12]; the Text output shared payload is replaced on this branch.",
+    "notification": "Original message payload goes to39c88f0(mode1,emit1), then conditionally numeric event0x800000000 on handler+0x98. Actual subscribers and update helper effects remain unclosed."
+  },
+  "derived_cases": [
+    {
+      "A": 0,
+      "B": 0,
+      "prior_payload_state": 1,
+      "first_item_status": 7,
+      "selected_state_not2": true,
+      "state_after": 5,
+      "constructed_A": 0,
+      "constructed_B": 0,
+      "limits": "Conditional selected branch, e.g. item-error log-disabled join; no runtime witness or all-path reachability claim."
+    },
+    {
+      "A": 5,
+      "B": 9,
+      "prior_payload_state": 1,
+      "first_item_status": null,
+      "selected_state_not2": true,
+      "state_after": 5,
+      "constructed_A": 5,
+      "constructed_B": 9,
+      "limits": "Conditional constructor arithmetic only; no delivery meaning."
+    }
+  ],
+  "conclusions": [
+    "386 only reached a common pair-copy.389 extends selected output construction: it separately checks local payload state, writes5 when not2, then creates a new local result from the same overall A/B and metadata3/12.",
+    "The selected local constructor does not receive or convert per-item status. With overall A/B both zero and state-not2, it still constructs overall0/0 while local payload state becomes5. This is a conditional static mismatch case, not a reproduced network/client failure or complete CFG proof.",
+    "A result+0x28 at the final handler/upper layer cannot automatically be interpreted as the common SendMsgResponseNew pointer: this branch replaces it with a distinct locally allocated metadata payload. Preserve layer and payload kind.",
+    "The selected notification takes the original message payload, acquires handler weak manager state, checks an update-result byte, and conditionally emits a numeric local signal. Signal presence, successful weak acquisition, queueing, or callback return is not peer receipt.",
+    "The signal emitter can call direct subscribers or dispatch through a subscriber executor. Actual subscribers, update result meaning, reentrancy/exception behavior and all Text alternative paths are not certified. No event name or UI-delivery semantics is invented."
+  ],
+  "remaining": [
+    "Actual signal subscribers and local update result semantics",
+    "All Text branches and exceptions",
+    "Runtime parse/recipient correspondence and peer evidence"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "checked_at_utc": "2026-10-06T01:49:52.388822+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 16,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_raw_rel32_math": 23,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 156,
+  "rip_references_with_raw_displacement_math": 1,
+  "branch_field_assertions": 110,
+  "explicit_table_targets_checked": 3,
+  "derived_upper_reentry_cases_checked": [
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": true
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 130,
+      "flag": 1,
+      "allowed": true
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 1,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 101,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 9,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 7,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 0,
+      "allowed": false
+    }
+  ],
+  "additional_null_gate_cases_checked": 3,
+  "derived_local_result_cases_checked": [
+    {
+      "A": 0,
+      "B": 0,
+      "prior_payload_state": 1,
+      "first_item_status": 7,
+      "selected_state_not2": true,
+      "state_after": 5,
+      "constructed_A": 0,
+      "constructed_B": 0,
+      "limits": "Conditional selected branch, e.g. item-error log-disabled join; no runtime witness or all-path reachability claim."
+    },
+    {
+      "A": 5,
+      "B": 9,
+      "prior_payload_state": 1,
+      "first_item_status": null,
+      "selected_state_not2": true,
+      "state_after": 5,
+      "constructed_A": 5,
+      "constructed_B": 9,
+      "limits": "Conditional constructor arithmetic only; no delivery meaning."
+    }
+  ],
+  "previous_analysis_script_hashes_unchanged": 6,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 543,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Old scripts/evidence preserved; writer AST extracts only graph/save definitions from old source.",
+    "Two guessed evidence names were corrected using the actual file inventory before final verification; references now checked for existence.",
+    "Unwind-only probes did not classify the small state getter/setter and payload predicate; bounded leaves were decoded including both predicate returns.",
+    "Local result constructor preserves overall statuses and can replace the payload kind. Earlier single-copy evidence did not establish this.",
+    "Whole Text range decode/hash is not full CFG or runtime proof. Selected conditional branch arithmetic is not a reproduced client or delivery failure."
+  ],
+  "remaining": [
+    "Actual signal subscribers and local update result semantics",
+    "All Text branches and exceptions",
+    "Runtime parse/recipient correspondence and peer evidence",
+    "Inbound ID/direction/history and target/account identity contracts",
+    "Actual notification subscribers and update helper semantics",
+    "Runtime attempt/task/recipient correspondence",
+    "Other branches, lower-network retransmission and final shutdown"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/send-text-final-20261006/write_evidence.py",
+      "sha256": "2677148a13c46b14a92f0921f4b0892233347364e1523c9a61ca99aecb91f1fd"
+    },
+    {
+      "cache_path": "data/send-text-final-20261006/verify_evidence.py",
+      "sha256": "12fdebb5e65774768d16abded6bd3004ca493628fbb8f27a5e5069d64614f630"
+    },
+    {
+      "cache_path": "data/send-text-final-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/send-text-final-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

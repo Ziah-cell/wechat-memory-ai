@@ -1,5 +1,15 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 最终结果与上层再次调用静态复核（2026-10-06）
+
+[389](evidence/389-send-text-final-notification.json)记录6区间/83观察；[390](evidence/390-send-upper-reentry-result.json)记录10区间/4叶函数/73观察。[392](evidence/392-send-text-final-validation.json)新读固定DLL，核16区间、4叶函数、23直接边、2表、156观察、110字段/分支断言、3指定表目标，复算rel32/RIP位移并核信号诊断。前轮6脚本哈希不变，同一执行者复核，无独立审查。
+
+7个上层再次调用判定案例、3个空值案例、2个本地结果案例均为指令条件的离线推导：包括原始type1拒绝、type49/subtype6或130满足其他条件后允许，以及所选state不为2分支保留整体0/0却写本地state5。没有执行目标指令、模拟网络或复现发送故障。全区间解码/哈希不等于完整CFG或运行可达；最终对象类别改变也不代表所有分支已追完。
+
+两处猜测证据名称按实际清单修正，最终检查了引用存在性。无unwind的小getter/setter和分类函数按直接调用锚点补叶函数，分类包含两个ret，未把第一次ret当整个函数结束。历史脚本只AST取纯helper，未执行旧writer顶层或改历史证据。
+
+[391](evidence/391-send-text-final-checkpoint.json)只读保存的停止状态，仍stopped/native_reader_timeout；不认证当前窗口。未跑产品/原生/并发/网络测试，未操作窗口、启动监听或发送。[观察方案](ISOLATED_OBSERVATION_4_1_15_50.md)仍未实施，产品0.1.22、自动回复关闭。
+
 ## 文字重试与响应消费静态复核（2026-10-06）
 
 [385](evidence/385-send-text-retry-budget.json)记录10区间/63观察，[386](evidence/386-send-text-response-consumer.json)记录4区间/1叶函数/40观察，含共享文字函数和共同调用点。[388](evidence/388-send-text-result-validation.json)去重后新读固定DLL，核对13区间、1叶函数、8直接边、4表、102观察、68字段/分支断言、6指定表目标和6个推导重试案例；复算位移、核对计时callable/诊断、默认参数、正常回边及限定消费区间。前轮8脚本哈希不变，同一执行者复核，无独立审查。

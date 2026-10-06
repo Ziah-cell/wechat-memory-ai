@@ -1,0 +1,1015 @@
+{
+  "checked_at_utc": "2026-10-06T01:44:30.417905+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x1865d60",
+      "end": "0x1866683",
+      "role_inference": "upper send closure: first result, restricted reentry, result promise then captured continuation",
+      "instruction_count": 536,
+      "disk_range_sha256": "d1e819850cc63b4ed210019eac6ea8f2ea7ace3b45ad5c1aa587cbadcc716ce4",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1866a60",
+      "end": "0x1866fc4",
+      "role_inference": "precheck then selected handler invocation and full result propagation",
+      "instruction_count": 325,
+      "disk_range_sha256": "8c3b080e1035af04676aa71a8f8bf0428314d5b11fe9025183a918f81c27f248",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39ca2a0",
+      "end": "0x39ca3f1",
+      "role_inference": "upper reentry predicate: B102, request state10, restricted payload type and pointed flag",
+      "instruction_count": 116,
+      "disk_range_sha256": "a9d9fbfbd83d632d334249e2834331f0afdf061c2ac4a50fa49ce7ec8df630e5",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c3550",
+      "end": "0x39c3785",
+      "role_inference": "precheck dispatch via handler+0xc8",
+      "instruction_count": 172,
+      "disk_range_sha256": "4e6bd5f1fc076aed980a7c88762b405e0bbce1581e5f2e489d017873a9fff1c9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c3850",
+      "end": "0x39c3998",
+      "role_inference": "send dispatch via handler+0xd0",
+      "instruction_count": 102,
+      "disk_range_sha256": "d4a8316e9557deba3e5c4016f7da4f4e655adbf1b53cb3aadfc6738616884a49",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39c72b0",
+      "end": "0x39c730e",
+      "role_inference": "default Text precheck initializes A/B0/0",
+      "instruction_count": 33,
+      "disk_range_sha256": "4ac53abfc47ee265dd00120df6b50606b5343a4b843592dcdc442341ef65fc35",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17b3390",
+      "end": "0x17b344e",
+      "role_inference": "generic result initialization",
+      "instruction_count": 54,
+      "disk_range_sha256": "6db477beeea2df0293d3606568fdca5c57f03c26dedb226d5b45d5d8ee7e1e40",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1809b20",
+      "end": "0x1809c15",
+      "role_inference": "copy final result into promise value and resolve without success predicate",
+      "instruction_count": 74,
+      "disk_range_sha256": "5809a3b78018da1dc7f7e060120c8aca0843e74f954622b43dde6c1408634b6c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x114970",
+      "end": "0x114a6f",
+      "role_inference": "copy overall pair, string and shared payload without status filtering",
+      "instruction_count": 76,
+      "disk_range_sha256": "acf94f287bb9f1f083fd7d3d7837d0cd0023867c7ca1ec820be607678fc4e3a2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b3160",
+      "end": "0x3b337a",
+      "role_inference": "shared pending-only promise state transition already evidenced by358",
+      "instruction_count": 115,
+      "disk_range_sha256": "75044b31b8fce79ef0391e2c54d359431f117826273b3b368293d662e3fa7993",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xf42530",
+      "size": 7,
+      "anchor": "direct call39ca34a reads request numeric state+0xbc",
+      "instructions": [
+        {
+          "at": "0xf42530",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0xbc]"
+        },
+        {
+          "at": "0xf42536",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x39d29e0",
+      "size": 7,
+      "anchor": "direct calls1865f6e and1866d22 write request numeric state+0xbc",
+      "instructions": [
+        {
+          "at": "0x39d29e0",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rcx + 0xbc], edx"
+        },
+        {
+          "at": "0x39d29e6",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba330",
+      "size": 29,
+      "anchor": "direct calls39ca358/1865f5b; include both return branches",
+      "instructions": [
+        {
+          "at": "0xaba330",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x31"
+        },
+        {
+          "at": "0xaba334",
+          "mnemonic": "jne",
+          "operands": "0xaba34a"
+        },
+        {
+          "at": "0xaba336",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0xaba339",
+          "mnemonic": "cmp",
+          "operands": "eax, 6"
+        },
+        {
+          "at": "0xaba33c",
+          "mnemonic": "sete",
+          "operands": "cl"
+        },
+        {
+          "at": "0xaba33f",
+          "mnemonic": "cmp",
+          "operands": "eax, 0x82"
+        },
+        {
+          "at": "0xaba344",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba347",
+          "mnemonic": "or",
+          "operands": "al, cl"
+        },
+        {
+          "at": "0xaba349",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "at": "0xaba34a",
+          "mnemonic": "xor",
+          "operands": "eax, eax"
+        },
+        {
+          "at": "0xaba34c",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3b3880",
+      "size": 11,
+      "anchor": "direct call1809bed selects resolve state1 then tailcalls3b3160",
+      "instructions": [
+        {
+          "at": "0x3b3880",
+          "mnemonic": "mov",
+          "operands": "r8d, 1"
+        },
+        {
+          "at": "0x3b3886",
+          "mnemonic": "jmp",
+          "operands": "0x3b3160"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x1865f5b",
+      "kind": "call",
+      "to": "0xaba330"
+    },
+    {
+      "at": "0x1865f6e",
+      "kind": "call",
+      "to": "0x39d29e0"
+    },
+    {
+      "at": "0x186600e",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x1866066",
+      "kind": "call",
+      "to": "0x39ca2a0"
+    },
+    {
+      "at": "0x18662bc",
+      "kind": "call",
+      "to": "0x1866a60"
+    },
+    {
+      "at": "0x18665bf",
+      "kind": "call",
+      "to": "0x1809b20"
+    },
+    {
+      "at": "0x1866aec",
+      "kind": "call",
+      "to": "0x39c3550"
+    },
+    {
+      "at": "0x1866d22",
+      "kind": "call",
+      "to": "0x39d29e0"
+    },
+    {
+      "at": "0x1866d77",
+      "kind": "call",
+      "to": "0x39c3850"
+    },
+    {
+      "at": "0x39ca34a",
+      "kind": "call",
+      "to": "0xf42530"
+    },
+    {
+      "at": "0x39ca358",
+      "kind": "call",
+      "to": "0xaba330"
+    },
+    {
+      "at": "0x39c72d3",
+      "kind": "call",
+      "to": "0x17b3390"
+    },
+    {
+      "at": "0x1809b3b",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x1809b68",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x1809bed",
+      "kind": "call",
+      "to": "0x3b3880"
+    },
+    {
+      "at": "0x3b3886",
+      "kind": "jmp",
+      "to": "0x3b3160"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9289c38",
+      "role_inference": "upper send closure callable established by377",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x1865d60"
+        }
+      ]
+    },
+    {
+      "rva": "0x96b69e8",
+      "role_inference": "default Text precheck and send slots; runtime replacement remains unknown",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0xc8",
+          "target": "0x39c72b0"
+        },
+        {
+          "offset": "0xd0",
+          "target": "0x3a72550"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x1865f61",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "initial payload classification boolean"
+    },
+    {
+      "at": "0x1865f69",
+      "mnemonic": "mov",
+      "operands": "edx, 9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unclassified initial payload sets request state9"
+    },
+    {
+      "at": "0x1865fb9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first invocation retains captured handler+0x18"
+    },
+    {
+      "at": "0x1865fe7",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first invocation retains captured request+8"
+    },
+    {
+      "at": "0x186600e",
+      "mnemonic": "call",
+      "operands": "0x1866a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first upper invocation"
+    },
+    {
+      "at": "0x1866014",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [rbp + 0x214]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load first overall B into R8D for reentry predicate"
+    },
+    {
+      "at": "0x1866021",
+      "mnemonic": "or",
+      "operands": "eax, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine first A/B"
+    },
+    {
+      "at": "0x1866024",
+      "mnemonic": "je",
+      "operands": "0x18663f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall zero skips upper reentry"
+    },
+    {
+      "at": "0x1866066",
+      "mnemonic": "call",
+      "operands": "0x39ca2a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "conditional upper reentry predicate"
+    },
+    {
+      "at": "0x186606e",
+      "mnemonic": "je",
+      "operands": "0x18663f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false predicate skips second invocation"
+    },
+    {
+      "at": "0x186608d",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rcx], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear byte pointed by request+0x28 before second invocation (shared control present)"
+    },
+    {
+      "at": "0x18660b8",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same pointed byte clear when no shared control"
+    },
+    {
+      "at": "0x186626a",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second invocation uses same captured handler pointer"
+    },
+    {
+      "at": "0x1866298",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second invocation uses same captured request pointer"
+    },
+    {
+      "at": "0x18662bc",
+      "mnemonic": "call",
+      "operands": "0x1866a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second invocation, no backwards retry loop in this selected block"
+    },
+    {
+      "at": "0x18662ca",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x210], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second A/B replaces first result pair"
+    },
+    {
+      "at": "0x1866354",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x238], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second payload replaces first result payload"
+    },
+    {
+      "at": "0x1866464",
+      "mnemonic": "or",
+      "operands": "eax, dword ptr [rbp + 0x210]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "logging success uses only overall A/B"
+    },
+    {
+      "at": "0x1866478",
+      "mnemonic": "cmove",
+      "operands": "rcx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "select true string when A/B both zero"
+    },
+    {
+      "at": "0x18665af",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xa8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "request promise member+0xa8"
+    },
+    {
+      "at": "0x18665b4",
+      "mnemonic": "add",
+      "operands": "rcx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same captured request"
+    },
+    {
+      "at": "0x18665b8",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x210]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "final local result"
+    },
+    {
+      "at": "0x18665bf",
+      "mnemonic": "call",
+      "operands": "0x1809b20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "resolve result helper, no overall-success gate here"
+    },
+    {
+      "at": "0x18665c5",
+      "mnemonic": "add",
+      "operands": "rsi, 0x30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subsequent1802d10 receives different captured field+0x30"
+    },
+    {
+      "at": "0x18665cf",
+      "mnemonic": "call",
+      "operands": "0x1802d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "captured continuation; not proof this resubmits the same request"
+    },
+    {
+      "at": "0x1866aec",
+      "mnemonic": "call",
+      "operands": "0x39c3550",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "precheck runs before send"
+    },
+    {
+      "at": "0x1866af2",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "precheck A tested zero"
+    },
+    {
+      "at": "0x1866afb",
+      "mnemonic": "je",
+      "operands": "0x1866d0c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "precheck B zero permits send branch"
+    },
+    {
+      "at": "0x1866d1d",
+      "mnemonic": "mov",
+      "operands": "edx, 0xa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "numeric request state10 before send"
+    },
+    {
+      "at": "0x1866d22",
+      "mnemonic": "call",
+      "operands": "0x39d29e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write state10"
+    },
+    {
+      "at": "0x1866d2f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load same handler"
+    },
+    {
+      "at": "0x1866d77",
+      "mnemonic": "call",
+      "operands": "0x39c3850",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "send dispatch"
+    },
+    {
+      "at": "0x1866d88",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "propagate handler A/B unchanged"
+    },
+    {
+      "at": "0x1866e14",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "propagate handler shared payload unchanged"
+    },
+    {
+      "at": "0x1866e1c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain new shared control"
+    },
+    {
+      "at": "0x1866ea7",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rbx], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "post-send A test for logging"
+    },
+    {
+      "at": "0x1866eb0",
+      "mnemonic": "je",
+      "operands": "0x1866cac",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero B skips error logging, not a peer receipt check"
+    },
+    {
+      "at": "0x39c367c",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0xc8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "precheck virtual+0xc8"
+    },
+    {
+      "at": "0x39c3910",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0xd0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "send virtual+0xd0"
+    },
+    {
+      "at": "0x39c72ce",
+      "mnemonic": "xor",
+      "operands": "edx, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "default Text precheck A0"
+    },
+    {
+      "at": "0x39c72d0",
+      "mnemonic": "xor",
+      "operands": "r8d, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "default Text precheck B0"
+    },
+    {
+      "at": "0x39c72d3",
+      "mnemonic": "call",
+      "operands": "0x17b3390",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "initialize generic result"
+    },
+    {
+      "at": "0x17b33a4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store supplied A"
+    },
+    {
+      "at": "0x17b33a6",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 4], r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store supplied B"
+    },
+    {
+      "at": "0x39ca2ba",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "non-null request required"
+    },
+    {
+      "at": "0x39ca2c3",
+      "mnemonic": "cmp",
+      "operands": "r8d, 0x66",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overall B must equal0x66=102"
+    },
+    {
+      "at": "0x39ca2cc",
+      "mnemonic": "jne",
+      "operands": "0x39ca2ef",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "wrong B or null request returns false"
+    },
+    {
+      "at": "0x39ca2fb",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "payload from request+0x18"
+    },
+    {
+      "at": "0x39ca324",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "pointed byte object from request+0x28"
+    },
+    {
+      "at": "0x39ca341",
+      "mnemonic": "jne",
+      "operands": "0x39ca367",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "payload and flag object both required"
+    },
+    {
+      "at": "0x39ca34a",
+      "mnemonic": "call",
+      "operands": "0xf42530",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read request numeric state"
+    },
+    {
+      "at": "0x39ca350",
+      "mnemonic": "cmp",
+      "operands": "eax, 0xa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "request state must10"
+    },
+    {
+      "at": "0x39ca358",
+      "mnemonic": "call",
+      "operands": "0xaba330",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "classify payload, not handler registry key"
+    },
+    {
+      "at": "0x39ca360",
+      "mnemonic": "je",
+      "operands": "0x39ca370",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unclassified payload returns false"
+    },
+    {
+      "at": "0x39ca362",
+      "mnemonic": "movzx",
+      "operands": "esi, byte ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return pointed flag byte"
+    },
+    {
+      "at": "0x39ca3e4",
+      "mnemonic": "mov",
+      "operands": "eax, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return predicate byte in AL"
+    },
+    {
+      "at": "0xf42530",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx + 0xbc]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "request+0xbc numeric state getter"
+    },
+    {
+      "at": "0x39d29e0",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0xbc], edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "request+0xbc numeric state setter"
+    },
+    {
+      "at": "0xaba330",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0xc], 0x31",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "payload+0xc must49"
+    },
+    {
+      "at": "0xaba339",
+      "mnemonic": "cmp",
+      "operands": "eax, 6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "payload+0x10 subtype6"
+    },
+    {
+      "at": "0xaba33f",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x82",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "or payload+0x10 subtype130"
+    },
+    {
+      "at": "0xaba347",
+      "mnemonic": "or",
+      "operands": "al, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine subtype tests"
+    },
+    {
+      "at": "0xaba34a",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other primary types return false"
+    },
+    {
+      "at": "0x1809b3b",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy supplied final result"
+    },
+    {
+      "at": "0x1809b68",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy result into heap promise value"
+    },
+    {
+      "at": "0x1809bed",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "resolve with no A/B filtering"
+    },
+    {
+      "at": "0x114984",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy A/B as QWORD"
+    },
+    {
+      "at": "0x114a49",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy shared payload"
+    },
+    {
+      "at": "0x114a51",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy control block"
+    },
+    {
+      "at": "0x3b3880",
+      "mnemonic": "mov",
+      "operands": "r8d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "resolve state1"
+    },
+    {
+      "at": "0x3b31aa",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "shared transition accepts pending0 only"
+    },
+    {
+      "at": "0x3b32b9",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0xc4], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store requested state1"
+    },
+    {
+      "at": "0x3b32d0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0xb8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "move value into promise"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "reentry_condition": {
+    "outer": "First overall A/B not both zero, then helper AL nonzero",
+    "helper": "request exists and B==102 and payload exists and flag object exists and request.state_bc==10 and payload.type_c==49 and payload.subtype_10 in(6,130) and pointed flag byte!=0",
+    "before_second_call": "Clear pointed byte, retain same captured request and handler, invoke1866a60 again, replace first result with second.",
+    "ordinary_text_boundary": "Payload type1 fails this helper even if registry handler is Text.381 type normalization does not make all Text-handler requests plain text.",
+    "counts": "Two upper call sites on this selected normal path, each may invoke a lower wrapper with its own budget. No global/network attempt bound inferred."
+  },
+  "derived_cases": [
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": true
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 130,
+      "flag": 1,
+      "allowed": true
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 1,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 101,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 9,
+      "type": 49,
+      "subtype": 6,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 7,
+      "flag": 1,
+      "allowed": false
+    },
+    {
+      "B": 102,
+      "state": 10,
+      "type": 49,
+      "subtype": 6,
+      "flag": 0,
+      "allowed": false
+    }
+  ],
+  "correlation_layers": [
+    {
+      "layer": "logical request",
+      "anchor": "Captured shared request at closure+8; upper promise at request+0xa8",
+      "not_equal": "account/recipient ID or proof of one network submission"
+    },
+    {
+      "layer": "handler invocation",
+      "anchor": "186600e and gated18662bc; same captured handler and request",
+      "not_equal": "all Text-handler requests have payload type1"
+    },
+    {
+      "layer": "common attempt",
+      "anchor": "385: remaining budget and repeated3a6a2c0 launch with per-attempt request copy/timeout",
+      "not_equal": "whole-operation time limit or global attempt bound"
+    },
+    {
+      "layer": "local network task",
+      "anchor": "355/358/364: local task key maps wrapper and callback, separately from StartTask boolean",
+      "not_equal": "logical request token, recipient ID or peer message ID"
+    },
+    {
+      "layer": "final result and notification",
+      "anchor": "389: local state/result payload;390: shared result copy and promise state1; local signal subscribers",
+      "not_equal": "raw common response object or peer delivery acknowledgment"
+    }
+  ],
+  "prior_evidence_reused_by_reference": [
+    "355-send-service-task-return.json",
+    "358-send-response-promise-contract.json",
+    "364-send-callback-registration.json",
+    "381-send-handler-registry.json",
+    "385-send-text-retry-budget.json"
+  ],
+  "conclusions": [
+    "The two upper calls are a restricted normal reentry path, not an unconditional resend or exception-only catch. B102, request state10, raw payload primary type49/subtype6or130 and an enabled pointed flag are required; the flag is cleared before reentry.",
+    "A raw payload type1 fails this gate. Do not transfer this upper policy to all ordinary Chinese text or multiply budgets into a global network-send guarantee. Lower385 retry remains separate.",
+    "1866a60 checks precheck overall statuses before calling handler; default Text precheck slot+c8 points to39c72b0 which supplies zero A/B. Handler result pair/string/shared payload propagate to upper closure; errors can still resolve its request+0xa8 promise with state1.",
+    "Second invocation uses the same captured handler/request and replaces the first final result. The later1802d10 receives closure+0x30; this call alone is not evidence of resending the same request.",
+    "Task IDs from prior355/358 remain local transport association, not peer or logical-request identities. A reviewable observation must retain logical request, handler invocation, common attempt, task and final result/payload-kind as different layers.",
+    "This round closes selected normal return/reentry relationships only. Real objects, recipients, actual subscriber implementations, exceptions and inbound ID/direction/history remain unverified."
+  ],
+  "remaining": [
+    "Inbound ID/direction/history and target/account identity contracts",
+    "Actual notification subscribers and update helper semantics",
+    "Runtime attempt/task/recipient correspondence",
+    "Other branches, lower-network retransmission and final shutdown"
+  ]
+}
