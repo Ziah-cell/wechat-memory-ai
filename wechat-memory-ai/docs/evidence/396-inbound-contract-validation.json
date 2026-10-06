@@ -1,0 +1,129 @@
+{
+  "checked_at_utc": "2026-10-06T04:00:14.616177+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 17,
+  "unique_anchored_leaves_checked": 2,
+  "unique_direct_edges_with_raw_rel32_math": 16,
+  "unique_tables_checked": 1,
+  "unique_instruction_observations_checked": 160,
+  "rip_references_with_raw_displacement_math": 2,
+  "branch_field_assertions": 94,
+  "explicit_table_targets_checked": 5,
+  "inline_typename_reconstructed_from_raw_immediates": "micromsg.AddMsg",
+  "serializer_fields_checked": 15,
+  "presence_mask_projections": [
+    {
+      "presence": "0x1ff",
+      "required_mask_satisfied": true,
+      "field12_present": false
+    },
+    {
+      "presence": "0x9ff",
+      "required_mask_satisfied": true,
+      "field12_present": true
+    },
+    {
+      "presence": "0x41ff",
+      "required_mask_satisfied": true,
+      "field12_present": false
+    },
+    {
+      "presence": "0x1fe",
+      "required_mask_satisfied": false,
+      "field12_present": false
+    }
+  ],
+  "projection_scope": "Required presence bits only, not complete parse acceptance or target execution",
+  "previous_analysis_script_hashes_unchanged": 6,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 560,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only graph/save AST definitions extracted from old writer; previous scripts and evidence were preserved.",
+    "Readonly-string candidates do not identify runtime semantics. Download msgsvrid, reporting issendmsg and separate compact IsSender record were excluded as ordinary-message direction proof.",
+    "A neighboring table after AddBypMsg typename was rejected after exact slot checks. AddBypMsg is a different type from AddMsg; selected command5 installs916ea28.",
+    "AddMsg typename is formed by overlapping immediate writes; raw readonly-string scans do not find it.",
+    "A guessed previous writer filename did not exist; actual write_evidence.py read after directory inventory. No previous writer was executed.",
+    "Ordinary append and a separate0x70 (112)-byte vector consumer are both evidenced, but their queue identity is NOT linked. Whole-range hashing/decoding is not whole-CFG certification.",
+    "Post-conversion descriptor virtual processing is unbound, so assignment-point provenance is not a final immutable object layout guarantee.",
+    "Current-round prose clarified hexadecimal stride0x70 as112 bytes before final verification/commit; instruction operands always retained0x70."
+  ],
+  "remaining": [
+    "Ordinary AddMsg collection producer/consumer identity",
+    "Outer synchronization response producer/type and phase",
+    "Baseline/reconnect/history boundaries",
+    "Runtime object/thread/lifetime contract",
+    "Queue ownership and ordinary1 consumer identity",
+    "Root virtual+20 implementation and account/session lifetime",
+    "Descriptor virtual+10 and final direction invariants",
+    "Source ID zero/duplicate scope and history cursor meaning",
+    "History/baseline/reconnect and target friend authentication",
+    "Actual send notification subscribers, receiver/scope and final shutdown"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-contract-20261006/write_evidence.py",
+      "sha256": "1c6710f15e82dc0ae5da67fcc345ad363ce33f08b6b0c805902200b2ac143361"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/verify_evidence.py",
+      "sha256": "65b9ddd0b741dcda4527223ba3936293ea28baa3acf01801558497b8383c7a51"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/find_strings.py",
+      "sha256": "32d50e9d06dd22150d0ed85d1efa6eeede42f1bc0e10ba20e1ac9d5f96961bce"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/scan_refs.ps1",
+      "sha256": "4b3c1845d4317a3cdbcee7eb30ccda77f3bc16df56f23f41ee1709492d728091"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/check_refs.py",
+      "sha256": "f3200d25374d674d6867d674dce270e107ce2fe7c078396916ec9080b8a0a410"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/metadata.py",
+      "sha256": "2265d0de7f69bd395f259aa931d0c6cb2f3f49b2c578d38b8c2e7106c4a1d6bd"
+    },
+    {
+      "cache_path": "data/inbound-contract-20261006/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

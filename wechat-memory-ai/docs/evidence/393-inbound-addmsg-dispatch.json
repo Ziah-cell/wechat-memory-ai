@@ -1,0 +1,1131 @@
+{
+  "checked_at_utc": "2026-10-06T03:55:24.142354+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea6840",
+      "end": "0x2ea8669",
+      "role_inference": "Selected synchronization-context command loop; outer response producer not certified",
+      "instruction_count": 1647,
+      "disk_range_sha256": "5c899759b800472143ab129bdc0dac80cd9f6dcdef8892ffd5bcfa71ec5e27e7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea9f60",
+      "end": "0x2eaa136",
+      "role_inference": "Command5 constructs AddMsg and checks generic parser boolean before dispatch",
+      "instruction_count": 105,
+      "disk_range_sha256": "b5c40997318ab2641deb86f045e59dcfcd36a6ee36eef70037de3bacf8c0afc2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694640",
+      "end": "0x6946e1",
+      "role_inference": "Generic parse wrapper returns parse/init plus stream-state conjunction",
+      "instruction_count": 44,
+      "disk_range_sha256": "d77a28de5cc215ccf871ecb8c4cee5b3b0fd677c5d447842fa0255e8de129195",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694240",
+      "end": "0x69454c",
+      "role_inference": "Calls object parser slot+38 then required-field check slot+20",
+      "instruction_count": 209,
+      "disk_range_sha256": "a9df929eb0a3c8941d0970915296700661868ab42d29f6e2a275358bf389c77b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x10929a0",
+      "end": "0x1092a1c",
+      "role_inference": "AddMsg required presence mask and selected nested checks",
+      "instruction_count": 44,
+      "disk_range_sha256": "0e1c531e7597cf408ceaac732db8c1ffa2e754d2b009d911226dc323f905323f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1092310",
+      "end": "0x10925b1",
+      "role_inference": "AddMsg field-number/offset serialization evidence",
+      "instruction_count": 165,
+      "disk_range_sha256": "e8a6db50d84c6393ac5fc6df9bd42346c54c2206069ffe5f06c157fcb2e63052",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb4b10",
+      "end": "0x2eb4e7f",
+      "role_inference": "Raw message-type dispatch; type1 takes collection append path",
+      "instruction_count": 251,
+      "disk_range_sha256": "5d1e9cc4b73b757bb77f6050195fa8a360908087d15fe918a58314b826194602",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1090d70",
+      "end": "0x1090dd5",
+      "role_inference": "Append constructor installs AddMsg table then copies through1090e00",
+      "instruction_count": 24,
+      "disk_range_sha256": "c72f5242f7a5c833d7f35c73c828b285d8ffec2beff0ab3c3df2d52aa2c9a8d9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38b2310",
+      "end": "0x38b2381",
+      "role_inference": "Special37/65 path constructs internal payload viaa773b0; not ordinary1 path",
+      "instruction_count": 33,
+      "disk_range_sha256": "6dbb772c24604e12dbd81200268922e3de5862029bde3f1c258275b7e32428e3",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x108e7a0",
+      "size": 67,
+      "anchor": "direct constructor call2ea9fc6",
+      "instructions": [
+        {
+          "at": "0x108e7a0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x108e7a3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x80e027e]"
+        },
+        {
+          "at": "0x108e7aa",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x108e7ad",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x68], 0"
+        },
+        {
+          "at": "0x108e7b5",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x48], 0"
+        },
+        {
+          "at": "0x108e7bc",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x108e7bf",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x108e7c3",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x18], xmm0"
+        },
+        {
+          "at": "0x108e7c7",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x28], xmm0"
+        },
+        {
+          "at": "0x108e7cb",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0xaad7d9e]"
+        },
+        {
+          "at": "0x108e7d2",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x38], rcx"
+        },
+        {
+          "at": "0x108e7d6",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x40], rcx"
+        },
+        {
+          "at": "0x108e7da",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x4c], xmm0"
+        },
+        {
+          "at": "0x108e7de",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x58], xmm0"
+        },
+        {
+          "at": "0x108e7e2",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x1092a20",
+      "size": 51,
+      "anchor": "AddMsg table+8 typename slot",
+      "instructions": [
+        {
+          "at": "0x1092a20",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x1092a23",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rdx + 0x10], 0xf"
+        },
+        {
+          "at": "0x1092a2b",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rdx + 0x18], 0xf"
+        },
+        {
+          "at": "0x1092a33",
+          "mnemonic": "movabs",
+          "operands": "rcx, 0x67736d6f7263696d"
+        },
+        {
+          "at": "0x1092a3d",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rdx], rcx"
+        },
+        {
+          "at": "0x1092a40",
+          "mnemonic": "movabs",
+          "operands": "rcx, 0x67734d6464412e67"
+        },
+        {
+          "at": "0x1092a4a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rdx + 7], rcx"
+        },
+        {
+          "at": "0x1092a4e",
+          "mnemonic": "mov",
+          "operands": "byte ptr [rdx + 0xf], 0"
+        },
+        {
+          "at": "0x1092a52",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2ea7a77",
+      "kind": "call",
+      "to": "0x2ea9f60"
+    },
+    {
+      "at": "0x2ea9fc6",
+      "kind": "call",
+      "to": "0x108e7a0"
+    },
+    {
+      "at": "0x2ea9fea",
+      "kind": "call",
+      "to": "0x694640"
+    },
+    {
+      "at": "0x2eaa008",
+      "kind": "call",
+      "to": "0x2eb4b10"
+    },
+    {
+      "at": "0x6946c0",
+      "kind": "call",
+      "to": "0x694240"
+    },
+    {
+      "at": "0x2eb4b9b",
+      "kind": "call",
+      "to": "0x1090d70"
+    },
+    {
+      "at": "0x2eb4bd6",
+      "kind": "call",
+      "to": "0x38b2310"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x916ea28",
+      "role_inference": "Exact AddMsg table installed by108e7a0 and1090d70",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x1092a20"
+        },
+        {
+          "offset": "0x18",
+          "target": "0x10915d0"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x10929a0"
+        },
+        {
+          "offset": "0x38",
+          "target": "0x1091700"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x1092310"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2ea69a7",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x2e8], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve outer R8 parameter, not a runtime response capture"
+    },
+    {
+      "at": "0x2ea79af",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x2e8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload outer parameter"
+    },
+    {
+      "at": "0x2ea79b6",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer nested+8"
+    },
+    {
+      "at": "0x2ea79ca",
+      "mnemonic": "mov",
+      "operands": "r15, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nested list array"
+    },
+    {
+      "at": "0x2ea79ce",
+      "mnemonic": "movsxd",
+      "operands": "rax, dword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "actual array count"
+    },
+    {
+      "at": "0x2ea79d2",
+      "mnemonic": "lea",
+      "operands": "rbx, [r15 + rax*8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "end pointer"
+    },
+    {
+      "at": "0x2ea79e7",
+      "mnemonic": "movabs",
+      "operands": "r14, 0x100800000016",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other-command mask"
+    },
+    {
+      "at": "0x2ea7a1c",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [r13 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "command numeric type+10"
+    },
+    {
+      "at": "0x2ea7a26",
+      "mnemonic": "bt",
+      "operands": "r14, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "mask classification"
+    },
+    {
+      "at": "0x2ea7a60",
+      "mnemonic": "cmp",
+      "operands": "rax, 5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "command5 comparison"
+    },
+    {
+      "at": "0x2ea7a64",
+      "mnemonic": "jne",
+      "operands": "0x2ea7a7f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other values skip AddMsg helper"
+    },
+    {
+      "at": "0x2ea7a6d",
+      "mnemonic": "mov",
+      "operands": "rdx, r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply same command item"
+    },
+    {
+      "at": "0x2ea7a77",
+      "mnemonic": "call",
+      "operands": "0x2ea9f60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call parse-and-dispatch"
+    },
+    {
+      "at": "0x2ea7a7d",
+      "mnemonic": "jmp",
+      "operands": "0x2ea7a0c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "advance without checking returned AL at this site"
+    },
+    {
+      "at": "0x2ea9fc6",
+      "mnemonic": "call",
+      "operands": "0x108e7a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct local AddMsg"
+    },
+    {
+      "at": "0x2ea9fcb",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "command nested buffer"
+    },
+    {
+      "at": "0x2ea9fdf",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "inner serialized string"
+    },
+    {
+      "at": "0x2ea9fea",
+      "mnemonic": "call",
+      "operands": "0x694640",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "generic parse call"
+    },
+    {
+      "at": "0x2ea9ff0",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test parse boolean"
+    },
+    {
+      "at": "0x2ea9ff2",
+      "mnemonic": "je",
+      "operands": "0x2eaa015",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false avoids downstream dispatch"
+    },
+    {
+      "at": "0x2ea9ff4",
+      "mnemonic": "add",
+      "operands": "rdi, 0x1d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "manager subobject+1d0"
+    },
+    {
+      "at": "0x2eaa008",
+      "mnemonic": "call",
+      "operands": "0x2eb4b10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "dispatch parsed local object"
+    },
+    {
+      "at": "0x108e7a3",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x80e027e]",
+      "rip_targets": [
+        "0x916ea28"
+      ],
+      "public_static_strings": [],
+      "observation": "constructor references exact table916ea28"
+    },
+    {
+      "at": "0x108e7aa",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "install exact table"
+    },
+    {
+      "at": "0x108e7da",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x4c], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero default includes QWORD+50"
+    },
+    {
+      "at": "0x108e7de",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x58], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero default includes QWORD+60"
+    },
+    {
+      "at": "0x1092a33",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x67736d6f7263696d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "typename bytes0..7 are inline immediate"
+    },
+    {
+      "at": "0x1092a40",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x67734d6464412e67",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "typename bytes7..14 overlap prior write"
+    },
+    {
+      "at": "0x1092a4a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdx + 7], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "second write offset7"
+    },
+    {
+      "at": "0x1092a4e",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rdx + 0xf], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "NUL terminator at15"
+    },
+    {
+      "at": "0x6946b5",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "clear/reset via+18"
+    },
+    {
+      "at": "0x6946c0",
+      "mnemonic": "call",
+      "operands": "0x694240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "parse/init helper"
+    },
+    {
+      "at": "0x6946c6",
+      "mnemonic": "and",
+      "operands": "al, byte ptr [rbp - 0x34]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "combine with stream boolean"
+    },
+    {
+      "at": "0x694269",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "virtual parser+38"
+    },
+    {
+      "at": "0x69426e",
+      "mnemonic": "je",
+      "operands": "0x694536",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "parse false path"
+    },
+    {
+      "at": "0x69427a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "virtual required-field check+20"
+    },
+    {
+      "at": "0x10929a5",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx + 0x6c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "presence word+6c"
+    },
+    {
+      "at": "0x10929aa",
+      "mnemonic": "test",
+      "operands": "eax, 0x1ff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "required mask1ff excludes field12 and15"
+    },
+    {
+      "at": "0x10929af",
+      "mnemonic": "jne",
+      "operands": "0x1092a14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing required presence fails"
+    },
+    {
+      "at": "0x10929de",
+      "mnemonic": "test",
+      "operands": "byte ptr [rsi + 0x6d], 0x20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "optional nested14 validation gate"
+    },
+    {
+      "at": "0x2eb4b36",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdx + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw type from AddMsg+14 field4"
+    },
+    {
+      "at": "0x2eb4b40",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x25",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special37"
+    },
+    {
+      "at": "0x2eb4b43",
+      "mnemonic": "je",
+      "operands": "0x2eb4baa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "37 direct branch"
+    },
+    {
+      "at": "0x2eb4b45",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x33",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special51"
+    },
+    {
+      "at": "0x2eb4b48",
+      "mnemonic": "jne",
+      "operands": "0x2eb4b7a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ordinary1 reaches append"
+    },
+    {
+      "at": "0x2eb4b66",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x41",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special65"
+    },
+    {
+      "at": "0x2eb4b69",
+      "mnemonic": "je",
+      "operands": "0x2eb4baa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "65 direct branch"
+    },
+    {
+      "at": "0x2eb4b7a",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "collection pointer"
+    },
+    {
+      "at": "0x2eb4b81",
+      "mnemonic": "je",
+      "operands": "0x2eb4e66",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing collection exits"
+    },
+    {
+      "at": "0x2eb4b87",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "collection end"
+    },
+    {
+      "at": "0x2eb4b8b",
+      "mnemonic": "cmp",
+      "operands": "rdx, qword ptr [r14 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "capacity comparison"
+    },
+    {
+      "at": "0x2eb4b9b",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct copied AddMsg at end"
+    },
+    {
+      "at": "0x2eb4ba0",
+      "mnemonic": "add",
+      "operands": "qword ptr [r14 + 8], 0x70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "advance by0x70 (112) bytes"
+    },
+    {
+      "at": "0x2eb4c65",
+      "mnemonic": "call",
+      "operands": "0x2ebe8d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "full collection grow/append helper"
+    },
+    {
+      "at": "0x2eb4bd6",
+      "mnemonic": "call",
+      "operands": "0x38b2310",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special path calls38b2310"
+    },
+    {
+      "at": "0x1090d82",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x80ddc9f]",
+      "rip_targets": [
+        "0x916ea28"
+      ],
+      "public_static_strings": [],
+      "observation": "append constructor references same AddMsg table"
+    },
+    {
+      "at": "0x1090dc5",
+      "mnemonic": "call",
+      "operands": "0x1090e00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy helper; full copy semantics not audited"
+    },
+    {
+      "at": "0x38b2353",
+      "mnemonic": "call",
+      "operands": "0xa773b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special converter call"
+    },
+    {
+      "at": "0x38b2362",
+      "mnemonic": "call",
+      "operands": "0x38b23c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special downstream processing call"
+    },
+    {
+      "at": "0x10923b3",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field1: DWORD from+10"
+    },
+    {
+      "at": "0x10923b6",
+      "mnemonic": "mov",
+      "operands": "ecx, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number1"
+    },
+    {
+      "at": "0x10923ce",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field2: nested from+8"
+    },
+    {
+      "at": "0x10923e2",
+      "mnemonic": "mov",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number2"
+    },
+    {
+      "at": "0x10923fa",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field3: nested from+18"
+    },
+    {
+      "at": "0x109240e",
+      "mnemonic": "mov",
+      "operands": "ecx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number3"
+    },
+    {
+      "at": "0x1092426",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field4: DWORD from+14"
+    },
+    {
+      "at": "0x1092429",
+      "mnemonic": "mov",
+      "operands": "ecx, 4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number4"
+    },
+    {
+      "at": "0x1092441",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field5: nested from+20"
+    },
+    {
+      "at": "0x1092455",
+      "mnemonic": "mov",
+      "operands": "ecx, 5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number5"
+    },
+    {
+      "at": "0x109246d",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field6: DWORD from+28"
+    },
+    {
+      "at": "0x1092470",
+      "mnemonic": "mov",
+      "operands": "ecx, 6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number6"
+    },
+    {
+      "at": "0x1092488",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x2c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field7: DWORD from+2c"
+    },
+    {
+      "at": "0x109248b",
+      "mnemonic": "mov",
+      "operands": "ecx, 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number7"
+    },
+    {
+      "at": "0x10924a3",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field8: nested from+30"
+    },
+    {
+      "at": "0x10924b7",
+      "mnemonic": "mov",
+      "operands": "ecx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number8"
+    },
+    {
+      "at": "0x10924d2",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field9: DWORD from+48"
+    },
+    {
+      "at": "0x10924d5",
+      "mnemonic": "mov",
+      "operands": "ecx, 9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number9"
+    },
+    {
+      "at": "0x10924f0",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field10: string from+38"
+    },
+    {
+      "at": "0x10924f4",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number10"
+    },
+    {
+      "at": "0x109250f",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field11: string from+40"
+    },
+    {
+      "at": "0x1092513",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number11"
+    },
+    {
+      "at": "0x109252e",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field12: QWORD from+50"
+    },
+    {
+      "at": "0x1092532",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xc",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number12"
+    },
+    {
+      "at": "0x109254d",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x4c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field13: DWORD from+4c"
+    },
+    {
+      "at": "0x1092550",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number13"
+    },
+    {
+      "at": "0x109256b",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field14: nested from+58"
+    },
+    {
+      "at": "0x109257f",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xe",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number14"
+    },
+    {
+      "at": "0x109259a",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field15: QWORD from+60"
+    },
+    {
+      "at": "0x109259e",
+      "mnemonic": "mov",
+      "operands": "ecx, 0xf",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field number15"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "field_number_layout": [
+    {
+      "field": 1,
+      "offset": "0x10",
+      "shape": "DWORD",
+      "load_at": "0x10923b3",
+      "tag_at": "0x10923b6"
+    },
+    {
+      "field": 2,
+      "offset": "0x8",
+      "shape": "nested",
+      "load_at": "0x10923ce",
+      "tag_at": "0x10923e2"
+    },
+    {
+      "field": 3,
+      "offset": "0x18",
+      "shape": "nested",
+      "load_at": "0x10923fa",
+      "tag_at": "0x109240e"
+    },
+    {
+      "field": 4,
+      "offset": "0x14",
+      "shape": "DWORD",
+      "load_at": "0x1092426",
+      "tag_at": "0x1092429"
+    },
+    {
+      "field": 5,
+      "offset": "0x20",
+      "shape": "nested",
+      "load_at": "0x1092441",
+      "tag_at": "0x1092455"
+    },
+    {
+      "field": 6,
+      "offset": "0x28",
+      "shape": "DWORD",
+      "load_at": "0x109246d",
+      "tag_at": "0x1092470"
+    },
+    {
+      "field": 7,
+      "offset": "0x2c",
+      "shape": "DWORD",
+      "load_at": "0x1092488",
+      "tag_at": "0x109248b"
+    },
+    {
+      "field": 8,
+      "offset": "0x30",
+      "shape": "nested",
+      "load_at": "0x10924a3",
+      "tag_at": "0x10924b7"
+    },
+    {
+      "field": 9,
+      "offset": "0x48",
+      "shape": "DWORD",
+      "load_at": "0x10924d2",
+      "tag_at": "0x10924d5"
+    },
+    {
+      "field": 10,
+      "offset": "0x38",
+      "shape": "string",
+      "load_at": "0x10924f0",
+      "tag_at": "0x10924f4"
+    },
+    {
+      "field": 11,
+      "offset": "0x40",
+      "shape": "string",
+      "load_at": "0x109250f",
+      "tag_at": "0x1092513"
+    },
+    {
+      "field": 12,
+      "offset": "0x50",
+      "shape": "QWORD",
+      "load_at": "0x109252e",
+      "tag_at": "0x1092532"
+    },
+    {
+      "field": 13,
+      "offset": "0x4c",
+      "shape": "DWORD",
+      "load_at": "0x109254d",
+      "tag_at": "0x1092550"
+    },
+    {
+      "field": 14,
+      "offset": "0x58",
+      "shape": "nested",
+      "load_at": "0x109256b",
+      "tag_at": "0x109257f"
+    },
+    {
+      "field": 15,
+      "offset": "0x60",
+      "shape": "QWORD",
+      "load_at": "0x109259a",
+      "tag_at": "0x109259e"
+    }
+  ],
+  "inline_typename": {
+    "expected": "micromsg.AddMsg",
+    "first_imm_at": "0x1092a33",
+    "second_imm_at": "0x1092a40",
+    "second_write_offset": 7,
+    "size": 15
+  },
+  "conclusions": [
+    "The selected synchronization-context loop singles out command5 and constructs an object whose installed table identifies micromsg.AddMsg. The typename is assembled from immediates, so plain readonly-string searching misses it.",
+    "2ea9f60 checks694640 return before dispatch. This differs from the response-wrapper return masking in363; do not transfer that earlier failure handling to this input site.",
+    "694240 calls parser+38 then initialization+20. AddMsg requires presence mask1ff and nested checks, but not field12 or15 presence. Presence/init success alone does not prove a nonzero unique message ID.",
+    "Raw type1 reaches collection append when the collection exists. The direct38b2310-to-a773b0 branch belongs to types37/65. Ordinary queued-object consumption is still unlinked.",
+    "Command5 handler return is not inspected at the selected outer call site. This observation is not proof of no error handling elsewhere.",
+    "No arrival-newness, account/friend identity, runtime hook safety or peer delivery is established. The outer NewSyncResponse producer/type binding remains a separate unclosed edge."
+  ],
+  "remaining": [
+    "Ordinary AddMsg collection producer/consumer identity",
+    "Outer synchronization response producer/type and phase",
+    "Baseline/reconnect/history boundaries",
+    "Runtime object/thread/lifetime contract"
+  ]
+}

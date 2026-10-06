@@ -1,5 +1,15 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 入站AddMsg与字段来源静态复核（393–396，2026-10-06）
+
+[393](evidence/393-inbound-addmsg-dispatch.json)保存9区间、2叶函数、89观察；[394](evidence/394-inbound-field-provenance.json)保存8区间、71观察。[396](evidence/396-inbound-contract-validation.json)重新读取固定DLL并复核范围哈希、完整解码、直接rel32/RIP算术、精确表目标、15组字段号/偏移，以及两段原始MOVABS重叠重建的`micromsg.AddMsg`。静态复核通过：17区间、2叶函数、16直接边、1表、160观察、94字段/分支断言、5指定表目标、560本地链接。前轮392列出的6个脚本哈希保持；同一执行者，无新增独立审查。
+
+4个presence mask案例只核必填位条件，包含字段12缺失但必填位齐全；不包含所有嵌套/流检查，不是完整parse_ok或客户端执行。元素步长统一明确为0x70（112）字节，避免把十六进制误读为十进制70。普通type1入队与另一向量消费者身份仍未闭合，全区间解码也不是完整CFG/实机可达认证。
+
+研究中排除了下载请求的msgsvrid、报告字段issendmsg和另一紧凑记录的IsSender作为实时方向证据；未把邻接AddBypMsg名称的下一张表误当其自身表。短AddMsg类型名需从立即数恢复，字符串扫描漏报不是无该类型。猜测的旧writer文件名不存在后按实际清单读取，只AST提取纯helper，没有执行旧writer或改历史证据。
+
+[395](evidence/395-inbound-contract-checkpoint.json)只核原监听保存文件，仍停止，非当前窗口检查。本轮无产品/原生/并发/网络测试、DLL执行、进程访问、真实收发或观察方案实施。产品0.1.22、自动回复关闭。
+
 ## 最终结果与上层再次调用静态复核（2026-10-06）
 
 [389](evidence/389-send-text-final-notification.json)记录6区间/83观察；[390](evidence/390-send-upper-reentry-result.json)记录10区间/4叶函数/73观察。[392](evidence/392-send-text-final-validation.json)新读固定DLL，核16区间、4叶函数、23直接边、2表、156观察、110字段/分支断言、3指定表目标，复算rel32/RIP位移并核信号诊断。前轮6脚本哈希不变，同一执行者复核，无独立审查。

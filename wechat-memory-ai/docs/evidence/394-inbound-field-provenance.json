@@ -1,0 +1,782 @@
+{
+  "checked_at_utc": "2026-10-06T03:55:24.142354+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0xa773b0",
+      "end": "0xa77dde",
+      "role_inference": "AddMsg-to-internal-payload selected assignments; later virtual processing may modify fields",
+      "instruction_count": 555,
+      "disk_range_sha256": "aee5482db36b184473ee9eb5f3eff0199d0e0f1bc4702fbc1031a87de186b0fd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa786f0",
+      "end": "0xa78c67",
+      "role_inference": "raw type setter writes internal+c",
+      "instruction_count": 286,
+      "disk_range_sha256": "29216a9b13e013bed287a6e59b27f9577f4300a6565e050e26b66051a9c4b4b3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa784e0",
+      "end": "0xa786e9",
+      "role_inference": "string selection uses root virtual+20 plus classification helpers",
+      "instruction_count": 149,
+      "disk_range_sha256": "14f45c40c324b072bcd53c7e7a3d2df022198a6e4b9b1e8f9e37968682cee676",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa78050",
+      "end": "0xa78472",
+      "role_inference": "candidate string into internal+58 with empty/category fallback",
+      "instruction_count": 252,
+      "disk_range_sha256": "a86d5b977b7988c4edac5c4508f684b15de03bd01f0c0142b793f682b81b7f1e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa78d60",
+      "end": "0xa78ef0",
+      "role_inference": "post-conversion descriptor virtual+10 can transform object; flag+2c0 not receive direction",
+      "instruction_count": 82,
+      "disk_range_sha256": "c29f0a9b7be9f9aeb8fa4f9d1f4d0ea9bbc43c028048a240f2835c99acc045cc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa78ef0",
+      "end": "0xa793df",
+      "role_inference": "conditional auxiliary booleans; one compares+18 with unbound root virtual+20 string",
+      "instruction_count": 281,
+      "disk_range_sha256": "7acc9bf04473572e1ae191dea98394cd7c05b7011c239425304a4f3195f3b4c2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17d4b60",
+      "end": "0x17d692e",
+      "role_inference": "separate vector consumer steps0x70 and calls converter; not linked to synchronization collection",
+      "instruction_count": 1725,
+      "disk_range_sha256": "3f7d6f13f3c4edcaa5ba792ba197877aa0b5671e9ca5031368b3044cbfdf3813",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3a93e70",
+      "end": "0x3a94736",
+      "role_inference": "one direct caller of17d4b60; full upstream meaning remains unclassified",
+      "instruction_count": 478,
+      "disk_range_sha256": "2dafaef0af4c6d0c888b0c5e218d04b45893c74719856cbcb0eceabacb9a6630",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0xa7791e",
+      "kind": "call",
+      "to": "0xa784e0"
+    },
+    {
+      "at": "0xa7792f",
+      "kind": "call",
+      "to": "0xa78050"
+    },
+    {
+      "at": "0xa77996",
+      "kind": "call",
+      "to": "0xa786f0"
+    },
+    {
+      "at": "0xa77da7",
+      "kind": "call",
+      "to": "0xa78d60"
+    },
+    {
+      "at": "0xa77db6",
+      "kind": "call",
+      "to": "0xa78ef0"
+    },
+    {
+      "at": "0xa78112",
+      "kind": "call",
+      "to": "0xa784e0"
+    },
+    {
+      "at": "0x17d4e2e",
+      "kind": "call",
+      "to": "0xa773b0"
+    },
+    {
+      "at": "0x17d5c8e",
+      "kind": "call",
+      "to": "0xa78050"
+    },
+    {
+      "at": "0x3a94531",
+      "kind": "call",
+      "to": "0x17d4b60"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0xa773d7",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source object"
+    },
+    {
+      "at": "0xa773da",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destination object"
+    },
+    {
+      "at": "0xa77528",
+      "mnemonic": "lea",
+      "operands": "rax, [rdi + 0x180]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "content destination string+180"
+    },
+    {
+      "at": "0xa7752f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x160], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save content destination pointer"
+    },
+    {
+      "at": "0xa77687",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field12 QWORD"
+    },
+    {
+      "at": "0xa7768b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x148], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+148"
+    },
+    {
+      "at": "0xa77692",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source nested field5"
+    },
+    {
+      "at": "0xa776de",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nested string+8"
+    },
+    {
+      "at": "0xa776e2",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x170], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save original destination pointer"
+    },
+    {
+      "at": "0xa7775c",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field9 DWORD"
+    },
+    {
+      "at": "0xa77766",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0x164], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+164"
+    },
+    {
+      "at": "0xa7776c",
+      "mnemonic": "imul",
+      "operands": "rax, rax, 0x3e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "multiply by1000"
+    },
+    {
+      "at": "0xa77773",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x150], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+150"
+    },
+    {
+      "at": "0xa7777a",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field6 DWORD"
+    },
+    {
+      "at": "0xa7777d",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0x168], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+168"
+    },
+    {
+      "at": "0xa777f3",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x4c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field13"
+    },
+    {
+      "at": "0xa777fd",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0x174], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+174"
+    },
+    {
+      "at": "0xa77803",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source nested field2"
+    },
+    {
+      "at": "0xa7780c",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field2 inner string"
+    },
+    {
+      "at": "0xa77810",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destination string+18"
+    },
+    {
+      "at": "0xa7785e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source nested field3"
+    },
+    {
+      "at": "0xa77872",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field3 inner string"
+    },
+    {
+      "at": "0xa7787d",
+      "mnemonic": "add",
+      "operands": "rax, 0x38",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destination string+38"
+    },
+    {
+      "at": "0xa7791e",
+      "mnemonic": "call",
+      "operands": "0xa784e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compute candidate string before type setter"
+    },
+    {
+      "at": "0xa7792f",
+      "mnemonic": "call",
+      "operands": "0xa78050",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store candidate string"
+    },
+    {
+      "at": "0xa7797b",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field15 QWORD"
+    },
+    {
+      "at": "0xa77989",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x248], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+248"
+    },
+    {
+      "at": "0xa77990",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source field4 raw type"
+    },
+    {
+      "at": "0xa77996",
+      "mnemonic": "call",
+      "operands": "0xa786f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw type setter"
+    },
+    {
+      "at": "0xa78b1a",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0xc], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "setter writes internal+c"
+    },
+    {
+      "at": "0xa779a8",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unbound root virtual+20 string"
+    },
+    {
+      "at": "0xa779b3",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0xc], 0x2710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special raw type10000 branch"
+    },
+    {
+      "at": "0xa779ba",
+      "mnemonic": "jne",
+      "operands": "0xa77a8c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other types skip special string rewrite"
+    },
+    {
+      "at": "0xa77a13",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rax + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special rewrite source internal+38 length"
+    },
+    {
+      "at": "0xa77a33",
+      "mnemonic": "mov",
+      "operands": "rdx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special rewrite destination internal+18"
+    },
+    {
+      "at": "0xa77a3c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special rewrite reload source field2"
+    },
+    {
+      "at": "0xa77a54",
+      "mnemonic": "add",
+      "operands": "rax, 0x38",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special rewrite destination internal+38"
+    },
+    {
+      "at": "0xa77da7",
+      "mnemonic": "call",
+      "operands": "0xa78d60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "post-conversion processing helper"
+    },
+    {
+      "at": "0xa78d91",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor virtual+10 can modify message"
+    },
+    {
+      "at": "0xa78dc6",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x2c0], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "processing flag+2c0 set1"
+    },
+    {
+      "at": "0xa77db4",
+      "mnemonic": "mov",
+      "operands": "dl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "auxiliary helper mode1"
+    },
+    {
+      "at": "0xa77db6",
+      "mnemonic": "call",
+      "operands": "0xa78ef0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "auxiliary helper call"
+    },
+    {
+      "at": "0xa784ef",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0xc], 0x2710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type10000 special selection"
+    },
+    {
+      "at": "0xa784f8",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rdi + 0x28], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "empty+18 handling"
+    },
+    {
+      "at": "0xa7850a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root virtual+20 string"
+    },
+    {
+      "at": "0xa7854c",
+      "mnemonic": "call",
+      "operands": "0x76edb90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare+18 to returned string"
+    },
+    {
+      "at": "0xa78553",
+      "mnemonic": "je",
+      "operands": "0xa785e2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "equal takes dedicated copy branch"
+    },
+    {
+      "at": "0xa78560",
+      "mnemonic": "call",
+      "operands": "0xbc3690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "classification helper for+18"
+    },
+    {
+      "at": "0xa78570",
+      "mnemonic": "call",
+      "operands": "0xbc3690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "classification helper for+38"
+    },
+    {
+      "at": "0xa78597",
+      "mnemonic": "call",
+      "operands": "0xa7bf10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special selection helper"
+    },
+    {
+      "at": "0xa78559",
+      "mnemonic": "lea",
+      "operands": "rbx, [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "default source+18"
+    },
+    {
+      "at": "0xa78097",
+      "mnemonic": "lea",
+      "operands": "rdi, [rsi + 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "candidate stored at internal+58"
+    },
+    {
+      "at": "0xa78112",
+      "mnemonic": "call",
+      "operands": "0xa784e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fallback recomputes candidate"
+    },
+    {
+      "at": "0xa78f0e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x288]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor prerequisite at+288"
+    },
+    {
+      "at": "0xa78f1e",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 0x148], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor+148 prerequisite must nonzero"
+    },
+    {
+      "at": "0xa79329",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "default auxiliary boolean true for mode1"
+    },
+    {
+      "at": "0xa7932c",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc], 0x2710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type10000 special branch"
+    },
+    {
+      "at": "0xa79335",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rsi + 0x28], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "empty+18 special branch"
+    },
+    {
+      "at": "0xa79347",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same unbound root virtual+20"
+    },
+    {
+      "at": "0xa79370",
+      "mnemonic": "cmp",
+      "operands": "rax, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare string lengths"
+    },
+    {
+      "at": "0xa7937a",
+      "mnemonic": "call",
+      "operands": "0x76edb90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare bytes when equal lengths"
+    },
+    {
+      "at": "0xa79381",
+      "mnemonic": "setne",
+      "operands": "dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "auxiliary boolean is NOT-equal"
+    },
+    {
+      "at": "0xa793c9",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 9], dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "store auxiliary+9 in object at payload+258"
+    },
+    {
+      "at": "0x17d4b9a",
+      "mnemonic": "mov",
+      "operands": "rdi, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "vector argument R8 retained"
+    },
+    {
+      "at": "0x17d4da9",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rdi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "vector begin"
+    },
+    {
+      "at": "0x17d4dac",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "vector end"
+    },
+    {
+      "at": "0x17d4df3",
+      "mnemonic": "add",
+      "operands": "rbx, 0x70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "step0x70"
+    },
+    {
+      "at": "0x17d4e2b",
+      "mnemonic": "mov",
+      "operands": "rdx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply vector element"
+    },
+    {
+      "at": "0x17d4e2e",
+      "mnemonic": "call",
+      "operands": "0xa773b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "converter call"
+    },
+    {
+      "at": "0x3a9452a",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0xe0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "caller supplies its local vector"
+    },
+    {
+      "at": "0x3a94531",
+      "mnemonic": "call",
+      "operands": "0x17d4b60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "call selected vector consumer"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "source_to_destination": [
+    {
+      "field": 12,
+      "source": "+50",
+      "destination": "+148",
+      "operation": "QWORD copy",
+      "meaning": "source identifier candidate, exact enum/name/uniqueness not certified"
+    },
+    {
+      "field": 2,
+      "source": "+8 -> nested+8",
+      "destination": "+18",
+      "operation": "string copy",
+      "meaning": "first endpoint candidate"
+    },
+    {
+      "field": 3,
+      "source": "+18 -> nested+8",
+      "destination": "+38",
+      "operation": "string copy",
+      "meaning": "second endpoint candidate; compare prior382 send-target source"
+    },
+    {
+      "field": 5,
+      "source": "+20 -> nested+8",
+      "destination": "+180",
+      "operation": "string copy",
+      "meaning": "content candidate"
+    },
+    {
+      "field": 9,
+      "source": "+48",
+      "destination": "+164 and +150",
+      "operation": "DWORD copy; zero-extended QWORD multiply1000",
+      "meaning": "time-shaped value, no certified clock/baseline"
+    },
+    {
+      "field": 6,
+      "source": "+28",
+      "destination": "+168",
+      "operation": "DWORD copy",
+      "meaning": "protocol-origin numeric state, not authenticated is_self"
+    },
+    {
+      "field": 13,
+      "source": "+4c",
+      "destination": "+174",
+      "operation": "DWORD copy",
+      "meaning": "numeric field"
+    },
+    {
+      "field": 15,
+      "source": "+60",
+      "destination": "+248",
+      "operation": "QWORD copy",
+      "meaning": "numeric field, not certified history cursor"
+    },
+    {
+      "field": 4,
+      "source": "+14",
+      "destination": "+c",
+      "operation": "setter a786f0",
+      "meaning": "raw message type"
+    }
+  ],
+  "conclusions": [
+    "Selected assignments connect AddMsg numeric fields to the internal layout used in prior sending analysis: field12 to+148; field2/3 nested strings to+18/+38; field6 to+168. These are assignment-point facts, not immutable final contents after virtual processing.",
+    "The same+148 is populated from response item field8 in386. Matching destination offset does not prove protocol fields have identical ID domain, uniqueness, nonzero value, recipient binding or cross-account persistence.",
+    "Required presence does not include AddMsg field12. Its constructor initializes the value to zero and the converter copies it without a selected nonzero/presence guard. No actual malformed input was executed.",
+    "Do not call+168 a receive-direction boolean, or infer direction from numeric2/5 used in sending. Auxiliary+258->+9 is conditional, special cases default true, and compares against a string from root virtual+20 whose account provenance is unbound.",
+    "Candidate string selection has special/category paths; type10000 can rewrite endpoint strings. These helpers do not yet authenticate which endpoint is the current account or approved friend.",
+    "a78d60 calls descriptor virtual+10 after field assignment and before auxiliary processing. Its+2c0 flag records processing, not a proved sender/receiver role. Final object invariants require the actual descriptor implementation.",
+    "17d4b60 separately iterates0x70 (112)-byte elements and converts them, with one direct caller3a93e70. The same element size does not link that vector to2eb4b10 collection, nor certify real-time rather than history.",
+    "First-batch/reconnect/history gates, account changes and actual ordinary-message consumer remain unknown. No live messages, databases, keys, process memory or client execution were used."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "382-send-text-request.json",
+    "386-send-text-response-consumer.json",
+    "389-send-text-final-notification.json"
+  ],
+  "remaining": [
+    "Queue ownership and ordinary1 consumer identity",
+    "Root virtual+20 implementation and account/session lifetime",
+    "Descriptor virtual+10 and final direction invariants",
+    "Source ID zero/duplicate scope and history cursor meaning",
+    "History/baseline/reconnect and target friend authentication",
+    "Actual send notification subscribers, receiver/scope and final shutdown"
+  ]
+}
