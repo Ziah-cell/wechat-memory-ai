@@ -1,0 +1,692 @@
+{
+  "checked_at_utc": "2026-10-06T09:58:10.723465+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound processing and notification; not complete CFG or runtime compatibility",
+  "unwind_nodes": [
+    {
+      "rva": "0x17cb2c0",
+      "end": "0x17cd051",
+      "role_inference": "Selected counter-zero route passes local internal vector into17c8eb0; other routes not generalized",
+      "instruction_count": 1674,
+      "disk_range_sha256": "f91393bc504d06eae2c08e0a163d8fc220db409e9aa2898198cb848e55867a91",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17c8eb0",
+      "end": "0x17c9815",
+      "role_inference": "Nonempty batch, backend result flag and grouped-result signal emission; backend semantics unbound",
+      "instruction_count": 538,
+      "disk_range_sha256": "f9740c573a8a9ff69a96d087b6ff44f918632df5279475c124e39ed5a802ea99",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17cac20",
+      "end": "0x17cb073",
+      "role_inference": "Conditional signal subscription iteration, direct function pointer or executor work",
+      "instruction_count": 266,
+      "disk_range_sha256": "3e0856dbdeacf3c1186862913e31ed5d16e1358a4c0a0f4eca8a55fd759e8121",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xac2940",
+      "end": "0xac2a41",
+      "role_inference": "Allocate new vector and invoke per-element copy helper at744-byte stride",
+      "instruction_count": 70,
+      "disk_range_sha256": "a09f0765be5067537c674b8c700982435c9fd9142f8c74bbcd380ad63d62dd16",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x485830",
+      "size": 19,
+      "anchor": "closure table9288008+10; wrapper tailcalls captured function pointer",
+      "instructions": [
+        {
+          "at": "0x485830",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x485833",
+          "mnemonic": "lea",
+          "operands": "r8, [rcx + 0x68]"
+        },
+        {
+          "at": "0x485837",
+          "mnemonic": "lea",
+          "operands": "rdx, [rcx + 0x18]"
+        },
+        {
+          "at": "0x48583b",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x48583f",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 0x10]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x17cc971",
+      "kind": "call",
+      "to": "0x17c8eb0"
+    },
+    {
+      "at": "0x17cca73",
+      "kind": "call",
+      "to": "0x17c8eb0"
+    },
+    {
+      "at": "0x17cca9e",
+      "kind": "call",
+      "to": "0x17cac20"
+    },
+    {
+      "at": "0x17c94e7",
+      "kind": "call",
+      "to": "0x17cac20"
+    },
+    {
+      "at": "0x17cadda",
+      "kind": "call",
+      "to": "0xac2940"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9288008",
+      "role_inference": "Installed by17cac20 async subscription branch",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x485830"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x17cc939",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x754]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Local counterA"
+    },
+    {
+      "at": "0x17cc93f",
+      "mnemonic": "or",
+      "operands": "eax, dword ptr [rbp + 0x724]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine counterB"
+    },
+    {
+      "at": "0x17cc945",
+      "mnemonic": "jne",
+      "operands": "0x17cc97c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero takes separate route; not generalized"
+    },
+    {
+      "at": "0x17cc947",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear options+38 holder"
+    },
+    {
+      "at": "0x17cc94f",
+      "mnemonic": "lea",
+      "operands": "rax, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Options base rbp-40"
+    },
+    {
+      "at": "0x17cc953",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fifth argument options"
+    },
+    {
+      "at": "0x17cc958",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x6e0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same appended batch base rbp+6e0"
+    },
+    {
+      "at": "0x17cc95f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x758]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Manager argument"
+    },
+    {
+      "at": "0x17cc96e",
+      "mnemonic": "mov",
+      "operands": "r9b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fourth argument1"
+    },
+    {
+      "at": "0x17cc971",
+      "mnemonic": "call",
+      "operands": "0x17c8eb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected batch processing call"
+    },
+    {
+      "at": "0x17cca90",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 0x168]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Separate signal member+168; not ordinary+e8"
+    },
+    {
+      "at": "0x17cca97",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x700]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Separate vector rbp+700"
+    },
+    {
+      "at": "0x17cca9e",
+      "mnemonic": "call",
+      "operands": "0x17cac20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Separate signal emission boundary"
+    },
+    {
+      "at": "0x17c8eeb",
+      "mnemonic": "mov",
+      "operands": "r14, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve source vector"
+    },
+    {
+      "at": "0x17c8eee",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x318], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve manager"
+    },
+    {
+      "at": "0x17c8ef5",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x3b0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fifth options argument"
+    },
+    {
+      "at": "0x17c8eff",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare source begin/end"
+    },
+    {
+      "at": "0x17c8f03",
+      "mnemonic": "je",
+      "operands": "0x17c97df",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty skips main processing"
+    },
+    {
+      "at": "0x17c8f52",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Optional backend callable+38"
+    },
+    {
+      "at": "0x17c8f59",
+      "mnemonic": "je",
+      "operands": "0x17c8f6e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "No override selects default backend"
+    },
+    {
+      "at": "0x17c8f68",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Override virtual+10, excluded from default conclusion"
+    },
+    {
+      "at": "0x17c8f75",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 0xc80]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default backend manager+c80"
+    },
+    {
+      "at": "0x17c8f7c",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x270]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Grouped output at rbp+270"
+    },
+    {
+      "at": "0x17c8f83",
+      "mnemonic": "mov",
+      "operands": "r8, r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input vector argument"
+    },
+    {
+      "at": "0x17c8f89",
+      "mnemonic": "call",
+      "operands": "0x38de5a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default backend call38de5a0; persistence/outcome semantics unaudited"
+    },
+    {
+      "at": "0x17c8f8f",
+      "mnemonic": "test",
+      "operands": "byte ptr [rbp + 0x2b0], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test result byte+40 bit0"
+    },
+    {
+      "at": "0x17c8f96",
+      "mnemonic": "je",
+      "operands": "0x17c941a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear bit takes diagnostic/cleanup path"
+    },
+    {
+      "at": "0x17c9260",
+      "mnemonic": "call",
+      "operands": "0x17c9c50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Per-group processing17c9c50 before signal; may mutate"
+    },
+    {
+      "at": "0x17c929e",
+      "mnemonic": "call",
+      "operands": "0x2df1ee0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Further service call before signal"
+    },
+    {
+      "at": "0x17c8fd3",
+      "mnemonic": "call",
+      "operands": "0x17c8340",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Per-group processing17c8340"
+    },
+    {
+      "at": "0x17c94b4",
+      "mnemonic": "call",
+      "operands": "0x17caac0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional pre-notification17caac0 boundary"
+    },
+    {
+      "at": "0x17c94ba",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbp + 0x278]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Grouped result sentinel"
+    },
+    {
+      "at": "0x17c94c1",
+      "mnemonic": "add",
+      "operands": "qword ptr [rbp + 0x318], 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Advance preserved manager by+e8 for ordinary signal"
+    },
+    {
+      "at": "0x17c94d0",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Advance result node"
+    },
+    {
+      "at": "0x17c94d6",
+      "mnemonic": "je",
+      "operands": "0x17c9790",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Sentinel ends emission loop"
+    },
+    {
+      "at": "0x17c94dc",
+      "mnemonic": "lea",
+      "operands": "rdx, [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Result node+18 vector argument, not original source vector identity"
+    },
+    {
+      "at": "0x17c94e0",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x318]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal context manager+e8"
+    },
+    {
+      "at": "0x17c94e7",
+      "mnemonic": "call",
+      "operands": "0x17cac20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke dispatcher for each selected group"
+    },
+    {
+      "at": "0x17cad15",
+      "mnemonic": "lea",
+      "operands": "r13, [rip + 0x7abd2ec]",
+      "rip_targets": [
+        "0x9288008"
+      ],
+      "public_static_strings": [],
+      "observation": "Async closure table9288008"
+    },
+    {
+      "at": "0x17cad23",
+      "mnemonic": "test",
+      "operands": "rax, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subscription node prerequisite"
+    },
+    {
+      "at": "0x17cad2c",
+      "mnemonic": "mov",
+      "operands": "r15, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save next node"
+    },
+    {
+      "at": "0x17cad2f",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rax + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Node+48 optional executor"
+    },
+    {
+      "at": "0x17cad36",
+      "mnemonic": "je",
+      "operands": "0x17cad80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing executor takes direct callback branch"
+    },
+    {
+      "at": "0x17cad80",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured callback context"
+    },
+    {
+      "at": "0x17cad84",
+      "mnemonic": "lea",
+      "operands": "rdx, [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured callback storage"
+    },
+    {
+      "at": "0x17cad88",
+      "mnemonic": "mov",
+      "operands": "r8, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass group vector"
+    },
+    {
+      "at": "0x17cad8b",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call node+10 function pointer, NOT virtual table slot"
+    },
+    {
+      "at": "0x17cad73",
+      "mnemonic": "lock inc",
+      "operands": "dword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retain optional shared control for async capture"
+    },
+    {
+      "at": "0x17cadd3",
+      "mnemonic": "mov",
+      "operands": "r8, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source group vector passed to copying helper"
+    },
+    {
+      "at": "0x17cadda",
+      "mnemonic": "call",
+      "operands": "0xac2940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clone vector through per-element copy helper"
+    },
+    {
+      "at": "0x17cade8",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocate128-byte closure"
+    },
+    {
+      "at": "0x17cadf3",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install selected closure table"
+    },
+    {
+      "at": "0x17cae06",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture context and function pointer at closure+8/+10"
+    },
+    {
+      "at": "0x17cae0a",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x18], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture callback storage at closure+18"
+    },
+    {
+      "at": "0x17cae5a",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x60], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture extra field and vector begin at closure+60/+68"
+    },
+    {
+      "at": "0x17cae66",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x70], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture vector end/capacity at closure+70/+78"
+    },
+    {
+      "at": "0x17cae6a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store closure in holder+38"
+    },
+    {
+      "at": "0x17cae71",
+      "mnemonic": "mov",
+      "operands": "rcx, r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Optional executor as receiver"
+    },
+    {
+      "at": "0x17cae74",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp - 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Work holder argument"
+    },
+    {
+      "at": "0x17cae78",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit through executor virtual+8; execution/drain not established"
+    },
+    {
+      "at": "0xac297c",
+      "mnemonic": "imul",
+      "operands": "r14, rdx, 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocation size=count*0x2e8"
+    },
+    {
+      "at": "0xac29fb",
+      "mnemonic": "call",
+      "operands": "0x1cab70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Element copy helper1cab70; not bytewise independence of nested objects"
+    },
+    {
+      "at": "0xac2a0f",
+      "mnemonic": "add",
+      "operands": "rcx, 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "744-byte copy loop stride"
+    },
+    {
+      "at": "0xac2a22",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish copied vector end"
+    },
+    {
+      "at": "0x485830",
+      "mnemonic": "mov",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve closure"
+    },
+    {
+      "at": "0x485833",
+      "mnemonic": "lea",
+      "operands": "r8, [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector address+68"
+    },
+    {
+      "at": "0x485837",
+      "mnemonic": "lea",
+      "operands": "rdx, [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured callback storage+18"
+    },
+    {
+      "at": "0x48583b",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured callback context+8"
+    },
+    {
+      "at": "0x48583f",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall closure+10 function pointer; final subscriber unbound"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "After batch postprocessing17cdcf0, the selected zero-local-counters branch of17cb2c0 passes its0x2e8-stride vector to17c8eb0 with options+38 cleared. Nonzero counters and other paths remain separate; not all rawtype1 items are proven to take this route.",
+    "17c8eb0 skips main processing for an empty input. With absent override it calls38de5a0 using manager+c80 and receives a grouped output at local+270. Selected signal path requires output byte+40 bit0 set. The bit is not authenticated storage success/newness or delivery; backend contract is unreviewed.",
+    "After per-group17c9c50,2df1ee0,17c8340 and17caac0 boundaries, result-list node+18 vectors are emitted using signal context manager+e8. This is not proof that each original input survives unchanged. The separate17cb2c0 call with manager+168 and vector+700 is not this signal.",
+    "17cac20 iterates subscriptions under additional state/lock prerequisites. Node+48 absent: call function pointer node+10 with node+8 context,node+18 storage and group vector. This pointer is not a vtable slot. Node+48 present: copy vector at744-byte element stride, capture callback/shared state in128-byte closure table9288008, submit work holder through executor virtual+8.",
+    "Closure table+10 resolves19-byte wrapper485830, which passes closure+68 vector,+18 storage,+8 context and tailcalls captured function pointer+10. This closes the selected wrapper argument path, not the actual callback, subscription registration, executor execution, completion/drain or application event contract.",
+    "Copy helper allocates separate vector storage and invokes1cab70 per element; nested object independence, mutation, lifetime across all branches and exception/reentrancy behavior are not certified. No target code was run."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "397-inbound-batch-consumer.json",
+    "402-inbound-consumer-gates.json"
+  ],
+  "remaining": [
+    "Backend38de5a0 grouping/result bit and item preservation",
+    "Per-group mutations and final direction/identity",
+    "Actual manager+e8 subscribers/registration and application new-message event",
+    "Executor identity/execution/cancellation/drain and separate+168 semantics",
+    "No callable or minimized runtime receive adapter established"
+  ]
+}

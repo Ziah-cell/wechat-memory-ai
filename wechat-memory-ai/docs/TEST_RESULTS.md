@@ -1,5 +1,15 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 入站检查和通知包装路径静态复核（402–405，2026-10-06）
+
+[402](evidence/402-inbound-consumer-gates.json)记录零ID分流、第二个键容器、可选handler及追加赋值；[403](evidence/403-inbound-group-notification.json)记录结果分组和回调包装。[405](evidence/405-inbound-notification-validation.json)重新读取固定DLL，核完整选定函数区间、叶函数、原始rel32/RIP算术、表槽、字段/分支断言及文档链接。确切计数以405为准；401列出的8个历史脚本哈希保持。同一执行者，无独立审查。
+
+离线投影只检验选定gate的跳过/继续分支和字段偏移，不能模拟完整消费者、后端或事件交付。零ID、空handler、Text gate=true、结果bit0、正常returntrue、executor提交均不得单独认证真实来信。
+
+研究扫描最初因未显式导入RSP/RBP常量失败，已补导入；不是产品失败。474c0同偏移写入候选实际是输出对象，未当root生产者。aba560最初叶探针超出128字节范围，随后改读完整所属函数；其未经完整业务认证，不用于宣称a7cd20对raw1无操作。历史writer只提取纯graph/save AST，未执行旧顶层或改旧证据。
+
+[404](evidence/404-inbound-notification-checkpoint.json)确认保存监听文件哈希不变且仍停止，不代表当前窗口检查。未重启监听、操作窗口、电源、进程/密钥/聊天库、真实收发或运行产品/原生/并发测试。0.1.22、自动回复关闭，O1–O7未执行。
+
 ## 普通批次、端点键及默认descriptor静态复核（397–401，2026-10-06）
 
 [397](evidence/397-inbound-batch-consumer.json)保存批次/时间/过滤链，[398](evidence/398-inbound-key-root-filter.json)保存键选择与root成员间接来源，[399](evidence/399-inbound-default-descriptor.json)保存选定默认descriptor。[401](evidence/401-inbound-owner-validation.json)重新核固定DLL哈希、完整函数解码、精确表目标、指令与原始rel32/RIP位移算术；具体去重计数以401为准。396列出的11个历史脚本保持，同一执行者，无独立审查。

@@ -1,0 +1,758 @@
+{
+  "checked_at_utc": "2026-10-06T09:58:10.723465+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound processing and notification; not complete CFG or runtime compatibility",
+  "unwind_nodes": [
+    {
+      "rva": "0x17cb2c0",
+      "end": "0x17cd051",
+      "role_inference": "Actual extended batch consumer from397; selected post-conversion gates and append only, not a complete CFG",
+      "instruction_count": 1674,
+      "disk_range_sha256": "f91393bc504d06eae2c08e0a163d8fc220db409e9aa2898198cb848e55867a91",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7b9f0",
+      "end": "0xa7bade",
+      "role_inference": "Recompute endpoint selection from current payload; ordinary non10000 branch only",
+      "instruction_count": 79,
+      "disk_range_sha256": "1212d6f5d469e94646b572aa5ef3162d0e838b2cc3846853a6db6431384a7cc9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17cda50",
+      "end": "0x17cdc5c",
+      "role_inference": "Selected endpoint plus payload+148 lookup; hit invokes removal helper and caller skips item",
+      "instruction_count": 118,
+      "disk_range_sha256": "151036ef8b27aa495f770dee49f4805c3b62fc7f201cc6abf5cf754ae8ca3475",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17d4640",
+      "end": "0x17d4834",
+      "role_inference": "Construct composite key and test manager+bf8 inner container membership",
+      "instruction_count": 133,
+      "disk_range_sha256": "c2384d947f54d779966fc8038f4e411e4396b5a9cc86dd11571d924ec64d77fd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17d4840",
+      "end": "0x17d4aca",
+      "role_inference": "Construct same key and invoke erase helper on inner container+2c0",
+      "instruction_count": 144,
+      "disk_range_sha256": "bace3069dc2b5b2e236d16b43d68b2782175062c6bfebf7127d170197ec627a8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17d3f50",
+      "end": "0x17d4121",
+      "role_inference": "Composite string builder receives endpoint and numeric ID; exact formatting not certified",
+      "instruction_count": 124,
+      "disk_range_sha256": "799260309dd38b3de3097f7b8744c336d4b6528665c141c921327fb80f42deed",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1d1010",
+      "end": "0x1d1257",
+      "role_inference": "Selected matching node unlink, count decrement and deallocation; generic erase implementation",
+      "instruction_count": 162,
+      "disk_range_sha256": "a7e807c2b35f56474b870a6c19bffaabd8ffaf8a7d45af1178416426bcb21d34",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x73610",
+      "size": 3,
+      "anchor": "TextMessageHandler table96b69e8+38; registration context reused from381",
+      "instructions": [
+        {
+          "at": "0x73610",
+          "mnemonic": "mov",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0x73612",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x17cbb16",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cbb8a",
+      "kind": "call",
+      "to": "0x17cda50"
+    },
+    {
+      "at": "0x17cbef3",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cc062",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cc0bf",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cc44b",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cc6ed",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cc73a",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cda80",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cda8e",
+      "kind": "call",
+      "to": "0x17d4640"
+    },
+    {
+      "at": "0x17cdc32",
+      "kind": "call",
+      "to": "0xa7b9f0"
+    },
+    {
+      "at": "0x17cdc40",
+      "kind": "call",
+      "to": "0x17d4840"
+    },
+    {
+      "at": "0x17d466b",
+      "kind": "call",
+      "to": "0x17d3f50"
+    },
+    {
+      "at": "0x17d4888",
+      "kind": "call",
+      "to": "0x17d3f50"
+    },
+    {
+      "at": "0x17d489c",
+      "kind": "call",
+      "to": "0x1d1010"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96b69e8",
+      "role_inference": "Conditional TextMessageHandler table, not proof of live receiver",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x38",
+          "target": "0x73610"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x17cb46f",
+      "mnemonic": "call",
+      "operands": "0xa794a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert extended source into local internal payload"
+    },
+    {
+      "at": "0x17cb475",
+      "mnemonic": "mov",
+      "operands": "rcx, r12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Payload argument for subsequent preprocessing"
+    },
+    {
+      "at": "0x17cb478",
+      "mnemonic": "mov",
+      "operands": "dl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preprocessing mode1"
+    },
+    {
+      "at": "0x17cb47a",
+      "mnemonic": "call",
+      "operands": "0xa7cd20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unaudited preprocessing boundary; do not assume raw1 no-op"
+    },
+    {
+      "at": "0x17cb480",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x188]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Payload base rbp+40: read ID candidate+148"
+    },
+    {
+      "at": "0x17cb48e",
+      "mnemonic": "test",
+      "operands": "rax, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test ID candidate"
+    },
+    {
+      "at": "0x17cb491",
+      "mnemonic": "je",
+      "operands": "0x17cb730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero ID branches to common processing, not rejection"
+    },
+    {
+      "at": "0x17cb5d6",
+      "mnemonic": "call",
+      "operands": "0xa82200",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero-ID path can call payload replacement helper a82200"
+    },
+    {
+      "at": "0x17cbb09",
+      "mnemonic": "call",
+      "operands": "0xabe9e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional predicate abe9e0; semantics not named history"
+    },
+    {
+      "at": "0x17cbb11",
+      "mnemonic": "je",
+      "operands": "0x17cbb80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False enters selected ordinary gate path"
+    },
+    {
+      "at": "0x17cbb8a",
+      "mnemonic": "call",
+      "operands": "0x17cda50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Manager-owned key lookup/removal gate"
+    },
+    {
+      "at": "0x17cbb92",
+      "mnemonic": "jne",
+      "operands": "0x17cb430",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Hit skips current item"
+    },
+    {
+      "at": "0x17cbb9b",
+      "mnemonic": "call",
+      "operands": "0x17c7fb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional classification boundary17c7fb0"
+    },
+    {
+      "at": "0x17cbba3",
+      "mnemonic": "je",
+      "operands": "0x17cbe90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False enters handler lookup; true uses separate vector"
+    },
+    {
+      "at": "0x17cbe97",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x4c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Rawtype from payload+c"
+    },
+    {
+      "at": "0x17cbe9a",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rbp + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subtype from payload+10"
+    },
+    {
+      "at": "0x17cbec5",
+      "mnemonic": "call",
+      "operands": "0x17c5700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Lookup current handler via prior381 manager maps"
+    },
+    {
+      "at": "0x17cbed2",
+      "mnemonic": "test",
+      "operands": "rcx, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test optional handler"
+    },
+    {
+      "at": "0x17cbedc",
+      "mnemonic": "je",
+      "operands": "0x17cbef0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing handler bypasses this gate"
+    },
+    {
+      "at": "0x17cbee1",
+      "mnemonic": "mov",
+      "operands": "rdx, r12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass payload to selected handler gate"
+    },
+    {
+      "at": "0x17cbee4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Handler virtual+38"
+    },
+    {
+      "at": "0x17cbeea",
+      "mnemonic": "je",
+      "operands": "0x17cc830",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False skips append at this gate"
+    },
+    {
+      "at": "0x73610",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Constanttrue body with no object writes"
+    },
+    {
+      "at": "0x17cc7dd",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x6dc]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Local numeric state source"
+    },
+    {
+      "at": "0x17cc7e3",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x1b8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write payload+178, not+168; direction meaning unbound"
+    },
+    {
+      "at": "0x17cc7e9",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x2e8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear byte payload+2a8"
+    },
+    {
+      "at": "0x17cc806",
+      "mnemonic": "call",
+      "operands": "0x158b880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Append-copy selected payload"
+    },
+    {
+      "at": "0x17cc80c",
+      "mnemonic": "add",
+      "operands": "qword ptr [rbp + 0x6e8], 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Internal element stride0x2e8=744 bytes"
+    },
+    {
+      "at": "0x17cc823",
+      "mnemonic": "call",
+      "operands": "0x15a3bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternate grow append"
+    },
+    {
+      "at": "0x17cc871",
+      "mnemonic": "call",
+      "operands": "0x17cdcf0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Batch postprocessing boundary before result handling"
+    },
+    {
+      "at": "0x17cd020",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal function returntrue does not prove individual acceptance or delivery"
+    },
+    {
+      "at": "0xa7ba46",
+      "mnemonic": "mov",
+      "operands": "edi, 0x18",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default endpoint offset+18 for non10000"
+    },
+    {
+      "at": "0xa7ba4b",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rsi + 0x28], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First endpoint length prerequisite"
+    },
+    {
+      "at": "0xa7ba50",
+      "mnemonic": "je",
+      "operands": "0xa7bacb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty first endpoint retains+18"
+    },
+    {
+      "at": "0xa7ba52",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root source reused from398"
+    },
+    {
+      "at": "0xa7ba5d",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root virtual+20 string"
+    },
+    {
+      "at": "0xa7ba80",
+      "mnemonic": "cmp",
+      "operands": "rax, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare lengths"
+    },
+    {
+      "at": "0xa7babd",
+      "mnemonic": "call",
+      "operands": "0x76edb90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare endpoint bytes"
+    },
+    {
+      "at": "0xa7bac4",
+      "mnemonic": "jne",
+      "operands": "0xa7bacb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unequal retains+18"
+    },
+    {
+      "at": "0xa7bac6",
+      "mnemonic": "mov",
+      "operands": "edi, 0x38",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Equal selects+38"
+    },
+    {
+      "at": "0xa7bacb",
+      "mnemonic": "add",
+      "operands": "rsi, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return selected current payload string, not cached+58"
+    },
+    {
+      "at": "0x17cda76",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rdx + 0x148]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Current payload ID candidate+148"
+    },
+    {
+      "at": "0x17cda80",
+      "mnemonic": "call",
+      "operands": "0xa7b9f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Recompute current endpoint key"
+    },
+    {
+      "at": "0x17cda88",
+      "mnemonic": "mov",
+      "operands": "rdx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Key string argument"
+    },
+    {
+      "at": "0x17cda8b",
+      "mnemonic": "mov",
+      "operands": "r8, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ID candidate argument"
+    },
+    {
+      "at": "0x17cda8e",
+      "mnemonic": "call",
+      "operands": "0x17d4640",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Membership lookup"
+    },
+    {
+      "at": "0x17cda95",
+      "mnemonic": "je",
+      "operands": "0x17cdc48",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Miss returns without removal"
+    },
+    {
+      "at": "0x17cdc28",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rdi + 0x148]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload current ID for removal"
+    },
+    {
+      "at": "0x17cdc32",
+      "mnemonic": "call",
+      "operands": "0xa7b9f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Recompute key for removal"
+    },
+    {
+      "at": "0x17cdc40",
+      "mnemonic": "call",
+      "operands": "0x17d4840",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Hit invokes removal helper"
+    },
+    {
+      "at": "0x17cdc45",
+      "mnemonic": "mov",
+      "operands": "eax, r14d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return original hit predicate"
+    },
+    {
+      "at": "0x17d466b",
+      "mnemonic": "call",
+      "operands": "0x17d3f50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct composite key"
+    },
+    {
+      "at": "0x17d4670",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0xbf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Manager+bf8 inner state; distinct from398 globalbb8cc60"
+    },
+    {
+      "at": "0x17d4818",
+      "mnemonic": "cmp",
+      "operands": "r12, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare found node to sentinel"
+    },
+    {
+      "at": "0x17d481b",
+      "mnemonic": "setne",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Membership result"
+    },
+    {
+      "at": "0x17d4888",
+      "mnemonic": "call",
+      "operands": "0x17d3f50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same composite key constructor for removal"
+    },
+    {
+      "at": "0x17d488d",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Container offset+2c0"
+    },
+    {
+      "at": "0x17d4892",
+      "mnemonic": "add",
+      "operands": "rcx, qword ptr [rbx + 0xbf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inner manager state"
+    },
+    {
+      "at": "0x17d489c",
+      "mnemonic": "call",
+      "operands": "0x1d1010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Erase helper"
+    },
+    {
+      "at": "0x17d3f70",
+      "mnemonic": "mov",
+      "operands": "rsi, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve numeric input"
+    },
+    {
+      "at": "0x17d3fe2",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Endpoint string length"
+    },
+    {
+      "at": "0x17d3ff6",
+      "mnemonic": "call",
+      "operands": "0x83ac0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Append endpoint bytes"
+    },
+    {
+      "at": "0x17d4006",
+      "mnemonic": "call",
+      "operands": "0x81560",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Append fixed separator through stream helper; exact format unreviewed"
+    },
+    {
+      "at": "0x17d400f",
+      "mnemonic": "mov",
+      "operands": "rdx, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Numeric ID input to formatter"
+    },
+    {
+      "at": "0x17d4012",
+      "mnemonic": "call",
+      "operands": "0xfc820",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Numeric formatting boundary"
+    },
+    {
+      "at": "0x1d11dc",
+      "mnemonic": "dec",
+      "operands": "qword ptr [rcx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Erase path decrements count"
+    },
+    {
+      "at": "0x1d11e4",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unlink next/previous links"
+    },
+    {
+      "at": "0x1d11eb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unlink reciprocal link"
+    },
+    {
+      "at": "0x1d1232",
+      "mnemonic": "call",
+      "operands": "0x7524b70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Free matching node storage"
+    },
+    {
+      "at": "0x1d1237",
+      "mnemonic": "mov",
+      "operands": "r15d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return removal count1 for this path"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "After397 conversion the consumer calls a7cd20(mode1). A zero payload+148 bypasses the selected nonzero-ID hash handling and joins common processing; it is not rejected at that test. Nonzero path can replace payload viaa82200. Neither path certifies valid ID or final acceptance.",
+    "Selected ordinary route additionally passes abe9e0,17cda50 and17c7fb0 branches.17cda50 recomputes endpoint witha7b9f0, pairs it with current payload+148, looks in manager+bf8 inner container+2c0, and on hit invokes same-key erase then returns true; caller skips the item. Node unlink/decrement/free is visible in1d1010. This container is distinct from398 globalbb8cc60. Producers, concurrency, expiry, resets and account scope remain unknown, so no one-shot/exactly-once or history guarantee.",
+    "For non10000,a7b9f0 chooses current payload+38 when nonempty+18 byte-equals root virtual+20 string, otherwise+18. It recomputes from current strings rather than merely returning cached+58.398 root member producer/account meaning is still unbound.",
+    "Lookup17c5700 receives rawtype/subtype and returns optional handler. Missing handler bypasses this virtual gate; present handler virtual+38=false skips append. With381 conditional TextMessageHandler registration, table96b69e8+38 is73610 constanttrue. This is not the default descriptor table9078b48+10 from399, even though both point to73610. Live receiver remains unverified.",
+    "On a selected later append path, local numeric state is written to payload+178 and byte+2a8 is cleared before appending0x2e8(744)-byte internal elements. +178 differs from protocol-derived+168 and neither is a certified direction. Other classification paths, a7cd20, a82200,17cdcf0 and final mutations remain open. Normalreturntrue is not an item-delivery result."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "381-send-handler-registry.json",
+    "394-inbound-field-provenance.json",
+    "397-inbound-batch-consumer.json",
+    "398-inbound-key-root-filter.json",
+    "399-inbound-default-descriptor.json"
+  ],
+  "remaining": [
+    "Root+68 producer/member table/virtual+18 and account/target identity",
+    "Manager-owned filter key producers, lifetime, reset and zero-ID behavior",
+    "Preprocessing/replacement/classification and final direction",
+    "First-batch/history/reconnect/account-change boundaries"
+  ]
+}

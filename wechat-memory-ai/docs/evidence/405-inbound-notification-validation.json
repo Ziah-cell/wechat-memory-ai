@@ -1,0 +1,151 @@
+{
+  "checked_at_utc": "2026-10-06T10:03:28.685414+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility, complete CFG or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 10,
+  "unique_anchored_leaves_checked": 2,
+  "unique_direct_edges_with_raw_rel32_math": 20,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 139,
+  "rip_references_with_raw_displacement_math": 1,
+  "branch_field_assertions": 114,
+  "explicit_table_targets_checked": 2,
+  "local_offset_arithmetic": {
+    "id": "0x148",
+    "numeric_state": "0x178",
+    "cleared_byte": "0x2a8",
+    "backend_bit": "0x40",
+    "options_holder": "0x38",
+    "work_holder": "0x38"
+  },
+  "selected_gate_projections": [
+    {
+      "handler_present": false,
+      "gate_return": false,
+      "local_result": "bypass_gate",
+      "final_acceptance": "unknown"
+    },
+    {
+      "handler_present": false,
+      "gate_return": true,
+      "local_result": "bypass_gate",
+      "final_acceptance": "unknown"
+    },
+    {
+      "handler_present": true,
+      "gate_return": false,
+      "local_result": "skip_item_here",
+      "final_acceptance": "unknown"
+    },
+    {
+      "handler_present": true,
+      "gate_return": true,
+      "local_result": "continue_after_gate",
+      "final_acceptance": "unknown"
+    },
+    {
+      "synthetic_id_candidate": 0,
+      "local_result": "common_processing",
+      "id_validity": "unknown",
+      "final_acceptance": "unknown"
+    },
+    {
+      "synthetic_id_candidate": 1,
+      "local_result": "nonzero_ID_processing",
+      "id_validity": "unknown",
+      "final_acceptance": "unknown"
+    },
+    {
+      "synthetic_id_candidate": 18446744073709551615,
+      "local_result": "nonzero_ID_processing",
+      "id_validity": "unknown",
+      "final_acceptance": "unknown"
+    }
+  ],
+  "projection_scope": "Local branch expressions only, not complete consumer/backend/new-message acceptance or target execution",
+  "previous_analysis_script_hashes_unchanged": 8,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 601,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and402-405 fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only graph/save AST definitions and verifier prefix text copied from historical scripts; no historical top-level execution or edits.",
+    "Member scan initially lacked explicit RSP/RBP constants; corrected import, not a product failure. Bounded candidate scan is not exhaustive.",
+    "474c0 write at486c7 uses an output object from saved RDX, not certified rootRCX; rejected as root+68 producer. Other same-offset candidates were not promoted.",
+    "aba560 probe exceeded128-byte leaf window; owned function was then decoded. a7cd20 raw1 no-op is not claimed.",
+    "Initial draft prior381 filename corrected to381-send-handler-registry before final validation.",
+    "A whole owned range hash/decode does not imply all branches were semantically traced. Unreviewed backend, preprocessing and subscription boundaries remain explicit.",
+    "The+178 field, default descriptor+10, Text handler+38, signal context+e8 and captured function pointer+10 are distinct roles; identical offsets or constant return functions do not establish identity."
+  ],
+  "remaining": [
+    "Root+68 producer/member table/virtual+18 and account/target identity",
+    "Manager-owned filter key producers, lifetime, reset and zero-ID behavior",
+    "Preprocessing/replacement/classification and final direction",
+    "First-batch/history/reconnect/account-change boundaries",
+    "Backend38de5a0 grouping/result bit and item preservation",
+    "Per-group mutations and final direction/identity",
+    "Actual manager+e8 subscribers/registration and application new-message event",
+    "Executor identity/execution/cancellation/drain and separate+168 semantics",
+    "No callable or minimized runtime receive adapter established"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-identity-20261006/write_evidence.py",
+      "sha256": "7635d7abfd6d15e548736f5db16fcb4f692f2201d127c2317890088c5d01104f"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/verify_evidence.py",
+      "sha256": "1fbbde4ffae00801ce3561c426d1ea01ac3f4347a476bca013797fb72cf1b505"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/update_docs.py",
+      "sha256": "0cd51ea54d4bb65a16a9c88789369b3bb2b27699c9cac1e3f39a7e0d01b2e293"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/member_refs.py",
+      "sha256": "2b294a4f8cec26285b0939ae0f07a89773347f842730b9a89de06c6f5fb6db12"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261006/root_store_candidates.py",
+      "sha256": "6478805087fd2dfac3780a18e1177366fb5b373eda9b942cca72a130ad64d658"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}
