@@ -1,0 +1,981 @@
+{
+  "checked_at_utc": "2026-10-06T09:30:04.137900+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0xa773b0",
+      "end": "0xa77dde",
+      "role_inference": "Fresh payload zeroes descriptor before raw type setter; selected ordinary path",
+      "instruction_count": 555,
+      "disk_range_sha256": "aee5482db36b184473ee9eb5f3eff0199d0e0f1bc4702fbc1031a87de186b0fd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa786f0",
+      "end": "0xa78c67",
+      "role_inference": "Writes rawtype then creates descriptor",
+      "instruction_count": 286,
+      "disk_range_sha256": "29216a9b13e013bed287a6e59b27f9577f4300a6565e050e26b66051a9c4b4b3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7d810",
+      "end": "0xa7de45",
+      "role_inference": "Select descriptor only if absent",
+      "instruction_count": 308,
+      "disk_range_sha256": "b4f62d5510e6be542ecd9f151d1a91a97142083d84827977df5c56f4cd1d33a2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7e790",
+      "end": "0xa7e804",
+      "role_inference": "Default descriptor allocation/constructor",
+      "instruction_count": 33,
+      "disk_range_sha256": "287f4022f82fdc08ac5155192f32e4e2da4caa83e438617c348619401911e8e9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7e010",
+      "end": "0xa7e055",
+      "role_inference": "Move shared descriptor pair",
+      "instruction_count": 26,
+      "disk_range_sha256": "660f87aa31442d2b4c5f9ec518b8bfdf6970b05a74d47cfba5a5ed7fe853a069",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa84600",
+      "end": "0xa8472e",
+      "role_inference": "Base table9078b48 and descriptor+148 zero",
+      "instruction_count": 49,
+      "disk_range_sha256": "dfab71c31680f95a92fa6bbd886f56c899ce73c109c539afdc16350a542336af",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xaba730",
+      "end": "0xaba90a",
+      "role_inference": "newsapp first-endpoint predicate; raw1 only affects logging",
+      "instruction_count": 118,
+      "disk_range_sha256": "997cbaa5a191d173f1ce119824270c7f38421aedc1f1d7ce972a5a770372d93d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xbc4d90",
+      "end": "0xbc4e1e",
+      "role_inference": "Static newsapp string constructor",
+      "instruction_count": 30,
+      "disk_range_sha256": "8d92ecdc5687f91ff5918c0d9d94a45ec4dec44d48305f3dd80ab7eb1f9cb469",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa78d60",
+      "end": "0xa78ef0",
+      "role_inference": "Descriptor+10 processing then internal processing flag",
+      "instruction_count": 82,
+      "disk_range_sha256": "c29f0a9b7be9f9aeb8fa4f9d1f4d0ea9bbc43c028048a240f2835c99acc045cc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa78ef0",
+      "end": "0xa793df",
+      "role_inference": "Auxiliary helper requires descriptor+148 nonzero",
+      "instruction_count": 281,
+      "disk_range_sha256": "7acc9bf04473572e1ae191dea98394cd7c05b7011c239425304a4f3195f3b4c2",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xaba500",
+      "size": 26,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba500",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0xc]"
+        },
+        {
+          "at": "0xaba503",
+          "mnemonic": "cmp",
+          "operands": "eax, 3"
+        },
+        {
+          "at": "0xaba506",
+          "mnemonic": "sete",
+          "operands": "cl"
+        },
+        {
+          "at": "0xaba509",
+          "mnemonic": "cmp",
+          "operands": "eax, 0xd"
+        },
+        {
+          "at": "0xaba50c",
+          "mnemonic": "sete",
+          "operands": "dl"
+        },
+        {
+          "at": "0xaba50f",
+          "mnemonic": "or",
+          "operands": "dl, cl"
+        },
+        {
+          "at": "0xaba511",
+          "mnemonic": "cmp",
+          "operands": "eax, 0x27"
+        },
+        {
+          "at": "0xaba514",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba517",
+          "mnemonic": "or",
+          "operands": "al, dl"
+        },
+        {
+          "at": "0xaba519",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xabb320",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xabb320",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x31"
+        },
+        {
+          "at": "0xabb324",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xabb327",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba2f0",
+      "size": 21,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba2f0",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0xc]"
+        },
+        {
+          "at": "0xaba2f3",
+          "mnemonic": "lea",
+          "operands": "ecx, [rax - 0x2b]"
+        },
+        {
+          "at": "0xaba2f6",
+          "mnemonic": "cmp",
+          "operands": "ecx, 2"
+        },
+        {
+          "at": "0xaba2f9",
+          "mnemonic": "setb",
+          "operands": "cl"
+        },
+        {
+          "at": "0xaba2fc",
+          "mnemonic": "cmp",
+          "operands": "eax, 0x3e"
+        },
+        {
+          "at": "0xaba2ff",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba302",
+          "mnemonic": "or",
+          "operands": "al, cl"
+        },
+        {
+          "at": "0xaba304",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xab9f20",
+      "size": 11,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xab9f20",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x2710"
+        },
+        {
+          "at": "0xab9f27",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xab9f2a",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xabd900",
+      "size": 11,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xabd900",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x2712"
+        },
+        {
+          "at": "0xabd907",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xabd90a",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba350",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba350",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x22"
+        },
+        {
+          "at": "0xaba354",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba357",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba2c0",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba2c0",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x2f"
+        },
+        {
+          "at": "0xaba2c4",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba2c7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba720",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba720",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x32"
+        },
+        {
+          "at": "0xaba724",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba710",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba710",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x30"
+        },
+        {
+          "at": "0xaba714",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba717",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba980",
+      "size": 43,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba980",
+          "mnemonic": "mov",
+          "operands": "edx, dword ptr [rcx + 0xc]"
+        },
+        {
+          "at": "0xaba983",
+          "mnemonic": "lea",
+          "operands": "r8d, [rdx - 0x2a]"
+        },
+        {
+          "at": "0xaba987",
+          "mnemonic": "cmp",
+          "operands": "r8d, 0x19"
+        },
+        {
+          "at": "0xaba98b",
+          "mnemonic": "ja",
+          "operands": "0xaba99c"
+        },
+        {
+          "at": "0xaba98d",
+          "mnemonic": "mov",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0xaba98f",
+          "mnemonic": "mov",
+          "operands": "r9d, 0x3000001"
+        },
+        {
+          "at": "0xaba995",
+          "mnemonic": "bt",
+          "operands": "r9d, r8d"
+        },
+        {
+          "at": "0xaba999",
+          "mnemonic": "jae",
+          "operands": "0xaba99c"
+        },
+        {
+          "at": "0xaba99b",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "at": "0xaba99c",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0xaba99f",
+          "mnemonic": "xor",
+          "operands": "edx, 0x31"
+        },
+        {
+          "at": "0xaba9a2",
+          "mnemonic": "xor",
+          "operands": "eax, 0x32"
+        },
+        {
+          "at": "0xaba9a5",
+          "mnemonic": "or",
+          "operands": "eax, edx"
+        },
+        {
+          "at": "0xaba9a7",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba9aa",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xaba970",
+      "size": 8,
+      "anchor": "a7d810 direct type predicate",
+      "instructions": [
+        {
+          "at": "0xaba970",
+          "mnemonic": "cmp",
+          "operands": "dword ptr [rcx + 0xc], 0x23"
+        },
+        {
+          "at": "0xaba974",
+          "mnemonic": "sete",
+          "operands": "al"
+        },
+        {
+          "at": "0xaba977",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x73610",
+      "size": 3,
+      "anchor": "default descriptor table+10",
+      "instructions": [
+        {
+          "at": "0x73610",
+          "mnemonic": "mov",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0x73612",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0xa77996",
+      "kind": "call",
+      "to": "0xa786f0"
+    },
+    {
+      "at": "0xa77da7",
+      "kind": "call",
+      "to": "0xa78d60"
+    },
+    {
+      "at": "0xa77db6",
+      "kind": "call",
+      "to": "0xa78ef0"
+    },
+    {
+      "at": "0xa78b2b",
+      "kind": "call",
+      "to": "0xa7d810"
+    },
+    {
+      "at": "0xa7d839",
+      "kind": "call",
+      "to": "0xaba500"
+    },
+    {
+      "at": "0xa7d88e",
+      "kind": "call",
+      "to": "0xabb320"
+    },
+    {
+      "at": "0xa7d908",
+      "kind": "call",
+      "to": "0xaba2f0"
+    },
+    {
+      "at": "0xa7d956",
+      "kind": "call",
+      "to": "0xa84600"
+    },
+    {
+      "at": "0xa7daa1",
+      "kind": "call",
+      "to": "0xab9f20"
+    },
+    {
+      "at": "0xa7daad",
+      "kind": "call",
+      "to": "0xabd900"
+    },
+    {
+      "at": "0xa7dafb",
+      "kind": "call",
+      "to": "0xa84600"
+    },
+    {
+      "at": "0xa7dcdb",
+      "kind": "call",
+      "to": "0xaba350"
+    },
+    {
+      "at": "0xa7dcf6",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7dd0b",
+      "kind": "call",
+      "to": "0xaba2c0"
+    },
+    {
+      "at": "0xa7dd26",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7dd3b",
+      "kind": "call",
+      "to": "0xaba720"
+    },
+    {
+      "at": "0xa7dd56",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7dd6b",
+      "kind": "call",
+      "to": "0xaba710"
+    },
+    {
+      "at": "0xa7dd86",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7dd9b",
+      "kind": "call",
+      "to": "0xaba980"
+    },
+    {
+      "at": "0xa7ddb6",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7ddcb",
+      "kind": "call",
+      "to": "0xaba730"
+    },
+    {
+      "at": "0xa7dde6",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7ddfb",
+      "kind": "call",
+      "to": "0xaba970"
+    },
+    {
+      "at": "0xa7de16",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7de28",
+      "kind": "call",
+      "to": "0xa7e790"
+    },
+    {
+      "at": "0xa7de33",
+      "kind": "call",
+      "to": "0xa7e010"
+    },
+    {
+      "at": "0xa7e7e8",
+      "kind": "call",
+      "to": "0xa84600"
+    },
+    {
+      "at": "0xaba751",
+      "kind": "call",
+      "to": "0xbc4d90"
+    },
+    {
+      "at": "0xaba8a0",
+      "kind": "call",
+      "to": "0xbc4d90"
+    },
+    {
+      "at": "0xa78d7a",
+      "kind": "call",
+      "to": "0xa7d810"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9078b48",
+      "role_inference": "Default descriptor table installed by a84600",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x73610"
+        },
+        {
+          "offset": "0x18",
+          "target": "0x73610"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0xa77647",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rdi + 0x288], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fresh descriptor pair zero"
+    },
+    {
+      "at": "0xa77990",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "source rawtype"
+    },
+    {
+      "at": "0xa77996",
+      "mnemonic": "call",
+      "operands": "0xa786f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type setter"
+    },
+    {
+      "at": "0xa78b1a",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0xc], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write internal+c"
+    },
+    {
+      "at": "0xa78b2b",
+      "mnemonic": "call",
+      "operands": "0xa7d810",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor creation call"
+    },
+    {
+      "at": "0xa7d824",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rcx + 0x288], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "existing descriptor bypasses selection"
+    },
+    {
+      "at": "0xa7d839",
+      "mnemonic": "call",
+      "operands": "0xaba500",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first type predicate"
+    },
+    {
+      "at": "0xa7d88e",
+      "mnemonic": "call",
+      "operands": "0xabb320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type49 predicate"
+    },
+    {
+      "at": "0xa7d908",
+      "mnemonic": "call",
+      "operands": "0xaba2f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "video type predicate"
+    },
+    {
+      "at": "0xa7daa1",
+      "mnemonic": "call",
+      "operands": "0xab9f20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type10000"
+    },
+    {
+      "at": "0xa7daad",
+      "mnemonic": "call",
+      "operands": "0xabd900",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type10002"
+    },
+    {
+      "at": "0xa7dcd1",
+      "mnemonic": "lea",
+      "operands": "rdi, [rsi + 0x288]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destination pair internal+288"
+    },
+    {
+      "at": "0xa7dcdb",
+      "mnemonic": "call",
+      "operands": "0xaba350",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type34"
+    },
+    {
+      "at": "0xa7dd0b",
+      "mnemonic": "call",
+      "operands": "0xaba2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type47"
+    },
+    {
+      "at": "0xa7dd3b",
+      "mnemonic": "call",
+      "operands": "0xaba720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type50"
+    },
+    {
+      "at": "0xa7dd6b",
+      "mnemonic": "call",
+      "operands": "0xaba710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type48"
+    },
+    {
+      "at": "0xa7dd9b",
+      "mnemonic": "call",
+      "operands": "0xaba980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "42/66/67 or49-subtype50"
+    },
+    {
+      "at": "0xa7ddcb",
+      "mnemonic": "call",
+      "operands": "0xaba730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "newsapp first endpoint predicate"
+    },
+    {
+      "at": "0xa7dddb",
+      "mnemonic": "call",
+      "operands": "0xa7e610",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "newsapp specialized factory, not default"
+    },
+    {
+      "at": "0xa7ddfb",
+      "mnemonic": "call",
+      "operands": "0xaba970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "type35"
+    },
+    {
+      "at": "0xa7de09",
+      "mnemonic": "je",
+      "operands": "0xa7de28",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false enters default factory"
+    },
+    {
+      "at": "0xa7de28",
+      "mnemonic": "call",
+      "operands": "0xa7e790",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "default factory"
+    },
+    {
+      "at": "0xa7de33",
+      "mnemonic": "call",
+      "operands": "0xa7e010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "move pair into payload"
+    },
+    {
+      "at": "0xa7e7e8",
+      "mnemonic": "call",
+      "operands": "0xa84600",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "base descriptor constructor"
+    },
+    {
+      "at": "0xa7e019",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read source pair"
+    },
+    {
+      "at": "0xa7e026",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rcx], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "move pair to target"
+    },
+    {
+      "at": "0xa8461a",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x85f4527]",
+      "rip_targets": [
+        "0x9078b48"
+      ],
+      "public_static_strings": [],
+      "observation": "exact default descriptor table"
+    },
+    {
+      "at": "0xa84621",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "install table"
+    },
+    {
+      "at": "0xa84651",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x148], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor+148 zero"
+    },
+    {
+      "at": "0x73610",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "constanttrue no object writes"
+    },
+    {
+      "at": "0xbc4dec",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x83e6945]",
+      "rip_targets": [
+        "0x8fab738"
+      ],
+      "public_static_strings": [
+        "newsapp"
+      ],
+      "observation": "public literal newsapp source"
+    },
+    {
+      "at": "0xaba8d2",
+      "mnemonic": "sete",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "newsapp equality result"
+    },
+    {
+      "at": "0xa77da7",
+      "mnemonic": "call",
+      "operands": "0xa78d60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "post-conversion descriptor processing"
+    },
+    {
+      "at": "0xa78d91",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "virtual+10"
+    },
+    {
+      "at": "0xa78dc6",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x2c0], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "processing flag, not direction"
+    },
+    {
+      "at": "0xa77db6",
+      "mnemonic": "call",
+      "operands": "0xa78ef0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "auxiliary processing"
+    },
+    {
+      "at": "0xa78f0e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x288]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor prerequisite"
+    },
+    {
+      "at": "0xa78f1e",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 0x148], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "descriptor+148 prerequisite"
+    },
+    {
+      "at": "0xa78f26",
+      "mnemonic": "je",
+      "operands": "0xa793cd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero skips auxiliary field population"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "For the freshly initialized payload, rawtype1 and first endpoint different from literalnewsapp bypass the selected special type predicates and choosea7e790->a84600 default descriptor, installed at internal+288. Existing descriptors, other rawtypes andnewsapp are outside this conclusion.",
+    "Default table9078b48 slot+10 is73610: mov al,1;ret. Thus the virtual+10 call througha78d60 performs no object writes on this specific path. Its+2c0 flag remains a processing flag, not direction.",
+    "Base constructor sets descriptor+148 zero. The selected default no-op leaves it zero; a78ef0 then skips auxiliary population at its prerequisite. Auxiliary+258->+9 therefore cannot supply authenticatedis_self from this default conversion path.",
+    "The later actual batch consumer calls a7cd20 and follows additional ID/map/event branches. Those are not audited here, so this is not a final-object or direction invariant for the entire client.",
+    "newsapp is a public module literal used solely to identify a code branch; it is not a read of user chat content or contacts."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "394-inbound-field-provenance.json"
+  ],
+  "remaining": [
+    "Later consumer processing and final direction/event semantics",
+    "Special newsapp descriptor and other categories excluded",
+    "Account/target binding and baseline/history contract"
+  ]
+}

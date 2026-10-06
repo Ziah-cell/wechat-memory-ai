@@ -1,0 +1,1297 @@
+{
+  "checked_at_utc": "2026-10-06T09:30:04.137900+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Selected outer driver preserves owner for command processor and batch flush",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6840",
+      "end": "0x2ea8669",
+      "role_inference": "Prior393 command5 context; same manager argument",
+      "instruction_count": 1647,
+      "disk_range_sha256": "5c899759b800472143ab129bdc0dac80cd9f6dcdef8892ffd5bcfa71ec5e27e7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea9f60",
+      "end": "0x2eaa136",
+      "role_inference": "Prior393 parser dispatches through manager+1d0",
+      "instruction_count": 105,
+      "disk_range_sha256": "b5c40997318ab2641deb86f045e59dcfcd36a6ee36eef70037de3bacf8c0afc2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb4b10",
+      "end": "0x2eb4e7f",
+      "role_inference": "Ordinary type1 appends0x70-byte items through submanager+8 collection",
+      "instruction_count": 251,
+      "disk_range_sha256": "5d1e9cc4b73b757bb77f6050195fa8a360908087d15fe918a58314b826194602",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb8870",
+      "end": "0x2eb89c0",
+      "role_inference": "Flush obtains same submanager+8 collection and submanager+58 filter object",
+      "instruction_count": 76,
+      "disk_range_sha256": "d87fa8b601e44d513bc9af1ee9beca4ee4b898bd798235df8f8df5e338dc3363",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb4940",
+      "end": "0x2eb4b0d",
+      "role_inference": "Selected normal collection cleanup; not asynchronous drain proof",
+      "instruction_count": 122,
+      "disk_range_sha256": "8e38f69d278a16c9e90567853746e86822197eb2517911d23075f62cf3bfccd8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb8a20",
+      "end": "0x2eb95ed",
+      "role_inference": "Prepare extended vector, filter and batch selected items",
+      "instruction_count": 673,
+      "disk_range_sha256": "01ea60cd110c0a708f47c7372654e09df15b175f1f04af48a0108227c51fe919",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb9af0",
+      "end": "0x2ebb7a1",
+      "role_inference": "Selected two-mode0x70-to0x78 preparation; additional time adjustment branches remain unaudited",
+      "instruction_count": 1567,
+      "disk_range_sha256": "3573735b6cf0b473d7e60220f661225331ffc1b911409d76db5d96c0f3c3033d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7bbd0",
+      "end": "0xa7be2b",
+      "role_inference": "Copy AddMsg and initialize extension+70 from field9 or fallback low32 value times1000",
+      "instruction_count": 134,
+      "disk_range_sha256": "1060bb8dd6e9fc64960682c203354d405a1020234f42c237dcd04bb336c70fd9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30ccd0",
+      "end": "0x30cd27",
+      "role_inference": "Fallback numeric clock-shaped value; anchor setters and clock domain unbound",
+      "instruction_count": 31,
+      "disk_range_sha256": "584ec95a2d96332fea4b7617367a4cee8fad9b7098e975f4fd2ffa2f226733bb",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb3780",
+      "end": "0x2eb3f09",
+      "role_inference": "Filter boolean; selected initial threshold branch, other maps unclassified",
+      "instruction_count": 453,
+      "disk_range_sha256": "2328114273129a6caf55407fa182cd183823b4d159aba4f09b4812051fd2c8ee",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ebd6a0",
+      "end": "0x2ebd7b3",
+      "role_inference": "Selected batch handoff and normal0x78 cleanup",
+      "instruction_count": 90,
+      "disk_range_sha256": "6cd3c23c3fd6f813aa4238934517d699eeca6f433b58c60a726c03e32dc54524",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17cb2c0",
+      "end": "0x17cd051",
+      "role_inference": "Actual0x78 batch consumer; selected entry conversion only, later event path unclosed",
+      "instruction_count": 1674,
+      "disk_range_sha256": "f91393bc504d06eae2c08e0a163d8fc220db409e9aa2898198cb848e55867a91",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa794a0",
+      "end": "0xa794c6",
+      "role_inference": "a773b0 conversion followed by extension+70 overwrite of internal+150",
+      "instruction_count": 13,
+      "disk_range_sha256": "0d2d84692f27a398c5b594ea97c6d10e59b9e9535611c9aba4b953c07f6624be",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x45d10",
+      "size": 8,
+      "anchor": "called by a7bbd0 fallback",
+      "instructions": [
+        {
+          "at": "0x45d10",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rip + 0xbb1bf79]"
+        },
+        {
+          "at": "0x45d17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x4ff70",
+      "size": 12,
+      "anchor": "a7bbd0 fallback direct call",
+      "instructions": [
+        {
+          "at": "0x4ff70",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x2e8]"
+        },
+        {
+          "at": "0x4ff77",
+          "mnemonic": "jmp",
+          "operands": "0x30ccd0"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2ea2f9a",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea33fd",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea3414",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea3ffa",
+      "kind": "call",
+      "to": "0x2ea6840"
+    },
+    {
+      "at": "0x2ea470b",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea5248",
+      "kind": "call",
+      "to": "0x2eb8870"
+    },
+    {
+      "at": "0x2ea52a1",
+      "kind": "call",
+      "to": "0x2eb4940"
+    },
+    {
+      "at": "0x2ea6e0a",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea6e19",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea6e38",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ea7a77",
+      "kind": "call",
+      "to": "0x2ea9f60"
+    },
+    {
+      "at": "0x2ea7c7f",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2eaa008",
+      "kind": "call",
+      "to": "0x2eb4b10"
+    },
+    {
+      "at": "0x2eb88ab",
+      "kind": "jmp",
+      "to": "0x2eb8a20"
+    },
+    {
+      "at": "0x2eb8b72",
+      "kind": "call",
+      "to": "0x2eb9af0"
+    },
+    {
+      "at": "0x2eb90be",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2eb90e3",
+      "kind": "call",
+      "to": "0x2eb3780"
+    },
+    {
+      "at": "0x2eb9347",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2eb93c9",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2eb9e50",
+      "kind": "call",
+      "to": "0xa7bbd0"
+    },
+    {
+      "at": "0x2ebadf1",
+      "kind": "call",
+      "to": "0xa7bbd0"
+    },
+    {
+      "at": "0xa7bdf4",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0xa7bdfd",
+      "kind": "call",
+      "to": "0x4ff70"
+    },
+    {
+      "at": "0x2ebd702",
+      "kind": "call",
+      "to": "0x17cb2c0"
+    },
+    {
+      "at": "0x17cb38d",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x17cb46f",
+      "kind": "call",
+      "to": "0xa794a0"
+    },
+    {
+      "at": "0x17cbd8e",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x17ccaa4",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x4ff77",
+      "kind": "jmp",
+      "to": "0x30ccd0"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x2ea2f97",
+      "mnemonic": "mov",
+      "operands": "r15, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save driver owner"
+    },
+    {
+      "at": "0x2ea3fe6",
+      "mnemonic": "mov",
+      "operands": "rcx, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same owner argument to command processor"
+    },
+    {
+      "at": "0x2ea3ff0",
+      "mnemonic": "mov",
+      "operands": "r8, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "outer response argument"
+    },
+    {
+      "at": "0x2ea3ffa",
+      "mnemonic": "call",
+      "operands": "0x2ea6840",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "command processor call"
+    },
+    {
+      "at": "0x2ea699d",
+      "mnemonic": "mov",
+      "operands": "r12, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "processor manager saved"
+    },
+    {
+      "at": "0x2ea7548",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x138], r12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve manager"
+    },
+    {
+      "at": "0x2ea7a77",
+      "mnemonic": "call",
+      "operands": "0x2ea9f60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "prior393 command5 dispatch"
+    },
+    {
+      "at": "0x2ea9ff4",
+      "mnemonic": "add",
+      "operands": "rdi, 0x1d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "parser dispatch submanager+1d0"
+    },
+    {
+      "at": "0x2eaa008",
+      "mnemonic": "call",
+      "operands": "0x2eb4b10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "dispatch after successful parse"
+    },
+    {
+      "at": "0x2eb4b7a",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "append obtains submanager+8 collection"
+    },
+    {
+      "at": "0x2eb4b9b",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy append"
+    },
+    {
+      "at": "0x2eb4ba0",
+      "mnemonic": "add",
+      "operands": "qword ptr [r14 + 8], 0x70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original stride0x70"
+    },
+    {
+      "at": "0x2ea523a",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "mode compares numeric19, enum meaning unbound"
+    },
+    {
+      "at": "0x2ea523e",
+      "mnemonic": "sete",
+      "operands": "dl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "mode boolean"
+    },
+    {
+      "at": "0x2ea5241",
+      "mnemonic": "lea",
+      "operands": "rcx, [r15 + 0x1d0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "flush same owner+1d0"
+    },
+    {
+      "at": "0x2ea5248",
+      "mnemonic": "call",
+      "operands": "0x2eb8870",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "flush call"
+    },
+    {
+      "at": "0x2ea524e",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "flush boolean tested"
+    },
+    {
+      "at": "0x2ea529a",
+      "mnemonic": "lea",
+      "operands": "rcx, [r15 + 0x1d0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "cleanup same submanager"
+    },
+    {
+      "at": "0x2ea52a1",
+      "mnemonic": "call",
+      "operands": "0x2eb4940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal cleanup call"
+    },
+    {
+      "at": "0x2eb888c",
+      "mnemonic": "mov",
+      "operands": "r8d, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "forward mode"
+    },
+    {
+      "at": "0x2eb888f",
+      "mnemonic": "mov",
+      "operands": "rdx, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "preserve submanager for filter pointer"
+    },
+    {
+      "at": "0x2eb8892",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same collection+8"
+    },
+    {
+      "at": "0x2eb889b",
+      "mnemonic": "add",
+      "operands": "rdx, 0x58",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "filter pointer submanager+58"
+    },
+    {
+      "at": "0x2eb889f",
+      "mnemonic": "xor",
+      "operands": "r9d, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fourth argument zero"
+    },
+    {
+      "at": "0x2eb88ab",
+      "mnemonic": "jmp",
+      "operands": "0x2eb8a20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "tailcall processor"
+    },
+    {
+      "at": "0x2eb4a46",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "normal path resets original end to begin"
+    },
+    {
+      "at": "0x2eb8a5a",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original collection saved"
+    },
+    {
+      "at": "0x2eb8a98",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x2d8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save filter pointer"
+    },
+    {
+      "at": "0x2eb8b60",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0x2e0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "local output vector"
+    },
+    {
+      "at": "0x2eb8b67",
+      "mnemonic": "mov",
+      "operands": "rdx, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original collection argument"
+    },
+    {
+      "at": "0x2eb8b72",
+      "mnemonic": "call",
+      "operands": "0x2eb9af0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "prepare extended elements"
+    },
+    {
+      "at": "0x2eb8b78",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x2e0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extended begin"
+    },
+    {
+      "at": "0x2eb8b7f",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x2e8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extended end"
+    },
+    {
+      "at": "0x2eb8b86",
+      "mnemonic": "lea",
+      "operands": "r8, [rip - 0x58fd]",
+      "rip_targets": [
+        "0x2eb3290"
+      ],
+      "public_static_strings": [],
+      "observation": "comparator pointer; ordering not certified"
+    },
+    {
+      "at": "0x2eb8b8d",
+      "mnemonic": "call",
+      "operands": "0x2ebd520",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "range helper call; internals unreviewed"
+    },
+    {
+      "at": "0x2eb8c10",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rbp + 0x2d8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reload filter pointer"
+    },
+    {
+      "at": "0x2eb8c2f",
+      "mnemonic": "add",
+      "operands": "rdi, 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extended stride0x78"
+    },
+    {
+      "at": "0x2eb8f40",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x318]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "current element"
+    },
+    {
+      "at": "0x2eb8f47",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdx + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw type"
+    },
+    {
+      "at": "0x2eb8f4a",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x2712",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special10002"
+    },
+    {
+      "at": "0x2eb8f55",
+      "mnemonic": "cmp",
+      "operands": "eax, 0x33",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "special51"
+    },
+    {
+      "at": "0x2eb8f58",
+      "mnemonic": "jne",
+      "operands": "0x2eb90e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ordinary1 proceeds to filter"
+    },
+    {
+      "at": "0x2eb90e0",
+      "mnemonic": "mov",
+      "operands": "rcx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same filter object"
+    },
+    {
+      "at": "0x2eb90e3",
+      "mnemonic": "call",
+      "operands": "0x2eb3780",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "filter call"
+    },
+    {
+      "at": "0x2eb90eb",
+      "mnemonic": "jne",
+      "operands": "0x2eb9360",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "true skips selected append"
+    },
+    {
+      "at": "0x2eb9108",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x318]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "append source element"
+    },
+    {
+      "at": "0x2eb910f",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy AddMsg part"
+    },
+    {
+      "at": "0x2eb911c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read extra+70"
+    },
+    {
+      "at": "0x2eb9120",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy extra+70"
+    },
+    {
+      "at": "0x2eb9124",
+      "mnemonic": "add",
+      "operands": "qword ptr [rbp + 0x308], 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "batch stride0x78"
+    },
+    {
+      "at": "0x2eb93ab",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0x300]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "supply local batch"
+    },
+    {
+      "at": "0x2eb93c9",
+      "mnemonic": "call",
+      "operands": "0x2ebd6a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "final batch handoff"
+    },
+    {
+      "at": "0x2eb9b24",
+      "mnemonic": "mov",
+      "operands": "ebx, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save preparation mode"
+    },
+    {
+      "at": "0x2eb9b27",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save original collection"
+    },
+    {
+      "at": "0x2eb9b2a",
+      "mnemonic": "mov",
+      "operands": "r14, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save output vector"
+    },
+    {
+      "at": "0x2eb9d4f",
+      "mnemonic": "test",
+      "operands": "bl, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "test preparation mode"
+    },
+    {
+      "at": "0x2eb9d51",
+      "mnemonic": "je",
+      "operands": "0x2ebad4a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-mode branch"
+    },
+    {
+      "at": "0x2eb9df7",
+      "mnemonic": "add",
+      "operands": "rdi, 0x70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonzero mode source stride0x70"
+    },
+    {
+      "at": "0x2eb9e50",
+      "mnemonic": "call",
+      "operands": "0xa7bbd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "construct extended local"
+    },
+    {
+      "at": "0x2eb9e77",
+      "mnemonic": "call",
+      "operands": "0x2ebc6c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "candidate duplicate filter"
+    },
+    {
+      "at": "0x2eb9e7f",
+      "mnemonic": "je",
+      "operands": "0x2eb9fb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false continues; true skips selected append"
+    },
+    {
+      "at": "0x2eba45f",
+      "mnemonic": "call",
+      "operands": "0x2ad2de0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "additional adjustment helper2ad2de0"
+    },
+    {
+      "at": "0x2eba465",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x310], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overwrites local extension+70; branch semantics unbound"
+    },
+    {
+      "at": "0x2eba6cb",
+      "mnemonic": "call",
+      "operands": "0x2ad2760",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "additional adjustment helper2ad2760"
+    },
+    {
+      "at": "0x2eba6d1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x310], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overwrites local extension+70; do not assert initializer survives"
+    },
+    {
+      "at": "0x2ebac89",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected nonzero-mode append copies AddMsg"
+    },
+    {
+      "at": "0x2ebac8f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x310]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load possibly adjusted extension"
+    },
+    {
+      "at": "0x2ebac96",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write extension+70"
+    },
+    {
+      "at": "0x2ebaca1",
+      "mnemonic": "add",
+      "operands": "qword ptr [rax + 8], 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "output stride0x78"
+    },
+    {
+      "at": "0x2ebad94",
+      "mnemonic": "add",
+      "operands": "rdx, 0x70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-mode source stride0x70"
+    },
+    {
+      "at": "0x2ebadf1",
+      "mnemonic": "call",
+      "operands": "0xa7bbd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-mode extension constructor"
+    },
+    {
+      "at": "0x2ebae17",
+      "mnemonic": "call",
+      "operands": "0x2ebc6c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-mode duplicate filter"
+    },
+    {
+      "at": "0x2ebae1f",
+      "mnemonic": "je",
+      "operands": "0x2ebaf50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "false continues; true skips"
+    },
+    {
+      "at": "0x2ebb6ab",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "selected zero-mode append"
+    },
+    {
+      "at": "0x2ebb6b1",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x310]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "load extension"
+    },
+    {
+      "at": "0x2ebb6b8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write extension"
+    },
+    {
+      "at": "0x2ebb6c3",
+      "mnemonic": "add",
+      "operands": "qword ptr [rax + 8], 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "output stride0x78"
+    },
+    {
+      "at": "0xa7bbf3",
+      "mnemonic": "call",
+      "operands": "0x1090d70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "copy original AddMsg"
+    },
+    {
+      "at": "0xa7bbf8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x70], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "initialize extension zero"
+    },
+    {
+      "at": "0xa7bc00",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdi + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "original field9 DWORD"
+    },
+    {
+      "at": "0xa7bc05",
+      "mnemonic": "jne",
+      "operands": "0xa7be0a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nonzero bypasses fallback"
+    },
+    {
+      "at": "0xa7bdf4",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root getter on zero path"
+    },
+    {
+      "at": "0xa7bdfd",
+      "mnemonic": "call",
+      "operands": "0x4ff70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fallback helper"
+    },
+    {
+      "at": "0xa7be0a",
+      "mnemonic": "mov",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-extend low32"
+    },
+    {
+      "at": "0xa7be0c",
+      "mnemonic": "imul",
+      "operands": "rax, rax, 0x3e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "multiply1000"
+    },
+    {
+      "at": "0xa7be13",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "write extension only, not original field9"
+    },
+    {
+      "at": "0x4ff70",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x2e8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root member+2e8 clock-shaped object"
+    },
+    {
+      "at": "0x4ff77",
+      "mnemonic": "jmp",
+      "operands": "0x30ccd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "numeric helper tailcall"
+    },
+    {
+      "at": "0x30ccd9",
+      "mnemonic": "call",
+      "operands": "0xd852f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "first clock helper"
+    },
+    {
+      "at": "0x30ccf8",
+      "mnemonic": "sub",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subtract saved anchor"
+    },
+    {
+      "at": "0x30ccfb",
+      "mnemonic": "add",
+      "operands": "rax, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "add saved offset"
+    },
+    {
+      "at": "0x30cd09",
+      "mnemonic": "call",
+      "operands": "0x76bc7c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "fallback helper"
+    },
+    {
+      "at": "0x30cd1d",
+      "mnemonic": "sub",
+      "operands": "rax, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "subtract bounded adjustment"
+    },
+    {
+      "at": "0x2eb37a6",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rcx + 0x148], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "filter activation flag+148 must equal1"
+    },
+    {
+      "at": "0x2eb37ad",
+      "mnemonic": "jne",
+      "operands": "0x2eb389e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "otherwise returnfalse"
+    },
+    {
+      "at": "0x2eb37b6",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "threshold DWORD"
+    },
+    {
+      "at": "0x2eb37ba",
+      "mnemonic": "je",
+      "operands": "0x2eb38a5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero bypasses this threshold rejection"
+    },
+    {
+      "at": "0x2eb37c0",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rdx + 0x48], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "compare original field9, not extension+70"
+    },
+    {
+      "at": "0x2eb37c3",
+      "mnemonic": "ja",
+      "operands": "0x2eb38a5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "unsigned greater bypasses threshold rejection"
+    },
+    {
+      "at": "0x2eb37d3",
+      "mnemonic": "mov",
+      "operands": "bl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "threshold rejection true"
+    },
+    {
+      "at": "0x2eb389e",
+      "mnemonic": "xor",
+      "operands": "ebx, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "inactive false"
+    },
+    {
+      "at": "0x2eb3de7",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "filter boolean return"
+    },
+    {
+      "at": "0x2ebd6f5",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp - 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "manager candidate"
+    },
+    {
+      "at": "0x2ebd6f9",
+      "mnemonic": "mov",
+      "operands": "rdx, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same batch argument"
+    },
+    {
+      "at": "0x2ebd702",
+      "mnemonic": "call",
+      "operands": "0x17cb2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "actual consumer call"
+    },
+    {
+      "at": "0x2ebd708",
+      "mnemonic": "and",
+      "operands": "byte ptr [rdi], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "aggregate boolean AND"
+    },
+    {
+      "at": "0x2ebd798",
+      "mnemonic": "add",
+      "operands": "rdi, 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "destroy stride0x78"
+    },
+    {
+      "at": "0x2ebd7a4",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "reset local batch end"
+    },
+    {
+      "at": "0x17cb2fe",
+      "mnemonic": "mov",
+      "operands": "r14, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "save batch pointer"
+    },
+    {
+      "at": "0x17cb39d",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [r14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "batch begin"
+    },
+    {
+      "at": "0x17cb3a0",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "batch end"
+    },
+    {
+      "at": "0x17cb43f",
+      "mnemonic": "add",
+      "operands": "rdi, 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "consumer stride0x78"
+    },
+    {
+      "at": "0x17cb466",
+      "mnemonic": "mov",
+      "operands": "rcx, r12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "internal destination"
+    },
+    {
+      "at": "0x17cb46c",
+      "mnemonic": "mov",
+      "operands": "rdx, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "same element source"
+    },
+    {
+      "at": "0x17cb46f",
+      "mnemonic": "call",
+      "operands": "0xa794a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "extended converter call"
+    },
+    {
+      "at": "0x17cb47a",
+      "mnemonic": "call",
+      "operands": "0xa7cd20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "later a7cd20 processing untraced"
+    },
+    {
+      "at": "0x17cb480",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x188]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read internal+148 candidate"
+    },
+    {
+      "at": "0x17cb48e",
+      "mnemonic": "test",
+      "operands": "rax, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "zero-ID path diverges; later semantics unbound"
+    },
+    {
+      "at": "0xa794ac",
+      "mnemonic": "call",
+      "operands": "0xa773b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "prior394 converter"
+    },
+    {
+      "at": "0xa794b1",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "read extension+70"
+    },
+    {
+      "at": "0xa794b5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x150], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "overwrite internal+150 after converter"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The same owner+1d0 submanager and its+8 collection connect prior393 ordinary1 append to2eb8870/2eb8a20. Selected preparation emits0x78 (120)-byte elements from0x70 (112)-byte AddMsg inputs; accepted batches reach2ebd6a0->17cb2c0->a794a0->a773b0. This is a conditional static path, not every-item delivery or runtime reachability.",
+    "17d4b60 from394 is a separate0x70 consumer and is not used to infer this queue identity. Both preparation modes call2ebc6c0; ordinary1 also calls2eb3780 and true bypasses batch append. Other preparation branches and later consumer processing remain unaudited.",
+    "a7bbd0 initially computes extension+70 as zero-extended field9 or, when zero, the low32 of4ff70 output, times1000. This does not rewrite field9.2eb9af0 includes additional writes from2ad2de0/2ad2760, so initializer equality is NOT a final batch invariant.",
+    "a794a0 overwrites internal+150 from the actual extension+70 aftera773b0. Prior394 field9*1000 describes the inner assignment point only. A nonzero final time-shaped value does not prove source time existed, recent arrival, monotonicity or trustworthy clock.",
+    "Selected2eb3780 threshold reject is active_flag==1 and threshold!=0 and unsigned field9<=threshold. It uses original field9, not adjusted extension. Its state initialization, later map branches and history/newness policy are not yet identified.",
+    "Driver mode comes from a comparison with numeric19; the enum is unbound. Normal cleanup after flush and aggregate boolean AND are not proof of asynchronous completion, exactly-once delivery or event lifetime safety."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "393-inbound-addmsg-dispatch.json",
+    "394-inbound-field-provenance.json"
+  ],
+  "remaining": [
+    "Preparation adjustments2ad2de0/2ad2760 and comparator ordering",
+    "Filter activation/threshold/map producers and reset boundaries",
+    "Later17cb2c0/a7cd20 final direction and event dispatch",
+    "Outer response/phase and first-batch/history/reconnect contract"
+  ]
+}

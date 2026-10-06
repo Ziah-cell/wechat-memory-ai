@@ -1,0 +1,572 @@
+{
+  "checked_at_utc": "2026-10-06T09:30:04.137900+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file inbound contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ebc430",
+      "end": "0x2ebc634",
+      "role_inference": "Select one endpoint string using2ebd950",
+      "instruction_count": 140,
+      "disk_range_sha256": "dd23fe2974dda4a3097d7a5e422fafe051012e581b47140b518ae129c4a32ac5",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ebd950",
+      "end": "0x2ebdb2e",
+      "role_inference": "Nonempty field2 equals root virtual+20, excluding10000",
+      "instruction_count": 137,
+      "disk_range_sha256": "5be0d42469fef3755a1b646d0837cd25680429b500f6792af22df15942cafd9c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ebc6c0",
+      "end": "0x2ebc9b2",
+      "role_inference": "Ordinary1 lookup/update candidate duplicate filter",
+      "instruction_count": 165,
+      "disk_range_sha256": "be390dc3ca62bb4943fdff2287618950aed3c830fe271d942086f2a9abe6c1c7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb40d0",
+      "end": "0x2eb425e",
+      "role_inference": "String-key group plus QWORD-key lookup; exact scope unbound",
+      "instruction_count": 109,
+      "disk_range_sha256": "1628d39a8ffab535f417b4b70736be9f2d386a8a4acfea45d9588bca4cbcf865",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb4260",
+      "end": "0x2eb43a6",
+      "role_inference": "String-key group update helper; generic container lifecycle unaudited",
+      "instruction_count": 89,
+      "disk_range_sha256": "a6369395be8726201d2db23126d7e38fa95b4106641ddec2534a775607ca79fa",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4f3c0",
+      "end": "0x4f44b",
+      "role_inference": "Root virtual+20 delegates to shared object virtual+18 or empty string",
+      "instruction_count": 49,
+      "disk_range_sha256": "dab46a1dee22a0326c378169e74b9b2697dce69ca4cd4f8e9c8e9011df7839df",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x22bc10",
+      "end": "0x22bc9a",
+      "role_inference": "Lazy static empty-string fallback",
+      "instruction_count": 25,
+      "disk_range_sha256": "f7e2633ab8fd34b911c8380515395dc33c66a54550b5c06980fb53279c1471ab",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x45d10",
+      "size": 8,
+      "anchor": "direct root getter call2ebd97c",
+      "instructions": [
+        {
+          "at": "0x45d10",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rip + 0xbb1bf79]"
+        },
+        {
+          "at": "0x45d17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x469a0",
+      "size": 46,
+      "anchor": "root table+60; both return branches included",
+      "instructions": [
+        {
+          "at": "0x469a0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x469a3",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x70]"
+        },
+        {
+          "at": "0x469a7",
+          "mnemonic": "test",
+          "operands": "rdx, rdx"
+        },
+        {
+          "at": "0x469aa",
+          "mnemonic": "je",
+          "operands": "0x469c0"
+        },
+        {
+          "at": "0x469ac",
+          "mnemonic": "lock inc",
+          "operands": "dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x469b0",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x70]"
+        },
+        {
+          "at": "0x469b4",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x68]"
+        },
+        {
+          "at": "0x469b8",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x469bb",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x469bf",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "at": "0x469c0",
+          "mnemonic": "xor",
+          "operands": "edx, edx"
+        },
+        {
+          "at": "0x469c2",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x68]"
+        },
+        {
+          "at": "0x469c6",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x469c9",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x469cd",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2ebc4ba",
+      "kind": "call",
+      "to": "0x2ebd950"
+    },
+    {
+      "at": "0x2ebd97c",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x2ebc700",
+      "kind": "call",
+      "to": "0x2ebc430"
+    },
+    {
+      "at": "0x2ebc716",
+      "kind": "call",
+      "to": "0x2eb40d0"
+    },
+    {
+      "at": "0x2ebc955",
+      "kind": "call",
+      "to": "0x2eb4260"
+    },
+    {
+      "at": "0x4f43c",
+      "kind": "call",
+      "to": "0x22bc10"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8f294e8",
+      "role_inference": "Prior355 installed root table; actual active instance not read",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x4f3c0"
+        },
+        {
+          "offset": "0x60",
+          "target": "0x469a0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2ebc4ba",
+      "mnemonic": "call",
+      "operands": "0x2ebd950",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "endpoint-selection predicate"
+    },
+    {
+      "at": "0x2ebc4c2",
+      "mnemonic": "cmovne",
+      "operands": "rdi, r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "true chooses field3; otherwisefield2"
+    },
+    {
+      "at": "0x2ebd969",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0x14], 0x2710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "raw10000 exclusion"
+    },
+    {
+      "at": "0x2ebd97c",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root getter"
+    },
+    {
+      "at": "0x2ebd987",
+      "mnemonic": "call",
+      "operands": "qword ptr [rdx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root virtual+20 string"
+    },
+    {
+      "at": "0x2ebda42",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "nested field2"
+    },
+    {
+      "at": "0x2ebda56",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "inner string"
+    },
+    {
+      "at": "0x2ebda71",
+      "mnemonic": "test",
+      "operands": "rax, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "field2 nonempty prerequisite"
+    },
+    {
+      "at": "0x2ebda76",
+      "mnemonic": "cmp",
+      "operands": "rax, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "length comparison"
+    },
+    {
+      "at": "0x2ebda9b",
+      "mnemonic": "call",
+      "operands": "0x76edb90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "byte comparison"
+    },
+    {
+      "at": "0x2ebdaa2",
+      "mnemonic": "sete",
+      "operands": "bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "equal predicate"
+    },
+    {
+      "at": "0x2ebc700",
+      "mnemonic": "call",
+      "operands": "0x2ebc430",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "obtain selected endpoint key"
+    },
+    {
+      "at": "0x2ebc705",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbx + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ID candidate field12 QWORD+50"
+    },
+    {
+      "at": "0x2ebc709",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8cd0550]",
+      "rip_targets": [
+        "0xbb8cc60"
+      ],
+      "public_static_strings": [],
+      "observation": "global cache candidate address"
+    },
+    {
+      "at": "0x2ebc713",
+      "mnemonic": "mov",
+      "operands": "r8, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ID argument"
+    },
+    {
+      "at": "0x2ebc716",
+      "mnemonic": "call",
+      "operands": "0x2eb40d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "lookup helper"
+    },
+    {
+      "at": "0x2ebc71e",
+      "mnemonic": "je",
+      "operands": "0x2ebc944",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "miss takes update path"
+    },
+    {
+      "at": "0x2ebc724",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ordinary hit true"
+    },
+    {
+      "at": "0x2ebc727",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rbx + 0x14], 0x2710",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "10000 has special path"
+    },
+    {
+      "at": "0x2ebc72e",
+      "mnemonic": "jne",
+      "operands": "0x2ebc95d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "other types including1 bypass special path"
+    },
+    {
+      "at": "0x2ebc944",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8cd0315]",
+      "rip_targets": [
+        "0xbb8cc60"
+      ],
+      "public_static_strings": [],
+      "observation": "same global address"
+    },
+    {
+      "at": "0x2ebc955",
+      "mnemonic": "call",
+      "operands": "0x2eb4260",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "update on miss"
+    },
+    {
+      "at": "0x2ebc95b",
+      "mnemonic": "xor",
+      "operands": "edi, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "miss false"
+    },
+    {
+      "at": "0x2eb41f8",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [r11 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "QWORD key comparison"
+    },
+    {
+      "at": "0x2eb4219",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [r11 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "QWORD key comparison"
+    },
+    {
+      "at": "0x2eb422b",
+      "mnemonic": "setne",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "found result"
+    },
+    {
+      "at": "0x45d10",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rip + 0xbb1bf79]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "global root pointer address, no live read"
+    },
+    {
+      "at": "0x4f3d5",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xbb128b4]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "same globalroot"
+    },
+    {
+      "at": "0x4f3e3",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "virtual+60 obtains member shared pair"
+    },
+    {
+      "at": "0x4f3e6",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbp - 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returned member object"
+    },
+    {
+      "at": "0x4f3ea",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp - 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "returned control"
+    },
+    {
+      "at": "0x4f3f9",
+      "mnemonic": "je",
+      "operands": "0x4f40c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing object path"
+    },
+    {
+      "at": "0x4f401",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "object virtual+18 returns string reference, implementation unbound"
+    },
+    {
+      "at": "0x4f411",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "release local shared control"
+    },
+    {
+      "at": "0x4f43c",
+      "mnemonic": "call",
+      "operands": "0x22bc10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "missing object empty fallback"
+    },
+    {
+      "at": "0x469a3",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rcx + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root shared control+70"
+    },
+    {
+      "at": "0x469ac",
+      "mnemonic": "lock inc",
+      "operands": "dword ptr [rdx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "retain control when nonnull"
+    },
+    {
+      "at": "0x469b4",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "root object+68"
+    },
+    {
+      "at": "0x469b8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return object"
+    },
+    {
+      "at": "0x469bb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "return control"
+    },
+    {
+      "at": "0x469c2",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "null-control branch still returns member+68"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "For rawtype!=10000,2ebd950 is true when field2 is nonempty and byte-equal to the root virtual+20 string.2ebc430 then selects field3; otherwise it selects field2. This is a routing/key predicate, not authenticated sender or current-account identity.",
+    "With prior355 root table installation, slot+20 resolves4f3c0; slot+60 resolves469a0 which copies root+68/+70 shared pair.4f3c0 calls that object virtual+18; missing object returns22bc10 empty string. Actual root+68 producer, concrete member table, account meaning and lifetime/change boundaries remain missing.",
+    "Ordinary1 duplicate candidate uses the selected endpoint string and field12 QWORD at globalbb8cc60. A lookup hit returns true and preparation skips; a miss calls update helper then returns false. Type10000 has additional branches, not generalized here.",
+    "No selected nonzero-ID guard precedes lookup; field12 optional/default-zero fact from393 still applies. Generic map insertion, eviction, persistence, account scoping and reset/reconnect behavior are unaudited. This is not an adapter deduplication or exactly-once guarantee.",
+    "No real account strings, contact IDs, keys, database contents or process memory were read. Empty fallback must remain a missing-identity condition rather than authentication."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "355-send-service-task-return.json",
+    "393-inbound-addmsg-dispatch.json"
+  ],
+  "remaining": [
+    "Root+68 producer and member virtual+18 implementation",
+    "Account/target identity and returned string lifetime",
+    "Cache/reset/account/reconnect scope and zero-ID behavior",
+    "History/first-batch boundaries"
+  ]
+}

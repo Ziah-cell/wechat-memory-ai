@@ -1,0 +1,196 @@
+{
+  "checked_at_utc": "2026-10-06T09:35:40.023280+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 31,
+  "unique_anchored_leaves_checked": 15,
+  "unique_direct_edges_with_raw_rel32_math": 66,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 201,
+  "rip_references_with_raw_displacement_math": 7,
+  "branch_field_assertions": 115,
+  "explicit_table_targets_checked": 4,
+  "specific_rip_targets_checked": 7,
+  "time_initializer_projections": [
+    {
+      "field9": 2,
+      "synthetic_fallback": 77,
+      "initial_extension": 2000
+    },
+    {
+      "field9": 0,
+      "synthetic_fallback": 123,
+      "initial_extension": 123000
+    },
+    {
+      "field9": 0,
+      "synthetic_fallback": 0,
+      "initial_extension": 0
+    },
+    {
+      "field9": 0,
+      "synthetic_fallback": 4294967297,
+      "initial_extension": 1000
+    },
+    {
+      "field9": 4294967295,
+      "synthetic_fallback": 0,
+      "initial_extension": 4294967295000
+    }
+  ],
+  "threshold_branch_projections": [
+    {
+      "flag": 0,
+      "threshold": 100,
+      "field9": 99,
+      "selected_threshold_reject": false
+    },
+    {
+      "flag": 1,
+      "threshold": 0,
+      "field9": 0,
+      "selected_threshold_reject": false
+    },
+    {
+      "flag": 1,
+      "threshold": 100,
+      "field9": 99,
+      "selected_threshold_reject": true
+    },
+    {
+      "flag": 1,
+      "threshold": 100,
+      "field9": 100,
+      "selected_threshold_reject": true
+    },
+    {
+      "flag": 1,
+      "threshold": 100,
+      "field9": 101,
+      "selected_threshold_reject": false
+    },
+    {
+      "flag": 1,
+      "threshold": 100,
+      "field9": 4294967295,
+      "selected_threshold_reject": false
+    },
+    {
+      "flag": 2,
+      "threshold": 100,
+      "field9": 0,
+      "selected_threshold_reject": false
+    }
+  ],
+  "endpoint_key_projections": [
+    {
+      "rawtype": 1,
+      "synthetic_field2": "SYNTHETIC_A",
+      "synthetic_root": "SYNTHETIC_A",
+      "selected_key": "field3"
+    },
+    {
+      "rawtype": 1,
+      "synthetic_field2": "SYNTHETIC_A",
+      "synthetic_root": "SYNTHETIC_B",
+      "selected_key": "field2"
+    },
+    {
+      "rawtype": 1,
+      "synthetic_field2": "",
+      "synthetic_root": "",
+      "selected_key": "field2"
+    },
+    {
+      "rawtype": 1,
+      "synthetic_field2": "SYNTHETIC_A",
+      "synthetic_root": "",
+      "selected_key": "field2"
+    },
+    {
+      "rawtype": 10000,
+      "synthetic_field2": "SYNTHETIC_A",
+      "synthetic_root": "SYNTHETIC_A",
+      "selected_key": "field2"
+    }
+  ],
+  "projection_scope": "Selected initializer and conditional expressions only; not complete preparation/filter outcome, target execution or actual account/time data",
+  "previous_analysis_script_hashes_unchanged": 11,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 582,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Documentation and fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only graph/save AST definitions extracted from historical writer; old scripts/evidence were preserved.",
+    "Window probe of469c0 failed because it has no unwind range; leaf decode corrected this, and full469a0 includes both returns. Not a product failure.",
+    "aba980 second return included in43-byte leaf;aba730 is an owned function, not a truncated128-byte leaf.",
+    "The0x70 source and0x78 extended consumer chain is conditional; whole-range decode does not prove complete CFG, live reachability or delivery.",
+    "Additional2eb9af0 writes to extension+70 were retained explicitly: constructor arithmetic is not a final batch time invariant.",
+    "Default descriptor conclusion is limited to freshly constructed rawtype1 whose first endpoint differs fromnewsapp; later17cb2c0 processing remains unbound."
+  ],
+  "remaining": [
+    "Preparation adjustments2ad2de0/2ad2760 and comparator ordering",
+    "Filter activation/threshold/map producers and reset boundaries",
+    "Later17cb2c0/a7cd20 final direction and event dispatch",
+    "Outer response/phase and first-batch/history/reconnect contract",
+    "Root+68 producer and member virtual+18 implementation",
+    "Account/target identity and returned string lifetime",
+    "Cache/reset/account/reconnect scope and zero-ID behavior",
+    "History/first-batch boundaries",
+    "Later consumer processing and final direction/event semantics",
+    "Special newsapp descriptor and other categories excluded",
+    "Account/target binding and baseline/history contract"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-owner-20261006/write_evidence.py",
+      "sha256": "e5352ba2c28ab9c369125690322966d16f35063a82b109988acdae2454a15ece"
+    },
+    {
+      "cache_path": "data/inbound-owner-20261006/verify_evidence.py",
+      "sha256": "0b58499d3a7f5bb41c39a73ac4c08e01333166bf4f5b07bd44d1b6053181c331"
+    },
+    {
+      "cache_path": "data/inbound-owner-20261006/update_docs.py",
+      "sha256": "7f37b70eb5c5a462008dc12869a92ee5502d6c30bce3b5b1375c349e40385d4b"
+    },
+    {
+      "cache_path": "data/inbound-owner-20261006/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-owner-20261006/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-owner-20261006/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

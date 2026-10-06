@@ -1,5 +1,15 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 普通批次、端点键及默认descriptor静态复核（397–401，2026-10-06）
+
+[397](evidence/397-inbound-batch-consumer.json)保存批次/时间/过滤链，[398](evidence/398-inbound-key-root-filter.json)保存键选择与root成员间接来源，[399](evidence/399-inbound-default-descriptor.json)保存选定默认descriptor。[401](evidence/401-inbound-owner-validation.json)重新核固定DLL哈希、完整函数解码、精确表目标、指令与原始rel32/RIP位移算术；具体去重计数以401为准。396列出的11个历史脚本保持，同一执行者，无独立审查。
+
+离线条件投影分别检验扩展构造的低32位/乘1000、前置阈值比较及端点选择；不执行客户端，不覆盖后续时间调整、完整过滤策略或真实来信。选定默认descriptor的常量返回也不等于整个客户端最终对象不变。静态条件路径已接到实际批次消费者，但实际账号、历史边界和最终事件仍未验收。
+
+研究探针对无unwind的469c0误用window后改用leaf，随后将469a0两条返回分支完整纳入46字节证据；aba980也纳入两条返回共43字节。不是产品失败。追加检查发现2eb9af0还能重写扩展+70，报告明确限制初始化公式；没有把它作为最终时间不变量。仅从旧writer提取graph/save AST，未导入/运行其顶层，历史证据保留。
+
+[400](evidence/400-inbound-owner-checkpoint.json)只核保存监听状态，仍停止；未操作窗口、重启监听、执行产品/原生/并发/网络测试、访问进程/密钥/聊天库或发送。0.1.22、自动回复关闭，观察方案未实施。
+
 ## 入站AddMsg与字段来源静态复核（393–396，2026-10-06）
 
 [393](evidence/393-inbound-addmsg-dispatch.json)保存9区间、2叶函数、89观察；[394](evidence/394-inbound-field-provenance.json)保存8区间、71观察。[396](evidence/396-inbound-contract-validation.json)重新读取固定DLL并复核范围哈希、完整解码、直接rel32/RIP算术、精确表目标、15组字段号/偏移，以及两段原始MOVABS重叠重建的`micromsg.AddMsg`。静态复核通过：17区间、2叶函数、16直接边、1表、160观察、94字段/分支断言、5指定表目标、560本地链接。前轮392列出的6个脚本哈希保持；同一执行者，无新增独立审查。
