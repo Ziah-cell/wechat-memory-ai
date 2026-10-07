@@ -1,5 +1,16 @@
 # 项目状态：已查明当前最小化入站字段不足，自动回复仍未就绪
 
+## 最新进展：下层结果不保证整批成功（410–413）
+
+2026-10-07，固定DLL磁盘只读继续。410分别核两类分组的对象查找：对象为空时跳过该子任务，之后只对已创建的子任务做AND；跳过的分组没有自动变成false结果。两种子任务表96b9f88/96ba2a8的+10共用3978e90→3979070→3979350→3971490。
+
+411追到公开标签TaskInnerAddMessageListToDB及其嵌套任务39b0de0→155b940（AddMessageMap）。过滤后容器为空可直接返回空向量和true；嵌套任务的返回map为空也保留true。非空map的精确归约是acc从0开始，每项执行`acc=(acc&1)|node_byte`；在0/1值域是OR，不是上层两层AND。只有对应键的byte恰为1才复制该键的项。因此在所选0/1推演中，混合结果可留下部分向量和true；不能认证整批成功、新来信或持久提交。任意byte未证明已归一化，不能把所有非零值当1。缺键有异常分支。
+
+下一项优先155b940内fe6240回调、map状态字节生产者及事务提交边界，补重复过滤和原项到结果项对应；真实+e8订阅者、root+68身份、方向/首批历史重连/reset仍缺。413为同一执行者静态复核；409列出的10个历史脚本保持，412保存监听停止。产品0.1.22、自动回复关闭，无可运行适配器、产品/原生测试或真实收发。新忽略目录data/inbound-storage-20261007，历史证据不改，后续从414起。
+
+
+证据：[410子任务创建](evidence/410-inbound-child-dispatch.json)、[411下层结果](evidence/411-inbound-storage-result.json)、[412保存状态](evidence/412-inbound-storage-checkpoint.json)、[413静态复核](evidence/413-inbound-storage-validation.json)。
+
 2026-10-07最新：406–409追到后端数值tag分组及两层任务结果汇总。总标志来自逐组AND；部分返回数据可与总标志0共存，promise resolve也不要求处理标志非零。空结果/true不能证明新来信，实际订阅者、账号来源和最终方向仍缺。[报告](SEND_COMPATIBILITY_4_1_15_50.md)、[409复核](evidence/409-inbound-backend-validation.json)记录边界。仅固定文件静态推进，0.1.22、保存监听停止、自动回复关闭，无运行适配器或真实收发。
 
 2026-10-06最新：402–405已追入站转换后的第二个键容器、可选handler检查，以及分组结果→manager+e8信号→直接回调或executor闭包的条件路径。零ID只是绕过该处非零处理；空handler绕过此处检查，均不代表最终获准。Text检查true不是方向认证，+178与+168不能混用。实际后端分组/结果位、订阅者/注册和root账号来源仍缺。[报告](SEND_COMPATIBILITY_4_1_15_50.md)、[405复核](evidence/405-inbound-notification-validation.json)记录边界。仅静态推进；0.1.22、保存监听停止、自动回复关闭，无运行适配器或真实收发。

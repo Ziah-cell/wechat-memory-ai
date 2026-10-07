@@ -1,0 +1,794 @@
+{
+  "checked_at_utc": "2026-10-07T07:48:04.180692+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file child dispatch and result producers; no complete CFG or runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3971490",
+      "end": "0x3972e6c",
+      "role_inference": "TaskInnerAddMessageListToDB; selected duplicate-filter empty return and nested result passthrough",
+      "instruction_count": 1483,
+      "disk_range_sha256": "f4a02cb7b0de431e1a3ab908a7e1e5d7df173c1dbd1bfe8206a23b120cb85c3e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39710b0",
+      "end": "0x39711dd",
+      "role_inference": "Wait/check typed nested vector+byte result",
+      "instruction_count": 82,
+      "disk_range_sha256": "60f1f79f64386228e93b5c692855434da97d2c0ae0f9c9e9aa7b381acd7dbc28",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3971210",
+      "end": "0x3971403",
+      "role_inference": "Formats byte+18 under public succeed label; no durable-commit proof",
+      "instruction_count": 130,
+      "disk_range_sha256": "4feb3f8ef4c94956bcac4426cc842e99029475609a4b551b4118fcf7153be669",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x30077d0",
+      "end": "0x300791a",
+      "role_inference": "Wrap nested task and pass to explicit/default scheduler paths",
+      "instruction_count": 90,
+      "disk_range_sha256": "271f15606b4cbfe546f8aa9e779d8c3b7882b0598ff03a5a0cf3118a6d599538",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3007a30",
+      "end": "0x3007a7a",
+      "role_inference": "Wrapper invokes captured task function pointer+8 with same task base",
+      "instruction_count": 19,
+      "disk_range_sha256": "1d6924bcf873f9156183cc236acfe03bf8fe0152fadb2b3cd62ca3e639ad5293",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39b0de0",
+      "end": "0x39b18e9",
+      "role_inference": "Captured nested body; AddMessageMap result vector selection and OR-style flag aggregation",
+      "instruction_count": 613,
+      "disk_range_sha256": "1d7f6032f28ed9b16c54b5c519f74f07559d28920a132f7089e8bd21a2208460",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x155b940",
+      "end": "0x155d505",
+      "role_inference": "AddMessageMap boundary; selected callbacks/return map, full transaction contract not reviewed",
+      "instruction_count": 1533,
+      "disk_range_sha256": "0856153a514991a2426bc9cd5e7bf4abfb0a4fda9f4d25a1372f6fd04e73a8f9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xb7c80",
+      "end": "0xb7df3",
+      "role_inference": "String-keyed result lookup returns addressnode+30; missing key takes exception path",
+      "instruction_count": 98,
+      "disk_range_sha256": "be222fd905606b01a16a8e10b618b74ec70c63f98a08ec652eb14e9d1669718d",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x10c920",
+      "size": 29,
+      "anchor": "Direct constructor at397212a: stores supplied function pointer+8 and cleanup+10",
+      "instructions": [
+        {
+          "at": "0x10c920",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x10c923",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rcx], 1"
+        },
+        {
+          "at": "0x10c929",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 8], rdx"
+        },
+        {
+          "at": "0x10c92d",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 0x10], r8"
+        },
+        {
+          "at": "0x10c931",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 8]"
+        },
+        {
+          "at": "0x10c938",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], rcx"
+        },
+        {
+          "at": "0x10c93c",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x39716ca",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x3971b5f",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x397212a",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x39722a3",
+      "kind": "call",
+      "to": "0x30077d0"
+    },
+    {
+      "at": "0x397234c",
+      "kind": "call",
+      "to": "0x39710b0"
+    },
+    {
+      "at": "0x397235f",
+      "kind": "call",
+      "to": "0x3971210"
+    },
+    {
+      "at": "0x300782a",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x30078be",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x39b1168",
+      "kind": "call",
+      "to": "0x155b940"
+    },
+    {
+      "at": "0x39b1230",
+      "kind": "call",
+      "to": "0xb7c80"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x397155e",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x5d4872b]",
+      "rip_targets": [
+        "0x96b9c90"
+      ],
+      "public_static_strings": [
+        "TaskInnerAddMessageListToDB"
+      ],
+      "observation": "Public TaskInnerAddMessageListToDB label"
+    },
+    {
+      "at": "0x3971a5c",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x5d48335]",
+      "rip_targets": [
+        "0x96b9d98"
+      ],
+      "public_static_strings": [
+        "TaskInnerAddMessageListToDB: query duplicate svrid"
+      ],
+      "observation": "Public query-duplicate-svrid stage label"
+    },
+    {
+      "at": "0x3971dc8",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x5d48001]",
+      "rip_targets": [
+        "0x96b9dd0"
+      ],
+      "public_static_strings": [
+        "TaskInnerAddMessageListToDB: filter duplicate svrid"
+      ],
+      "observation": "Public filter-duplicate-svrid stage label"
+    },
+    {
+      "at": "0x3971ddf",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x100], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test filtered container count"
+    },
+    {
+      "at": "0x3971de7",
+      "mnemonic": "je",
+      "operands": "0x3971e5e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty goes to empty-result branch"
+    },
+    {
+      "at": "0x3971e6a",
+      "mnemonic": "je",
+      "operands": "0x3972067",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "No-log branch enters direct empty return"
+    },
+    {
+      "at": "0x3972071",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty vector begin/end"
+    },
+    {
+      "at": "0x3972074",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty vector capacity"
+    },
+    {
+      "at": "0x397207c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x18], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty filtered container returns true"
+    },
+    {
+      "at": "0x3972112",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x3ecc7]",
+      "rip_targets": [
+        "0x39b0de0"
+      ],
+      "public_static_strings": [],
+      "observation": "Load nested body39b0de0"
+    },
+    {
+      "at": "0x3972119",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x3fb90]",
+      "rip_targets": [
+        "0x39b1cb0"
+      ],
+      "public_static_strings": [],
+      "observation": "Load cleanup function"
+    },
+    {
+      "at": "0x397212a",
+      "mnemonic": "call",
+      "operands": "0x10c920",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store function pointers in task"
+    },
+    {
+      "at": "0x3972159",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdx + 0x28], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task captures promise+28"
+    },
+    {
+      "at": "0x3972192",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdx + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task captures selected object+38"
+    },
+    {
+      "at": "0x397219d",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdx + 0x48], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task grouped-data+48"
+    },
+    {
+      "at": "0x3972252",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0x88], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task source count+88"
+    },
+    {
+      "at": "0x39722a3",
+      "mnemonic": "call",
+      "operands": "0x30077d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass task to scheduler wrapper"
+    },
+    {
+      "at": "0x397234c",
+      "mnemonic": "call",
+      "operands": "0x39710b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wait nested result"
+    },
+    {
+      "at": "0x397235f",
+      "mnemonic": "call",
+      "operands": "0x3971210",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Format result; label alone not commit semantics"
+    },
+    {
+      "at": "0x3972c69",
+      "mnemonic": "call",
+      "operands": "0xac2940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy returned vector using selected count"
+    },
+    {
+      "at": "0x3972c6f",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read nested byte+18"
+    },
+    {
+      "at": "0x3972c7a",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rcx + 0x18], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Propagate byte+18"
+    },
+    {
+      "at": "0x10c929",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture function pointer at+8"
+    },
+    {
+      "at": "0x10c92d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x10], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture cleanup pointer+10"
+    },
+    {
+      "at": "0x3007815",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x214]",
+      "rip_targets": [
+        "0x3007a30"
+      ],
+      "public_static_strings": [],
+      "observation": "Explicit-scheduler wrapper points3007a30"
+    },
+    {
+      "at": "0x3007849",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x48], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture original task atwrapper+48"
+    },
+    {
+      "at": "0x300786d",
+      "mnemonic": "call",
+      "operands": "0x3cb460",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Explicit scheduler boundary"
+    },
+    {
+      "at": "0x30078a9",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x180]",
+      "rip_targets": [
+        "0x3007a30"
+      ],
+      "public_static_strings": [],
+      "observation": "Default wrapper also points3007a30"
+    },
+    {
+      "at": "0x30078dd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x48], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default path captures same task"
+    },
+    {
+      "at": "0x30078fe",
+      "mnemonic": "call",
+      "operands": "0x3babf0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default scheduler boundary"
+    },
+    {
+      "at": "0x3007a42",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve captured task"
+    },
+    {
+      "at": "0x3007a5a",
+      "mnemonic": "mov",
+      "operands": "rcx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass task base asRCX"
+    },
+    {
+      "at": "0x3007a5d",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call stored function+8; constructed target39b0de0"
+    },
+    {
+      "at": "0x3971109",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await nested promise"
+    },
+    {
+      "at": "0x3971113",
+      "mnemonic": "call",
+      "operands": "0x3b4700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get stored value"
+    },
+    {
+      "at": "0x3971173",
+      "mnemonic": "jne",
+      "operands": "0x39711ad",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Type mismatch exceptional"
+    },
+    {
+      "at": "0x397119e",
+      "mnemonic": "add",
+      "operands": "rsi, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return payload+8"
+    },
+    {
+      "at": "0x397129e",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x5d495fb]",
+      "rip_targets": [
+        "0x96ba8a0"
+      ],
+      "public_static_strings": [
+        "{succeed:"
+      ],
+      "observation": "Public succeed label"
+    },
+    {
+      "at": "0x39712ae",
+      "mnemonic": "movzx",
+      "operands": "edx, byte ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Format payloadbyte+18"
+    },
+    {
+      "at": "0x39b0e3e",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rsi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve captured promise+28"
+    },
+    {
+      "at": "0x39b0e50",
+      "mnemonic": "movups",
+      "operands": "xmm1, xmmword ptr [rsi + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move selected storage objectpair+38"
+    },
+    {
+      "at": "0x39b0e62",
+      "mnemonic": "call",
+      "operands": "0x39b0b60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move/copy grouped data via39b0b60 boundary"
+    },
+    {
+      "at": "0x39b1156",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x200]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Use captured object asAddMessageMap receiver"
+    },
+    {
+      "at": "0x39b1168",
+      "mnemonic": "call",
+      "operands": "0x155b940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call155b940 with output map and grouped input"
+    },
+    {
+      "at": "0x39b1183",
+      "mnemonic": "mov",
+      "operands": "bl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initial result byte1"
+    },
+    {
+      "at": "0x39b1185",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x1d0], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Result map count"
+    },
+    {
+      "at": "0x39b118d",
+      "mnemonic": "je",
+      "operands": "0x39b16ae",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty result map skips vector selection and keeps1"
+    },
+    {
+      "at": "0x39b1230",
+      "mnemonic": "call",
+      "operands": "0xb7c80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Lookup per-key result byte"
+    },
+    {
+      "at": "0x39b1236",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only exact byte1 selects corresponding items"
+    },
+    {
+      "at": "0x39b1239",
+      "mnemonic": "jne",
+      "operands": "0x39b12b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other byte skips vector append"
+    },
+    {
+      "at": "0x39b1272",
+      "mnemonic": "call",
+      "operands": "0x1cab70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy selected internal item"
+    },
+    {
+      "at": "0x39b1278",
+      "mnemonic": "add",
+      "operands": "qword ptr [rbp + 0x248], 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Advance returned vector by744bytes"
+    },
+    {
+      "at": "0x39b1682",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x1d0], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Recheck map count before reduction"
+    },
+    {
+      "at": "0x39b168a",
+      "mnemonic": "je",
+      "operands": "0x39b16ae",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty map retains initial1"
+    },
+    {
+      "at": "0x39b1696",
+      "mnemonic": "xor",
+      "operands": "ebx, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonempty map accumulator0"
+    },
+    {
+      "at": "0x39b16a0",
+      "mnemonic": "and",
+      "operands": "bl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mask prior accumulator tobit0 each iteration"
+    },
+    {
+      "at": "0x39b16a3",
+      "mnemonic": "or",
+      "operands": "bl, byte ptr [rcx + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "OR current mapnode+30 byte"
+    },
+    {
+      "at": "0x39b16ac",
+      "mnemonic": "jne",
+      "operands": "0x39b16a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Iterate result map"
+    },
+    {
+      "at": "0x39b1710",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x20], bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pack accumulated byte attyped+20"
+    },
+    {
+      "at": "0x39b1746",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve typed result without success guard"
+    },
+    {
+      "at": "0xb7dd5",
+      "mnemonic": "add",
+      "operands": "rbx, 0x30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Lookup result addressnode+30"
+    },
+    {
+      "at": "0xb7de6",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8e7e08b]",
+      "rip_targets": [
+        "0x8f35e78"
+      ],
+      "public_static_strings": [
+        "invalid unordered_map<K, T> key"
+      ],
+      "observation": "Missing key is exceptional, not silentfalse"
+    },
+    {
+      "at": "0x155ba23",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x7c7de5e]",
+      "rip_targets": [
+        "0x91d9888"
+      ],
+      "public_static_strings": [
+        "AddMessageMap"
+      ],
+      "observation": "Public AddMessageMap label"
+    },
+    {
+      "at": "0x155c4c4",
+      "mnemonic": "call",
+      "operands": "0xfe6240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First callback operation boundaryfe6240"
+    },
+    {
+      "at": "0x155c520",
+      "mnemonic": "and",
+      "operands": "dl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected internal map OR reduction"
+    },
+    {
+      "at": "0x155c523",
+      "mnemonic": "or",
+      "operands": "dl, byte ptr [rcx + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read internal nodebyte+30"
+    },
+    {
+      "at": "0x155c530",
+      "mnemonic": "je",
+      "operands": "0x155c6b9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero skips next operation"
+    },
+    {
+      "at": "0x155c56d",
+      "mnemonic": "call",
+      "operands": "0xfe6240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Secondfe6240 operation boundary"
+    },
+    {
+      "at": "0x155c573",
+      "mnemonic": "mov",
+      "operands": "ebx, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Returnvalue separately savedEBX"
+    },
+    {
+      "at": "0x155cc3f",
+      "mnemonic": "movzx",
+      "operands": "edx, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Separate returnvalue used in formatting"
+    },
+    {
+      "at": "0x155d452",
+      "mnemonic": "call",
+      "operands": "0x15045e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Transfer result map through15045e0; commit relation not certified"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The shared child path reaches3971490 with public disk label TaskInnerAddMessageListToDB. After stages labelled query/filter duplicate svrid, an empty filtered-container count follows a branch returning empty vector and byte1 without scheduling the later nested body. The filter predicates, identifier domain, history/newness and durability are not established by these labels.",
+    "Selected nonempty path constructs task body39b0de0 via10c920, captures promise+28/object+38/grouped data+48, and passes it through30077d0. Its explicit/default wrapper3007a30 invokes captured task+8 using original task base. Schedulers, live invocation and exception paths are not runtime-verified.",
+    "39b0de0 calls155b940 (public AddMessageMap label). It looks up each selected input key throughb7c80; missing keys throw. Only exact result byte1 causes the corresponding internal items to be copied into the returned744-byte-stride vector. Key identity and complete item correspondence remain unbound.",
+    "If returned map count iszero, the nested byte remains initial1 and vector empty. For the nonempty map loop, exact recurrence is acc=0 then acc=(acc&1)|node_byte. Under boolean0/1 values this is OR/any, not AND/all. Arbitrary bytes are not generally normalized. The nested byte is packed into typed+20(payload+18), promise-resolved, copied through3971490 and returned by3979350/3979070;407 outer layers still AND child/group flags.",
+    "A hypothetical normal 0/1 mixed map [1,0] or[0,1] can therefore produce partial selected output with nested byte1. This is a selected arithmetic/control-flow projection, not an observed storage failure, complete transaction atomicity proof, or proof of durable commit. The label succeed does not change that limit.",
+    "155b940 contains furtherfe6240 callback operation boundaries; the second return is saved separately for formatting, while the result map is transferred via15045e0. These selected instructions do not certify transaction begin/commit/rollback or correspondence of callback returns to durable storage. That remains the next boundary, together with lower map value producers."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "403-inbound-group-notification.json",
+    "406-inbound-backend-groups.json",
+    "407-inbound-result-aggregation.json",
+    "410-inbound-child-dispatch.json"
+  ],
+  "remaining": [
+    "155b940 callback implementations/result-map byte producers and durable transaction semantics",
+    "Duplicate filter predicates and source-to-returned item correspondence",
+    "Actual signal subscriber registration/receiver identity",
+    "Original ID/account/direction/history and task execution/exit boundaries"
+  ]
+}

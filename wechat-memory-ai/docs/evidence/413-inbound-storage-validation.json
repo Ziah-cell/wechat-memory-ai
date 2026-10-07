@@ -1,0 +1,234 @@
+{
+  "checked_at_utc": "2026-10-07T07:54:45.851230+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not complete CFG, runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 22,
+  "unique_anchored_leaves_checked": 2,
+  "unique_direct_edges_with_raw_rel32_math": 22,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 143,
+  "rip_references_with_raw_displacement_math": 12,
+  "branch_field_assertions": 110,
+  "explicit_table_targets_checked": 2,
+  "explicit_rip_targets_checked": 6,
+  "lower_result_projections": [
+    {
+      "synthetic_result_bytes": [],
+      "exact_accumulator": 1,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        0
+      ],
+      "exact_accumulator": 0,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        1
+      ],
+      "exact_accumulator": 1,
+      "selected_exact_one_keys": [
+        0
+      ],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        0,
+        0
+      ],
+      "exact_accumulator": 0,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        1,
+        0
+      ],
+      "exact_accumulator": 1,
+      "selected_exact_one_keys": [
+        0
+      ],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        0,
+        1
+      ],
+      "exact_accumulator": 1,
+      "selected_exact_one_keys": [
+        1
+      ],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        1,
+        1
+      ],
+      "exact_accumulator": 1,
+      "selected_exact_one_keys": [
+        0,
+        1
+      ],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        2
+      ],
+      "exact_accumulator": 2,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        2,
+        0
+      ],
+      "exact_accumulator": 0,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    },
+    {
+      "synthetic_result_bytes": [
+        0,
+        2
+      ],
+      "exact_accumulator": 2,
+      "selected_exact_one_keys": [],
+      "commit": "unknown"
+    }
+  ],
+  "created_task_coverage_projections": [
+    {
+      "synthetic_objects_present": [
+        false
+      ],
+      "created_task_flags": [],
+      "aggregate": 1,
+      "skipped_subgroups": 1,
+      "all_original_items_handled": "not_certified"
+    },
+    {
+      "synthetic_objects_present": [
+        false,
+        true
+      ],
+      "created_task_flags": [
+        1
+      ],
+      "aggregate": 1,
+      "skipped_subgroups": 1,
+      "all_original_items_handled": "not_certified"
+    },
+    {
+      "synthetic_objects_present": [
+        true,
+        false
+      ],
+      "created_task_flags": [
+        0
+      ],
+      "aggregate": 0,
+      "skipped_subgroups": 1,
+      "all_original_items_handled": "not_certified"
+    },
+    {
+      "synthetic_objects_present": [
+        true,
+        true
+      ],
+      "created_task_flags": [
+        1,
+        0
+      ],
+      "aggregate": 0,
+      "skipped_subgroups": 0,
+      "all_original_items_handled": "not_certified"
+    }
+  ],
+  "projection_scope": "Synthetic selected byte recurrence/exact-one selection and task omission arithmetic; no DLL execution, database result, complete reachability or durable-commit proof",
+  "previous_analysis_script_hashes_unchanged": 10,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 646,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and410-413 fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Historical graph/save definitions extracted through AST only; verifier prefix copied as text, no historical top-level execution.",
+    "10a3240 and155b940 broad probe output was not treated as a full semantic review; conclusions use bounded exact instruction sites.",
+    "Both child tables share+10 leaf but distinct capture/lookup paths were separately checked.",
+    "Inner exact byte recurrence differs from outer AND. Boolean0/1 interpretation is explicitly conditional; arbitrary-byte projections illustrate non-normalization.",
+    "Null-object skip and empty filtered/map results are conditional static paths, not runtime reproductions.",
+    "fe6240 callbacks, map byte producers and transaction semantics remain open."
+  ],
+  "remaining": [
+    "Numeric subgroup selector and lookup provider identity/lifecycle",
+    "Normal/fallback child execution and cancellation/exit",
+    "Original item coverage through skip/filter/copy and actual subscribers",
+    "Account/target/direction/history authentication",
+    "155b940 callback implementations/result-map byte producers and durable transaction semantics",
+    "Duplicate filter predicates and source-to-returned item correspondence",
+    "Actual signal subscriber registration/receiver identity",
+    "Original ID/account/direction/history and task execution/exit boundaries"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-storage-20261007/write_evidence.py",
+      "sha256": "fd411c553a3de1b82183227cd7c86897e009ea7eb7044c6654dd3aad3dd27dc7"
+    },
+    {
+      "cache_path": "data/inbound-storage-20261007/verify_evidence.py",
+      "sha256": "91da73f2a01ffa5d2bf70db360f23f628cd5c1f7efd6b1505ed4add39823d393"
+    },
+    {
+      "cache_path": "data/inbound-storage-20261007/update_docs.py",
+      "sha256": "0f025299feb80ec189f7de6ccc7c95f944c00a91a26d564c719b10d545b0d60e"
+    },
+    {
+      "cache_path": "data/inbound-storage-20261007/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-storage-20261007/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-storage-20261007/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

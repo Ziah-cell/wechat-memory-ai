@@ -1,5 +1,13 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
+## 当前执行点：子任务覆盖与结果位（410–413）
+
+本轮完成所选子任务的对象查找、共用调用体、嵌套任务与结果字节返回路径。下一步沿155b940内fe6240回调追map值生产者和事务边界，并核重复过滤和原项对应；并行路线的真实订阅者及账号来源仍未解决，不扩大运行范围。
+
+必须区分：原始项数、跳过的子分组、创建的子任务、过滤后项数、返回map的逐键byte、下层OR、上层AND与promise完成。0/1混合的下层map可产生部分向量和true；空过滤或空map也可true。这些均是静态分支/算术推演，非实机存储结果。
+
+验证与记录见[413](evidence/413-inbound-storage-validation.json)，详细发现见[410](evidence/410-inbound-child-dispatch.json)/[411](evidence/411-inbound-storage-result.json)。[412](evidence/412-inbound-storage-checkpoint.json)只核保存监听文件。保持0.1.22、自动回复关闭，不操作窗口、重启监听、访问进程/数据库、发送或运行产品/原生测试。后续证据从414起。
+
 ## 当前：后端数值分组与两层结果汇总（406–409，2026-10-07）
 
 - [x] 追38de5a0以端点分类tag1/2分组，区分数值分组与账号/好友、协议rawtype。

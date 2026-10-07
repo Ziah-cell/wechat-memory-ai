@@ -1,0 +1,827 @@
+{
+  "checked_at_utc": "2026-10-07T07:48:04.180692+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file child dispatch and result producers; no complete CFG or runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x3974b20",
+      "end": "0x3976985",
+      "role_inference": "Prior tag1 group processor; selected numeric subgroup object lookup and child submission",
+      "instruction_count": 1676,
+      "disk_range_sha256": "5a3bd38619bb020bce8e417385d4aa9e3646ea9285115436f3d780623b09ec7d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397a140",
+      "end": "0x397bfa5",
+      "role_inference": "Prior tag2 group processor; separately checked object lookup and child submission",
+      "instruction_count": 1676,
+      "disk_range_sha256": "250269c52887def86917d4b50ff5f653956d1be11f915842d19f1f70f4f1d774",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3977720",
+      "end": "0x39777d9",
+      "role_inference": "First lookup via10a6130 followed by dynamic cast; missing/cast failure produces empty pair",
+      "instruction_count": 57,
+      "disk_range_sha256": "6f63cee84f69316057a8704276b43b3fea7cc5d45cdef5358bb1833c738c24b3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397cd40",
+      "end": "0x397cdf9",
+      "role_inference": "Second lookup via10a5c60 followed by different dynamic cast; failure produces empty pair",
+      "instruction_count": 57,
+      "disk_range_sha256": "e237c3c736bdc6c717052f8f8cf34d6f3a5dee453180730860addb959ac140db",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3977800",
+      "end": "0x3977c71",
+      "role_inference": "First child wrapper captures selected object/vector and owner+10 scope",
+      "instruction_count": 278,
+      "disk_range_sha256": "96c7f062ab1d876fe22836d18f1d14a016b415d3c29346f56c79f5686df8d1a6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397ce20",
+      "end": "0x397d291",
+      "role_inference": "Second child wrapper independently constructs same-layout capture",
+      "instruction_count": 278,
+      "disk_range_sha256": "9c5334de580279815dd9d692c2677a971a86d06f6cad36bbad8e9eeb1942f8c3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3978890",
+      "end": "0x3978959",
+      "role_inference": "Create promise and pass shared state to first submitter",
+      "instruction_count": 61,
+      "disk_range_sha256": "019291f016e54e2592ba32bb43fe1f374b944da7a9763f9c83bf743293728360",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397d450",
+      "end": "0x397d519",
+      "role_inference": "Create promise and pass shared state to second submitter",
+      "instruction_count": 61,
+      "disk_range_sha256": "e46b5962c48eae2dffd48dc8e07e2173b1b07e892bf92240b75f07e0bf03af79",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39789c0",
+      "end": "0x3978bb1",
+      "role_inference": "First child holder construction and3cacc0 submission",
+      "instruction_count": 136,
+      "disk_range_sha256": "572367a689077bae1902bd9d92bdc787e9261e6dc9694e7d4e34afca1d41a556",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397d580",
+      "end": "0x397d771",
+      "role_inference": "Second child holder construction and3cacc0 submission",
+      "instruction_count": 136,
+      "disk_range_sha256": "808ed3806efbce6b4c6694bf5a16b6915ece0d2820b84354ed0c88d448ec7b20",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3978d20",
+      "end": "0x3978ddf",
+      "role_inference": "Install96b9f88 holder table and move vector/capture flag/promise",
+      "instruction_count": 48,
+      "disk_range_sha256": "9654d207f98f7c2d38a78bea066cee99bb3af8e7b1ed2b1b51d357038b0ff7a9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397d890",
+      "end": "0x397d94f",
+      "role_inference": "Install96ba2a8 holder table with same selected invoke leaf",
+      "instruction_count": 48,
+      "disk_range_sha256": "17d2dc31cd4b16f981cdbc3d2269676b01edbf7208f9660875554e862e16e893",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3979070",
+      "end": "0x397920b",
+      "role_inference": "Shared invoke body returns lower vector+flag via promise regardless of flag",
+      "instruction_count": 116,
+      "disk_range_sha256": "f904f18b0c84c5e0a9ef876bc4b4d840535b95857d22f6f082f5ebe63251f20d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3979350",
+      "end": "0x39795e8",
+      "role_inference": "Shared lower wrapper calls3971490 then preserves vector and byte+18",
+      "instruction_count": 180,
+      "disk_range_sha256": "6c9e96e142af86c798da8e39d32404d0021515735e6f5cc6ccab8cfd6f2d8180",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3978e90",
+      "size": 9,
+      "anchor": "Both selected child tables+10 point here; addRCX8 then tailcall3979070",
+      "instructions": [
+        {
+          "at": "0x3978e90",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x3978e94",
+          "mnemonic": "jmp",
+          "operands": "0x3979070"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x39756cd",
+      "kind": "call",
+      "to": "0x3977720"
+    },
+    {
+      "at": "0x397595f",
+      "kind": "call",
+      "to": "0x3977800"
+    },
+    {
+      "at": "0x397aced",
+      "kind": "call",
+      "to": "0x397cd40"
+    },
+    {
+      "at": "0x397af7f",
+      "kind": "call",
+      "to": "0x397ce20"
+    },
+    {
+      "at": "0x3977b7f",
+      "kind": "call",
+      "to": "0x3978890"
+    },
+    {
+      "at": "0x397d19f",
+      "kind": "call",
+      "to": "0x397d450"
+    },
+    {
+      "at": "0x39788f0",
+      "kind": "call",
+      "to": "0x39789c0"
+    },
+    {
+      "at": "0x397d4b0",
+      "kind": "call",
+      "to": "0x397d580"
+    },
+    {
+      "at": "0x3978a7f",
+      "kind": "call",
+      "to": "0x3978d20"
+    },
+    {
+      "at": "0x397d63f",
+      "kind": "call",
+      "to": "0x397d890"
+    },
+    {
+      "at": "0x39790ca",
+      "kind": "call",
+      "to": "0x3979350"
+    },
+    {
+      "at": "0x3978e94",
+      "kind": "jmp",
+      "to": "0x3979070"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96b9f88",
+      "role_inference": "Constructed at3978d44/4b",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3978e90"
+        }
+      ]
+    },
+    {
+      "rva": "0x96ba2a8",
+      "role_inference": "Constructed at397d8b4/bb",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3978e90"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x397565a",
+      "mnemonic": "je",
+      "operands": "0x3975b2a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "End subgroup iteration before result accumulator initialization"
+    },
+    {
+      "at": "0x3975660",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read DWORD subgroup key"
+    },
+    {
+      "at": "0x39756bf",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [rbp + 0x150]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass same numeric subgroup key"
+    },
+    {
+      "at": "0x39756cd",
+      "mnemonic": "call",
+      "operands": "0x3977720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First object lookup"
+    },
+    {
+      "at": "0x3975760",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x360], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Require nonnull selected object"
+    },
+    {
+      "at": "0x3975768",
+      "mnemonic": "je",
+      "operands": "0x39757d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Null enters diagnostic path"
+    },
+    {
+      "at": "0x39757dc",
+      "mnemonic": "je",
+      "operands": "0x3975af0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Diagnostic disabled goes straight to common cleanup"
+    },
+    {
+      "at": "0x3975aab",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x328]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Diagnostic cleanup rejoins same branch"
+    },
+    {
+      "at": "0x3975af0",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbp + 0x368]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release selected lookup pair control block"
+    },
+    {
+      "at": "0x3975afa",
+      "mnemonic": "je",
+      "operands": "0x3975650",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Advance subgroup without submitting a child"
+    },
+    {
+      "at": "0x397595f",
+      "mnemonic": "call",
+      "operands": "0x3977800",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First child construction/submission wrapper"
+    },
+    {
+      "at": "0x39759c0",
+      "mnemonic": "call",
+      "operands": "0x38e340",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Insert returned child future under subgroup key"
+    },
+    {
+      "at": "0x3975b9f",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x408], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Result accumulator initialized1 after all child creation"
+    },
+    {
+      "at": "0x3975c04",
+      "mnemonic": "je",
+      "operands": "0x39760c6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty created-task iteration bypasses AND"
+    },
+    {
+      "at": "0x3975c11",
+      "mnemonic": "call",
+      "operands": "0x38e2980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wait created child result"
+    },
+    {
+      "at": "0x3975c1e",
+      "mnemonic": "and",
+      "operands": "byte ptr [rbp + 0x408], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "AND only created child result byte"
+    },
+    {
+      "at": "0x3976788",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x18], bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return aggregate byte"
+    },
+    {
+      "at": "0x397ac7a",
+      "mnemonic": "je",
+      "operands": "0x397b14a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second subgroup end"
+    },
+    {
+      "at": "0x397ac80",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second subgroup DWORD key"
+    },
+    {
+      "at": "0x397acdf",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [rbp + 0x150]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second lookup numeric key"
+    },
+    {
+      "at": "0x397aced",
+      "mnemonic": "call",
+      "operands": "0x397cd40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second object lookup"
+    },
+    {
+      "at": "0x397ad80",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x360], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second null object check"
+    },
+    {
+      "at": "0x397ad88",
+      "mnemonic": "je",
+      "operands": "0x397adf0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second null branch"
+    },
+    {
+      "at": "0x397adfc",
+      "mnemonic": "je",
+      "operands": "0x397b110",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second no-log path skips child construction"
+    },
+    {
+      "at": "0x397b11a",
+      "mnemonic": "je",
+      "operands": "0x397ac70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Advance subgroup after cleanup"
+    },
+    {
+      "at": "0x397af7f",
+      "mnemonic": "call",
+      "operands": "0x397ce20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second child wrapper"
+    },
+    {
+      "at": "0x397afe0",
+      "mnemonic": "call",
+      "operands": "0x38e340",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Insert second future"
+    },
+    {
+      "at": "0x397b1bf",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x408], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second accumulator initialized1"
+    },
+    {
+      "at": "0x397b224",
+      "mnemonic": "je",
+      "operands": "0x397b6e6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second empty task loop skips AND"
+    },
+    {
+      "at": "0x397b23e",
+      "mnemonic": "and",
+      "operands": "byte ptr [rbp + 0x408], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second AND only created children"
+    },
+    {
+      "at": "0x397bda8",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x18], bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second aggregate output"
+    },
+    {
+      "at": "0x3977746",
+      "mnemonic": "call",
+      "operands": "0x10a6130",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First lookup provider boundary"
+    },
+    {
+      "at": "0x3977770",
+      "mnemonic": "call",
+      "operands": "0x769d63c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First cast boundary"
+    },
+    {
+      "at": "0x3977779",
+      "mnemonic": "je",
+      "operands": "0x397778e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cast failure joins null pair"
+    },
+    {
+      "at": "0x3977791",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Null output pair"
+    },
+    {
+      "at": "0x39777a1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Successful pointer stored"
+    },
+    {
+      "at": "0x397cd66",
+      "mnemonic": "call",
+      "operands": "0x10a5c60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second lookup provider boundary"
+    },
+    {
+      "at": "0x397cd90",
+      "mnemonic": "call",
+      "operands": "0x769d63c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second cast boundary"
+    },
+    {
+      "at": "0x397cd99",
+      "mnemonic": "je",
+      "operands": "0x397cdae",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second cast failure"
+    },
+    {
+      "at": "0x397cdb1",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second null pair"
+    },
+    {
+      "at": "0x3977839",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Use passed owner+10"
+    },
+    {
+      "at": "0x3977955",
+      "mnemonic": "call",
+      "operands": "0xda90d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Scope state predicate"
+    },
+    {
+      "at": "0x3977961",
+      "mnemonic": "call",
+      "operands": "0x39787a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback promise branch; not certified by normal submit analysis"
+    },
+    {
+      "at": "0x3977b7f",
+      "mnemonic": "call",
+      "operands": "0x3978890",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First capture passed to promise wrapper"
+    },
+    {
+      "at": "0x397ce59",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second owner+10"
+    },
+    {
+      "at": "0x397cf81",
+      "mnemonic": "call",
+      "operands": "0x39787a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second fallback promise"
+    },
+    {
+      "at": "0x397d19f",
+      "mnemonic": "call",
+      "operands": "0x397d450",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second capture passed to promise wrapper"
+    },
+    {
+      "at": "0x39788f0",
+      "mnemonic": "call",
+      "operands": "0x39789c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First submitter"
+    },
+    {
+      "at": "0x397d4b0",
+      "mnemonic": "call",
+      "operands": "0x397d580",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second submitter"
+    },
+    {
+      "at": "0x3978a7f",
+      "mnemonic": "call",
+      "operands": "0x3978d20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocate first holder"
+    },
+    {
+      "at": "0x3978a97",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First3cacc0 submit boundary"
+    },
+    {
+      "at": "0x397d63f",
+      "mnemonic": "call",
+      "operands": "0x397d890",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocate second holder"
+    },
+    {
+      "at": "0x397d657",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second3cacc0 submit boundary"
+    },
+    {
+      "at": "0x3978d44",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5d4123d]",
+      "rip_targets": [
+        "0x96b9f88"
+      ],
+      "public_static_strings": [],
+      "observation": "First table RIP address"
+    },
+    {
+      "at": "0x3978d4b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install first table"
+    },
+    {
+      "at": "0x3978d8e",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rdx + 0x60], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move captured vector toholder+60"
+    },
+    {
+      "at": "0x3978d9a",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rdx + 0x78], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture input mode at+78, not result byte"
+    },
+    {
+      "at": "0x3978dc6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x80], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture promise at+80"
+    },
+    {
+      "at": "0x397d8b4",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5d3c9ed]",
+      "rip_targets": [
+        "0x96ba2a8"
+      ],
+      "public_static_strings": [],
+      "observation": "Second table RIP address"
+    },
+    {
+      "at": "0x397d8bb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install second table"
+    },
+    {
+      "at": "0x397d8fe",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rdx + 0x60], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second vector+60"
+    },
+    {
+      "at": "0x397d90a",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rdx + 0x78], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second input mode+78"
+    },
+    {
+      "at": "0x397d936",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x80], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second promise+80"
+    },
+    {
+      "at": "0x3978e90",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust closure by8"
+    },
+    {
+      "at": "0x3978e94",
+      "mnemonic": "jmp",
+      "operands": "0x3979070",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Shared invocation body"
+    },
+    {
+      "at": "0x39790ca",
+      "mnemonic": "call",
+      "operands": "0x3979350",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke lower wrapper"
+    },
+    {
+      "at": "0x39790f7",
+      "mnemonic": "mov",
+      "operands": "r12b, byte ptr [rbp - 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read returned result byte"
+    },
+    {
+      "at": "0x3979127",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x20], r12b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pack result byte attyped+20"
+    },
+    {
+      "at": "0x3979145",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve without byte predicate"
+    },
+    {
+      "at": "0x39793d7",
+      "mnemonic": "call",
+      "operands": "0x3971490",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Shared inner operation"
+    },
+    {
+      "at": "0x39795bc",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rbp - 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read inner byte+18"
+    },
+    {
+      "at": "0x39795c0",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x18], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return same byte+18"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The tag1/tag2 processors use separate object lookups3977720/397cd40, preserving each DWORD subgroup key. Providers10a6130/10a5c60 and dynamic casts can yield an empty pair. Complete provider/selector semantics, account identity and active object lifetime are not certified.",
+    "For either selected null-object branch, child creation and insertion are skipped; diagnostic/cleanup returns to the subgroup loop. Only after creation does the group initialize its result byte to1 and AND results from created child futures. A skipped subgroup is not automatically represented by a false child result. This conditional static omission is not a runtime occurrence, total-coverage proof, or complete CFG claim.",
+    "Normal child wrappers3977800/397ce20 use passed owner+10, create promises through3978890/397d450, and submit via39789c0/397d580. The two holder tables96b9f88 and96ba2a8 share+10 leaf3978e90, which adjustsRCX8 and jumps3979070. Fallback scope-state branch39787a0, cancellation, actual executor and shutdown remain unreviewed.",
+    "Shared invocation3979070 calls3979350 then packs vector plus result byte and resolves the promise without testing that byte.3979350 calls3971490 and returns its vector/byte+18. Captured input mode at holder+78 is distinct from returned result byte.",
+    "Numeric subgroup classification through10a3240 remains a boundary. Missing-object skips, created-task count, returned count and aggregate flags must be recorded separately; a true group flag alone does not certify all original items."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "406-inbound-backend-groups.json",
+    "407-inbound-result-aggregation.json"
+  ],
+  "remaining": [
+    "Numeric subgroup selector and lookup provider identity/lifecycle",
+    "Normal/fallback child execution and cancellation/exit",
+    "Original item coverage through skip/filter/copy and actual subscribers",
+    "Account/target/direction/history authentication"
+  ]
+}

@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 2026-10-07：410–413子任务与下层结果静态复核
+
+本轮没有运行产品、原生、并发或真实收发测试。对固定哈希DLL重新读磁盘字节，复核22个完整解码的异常表区间、2个有锚点的叶函数、2张调用表、所选直接边/RIP位移及手工字段/分支断言；详见[413](evidence/413-inbound-storage-validation.json)。这是同一执行者复核，不是独立审查或运行兼容认证。
+
+[410](evidence/410-inbound-child-dispatch.json)核缺对象跳过子任务、两类表共用调用体及结果返回。[411](evidence/411-inbound-storage-result.json)核空过滤true、下层map空true、非空`(acc&1)|byte`、byte恰为1的向量选择、缺键异常和上层结果传递。离线推演分别覆盖0/1混合结果、空结果、未归一化byte和跳过任务；仅验证所选分支算术，不执行DLL，不制造数据库结果，也不证明完整事务语义。
+
+历史409列出的10个脚本哈希保持。当前七份文档的本地链接与差异范围复核通过，历史证据保留；[412](evidence/412-inbound-storage-checkpoint.json)保存监听文件哈希仍为83ad7e3c3d8d26b99f4fdd9856fab9974e06e2a445c7873df26e44962df07f09，停止原因native_reader_timeout，24569次快照/24505次保存最小化快照/unknown1。没有当前窗口认证，未重启监听。产品0.1.22、自动回复关闭。
+
 ## 后端分组与两层汇总静态复核（406–409，2026-10-07）
 
 [406](evidence/406-inbound-backend-groups.json)记录数值tag分组、外层等待/返回map和output+40；[407](evidence/407-inbound-result-aggregation.json)记录两类任务表、组内汇总与额外派发入口。[409](evidence/409-inbound-backend-validation.json)重新核固定DLL哈希、选定函数完整解码、原始rel32/RIP算术、表槽、字段/分支断言及文档链接。确切计数以409为准，同一执行者，无独立审查；405列出的10脚本保持。
