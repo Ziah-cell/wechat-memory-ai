@@ -1,0 +1,560 @@
+{
+  "checked_at_utc": "2026-10-07T06:51:10.084269+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file backend grouping and result aggregation; no complete CFG or runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x38de5a0",
+      "end": "0x38e1314",
+      "role_inference": "Construct selected group task closures and retain task results by numeric tag",
+      "instruction_count": 2517,
+      "disk_range_sha256": "36a3ddfe5143b7186d6faaa5a35293ba2ff94a824bb7938f3b0946584e776180",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39747a0",
+      "end": "0x3974935",
+      "role_inference": "Table96b9e48+10 invokes group processor3974b20(mode1), packs vector and flag into promise value",
+      "instruction_count": 113,
+      "disk_range_sha256": "9e3dbc1ea7fba9deb41e45a4af47021737b959071f32cba282773b21bfab909d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3979e90",
+      "end": "0x397a025",
+      "role_inference": "Table96ba208+10 invokes group processor397a140(mode1), packs vector and flag into promise value",
+      "instruction_count": 113,
+      "disk_range_sha256": "e0d1730c6201ec7bd87717c6791ff3c4f24b52a44f208b16f3ab8bee9a6cc219",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3974b20",
+      "end": "0x3976985",
+      "role_inference": "Selected tag1 group processor; child-task aggregation only, underlying storage not fully traced",
+      "instruction_count": 1676,
+      "disk_range_sha256": "5a3bd38619bb020bce8e417385d4aa9e3646ea9285115436f3d780623b09ec7d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x397a140",
+      "end": "0x397bfa5",
+      "role_inference": "Selected tag2 group processor; separately checked instructions, not inferred from similarity",
+      "instruction_count": 1676,
+      "disk_range_sha256": "250269c52887def86917d4b50ff5f653956d1be11f915842d19f1f70f4f1d774",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17a00d0",
+      "end": "0x17a036d",
+      "role_inference": "Additional entry copies one payload and emits through its receiver+e8; actual caller/receiver identity unresolved",
+      "instruction_count": 164,
+      "disk_range_sha256": "1e3f09fb9b76292fa570be7e2c469f58167472ff48d93066eec60ddf8cd1f68a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17ff300",
+      "end": "0x17ff3ce",
+      "role_inference": "Additional entry forwards a vector through its receiver+e8; actual caller/receiver identity unresolved",
+      "instruction_count": 66,
+      "disk_range_sha256": "6cc4867a0d83ddc65259408ce4142e7928006f4040deca2d498a1baa312fafcc",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x39747f1",
+      "kind": "call",
+      "to": "0x3974b20"
+    },
+    {
+      "at": "0x3979ee1",
+      "kind": "call",
+      "to": "0x397a140"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x96b9e48",
+      "role_inference": "First group task table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x39747a0"
+        }
+      ]
+    },
+    {
+      "rva": "0x96ba208",
+      "role_inference": "Second group task table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3979e90"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x38dfb8d",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5dda2b4]",
+      "rip_targets": [
+        "0x96b9e48"
+      ],
+      "public_static_strings": [],
+      "observation": "First task table address"
+    },
+    {
+      "at": "0x38dfb94",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8d0], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install first table"
+    },
+    {
+      "at": "0x38dfba2",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8d8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture backend receiver"
+    },
+    {
+      "at": "0x38dfbbf",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8e0], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector begin"
+    },
+    {
+      "at": "0x38dfbc6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8e8], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector end"
+    },
+    {
+      "at": "0x38dfbd4",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8f0], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector capacity"
+    },
+    {
+      "at": "0x38dfbf5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x900], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture promise shared control"
+    },
+    {
+      "at": "0x38dfc1b",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submission boundary3cacc0, executor scope not newly certified"
+    },
+    {
+      "at": "0x38e00d6",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x5dda12b]",
+      "rip_targets": [
+        "0x96ba208"
+      ],
+      "public_static_strings": [],
+      "observation": "Second task table address"
+    },
+    {
+      "at": "0x38e00dd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8d0], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install second table"
+    },
+    {
+      "at": "0x38e00eb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x8d8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture backend receiver"
+    },
+    {
+      "at": "0x39747df",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured receiver"
+    },
+    {
+      "at": "0x39747e3",
+      "mnemonic": "add",
+      "operands": "rsi, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector+10"
+    },
+    {
+      "at": "0x39747ee",
+      "mnemonic": "mov",
+      "operands": "r9b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor mode1"
+    },
+    {
+      "at": "0x39747f1",
+      "mnemonic": "call",
+      "operands": "0x3974b20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke first group processor"
+    },
+    {
+      "at": "0x397481e",
+      "mnemonic": "mov",
+      "operands": "r14b, byte ptr [rbp - 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read processor result byte+18"
+    },
+    {
+      "at": "0x3974842",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move result vector into typed object payload"
+    },
+    {
+      "at": "0x397484e",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x20], r14b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store aggregate byte at object+20 =payload+18"
+    },
+    {
+      "at": "0x3974870",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve promise with result even when byte iszero"
+    },
+    {
+      "at": "0x3979ecf",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured receiver for second group"
+    },
+    {
+      "at": "0x3979ed3",
+      "mnemonic": "add",
+      "operands": "rsi, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured vector+10"
+    },
+    {
+      "at": "0x3979ede",
+      "mnemonic": "mov",
+      "operands": "r9b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor mode1"
+    },
+    {
+      "at": "0x3979ee1",
+      "mnemonic": "call",
+      "operands": "0x397a140",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke second group processor"
+    },
+    {
+      "at": "0x3979f0e",
+      "mnemonic": "mov",
+      "operands": "r14b, byte ptr [rbp - 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read processor result byte+18"
+    },
+    {
+      "at": "0x3979f3e",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x20], r14b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store aggregate byte at object+20"
+    },
+    {
+      "at": "0x3979f60",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve promise with vector+flag; no flag-success precondition here"
+    },
+    {
+      "at": "0x3974f24",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [rdi + 0x164]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First group reads source internal+164 for further classification"
+    },
+    {
+      "at": "0x3974f62",
+      "mnemonic": "mov",
+      "operands": "edx, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass raw value as second argument"
+    },
+    {
+      "at": "0x3974f67",
+      "mnemonic": "call",
+      "operands": "0x10a3240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "10a3240 selector boundary, not named a calendar/database shard"
+    },
+    {
+      "at": "0x3975b9f",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x408], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First group accumulator initially1"
+    },
+    {
+      "at": "0x3975c11",
+      "mnemonic": "call",
+      "operands": "0x38e2980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await child result"
+    },
+    {
+      "at": "0x3975c1a",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Child result+18 byte"
+    },
+    {
+      "at": "0x3975c1e",
+      "mnemonic": "and",
+      "operands": "byte ptr [rbp + 0x408], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "AND group accumulator"
+    },
+    {
+      "at": "0x3975c26",
+      "mnemonic": "je",
+      "operands": "0x3975ee0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero skips selected child-vector append"
+    },
+    {
+      "at": "0x3975bf8",
+      "mnemonic": "call",
+      "operands": "0x15cea10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected nonzero child vector appended via15cea10"
+    },
+    {
+      "at": "0x39761e8",
+      "mnemonic": "mov",
+      "operands": "bl, byte ptr [rbp + 0x408]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve final group accumulator"
+    },
+    {
+      "at": "0x3976780",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r14], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return aggregated vector"
+    },
+    {
+      "at": "0x3976788",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x18], bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return group aggregate byte+18"
+    },
+    {
+      "at": "0x397a544",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [rdi + 0x164]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second group reads internal+164"
+    },
+    {
+      "at": "0x397b1bf",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x408], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second group accumulator initially1"
+    },
+    {
+      "at": "0x397b231",
+      "mnemonic": "call",
+      "operands": "0x38e2980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await child result"
+    },
+    {
+      "at": "0x397b23a",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Child result+18 byte"
+    },
+    {
+      "at": "0x397b23e",
+      "mnemonic": "and",
+      "operands": "byte ptr [rbp + 0x408], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "AND second group accumulator"
+    },
+    {
+      "at": "0x397b246",
+      "mnemonic": "je",
+      "operands": "0x397b500",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero skips selected child-vector append"
+    },
+    {
+      "at": "0x397b808",
+      "mnemonic": "mov",
+      "operands": "bl, byte ptr [rbp + 0x408]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve final group accumulator"
+    },
+    {
+      "at": "0x397bda0",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r14], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return second vector"
+    },
+    {
+      "at": "0x397bda8",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x18], bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return second aggregate byte+18"
+    },
+    {
+      "at": "0x17a00fa",
+      "mnemonic": "call",
+      "operands": "0x1cab70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy supplied internal payload"
+    },
+    {
+      "at": "0x17a013e",
+      "mnemonic": "mov",
+      "operands": "edx, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "One-element vector count"
+    },
+    {
+      "at": "0x17a0143",
+      "mnemonic": "call",
+      "operands": "0xac2940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct vector through copy helper"
+    },
+    {
+      "at": "0x17a0149",
+      "mnemonic": "add",
+      "operands": "rdi, 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional emitter uses receiver+e8"
+    },
+    {
+      "at": "0x17a015a",
+      "mnemonic": "call",
+      "operands": "0x17cac20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call same17cac20 dispatcher"
+    },
+    {
+      "at": "0x17ff316",
+      "mnemonic": "add",
+      "operands": "rcx, 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Another emitter uses receiver+e8"
+    },
+    {
+      "at": "0x17ff31d",
+      "mnemonic": "call",
+      "operands": "0x17cac20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call same dispatcher with supplied vector"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Selected tag1 and tag2 branches install tables96b9e48 and96ba208. Their+10 bodies call3974b20 and397a140 respectively with mode1. Each body moves returned vector and byte into a typed promise payload then calls3b3880 without requiring the byte to be nonzero. Promise resolution is not processing success.",
+    "Both group processors have separately checked child-result loops: initialize byte1, await child through38e2980, AND returned byte+18 into accumulator, append selected nonzero child vectors, return vector and accumulated byte+18. This creates two distinct aggregation layers: child tasks -> group vector/flag -> outer tag-map/flag. Partial vectors and failed aggregate can coexist at a layer; no transaction rollback or per-message success guarantee is established.",
+    "First processor reads internal+164 and passes it to10a3240; second processor also reads+164.394 traces this field to source field9, but complete selector semantics, storage partition/units and lower child-result producers are not certified here. Do not invent a database/date or newness boundary from this numeric field.",
+    "Additional entrypoints17a00d0 and17ff300 form receiver+e8 and call17cac20. The first builds a one-element vector from a supplied payload; the second forwards a supplied vector. Their actual receiver/caller identities and causes remain unbound, so they are additional code paths using the same layout/dispatcher, not proof of a particular live shared instance or new incoming event.",
+    "Bounded LEA/ADD and member-reference scans did not bind actual manager+e8 subscribers. Constructors/destructors and same-offset references were not promoted to subscription evidence. The exact producer and registration of captured callback function pointers remain missing."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "394-inbound-field-provenance.json",
+    "403-inbound-group-notification.json",
+    "406-inbound-backend-groups.json"
+  ],
+  "remaining": [
+    "Lower child tasks and result flag production/commit contract",
+    "Actual group-task executor/current scope and cancellation/exit",
+    "Actual signal subscriber registration and association with manager instance",
+    "Source/input/child/group/result mapping plus identity/direction/newness"
+  ]
+}

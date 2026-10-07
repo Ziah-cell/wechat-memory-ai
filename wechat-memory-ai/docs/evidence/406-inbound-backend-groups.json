@@ -1,0 +1,904 @@
+{
+  "checked_at_utc": "2026-10-07T06:51:10.084269+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file backend grouping and result aggregation; no complete CFG or runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x38de5a0",
+      "end": "0x38e1314",
+      "role_inference": "Selected default backend from403; numeric endpoint tags, group tasks, aggregate flag and moved result groups",
+      "instruction_count": 2517,
+      "disk_range_sha256": "36a3ddfe5143b7186d6faaa5a35293ba2ff94a824bb7938f3b0946584e776180",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x158a900",
+      "end": "0x158a96e",
+      "role_inference": "Endpoint classification: empty0; nonempty selected predicates yield1 or2; predicates not account authentication",
+      "instruction_count": 38,
+      "disk_range_sha256": "e957a55cb135391a0c7d6a44acbed76562190da350809a408ceb2253d5d3b09e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xbc4a50",
+      "end": "0xbc4b50",
+      "role_inference": "Final classifier returns1 on first suffix match, otherwise second suffix predicate lowbyte",
+      "instruction_count": 70,
+      "disk_range_sha256": "e94d93ca47af59ef702e0b3affc8ccc7c941c215ab792143dc92fb3ff6d28548",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x12dd450",
+      "end": "0x12dd491",
+      "role_inference": "Suffix predicate normal lowbyte returns0 or1, without account authentication",
+      "instruction_count": 21,
+      "disk_range_sha256": "a00b3d4de485f2aa141003f4606a597a1eccee746df7f0db07eee601aa4f6abb",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x185e0a0",
+      "end": "0x185e3bb",
+      "role_inference": "Group map lookup/insert by four-byte numeric key",
+      "instruction_count": 220,
+      "disk_range_sha256": "bce51e8c91de17a6bf5f0ebd9f80488e6688d90d1902e08a2bd76a837f64ff11",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3977ff0",
+      "end": "0x397810a",
+      "role_inference": "Initialize empty map; not a result-success constructor",
+      "instruction_count": 77,
+      "disk_range_sha256": "abe101cba459ae52ead06422c0d8cf79a570374799333fd04542c7cdcad7d72e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x185e4a0",
+      "end": "0x185e61f",
+      "role_inference": "Move/swap map storage into result first64bytes; does not copy byte+40",
+      "instruction_count": 103,
+      "disk_range_sha256": "8b0264f490544d283578f801e10c64923ab44cb451abcb5310e8c858090ef795",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38e2980",
+      "end": "0x38e2aad",
+      "role_inference": "Wait on shared task, obtain result, check stored type and return payload+8; badcast is exceptional",
+      "instruction_count": 82,
+      "disk_range_sha256": "9f157c087a7c46630e43588238d5b13c9728cf5980492f1ede45ef86ed53964e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x38e2ae0",
+      "end": "0x38e2e1c",
+      "role_inference": "Move successful group vector into node+18 with DWORD tag atnode+10; duplicate path retained",
+      "instruction_count": 230,
+      "disk_range_sha256": "2865081c0834291eb99d312ccb0ae74879f2f65450396719e109b6855745e355",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17c8eb0",
+      "end": "0x17c9815",
+      "role_inference": "Prior403 caller checks final resultbit0 before selected group notification",
+      "instruction_count": 538,
+      "disk_range_sha256": "f9740c573a8a9ff69a96d087b6ff44f918632df5279475c124e39ed5a802ea99",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x38de7c7",
+      "kind": "call",
+      "to": "0x3977ff0"
+    },
+    {
+      "at": "0x38de7d3",
+      "kind": "call",
+      "to": "0x185e4a0"
+    },
+    {
+      "at": "0x38de897",
+      "kind": "call",
+      "to": "0x3977ff0"
+    },
+    {
+      "at": "0x38de8f5",
+      "kind": "call",
+      "to": "0x158a900"
+    },
+    {
+      "at": "0x38de915",
+      "kind": "call",
+      "to": "0x185e0a0"
+    },
+    {
+      "at": "0x38e04fb",
+      "kind": "call",
+      "to": "0x3977ff0"
+    },
+    {
+      "at": "0x38e058e",
+      "kind": "call",
+      "to": "0x38e2980"
+    },
+    {
+      "at": "0x38e07ba",
+      "kind": "call",
+      "to": "0x38e2ae0"
+    },
+    {
+      "at": "0x38e1127",
+      "kind": "call",
+      "to": "0x185e4a0"
+    },
+    {
+      "at": "0x158a95e",
+      "kind": "call",
+      "to": "0xbc4a50"
+    },
+    {
+      "at": "0xbc4a8d",
+      "kind": "call",
+      "to": "0x12dd450"
+    },
+    {
+      "at": "0xbc4ac2",
+      "kind": "call",
+      "to": "0x12dd450"
+    },
+    {
+      "at": "0x17c8f89",
+      "kind": "call",
+      "to": "0x38de5a0"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x38de5dc",
+      "mnemonic": "mov",
+      "operands": "r14, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve output pointer"
+    },
+    {
+      "at": "0x38de5e9",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [r8 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input empty comparison"
+    },
+    {
+      "at": "0x38de5ed",
+      "mnemonic": "je",
+      "operands": "0x38de69a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty input takes separate return path"
+    },
+    {
+      "at": "0x38de67c",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x5ddac75]",
+      "rip_targets": [
+        "0x96b92f8"
+      ],
+      "public_static_strings": [
+        "AddMessageListToDBForSync"
+      ],
+      "observation": "Public operation label AddMessageListToDBForSync, not a runtime database observation"
+    },
+    {
+      "at": "0x38de7c7",
+      "mnemonic": "call",
+      "operands": "0x3977ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize empty map for empty input"
+    },
+    {
+      "at": "0x38de7d3",
+      "mnemonic": "call",
+      "operands": "0x185e4a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Transfer empty map into output"
+    },
+    {
+      "at": "0x38de7d9",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x40], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty input explicitly returns byte+40=1"
+    },
+    {
+      "at": "0x38de851",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x898], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save original output pointer"
+    },
+    {
+      "at": "0x38de897",
+      "mnemonic": "call",
+      "operands": "0x3977ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize pre-group map"
+    },
+    {
+      "at": "0x38de8ec",
+      "mnemonic": "call",
+      "operands": "0xa7b9f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Recompute current endpoint via402 selector"
+    },
+    {
+      "at": "0x38de8f5",
+      "mnemonic": "call",
+      "operands": "0x158a900",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Map endpoint to numeric tag"
+    },
+    {
+      "at": "0x38de8fb",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xab0], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve tag"
+    },
+    {
+      "at": "0x38de901",
+      "mnemonic": "dec",
+      "operands": "eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unsigned (tag-1) comparison"
+    },
+    {
+      "at": "0x38de903",
+      "mnemonic": "cmp",
+      "operands": "eax, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Accept range tag1 or2"
+    },
+    {
+      "at": "0x38de906",
+      "mnemonic": "ja",
+      "operands": "0x38de950",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other tags skip this grouping append"
+    },
+    {
+      "at": "0x38de915",
+      "mnemonic": "call",
+      "operands": "0x185e0a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Find/create group using numeric tag address"
+    },
+    {
+      "at": "0x38de91b",
+      "mnemonic": "mov",
+      "operands": "r15, qword ptr [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Group node"
+    },
+    {
+      "at": "0x38de91f",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [r15 + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Group vector end"
+    },
+    {
+      "at": "0x38de92f",
+      "mnemonic": "call",
+      "operands": "0x1cab70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy internal message into group vector"
+    },
+    {
+      "at": "0x38de935",
+      "mnemonic": "add",
+      "operands": "qword ptr [r15 + 0x20], 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Group element stride744bytes"
+    },
+    {
+      "at": "0x38deb03",
+      "mnemonic": "add",
+      "operands": "rdi, 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Excluded item advances without append"
+    },
+    {
+      "at": "0x158a905",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rcx + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty endpoint test"
+    },
+    {
+      "at": "0x158a90a",
+      "mnemonic": "je",
+      "operands": "0x158a942",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty returns0"
+    },
+    {
+      "at": "0x158a90f",
+      "mnemonic": "call",
+      "operands": "0xbc4c60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Classification predicate boundary"
+    },
+    {
+      "at": "0x158a916",
+      "mnemonic": "mov",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Candidate tag2"
+    },
+    {
+      "at": "0x158a922",
+      "mnemonic": "call",
+      "operands": "0xbc5a60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional classification predicate"
+    },
+    {
+      "at": "0x158a92e",
+      "mnemonic": "call",
+      "operands": "0xbc32d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional classification predicate"
+    },
+    {
+      "at": "0x158a942",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty tag0"
+    },
+    {
+      "at": "0x158a94d",
+      "mnemonic": "call",
+      "operands": "0xbc5ea0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional classification predicate"
+    },
+    {
+      "at": "0x158a95e",
+      "mnemonic": "call",
+      "operands": "0xbc4a50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final boolean classifier"
+    },
+    {
+      "at": "0x158a963",
+      "mnemonic": "movzx",
+      "operands": "eax, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero extend boolean"
+    },
+    {
+      "at": "0x158a966",
+      "mnemonic": "inc",
+      "operands": "eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final boolean plus1 ->tag1/2"
+    },
+    {
+      "at": "0xbc4a8d",
+      "mnemonic": "call",
+      "operands": "0x12dd450",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First suffix predicate"
+    },
+    {
+      "at": "0xbc4a93",
+      "mnemonic": "mov",
+      "operands": "bl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First match result1"
+    },
+    {
+      "at": "0xbc4a97",
+      "mnemonic": "jne",
+      "operands": "0xbc4b05",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First match retains1"
+    },
+    {
+      "at": "0xbc4ac2",
+      "mnemonic": "call",
+      "operands": "0x12dd450",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second suffix predicate"
+    },
+    {
+      "at": "0xbc4ac8",
+      "mnemonic": "mov",
+      "operands": "ebx, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Propagate second result lowbyte"
+    },
+    {
+      "at": "0xbc4b40",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return preserved lowbyte"
+    },
+    {
+      "at": "0x12dd461",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Too-short string result0"
+    },
+    {
+      "at": "0x12dd489",
+      "mnemonic": "sete",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Equality normalizes lowbyte to0/1"
+    },
+    {
+      "at": "0x185e0c4",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [r8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First key byte"
+    },
+    {
+      "at": "0x185e0fb",
+      "mnemonic": "movzx",
+      "operands": "r15d, byte ptr [r8 + 3]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fourth key byte"
+    },
+    {
+      "at": "0x185e124",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [r14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load DWORD numeric key"
+    },
+    {
+      "at": "0x185e127",
+      "mnemonic": "cmp",
+      "operands": "edx, dword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare key to node+10"
+    },
+    {
+      "at": "0x38dec77",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read group numeric tag fromnode+10"
+    },
+    {
+      "at": "0x38dee70",
+      "mnemonic": "cmp",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tag2 branch"
+    },
+    {
+      "at": "0x38dee73",
+      "mnemonic": "je",
+      "operands": "0x38df080",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tag2 dispatch path"
+    },
+    {
+      "at": "0x38dee79",
+      "mnemonic": "cmp",
+      "operands": "eax, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tag1 branch"
+    },
+    {
+      "at": "0x38dee7c",
+      "mnemonic": "jne",
+      "operands": "0x38dec67",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other tags not submitted here"
+    },
+    {
+      "at": "0x38e04fb",
+      "mnemonic": "call",
+      "operands": "0x3977ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize returned group map before waiting loop"
+    },
+    {
+      "at": "0x38e0508",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0xaa8], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Accumulator byte initially1"
+    },
+    {
+      "at": "0x38e0530",
+      "mnemonic": "and",
+      "operands": "byte ptr [rbp + 0xaa8], dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "AND accumulator with current group result byte"
+    },
+    {
+      "at": "0x38e053e",
+      "mnemonic": "cmp",
+      "operands": "rsi, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task-map sentinel comparison"
+    },
+    {
+      "at": "0x38e058e",
+      "mnemonic": "call",
+      "operands": "0x38e2980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wait/extract group result"
+    },
+    {
+      "at": "0x38e0597",
+      "mnemonic": "movzx",
+      "operands": "edi, byte ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read group payload byte+18"
+    },
+    {
+      "at": "0x38e059b",
+      "mnemonic": "test",
+      "operands": "dil, dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero governs group-vector insertion"
+    },
+    {
+      "at": "0x38e059e",
+      "mnemonic": "je",
+      "operands": "0x38e07d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero takes diagnostic path without this insertion"
+    },
+    {
+      "at": "0x38e07b3",
+      "mnemonic": "lea",
+      "operands": "r8, [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Use task-node DWORD tag as returned group key"
+    },
+    {
+      "at": "0x38e07b7",
+      "mnemonic": "mov",
+      "operands": "r9, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Group result payload as move source"
+    },
+    {
+      "at": "0x38e07ba",
+      "mnemonic": "call",
+      "operands": "0x38e2ae0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Insert/move nonzero-result vector into returned map"
+    },
+    {
+      "at": "0x38e092a",
+      "mnemonic": "je",
+      "operands": "0x38e0530",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleanup rejoins accumulator update"
+    },
+    {
+      "at": "0x38e0957",
+      "mnemonic": "jmp",
+      "operands": "0x38e0530",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "After cleanup update accumulator"
+    },
+    {
+      "at": "0x38e1127",
+      "mnemonic": "call",
+      "operands": "0x185e4a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move returned groups into output"
+    },
+    {
+      "at": "0x38e112d",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rbp + 0x898]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Restore original output address"
+    },
+    {
+      "at": "0x38e1134",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rbp + 0xaa8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load aggregate byte"
+    },
+    {
+      "at": "0x38e113b",
+      "mnemonic": "mov",
+      "operands": "byte ptr [r14 + 0x40], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write output+40 explicitly after map move"
+    },
+    {
+      "at": "0x397800e",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initial map DWORD from supplied seed, later overwritten as load-factor"
+    },
+    {
+      "at": "0x397805b",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi], 0x3f800000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Map load-factor DWORD isfloat1.0, not backend status"
+    },
+    {
+      "at": "0x3978053",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Map bucket metadata+38"
+    },
+    {
+      "at": "0x185e59f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Transfer node sentinel/root"
+    },
+    {
+      "at": "0x185e5af",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Transfer node count"
+    },
+    {
+      "at": "0x185e603",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Last map member ends at+38; byte+40 separate"
+    },
+    {
+      "at": "0x38e29d9",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await shared task"
+    },
+    {
+      "at": "0x38e29e3",
+      "mnemonic": "call",
+      "operands": "0x3b4700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve promise value"
+    },
+    {
+      "at": "0x38e29ef",
+      "mnemonic": "je",
+      "operands": "0x38e2a7d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing value reaches badcast"
+    },
+    {
+      "at": "0x38e2a43",
+      "mnemonic": "jne",
+      "operands": "0x38e2a7d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Type mismatch reaches badcast"
+    },
+    {
+      "at": "0x38e2a6e",
+      "mnemonic": "add",
+      "operands": "rsi, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return stored typed object payload+8"
+    },
+    {
+      "at": "0x38e2b20",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [r15]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load returned numeric group key"
+    },
+    {
+      "at": "0x38e2b23",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x10], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store node+10 key"
+    },
+    {
+      "at": "0x38e2b2a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear moved source capacity"
+    },
+    {
+      "at": "0x38e2b39",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r14], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear moved source begin/end"
+    },
+    {
+      "at": "0x38e2b3d",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rdi + 0x18], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Place begin/end in node+18"
+    },
+    {
+      "at": "0x38e2b41",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Place capacity in node+28"
+    },
+    {
+      "at": "0x38e2d32",
+      "mnemonic": "inc",
+      "operands": "qword ptr [rbx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected insertion increments returned-map count"
+    },
+    {
+      "at": "0x17c8f03",
+      "mnemonic": "je",
+      "operands": "0x17c97df",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Prior caller bypasses backend for empty input; backend emptytrue does not create a notification"
+    },
+    {
+      "at": "0x17c8f89",
+      "mnemonic": "call",
+      "operands": "0x38de5a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default backend call"
+    },
+    {
+      "at": "0x17c8f8f",
+      "mnemonic": "test",
+      "operands": "byte ptr [rbp + 0x2b0], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test returned+40 bit0"
+    },
+    {
+      "at": "0x17c8f96",
+      "mnemonic": "je",
+      "operands": "0x17c941a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero bypasses selected signal loop"
+    },
+    {
+      "at": "0x17c94dc",
+      "mnemonic": "lea",
+      "operands": "rdx, [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Emit returned group vector, not original source identity"
+    },
+    {
+      "at": "0x17c94e7",
+      "mnemonic": "call",
+      "operands": "0x17cac20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected signal dispatcher"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Default38de5a0 has public operation label AddMessageListToDBForSync. Its selected grouping loop uses currenta7b9f0 endpoint to obtain numeric tag via158a900: empty endpoint returns0; selected nonempty predicates return1/2. Only tags1/2 are copied into groups. Group nodes are keyed by a DWORD tag, not endpoint string or certified friend/account. Complete predicate semantics remain unbound.",
+    "Groups with tag1 and2 follow distinct task construction branches. The result loop awaits each shared group task through38e2980, which retrieves a promise value and checks its stored type before returning payload. Await/exception and active executor behavior are not runtime-tested.",
+    "The output map is newly initialized, accumulator starts1, each group result byte+18 is ANDed into it, and nonzero group-result vectors are moved into returned nodes with original numeric tags. Map move185e4a0 handles first64bytes; output byte+40 is written separately from accumulator. The leading map DWORDfloat1.0 is not a success code.",
+    "On normal selected aggregation, mixed zero/nonzero group results can leave some groups in the returned map while aggregatebit0 iszero.403 caller then takes its diagnostic/cleanup branch rather than the selected manager+e8 notification loop. This is a conditional static path, not an observed failure, rollback, total storage failure, retry guarantee or proof no other notification exists.",
+    "Backend empty input explicitly returns an empty map with byte+40=1.403 caller itself skips the backend for empty input, so this does not imply an empty-input signal. An empty group-result iteration also retains initial accumulator1; neither boolean value proves that any new item was accepted.",
+    "The result flag aggregates processing flags. Final storage transaction/commit semantics, original-to-returned item preservation, authenticated direction/identity and first-batch/history/reconnect remain unbound. No database or process memory was accessed."
+  ],
+  "prior_evidence_reused_by_reference": [
+    "402-inbound-consumer-gates.json",
+    "403-inbound-group-notification.json"
+  ],
+  "remaining": [
+    "Endpoint classification/account/target binding",
+    "Child storage result producers and transaction semantics",
+    "Original/source/group/result item correspondence and final mutations",
+    "Actual subscribers/registration, direction and history/newness boundaries"
+  ]
+}

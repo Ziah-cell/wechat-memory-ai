@@ -1,5 +1,15 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 后端分组与两层汇总静态复核（406–409，2026-10-07）
+
+[406](evidence/406-inbound-backend-groups.json)记录数值tag分组、外层等待/返回map和output+40；[407](evidence/407-inbound-result-aggregation.json)记录两类任务表、组内汇总与额外派发入口。[409](evidence/409-inbound-backend-validation.json)重新核固定DLL哈希、选定函数完整解码、原始rel32/RIP算术、表槽、字段/分支断言及文档链接。确切计数以409为准，同一执行者，无独立审查；405列出的10脚本保持。
+
+离线投影覆盖tag0/1/2和无符号边界、空汇总、全非零及混合组结果，并区分部分返回组与总标志。这只检验所选条件和算术，不执行目标代码、数据库或真实消息，不证明完整控制流、事务回滚、逐条成功或无其他通知。
+
+扫描仅检查指定指令形式和unwind归属；完整e8候选与增加REX前缀筛选的f8候选范围不同，均非穷尽对象引用。静态表探针对表后的字符串/数据产生的非代码值未作为虚槽采用。实际订阅者未定位，构造/析构不能代替注册。历史writer仅提取graph/save定义，未执行旧顶层或重写历史证据。
+
+[408](evidence/408-inbound-backend-checkpoint.json)只核保存监听文件，仍停止且哈希不变；未检查当前窗口、操作电源、重启监听、进行产品/原生/并发测试、加载DLL、访问进程/聊天库/密钥或发送。0.1.22、自动回复关闭，观察方案未执行。
+
 ## 入站检查和通知包装路径静态复核（402–405，2026-10-06）
 
 [402](evidence/402-inbound-consumer-gates.json)记录零ID分流、第二个键容器、可选handler及追加赋值；[403](evidence/403-inbound-group-notification.json)记录结果分组和回调包装。[405](evidence/405-inbound-notification-validation.json)重新读取固定DLL，核完整选定函数区间、叶函数、原始rel32/RIP算术、表槽、字段/分支断言及文档链接。确切计数以405为准；401列出的8个历史脚本哈希保持。同一执行者，无独立审查。

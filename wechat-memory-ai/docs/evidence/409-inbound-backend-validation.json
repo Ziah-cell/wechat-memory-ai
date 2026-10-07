@@ -1,0 +1,209 @@
+{
+  "checked_at_utc": "2026-10-07T06:51:11.048028+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file static verification; not runtime compatibility, complete CFG or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 16,
+  "unique_anchored_leaves_checked": 0,
+  "unique_direct_edges_with_raw_rel32_math": 15,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 144,
+  "rip_references_with_raw_displacement_math": 3,
+  "branch_field_assertions": 126,
+  "explicit_table_targets_checked": 2,
+  "tag_range_projections": [
+    {
+      "synthetic_tag": 0,
+      "selected_group_append": false,
+      "account_identity": "unknown"
+    },
+    {
+      "synthetic_tag": 1,
+      "selected_group_append": true,
+      "account_identity": "unknown"
+    },
+    {
+      "synthetic_tag": 2,
+      "selected_group_append": true,
+      "account_identity": "unknown"
+    },
+    {
+      "synthetic_tag": 3,
+      "selected_group_append": false,
+      "account_identity": "unknown"
+    },
+    {
+      "synthetic_tag": 4294967295,
+      "selected_group_append": false,
+      "account_identity": "unknown"
+    }
+  ],
+  "result_aggregation_projections": [
+    {
+      "synthetic_child_or_group_flags": [],
+      "aggregate_byte": 1,
+      "selected_nonzero_results": [],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    },
+    {
+      "synthetic_child_or_group_flags": [
+        1
+      ],
+      "aggregate_byte": 1,
+      "selected_nonzero_results": [
+        0
+      ],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    },
+    {
+      "synthetic_child_or_group_flags": [
+        0
+      ],
+      "aggregate_byte": 0,
+      "selected_nonzero_results": [],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    },
+    {
+      "synthetic_child_or_group_flags": [
+        1,
+        1
+      ],
+      "aggregate_byte": 1,
+      "selected_nonzero_results": [
+        0,
+        1
+      ],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    },
+    {
+      "synthetic_child_or_group_flags": [
+        1,
+        0
+      ],
+      "aggregate_byte": 0,
+      "selected_nonzero_results": [
+        0
+      ],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    },
+    {
+      "synthetic_child_or_group_flags": [
+        0,
+        1
+      ],
+      "aggregate_byte": 0,
+      "selected_nonzero_results": [
+        1
+      ],
+      "storage_commit": "unknown",
+      "new_message_acceptance": "unknown"
+    }
+  ],
+  "projection_scope": "Selected unsigned tag condition, nonzero-result selection and AND accumulation only; not complete storage/transaction/callback behavior",
+  "previous_analysis_script_hashes_unchanged": 10,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 620,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and406-409 fixed-file metadata only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Historical writer graph/save extracted as AST definitions; verifier prefix copied as text. Historical top-level code not executed and old evidence retained.",
+    "LEA/ADD scan results are candidates only; +e8 includes18327 candidate owned ranges, +f8 uses a narrower REX prefix prefilter. No complete object-reference or subscriber discovery claim.",
+    "Table probes extended into subsequent non-code data; only confirmed two group-task slots are used in these graphs.",
+    "The same+e8 offset/dispatcher in additional entrypoints does not authenticate receiver identity or exclusive inbound origin.",
+    "Map leadingfloat1.0, typed promise completion, group byte+18 and final byte+40 are distinct fields/states. Vector partial results and aggregatezero are not collapsed into total failure or rollback.",
+    "Underlying10a3240 selector, child task producers/commit semantics, source-to-result mapping and actual subscriber registration remain open."
+  ],
+  "bounded_scan_caches": [
+    {
+      "cache_path": "data/inbound-backend-20261007/offset-e8.json",
+      "sha256": "3d9dd7895a5aaef9ea74a2f26904e53173b4b10fbbbfb5ee43243e46324892bd",
+      "candidate_ranges": 18327,
+      "matched_forms": 1217,
+      "scope": "Selected LEA/ADD forms only, not exhaustive object references",
+      "fast_rex_prefix_filter": false
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/offset-f8.json",
+      "sha256": "61da34ec3919030c9aa671379f79800db378ee2a85a74ac0f3c01c52fa14d449",
+      "candidate_ranges": 3648,
+      "matched_forms": 1008,
+      "scope": "Selected LEA/ADD forms only, not exhaustive object references",
+      "fast_rex_prefix_filter": true
+    }
+  ],
+  "remaining": [
+    "Endpoint classification/account/target binding",
+    "Child storage result producers and transaction semantics",
+    "Original/source/group/result item correspondence and final mutations",
+    "Actual subscribers/registration, direction and history/newness boundaries",
+    "Lower child tasks and result flag production/commit contract",
+    "Actual group-task executor/current scope and cancellation/exit",
+    "Actual signal subscriber registration and association with manager instance",
+    "Source/input/child/group/result mapping plus identity/direction/newness"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-backend-20261007/write_evidence.py",
+      "sha256": "340588b12257bbabd1586472ba9450f42c1d23e152163e646c20138c7db4b657"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/verify_evidence.py",
+      "sha256": "5a50d512b49f2983ec864c4faef0d24030c54e347eb72005c13955888e2a53ce"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/update_docs.py",
+      "sha256": "02df89226750b496dc7540be52a73925c3e8644e2ab3a9163dafe49463e563db"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/member_refs.py",
+      "sha256": "2b294a4f8cec26285b0939ae0f07a89773347f842730b9a89de06c6f5fb6db12"
+    },
+    {
+      "cache_path": "data/inbound-backend-20261007/offset_refs.py",
+      "sha256": "55851390ccf8c5baf5726dcf63ff6939550b7aef1279d08c9d792c5e5bc12183"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}
