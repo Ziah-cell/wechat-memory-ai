@@ -1,0 +1,773 @@
+{
+  "checked_at_utc": "2026-10-07T08:23:35.278485+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Same-executor fixed-file selected subscriber paths; not live integration, complete CFG or runtime compatibility",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ebd6a0",
+      "end": "0x2ebd7b3",
+      "role_inference": "Earlier producer wrapper obtains service through707420 before17cb2c0",
+      "instruction_count": 90,
+      "disk_range_sha256": "6cd3c23c3fd6f813aa4238934517d699eeca6f433b58c60a726c03e32dc54524",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x707420",
+      "end": "0x70753d",
+      "role_inference": "Shared service getter with existing-promise and lookup/factory paths",
+      "instruction_count": 83,
+      "disk_range_sha256": "7fdff67e5c65207d07858a1889160325d4e25bfcc08f7e1d1669895a9a300e72",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x32dda0",
+      "end": "0x32e124",
+      "role_inference": "Generic lookup; fallback captures factory descriptor in immediate callable",
+      "instruction_count": 241,
+      "disk_range_sha256": "c901f6d8acbddd56ea61882c07b370f9a2fc822eedb6e1009537e434f74550d8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b4b40",
+      "end": "0x3b4c57",
+      "role_inference": "Immediate holder invocation via callable table+10",
+      "instruction_count": 88,
+      "disk_range_sha256": "3ac7c21dc235178096966ddfcd984ec12d734aaabffb1cff8505ee4c24f08215",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x32f960",
+      "end": "0x32fd9b",
+      "role_inference": "Fallback callable uses captured factory table+10 then transfers result",
+      "instruction_count": 307,
+      "disk_range_sha256": "ec5c6f6cbb23a40aac22148f5c0c055f3b5db8754b44ccae1ae038c7adbef6e1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x742fd0",
+      "end": "0x743024",
+      "role_inference": "Factory invokes743030 and returns constructed shared pair",
+      "instruction_count": 23,
+      "disk_range_sha256": "8e4bb2b0a4e85406431eec8238cb6a05fbe9cee06b7cc337e7867c8c514225c5",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x743030",
+      "end": "0x743107",
+      "role_inference": "Shared allocation; actual manager begins allocation+10 and calls1799070",
+      "instruction_count": 68,
+      "disk_range_sha256": "19380e249e78337aae2c3d0407c64a9fbfb32c5b2a0e3770ede4e49c1303db22",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1799070",
+      "end": "0x179a0c9",
+      "role_inference": "Prior default manager constructor and signal member+e8",
+      "instruction_count": 822,
+      "disk_range_sha256": "d249c3c20b242ab9e879ea9a0358614510b238929fee58b74160ba9bde3f7429",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2b9ac80",
+      "end": "0x2b9bb75",
+      "role_inference": "Selected consumer registration: same getter, service+e8, callback2b9dc70",
+      "instruction_count": 1109,
+      "disk_range_sha256": "648dc564b945d65e5344e08680bca94e57d6069b56a67307cf7830a11559a2c1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a7360",
+      "end": "0x4a7509",
+      "role_inference": "Copy descriptor into68-byte node and append to signal state list",
+      "instruction_count": 116,
+      "disk_range_sha256": "f8a1a5bc7376cfea2ea268bdece3a53a51a5c787f7f02b34eb044b2f05ff5c4f",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2ebd6ef",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x7074a5",
+      "kind": "call",
+      "to": "0x32dda0"
+    },
+    {
+      "at": "0x32e0a9",
+      "kind": "call",
+      "to": "0x3b4b40"
+    },
+    {
+      "at": "0x742fec",
+      "kind": "call",
+      "to": "0x743030"
+    },
+    {
+      "at": "0x743075",
+      "kind": "call",
+      "to": "0x1799070"
+    },
+    {
+      "at": "0x1799c4b",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x1799da1",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x1799ef7",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x179a04e",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9acd1",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x2b9ad58",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9ae3b",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x2b9aeb4",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9af97",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x2b9b002",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b0e5",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x2b9b15e",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b2ba",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b416",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b4f9",
+      "kind": "call",
+      "to": "0x707420"
+    },
+    {
+      "at": "0x2b9b5ca",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b7aa",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9b8fc",
+      "kind": "call",
+      "to": "0x4a7360"
+    },
+    {
+      "at": "0x2b9ba6e",
+      "kind": "call",
+      "to": "0x4a7360"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8ff9698",
+      "role_inference": "Factory descriptor installed by707420",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x742fd0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xae50"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa2328",
+      "role_inference": "Lookup fallback callable",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x32f960"
+        }
+      ]
+    },
+    {
+      "rva": "0x9284938",
+      "role_inference": "Default manager table; selected slot is not claimed as registration",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x18",
+          "target": "0x179f3d0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2ebd6ef",
+      "mnemonic": "call",
+      "operands": "0x707420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Producer uses707420"
+    },
+    {
+      "at": "0x2ebd6f5",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp - 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Producer uses returned object"
+    },
+    {
+      "at": "0x2ebd702",
+      "mnemonic": "call",
+      "operands": "0x17cb2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Producer invokes17cb2c0"
+    },
+    {
+      "at": "0x707444",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x88f224d]",
+      "rip_targets": [
+        "0x8ff9698"
+      ],
+      "public_static_strings": [],
+      "observation": "Factory table8ff9698"
+    },
+    {
+      "at": "0x70744b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install factory descriptor"
+    },
+    {
+      "at": "0x707466",
+      "mnemonic": "call",
+      "operands": "0x32ef40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initial lookup boundary32ef40"
+    },
+    {
+      "at": "0x707479",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rbp - 0x48], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Existing-promise discriminator"
+    },
+    {
+      "at": "0x707487",
+      "mnemonic": "call",
+      "operands": "0x5aed0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Existing-promise extraction"
+    },
+    {
+      "at": "0x707491",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy extracted pair to output"
+    },
+    {
+      "at": "0x7074a5",
+      "mnemonic": "call",
+      "operands": "0x32dda0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Lookup/factory fallback"
+    },
+    {
+      "at": "0x7074c0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return object pointer from selected lookup result"
+    },
+    {
+      "at": "0x32de8d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x10], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save factory descriptor pointer"
+    },
+    {
+      "at": "0x32e077",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c742aa]",
+      "rip_targets": [
+        "0x8fa2328"
+      ],
+      "public_static_strings": [],
+      "observation": "Fallback holder table8fa2328"
+    },
+    {
+      "at": "0x32e096",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x40], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture factory pointer atclosure+18"
+    },
+    {
+      "at": "0x32e09e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x20], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Function holder+38 points at closure base"
+    },
+    {
+      "at": "0x32e0a9",
+      "mnemonic": "call",
+      "operands": "0x3b4b40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke immediate wrapper"
+    },
+    {
+      "at": "0x32e0ff",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Existing-object path uses factory conversion+18"
+    },
+    {
+      "at": "0x3b4b9c",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve holder+38"
+    },
+    {
+      "at": "0x3b4bb0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke callable+10"
+    },
+    {
+      "at": "0x32fa3f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r15 + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve captured factory descriptor"
+    },
+    {
+      "at": "0x32fa4a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call factory slot+10"
+    },
+    {
+      "at": "0x32fb49",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Factory conversion+18"
+    },
+    {
+      "at": "0x742fec",
+      "mnemonic": "call",
+      "operands": "0x743030",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call actual shared factory"
+    },
+    {
+      "at": "0x74306e",
+      "mnemonic": "lea",
+      "operands": "rdi, [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Object is allocation+10"
+    },
+    {
+      "at": "0x743075",
+      "mnemonic": "call",
+      "operands": "0x1799070",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call default manager constructor"
+    },
+    {
+      "at": "0x74307b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return that object pointer"
+    },
+    {
+      "at": "0x17990a6",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x7aeb88b]",
+      "rip_targets": [
+        "0x9284938"
+      ],
+      "public_static_strings": [],
+      "observation": "Manager table9284938"
+    },
+    {
+      "at": "0x17990ad",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install manager table"
+    },
+    {
+      "at": "0x1799119",
+      "mnemonic": "add",
+      "operands": "rcx, 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal member+e8"
+    },
+    {
+      "at": "0x1799124",
+      "mnemonic": "call",
+      "operands": "0x4a6f70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal base constructor"
+    },
+    {
+      "at": "0x179913c",
+      "mnemonic": "call",
+      "operands": "0x4a6ba0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal nested state constructor"
+    },
+    {
+      "at": "0x1799142",
+      "mnemonic": "lea",
+      "operands": "rsi, [rip + 0x7aec2ef]",
+      "rip_targets": [
+        "0x9285438"
+      ],
+      "public_static_strings": [],
+      "observation": "Signal table9285438"
+    },
+    {
+      "at": "0x1799150",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0xe8], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install signal table atmanager+e8"
+    },
+    {
+      "at": "0x2b9acd1",
+      "mnemonic": "call",
+      "operands": "0x707420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Consumer uses same707420 getter"
+    },
+    {
+      "at": "0x2b9acd7",
+      "mnemonic": "mov",
+      "operands": "ebx, 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Offset materialized as immediate; missed by prior LEA/ADD scan"
+    },
+    {
+      "at": "0x2b9acdc",
+      "mnemonic": "add",
+      "operands": "rbx, qword ptr [rbp + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compute service+e8"
+    },
+    {
+      "at": "0x2b9acf7",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected executor from returned scope+10"
+    },
+    {
+      "at": "0x2b9ad09",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 8], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Descriptor context is consumer receiver"
+    },
+    {
+      "at": "0x2b9ad0d",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip - 0x21c1034]",
+      "rip_targets": [
+        "0x9d9ce0"
+      ],
+      "public_static_strings": [],
+      "observation": "Descriptor thunk9d9ce0"
+    },
+    {
+      "at": "0x2b9ad18",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x2f51]",
+      "rip_targets": [
+        "0x2b9dc70"
+      ],
+      "public_static_strings": [],
+      "observation": "Descriptor member2b9dc70"
+    },
+    {
+      "at": "0x2b9ad23",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero member adjustment"
+    },
+    {
+      "at": "0x2b9ad2b",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip - 0x29ccf42]",
+      "rip_targets": [
+        "0x1cddf0"
+      ],
+      "public_static_strings": [],
+      "observation": "Descriptor comparison helper1cddf0"
+    },
+    {
+      "at": "0x2b9ad46",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fifth argument executor"
+    },
+    {
+      "at": "0x2b9ad4b",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp - 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second argument descriptor"
+    },
+    {
+      "at": "0x2b9ad4f",
+      "mnemonic": "mov",
+      "operands": "rcx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First argument service+e8"
+    },
+    {
+      "at": "0x2b9ad58",
+      "mnemonic": "call",
+      "operands": "0x4a7360",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Actual registration call4a7360"
+    },
+    {
+      "at": "0x4a7384",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read fifth argument executor"
+    },
+    {
+      "at": "0x4a73a5",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy descriptor first16bytes"
+    },
+    {
+      "at": "0x4a73bc",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x30], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store thirdargument atlocalnode+38"
+    },
+    {
+      "at": "0x4a73c0",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x28], r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store fourthargument flags"
+    },
+    {
+      "at": "0x4a73c4",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x20], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve executor"
+    },
+    {
+      "at": "0x4a73f7",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Lock signal common state"
+    },
+    {
+      "at": "0x4a7421",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x68",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocate68-byte node"
+    },
+    {
+      "at": "0x4a7443",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Descriptor context/thunk ->node+8/+10"
+    },
+    {
+      "at": "0x4a7447",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x18], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member storage ->node+18"
+    },
+    {
+      "at": "0x4a744b",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x28], xmm2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Descriptor remainder including comparisonhelper ->node+28"
+    },
+    {
+      "at": "0x4a744f",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x38], xmm3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Thirdargument/flags ->node+38/+40"
+    },
+    {
+      "at": "0x4a7457",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x48], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Executor ->node+48"
+    },
+    {
+      "at": "0x4a748d",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [r14 + 0xa8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get tail-link pointer"
+    },
+    {
+      "at": "0x4a749a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Link new node"
+    },
+    {
+      "at": "0x4a749d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0xa8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Update tail-link pointer"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Producer2ebd6a0 and selected consumer2b9ac80 both obtain their service through707420. Consumer computes returned pointer+e8 with MOV EBX,e8; ADD RBX,[local], then calls4a7360. The older LEA/member-displacement scan omitted this instruction pattern; its failure did not show absence of subscribers.",
+    "707420 installs factory descriptor8ff9698. Its lookup/fallback path32dda0 captures that descriptor into8fa2328 callable;3b4b40 invokes+10=32f960, which calls factory+10=742fd0 ->743030 ->1799070. The constructed object gets manager table9284938 and signal member+e8 table9285438, matching the earlier producer analysis. Existing service/promise paths are separate: this binds the default constructed class, not a live instance or replacement-free registry.",
+    "4a7360 is registration: it copies the supplied descriptor into a new0x68-byte node, stores executor+48 and flags+40, and appends the node through signal-state+ a8 under lock. The selected subscriber supplies context=consumer receiver, thunk9d9ce0, stored member2b9dc70, zero adjustment, zero flags and selected scope+10 executor.",
+    "The subscriber is concrete disk-static code, not an installed external adapter. Account/session identity, live receiver, whether the executor is nonnull, event cause/newness and minimized runtime operation remain unverified."
+  ],
+  "remaining": [
+    "Active registry and account/session identity; root+68 member producer",
+    "Incoming versus own/history/reconnect event criteria",
+    "Scope/executor lifecycle and external observation method",
+    "No live registration or callable adapter"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "397-inbound-batch-consumer.json",
+    "403-inbound-group-notification.json"
+  ]
+}

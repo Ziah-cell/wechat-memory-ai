@@ -1,6 +1,6 @@
 # 4.1.15.50 隔离观察方案：调用条件与结果判据
 
-2026-10-07更新。本方案把343–413的静态材料转成可审阅的观察对象、记录字段和停止条件，服务于普通个人号单测试好友、中文文字、真正任务栏最小化的目标。**这是方案与证据清单，尚未运行，也未形成可调用适配器。** 产品v0.1.22、自动回复关闭。
+2026-10-07更新。本方案把343–417的静态材料转成可审阅的观察对象、记录字段和停止条件，服务于普通个人号单测试好友、中文文字、真正任务栏最小化的目标。**这是方案与证据清单，尚未运行，也未形成可调用适配器。** 产品v0.1.22、自动回复关闭。
 
 ## 当前可做与进入观察前还缺什么
 
@@ -22,6 +22,8 @@
 
 410–413补缺对象跳过子任务，以及共享下层处理器的空过滤true、空map true和非空map的`(acc&1)|byte`。在0/1值域是OR，恰为1的键才选择返回项；上层仍AND。须保留跳过数量、每层归约规则和逐键状态，不能以总标志认证全部原项或事务提交。
 
+414–417补到具体订阅注册：生产者/订阅者使用707420，默认工厂到1799070；service+e8→4a7360注册2b9dc70和2e34690，9d9ce0桥接消息向量。解除4a7570打标记，不能视为排队工作清空。活跃实例、账号和新来信判据仍未认证。
+
 ## 观察清单
 
 | 编号与目的 | 已有静态锚点 | 将来隔离观察只需记录 | 满足条件与停止条件 |
@@ -31,7 +33,7 @@
 | O3 验证每次尝试的计时与重试 | 385本层预算与每轮timeout；390上层第二次调用有B102/state10/原始type49子类及标志限制；373具体looper用毫秒 | 逻辑请求/handler调用/公共尝试编号、原始类型/子类与上层标志变化、原始预算及剩余值、A/B、每次timeout与退避参数、实际executor/单位、注册/到期/取出/移除阶段、单调时间差、句柄及触发次数 | 原始type1不满足390上层判据，不能由handler名称外推。先认证实际executor再解释120000/1000；不把每次参数当总时限或相乘成全局网络次数。不添加应用重试；等待取消/异常、重复/缺失保留unknown，不改变电源或重启原监听。 |
 | O4 验证对象释放和停止 | 369正常清理；374一次性取出清表后才调用，取消可查空返回；378第二scope取消/等待/析构、kernel取消/等待后网络服务停止/清理；group析构可跳过join | 各对象会话内编号、持有/释放、任务取出、回调开始/退出、取消结果、group成员等待开始/退出、auto-join分支/跳过原因、网络停止、最终looper quit/join/销毁、队列清空独立事件 | group等待、析构返回、服务停止、promise完成均不能代替全部闭包退出/撤销证据。网络接口须保留子对象调整，不能把停止方法当主对象析构。若取消后调用或析构跳过等待，保留顺序并停止新增工作，不能宣称未发送；不主动释放客户端对象或强制终止微信。 |
 | O5 区分提交、解析与业务结果 | 358、363–364公共任务/parse限制；386文字首项消费；389本地state分支、整体A/B保留、最终对象替换与条件本地信号；390上层promise可带错误resolve1 | handler及原始类型、逻辑请求/handler调用/尝试/任务编号、目标来源与会话内匹配编号、解析/字段存在性、声明/实际条数、整体/逐条/本地状态、结果所属层/对象类别、通知门槛与订阅者编号；缺证据用unknown | 整体0/0与本地state5可在所查条件分支共存，不能合并为单个success。最终+28不是必然原协议响应。本地数值信号无已认证对端含义；真实订阅者与更新效果待补。字段8/目标候选不等于唯一身份，任务号不代替跨尝试或目标匹配；结果未知不重发。 |
-| O6 准入真实来信 | 397–407源/扩展/内部批次、门槛、数值tag和上层AND；410缺对象跳任务；411空过滤/空map true及下层OR | 经认证账号/好友别名，原项→子分组→创建任务→返回项关联，跳过原因/数量，各阶段输入/返回数量，逐键byte原值/归约规则/结果层，promise阶段，ID/时间/过滤/缓存域，最终方向依据，信号receiver/订阅注册/回调阶段，首批历史重连和最小化布尔 | 数值tag不代替身份或rawtype，不能据同偏移合并实例；不合并下层OR与上层AND；true不证明所有原项覆盖。非零不一律等于1，缺键/类型异常单列；部分结果或空true不认证持久提交、新来信或回滚。身份/方向/订阅未绑定保持unknown；首批只建基线，旧/自身/unknown不交付，边界变化停止，不补时间/ID/方向/积压。 |
+| O6 准入真实来信 | 397–407源/扩展/内部批次、门槛、数值tag和上层AND；410缺对象跳任务；411空过滤/空map true及下层OR | 经认证账号/好友别名，原项→子分组→创建任务→返回项关联，跳过原因/数量，各阶段输入/返回数量，逐键byte原值/归约规则/结果层，promise阶段，ID/时间/过滤/缓存域，最终方向依据，服务getter/实例与账号域、注册descriptor/thunk/member/executor、直接或排队回调阶段、解除标记及实际排空证据，首批历史重连和最小化布尔 | 数值tag不代替身份或rawtype，不能据同偏移合并实例；不合并下层OR与上层AND；true不证明所有原项覆盖。非零不一律等于1，缺键/类型异常单列；部分结果或空true不认证持久提交、新来信或回滚。身份/方向/活跃订阅未绑定保持unknown；首批只建基线，旧/自身/unknown不交付，边界变化停止，不补时间/ID/方向/积压。 |
 | O7 受控好友送达判据 | 385内部尝试；389本地状态/信号；390受限上层调用和带错误promise，均不提供独立好友收到证明 | 事先批准的逻辑请求编号、handler调用/公共尝试/本地任务编号、双方对应事件、最终结果对象类别、是否重复、最小化观察、人工对端确认及时间 | 须另有明确固定文本发送授权且前置条件满足，具体方案须说明各调用层。单个中文逻辑请求，本项目不追加重发或自动AI；本地信号、整体0/0或promise1不代替对端证据。内部尝试/重复/缺失不能解释则不判通过，不能外推长期可靠性。 |
 
 O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于允许本项目主动构造请求。O5只能在解析和关联证据真实可观测时成立，不能新增人工verified开关填补。O6/O7与模型、真实记忆及自动回复仍隔离。
@@ -40,7 +42,7 @@ O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于�
 
 设计记录字段：`build_hash / run_id / sequence / skipped_subgroup_count / subgroup_skip_reason / filtered_item_count / result_map_byte / aggregation_operator / storage_commit_evidence / child_task_token / numeric_group_tag / result_aggregation_level / input_item_count / returned_item_count / partial_result_state / result_group_token / source_group_mapping / backend_result_bit / signal_kind / subscriber_registration_state / callback_stage / batch_token / filter_branch / time_value_stage / time_adjustment_basis / identity_source_state / cache_epoch / sync_phase / source_field_presence / source_id_zero / queue_token / consumer_token / transform_stage / descriptor_kind / direction_basis / logical_request_token / handler_call_token / attempt_token / task_token / retry_remaining / raw_message_type / raw_subtype / upper_flag_before_after / result_layer / result_payload_kind / subscriber_token / monotonic_elapsed / stage / object_token / parent_token / thread_token / context_kind / executor_table_rva / raw_timeout / raw_backoff / certified_unit / state_before / state_after / outcome / missing_evidence`。整体/逐条/本地状态须分别标注所属层；阶段区分注册、取出、回调开始/退出及移除返回，每次会话重新分配对象编号。不保存原始地址、昵称、账号ID、正文、完整响应、数据库内容或密钥。协议字段如不能脱敏且保留可验证关联，先停在设计阶段。静态证据中的DLL RVA是代码位置，不是活跃对象地址。
 
-1. **离线准备（当前范围）**：保持固定输入，优先155b940内fe6240回调、map字节生产者/存储提交及重复过滤/逐项保留规则、manager+e8真实订阅者/注册、root+68身份来源；补最终方向、过滤/reset、时间及首批历史重连，区分两层结果和promise完成，保留实际receiver/executor/scope与退出。410–413及本方案交付的是离线进展，不加载DLL。
+1. **离线准备（当前范围）**：优先root+68账号来源和自身/历史/重连过滤，将414–415的注册/回调关系纳入可审阅的最小接收观察条件；确认实际receiver/executor/scope与退出。暂不继续扩散到更深存储事务。414–417仍是磁盘静态研究，不加载DLL。
 2. **有界只读观察（尚未授权/未实现）**：方法和前置条件具备后，方案建议一次最多5分钟或200条元数据事件，以先到者结束；无适配器发送、模型或记忆写入。预算是拟议采集上限，不是微信超时值。必须先有真实最小化状态与单账号/单目标的可信限定，不能沿用停止文件代替。
 3. **一次受控发送（尚未授权/未执行）**：仅在前述缺口满足且具体发送获批后，执行一次固定中文文本，分别记提交、解析、业务响应、对端观察。任何结果不明保留unknown并结束，不通过重试“验证成功”。
 4. **退出审阅**：核对事件顺序、遗漏/重复、所有权清理和观察器退出；缺少任一条件即标本次未通过，记录具体缺口。之后才讨论来源桥接与更长时间运行。自动回复仍需既有最终明确确认。
@@ -49,7 +51,7 @@ O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于�
 
 ## 本轮结论与下一项
 
-已补缺对象子分组跳过、共用下层调用体和嵌套OR结果；上层AND仍不能认证原项全覆盖。下一项为**155b940内fe6240回调/map字节生产者与事务提交、真实manager+e8订阅者/注册、root+68身份来源**；继续追逐项对应、最终方向、ID/缓存域、首批历史重连换号和时间调整。其他变换/异常、发送通知、实际receiver/executor/scope及退出仍缺。O1–O7仍无已认证采集方法，未开始运行验收。
+已补707420默认工厂、service+e8具体订阅注册与回调参数链。下一项为**root+68账号来源与自身/历史/重连过滤边界**，形成最小接收观察的可审阅实现条件；活跃实例、执行器和回调排空仍缺。O1–O7没有已认证采集方法，未开始运行验收。
 
 证据：[367执行与恢复](evidence/367-send-executor-resume.json)、[368计时参数](evidence/368-send-timeout-parameter.json)、[369生命周期](evidence/369-send-lifetime-boundaries.json)、[370保存状态](evidence/370-send-executor-checkpoint.json)、[371静态复核](evidence/371-send-executor-validation.json)。技术说明见[兼容性报告](SEND_COMPATIBILITY_4_1_15_50.md)。
 
@@ -72,3 +74,5 @@ O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于�
 2026-10-07后端续查：[406分组和外层结果](evidence/406-inbound-backend-groups.json)、[407组内汇总及信号边界](evidence/407-inbound-result-aggregation.json)、[408保存状态](evidence/408-inbound-backend-checkpoint.json)、[409静态复核](evidence/409-inbound-backend-validation.json)。
 
 2026-10-07子任务续查：[410创建与跳过](evidence/410-inbound-child-dispatch.json)、[411下层OR结果](evidence/411-inbound-storage-result.json)、[412保存状态](evidence/412-inbound-storage-checkpoint.json)、[413静态复核](evidence/413-inbound-storage-validation.json)。
+
+2026-10-07接收入口续查：[414注册](evidence/414-inbound-subscriber-registration.json)、[415派发与解除](evidence/415-inbound-subscriber-dispatch.json)、[416保存状态](evidence/416-inbound-entry-checkpoint.json)、[417静态复核](evidence/417-inbound-entry-validation.json)。

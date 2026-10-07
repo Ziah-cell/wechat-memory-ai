@@ -1,0 +1,128 @@
+{
+  "checked_at_utc": "2026-10-07T08:27:56.170084+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file verification; no target execution, full CFG certification or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 18,
+  "unique_anchored_leaves_checked": 2,
+  "unique_direct_edges_with_raw_rel32_math": 31,
+  "unique_tables_checked": 4,
+  "unique_instruction_observations_checked": 123,
+  "rip_references_with_raw_displacement_math": 12,
+  "branch_field_assertions": 78,
+  "explicit_table_targets_checked": 3,
+  "explicit_rip_targets_checked": 12,
+  "descriptor_node_mapping": {
+    "context": {
+      "descriptor_offset": "0x0",
+      "node_offset": "0x8"
+    },
+    "thunk": {
+      "descriptor_offset": "0x8",
+      "node_offset": "0x10"
+    },
+    "member": {
+      "descriptor_offset": "0x10",
+      "node_offset": "0x18"
+    },
+    "adjustment": {
+      "descriptor_offset": "0x18",
+      "node_offset": "0x20"
+    },
+    "comparison": {
+      "descriptor_offset": "0x28",
+      "node_offset": "0x30"
+    }
+  },
+  "previous_analysis_script_hashes_unchanged": 8,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 673,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and414-417 new static evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Historical graph/save definitions extracted through AST; generic verifier prefix copied as text, old writers not executed.",
+    "MOV-immediate candidates include allocator false positives; only traced registration instructions support conclusions. No absence claim from any scan.",
+    "Obfuscated disk labels were not guessed or decoded into business names.",
+    "Default factory identity is not proof of active registry instance, account or session.",
+    "Registration4a7360 and removal4a7570/4a7260 separately decoded. Marked nodes do not establish draining copied executor work.",
+    "Root+68 producer remains unresolved; rejected output-object candidates were not promoted to account identity."
+  ],
+  "remaining": [
+    "Active registry and account/session identity; root+68 member producer",
+    "Incoming versus own/history/reconnect event criteria",
+    "Scope/executor lifecycle and external observation method",
+    "No live registration or callable adapter",
+    "root+68 producer and authenticated current account/friend source",
+    "Live/new/history/self classification and cache reset scope",
+    "Actual executor, downstream callback completion and teardown ordering",
+    "Minimized read-only prototype still unavailable"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-entry-20261007/write_evidence.py",
+      "sha256": "9951850cdcb17654d93a36d94588438bc572a1971eac6cc44b6999f54bb7e6b4"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/verify_evidence.py",
+      "sha256": "a351d292768f52b90b397585e9c0a0b0bf07c9b82cda26ad58e97be6976e912a"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/verification_checks.py",
+      "sha256": "ca30359b5d5721ddaa01564fb63c98c99952a08847918eacf2e95f0d6d9de288"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/update_docs.py",
+      "sha256": "c9fb76e931aac3d40bb8d2baa99323f1332d76d437f8232144047f92728bfccd"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/rank_signal_candidates.py",
+      "sha256": "05a17ef02d293df02d0ab1ff343012b5329e2c6d88447367e56c90724dde7ba1"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/member_pair_candidates.py",
+      "sha256": "e6e5a730ce85c0102213164002f753d68f911e814a71cf292e3a2063a8630fe4"
+    },
+    {
+      "cache_path": "data/inbound-entry-20261007/immediate_member_candidates.py",
+      "sha256": "b29357eb2b63e1a86cd952647cf01154baf4919fa39e88902fe3b2cc674cbd17"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

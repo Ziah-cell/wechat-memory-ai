@@ -1,0 +1,717 @@
+{
+  "checked_at_utc": "2026-10-07T08:23:35.278485+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Same-executor fixed-file selected subscriber paths; not live integration, complete CFG or runtime compatibility",
+  "unwind_nodes": [
+    {
+      "rva": "0x17cac20",
+      "end": "0x17cb073",
+      "role_inference": "Prior signal dispatch to node callback or copied executor closure",
+      "instruction_count": 266,
+      "disk_range_sha256": "3e0856dbdeacf3c1186862913e31ed5d16e1358a4c0a0f4eca8a55fd759e8121",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2b9dc70",
+      "end": "0x2b9de55",
+      "role_inference": "Selected subscriber receives vector and copies it into another scheduled holder",
+      "instruction_count": 131,
+      "disk_range_sha256": "fd0b1261b72201b14f1f1cf4654237594325a7dd981034e2ecbba5f9cd1588ad",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2e34190",
+      "end": "0x2e34336",
+      "role_inference": "Second selected consumer registers2e34690 through same getter/signal",
+      "instruction_count": 125,
+      "disk_range_sha256": "d84c6d046150068ec13d45511c8afe6222633239b170f2d052959b270a93e031",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2e34690",
+      "end": "0x2e347d7",
+      "role_inference": "Second subscriber iterates744-byte items and appliesa7bec0 before another service call",
+      "instruction_count": 95,
+      "disk_range_sha256": "33d851687c762e619b8ededff7ce57771d691bd753fd038f2f12c77798f54da0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xa7bec0",
+      "end": "0xa7bf0c",
+      "role_inference": "Checks both endpoint strings throughbc3690/bc3730; predicate meaning unbound",
+      "instruction_count": 28,
+      "disk_range_sha256": "557f54cbdebafd54c93a3513c62971a4e124e62164fe34bbaf91919cdcb02ddc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ba0b20",
+      "end": "0x2ba127f",
+      "role_inference": "Matching subscriber removal reconstructs same context/thunk/member descriptor",
+      "instruction_count": 554,
+      "disk_range_sha256": "b274e8f478dfc57910eebe5e17bcd421233db0f46b1e7a1e9bc43983faa71acb",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a7570",
+      "end": "0x4a7666",
+      "role_inference": "Match context, thunk and storage comparator then set node flagbit1",
+      "instruction_count": 72,
+      "disk_range_sha256": "3d0aae31e9a0d1fe5bdb59a5f384e928e1d6b93336e73eaf37b863d00c4c2f17",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4a7260",
+      "end": "0x4a7324",
+      "role_inference": "Context-only match also sets node flagbit1",
+      "instruction_count": 57,
+      "disk_range_sha256": "ea8e1dcf6ac8018109d84ede2de2c932be5709cd509460060096e82b84e98a00",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x9d9ce0",
+      "size": 16,
+      "anchor": "Both selected registration descriptors store this thunk",
+      "instructions": [
+        {
+          "at": "0x9d9ce0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x9d9ce3",
+          "mnemonic": "movsxd",
+          "operands": "rdx, dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x9d9ce7",
+          "mnemonic": "add",
+          "operands": "rcx, rdx"
+        },
+        {
+          "at": "0x9d9cea",
+          "mnemonic": "mov",
+          "operands": "rdx, r8"
+        },
+        {
+          "at": "0x9d9ced",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax]"
+        }
+      ]
+    },
+    {
+      "rva": "0x485830",
+      "size": 19,
+      "anchor": "Prior executor closure9288008+10",
+      "instructions": [
+        {
+          "at": "0x485830",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x485833",
+          "mnemonic": "lea",
+          "operands": "r8, [rcx + 0x68]"
+        },
+        {
+          "at": "0x485837",
+          "mnemonic": "lea",
+          "operands": "rdx, [rcx + 0x18]"
+        },
+        {
+          "at": "0x48583b",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x48583f",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 0x10]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2e346e3",
+      "kind": "call",
+      "to": "0xa7bec0"
+    },
+    {
+      "at": "0x2ba0bb4",
+      "kind": "call",
+      "to": "0x4a7570"
+    },
+    {
+      "at": "0x2ba0c8f",
+      "kind": "call",
+      "to": "0x4a7570"
+    },
+    {
+      "at": "0x2ba0d5c",
+      "kind": "call",
+      "to": "0x4a7570"
+    },
+    {
+      "at": "0x2ba0e37",
+      "kind": "call",
+      "to": "0x4a7570"
+    },
+    {
+      "at": "0x2ba0f12",
+      "kind": "call",
+      "to": "0x4a7570"
+    },
+    {
+      "at": "0x2ba0fed",
+      "kind": "call",
+      "to": "0x4a7570"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9288008",
+      "role_inference": "Signal copied-executor closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x485830"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x17cad2f",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rax + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read registered executor atnode+48"
+    },
+    {
+      "at": "0x17cad36",
+      "mnemonic": "je",
+      "operands": "0x17cad80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Null executor selects direct invocation"
+    },
+    {
+      "at": "0x17cad80",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Contextnode+8"
+    },
+    {
+      "at": "0x17cad84",
+      "mnemonic": "lea",
+      "operands": "rdx, [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member storagenode+18"
+    },
+    {
+      "at": "0x17cad88",
+      "mnemonic": "mov",
+      "operands": "r8, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Original vector becomesR8"
+    },
+    {
+      "at": "0x17cad8b",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call nodethunk+10"
+    },
+    {
+      "at": "0x17cad15",
+      "mnemonic": "lea",
+      "operands": "r13, [rip + 0x7abd2ec]",
+      "rip_targets": [
+        "0x9288008"
+      ],
+      "public_static_strings": [],
+      "observation": "Executor closure table9288008"
+    },
+    {
+      "at": "0x17cae78",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit copied holder viaexecutor+8"
+    },
+    {
+      "at": "0x485833",
+      "mnemonic": "lea",
+      "operands": "r8, [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copied vectorclosure+68 ->R8"
+    },
+    {
+      "at": "0x485837",
+      "mnemonic": "lea",
+      "operands": "rdx, [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Memberstorageclosure+18 ->RDX"
+    },
+    {
+      "at": "0x48583b",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Contextclosure+8 ->RCX"
+    },
+    {
+      "at": "0x48583f",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall captured thunk+10"
+    },
+    {
+      "at": "0x9d9ce0",
+      "mnemonic": "mov",
+      "operands": "rax, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve memberstorage"
+    },
+    {
+      "at": "0x9d9ce3",
+      "mnemonic": "movsxd",
+      "operands": "rdx, dword ptr [rdx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signed member adjustment fromstorage+8"
+    },
+    {
+      "at": "0x9d9ce7",
+      "mnemonic": "add",
+      "operands": "rcx, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust context"
+    },
+    {
+      "at": "0x9d9cea",
+      "mnemonic": "mov",
+      "operands": "rdx, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "VectorR8 ->member argumentRDX"
+    },
+    {
+      "at": "0x9d9ced",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall stored member pointer"
+    },
+    {
+      "at": "0x2b9dc8d",
+      "mnemonic": "mov",
+      "operands": "rbx, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member receives vectorRDX"
+    },
+    {
+      "at": "0x2b9dc90",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member receives contextRCX"
+    },
+    {
+      "at": "0x2b9dcb7",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Vector end"
+    },
+    {
+      "at": "0x2b9dcbb",
+      "mnemonic": "sub",
+      "operands": "rdx, qword ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subtract begin"
+    },
+    {
+      "at": "0x2b9dcdb",
+      "mnemonic": "call",
+      "operands": "0xac2940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy vector viaac2940"
+    },
+    {
+      "at": "0x2b9dd31",
+      "mnemonic": "call",
+      "operands": "0xac2940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy vector into new holder"
+    },
+    {
+      "at": "0x2b9dd3f",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture original subscriber context atholder+20"
+    },
+    {
+      "at": "0x2b9dd84",
+      "mnemonic": "call",
+      "operands": "0x30ea10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Additional scheduling boundary30ea10"
+    },
+    {
+      "at": "0x2b9ddda",
+      "mnemonic": "add",
+      "operands": "rsi, 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleanup uses744-byte stride"
+    },
+    {
+      "at": "0x2e341d4",
+      "mnemonic": "call",
+      "operands": "0x707420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second consumer same service getter"
+    },
+    {
+      "at": "0x2e341da",
+      "mnemonic": "mov",
+      "operands": "ebx, 0xe8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second signal immediatee8"
+    },
+    {
+      "at": "0x2e341df",
+      "mnemonic": "add",
+      "operands": "rbx, qword ptr [rbp - 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compute service+e8"
+    },
+    {
+      "at": "0x2e34210",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip - 0x245a537]",
+      "rip_targets": [
+        "0x9d9ce0"
+      ],
+      "public_static_strings": [],
+      "observation": "Same9d9ce0 thunk"
+    },
+    {
+      "at": "0x2e3421b",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x46e]",
+      "rip_targets": [
+        "0x2e34690"
+      ],
+      "public_static_strings": [],
+      "observation": "Second member2e34690"
+    },
+    {
+      "at": "0x2e34226",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x38], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second zero adjustment"
+    },
+    {
+      "at": "0x2e3425b",
+      "mnemonic": "call",
+      "operands": "0x4a7360",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second registration"
+    },
+    {
+      "at": "0x2e346d0",
+      "mnemonic": "add",
+      "operands": "rdi, 0x2e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Iterate744-byte items"
+    },
+    {
+      "at": "0x2e346e3",
+      "mnemonic": "call",
+      "operands": "0xa7bec0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Endpoint predicate boundary"
+    },
+    {
+      "at": "0x2e346ea",
+      "mnemonic": "je",
+      "operands": "0x2e346d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False skips this item"
+    },
+    {
+      "at": "0x2e34715",
+      "mnemonic": "call",
+      "operands": "0x2e35eb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected item toanother service operation"
+    },
+    {
+      "at": "0x2e347c0",
+      "mnemonic": "call",
+      "operands": "0x54f0970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Whole-vector follow-on boundary"
+    },
+    {
+      "at": "0xa7bed0",
+      "mnemonic": "call",
+      "operands": "0xbc3690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check first endpoint+18"
+    },
+    {
+      "at": "0xa7bee0",
+      "mnemonic": "call",
+      "operands": "0xbc3690",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check second endpoint+38"
+    },
+    {
+      "at": "0xa7beec",
+      "mnemonic": "call",
+      "operands": "0xbc3730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Another first-endpoint check"
+    },
+    {
+      "at": "0xa7bf07",
+      "mnemonic": "jmp",
+      "operands": "0xbc3730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Another second-endpoint check"
+    },
+    {
+      "at": "0x2ba0b66",
+      "mnemonic": "call",
+      "operands": "0x707420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Removal same getter"
+    },
+    {
+      "at": "0x2ba0b71",
+      "mnemonic": "add",
+      "operands": "rcx, qword ptr [rbp - 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Removal service+e8"
+    },
+    {
+      "at": "0x2ba0b83",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x48], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Removal original consumercontext"
+    },
+    {
+      "at": "0x2ba0b87",
+      "mnemonic": "lea",
+      "operands": "rax, [rip - 0x21c6eae]",
+      "rip_targets": [
+        "0x9d9ce0"
+      ],
+      "public_static_strings": [],
+      "observation": "Removal same thunk"
+    },
+    {
+      "at": "0x2ba0b92",
+      "mnemonic": "lea",
+      "operands": "rax, [rip - 0x2f29]",
+      "rip_targets": [
+        "0x2b9dc70"
+      ],
+      "public_static_strings": [],
+      "observation": "Removal same member2b9dc70"
+    },
+    {
+      "at": "0x2ba0b9d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x30], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Removal zero adjustment"
+    },
+    {
+      "at": "0x2ba0bb4",
+      "mnemonic": "call",
+      "operands": "0x4a7570",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Removal4a7570, distinct from registration4a7360"
+    },
+    {
+      "at": "0x4a75eb",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [r15 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read nodecontext"
+    },
+    {
+      "at": "0x4a75ef",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Match suppliedcontext"
+    },
+    {
+      "at": "0x4a75f8",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Match thunk"
+    },
+    {
+      "at": "0x4a7605",
+      "mnemonic": "call",
+      "operands": "qword ptr [r15 + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call stored member comparator"
+    },
+    {
+      "at": "0x4a7612",
+      "mnemonic": "test",
+      "operands": "al, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read flags"
+    },
+    {
+      "at": "0x4a7614",
+      "mnemonic": "jne",
+      "operands": "0x4a75e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Already marked skips mutation"
+    },
+    {
+      "at": "0x4a7616",
+      "mnemonic": "or",
+      "operands": "eax, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set bit1"
+    },
+    {
+      "at": "0x4a7619",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r15 + 0x40], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write markedflags"
+    },
+    {
+      "at": "0x4a7629",
+      "mnemonic": "call",
+      "operands": "0x4a6eb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Optional bookkeeping helper; shutdown not certified"
+    },
+    {
+      "at": "0x4a75ce",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0xb5], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mark stateb5"
+    },
+    {
+      "at": "0x4a72cb",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 8], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Context-only removal predicate"
+    },
+    {
+      "at": "0x4a72d9",
+      "mnemonic": "or",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Context-only bit1"
+    },
+    {
+      "at": "0x4a72dc",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x40], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write context-only flags"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Registration descriptor fields align with17cac20 dispatch layout. Direct dispatch passes context, stored member descriptor and vector to9d9ce0; that thunk adds the signed stored adjustment, moves vector intoRDX and jumps to the stored member. The selected adjustment iszero. In executor mode prior closure9288008+10=485830 supplies the copied vector+68 to the same thunk. Actual executor execution/lifetime remains unobserved.",
+    "Subscriber2b9dc70 copies the received vector throughac2940, stores its own context into another holder and calls30ea10. Thus this member is another dispatch stage; return from it does not establish final user-visible processing or quiescence.",
+    "A second independently decoded registration2e34190 uses same707420+e8 and9d9ce0, but member2e34690. This subscriber iterates with744-byte stride, appliesa7bec0 checks to both endpoint strings and conditionally calls2e35eb0, then passes the full vector to54f0970. These predicates and downstream effects are not certified as incoming/self/new-history classification.",
+    "2ba0b20 rebuilds the2b9dc70 descriptor and calls4a7570. That helper matches context+thunk+storage comparator and sets node+40 bit1, marking state+b5;4a7260 performs a context-only variant. Registration and removal must not be confused. Neither these sites nor normal return certify cancellation of previously copied work, a callback-drain guarantee or safe external shutdown.",
+    "Root identity research remains inconclusive. The inspected490a0+68 target is an RDX-derived output object, and root constructor42350+68 is empty initialization; neither is the required account-member producer. No account or direction field is fabricated."
+  ],
+  "remaining": [
+    "root+68 producer and authenticated current account/friend source",
+    "Live/new/history/self classification and cache reset scope",
+    "Actual executor, downstream callback completion and teardown ordering",
+    "Minimized read-only prototype still unavailable"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "398-inbound-key-root-filter.json",
+    "403-inbound-group-notification.json"
+  ],
+  "identity_probe_scope": "Candidate elimination only; no absence proof. Raw bounded probes retained in ignored research directory."
+}
