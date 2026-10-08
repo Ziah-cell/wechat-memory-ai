@@ -1,0 +1,131 @@
+{
+  "checked_at_utc": "2026-10-08T05:34:10.218141+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh disk verification and selected predicate projections; not full CFG, alias/concurrency proof, runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 22,
+  "unique_anchored_leaves_checked": 0,
+  "unique_direct_edges_with_raw_rel32_math": 44,
+  "unique_tables_checked": 0,
+  "unique_instruction_observations_checked": 209,
+  "rip_references_with_raw_displacement_math": 7,
+  "branch_field_assertions": 130,
+  "operation_switch_targets_checked": 28,
+  "explicit_public_node_literals_checked": 6,
+  "literal_word_checks": 4,
+  "predicate_projections": {
+    "scope": "Pure selected-predicate arithmetic only; not target, packet, runtime or product tests",
+    "filter_cases": 11,
+    "all_clear_name_prefix_lengths": 12,
+    "representative_unsigned_old_thresholds": 5,
+    "unsigned_argument": "For every DWORD old in [0,2^32-1], old>=0; numeric fallback0 cannot raise it",
+    "counterexamples": [
+      "Inactive/reset does not certify freshness",
+      "Global threshold0 does not disable active endpoint filtering",
+      "clearAllMsg name has no numeric/sign character after any possible prefix skip"
+    ]
+  },
+  "jev_advisory_calls_recorded": 1,
+  "jev_model": "jev-1.13.0",
+  "jev_recorded_usage_total": {
+    "input_tokens": 941,
+    "output_tokens": 86
+  },
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 13,
+  "saved_listener_state_unchanged": true,
+  "quota_monitor_record_checked": true,
+  "quota_monitor_execution_tested": false,
+  "local_links_checked": 771,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and427-431 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only pure graph/save functions extracted by AST and generic verifier prefix copied as text; previous writers/API calls not rerun.",
+    "Offset scan is bounded and not exhaustive; selected constructors/call arguments bind the owner, not offset equality alone.",
+    "clearAllMsg inference assumes stable local string and ordinary Windows x64 preserved-register behavior; no target patch or runtime defect claim.",
+    "Prefix exhaustion and non-digit alternatives cover all12 prefix lengths without assuming a live locale value.",
+    "Normal flush true/false paths reach reset; exceptions, other early exits, every control operation and full map helpers remain outside this finding."
+  ],
+  "initial_assertion_corrections": {
+    "count": 0
+  },
+  "remaining": [
+    "Trace outer response/sync phase and mode19 source for first-batch/history/reconnect boundaries; no freshness claim from this filter",
+    "Preserve clearAllMsg selected-path limitation; no target patch or runtime bug claim",
+    "Account/input+60 namespace and epoch, full control/map branches, callback lifetime and permissible observation method remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-filter-20261008/jev_decision.py",
+      "sha256": "89113d305ebb8bc469c576f0d68885bb6cd5265c082a03b12197d7feddf1c48d"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/write_evidence.py",
+      "sha256": "fb980e083f19b70e58bc291813ddb46c2d286a448219b0872c86dc7b1ce00841"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/verify_evidence.py",
+      "sha256": "15da8c76ee774c52608cbe405100a32f7198346c7a630ca05579baa8de05998e"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/verification_checks.py",
+      "sha256": "1231918a3db327e6c505f266e17720071a67871c9201e5a6c9942d768c900120"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/update_docs.py",
+      "sha256": "c3eaf21ecf27d5bf84d1af8e951aeefae0c9335f7c5a50a92bb8ea2b3d11f460"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/inbound-filter-20261008/offset_sites.py",
+      "sha256": "664e94d86697826ba722957e0983c7006b5328c11aac66ab2343b751e04979be"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

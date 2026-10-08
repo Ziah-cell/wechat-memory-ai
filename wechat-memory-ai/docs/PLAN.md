@@ -1,5 +1,19 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
+## 最新：批次过滤状态与控制参数（427–431）
+
+2026-10-08继续固定DLL磁盘只读。[428](evidence/428-inbound-filter-owner-reset.json)绑定parent+1d0子管理器中的内嵌过滤状态+58；构造时阈值和active为零。rawtype51的选定控制路径可用操作15/16更新端点阈值，或用操作9的deleteMessages参数处理端点ID集合并启用过滤。2eb3780在active恰为1时按全局阈值、端点ID集合或端点阈值拒绝所选消息。所查外层正常flush的true/false路径都会清理集合并reset这份过滤状态；未认证异常、所有提前返回或重连阶段。
+
+[429](evidence/429-inbound-clear-name-argument.json)核实clearAllMsg分支：name在rbp+190/R15，arg在另一字符串rbp+370；匹配名称后，230a20实际接收同一个name和默认值0。对稳定的clearAllMsg字节串，不论分类器跳过多长前缀，余下字符均非符号/数字或已耗尽，因此所查数字解析失败返回0。后续无符号old>=0跳过阈值和active写入，仍清除控制消息的append标志。这是有限静态参数不一致，不能写成运行复现，也不能据此断言所有过滤失效。
+
+[427](evidence/427-jev-filter-decision.json)记录本轮一次真实Jev调用，返回jev-1.13.0；按用户要求自动选择最高概率项“核对名称/参数别名”（概率0.99，confidence0.98），已落实到429。模型的历史消息准入判断仍为未建立边界；选择概率不代替字节证据。
+
+[431](evidence/431-inbound-filter-validation.json)记录同一执行者新鲜磁盘复核和纯值推演；[430](evidence/430-inbound-filter-checkpoint.json)保存监听仍停止。没有加载DLL、访问进程/聊天数据库、操作窗口、重启监听或真实收发。产品0.1.22、自动回复关闭，仍无可运行适配器。下一项查外层响应/同步阶段及数值mode19来源，补首批历史与重连边界；保留账号标识域/代次、回调寿命及可行采集方式缺口。不把active为零或reset当作“新消息已获准”。
+
+用户新增要求：Pro额度剩余40%时保存进度。已创建本聊天的额度检查自动化（id40），每30分钟检查一次；创建时读到Codex周额度剩余83%。可读额度窗口中最低剩余不高于40%时，保存已核进度、未核改动与下一步，再通知；只提交/推送已验证的本任务改动。未知额度不按零处理，未要求停止主任务。检查有间隔，不保证恰好在40%触发。
+
+426列出的13个历史脚本保持；新研究目录data/inbound-filter-20261008，历史证据不改，后续从432起。后续实质取舍继续实际调用Jev并自动采用返回的最高概率选项，不扩大已授权范围。
+
 ## 最新：账号字段与实际响应回调（422–426）
 
 2026-10-08继续固定DLL磁盘只读。[423](evidence/423-inbound-account-field-origin.json)把result+88追到`UnifyAuthResponse`的field4账号段`AcctSectResp`，再到其field1字符串。42b160在输入两个DWORD状态均为零时写内部byte+4=1；另由响应field2的值bit1控制所选账号字符串复制。该值位与协议presence位不同，byte1不能单独认证有效身份。

@@ -1,0 +1,720 @@
+{
+  "checked_at_utc": "2026-10-08T05:31:06.226711+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file argument identity and pure character/unsigned-comparison inference. No target execution, live locale, network packet, concurrent alias proof or runtime defect claim.",
+  "unwind_nodes": [
+    {
+      "rva": "0x2eb4f80",
+      "end": "0x2eb71bb",
+      "role_inference": "Selected operation9 name/arg buffers and clearAllMsg branch",
+      "instruction_count": 1918,
+      "disk_range_sha256": "71600819a4a80c4729ee0a241ba5722956c89789d031ab9a1f11ab2360acb4fa",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xfbee30",
+      "end": "0xfbf078",
+      "role_inference": "String conversion outputRCX and returned string object",
+      "instruction_count": 165,
+      "disk_range_sha256": "50d006c5e3856dce11ce5f1392c78c2b6d1c765ff0a495e58265244056521f31",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x230a20",
+      "end": "0x230a96",
+      "role_inference": "Unsigned numeric wrapper returns supplied fallback on failure",
+      "instruction_count": 33,
+      "disk_range_sha256": "88aaf0fec702ff61cb9e4affb2fe648c99cccfb5def68effb6f23e6b43a56b31",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x58ee10",
+      "end": "0x58ee5c",
+      "role_inference": "String-view parser wrapper",
+      "instruction_count": 19,
+      "disk_range_sha256": "cd9ef8ba0229b03b11930939e4f5bec13ed58ddad5ae1812bd676b72c79e12af",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x58ee60",
+      "end": "0x58efca",
+      "role_inference": "Decimal digit parse with prefix classification, sign and overflow checks",
+      "instruction_count": 106,
+      "disk_range_sha256": "5bf083f8aaabe523ca8d528baa8009399483ab0dd2c89c7460901efaede26a4b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x76c6380",
+      "end": "0x76c6426",
+      "role_inference": "Prefix character classification helper; runtime locale not read",
+      "instruction_count": 47,
+      "disk_range_sha256": "62894fa493f5a6150fd889af6b401195f7b34a1e463230a41b74988225dcf713",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2eb51be",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb54e1",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb551a",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb59cc",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb5a05",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb5d0a",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb5d43",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb68b2",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb68eb",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb6bd7",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb6c10",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb6c9c",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb6cd5",
+      "kind": "call",
+      "to": "0xfbee30"
+    },
+    {
+      "at": "0x2eb6f17",
+      "kind": "call",
+      "to": "0x230a20"
+    },
+    {
+      "at": "0x230a5f",
+      "kind": "call",
+      "to": "0x58ee10"
+    },
+    {
+      "at": "0x58ee30",
+      "kind": "call",
+      "to": "0x58ee60"
+    },
+    {
+      "at": "0x58ee9b",
+      "kind": "call",
+      "to": "0x76c6380"
+    },
+    {
+      "at": "0x58eed9",
+      "kind": "call",
+      "to": "0x76c6380"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x2eb50c3",
+      "mnemonic": "lea",
+      "operands": "r15, [rbp + 0x190]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "R15 is local string object at rbp+190"
+    },
+    {
+      "at": "0x2eb5cec",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "name node output handle"
+    },
+    {
+      "at": "0x2eb5cf3",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x612f166]",
+      "rip_targets": [
+        "0x8fe4e60"
+      ],
+      "public_static_strings": [
+        "name"
+      ],
+      "observation": "Public literal name"
+    },
+    {
+      "at": "0x2eb5cfa",
+      "mnemonic": "call",
+      "operands": "0x665f40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fetch name node"
+    },
+    {
+      "at": "0x2eb5d00",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read name-node handle"
+    },
+    {
+      "at": "0x2eb5d07",
+      "mnemonic": "mov",
+      "operands": "rcx, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination string isR15/rbp+190"
+    },
+    {
+      "at": "0x2eb5d0a",
+      "mnemonic": "call",
+      "operands": "0xfbee30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert name node into that string"
+    },
+    {
+      "at": "0x2eb5d21",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x118]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "arg node output handle"
+    },
+    {
+      "at": "0x2eb5d28",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x665a659]",
+      "rip_targets": [
+        "0x9510388"
+      ],
+      "public_static_strings": [],
+      "observation": "Public literal arg"
+    },
+    {
+      "at": "0x2eb5d2f",
+      "mnemonic": "call",
+      "operands": "0x665f40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fetch arg node"
+    },
+    {
+      "at": "0x2eb5d35",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x118]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read arg-node handle"
+    },
+    {
+      "at": "0x2eb5d3c",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0x370]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination arg string isrbp+370, distinct fromR15"
+    },
+    {
+      "at": "0x2eb5d43",
+      "mnemonic": "call",
+      "operands": "0xfbee30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert arg node into separate string"
+    },
+    {
+      "at": "0x2eb5d49",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x1a0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read name string length fromrbp+1a0"
+    },
+    {
+      "at": "0x2eb5d59",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rbp + 0x1a8], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Name inline/heap selection"
+    },
+    {
+      "at": "0x2eb5d61",
+      "mnemonic": "mov",
+      "operands": "rax, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inline name address isR15"
+    },
+    {
+      "at": "0x2eb5d66",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x190]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Heap name pointer fromrbp+190"
+    },
+    {
+      "at": "0x2eb5d6d",
+      "mnemonic": "cmp",
+      "operands": "rcx, 0xb",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Required name length11"
+    },
+    {
+      "at": "0x2eb5d71",
+      "mnemonic": "je",
+      "operands": "0x2eb6ee8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Length11 branch to literal comparison"
+    },
+    {
+      "at": "0x2eb6eeb",
+      "mnemonic": "movabs",
+      "operands": "rdx, 0x6c6c417261656c63",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First literal word: clearAll"
+    },
+    {
+      "at": "0x2eb6ef8",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 3]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read second overlapping word at name+3"
+    },
+    {
+      "at": "0x2eb6efc",
+      "mnemonic": "movabs",
+      "operands": "rdx, 0x67734d6c6c417261",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second literal word: arAllMsg"
+    },
+    {
+      "at": "0x2eb6f09",
+      "mnemonic": "or",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine both literal comparisons"
+    },
+    {
+      "at": "0x2eb6f0c",
+      "mnemonic": "jne",
+      "operands": "0x2eb7077",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mismatch bypasses numeric branch"
+    },
+    {
+      "at": "0x2eb6f12",
+      "mnemonic": "mov",
+      "operands": "rcx, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Numeric sourceRCX is same name stringR15"
+    },
+    {
+      "at": "0x2eb6f15",
+      "mnemonic": "xor",
+      "operands": "edx, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Numeric fallbackEDX=0"
+    },
+    {
+      "at": "0x2eb6f17",
+      "mnemonic": "call",
+      "operands": "0x230a20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parse name string via230a20, not arg string"
+    },
+    {
+      "at": "0x2eb6f24",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0x58], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare old global threshold to numeric output"
+    },
+    {
+      "at": "0x2eb6f27",
+      "mnemonic": "jae",
+      "operands": "0x2eb6f3a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unsigned old>=new skips threshold and activation writes"
+    },
+    {
+      "at": "0x2eb6f30",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 0x58], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only ifnew>old: threshold replacement"
+    },
+    {
+      "at": "0x2eb6f33",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rcx + 0x1a0], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only ifnew>old: active1"
+    },
+    {
+      "at": "0x2eb6f41",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Caller append flag0 even when no threshold increase"
+    },
+    {
+      "at": "0xfbee4d",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String conversion preserves outputRCX inRSI"
+    },
+    {
+      "at": "0xfbef53",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi + 0x10], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String conversion writes length/capacity into output"
+    },
+    {
+      "at": "0xfbef57",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String conversion writes data into output"
+    },
+    {
+      "at": "0xfbf058",
+      "mnemonic": "mov",
+      "operands": "rax, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Returns output string object"
+    },
+    {
+      "at": "0x230a25",
+      "mnemonic": "mov",
+      "operands": "esi, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve supplied fallback"
+    },
+    {
+      "at": "0x230a3a",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rcx + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inspect caller string inline/heap capacity"
+    },
+    {
+      "at": "0x230a44",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load caller heap string if long"
+    },
+    {
+      "at": "0x230a47",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Build string-view data pointer"
+    },
+    {
+      "at": "0x230a4c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read caller string length"
+    },
+    {
+      "at": "0x230a50",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Build string-view length"
+    },
+    {
+      "at": "0x230a5f",
+      "mnemonic": "call",
+      "operands": "0x58ee10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call numeric parser wrapper"
+    },
+    {
+      "at": "0x230a64",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check parser success"
+    },
+    {
+      "at": "0x230a66",
+      "mnemonic": "je",
+      "operands": "0x230a6c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Failure keeps supplied fallback"
+    },
+    {
+      "at": "0x230a68",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [rsp + 0x34]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Success takes parsed DWORD"
+    },
+    {
+      "at": "0x230a80",
+      "mnemonic": "mov",
+      "operands": "eax, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return result or fallback"
+    },
+    {
+      "at": "0x58ee30",
+      "mnemonic": "call",
+      "operands": "0x58ee60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward string view to decimal parser"
+    },
+    {
+      "at": "0x58ee87",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read string-view buffer"
+    },
+    {
+      "at": "0x58ee8a",
+      "mnemonic": "mov",
+      "operands": "r13, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read string-view length"
+    },
+    {
+      "at": "0x58ee9b",
+      "mnemonic": "call",
+      "operands": "0x76c6380",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Classify initial prefix byte"
+    },
+    {
+      "at": "0x58eea5",
+      "mnemonic": "je",
+      "operands": "0x58ef16",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unclassified first byte goes to sign/digit processing"
+    },
+    {
+      "at": "0x58eed9",
+      "mnemonic": "call",
+      "operands": "0x76c6380",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Classify further skipped prefix bytes"
+    },
+    {
+      "at": "0x58eee0",
+      "mnemonic": "je",
+      "operands": "0x58ef0c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First unclassified byte goes to sign/digit processing"
+    },
+    {
+      "at": "0x58eee8",
+      "mnemonic": "jne",
+      "operands": "0x58eed0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Continue prefix skip while bytes remain"
+    },
+    {
+      "at": "0x58eef4",
+      "mnemonic": "jmp",
+      "operands": "0x58efb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "All-skipped branch reachesfalse completion"
+    },
+    {
+      "at": "0x58ef16",
+      "mnemonic": "cmp",
+      "operands": "bpl, 0x2d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reject leading minus"
+    },
+    {
+      "at": "0x58ef26",
+      "mnemonic": "cmp",
+      "operands": "bpl, 0x2b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Optional plus check"
+    },
+    {
+      "at": "0x58ef3b",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [r12]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read first candidate digit byte"
+    },
+    {
+      "at": "0x58ef40",
+      "mnemonic": "add",
+      "operands": "al, 0xd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subtract ASCII0 through byte arithmetic"
+    },
+    {
+      "at": "0x58ef42",
+      "mnemonic": "cmp",
+      "operands": "al, 9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Digit range0..9"
+    },
+    {
+      "at": "0x58ef44",
+      "mnemonic": "ja",
+      "operands": "0x58ef9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Non-digit branch"
+    },
+    {
+      "at": "0x58ef9d",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Non-digit produces failure state"
+    },
+    {
+      "at": "0x58ef9f",
+      "mnemonic": "jmp",
+      "operands": "0x58efa7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Transfer to failure result assembly"
+    },
+    {
+      "at": "0x58efb0",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi], r15d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store parser resultDWORD"
+    },
+    {
+      "at": "0x58efb3",
+      "mnemonic": "test",
+      "operands": "r15, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test success marker"
+    },
+    {
+      "at": "0x58efb6",
+      "mnemonic": "setne",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return parser success boolean"
+    },
+    {
+      "at": "0x76c63ac",
+      "mnemonic": "and",
+      "operands": "eax, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Prefix classifier selects mask8"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "In selected operation9, name is converted into string localrbp+190/R15, arg into a separate localrbp+370. The length11 comparison and two overlapping MOVABS words require exact clearAllMsg. No call intervenes from the successful literal comparison to the call of230a20, and itsRCX isR15, the same name object. The only explicit non-epilogueR15 assignment in the whole selected owner is the initial LEA; normal Windows x64 preserved-register behavior is assumed.",
+    "230a20 uses fallbackEDX=0 and keeps it when58ee10/58ee60 reports failure.58ee60 skips a classified prefix, then checks optional plus/minus and ASCII decimal digits. clearAllMsg contains no sign or decimal digit; after any possible prefix length the remaining first byte is invalid or the buffer is exhausted. Under the selected stable-input path its parse fails, so the wrapper returns0.",
+    "The next comparison is unsigned: if old global threshold >= returned value, both threshold and active writes are skipped. Returned0 cannot increase any DWORD threshold. Thus this exact name branch is not evidence of an effective global-threshold activation producer. It still clears the caller append flag on the normal path. This does not imply all filtering is disabled, because endpoint threshold/ID activation paths are separate.",
+    "This is a bounded static inconsistency/limitation, not a reproduced WeChat defect, exploit, target patch proposal or an assertion about every runtime path. The arg buffer was not substituted in the evidence to make the branch look useful."
+  ],
+  "remaining": [
+    "Trace outer response/sync phase and mode19 source for first-batch/history/reconnect boundaries; no freshness claim from this filter",
+    "Preserve clearAllMsg selected-path limitation; no target patch or runtime bug claim",
+    "Account/input+60 namespace and epoch, full control/map branches, callback lifetime and permissible observation method remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "397-inbound-batch-consumer.json"
+  ]
+}
