@@ -1,0 +1,133 @@
+{
+  "checked_at_utc": "2026-10-08T05:12:01.399587+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh fixed-file verification and selected predicate projections; not complete CFG, runtime compatibility, active identity authentication or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 32,
+  "unique_anchored_leaves_checked": 6,
+  "unique_direct_edges_with_raw_rel32_math": 58,
+  "unique_tables_checked": 7,
+  "unique_instruction_observations_checked": 189,
+  "rip_references_with_raw_displacement_math": 15,
+  "branch_field_assertions": 133,
+  "explicit_table_targets_checked": 11,
+  "explicit_rip_targets_checked": 14,
+  "protobuf_switch_tables_checked": 2,
+  "predicate_projections": {
+    "scope": "Pure selected-predicate arithmetic, not packets, DLL execution, runtime login or product tests",
+    "account_presence_cases": 8,
+    "outer_presence_cases": 4,
+    "status_and_copy_gate_cases": 4,
+    "callback_status_cases": 4,
+    "counterexamples": [
+      "account mask44 satisfies required bits while field1 presence is absent",
+      "outer mask1 with valid base skips absent account segment",
+      "status0/0 and field2 value0 sets local flag1 but skips selected account copy",
+      "selected normal callback resolve and completion flag are not status-success gates"
+    ]
+  },
+  "jev_advisory_calls_recorded": 1,
+  "jev_model": "jev-1.13.0",
+  "jev_recorded_usage_total": {
+    "input_tokens": 1088,
+    "output_tokens": 83
+  },
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 12,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 736,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and422-426 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Only pure graph/save definitions extracted by AST and generic verifier prefix copied as text; previous writers/API requests were not rerun.",
+    "Global-store scan selected aligned REX.W MOV RIP shapes; not exhaustive and not live.",
+    "Full decoding of large mode bodies is not full control-flow/data-flow proof. Selected mode0 typed callback established; mode1 captured-input overwrite and other replacement paths remain explicit.",
+    "Generated completeness excludes account field1; pure projections do not prove receipt or acceptance of any network packet.",
+    "Public client field-name usage is a lead only; no matching Windows schema/namespace authentication.",
+    "Jev next-trace confidence0.34 is a weak preference and not byte verification."
+  ],
+  "initial_assertion_corrections": {
+    "count": 5,
+    "cause": "Hand-transcribed expected register names or ADD versus LEA differed from fresh disassembly; adjacent instruction flow inspected and expectations corrected before passing verification.",
+    "semantic_conclusion_changed": false
+  },
+  "remaining": [
+    "Captured input+60 producer and identity namespace/epoch remain unverified; mode1 can overwrite network-derived string",
+    "Bind2eb3780 state owner, enable/reset and first-batch/history/reconnect boundaries",
+    "Define concrete permissible metadata observation method, lifetime and callback shutdown",
+    "No runnable adapter, minimized reception validation, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-origin-20261008/jev_decision.py",
+      "sha256": "0a51fc938f2633cf9b09bea5269da2ae1d500703d581fb9387d076c881d6c576"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/write_evidence.py",
+      "sha256": "f1c50384a6058c5ee166e5ef7440f05438ba408e7a9b3fa7f85a547748149365"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/verify_evidence.py",
+      "sha256": "ea6f006d6f5aed003474da9185669c013337b1e586c2819707600790542249b0"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/verification_checks.py",
+      "sha256": "fc429991d931d486472b821908eefe66d688526a2f3f16f23c62e33f14362953"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/update_docs.py",
+      "sha256": "78622c93f91f33f07fa3a271df2f2ae7e8e839df2925143c2e4852f0a413ba4b"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/inbound-origin-20261008/global_stores.py",
+      "sha256": "5eb6bcd7bc0f08826b6da29b37fc2641c776d90c59978304959a7628892a3026"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

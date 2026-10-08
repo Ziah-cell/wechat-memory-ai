@@ -1,5 +1,19 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
+## 最新：账号字段与实际响应回调（422–426）
+
+2026-10-08继续固定DLL磁盘只读。[423](evidence/423-inbound-account-field-origin.json)把result+88追到`UnifyAuthResponse`的field4账号段`AcctSectResp`，再到其field1字符串。42b160在输入两个DWORD状态均为零时写内部byte+4=1；另由响应field2的值bit1控制所选账号字符串复制。该值位与协议presence位不同，byte1不能单独认证有效身份。
+
+完整性检查有明确缺口：外层账号段可缺省，账号段必填mask0x44也不包含field1的presence mask0x1。因此检查通过不要求这个字符串存在或非空。mode1还会用已有input+60覆盖result+88，标识域、活跃账号、身份代次和借用值寿命仍未认证，不能直接命名为已认证wxid。
+
+[424](evidence/424-inbound-auth-response-callback.json)补实际响应对象及选定mode0回调：48c440构造共享UnifyAuthResponse；secmanualauth包装器内+c8为同一协议类型，回调经虚槽+20取得并复制到结果，随后resolve和替换上层共享响应。完成标记、promise状态1及回调返回true都不要求业务成功。这里只核选定路径，未认证整个混淆控制流、所有mode1替换或实时网络解析。
+
+[422](evidence/422-jev-origin-decision.json)是本轮一次真实Jev调用，模型`jev-1.13.0`。按用户最新要求，每次返回后自动选概率最大的选项并继续；本轮最高为响应类型绑定（概率0.56、过滤状态0.43；confidence0.34），已落实到424；身份准入的最高项为保持未准入。概率与confidence分开保留，不把选择当作证据。Jev不代替字节核查、独立审查或微信回复模型。
+
+下一项转到2eb3780过滤状态的具体归属、启用/reset与首批历史/重连边界；保留input+60来源、标识域/身份代次和采集方式缺口，不重复已绑定的默认类型与root成员赋值。[426](evidence/426-inbound-origin-validation.json)为同一执行者新鲜磁盘复核及纯值判据推演，[425](evidence/425-inbound-origin-checkpoint.json)保存监听仍停止。产品0.1.22、自动回复关闭，无可运行适配器；最小化接收、受控发送确认和最后开启自动回复仍待完成。
+
+只向Jev提交抽象代码事实；密钥仅用于请求头，不入证据。未操作窗口、重启监听、加载DLL、访问进程/聊天数据库或真实收发。421列出的12个历史脚本保持，新研究目录data/inbound-origin-20261008；历史证据不改，后续从427起。
+
 ## 当前执行点：查清身份字符串含义（418–421）
 
 [419](evidence/419-inbound-root-member-source.json)已补全局root→捕获任务→新成员+68/+70、成员虚槽+18→字符串+48，以及同一root的清空路径。下一项不再停留于同偏移写入扫描：先追47a240所选result+88及byte+4的生产者，明确初始化字符串标识域与身份切换条件，再补2eb3780状态归属、启用/reset和首批历史重连。保留实际receiver/executor、回调排空和外部采集方法缺口。

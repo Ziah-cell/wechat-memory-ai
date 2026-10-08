@@ -1,0 +1,1282 @@
+{
+  "checked_at_utc": "2026-10-08T05:11:59.208584+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected default and mode0 response-production/callback/copy chain, plus explicitly marked analogous mode1 sites. No active service instance, network invocation, full obfuscated CFG, universal replacement or account namespace proof.",
+  "unwind_nodes": [
+    {
+      "rva": "0x4284c0",
+      "end": "0x428f75",
+      "role_inference": "Selected mode0 request/response helper",
+      "instruction_count": 624,
+      "disk_range_sha256": "6cc5558e5853b4edb8750d4decaa6210c03956d54af035f0e7ba4817749a3d4e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x46e1f0",
+      "end": "0x46eca5",
+      "role_inference": "Parallel selected mode1 helper; not full mode1 body proof",
+      "instruction_count": 623,
+      "disk_range_sha256": "4e9b69454ff61db04c0a2f304686a3a871fdbcfeb661eb66ed33de7d3e6e02a8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48c440",
+      "end": "0x48c4f9",
+      "role_inference": "Construct response wrapper and shared UnifyAuthResponse object",
+      "instruction_count": 52,
+      "disk_range_sha256": "3d5185f3fdedfba9243f4fb10bd1fef4f8973fa97e228c7ad1e7206f19700fdd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48c560",
+      "end": "0x48ca6f",
+      "role_inference": "Mode0 retrieval: shared default, closure scheduling and output replacement",
+      "instruction_count": 329,
+      "disk_range_sha256": "7d3db0e8aacfb1c63adc2d308cb073c17996a5baa3d38d193655e8cfe4a07c60",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x492f50",
+      "end": "0x49345f",
+      "role_inference": "Mode1 retrieval: parallel default and selected closure construction",
+      "instruction_count": 329,
+      "disk_range_sha256": "858a1d0d7eef27871ee52cd47b41a754b42351612792defe618e2c230450c058",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48d1b0",
+      "end": "0x48d238",
+      "role_inference": "Closure capture: shared result pair and separate completion flag",
+      "instruction_count": 37,
+      "disk_range_sha256": "9fd8ade5e3deeb943c4310398645474648ebda4c4614bba1c75f68680bd1a3e3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x493980",
+      "end": "0x493a08",
+      "role_inference": "Parallel mode1 closure capture",
+      "instruction_count": 37,
+      "disk_range_sha256": "d6d008621fe98dab73e11cbabe82d0d777e50daa47352e06b3789f3bc168d5b9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48d510",
+      "end": "0x48d6ca",
+      "role_inference": "Mode0 body awaits result, copies response pair, then marks completion flag",
+      "instruction_count": 137,
+      "disk_range_sha256": "ff5ecc720a480f16a03e8485018fdc7a2df667db2daf46539c7862985878de26",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x493ce0",
+      "end": "0x493e9a",
+      "role_inference": "Mode1 body shares await/extract helper; request producer not fully traced",
+      "instruction_count": 137,
+      "disk_range_sha256": "1ec2777d7a2edff2c5272bbaa3fc750d3d047c392bd661d72e742f04013d7985",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48d730",
+      "end": "0x48d8db",
+      "role_inference": "Await and stored-value type check; copy response shared pair",
+      "instruction_count": 114,
+      "disk_range_sha256": "1ad78349a9e6e9611cab4c34cdcb2b5e42392650e7e7fb0c0e9dd2312a7e6615",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48d8e0",
+      "end": "0x48db57",
+      "role_inference": "Mode0 request promise factory with callable table8fb3048",
+      "instruction_count": 172,
+      "disk_range_sha256": "587b581e30c3f3d6640699d256727d6f621ccf0e83aa92ab29453bc766e0be4e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48dc80",
+      "end": "0x48dcf2",
+      "role_inference": "Factory callable invokes48dd10 with shared promise",
+      "instruction_count": 30,
+      "disk_range_sha256": "0866a9156c187110c1dd7e4ddc50400667ef5cc4543fa1e733532d8321181c64",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48dd10",
+      "end": "0x48e045",
+      "role_inference": "Construct completion holder table8fb3178 and call request wrapper helper",
+      "instruction_count": 227,
+      "disk_range_sha256": "061d538686b90a8744615ba9ca51333f494657a927704356a853aa694249e8ab",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48e150",
+      "end": "0x48e3e4",
+      "role_inference": "Selected secmanualauth wrapper construction, callback transfer, service submission",
+      "instruction_count": 184,
+      "disk_range_sha256": "a4adedb277eec277b43b7f36e966fc59beadd670df11242380e54a78ffe22785",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48e4a0",
+      "end": "0x48e5dd",
+      "role_inference": "Install request wrapper table and inline UnifyAuthResponse at+c8",
+      "instruction_count": 80,
+      "disk_range_sha256": "4dfdaea34088ed52b735c710bc085883dfb7fab99d88b0f4c054bab10c75bd27",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48e8d0",
+      "end": "0x48eabe",
+      "role_inference": "Completion: copy typed response, combine statuses, resolve independent of success",
+      "instruction_count": 146,
+      "disk_range_sha256": "4dcfb06f5b39c587ddbf4597b64f8bd258fedf4eab62d9f7f89fd8128b888269",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3ec30",
+      "end": "0xf3ec5f",
+      "role_inference": "Clear then merge UnifyAuthResponse copy helper",
+      "instruction_count": 19,
+      "disk_range_sha256": "8fb3ad19c5c048ee1f0f6729132c6c140c17a786d5bddf3e4e09c5349c99a125",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3db80",
+      "end": "0xf3df21",
+      "role_inference": "UnifyAuthResponse merge preserves present field2 and nested account",
+      "instruction_count": 221,
+      "disk_range_sha256": "a475350279efa52581b1b43d5a87d854b8931c3aaa635017b3660ee7adf517cd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x48eb20",
+      "end": "0x48ec15",
+      "role_inference": "Wrap result using114970 and resolve promise state1",
+      "instruction_count": 74,
+      "disk_range_sha256": "e1ea07a2756880cb01e81ebb3391be26360ec9c0b2903129ecdc9c1f8df808e9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x114970",
+      "end": "0x114a6f",
+      "role_inference": "Copy response wrapper status/string/shared pair",
+      "instruction_count": 76,
+      "disk_range_sha256": "acf94f287bb9f1f083fd7d3d7837d0cd0023867c7ca1ec820be607678fc4e3a2",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0xf24770",
+      "size": 36,
+      "anchor": "Called by48c440 and48e4a0 to install protocol table",
+      "instructions": [
+        {
+          "at": "0xf24770",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0xf24773",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x8229cfe]"
+        },
+        {
+          "at": "0xf2477a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0xf2477d",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0xf24780",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0xf24784",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x18], xmm0"
+        },
+        {
+          "at": "0xf24788",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x28], xmm0"
+        },
+        {
+          "at": "0xf2478c",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x38], 0"
+        },
+        {
+          "at": "0xf24793",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x48d3c0",
+      "size": 9,
+      "anchor": "8fb2fa8+10",
+      "instructions": [
+        {
+          "at": "0x48d3c0",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x48d3c4",
+          "mnemonic": "jmp",
+          "operands": "0x48d510"
+        }
+      ]
+    },
+    {
+      "rva": "0x493b90",
+      "size": 9,
+      "anchor": "8fb3b68+10",
+      "instructions": [
+        {
+          "at": "0x493b90",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x493b94",
+          "mnemonic": "jmp",
+          "operands": "0x493ce0"
+        }
+      ]
+    },
+    {
+      "rva": "0x48e8a0",
+      "size": 18,
+      "anchor": "8fb3178+10",
+      "instructions": [
+        {
+          "at": "0x48e8a0",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x48e8a4",
+          "mnemonic": "mov",
+          "operands": "r9d, dword ptr [r9]"
+        },
+        {
+          "at": "0x48e8a7",
+          "mnemonic": "mov",
+          "operands": "r8d, dword ptr [r8]"
+        },
+        {
+          "at": "0x48e8aa",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rdx]"
+        },
+        {
+          "at": "0x48e8ad",
+          "mnemonic": "jmp",
+          "operands": "0x48e8d0"
+        }
+      ]
+    },
+    {
+      "rva": "0x43fc0",
+      "size": 8,
+      "anchor": "8fb30e8+20 returns inline response+c8",
+      "instructions": [
+        {
+          "at": "0x43fc0",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0xc8]"
+        },
+        {
+          "at": "0x43fc7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x3b3880",
+      "size": 11,
+      "anchor": "Called by48eb20; state1 resolve primitive previously studied",
+      "instructions": [
+        {
+          "at": "0x3b3880",
+          "mnemonic": "mov",
+          "operands": "r8d, 1"
+        },
+        {
+          "at": "0x3b3886",
+          "mnemonic": "jmp",
+          "operands": "0x3b3160"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x42858c",
+      "kind": "call",
+      "to": "0x48c440"
+    },
+    {
+      "at": "0x428843",
+      "kind": "call",
+      "to": "0x48c560"
+    },
+    {
+      "at": "0x46e2bc",
+      "kind": "call",
+      "to": "0x48c440"
+    },
+    {
+      "at": "0x46e573",
+      "kind": "call",
+      "to": "0x492f50"
+    },
+    {
+      "at": "0x48c4b2",
+      "kind": "call",
+      "to": "0xf24770"
+    },
+    {
+      "at": "0x48c5c2",
+      "kind": "call",
+      "to": "0x48c440"
+    },
+    {
+      "at": "0x48c692",
+      "kind": "call",
+      "to": "0x48d1b0"
+    },
+    {
+      "at": "0x492fb2",
+      "kind": "call",
+      "to": "0x48c440"
+    },
+    {
+      "at": "0x493082",
+      "kind": "call",
+      "to": "0x493980"
+    },
+    {
+      "at": "0x48d55f",
+      "kind": "call",
+      "to": "0x48d8e0"
+    },
+    {
+      "at": "0x48d56f",
+      "kind": "call",
+      "to": "0x48d730"
+    },
+    {
+      "at": "0x493d3f",
+      "kind": "call",
+      "to": "0x48d730"
+    },
+    {
+      "at": "0x48dcc6",
+      "kind": "call",
+      "to": "0x48dd10"
+    },
+    {
+      "at": "0x48dea2",
+      "kind": "call",
+      "to": "0x48e150"
+    },
+    {
+      "at": "0x48e24c",
+      "kind": "call",
+      "to": "0x48e4a0"
+    },
+    {
+      "at": "0x48e545",
+      "kind": "call",
+      "to": "0xf24770"
+    },
+    {
+      "at": "0x48e952",
+      "kind": "call",
+      "to": "0x48c440"
+    },
+    {
+      "at": "0x48e95f",
+      "kind": "call",
+      "to": "0xf3ec30"
+    },
+    {
+      "at": "0x48ea17",
+      "kind": "call",
+      "to": "0x48eb20"
+    },
+    {
+      "at": "0xf3ec53",
+      "kind": "jmp",
+      "to": "0xf3db80"
+    },
+    {
+      "at": "0x48eb3b",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x48eb68",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x48ebed",
+      "kind": "call",
+      "to": "0x3b3880"
+    },
+    {
+      "at": "0x48d3c4",
+      "kind": "jmp",
+      "to": "0x48d510"
+    },
+    {
+      "at": "0x493b94",
+      "kind": "jmp",
+      "to": "0x493ce0"
+    },
+    {
+      "at": "0x48e8ad",
+      "kind": "jmp",
+      "to": "0x48e8d0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x914e478",
+      "role_inference": "Shared/inline UnifyAuthResponse protocol table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xf3ed70"
+        },
+        {
+          "offset": "0x20",
+          "target": "0xf3ec60"
+        },
+        {
+          "offset": "0x38",
+          "target": "0xf3e140"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb2fa8",
+      "role_inference": "Mode0 retrieval closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x48d3c0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb3b68",
+      "role_inference": "Mode1 retrieval closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x493b90"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb3048",
+      "role_inference": "Mode0 request promise factory callable",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x48dc80"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb3178",
+      "role_inference": "Selected request completion callback",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x48e8a0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fb30e8",
+      "role_inference": "Selected request wrapper response accessor",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x43fc0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x42858c",
+      "mnemonic": "call",
+      "operands": "0x48c440",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct default local response wrapper"
+    },
+    {
+      "at": "0x428836",
+      "mnemonic": "mov",
+      "operands": "rdx, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass original output to retrieval helper"
+    },
+    {
+      "at": "0x428843",
+      "mnemonic": "call",
+      "operands": "0x48c560",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected call48c560"
+    },
+    {
+      "at": "0x46e2bc",
+      "mnemonic": "call",
+      "operands": "0x48c440",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel default response wrapper"
+    },
+    {
+      "at": "0x46e573",
+      "mnemonic": "call",
+      "operands": "0x492f50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel call492f50"
+    },
+    {
+      "at": "0x48c4ab",
+      "mnemonic": "add",
+      "operands": "rsi, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "New shared response object at allocation+10"
+    },
+    {
+      "at": "0x48c4b2",
+      "mnemonic": "call",
+      "operands": "0xf24770",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct protocol object"
+    },
+    {
+      "at": "0x48c4bc",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x28], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Output wrapper+28=response object"
+    },
+    {
+      "at": "0xf24773",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8229cfe]",
+      "rip_targets": [
+        "0x914e478"
+      ],
+      "public_static_strings": [],
+      "observation": "UnifyAuthResponse table914e478"
+    },
+    {
+      "at": "0xf2477a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install table on actual object"
+    },
+    {
+      "at": "0x48c5c2",
+      "mnemonic": "call",
+      "operands": "0x48c440",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct shared default result"
+    },
+    {
+      "at": "0x48c64e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x20], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture shared result pointer"
+    },
+    {
+      "at": "0x48c675",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x30], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture separate completion-flag pointer"
+    },
+    {
+      "at": "0x48c692",
+      "mnemonic": "call",
+      "operands": "0x48d1b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct retrieval closure"
+    },
+    {
+      "at": "0x48c6aa",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Scheduler boundary; no runtime execution claim"
+    },
+    {
+      "at": "0x48c732",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check separate completion flag"
+    },
+    {
+      "at": "0x48c737",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rbp + 0xc0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completed path reloads captured result"
+    },
+    {
+      "at": "0x48c7df",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r14 + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completed path response pointer"
+    },
+    {
+      "at": "0x48c97f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r14 + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternate typed-holder path response pointer; not same raw layout"
+    },
+    {
+      "at": "0x48c983",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace caller output response pointer"
+    },
+    {
+      "at": "0x48c987",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace caller output control block"
+    },
+    {
+      "at": "0x492fb2",
+      "mnemonic": "call",
+      "operands": "0x48c440",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel default constructor"
+    },
+    {
+      "at": "0x493082",
+      "mnemonic": "call",
+      "operands": "0x493980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel capture constructor493980"
+    },
+    {
+      "at": "0x48d1dd",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8b25dc4]",
+      "rip_targets": [
+        "0x8fb2fa8"
+      ],
+      "public_static_strings": [],
+      "observation": "Mode0 closure table8fb2fa8"
+    },
+    {
+      "at": "0x48d1f2",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture shared result at closure+8"
+    },
+    {
+      "at": "0x48d208",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x18], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture flag at closure+18"
+    },
+    {
+      "at": "0x4939ad",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8b201b4]",
+      "rip_targets": [
+        "0x8fb3b68"
+      ],
+      "public_static_strings": [],
+      "observation": "Mode1 closure table8fb3b68"
+    },
+    {
+      "at": "0x48d3c4",
+      "mnemonic": "jmp",
+      "operands": "0x48d510",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Thunk to48d510"
+    },
+    {
+      "at": "0x493b94",
+      "mnemonic": "jmp",
+      "operands": "0x493ce0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Thunk to493ce0"
+    },
+    {
+      "at": "0x48d55f",
+      "mnemonic": "call",
+      "operands": "0x48d8e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request promise producer48d8e0"
+    },
+    {
+      "at": "0x48d56f",
+      "mnemonic": "call",
+      "operands": "0x48d730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Common await/extract48d730"
+    },
+    {
+      "at": "0x48d59b",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured result"
+    },
+    {
+      "at": "0x48d5a2",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy two status DWORDs together"
+    },
+    {
+      "at": "0x48d619",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp - 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read extracted shared response"
+    },
+    {
+      "at": "0x48d61d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace captured response pointer"
+    },
+    {
+      "at": "0x48d625",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace captured control block"
+    },
+    {
+      "at": "0x48d6ac",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured completion flag"
+    },
+    {
+      "at": "0x48d6b0",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set completion flag1 after copy, independent of success"
+    },
+    {
+      "at": "0x493d2f",
+      "mnemonic": "call",
+      "operands": "0x493f00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel request producer493f00 remains a separate branch"
+    },
+    {
+      "at": "0x493d3f",
+      "mnemonic": "call",
+      "operands": "0x48d730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel common await/extract"
+    },
+    {
+      "at": "0x493ded",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel captured response replacement"
+    },
+    {
+      "at": "0x493e80",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parallel completion flag1"
+    },
+    {
+      "at": "0x48d744",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await promise"
+    },
+    {
+      "at": "0x48d74c",
+      "mnemonic": "call",
+      "operands": "0x3b4700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read promise stored value"
+    },
+    {
+      "at": "0x48d7b3",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read type-checked holder status pair"
+    },
+    {
+      "at": "0x48d883",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r14 + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read type-checked holder response pair"
+    },
+    {
+      "at": "0x48d887",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write output response pointer"
+    },
+    {
+      "at": "0x48da8b",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x8b255b6]",
+      "rip_targets": [
+        "0x8fb3048"
+      ],
+      "public_static_strings": [],
+      "observation": "Mode0 request factory callable table8fb3048"
+    },
+    {
+      "at": "0x48daa1",
+      "mnemonic": "call",
+      "operands": "0x112e40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy capture record"
+    },
+    {
+      "at": "0x48dab6",
+      "mnemonic": "call",
+      "operands": "0x3b4b40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Immediate callable invocation helper"
+    },
+    {
+      "at": "0x48dcc6",
+      "mnemonic": "call",
+      "operands": "0x48dd10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call48dd10"
+    },
+    {
+      "at": "0x48de33",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x8b2533e]",
+      "rip_targets": [
+        "0x8fb3178"
+      ],
+      "public_static_strings": [],
+      "observation": "Completion callback table8fb3178"
+    },
+    {
+      "at": "0x48dea2",
+      "mnemonic": "call",
+      "operands": "0x48e150",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Build/submit selected request through48e150"
+    },
+    {
+      "at": "0x48e1d0",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x8b25219]",
+      "rip_targets": [
+        "0x8fb33f0"
+      ],
+      "public_static_strings": [
+        "/cgi-bin/micromsg-bin/secmanualauth"
+      ],
+      "observation": "Public selected CGI label; no request sent"
+    },
+    {
+      "at": "0x48e24c",
+      "mnemonic": "call",
+      "operands": "0x48e4a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct concrete request wrapper"
+    },
+    {
+      "at": "0x48e2ae",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r12 + 0x98], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move out-of-line callback into wrapper+98"
+    },
+    {
+      "at": "0x48e2c1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r12 + 0x98], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store moved inline callback at wrapper+98"
+    },
+    {
+      "at": "0x48e35a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Service virtual+28 submission boundary; receiver/execution not certified here"
+    },
+    {
+      "at": "0x48e517",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8b24bca]",
+      "rip_targets": [
+        "0x8fb30e8"
+      ],
+      "public_static_strings": [],
+      "observation": "Request wrapper table8fb30e8"
+    },
+    {
+      "at": "0x48e53a",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 0xc8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inline response at wrapper+c8"
+    },
+    {
+      "at": "0x48e545",
+      "mnemonic": "call",
+      "operands": "0xf24770",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize inline UnifyAuthResponse"
+    },
+    {
+      "at": "0x43fc0",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0xc8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Concrete wrapper+20 returns+c8"
+    },
+    {
+      "at": "0x48e8ad",
+      "mnemonic": "jmp",
+      "operands": "0x48e8d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completion thunk48e8d0"
+    },
+    {
+      "at": "0x48e921",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read response via wrapper+20"
+    },
+    {
+      "at": "0x48e952",
+      "mnemonic": "call",
+      "operands": "0x48c440",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct shared output UnifyAuthResponse"
+    },
+    {
+      "at": "0x48e95f",
+      "mnemonic": "call",
+      "operands": "0xf3ec30",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy inline response viaf3ec30"
+    },
+    {
+      "at": "0xf3ec44",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear destination before copy"
+    },
+    {
+      "at": "0xf3ec53",
+      "mnemonic": "jmp",
+      "operands": "0xf3db80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Merge helperf3db80"
+    },
+    {
+      "at": "0xf3dc45",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy present response DWORD+30"
+    },
+    {
+      "at": "0xf3dc4c",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 0x30], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store response DWORD+30"
+    },
+    {
+      "at": "0xf3dc7c",
+      "mnemonic": "test",
+      "operands": "al, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test account presence mask0x8 before merge"
+    },
+    {
+      "at": "0xf3dc91",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source nested account+18"
+    },
+    {
+      "at": "0xf3dc9e",
+      "mnemonic": "call",
+      "operands": "0xf39f80",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Merge nested account; not account namespace authentication"
+    },
+    {
+      "at": "0x48e97d",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read nested base-response numeric status"
+    },
+    {
+      "at": "0x48e980",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x3c], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Result statusB from nested base response"
+    },
+    {
+      "at": "0x48e9d6",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x40], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Result statusA from callback argument"
+    },
+    {
+      "at": "0x48ea07",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rbp - 0x3c], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only replace zero statusB"
+    },
+    {
+      "at": "0x48ea0d",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x3c], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace zero statusB with nonzero callbackB"
+    },
+    {
+      "at": "0x48ea17",
+      "mnemonic": "call",
+      "operands": "0x48eb20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Hand result to promise helper without success gate"
+    },
+    {
+      "at": "0x48ea8a",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal callback returntrue; not success certification"
+    },
+    {
+      "at": "0x48eb3b",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First result copy114970"
+    },
+    {
+      "at": "0x48eb68",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second result copy114970"
+    },
+    {
+      "at": "0x114981",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy statuses together"
+    },
+    {
+      "at": "0x114984",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store statuses together"
+    },
+    {
+      "at": "0x114a45",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read response pointer"
+    },
+    {
+      "at": "0x114a49",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store response pointer"
+    },
+    {
+      "at": "0x114a51",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store response control block"
+    },
+    {
+      "at": "0x48ebed",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve promise regardless of status values"
+    },
+    {
+      "at": "0x3b3880",
+      "mnemonic": "mov",
+      "operands": "r8d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve state1"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The response is not inferred solely from a static fallback:48c440 callsf24770, which installs table914e478 on an actual allocated shared protocol object.4284c0 and46e1f0 construct/retrieve this wrapper family.",
+    "48c560 captures a shared default result and a separate flag. The closure table8fb2fa8+10 enters48d510; it awaits/extracts a typed value, replaces captured status/string/response, then sets the flag. Caller output+28/+30 is copied from that completed result; completion does not imply business success. Parallel493ce0 shares48d730 but has a separate493f00 producer, not fully traced here.",
+    "The selected mode0 request factory reaches48dd10 ->48e150. The public CGI label is secmanualauth.48e4a0 installs concrete wrapper table8fb30e8 and initializes UnifyAuthResponse at wrapper+c8; virtual+20/43fc0 returns that address.",
+    "Its selected completion holder8fb3178+10/48e8a0 enters48e8d0, accesses wrapper+20 and copies the inline UnifyAuthResponse into a freshly constructed shared object viaf3ec30/f3db80. It combines callback statusA with nested base-response statusB, substituting callbackB only when nested status iszero and callbackB nonzero.",
+    "48eb20 copies that wrapper with114970 and resolves the promise with state1 through3b3880. Neither the resolve nor normal callback true is gated on successful status.48d730 checks the stored value type before copying its shared response, not a usable active identity.",
+    "These sites connect the selected response type and local completion copies. Existing request-service dispatch evidence is reused only by reference; this round does not re-certify all network parser/error branches, actual receiver/instance, every obfuscated branch, concurrent lifetime or account transition."
+  ],
+  "remaining": [
+    "Captured input+60 producer and identity namespace/epoch remain unverified; mode1 can overwrite network-derived string",
+    "Bind2eb3780 state owner, enable/reset and first-batch/history/reconnect boundaries",
+    "Define concrete permissible metadata observation method, lifetime and callback shutdown",
+    "No runnable adapter, minimized reception validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "358-send-response-promise-contract.json",
+    "414-inbound-subscriber-registration.json",
+    "419-inbound-root-member-source.json"
+  ]
+}

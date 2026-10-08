@@ -1,0 +1,98 @@
+{
+  "checked_at_utc": "2026-10-08T05:11:59.208584+00:00",
+  "scope": "Actual user-requested Jev advisory decision; not verification, independent review, new permission or reply-model integration",
+  "official_api_documentation": "https://docs.typesafe.ai/api",
+  "records": [
+    {
+      "time_utc": "2026-10-08T04:55:24.577874+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 1.016,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "objective": "Choose a bounded next static investigation toward single-friend personal WeChat minimized reception. No live process access, installation or messaging is currently in scope.",
+          "verified_facts": [
+            "Prior root-member assignment/getter/clear data flow is bound. Member string+48 comes from init-record first string, which one selected path copies from internal result+88.",
+            "47a240 mode0 calls3f96b0/3fda60, whose selected call reaches common result consumer42b160; mode1 calls450b70 then42b160 and later overwrites result+88 from captured input+60.",
+            "42b160 constructs output result and sets result byte+4=1 when input DWORD0 OR DWORD4 iszero. A separate response field+30 bit1 gates the selected nested account-string copy; later operations and active login are not certified by that byte.",
+            "The selected string source is input shared response+28 -> nested member+18 -> string pointer+8. Fallback globalbb75d08 is constructed with table914e478; type getter spells micromsg.UnifyAuthResponse. Its parser field4 populates+18 as micromsg.AcctSectResp, whose parser field1 populates string pointer+8.",
+            "Generated UnifyAuthResponse validation only conditionally validates its account member if presence bit8 is set. AcctSectResp required-bit mask0x44 excludes first-string presence bit1; thus these completeness checks alone do not require a usable account string.",
+            "Response wrapper constructor48c440 creates a default UnifyAuthResponse viaf24770; helper4284c0/46e1f0 and async retrieval48c560/492f50 are located. All actual response replacements across the large obfuscated mode bodies are not yet fully certified.",
+            "A public third-party client calls an account-section userName wxid, but it does not establish this fixed Windows build field number, namespace or active account. Do not treat that source as local verification.",
+            "Earlier incoming filter2eb3780 requires state+148==1, nonzero threshold and source time<=threshold on one skip branch. Its concrete state ownership, activation/reset and history/reconnect epochs are still unresolved. No live adapter exists."
+          ],
+          "scope": "Only abstract code facts and public type names. No credentials, chat content, live object values or account identifiers. Decision is advice, not independent review or permission."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Choose the next bounded investigation that most advances receiver admission given both resolved and remaining evidence. Do not imply that all prerequisite gaps are closed.",
+            "criteria": {
+              "filter_state": "Trace the ownership and activation/reset of2eb3780 filter state, preserving account namespace/lifetime as explicit future admission requirements.",
+              "response_type_binding": "Continue response wrapper/callback construction and replacement to bind the actual response type through the obfuscated mode bodies.",
+              "public_field_name": "Prioritize finding a public schema establishing whether account field1 is userName, before more local filter analysis."
+            }
+          },
+          "identity_admission": {
+            "type": "choice",
+            "instructions": "Are the supplied static facts enough to mark the current account authenticated and release messages?",
+            "criteria": {
+              "yes": "These generated completeness checks and the flag prove a nonempty authenticated live account.",
+              "no_presence_namespace_epoch": "The account-shaped provenance is stronger but field presence/content, namespace and live epoch/lifetime still require evidence."
+            }
+          }
+        }
+      },
+      "request_sha256": "05006636cc470c2ea66dce2aaf4f02e25d5271e89f85baea154b6c8a39e6ff45",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_trace": {
+            "type": "choice",
+            "choice": "response_type_binding",
+            "confidence": 0.34,
+            "probabilities": {
+              "response_type_binding": 0.56,
+              "filter_state": 0.43,
+              "public_field_name": 0.01
+            }
+          },
+          "identity_admission": {
+            "type": "choice",
+            "choice": "no_presence_namespace_epoch",
+            "confidence": 1.0,
+            "probabilities": {
+              "no_presence_namespace_epoch": 1.0,
+              "yes": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1088,
+          "output_tokens": 83
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    }
+  ],
+  "automatic_selection": {
+    "user_instruction": "在每次Jev判断之后自动选择概率最大的选择接着继续工作",
+    "rule": "argmax over returned probabilities for each question; raw response preserved",
+    "selected": {
+      "next_trace": "response_type_binding",
+      "identity_admission": "no_presence_namespace_epoch"
+    }
+  },
+  "agent_disposition": {
+    "accepted_priority": "response_type_binding",
+    "strength": "Weak next-trace preference: confidence0.34; probabilities0.56 response binding versus0.43 filter state.",
+    "followup": "424 adds a selected mode0 typed callback/copy chain. No universal runtime/account claim. Missing presence/namespace/epoch admission remains closed.",
+    "next_scope": "Preserve captured-input and namespace gaps, continue receiver state ownership/enable/reset and history/reconnect boundaries; do not repeat already-bound type/default search."
+  },
+  "confidence_is_not_correctness_or_permission": true,
+  "live_chat_data_supplied": false,
+  "credential_value_recorded": false,
+  "auto_reply_model_connected": false
+}

@@ -1,0 +1,1193 @@
+{
+  "checked_at_utc": "2026-10-08T05:11:59.208584+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected fixed-file paths only. Large obfuscated bodies are hashed/decoded, but no whole-CFG, every-mode replacement or current account certification is claimed.",
+  "unwind_nodes": [
+    {
+      "rva": "0x47a240",
+      "end": "0x47b578",
+      "role_inference": "Mode selection and result selection before root initialization; reused prior scope",
+      "instruction_count": 1031,
+      "disk_range_sha256": "0679146119ba8b72d7434c5414fb7d667319e948cba02a0f05a65b3888f75ec1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3f96b0",
+      "end": "0x3fd7e4",
+      "role_inference": "Selected mode0 path passes original output to3fda60",
+      "instruction_count": 4059,
+      "disk_range_sha256": "2e548efa17ea2804c60a5d1093f4b6ffebc1a94bb052a23871292a19e536c410",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3fda60",
+      "end": "0x4249fa",
+      "role_inference": "Large obfuscated mode0 body: only selected response-wrapper and common-result calls assessed",
+      "instruction_count": 38997,
+      "disk_range_sha256": "456c0736520883e20c2dcf4bd4b58ac78842cfb626b5434698b70fbfbe96e9f2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x42b160",
+      "end": "0x42dcf7",
+      "role_inference": "Common result consumer; status-pair condition and conditional nested account-string copy",
+      "instruction_count": 2423,
+      "disk_range_sha256": "1fc188db38c52784ede03f7ecd0f2f35d741a5fd35577a9c29ad3e45c73b12dc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ce950",
+      "end": "0x3cec01",
+      "role_inference": "Construct internal result object; zero fields and initially empty identity string",
+      "instruction_count": 97,
+      "disk_range_sha256": "ea56614f8db2bf7839959d917187f27f02196efa0728a6de4dd9a42fea8578d9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf23810",
+      "end": "0xf244d0",
+      "role_inference": "Selected static default-object initialization, including globalbb75d08",
+      "instruction_count": 610,
+      "disk_range_sha256": "5c33fd6aeb789bde8cba96ac2997cc330a8318a2ad74c3aa0a1293a738be98d8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3ed70",
+      "end": "0xf3edbf",
+      "role_inference": "Generated type-name accessor: micromsg.UnifyAuthResponse",
+      "instruction_count": 18,
+      "disk_range_sha256": "b54e4fbe1bf1e448954256ac396b0ec4c1af72f27f73e4134bc9637f47b2af72",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3e140",
+      "end": "0xf3e8d4",
+      "role_inference": "Generated UnifyAuthResponse parser: field4 nested account, field2 DWORD at+30",
+      "instruction_count": 484,
+      "disk_range_sha256": "3a045d4cb21497d26a265c5762e973e5d2590d2aaa9872cc66269b54fc96c888",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3c430",
+      "end": "0xf3c482",
+      "role_inference": "Generated type-name accessor: micromsg.AcctSectResp",
+      "instruction_count": 18,
+      "disk_range_sha256": "2c6a7ef29f21a70805ca4f278ed732cfa163dc09b34c6e5b1611f368d2ccc9d8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3afd0",
+      "end": "0xf3bb0e",
+      "role_inference": "Generated AcctSectResp parser: field1 string pointer at+8",
+      "instruction_count": 700,
+      "disk_range_sha256": "367ffda07c99d70325e1b6c7247a5531eadc3b72fb6e0d14e4498cc1a098814c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3ec60",
+      "end": "0xf3ed68",
+      "role_inference": "UnifyAuthResponse completeness: optional account-section validation",
+      "instruction_count": 85,
+      "disk_range_sha256": "a4ef3b8a13e7fbc190bd374368c6ea505e549d18e5c4e7144a3a98c93b8c8da9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xf3c390",
+      "end": "0xf3c426",
+      "role_inference": "AcctSectResp completeness: required mask44 excludes first-string presence bit",
+      "instruction_count": 49,
+      "disk_range_sha256": "ca2072d0520278dbc51444950a0108d2aa09ed24a3904b22fdefb78700797430",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x47a31f",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x47a49c",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x47a4c9",
+      "kind": "call",
+      "to": "0x3f96b0"
+    },
+    {
+      "at": "0x47a62c",
+      "kind": "call",
+      "to": "0x42b160"
+    },
+    {
+      "at": "0x3fa3db",
+      "kind": "call",
+      "to": "0x3fda60"
+    },
+    {
+      "at": "0x3fabca",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x3fac1b",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x3fc064",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x3fc0b9",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x41540a",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x41b47a",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0x422662",
+      "kind": "call",
+      "to": "0x42b160"
+    },
+    {
+      "at": "0x42b1d1",
+      "kind": "call",
+      "to": "0x3ce950"
+    },
+    {
+      "at": "0xf240c0",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf24100",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf24190",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf24224",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2434d",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf24370",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2439b",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf243bb",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf243cc",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf243ec",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf243fd",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2441d",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2442e",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2444e",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2445f",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2447f",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf2449f",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf244bf",
+      "kind": "call",
+      "to": "0xf23810"
+    },
+    {
+      "at": "0xf3e669",
+      "kind": "call",
+      "to": "0xf3afd0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x914e478",
+      "role_inference": "Default/constructed UnifyAuthResponse table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xf3ed70"
+        },
+        {
+          "offset": "0x20",
+          "target": "0xf3ec60"
+        },
+        {
+          "offset": "0x38",
+          "target": "0xf3e140"
+        }
+      ]
+    },
+    {
+      "rva": "0x914e2e8",
+      "role_inference": "Nested AcctSectResp table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0xf3c430"
+        },
+        {
+          "offset": "0x20",
+          "target": "0xf3c390"
+        },
+        {
+          "offset": "0x38",
+          "target": "0xf3afd0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x47a4a2",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rsi + 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read captured input mode+58"
+    },
+    {
+      "at": "0x47a4a5",
+      "mnemonic": "cmp",
+      "operands": "eax, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare mode with1"
+    },
+    {
+      "at": "0x47a4a8",
+      "mnemonic": "je",
+      "operands": "0x47a53b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 branch"
+    },
+    {
+      "at": "0x47a4ae",
+      "mnemonic": "test",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare remaining mode with0"
+    },
+    {
+      "at": "0x47a4b0",
+      "mnemonic": "jne",
+      "operands": "0x47a9c9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other mode branch"
+    },
+    {
+      "at": "0x47a4bc",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0xb0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode0 output local wrapper"
+    },
+    {
+      "at": "0x47a4c9",
+      "mnemonic": "call",
+      "operands": "0x3f96b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call3f96b0"
+    },
+    {
+      "at": "0x47a5a0",
+      "mnemonic": "lea",
+      "operands": "rdi, [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 captured input string+60"
+    },
+    {
+      "at": "0x47a5d8",
+      "mnemonic": "call",
+      "operands": "0x450b70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 response helper450b70; full obfuscated body not certified"
+    },
+    {
+      "at": "0x47a61f",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0xb0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 input response wrapper"
+    },
+    {
+      "at": "0x47a618",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x360]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 output internal-result wrapper"
+    },
+    {
+      "at": "0x47a62c",
+      "mnemonic": "call",
+      "operands": "0x42b160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 common result consumer"
+    },
+    {
+      "at": "0x47a732",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x3f8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode0 result pointer selected"
+    },
+    {
+      "at": "0x47a7c9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x3f8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 result pointer selected"
+    },
+    {
+      "at": "0x47a87c",
+      "mnemonic": "lea",
+      "operands": "rbx, [rax + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 identity destination result+88"
+    },
+    {
+      "at": "0x47a893",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 source existing captured input string"
+    },
+    {
+      "at": "0x47a8cd",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode1 overwrites result identity from existing input"
+    },
+    {
+      "at": "0x47a9d0",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rax + 4], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialization gate compares internal byte+4 with1"
+    },
+    {
+      "at": "0x3f96d1",
+      "mnemonic": "mov",
+      "operands": "r13, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save caller output asR13"
+    },
+    {
+      "at": "0x3f96d4",
+      "mnemonic": "mov",
+      "operands": "r14, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save caller context asR14"
+    },
+    {
+      "at": "0x3fa3d1",
+      "mnemonic": "mov",
+      "operands": "rdx, r13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass original output"
+    },
+    {
+      "at": "0x3fa3db",
+      "mnemonic": "call",
+      "operands": "0x3fda60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected call3fda60"
+    },
+    {
+      "at": "0x3fda9b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x128], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save original output pointer"
+    },
+    {
+      "at": "0x3fde96",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x168], rsp",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save local response-wrapper address"
+    },
+    {
+      "at": "0x41b622",
+      "mnemonic": "call",
+      "operands": "0x4284c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected mode0 response helper4284c0"
+    },
+    {
+      "at": "0x42258d",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rbp + 0x168]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass selected response-wrapper pointer asR8"
+    },
+    {
+      "at": "0x422654",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x128]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass original output asRDX"
+    },
+    {
+      "at": "0x422662",
+      "mnemonic": "call",
+      "operands": "0x42b160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected common result consumer42b160"
+    },
+    {
+      "at": "0x3ce9be",
+      "mnemonic": "add",
+      "operands": "rsi, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Internal object starts allocation+10"
+    },
+    {
+      "at": "0x3ce9c2",
+      "mnemonic": "mov",
+      "operands": "r8d, 0x2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero-init extent2c0"
+    },
+    {
+      "at": "0x3ce9cd",
+      "mnemonic": "call",
+      "operands": "0x76ee330",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero-init helper"
+    },
+    {
+      "at": "0x3ce9d2",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rdi + 0x10], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set internal DWORD0=1; different from internal byte+4"
+    },
+    {
+      "at": "0x3cebed",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x28], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wrapper+28 receives internal object"
+    },
+    {
+      "at": "0x42b190",
+      "mnemonic": "mov",
+      "operands": "rdi, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "RDI is input response wrapper"
+    },
+    {
+      "at": "0x42b193",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "RSI is output wrapper"
+    },
+    {
+      "at": "0x42b1d1",
+      "mnemonic": "call",
+      "operands": "0x3ce950",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct internal result via3ce950"
+    },
+    {
+      "at": "0x42b1d6",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdi + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read input statusB"
+    },
+    {
+      "at": "0x42b1d9",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read output internal object"
+    },
+    {
+      "at": "0x42b1dd",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy statusB to internal+8"
+    },
+    {
+      "at": "0x42b1e0",
+      "mnemonic": "or",
+      "operands": "eax, dword ptr [rdi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine statusB with statusA"
+    },
+    {
+      "at": "0x42b1e9",
+      "mnemonic": "jne",
+      "operands": "0x42b839",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero pair takes error branch"
+    },
+    {
+      "at": "0x42b1f3",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 4], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero pair sets internal byte+4=1"
+    },
+    {
+      "at": "0x42bb13",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected error path clears internal byte+4"
+    },
+    {
+      "at": "0x42b54a",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load shared protocol response"
+    },
+    {
+      "at": "0x42b54e",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rax + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read response DWORD+30, distinct from presence+38"
+    },
+    {
+      "at": "0x42b551",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x34c], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save DWORD value for later flag test"
+    },
+    {
+      "at": "0x42b742",
+      "mnemonic": "test",
+      "operands": "byte ptr [rbp + 0x34c], 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field2 value bit1 controls selected account-copy path"
+    },
+    {
+      "at": "0x42b749",
+      "mnemonic": "je",
+      "operands": "0x42c8d2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing value-bit skips selected account-copy block"
+    },
+    {
+      "at": "0x42b77d",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input response pointer"
+    },
+    {
+      "at": "0x42b781",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nested account member+18"
+    },
+    {
+      "at": "0x42b788",
+      "mnemonic": "jne",
+      "operands": "0x42b795",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Non-null nested member branch"
+    },
+    {
+      "at": "0x42b78a",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rip + 0xb74a577]",
+      "rip_targets": [
+        "0xbb75d08"
+      ],
+      "public_static_strings": [],
+      "observation": "Fallback default response globalbb75d08"
+    },
+    {
+      "at": "0x42b791",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default response nested account member"
+    },
+    {
+      "at": "0x42b795",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nested account first string pointer+8"
+    },
+    {
+      "at": "0x42b799",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdx + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Output internal object pointer"
+    },
+    {
+      "at": "0x42b79d",
+      "mnemonic": "lea",
+      "operands": "rbx, [rax + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Identity destination internal+88"
+    },
+    {
+      "at": "0x42b7a9",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [r9 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source string length"
+    },
+    {
+      "at": "0x42b7ad",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [r9 + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source inline/heap discriminator"
+    },
+    {
+      "at": "0x42b7b4",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [r9]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source heap pointer for long string"
+    },
+    {
+      "at": "0x42b7cd",
+      "mnemonic": "call",
+      "operands": "0x3e150",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Growth/copy branch"
+    },
+    {
+      "at": "0x42bfe8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x98], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "In-capacity branch stores string length at internal+98"
+    },
+    {
+      "at": "0x42bff8",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "In-capacity string copy"
+    },
+    {
+      "at": "0x42bffd",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbx + rsi], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String terminator"
+    },
+    {
+      "at": "0xf23ecf",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x822a5a2]",
+      "rip_targets": [
+        "0x914e478"
+      ],
+      "public_static_strings": [],
+      "observation": "Load default response table914e478"
+    },
+    {
+      "at": "0xf23ed6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install table on allocation"
+    },
+    {
+      "at": "0xf23eec",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rip + 0xac51e15], rax",
+      "rip_targets": [
+        "0xbb75d08"
+      ],
+      "public_static_strings": [],
+      "observation": "Store default response atbb75d08"
+    },
+    {
+      "at": "0xf3ed9d",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x820f734]",
+      "rip_targets": [
+        "0x914e4d8"
+      ],
+      "public_static_strings": [
+        "micromsg.UnifyAuthResponse"
+      ],
+      "observation": "Public UnifyAuthResponse type-name literal"
+    },
+    {
+      "at": "0xf3e17b",
+      "mnemonic": "lea",
+      "operands": "rbx, [rip + 0x8211546]",
+      "rip_targets": [
+        "0x914f6c8"
+      ],
+      "public_static_strings": [],
+      "observation": "Field switch table914f6c8"
+    },
+    {
+      "at": "0xf3e1f8",
+      "mnemonic": "shr",
+      "operands": "edx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Extract protobuf field number"
+    },
+    {
+      "at": "0xf3e200",
+      "mnemonic": "dec",
+      "operands": "edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert field number to zero-based switch index"
+    },
+    {
+      "at": "0xf3e202",
+      "mnemonic": "cmp",
+      "operands": "edx, 5",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number upper bound"
+    },
+    {
+      "at": "0xf3e2b0",
+      "mnemonic": "cmp",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field4 requires wiretype2"
+    },
+    {
+      "at": "0xf3e2b5",
+      "mnemonic": "or",
+      "operands": "byte ptr [rdi + 0x38], 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field4 account presence mask0x8"
+    },
+    {
+      "at": "0xf3e2b9",
+      "mnemonic": "mov",
+      "operands": "r12, qword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Account member pointer+18"
+    },
+    {
+      "at": "0xf3e191",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8210150]",
+      "rip_targets": [
+        "0x914e2e8"
+      ],
+      "public_static_strings": [],
+      "observation": "Nested account table914e2e8"
+    },
+    {
+      "at": "0xf3e5bf",
+      "mnemonic": "movdqu",
+      "operands": "xmmword ptr [rax], xmm8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install account table and zero first pointer"
+    },
+    {
+      "at": "0xf3e608",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x18], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store nested account in response+18"
+    },
+    {
+      "at": "0xf3e669",
+      "mnemonic": "call",
+      "operands": "0xf3afd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call account parserf3afd0"
+    },
+    {
+      "at": "0xf3e66e",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check nested parser return"
+    },
+    {
+      "at": "0xf3c45d",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x8211ee4]",
+      "rip_targets": [
+        "0x914e348"
+      ],
+      "public_static_strings": [
+        "micromsg.AcctSectResp"
+      ],
+      "observation": "Public AcctSectResp type-name literal"
+    },
+    {
+      "at": "0xf3affb",
+      "mnemonic": "lea",
+      "operands": "r13, [rip + 0x821464e]",
+      "rip_targets": [
+        "0x914f650"
+      ],
+      "public_static_strings": [],
+      "observation": "Field switch table914f650"
+    },
+    {
+      "at": "0xf3b058",
+      "mnemonic": "shr",
+      "operands": "edx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Extract protobuf field number"
+    },
+    {
+      "at": "0xf3b060",
+      "mnemonic": "dec",
+      "operands": "edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert field number to zero-based index"
+    },
+    {
+      "at": "0xf3b062",
+      "mnemonic": "cmp",
+      "operands": "edx, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field upper bound"
+    },
+    {
+      "at": "0xf3b075",
+      "mnemonic": "cmp",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field1 wiretype2"
+    },
+    {
+      "at": "0xf3b07e",
+      "mnemonic": "or",
+      "operands": "byte ptr [rbx + 0x8c], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field1 presence mask0x1"
+    },
+    {
+      "at": "0xf3b085",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First string pointer+8"
+    },
+    {
+      "at": "0xf3b0b5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store allocated first-string object"
+    },
+    {
+      "at": "0xf3b0bc",
+      "mnemonic": "call",
+      "operands": "0x1614780",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read string from parser input"
+    },
+    {
+      "at": "0xf3b0c1",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check string parser return"
+    },
+    {
+      "at": "0xf3ec65",
+      "mnemonic": "test",
+      "operands": "byte ptr [rcx + 0x38], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Require base-response presence bit1"
+    },
+    {
+      "at": "0xf3ece0",
+      "mnemonic": "test",
+      "operands": "al, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test optional account presence mask0x8"
+    },
+    {
+      "at": "0xf3ece2",
+      "mnemonic": "je",
+      "operands": "0xf3ed11",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Skip account validation if absent"
+    },
+    {
+      "at": "0xf3ecf0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Validate present account using virtual+20"
+    },
+    {
+      "at": "0xf3ed58",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completeness success return"
+    },
+    {
+      "at": "0xf3c395",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx + 0x8c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read account presence word+8c"
+    },
+    {
+      "at": "0xf3c39d",
+      "mnemonic": "not",
+      "operands": "edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invert account presence"
+    },
+    {
+      "at": "0xf3c39f",
+      "mnemonic": "test",
+      "operands": "dl, 0x44",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Required mask0x44 does not include first-string mask0x1"
+    },
+    {
+      "at": "0xf3c3a2",
+      "mnemonic": "jne",
+      "operands": "0xf3c41e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reject missing required bits"
+    },
+    {
+      "at": "0xf3c3fe",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected completeness success return"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "field_switch_tables": [
+    {
+      "rva": "0x914f6c8",
+      "encoding": "signed rel32 added to table base",
+      "targets": [
+        "0xf3e214",
+        "0xf3e2e0",
+        "0xf3e27c",
+        "0xf3e2b0",
+        "0xf3e248",
+        "0xf3e30f"
+      ]
+    },
+    {
+      "rva": "0x914f650",
+      "encoding": "signed rel32 added to table base",
+      "targets": [
+        "0xf3b075",
+        "0xf3b1d2",
+        "0xf3b27b",
+        "0xf3b26d",
+        "0xf3b1b6",
+        "0xf3b251",
+        "0xf3b4c0",
+        "0xf3b2ad",
+        "0xf3b2cb",
+        "0xf3b40c",
+        "0xf3b3fe",
+        "0xf3b198",
+        "0xf3b25f",
+        "0xf3b1c4",
+        "0xf3b17a",
+        "0xf3b2e9",
+        "0xf3b36c",
+        "0xf3b4b2",
+        "0xf3b42a",
+        "0xf3b0ec"
+      ]
+    }
+  ],
+  "conclusions": [
+    "Mode0 and mode1 have selected calls into42b160.3ce950 creates the internal result; input DWORD0 OR DWORD4 zero sets internal byte+4 to1. This is a local condition, not successful active login, completion of every later operation or valid identity.",
+    "A separate response DWORD+30 value bit1 gates the selected account-string copy. Generated parser dispatch maps this DWORD to field2 and response+18 to field4. The value bit is not the protocol presence bit at+38.",
+    "Default response globalbb75d08 is initialized with table914e478, whose type getter spells micromsg.UnifyAuthResponse. Its field4 parser constructs table914e2e8, type micromsg.AcctSectResp. Account field1 is a length-delimited string stored by pointer at+8. The selected consumer copies that string to internal result+88.",
+    "The outer completeness check requires base response but skips absent account field4. The nested account required mask0x44 excludes field1 presence mask0x1 and has no selected nonempty-string check. Therefore passing these generated completeness predicates alone does not require an identity string. Parser return values are checked at the selected generated nested/string parse sites; this evidence does not certify the entire network parse path.",
+    "Mode1 subsequently overwrites result+88 from captured input+60, as419 showed. No universal fresh network identity source is established. Formal field name, identifier namespace, active-account binding, lifetime and account epoch remain unverified."
+  ],
+  "public_lead": {
+    "url": "https://github.com/fluidcat/XYBotV2/blob/main/bot.py",
+    "finding": "Public third-party client uses acctSectResp.userName as its wxid value.",
+    "limit": "No matching schema or fixed Windows build field-number proof; not used to name local field1 or authenticate its namespace. No third-party code executed."
+  },
+  "remaining": [
+    "Captured input+60 producer and identity namespace/epoch remain unverified; mode1 can overwrite network-derived string",
+    "Bind2eb3780 state owner, enable/reset and first-batch/history/reconnect boundaries",
+    "Define concrete permissible metadata observation method, lifetime and callback shutdown",
+    "No runnable adapter, minimized reception validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "419-inbound-root-member-source.json"
+  ]
+}
