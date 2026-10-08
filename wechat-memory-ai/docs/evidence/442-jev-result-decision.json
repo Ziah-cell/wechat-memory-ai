@@ -1,0 +1,110 @@
+{
+  "checked_at_utc": "2026-10-08T14:33:20.106584+00:00",
+  "scope": "User-requested advisory priority with one bounded retry; no runtime/model reply integration",
+  "records": [
+    {
+      "time_utc": "2026-10-08T13:07:29.894035+00:00",
+      "status": "http_error",
+      "http_status": 529,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "objective": "Complete the next bounded disk-static trace toward reliable personal WeChat reception. No target loading, runtime/process/database access or messaging is authorized for this research.",
+          "verified": [
+            "Typed NewSyncRequest/NewSyncResponse and nested SKBuiltinBuffer_t fields are bound. Selected loop continues only after processor true, low response flag bits set and actual request/response buffer bytes differ. Equal empty buffers stop; required presence does not require nonempty bytes.",
+            "Continuation changes per-iteration mode to6 but keeps original mode for final flush. Processor failure clears a success marker; final normal return also depends on flush. None certifies per-message recency or a history baseline.",
+            "Closure table9584dd8+10=2ead5a0 calls2ead900, then copies local statuses/shared response into a captured result and sets a captured completion word. Full result production remains unresolved.",
+            "A new bounded call catalog shows2ead900 (622 instructions) calls known typed result constructor2ea6720, fallback constructor2ead220, request copier108e830, submission helper2eae7f0 and wait helper3b21d0. The selected response callback/type/status propagation still needs tracing.",
+            "Another candidate is processor2ea6840, which reads response field4 buffer and calls2ea9360 with the request mode. Its buffer update and special numeric status-2006 branch have not been completed."
+          ],
+          "policy": "Pick the most valuable bounded follow-up. Agent follows the maximum returned option probability automatically. This is advisory priority only, never runtime permission or evidence.",
+          "privacy": "Only abstract static code facts; no live account values, chat text, credentials or private application data."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Which trace should be completed first to reduce the remaining risk of mistaking local synchronization completion for fresh-message admission?",
+            "criteria": {
+              "response_producer": "Follow2ead900 and2eae7f0 into typed response callback, result/status sources and selected failure/completion behavior.",
+              "buffer_update": "First follow2ea9360 and the-2006 processor branch into owner buffer state used by subsequent requests.",
+              "deferred_mode_policy": "First follow the later deferred closure carrying original mode into final message delivery policy."
+            }
+          }
+        }
+      }
+    },
+    {
+      "time_utc": "2026-10-08T13:08:42.265442+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 29.453,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "objective": "Complete the next bounded disk-static trace toward reliable personal WeChat reception. No target loading, runtime/process/database access or messaging is authorized for this research.",
+          "verified": [
+            "Typed NewSyncRequest/NewSyncResponse and nested SKBuiltinBuffer_t fields are bound. Selected loop continues only after processor true, low response flag bits set and actual request/response buffer bytes differ. Equal empty buffers stop; required presence does not require nonempty bytes.",
+            "Continuation changes per-iteration mode to6 but keeps original mode for final flush. Processor failure clears a success marker; final normal return also depends on flush. None certifies per-message recency or a history baseline.",
+            "Closure table9584dd8+10=2ead5a0 calls2ead900, then copies local statuses/shared response into a captured result and sets a captured completion word. Full result production remains unresolved.",
+            "A new bounded call catalog shows2ead900 (622 instructions) calls known typed result constructor2ea6720, fallback constructor2ead220, request copier108e830, submission helper2eae7f0 and wait helper3b21d0. The selected response callback/type/status propagation still needs tracing.",
+            "Another candidate is processor2ea6840, which reads response field4 buffer and calls2ea9360 with the request mode. Its buffer update and special numeric status-2006 branch have not been completed."
+          ],
+          "policy": "Pick the most valuable bounded follow-up. Agent follows the maximum returned option probability automatically. This is advisory priority only, never runtime permission or evidence.",
+          "privacy": "Only abstract static code facts; no live account values, chat text, credentials or private application data."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Which trace should be completed first to reduce the remaining risk of mistaking local synchronization completion for fresh-message admission?",
+            "criteria": {
+              "response_producer": "Follow2ead900 and2eae7f0 into typed response callback, result/status sources and selected failure/completion behavior.",
+              "buffer_update": "First follow2ea9360 and the-2006 processor branch into owner buffer state used by subsequent requests.",
+              "deferred_mode_policy": "First follow the later deferred closure carrying original mode into final message delivery policy."
+            }
+          }
+        }
+      },
+      "request_sha256": "0e74b96a66abefe239951836fd22e707cc622eadc65f17a77e2754b88ace62aa",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_trace": {
+            "type": "choice",
+            "choice": "response_producer",
+            "confidence": 0.59,
+            "probabilities": {
+              "buffer_update": 0.22,
+              "deferred_mode_policy": 0.05,
+              "response_producer": 0.73
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 806,
+          "output_tokens": 48
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    }
+  ],
+  "automatic_selection": {
+    "rule": "argmax returned probabilities; ties prefer returned choice then request order",
+    "selected": {
+      "next_trace": {
+        "option": "response_producer",
+        "probability": 0.73,
+        "confidence": 0.59
+      }
+    }
+  },
+  "agent_disposition": {
+    "selected_priority": "response_producer",
+    "followup": "443 binds selected producer/callback/result publication;444 records specific parser return loss, fallback and retry gates.",
+    "retry": "FirstHTTP529 had no judgment. One same-request retry returned response_producer0.73, confidence0.59; followed automatically. No extra retries during validation.",
+    "admission": "not established by static completion flags"
+  },
+  "live_chat_data_supplied": false,
+  "credential_value_recorded": false,
+  "auto_reply_model_connected": false
+}

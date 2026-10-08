@@ -1,0 +1,159 @@
+{
+  "checked_at_utc": "2026-10-08T14:39:37.578145+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh disk checks and pure selected predicates; not full CFG/lifetime/alias proof, runtime compatibility or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 27,
+  "unique_anchored_leaves_checked": 9,
+  "unique_direct_edges_with_raw_rel32_math": 35,
+  "unique_tables_checked": 6,
+  "unique_instruction_observations_checked": 209,
+  "rip_references_with_raw_displacement_math": 8,
+  "branch_field_assertions": 144,
+  "explicit_table_targets_checked": 9,
+  "explicit_rip_targets_checked": 7,
+  "fallback_type_source_match": true,
+  "predicate_projections": {
+    "scope": "24 pure selected normal-path cases; no target execution, runtime/network samples or concurrency proof",
+    "retry_cases": 8,
+    "parse_cases": [
+      {
+        "parse_ok": false,
+        "consumed": false,
+        "inner_return": false,
+        "wrapper_return": true
+      },
+      {
+        "parse_ok": false,
+        "consumed": true,
+        "inner_return": false,
+        "wrapper_return": true
+      },
+      {
+        "parse_ok": true,
+        "consumed": false,
+        "inner_return": false,
+        "wrapper_return": true
+      },
+      {
+        "parse_ok": true,
+        "consumed": true,
+        "inner_return": true,
+        "wrapper_return": true
+      }
+    ],
+    "status_publication_cases": 4,
+    "result_source_cases": 4,
+    "raw_shift_cases": 4,
+    "limits": [
+      "Callback returntrue is not status success",
+      "Completion1 and promise1 do not imply parse_ok",
+      "Captured statusB is callbackB, separate from protocol field1",
+      "Default budget0 forbids this-layer retry only",
+      "Full context fallback timing/cancellation and executor lifetime remain open"
+    ]
+  },
+  "jev_attempts_recorded": 2,
+  "jev_successful_judgments": 1,
+  "jev_model": "jev-1.13.0",
+  "jev_successful_request_usage": {
+    "input_tokens": 806,
+    "output_tokens": 48
+  },
+  "jev_failed_request_usage": "unknown; no usage returned withHTTP529",
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 12,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 876,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and442-446 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Old writers/API scripts not executed wholesale: graph/save AST definitions and known transport text only.",
+    "Concrete callback/request/response tables now bound; full async execution and all aliases remain outside scope.",
+    "Specific NewSync parse return loss is directly checked, not inferred from old send wrapper.",
+    "Stop-hook/context timeout lifecycle and per-message identity/history remain unresolved.",
+    "Initial broader table probes included non-function entries; only specified verified slots enter evidence."
+  ],
+  "initial_assertion_corrections": {
+    "count": 0
+  },
+  "remaining": [
+    "Complete callback cancellation/timeout and queued-job lifetime before claiming a runtime capture method",
+    "Trace response-buffer update2ea9360/2ef87d0 and special-2006 path into next-request state/reset/reconnect",
+    "Account identity namespace/epoch, per-message direction/recency and actual executor/callback draining remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-result-20261008/jev_decision.py",
+      "sha256": "8dec73b09059d4b957a68a607963d0b87ff108771e0157705719cc25a56cfef0"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/jev_retry.py",
+      "sha256": "7287ac1efcd6bec6c889af67fbbc23dce0a669a054ef1a8177342a9a16893052"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/write_evidence.py",
+      "sha256": "c674c4e6ea2539cedb9e54333f761afafab203f047008658c3df09937d8374fb"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/verify_evidence.py",
+      "sha256": "02c26fd331f836b0d8aa28d6a8a2b480c547cebbc469dbb3abef2e3c083179cf"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/verification_checks.py",
+      "sha256": "abdf1372e61ea4b7b537d69d3c056f82d6d3ad7f8fdb5a964b205f04a3baa11b"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/update_docs.py",
+      "sha256": "070f7b18c3024729144dad9557a3561d2424e52b64349cb28bef4afad1c816e2"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-result-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

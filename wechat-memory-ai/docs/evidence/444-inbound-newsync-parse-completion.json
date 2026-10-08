@@ -1,0 +1,776 @@
+{
+  "checked_at_utc": "2026-10-08T14:33:20.106584+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x1070c40",
+      "end": "0x1070c80",
+      "role_inference": "Specific NewSync wrapper parser forces normal AL1",
+      "instruction_count": 23,
+      "disk_range_sha256": "cfb99580bd77694ce5a93e6007e81702a6a0ceb25fd021d524e8ff32b307a724",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694800",
+      "end": "0x694891",
+      "role_inference": "Clear/parse/completeness result combined with input-consumption byte",
+      "instruction_count": 39,
+      "disk_range_sha256": "ce4c6158df07995fe218f7fa93610f56ea8f1a8e45e446b86795352c6063d0ab",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x694240",
+      "end": "0x69454c",
+      "role_inference": "Generated parse and required-field failure propagate false",
+      "instruction_count": 209,
+      "disk_range_sha256": "a9df929eb0a3c8941d0970915296700661868ab42d29f6e2a275358bf389c77b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ead5a0",
+      "end": "0x2ead7e2",
+      "role_inference": "Specific options with retry budget0 and raw timeout120000",
+      "instruction_count": 162,
+      "disk_range_sha256": "5d8b9c51bf1b7f2d7f49d8a5c47dd5f77151e99520755a4e809970d656af7e4e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ead900",
+      "end": "0x2eae3b3",
+      "role_inference": "Selected per-attempt fallback and retry branch",
+      "instruction_count": 622,
+      "disk_range_sha256": "cb10193616721de4adb1665591c832b82078785c16b0ae6198d7021bbb352494",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ead220",
+      "end": "0x2ead32a",
+      "role_inference": "Typed fallback wrapper preserves result fields",
+      "instruction_count": 78,
+      "disk_range_sha256": "b83fd655682709de843400d69b89a974482c530780faf8f8c740d69d7f7a3352",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eae7f0",
+      "end": "0x2eaecff",
+      "role_inference": "Completion-zero selects type-checked fallback; type mismatch throws",
+      "instruction_count": 329,
+      "disk_range_sha256": "86980724b7eaa1c804ca22be76139f2e949874555c3c72261340f92c9b666f35",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b3160",
+      "end": "0x3b337a",
+      "role_inference": "Pending-only promise state transition",
+      "instruction_count": 115,
+      "disk_range_sha256": "75044b31b8fce79ef0391e2c54d359431f117826273b3b368293d662e3fa7993",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0a00",
+      "end": "0x2eb0af5",
+      "role_inference": "Resolve without status test",
+      "instruction_count": 74,
+      "disk_range_sha256": "ebcf04f507ef0fa5afb925f9a0a643a379be85c0e0cf14369056e8b5e8420e1a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35dfe0",
+      "end": "0x35e6a4",
+      "role_inference": "Service parse-return handling at selected sites",
+      "instruction_count": 405,
+      "disk_range_sha256": "44dfd589b1a5eb186afe50b2a7ff5aa2f6cff308ba8f36f51ecc2f3a47e7d0dc",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x3b3880",
+      "size": 11,
+      "anchor": "Resolve helper selects state1",
+      "instructions": [
+        {
+          "at": "0x3b3880",
+          "mnemonic": "mov",
+          "operands": "r8d, 1"
+        },
+        {
+          "at": "0x3b3886",
+          "mnemonic": "jmp",
+          "operands": "0x3b3160"
+        }
+      ]
+    },
+    {
+      "rva": "0x2ead390",
+      "size": 8,
+      "anchor": "Fallback table9584cc8+10 type metadata",
+      "instructions": [
+        {
+          "at": "0x2ead390",
+          "mnemonic": "lea",
+          "operands": "rax, [rip + 0x87c0859]"
+        },
+        {
+          "at": "0x2ead397",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x1070c71",
+      "kind": "call",
+      "to": "0x694800"
+    },
+    {
+      "at": "0x694870",
+      "kind": "call",
+      "to": "0x694240"
+    },
+    {
+      "at": "0x2ead62e",
+      "kind": "call",
+      "to": "0x2ead900"
+    },
+    {
+      "at": "0x2eada29",
+      "kind": "call",
+      "to": "0x2ead220"
+    },
+    {
+      "at": "0x2eadc87",
+      "kind": "call",
+      "to": "0x2eae7f0"
+    },
+    {
+      "at": "0x2eb0acd",
+      "kind": "call",
+      "to": "0x3b3880"
+    },
+    {
+      "at": "0x35e306",
+      "kind": "call",
+      "to": "0x694800"
+    },
+    {
+      "at": "0x3b3886",
+      "kind": "jmp",
+      "to": "0x3b3160"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9584fb8",
+      "role_inference": "Specific parser",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x1070c40"
+        }
+      ]
+    },
+    {
+      "rva": "0x9584cc8",
+      "role_inference": "Fallback type accessor",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x2ead390"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x1070c4d",
+      "mnemonic": "add",
+      "operands": "rdi, 0xf8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Embedded NewSyncResponse+f8"
+    },
+    {
+      "at": "0x1070c71",
+      "mnemonic": "call",
+      "operands": "0x694800",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call parser694800"
+    },
+    {
+      "at": "0x1070c76",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Override parser result withtrue on normal return"
+    },
+    {
+      "at": "0x694865",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear destination via slot18 before parsing"
+    },
+    {
+      "at": "0x694870",
+      "mnemonic": "call",
+      "operands": "0x694240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call generated parse/completeness dispatcher"
+    },
+    {
+      "at": "0x694876",
+      "mnemonic": "and",
+      "operands": "al, byte ptr [rbp - 0x34]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "AND parse result with consumed-input byte"
+    },
+    {
+      "at": "0x694884",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return combined result"
+    },
+    {
+      "at": "0x694269",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Generated parse slot38"
+    },
+    {
+      "at": "0x69426c",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test generated parse result"
+    },
+    {
+      "at": "0x69426e",
+      "mnemonic": "je",
+      "operands": "0x694536",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False returnsfalse"
+    },
+    {
+      "at": "0x69427a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Required-field completeness slot20"
+    },
+    {
+      "at": "0x694283",
+      "mnemonic": "jne",
+      "operands": "0x694538",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero completeness normal return"
+    },
+    {
+      "at": "0x694536",
+      "mnemonic": "xor",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Failure returns0"
+    },
+    {
+      "at": "0x35e5da",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wrapper parser call"
+    },
+    {
+      "at": "0x35e5de",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "No AL test before cleanup"
+    },
+    {
+      "at": "0x2ead5c0",
+      "mnemonic": "movabs",
+      "operands": "rax, 0x1d4c000000000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Options packed first twoDWORDs0 and120000"
+    },
+    {
+      "at": "0x2ead5ca",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x50], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store packed options at local-50"
+    },
+    {
+      "at": "0x2ead61c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass options as fifth argument"
+    },
+    {
+      "at": "0x2ead951",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x340]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read options pointer"
+    },
+    {
+      "at": "0x2ead958",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initial remaining retries from firstDWORD"
+    },
+    {
+      "at": "0x2ead99f",
+      "mnemonic": "test",
+      "operands": "r13b, r13b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Loop continuation controlled by retry byte"
+    },
+    {
+      "at": "0x2ead9a2",
+      "mnemonic": "je",
+      "operands": "0x2eae36f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "No retry returns output"
+    },
+    {
+      "at": "0x2ead9cc",
+      "mnemonic": "call",
+      "operands": "0x2ea6720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct zero-status default response result"
+    },
+    {
+      "at": "0x2ead9d1",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x1d0], 0xffffff92",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback statusA=-110"
+    },
+    {
+      "at": "0x2ead9db",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rbp + 0x1d4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback statusB zero check"
+    },
+    {
+      "at": "0x2ead9e4",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x1d4], 0xfffffbaa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback statusB=-1110 ifzero"
+    },
+    {
+      "at": "0x2eada0e",
+      "mnemonic": "mov",
+      "operands": "ebx, dword ptr [rax + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Raw per-attempt timeout from options+4"
+    },
+    {
+      "at": "0x2eada29",
+      "mnemonic": "call",
+      "operands": "0x2ead220",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wrap fallback result"
+    },
+    {
+      "at": "0x2eada49",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass timeout argument to coroutine context"
+    },
+    {
+      "at": "0x2eada6e",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Create CoCgiSendRequest context; full timeout lifecycle remains open"
+    },
+    {
+      "at": "0x2ead231",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x66d7a90]",
+      "rip_targets": [
+        "0x9584cc8"
+      ],
+      "public_static_strings": [],
+      "observation": "Fallback table9584cc8"
+    },
+    {
+      "at": "0x2ead23e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback wrapper+8 preserves status pair"
+    },
+    {
+      "at": "0x2ead304",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback wrapper+30 shared response"
+    },
+    {
+      "at": "0x2ead30c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback wrapper+38 response control"
+    },
+    {
+      "at": "0x2ead390",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x87c0859]",
+      "rip_targets": [
+        "0xb66dbf0"
+      ],
+      "public_static_strings": [],
+      "observation": "Fallback type metadata address"
+    },
+    {
+      "at": "0x2eae9c2",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check inner completion word"
+    },
+    {
+      "at": "0x2eae9c5",
+      "mnemonic": "je",
+      "operands": "0x2eae9f7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero selects context fallback rather than captured result"
+    },
+    {
+      "at": "0x2eaea14",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r12 + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read context fallback value+50"
+    },
+    {
+      "at": "0x2eaea25",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Obtain fallback type metadata"
+    },
+    {
+      "at": "0x2eaeb21",
+      "mnemonic": "test",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Type comparison result"
+    },
+    {
+      "at": "0x2eaeb23",
+      "mnemonic": "jne",
+      "operands": "0x2eaecc4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mismatch throws bad cast"
+    },
+    {
+      "at": "0x2eaeb29",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [r12 + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read typed fallback object"
+    },
+    {
+      "at": "0x2eaeb2e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [r14 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read fallback status pair at+8"
+    },
+    {
+      "at": "0x2eaeb32",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy pair unchanged to output"
+    },
+    {
+      "at": "0x2eade4d",
+      "mnemonic": "sub",
+      "operands": "ebx, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completed retries = initial minus remaining"
+    },
+    {
+      "at": "0x2eade56",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read output statusA"
+    },
+    {
+      "at": "0x2eade58",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [rcx + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read output statusB"
+    },
+    {
+      "at": "0x2eade60",
+      "mnemonic": "or",
+      "operands": "ecx, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine pair"
+    },
+    {
+      "at": "0x2eade63",
+      "mnemonic": "je",
+      "operands": "0x2eadfc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero pair does not retry"
+    },
+    {
+      "at": "0x2eade86",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read output statusA for retry eligibility"
+    },
+    {
+      "at": "0x2eade8a",
+      "mnemonic": "sete",
+      "operands": "al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "A==0 candidate"
+    },
+    {
+      "at": "0x2eade8d",
+      "mnemonic": "cmp",
+      "operands": "edx, -0x6e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "A==-110 candidate"
+    },
+    {
+      "at": "0x2eade93",
+      "mnemonic": "or",
+      "operands": "cl, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "EitherA condition"
+    },
+    {
+      "at": "0x2eade98",
+      "mnemonic": "test",
+      "operands": "esi, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Remaining must be nonzero"
+    },
+    {
+      "at": "0x2eade9d",
+      "mnemonic": "and",
+      "operands": "al, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine eligibility"
+    },
+    {
+      "at": "0x2eadea1",
+      "mnemonic": "jne",
+      "operands": "0x2eadfc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Ineligible does not retry"
+    },
+    {
+      "at": "0x2eadea7",
+      "mnemonic": "mov",
+      "operands": "eax, 0x3e8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Base raw delay1000"
+    },
+    {
+      "at": "0x2eadeae",
+      "mnemonic": "shl",
+      "operands": "eax, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "32-bit left shift by retry count low5bits"
+    },
+    {
+      "at": "0x2eadeb2",
+      "mnemonic": "call",
+      "operands": "0x3b21d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Wait helper call; no client execution"
+    },
+    {
+      "at": "0x2eadeb8",
+      "mnemonic": "dec",
+      "operands": "esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Decrement remaining"
+    },
+    {
+      "at": "0x2eadec4",
+      "mnemonic": "mov",
+      "operands": "r13b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set retry byte1"
+    },
+    {
+      "at": "0x2eadfc8",
+      "mnemonic": "xor",
+      "operands": "r13d, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonretry clears retry byte"
+    },
+    {
+      "at": "0x2eadfeb",
+      "mnemonic": "xor",
+      "operands": "r13d, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other nonretry path clears retry byte"
+    },
+    {
+      "at": "0x2eae11e",
+      "mnemonic": "jb",
+      "operands": "0x2ead99f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleanup back to retry test"
+    },
+    {
+      "at": "0x3b3880",
+      "mnemonic": "mov",
+      "operands": "r8d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve selects state1"
+    },
+    {
+      "at": "0x3b3886",
+      "mnemonic": "jmp",
+      "operands": "0x3b3160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall state transition"
+    },
+    {
+      "at": "0x3b31aa",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only pending0 allowed to transition"
+    },
+    {
+      "at": "0x3b32b9",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0xc4], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store chosen state1"
+    },
+    {
+      "at": "0x3b32d0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0xb8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move value into promise"
+    },
+    {
+      "at": "0x2eb0acd",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback result resolve not gated by statuses"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Wrapper9584fb8+10 is1070c40, not the earlier send wrapper113d70. It passes embedded NewSyncResponse+f8 to694800 then unconditionally setsAL1 on normal return.694800 clears the destination, calls694240, combines its result with input-consumption state and can returnfalse;694240 checks generated parser and required fields. Service35dfe0 also does not inspect wrapperAL at the selected call. This binds the return-loss specifically to NewSync; it is not a runtime malformed-response reproduction or proof that every upstream error check is absent.",
+    "Specific callback statuses remain separate from response field1. Promise resolve(state1), callback normal true, inner completion1 and outer completion1 can all occur with nonzero callback statuses on the selected normal path. None certifies parse_ok or history completion; missing/partial protocol fields are not repaired by these flags.",
+    "Outer closure options firstDWORD is0 and secondDWORD is120000.2ead900 reads these as retry budget and raw per-attempt timeout. Its constructed fallback result isA=-110,B=-1110 with a default typed response.2eae7f0 uses the captured result only when completion word is nonzero; otherwise it type-checks context fallback and copies that value, throwing on type mismatch. Full production/timing/cancel races of context+50 are not certified.",
+    "Retry condition within2ead900 is nonzero status pair AND(A==0 OR A==-110) AND remaining!=0. Eligible path waits raw1000 shifted left in32bits by completed_retry_count low5bits, decrements remaining and loops. The bound outer closure starts at0, so this selected invocation takes no retries at this layer. This does not bound other sync rounds, outer jobs or transport retries, and120000 is not a certified total wall-time here."
+  ],
+  "remaining": [
+    "Complete callback cancellation/timeout and queued-job lifetime before claiming a runtime capture method",
+    "Trace response-buffer update2ea9360/2ef87d0 and special-2006 path into next-request state/reset/reconnect",
+    "Account identity namespace/epoch, per-message direction/recency and actual executor/callback draining remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "363-send-response-parse-failure.json",
+    "438-inbound-newsync-fields.json",
+    "439-inbound-newsync-continuation.json"
+  ]
+}

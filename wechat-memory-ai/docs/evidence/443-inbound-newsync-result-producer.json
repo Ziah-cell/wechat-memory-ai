@@ -1,0 +1,1905 @@
+{
+  "checked_at_utc": "2026-10-08T14:33:20.106584+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Outer CoDoSync captured result and completion discriminator",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ead5a0",
+      "end": "0x2ead7e2",
+      "role_inference": "Outer selected closure calls CoCgiSendRequest-like helper and copies result",
+      "instruction_count": 162,
+      "disk_range_sha256": "5d8b9c51bf1b7f2d7f49d8a5c47dd5f77151e99520755a4e809970d656af7e4e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ead900",
+      "end": "0x2eae3b3",
+      "role_inference": "Per-attempt options/result and inner coroutine submission",
+      "instruction_count": 622,
+      "disk_range_sha256": "cb10193616721de4adb1665591c832b82078785c16b0ae6198d7021bbb352494",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eae7f0",
+      "end": "0x2eaecff",
+      "role_inference": "Create shared result and zero completion word; submit captured job; select result source",
+      "instruction_count": 329,
+      "disk_range_sha256": "86980724b7eaa1c804ca22be76139f2e949874555c3c72261340f92c9b666f35",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eaf240",
+      "end": "0x2eaf2c8",
+      "role_inference": "Create job closure table9584e78 and captures",
+      "instruction_count": 37,
+      "disk_range_sha256": "b7b05ca6d88e89910e51e1caaa060c8de2b8536d31555b858d53f1680df6e796",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eaf5b0",
+      "end": "0x2eaf76d",
+      "role_inference": "Inner job obtains typed future result then publishes result/completion",
+      "instruction_count": 137,
+      "disk_range_sha256": "071226bf12e09763a83243a5faad103f67dca13f646008cb795f6d27e6580fa4",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eaf980",
+      "end": "0x2eafbf7",
+      "role_inference": "Build future factory closure9584f18",
+      "instruction_count": 172,
+      "disk_range_sha256": "7bef381f96033c263e09f44b4ab690c6460c22f8986b2269440cdb701bfe088f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x112e40",
+      "end": "0x112fff",
+      "role_inference": "Copy factory context including service/request pointers",
+      "instruction_count": 128,
+      "disk_range_sha256": "06f34ff9e6db5c5d4d08651c0ccd7043c9bb6e922ae16bb38d8bc41df39af821",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b4b40",
+      "end": "0x3b4c57",
+      "role_inference": "Future factory invokes callable slot10",
+      "instruction_count": 88,
+      "disk_range_sha256": "3ac7c21dc235178096966ddfcd984ec12d734aaabffb1cff8505ee4c24f08215",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eafd20",
+      "end": "0x2eafd92",
+      "role_inference": "Factory wrapper forwards promise with adjusted capture base",
+      "instruction_count": 30,
+      "disk_range_sha256": "33d2b6b8a0cd9eb467b35bce5fa74dbf30d68754cb264f600da02bd5a042258b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eafdb0",
+      "end": "0x2eb00e5",
+      "role_inference": "Prepare completion closure capturing same promise; register stop hook",
+      "instruction_count": 227,
+      "disk_range_sha256": "acfc8c8d0ca8df0ed452474650ee18a6215b6d79dde95fc86cfdb8551dfdb468",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb01f0",
+      "end": "0x2eb047c",
+      "role_inference": "Construct NewSync wrapper and install callback at+98; submit via service+28",
+      "instruction_count": 183,
+      "disk_range_sha256": "f3e29fd137e9ff886fb5c04a4152fae0d66b5c1fa81c3ae35457f31db30dc631",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0530",
+      "end": "0x2eb066d",
+      "role_inference": "Wrapper constructor: request+a8 and response+f8",
+      "instruction_count": 80,
+      "disk_range_sha256": "26c63de85470ec7ec5370f620ee3dbba7526730bf4e1a5a68c0026d96d00fd82",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0840",
+      "end": "0x2eb0994",
+      "role_inference": "Specific callback copies typed response and outer statuses",
+      "instruction_count": 99,
+      "disk_range_sha256": "ec7ef6f3c7fd6318b2f45ea7948c52ff8b5959de4ea05f457d99347324ca2af3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1090630",
+      "end": "0x109065f",
+      "role_inference": "NewSyncResponse clear/copy wrapper",
+      "instruction_count": 19,
+      "disk_range_sha256": "540e990eeb5a5db262ac140cb6f32df040e5d3a062b48d341d4439186118c941",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0a00",
+      "end": "0x2eb0af5",
+      "role_inference": "Wrap copied result and resolve promise",
+      "instruction_count": 74,
+      "disk_range_sha256": "ebcf04f507ef0fa5afb925f9a0a643a379be85c0e0cf14369056e8b5e8420e1a",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x114970",
+      "end": "0x114a6f",
+      "role_inference": "Copy result status pair/string/shared response",
+      "instruction_count": 76,
+      "disk_range_sha256": "acf94f287bb9f1f083fd7d3d7837d0cd0023867c7ca1ec820be607678fc4e3a2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eaf7d0",
+      "end": "0x2eaf97b",
+      "role_inference": "Await and type-check future payload then extract result",
+      "instruction_count": 114,
+      "disk_range_sha256": "9320a68cf12c526fb0bb976f4a3c8278cdab3957e34b159b35e88ba56daa322d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6720",
+      "end": "0x2ea67d9",
+      "role_inference": "Create result with shared typed response",
+      "instruction_count": 52,
+      "disk_range_sha256": "d9c83a0f6eaee51948041eb1e92c616e4408c3032b371e74a4a1d0ce3589f42e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35dfe0",
+      "end": "0x35e6a4",
+      "role_inference": "Previously bound service parse/callback dispatch, selected sites rechecked",
+      "instruction_count": 405,
+      "disk_range_sha256": "44dfd589b1a5eb186afe50b2a7ff5aa2f6cff308ba8f36f51ecc2f3a47e7d0dc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cacc0",
+      "end": "0x3cad90",
+      "role_inference": "Move coroutine closure into launch helper",
+      "instruction_count": 62,
+      "disk_range_sha256": "a79dbb5302e068183e6ccccb82402b0e1658f5fe535a4bf552ac0f007e090e29",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca730",
+      "end": "0x3cab6a",
+      "role_inference": "Coroutine launch preparation; execution lifecycle not recertified",
+      "instruction_count": 229,
+      "disk_range_sha256": "d34b71e1cab321b4c812fbd04f50e8a099b9fda5b435b1ee38abb400ceaa5071",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x2eaf460",
+      "size": 9,
+      "anchor": "9584e78+10 adjusts capture base by8",
+      "instructions": [
+        {
+          "at": "0x2eaf460",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x2eaf464",
+          "mnemonic": "jmp",
+          "operands": "0x2eaf5b0"
+        }
+      ]
+    },
+    {
+      "rva": "0x2eb07b0",
+      "size": 82,
+      "anchor": "9585048+8 moves callback into wrapper holder",
+      "instructions": [
+        {
+          "at": "0x2eb07b0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x2eb07b3",
+          "mnemonic": "lea",
+          "operands": "rdx, [rip + 0x66d488e]"
+        },
+        {
+          "at": "0x2eb07ba",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rdx"
+        },
+        {
+          "at": "0x2eb07bd",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2eb07c0",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2eb07c4",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0x2eb07c8",
+          "mnemonic": "test",
+          "operands": "rdx, rdx"
+        },
+        {
+          "at": "0x2eb07cb",
+          "mnemonic": "je",
+          "operands": "0x2eb07d1"
+        },
+        {
+          "at": "0x2eb07cd",
+          "mnemonic": "lock inc",
+          "operands": "dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x2eb07d1",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x2eb07d5",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x2eb07d9",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0x2eb07dd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x10], rdx"
+        },
+        {
+          "at": "0x2eb07e1",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x18]"
+        },
+        {
+          "at": "0x2eb07e5",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], rdx"
+        },
+        {
+          "at": "0x2eb07e9",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x20], xmm0"
+        },
+        {
+          "at": "0x2eb07ed",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x20]"
+        },
+        {
+          "at": "0x2eb07f1",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], rdx"
+        },
+        {
+          "at": "0x2eb07f5",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x28]"
+        },
+        {
+          "at": "0x2eb07f9",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x28], rdx"
+        },
+        {
+          "at": "0x2eb07fd",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rcx + 0x20], xmm0"
+        },
+        {
+          "at": "0x2eb0801",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x2eb0810",
+      "size": 18,
+      "anchor": "9585048+10 callback thunk",
+      "instructions": [
+        {
+          "at": "0x2eb0810",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x2eb0814",
+          "mnemonic": "mov",
+          "operands": "r9d, dword ptr [r9]"
+        },
+        {
+          "at": "0x2eb0817",
+          "mnemonic": "mov",
+          "operands": "r8d, dword ptr [r8]"
+        },
+        {
+          "at": "0x2eb081a",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rdx]"
+        },
+        {
+          "at": "0x2eb081d",
+          "mnemonic": "jmp",
+          "operands": "0x2eb0840"
+        }
+      ]
+    },
+    {
+      "rva": "0x113db0",
+      "size": 8,
+      "anchor": "9584fb8+18 request accessor",
+      "instructions": [
+        {
+          "at": "0x113db0",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0xa8]"
+        },
+        {
+          "at": "0x113db7",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0xba1b10",
+      "size": 8,
+      "anchor": "9584fb8+20 response accessor",
+      "instructions": [
+        {
+          "at": "0xba1b10",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0xf8]"
+        },
+        {
+          "at": "0xba1b17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x108e6f0",
+      "size": 56,
+      "anchor": "NewSyncRequest constructor previously named in438",
+      "instructions": [
+        {
+          "at": "0x108e6f0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x108e6f3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x80e012e]"
+        },
+        {
+          "at": "0x108e6fa",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x108e6fd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x44], 0"
+        },
+        {
+          "at": "0x108e705",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x108e708",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x108e70c",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], 0"
+        },
+        {
+          "at": "0x108e714",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0xaad7e55]"
+        },
+        {
+          "at": "0x108e71b",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], rcx"
+        },
+        {
+          "at": "0x108e71f",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x28], xmm0"
+        },
+        {
+          "at": "0x108e723",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x34], xmm0"
+        },
+        {
+          "at": "0x108e727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x108e730",
+      "size": 29,
+      "anchor": "NewSyncResponse constructor previously named in438",
+      "instructions": [
+        {
+          "at": "0x108e730",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x108e733",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x80e016e]"
+        },
+        {
+          "at": "0x108e73a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x108e73d",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x108e740",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x108e744",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x18], xmm0"
+        },
+        {
+          "at": "0x108e748",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x24], xmm0"
+        },
+        {
+          "at": "0x108e74c",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2ea31b3",
+      "kind": "call",
+      "to": "0x108e6f0"
+    },
+    {
+      "at": "0x2ea3852",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2ea3964",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2ea3ad3",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x2ea4e57",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x2ead62e",
+      "kind": "call",
+      "to": "0x2ead900"
+    },
+    {
+      "at": "0x2ead9cc",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2eadc87",
+      "kind": "call",
+      "to": "0x2eae7f0"
+    },
+    {
+      "at": "0x2eae852",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2eae922",
+      "kind": "call",
+      "to": "0x2eaf240"
+    },
+    {
+      "at": "0x2eae93a",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x2eaf602",
+      "kind": "call",
+      "to": "0x2eaf980"
+    },
+    {
+      "at": "0x2eaf612",
+      "kind": "call",
+      "to": "0x2eaf7d0"
+    },
+    {
+      "at": "0x2eafb41",
+      "kind": "call",
+      "to": "0x112e40"
+    },
+    {
+      "at": "0x2eafb56",
+      "kind": "call",
+      "to": "0x3b4b40"
+    },
+    {
+      "at": "0x2eafd66",
+      "kind": "call",
+      "to": "0x2eafdb0"
+    },
+    {
+      "at": "0x2eaff42",
+      "kind": "call",
+      "to": "0x2eb01f0"
+    },
+    {
+      "at": "0x2eb02e4",
+      "kind": "call",
+      "to": "0x2eb0530"
+    },
+    {
+      "at": "0x2eb05c0",
+      "kind": "call",
+      "to": "0x108e6f0"
+    },
+    {
+      "at": "0x2eb05d5",
+      "kind": "call",
+      "to": "0x108e730"
+    },
+    {
+      "at": "0x2eb08c2",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2eb08cf",
+      "kind": "call",
+      "to": "0x1090630"
+    },
+    {
+      "at": "0x2eb08ed",
+      "kind": "call",
+      "to": "0x2eb0a00"
+    },
+    {
+      "at": "0x2eb0a1b",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x2eb0a48",
+      "kind": "call",
+      "to": "0x114970"
+    },
+    {
+      "at": "0x2ea6792",
+      "kind": "call",
+      "to": "0x108e730"
+    },
+    {
+      "at": "0x3cad60",
+      "kind": "call",
+      "to": "0x3ca730"
+    },
+    {
+      "at": "0x2eaf464",
+      "kind": "jmp",
+      "to": "0x2eaf5b0"
+    },
+    {
+      "at": "0x2eb081d",
+      "kind": "jmp",
+      "to": "0x2eb0840"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9584dd8",
+      "role_inference": "Outer closure",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x2ead5a0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9584e78",
+      "role_inference": "Inner result job",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x2eaf460"
+        }
+      ]
+    },
+    {
+      "rva": "0x9584f18",
+      "role_inference": "Future factory",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x2eafd20"
+        }
+      ]
+    },
+    {
+      "rva": "0x9585048",
+      "role_inference": "Completion callback move/invoke",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x2eb07b0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x2eb0810"
+        }
+      ]
+    },
+    {
+      "rva": "0x9584fb8",
+      "role_inference": "NewSync wrapper parse/request/response",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x1070c40"
+        },
+        {
+          "offset": "0x18",
+          "target": "0x113db0"
+        },
+        {
+          "offset": "0x20",
+          "target": "0xba1b10"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2ea3964",
+      "mnemonic": "call",
+      "operands": "0x2ea6720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct outer captured result"
+    },
+    {
+      "at": "0x2ea396a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xa50], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store result pointer local+a50"
+    },
+    {
+      "at": "0x2ea39a9",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer completion word initialized0"
+    },
+    {
+      "at": "0x2ea39b0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x910], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save completion pointer local+910"
+    },
+    {
+      "at": "0x2ea39f2",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x40], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture staging result pointer"
+    },
+    {
+      "at": "0x2ea3a26",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x910]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read same completion pointer"
+    },
+    {
+      "at": "0x2ea3a2d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x30], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture staging completion pointer"
+    },
+    {
+      "at": "0x2ea3a5e",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x66e1373]",
+      "rip_targets": [
+        "0x9584dd8"
+      ],
+      "public_static_strings": [],
+      "observation": "Outer closure table9584dd8"
+    },
+    {
+      "at": "0x2ea3a77",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rcx + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer closure+8 result shared pair"
+    },
+    {
+      "at": "0x2ea3a8e",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rcx + 0x18], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer closure+18 completion shared pair"
+    },
+    {
+      "at": "0x2ea3aa7",
+      "mnemonic": "call",
+      "operands": "0x108e830",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer closure+28 request copy"
+    },
+    {
+      "at": "0x2ea3ba5",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x910]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "After wait read same outer completion pointer"
+    },
+    {
+      "at": "0x2ea3bac",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completion discriminator, not status-success check"
+    },
+    {
+      "at": "0x2ea3baf",
+      "mnemonic": "je",
+      "operands": "0x2ea3bf0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero selects alternative typed result path"
+    },
+    {
+      "at": "0x2ea3bb1",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp + 0xa50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero selects captured result"
+    },
+    {
+      "at": "0x2ea3bbb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xad0], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy status pair to outer local+ad0"
+    },
+    {
+      "at": "0x2ead614",
+      "mnemonic": "lea",
+      "operands": "r8, [rsi + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request from closure+28"
+    },
+    {
+      "at": "0x2ead621",
+      "mnemonic": "mov",
+      "operands": "rdi, rbp",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Local result output at rbp"
+    },
+    {
+      "at": "0x2ead62e",
+      "mnemonic": "call",
+      "operands": "0x2ead900",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call2ead900"
+    },
+    {
+      "at": "0x2ead6b2",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured outer result"
+    },
+    {
+      "at": "0x2ead6ba",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish returned status pair"
+    },
+    {
+      "at": "0x2ead735",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish shared response pointer+28"
+    },
+    {
+      "at": "0x2ead73d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish shared control block+30"
+    },
+    {
+      "at": "0x2ead7c4",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured outer completion pointer"
+    },
+    {
+      "at": "0x2ead7c8",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set completion1 without zero-status gate"
+    },
+    {
+      "at": "0x2eadc76",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x290]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward outer result output address"
+    },
+    {
+      "at": "0x2eadc84",
+      "mnemonic": "mov",
+      "operands": "r8, r15",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward copied request/options record"
+    },
+    {
+      "at": "0x2eadc87",
+      "mnemonic": "call",
+      "operands": "0x2eae7f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call2eae7f0"
+    },
+    {
+      "at": "0x2eae852",
+      "mnemonic": "call",
+      "operands": "0x2ea6720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct inner captured result with initial0/0"
+    },
+    {
+      "at": "0x2eae858",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xf0], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save inner result pointer"
+    },
+    {
+      "at": "0x2eae88d",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inner completion word initialized0"
+    },
+    {
+      "at": "0x2eae894",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x100], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save inner completion pointer"
+    },
+    {
+      "at": "0x2eae8de",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x20], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stage result capture"
+    },
+    {
+      "at": "0x2eae8fe",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x100]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load completion pointer"
+    },
+    {
+      "at": "0x2eae905",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x30], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stage completion capture"
+    },
+    {
+      "at": "0x2eae914",
+      "mnemonic": "call",
+      "operands": "0x2eaeff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy request/options capture"
+    },
+    {
+      "at": "0x2eae922",
+      "mnemonic": "call",
+      "operands": "0x2eaf240",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Create concrete inner job holder"
+    },
+    {
+      "at": "0x2eae933",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp - 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass job holder to coroutine submission"
+    },
+    {
+      "at": "0x2eae93a",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call3cacc0; runtime execution is not claimed"
+    },
+    {
+      "at": "0x2eae9c2",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read inner completion discriminator"
+    },
+    {
+      "at": "0x2eae9c5",
+      "mnemonic": "je",
+      "operands": "0x2eae9f7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero goes to fallback type path"
+    },
+    {
+      "at": "0x2eae9c7",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero selects inner captured result"
+    },
+    {
+      "at": "0x2eae9d1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy status pair to output without success test"
+    },
+    {
+      "at": "0x2eaf26d",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x66d5c04]",
+      "rip_targets": [
+        "0x9584e78"
+      ],
+      "public_static_strings": [],
+      "observation": "Inner job table9584e78"
+    },
+    {
+      "at": "0x2eaf282",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 8], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move result pair into closure+8"
+    },
+    {
+      "at": "0x2eaf298",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x18], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move completion pair into closure+18"
+    },
+    {
+      "at": "0x2eaf2a4",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request/options at closure+28"
+    },
+    {
+      "at": "0x2eaf2af",
+      "mnemonic": "call",
+      "operands": "0x2eaeff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy request/options"
+    },
+    {
+      "at": "0x2eaf2bd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install callable at holder+38"
+    },
+    {
+      "at": "0x2eaf460",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust body capture base by8"
+    },
+    {
+      "at": "0x2eaf464",
+      "mnemonic": "jmp",
+      "operands": "0x2eaf5b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall inner job body"
+    },
+    {
+      "at": "0x2eaf5d0",
+      "mnemonic": "lea",
+      "operands": "rdi, [rcx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjusted body+20 equals original closure+28 request"
+    },
+    {
+      "at": "0x2eaf602",
+      "mnemonic": "call",
+      "operands": "0x2eaf980",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Create future for request"
+    },
+    {
+      "at": "0x2eaf612",
+      "mnemonic": "call",
+      "operands": "0x2eaf7d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await/extract typed result"
+    },
+    {
+      "at": "0x2eaf63e",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured result pointer at adjusted+0"
+    },
+    {
+      "at": "0x2eaf645",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish returned status pair"
+    },
+    {
+      "at": "0x2eaf6c0",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish shared response pointer"
+    },
+    {
+      "at": "0x2eaf6c8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r14 + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish response control block"
+    },
+    {
+      "at": "0x2eaf74f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completion pointer at adjusted+10"
+    },
+    {
+      "at": "0x2eaf753",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set inner completion1 without zero-status gate"
+    },
+    {
+      "at": "0x2eaf9a5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stage service pointer"
+    },
+    {
+      "at": "0x2eaf9a9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x10], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stage request pointer"
+    },
+    {
+      "at": "0x2eafb2b",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x66d53e6]",
+      "rip_targets": [
+        "0x9584f18"
+      ],
+      "public_static_strings": [],
+      "observation": "Future factory table9584f18"
+    },
+    {
+      "at": "0x2eafb39",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Factory capture starts at+8"
+    },
+    {
+      "at": "0x2eafb41",
+      "mnemonic": "call",
+      "operands": "0x112e40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy context including service/request pointers"
+    },
+    {
+      "at": "0x112e61",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy first16 bytes of factory context"
+    },
+    {
+      "at": "0x112e64",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rcx], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve service/request pointers in factory capture"
+    },
+    {
+      "at": "0x2eafb56",
+      "mnemonic": "call",
+      "operands": "0x3b4b40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Create future via3b4b40"
+    },
+    {
+      "at": "0x3b4b9c",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get factory callable"
+    },
+    {
+      "at": "0x3b4bb0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call concrete factory slot10"
+    },
+    {
+      "at": "0x2eafd50",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust factory capture base+8"
+    },
+    {
+      "at": "0x2eafd66",
+      "mnemonic": "call",
+      "operands": "0x2eafdb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call2eafdb0 with shared promise"
+    },
+    {
+      "at": "0x2eafed3",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x66d516e]",
+      "rip_targets": [
+        "0x9585048"
+      ],
+      "public_static_strings": [],
+      "observation": "Completion callback table9585048"
+    },
+    {
+      "at": "0x2eafeda",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x50], r9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install local callback table"
+    },
+    {
+      "at": "0x2eaff12",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x48], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture promise pointer at callback+8"
+    },
+    {
+      "at": "0x2eaff16",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x40], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture promise control at+10"
+    },
+    {
+      "at": "0x2eaff1a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x38], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture timing value at+18"
+    },
+    {
+      "at": "0x2eaff1e",
+      "mnemonic": "movdqu",
+      "operands": "xmmword ptr [rbp - 0x30], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture shared callback state at+20"
+    },
+    {
+      "at": "0x2eaff2a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Local callable holder+38"
+    },
+    {
+      "at": "0x2eaff36",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured service pointer"
+    },
+    {
+      "at": "0x2eaff39",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured request pointer"
+    },
+    {
+      "at": "0x2eaff3d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback holder argument"
+    },
+    {
+      "at": "0x2eaff42",
+      "mnemonic": "call",
+      "operands": "0x2eb01f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Build and submit specific wrapper"
+    },
+    {
+      "at": "0x2eb02e4",
+      "mnemonic": "call",
+      "operands": "0x2eb0530",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct specific NewSync wrapper"
+    },
+    {
+      "at": "0x2eb02f5",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request accessor virtual+18"
+    },
+    {
+      "at": "0x2eb02ff",
+      "mnemonic": "call",
+      "operands": "0x108f950",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy request into wrapper"
+    },
+    {
+      "at": "0x2eb0305",
+      "mnemonic": "lea",
+      "operands": "r14, [r12 + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback holder inline storage at wrapper+60"
+    },
+    {
+      "at": "0x2eb0346",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r12 + 0x98], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Out-of-line callback moved to wrapper+98"
+    },
+    {
+      "at": "0x2eb0356",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inline callback move through slot8"
+    },
+    {
+      "at": "0x2eb0359",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r12 + 0x98], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save moved callback at wrapper+98"
+    },
+    {
+      "at": "0x2eb03f2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Service submit virtual+28; previous355 binds default service"
+    },
+    {
+      "at": "0x2eb05a7",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x66d4a0a]",
+      "rip_targets": [
+        "0x9584fb8"
+      ],
+      "public_static_strings": [],
+      "observation": "Wrapper table9584fb8"
+    },
+    {
+      "at": "0x2eb05ae",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install wrapper table"
+    },
+    {
+      "at": "0x2eb05b5",
+      "mnemonic": "add",
+      "operands": "rcx, 0xa8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Embedded request+a8"
+    },
+    {
+      "at": "0x2eb05c0",
+      "mnemonic": "call",
+      "operands": "0x108e6f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request constructor"
+    },
+    {
+      "at": "0x2eb05ca",
+      "mnemonic": "lea",
+      "operands": "rcx, [rax + 0xf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Embedded response+f8"
+    },
+    {
+      "at": "0x2eb05d5",
+      "mnemonic": "call",
+      "operands": "0x108e730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response constructor"
+    },
+    {
+      "at": "0x113db0",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0xa8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request accessor returns wrapper+a8"
+    },
+    {
+      "at": "0xba1b10",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0xf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response accessor returns wrapper+f8"
+    },
+    {
+      "at": "0x2eb07b3",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x66d488e]",
+      "rip_targets": [
+        "0x9585048"
+      ],
+      "public_static_strings": [],
+      "observation": "Callback move installs same9585048 table"
+    },
+    {
+      "at": "0x2eb07ba",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install moved callback table"
+    },
+    {
+      "at": "0x2eb07d5",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy captured promise pointer"
+    },
+    {
+      "at": "0x2eb07dd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x10], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy captured promise control"
+    },
+    {
+      "at": "0x2eb07f1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x20], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move callback shared-state pointer"
+    },
+    {
+      "at": "0x2eb0810",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust callback base+8"
+    },
+    {
+      "at": "0x2eb0814",
+      "mnemonic": "mov",
+      "operands": "r9d, dword ptr [r9]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Dereference statusB argument"
+    },
+    {
+      "at": "0x2eb0817",
+      "mnemonic": "mov",
+      "operands": "r8d, dword ptr [r8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Dereference statusA argument"
+    },
+    {
+      "at": "0x2eb081a",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Dereference wrapper pointer argument"
+    },
+    {
+      "at": "0x2eb081d",
+      "mnemonic": "jmp",
+      "operands": "0x2eb0840",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall actual response callback"
+    },
+    {
+      "at": "0x35e5da",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Service invokes selected wrapper parser slot10"
+    },
+    {
+      "at": "0x35e5de",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Next instruction prepares cleanup without inspecting AL"
+    },
+    {
+      "at": "0x35e637",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdi + 0x98]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read wrapper callback holder+98"
+    },
+    {
+      "at": "0x35e646",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp - 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass wrapper pointer reference"
+    },
+    {
+      "at": "0x35e64a",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0xd0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass statusA reference"
+    },
+    {
+      "at": "0x35e651",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass statusB reference"
+    },
+    {
+      "at": "0x35e655",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke callback slot10"
+    },
+    {
+      "at": "0x2eb0859",
+      "mnemonic": "mov",
+      "operands": "edi, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve callback statusB"
+    },
+    {
+      "at": "0x2eb085c",
+      "mnemonic": "mov",
+      "operands": "ebx, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve callback statusA"
+    },
+    {
+      "at": "0x2eb085f",
+      "mnemonic": "mov",
+      "operands": "r14, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve wrapper pointer"
+    },
+    {
+      "at": "0x2eb0891",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get embedded response through bound slot20"
+    },
+    {
+      "at": "0x2eb08c2",
+      "mnemonic": "call",
+      "operands": "0x2ea6720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Create typed result"
+    },
+    {
+      "at": "0x2eb08cf",
+      "mnemonic": "call",
+      "operands": "0x1090630",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy wrapper NewSyncResponse into shared result response"
+    },
+    {
+      "at": "0x1090644",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear destination response"
+    },
+    {
+      "at": "0x1090653",
+      "mnemonic": "jmp",
+      "operands": "0x108fa90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall response merge108fa90"
+    },
+    {
+      "at": "0x2eb08d5",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x3c], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize output statusB0"
+    },
+    {
+      "at": "0x2eb08dc",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x40], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy callback statusA directly"
+    },
+    {
+      "at": "0x2eb08df",
+      "mnemonic": "test",
+      "operands": "edi, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test callback statusB"
+    },
+    {
+      "at": "0x2eb08e3",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp - 0x3c], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy nonzero callback statusB; no field1 substitution"
+    },
+    {
+      "at": "0x2eb08ed",
+      "mnemonic": "call",
+      "operands": "0x2eb0a00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass result to promise wrapper regardless of status"
+    },
+    {
+      "at": "0x2eb0960",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal callback returntrue regardless of status"
+    },
+    {
+      "at": "0x2eb0a1b",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy result into temporary"
+    },
+    {
+      "at": "0x2eb0a48",
+      "mnemonic": "call",
+      "operands": "0x114970",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy result into promise value object"
+    },
+    {
+      "at": "0x114981",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read both status DWORDs as QWORD"
+    },
+    {
+      "at": "0x114984",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy both status DWORDs unchanged"
+    },
+    {
+      "at": "0x114a49",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy shared response pointer"
+    },
+    {
+      "at": "0x114a51",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy shared response control"
+    },
+    {
+      "at": "0x2eb0ac6",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get same captured promise"
+    },
+    {
+      "at": "0x2eb0acd",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve value via3b3880"
+    },
+    {
+      "at": "0x2eaf7e4",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await future"
+    },
+    {
+      "at": "0x2eaf7ec",
+      "mnemonic": "call",
+      "operands": "0x3b4700",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retrieve future value"
+    },
+    {
+      "at": "0x2eaf84a",
+      "mnemonic": "jne",
+      "operands": "0x2eaf93e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Type mismatch throws; not silently0/0"
+    },
+    {
+      "at": "0x2eaf857",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Extract status pair from typed value+8"
+    },
+    {
+      "at": "0x2eaf927",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x28], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Extract shared response pointer"
+    },
+    {
+      "at": "0x2eaf92b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Extract shared response control"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "Outer closure9584dd8+10=2ead5a0 calls2ead900->2eae7f0. The latter creates an inner shared result and a zero completion word, captures them in9584e78, and submits through3cacc0. Slot10 adjusts capture base+8 and enters2eaf5b0. These are selected construction/argument paths, not proof of active executor operation or full asynchronous lifetime.",
+    "Inner job2eaf5b0 creates a future through2eaf980. Concrete factory9584f18+10 calls2eafd20->2eafdb0. It captures the same promise in callback9585048, passes it to2eb01f0 and installs it in wrapper+98. Inline move2eb07b0 preserves its table/promise. The specific wrapper9584fb8 contains NewSyncRequest at+a8 and NewSyncResponse at+f8.",
+    "For the default service path already bound in355/364, service35dfe0 obtains wrapper+98 and invokes slot10. Specific thunk2eb0810 dereferences wrapper/status arguments and calls2eb0840. That callback uses wrapper slot20=ba1b10 to obtain+f8, copies NewSyncResponse into a new shared result, stores callback statusesA/B and passes the result to2eb0a00. It does not replaceB with response field1; that protocol status is separately consumed by the outer command processor.",
+    "2eb0a00 copies statuses/response and calls3b3880 with the captured promise without requiring successful status values. Await/type extraction2eaf7d0 can throw on missing/wrong value. On selected normal returns, inner job publishes statuses/shared response then sets its completion word1;2eae7f0 chooses this result when that word is nonzero. Outer closure repeats this publication and sets its own completion word1. Both completion words distinguish result sources, not business success, parse validity or drained callbacks.",
+    "The callback normal returntrue is independent of statuses. Binding it to NewSync does not supply per-message history/direction/identity or certify native compatibility. Mutex calls, cancellation hooks, exceptions and coroutine execution are present but not fully audited here."
+  ],
+  "remaining": [
+    "Complete callback cancellation/timeout and queued-job lifetime before claiming a runtime capture method",
+    "Trace response-buffer update2ea9360/2ef87d0 and special-2006 path into next-request state/reset/reconnect",
+    "Account identity namespace/epoch, per-message direction/recency and actual executor/callback draining remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "355-send-service-task-return.json",
+    "364-send-callback-registration.json",
+    "367-send-executor-resume.json",
+    "438-inbound-newsync-fields.json",
+    "439-inbound-newsync-continuation.json"
+  ]
+}
