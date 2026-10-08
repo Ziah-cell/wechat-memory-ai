@@ -1,0 +1,1444 @@
+{
+  "checked_at_utc": "2026-10-08T04:45:10.629714+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected root assignment/getter/clear data flow from fixed disk bytes. Full ranges decode, but only selected semantic paths are assessed; not whole-CFG, runtime, account authentication or adapter certification.",
+  "unwind_nodes": [
+    {
+      "rva": "0x47a240",
+      "end": "0x47b578",
+      "role_inference": "Selected result -> initialization record -> root initialization path",
+      "instruction_count": 1031,
+      "disk_range_sha256": "0679146119ba8b72d7434c5414fb7d667319e948cba02a0f05a65b3888f75ec1",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4c140",
+      "end": "0x4ce64",
+      "role_inference": "Preserves root and input record before task wrapper4d740",
+      "instruction_count": 708,
+      "disk_range_sha256": "19015442bf0bd4eda582b6038187fb680460b7ebfba0919a66230186e2484ce0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4d740",
+      "end": "0x4d96a",
+      "role_inference": "Construct task body65980; capture copied record+38 and root+2b8",
+      "instruction_count": 131,
+      "disk_range_sha256": "1917706b7f82a4486e6ff9b251335b36470d12a15e701fd2770e7f27d32c50fe",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x51c60",
+      "end": "0x52658",
+      "role_inference": "Copies initialization record including its first string",
+      "instruction_count": 605,
+      "disk_range_sha256": "1c97a855ab585d2bdcc06369a2a6789b8eb2f56a288ed239864e51ce91917b43",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x65980",
+      "end": "0x65e1a",
+      "role_inference": "Construct member and replace root shared member+68/+70",
+      "instruction_count": 270,
+      "disk_range_sha256": "222eee964a0ce84fc6bcba53263d1cc8f9c52d93d6de3e8b5f2e48807c4329b2",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x65f60",
+      "end": "0x6603d",
+      "role_inference": "Shared member allocation wrapper",
+      "instruction_count": 70,
+      "disk_range_sha256": "64229990a6edd9d1924f72cc41799b2b63aab855f73654eef7b4df02b764fef4",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x37ad20",
+      "end": "0x37c54a",
+      "role_inference": "Install member table and copy record first string to member+48",
+      "instruction_count": 1310,
+      "disk_range_sha256": "562154bbe8ecf73437bc18a0ac29fec3763cc21e6b00e1d6471d1bcdbb10b8e9",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4f3c0",
+      "end": "0x4f44b",
+      "role_inference": "Root virtual+20 returns member virtual+18 string or fallback",
+      "instruction_count": 49,
+      "disk_range_sha256": "dab46a1dee22a0326c378169e74b9b2697dce69ca4cd4f8e9c8e9011df7839df",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x53510",
+      "end": "0x54f61",
+      "role_inference": "Selected branch uses global root to construct clearing task",
+      "instruction_count": 1402,
+      "disk_range_sha256": "06709c6789294408f7f25b8d67a173d2a12c4016e09e0f90f0a1fcc843a39f80",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4dd20",
+      "end": "0x4deb9",
+      "role_inference": "Construct clear task60580, capture root+38",
+      "instruction_count": 116,
+      "disk_range_sha256": "4f6c18af51b4312bff62f0f9070cef2072995c9196f60a8d42903a1c6f53b30d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x60580",
+      "end": "0x6064d",
+      "role_inference": "Clear captured root member pair and release old ownership",
+      "instruction_count": 65,
+      "disk_range_sha256": "edcfda7d99b8b7cdf19a59f640df9eb4f712cb0dfe8ce24f850329f3a014d8a8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x39e010",
+      "end": "0x39e09f",
+      "role_inference": "Common task submission boundary; execution and thread lifecycle unresolved",
+      "instruction_count": 45,
+      "disk_range_sha256": "45eff32233e73748f07ec7eee2237c574538f716d15a3682bbcce5a44921b713",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x45d10",
+      "size": 8,
+      "anchor": "Direct call47b2d9",
+      "instructions": [
+        {
+          "at": "0x45d10",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rip + 0xbb1bf79]"
+        },
+        {
+          "at": "0x45d17",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x10c920",
+      "size": 29,
+      "anchor": "Task constructors4d740/4dd20 call this leaf",
+      "instructions": [
+        {
+          "at": "0x10c920",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x10c923",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rcx], 1"
+        },
+        {
+          "at": "0x10c929",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 8], rdx"
+        },
+        {
+          "at": "0x10c92d",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rcx + 0x10], r8"
+        },
+        {
+          "at": "0x10c931",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 8]"
+        },
+        {
+          "at": "0x10c938",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], rcx"
+        },
+        {
+          "at": "0x10c93c",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x384a60",
+      "size": 5,
+      "anchor": "Constructed member table8fa9498+18",
+      "instructions": [
+        {
+          "at": "0x384a60",
+          "mnemonic": "lea",
+          "operands": "rax, [rcx + 0x48]"
+        },
+        {
+          "at": "0x384a64",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x469a0",
+      "size": 46,
+      "anchor": "Default root table8f294e8+60; includes both return branches",
+      "instructions": [
+        {
+          "at": "0x469a0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x469a3",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x70]"
+        },
+        {
+          "at": "0x469a7",
+          "mnemonic": "test",
+          "operands": "rdx, rdx"
+        },
+        {
+          "at": "0x469aa",
+          "mnemonic": "je",
+          "operands": "0x469c0"
+        },
+        {
+          "at": "0x469ac",
+          "mnemonic": "lock inc",
+          "operands": "dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x469b0",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x70]"
+        },
+        {
+          "at": "0x469b4",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x68]"
+        },
+        {
+          "at": "0x469b8",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x469bb",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x469bf",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "at": "0x469c0",
+          "mnemonic": "xor",
+          "operands": "edx, edx"
+        },
+        {
+          "at": "0x469c2",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 0x68]"
+        },
+        {
+          "at": "0x469c6",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x469c9",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x469cd",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x47a4b6",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x47a5ea",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x47b2d9",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x47b2f0",
+      "kind": "call",
+      "to": "0x4c140"
+    },
+    {
+      "at": "0x4c9ac",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x4cac5",
+      "kind": "call",
+      "to": "0x39e010"
+    },
+    {
+      "at": "0x4cb21",
+      "kind": "call",
+      "to": "0x4d740"
+    },
+    {
+      "at": "0x4d76e",
+      "kind": "call",
+      "to": "0x51c60"
+    },
+    {
+      "at": "0x4d813",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x4d861",
+      "kind": "call",
+      "to": "0x51c60"
+    },
+    {
+      "at": "0x4d8d1",
+      "kind": "call",
+      "to": "0x39e010"
+    },
+    {
+      "at": "0x65c38",
+      "kind": "call",
+      "to": "0x65f60"
+    },
+    {
+      "at": "0x65fab",
+      "kind": "call",
+      "to": "0x37ad20"
+    },
+    {
+      "at": "0x37c129",
+      "kind": "call",
+      "to": "0x45d10"
+    },
+    {
+      "at": "0x37c14c",
+      "kind": "call",
+      "to": "0x51c60"
+    },
+    {
+      "at": "0x37c18b",
+      "kind": "call",
+      "to": "0x51c60"
+    },
+    {
+      "at": "0x54cf9",
+      "kind": "call",
+      "to": "0x4dd20"
+    },
+    {
+      "at": "0x4ddbf",
+      "kind": "call",
+      "to": "0x10c920"
+    },
+    {
+      "at": "0x4de35",
+      "kind": "call",
+      "to": "0x39e010"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x8f294e8",
+      "role_inference": "Previously bound default root table; selected getters",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x20",
+          "target": "0x4f3c0"
+        },
+        {
+          "offset": "0x60",
+          "target": "0x469a0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa9498",
+      "role_inference": "Table installed by new member constructor37ad20",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x18",
+          "target": "0x384a60"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x45d10",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rip + 0xbb1bf79]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "Read the root globalbb61c90"
+    },
+    {
+      "at": "0x47b2d9",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Obtain root through45d10"
+    },
+    {
+      "at": "0x47b2e6",
+      "mnemonic": "lea",
+      "operands": "r8, [rbp + 0xb0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "R8 points to selected initialization record"
+    },
+    {
+      "at": "0x47b2ed",
+      "mnemonic": "mov",
+      "operands": "rcx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass returned root asRCX"
+    },
+    {
+      "at": "0x47b2f0",
+      "mnemonic": "call",
+      "operands": "0x4c140",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call4c140"
+    },
+    {
+      "at": "0x4c16d",
+      "mnemonic": "mov",
+      "operands": "rsi, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve input recordR8 asRSI"
+    },
+    {
+      "at": "0x4c177",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve rootRCX asRDI"
+    },
+    {
+      "at": "0x4cb18",
+      "mnemonic": "mov",
+      "operands": "rcx, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root as first argument"
+    },
+    {
+      "at": "0x4cb1e",
+      "mnemonic": "mov",
+      "operands": "r8, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Record as third argument"
+    },
+    {
+      "at": "0x4cb21",
+      "mnemonic": "call",
+      "operands": "0x4d740",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call task constructor4d740"
+    },
+    {
+      "at": "0x4d763",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x58], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save incoming root"
+    },
+    {
+      "at": "0x4d767",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp - 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Local copied record destination"
+    },
+    {
+      "at": "0x4d76b",
+      "mnemonic": "mov",
+      "operands": "rdx, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Record source fromR8"
+    },
+    {
+      "at": "0x4d76e",
+      "mnemonic": "call",
+      "operands": "0x51c60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First51c60 copy"
+    },
+    {
+      "at": "0x4d7c9",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rbp - 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload saved root"
+    },
+    {
+      "at": "0x4d7e9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x270], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save root for capture"
+    },
+    {
+      "at": "0x4d7f0",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocate task size2c0"
+    },
+    {
+      "at": "0x4d7fb",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x1817e]",
+      "rip_targets": [
+        "0x65980"
+      ],
+      "public_static_strings": [],
+      "observation": "Body65980"
+    },
+    {
+      "at": "0x4d802",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x18e47]",
+      "rip_targets": [
+        "0x66650"
+      ],
+      "public_static_strings": [],
+      "observation": "Cleanup callback66650"
+    },
+    {
+      "at": "0x4d813",
+      "mnemonic": "call",
+      "operands": "0x10c920",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store body/cleanup through10c920"
+    },
+    {
+      "at": "0x10c929",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task body at+8"
+    },
+    {
+      "at": "0x10c92d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x10], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task cleanup at+10"
+    },
+    {
+      "at": "0x4d859",
+      "mnemonic": "add",
+      "operands": "rcx, 0x38",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task copied record begins+38"
+    },
+    {
+      "at": "0x4d85d",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp - 0x50]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source is first local record copy"
+    },
+    {
+      "at": "0x4d861",
+      "mnemonic": "call",
+      "operands": "0x51c60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Second51c60 copy"
+    },
+    {
+      "at": "0x4d867",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x270]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload original root"
+    },
+    {
+      "at": "0x4d86e",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x278]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload task pointer"
+    },
+    {
+      "at": "0x4d875",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x2b8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture root at task+2b8"
+    },
+    {
+      "at": "0x4d8d1",
+      "mnemonic": "call",
+      "operands": "0x39e010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Task submission boundary39e010"
+    },
+    {
+      "at": "0x39e062",
+      "mnemonic": "jne",
+      "operands": "0x39e08a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing scheduler state takes non-submit path"
+    },
+    {
+      "at": "0x39e080",
+      "mnemonic": "call",
+      "operands": "0x39e0d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected deeper scheduler boundary39e0d0"
+    },
+    {
+      "at": "0x659a0",
+      "mnemonic": "mov",
+      "operands": "rbx, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve task pointer asRBX"
+    },
+    {
+      "at": "0x659b0",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rbx + 0x2b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root from task+2b8 intoRSI"
+    },
+    {
+      "at": "0x659d6",
+      "mnemonic": "lea",
+      "operands": "rdi, [rbx + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copied initialization record at task+38"
+    },
+    {
+      "at": "0x65c2e",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Output shared pair location"
+    },
+    {
+      "at": "0x65c35",
+      "mnemonic": "mov",
+      "operands": "rdx, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass record pointer"
+    },
+    {
+      "at": "0x65c38",
+      "mnemonic": "call",
+      "operands": "0x65f60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct shared member65f60"
+    },
+    {
+      "at": "0x65c3e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Returned shared control block"
+    },
+    {
+      "at": "0x65c4a",
+      "mnemonic": "lock inc",
+      "operands": "dword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retain new control block before root replacement"
+    },
+    {
+      "at": "0x65c59",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0xf0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load returned member pointer"
+    },
+    {
+      "at": "0x65c60",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x68], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write root+68"
+    },
+    {
+      "at": "0x65c64",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rsi + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve old control block"
+    },
+    {
+      "at": "0x65c68",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write root+70"
+    },
+    {
+      "at": "0x65c95",
+      "mnemonic": "call",
+      "operands": "0x37d6c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Follow-on member operation37d6c0; business meaning pending"
+    },
+    {
+      "at": "0x65ca2",
+      "mnemonic": "add",
+      "operands": "rsi, 0x2f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root+2f0 address; not assigned account semantics"
+    },
+    {
+      "at": "0x65cac",
+      "mnemonic": "call",
+      "operands": "0x384ba0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass to384ba0; not proof of account identifier"
+    },
+    {
+      "at": "0x65fa1",
+      "mnemonic": "lea",
+      "operands": "rdi, [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "New member is allocation+10"
+    },
+    {
+      "at": "0x65fa5",
+      "mnemonic": "mov",
+      "operands": "rcx, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass actual member pointer"
+    },
+    {
+      "at": "0x65fa8",
+      "mnemonic": "mov",
+      "operands": "rdx, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass input record"
+    },
+    {
+      "at": "0x65fab",
+      "mnemonic": "call",
+      "operands": "0x37ad20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call member constructor37ad20"
+    },
+    {
+      "at": "0x65fb1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return actual member pointer in shared pair"
+    },
+    {
+      "at": "0x65fb8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 8], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return control block"
+    },
+    {
+      "at": "0x37ad4b",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve initialization record inRSI"
+    },
+    {
+      "at": "0x37ad55",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8c2e73c]",
+      "rip_targets": [
+        "0x8fa9498"
+      ],
+      "public_static_strings": [],
+      "observation": "Member table8fa9498"
+    },
+    {
+      "at": "0x37ad5c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x4a0], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save member pointer"
+    },
+    {
+      "at": "0x37ad63",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install member table"
+    },
+    {
+      "at": "0x37b432",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x4a0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload member pointer"
+    },
+    {
+      "at": "0x37b439",
+      "mnemonic": "lea",
+      "operands": "rdi, [rax + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination first string at member+48"
+    },
+    {
+      "at": "0x37b43d",
+      "mnemonic": "cmp",
+      "operands": "rdi, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Self-copy guard"
+    },
+    {
+      "at": "0x37b442",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source record first string length"
+    },
+    {
+      "at": "0x37b446",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rsi + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source record first string capacity"
+    },
+    {
+      "at": "0x37b44b",
+      "mnemonic": "mov",
+      "operands": "r9, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source inline string address"
+    },
+    {
+      "at": "0x37b450",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source heap string address for long string"
+    },
+    {
+      "at": "0x37b45a",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rcx + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination string capacity"
+    },
+    {
+      "at": "0x37b469",
+      "mnemonic": "call",
+      "operands": "0x3e150",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String growth/copy branch"
+    },
+    {
+      "at": "0x37b47a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x58], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination string length"
+    },
+    {
+      "at": "0x37b487",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected in-capacity string copy"
+    },
+    {
+      "at": "0x37b48c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rdi + rbx], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected string terminator"
+    },
+    {
+      "at": "0x51c87",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Record copy source"
+    },
+    {
+      "at": "0x51c8a",
+      "mnemonic": "mov",
+      "operands": "r15, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Record copy destination"
+    },
+    {
+      "at": "0x51c97",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdx + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First string length"
+    },
+    {
+      "at": "0x51c9b",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rdx + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "First string capacity"
+    },
+    {
+      "at": "0x51cb7",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x10], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Short first string length"
+    },
+    {
+      "at": "0x51cbb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x18], 0xf",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Short first string capacity"
+    },
+    {
+      "at": "0x51cc3",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rbx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Short first string load"
+    },
+    {
+      "at": "0x51cc6",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r15], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Short first string store"
+    },
+    {
+      "at": "0x51d15",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Long first string buffer"
+    },
+    {
+      "at": "0x51d18",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x10], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Long first string length"
+    },
+    {
+      "at": "0x51d1c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x18], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Long first string capacity"
+    },
+    {
+      "at": "0x51d2c",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Long first string copy"
+    },
+    {
+      "at": "0x384a60",
+      "mnemonic": "lea",
+      "operands": "rax, [rcx + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member virtual+18 returns member+48 string address"
+    },
+    {
+      "at": "0x469a3",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rcx + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root shared control block"
+    },
+    {
+      "at": "0x469ac",
+      "mnemonic": "lock inc",
+      "operands": "dword ptr [rdx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Retain shared control block"
+    },
+    {
+      "at": "0x469b4",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root member pointer on retained branch"
+    },
+    {
+      "at": "0x469bb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return shared control block"
+    },
+    {
+      "at": "0x469c2",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root member pointer with null control block"
+    },
+    {
+      "at": "0x4f3d5",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xbb128b4]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "Root global again, not arbitrary incomingRCX"
+    },
+    {
+      "at": "0x4f3e3",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Root virtual+60 obtains shared member"
+    },
+    {
+      "at": "0x4f3f6",
+      "mnemonic": "test",
+      "operands": "rsi, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check member exists"
+    },
+    {
+      "at": "0x4f401",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member virtual+18 obtains string address"
+    },
+    {
+      "at": "0x4f411",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release temporary member ownership before returning borrowed string"
+    },
+    {
+      "at": "0x4f43c",
+      "mnemonic": "call",
+      "operands": "0x22bc10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing-member fallback22bc10"
+    },
+    {
+      "at": "0x47a732",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x3f8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "One result pointer source"
+    },
+    {
+      "at": "0x47a7c9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x3f8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternative result pointer source"
+    },
+    {
+      "at": "0x47a87c",
+      "mnemonic": "lea",
+      "operands": "rbx, [rax + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternative path result+88 destination"
+    },
+    {
+      "at": "0x47a888",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rsi + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternative path input+60 string length"
+    },
+    {
+      "at": "0x47a893",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternative path input+60 heap buffer"
+    },
+    {
+      "at": "0x47a8cd",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Alternative path copies existing input string into result+88"
+    },
+    {
+      "at": "0x47a9c9",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x3f8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected result pointer"
+    },
+    {
+      "at": "0x47a9d0",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rax + 4], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Gate byte+4 equals1; business enum unverified"
+    },
+    {
+      "at": "0x47a9d4",
+      "mnemonic": "jne",
+      "operands": "0x47aca6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other branch does not enter this initialization block"
+    },
+    {
+      "at": "0x47af66",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0x3f8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected result pointer for initialization record"
+    },
+    {
+      "at": "0x47af7b",
+      "mnemonic": "lea",
+      "operands": "r9, [rax + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source string at result+88"
+    },
+    {
+      "at": "0x47af82",
+      "mnemonic": "lea",
+      "operands": "rbx, [rbp + 0xb0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destination first string at local record base"
+    },
+    {
+      "at": "0x47af8e",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rax + 0x98]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source result string length"
+    },
+    {
+      "at": "0x47af95",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 0xa0], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source result string capacity"
+    },
+    {
+      "at": "0x47af9f",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 0x88]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Source result heap string for long string"
+    },
+    {
+      "at": "0x47afb2",
+      "mnemonic": "lea",
+      "operands": "rcx, [rbp + 0xb0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String growth destination"
+    },
+    {
+      "at": "0x47afbc",
+      "mnemonic": "call",
+      "operands": "0x3e150",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "String growth/copy helper"
+    },
+    {
+      "at": "0x47afd1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xc0], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store record first string length"
+    },
+    {
+      "at": "0x47afe1",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected string copy to record"
+    },
+    {
+      "at": "0x47afe6",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbx + rdi], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Record string terminator"
+    },
+    {
+      "at": "0x54ceb",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xbb0cf9e]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "Clear path reads same globalrootbb61c90"
+    },
+    {
+      "at": "0x54cf9",
+      "mnemonic": "call",
+      "operands": "0x4dd20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call4dd20 with global root"
+    },
+    {
+      "at": "0x4dd40",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve clear-task receiver"
+    },
+    {
+      "at": "0x4dd9b",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save receiver for task capture"
+    },
+    {
+      "at": "0x4ddaa",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x127cf]",
+      "rip_targets": [
+        "0x60580"
+      ],
+      "public_static_strings": [],
+      "observation": "Clear task body60580"
+    },
+    {
+      "at": "0x4ddbf",
+      "mnemonic": "call",
+      "operands": "0x10c920",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct task with body and cleanup pointers"
+    },
+    {
+      "at": "0x4ddf1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x38], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture root in clear task+38"
+    },
+    {
+      "at": "0x4de35",
+      "mnemonic": "call",
+      "operands": "0x39e010",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit clear task through39e010"
+    },
+    {
+      "at": "0x60593",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve clear task"
+    },
+    {
+      "at": "0x605a0",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x38]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured root"
+    },
+    {
+      "at": "0x605a4",
+      "mnemonic": "xorps",
+      "operands": "xmm0, xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Prepare zero vector"
+    },
+    {
+      "at": "0x605cc",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rax + 0x70]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve old root control block"
+    },
+    {
+      "at": "0x605d0",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rax + 0x68], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear root member and control block together"
+    },
+    {
+      "at": "0x605d9",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release previous shared member ownership"
+    },
+    {
+      "at": "0x60606",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve clear-task promise; no queued-work-drain proof"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The selected47a240 branch obtains globalbb61c90 through45d10, passes it through4c140/4d740 and captures it at task+2b8. The installed task body65980 reloads that capture, constructs a member via65f60/37ad20, then writes it to root+68 with shared control at+70. This resolves the destination identity left open in398/415; arbitrary same-offset copies and bucket-array writes are not used as evidence.",
+    "37ad20 installs member table8fa9498, whose+18 slot is384a60: LEA RAX,[RCX+48]; RET. The constructor copies its initialization-record first string to member+48;51c60 copies that first string through both task-capture stages. Under these selected default tables, root+20 ->4f3c0 ->root+60/469a0 ->member+18 returns this string address. The actual string identifier namespace is still unverified.",
+    "The selected47a240 initialization branch checks result-object byte+4 exactly equals1, then copies result+88 into the record first string. The result is selected from two sources, and one earlier branch overwrites+88 with an existing input+60 string. Consequently this evidence cannot label every result a fresh network response, interpret byte1 as successful login, or identify the string as authenticated wxid.",
+    "A separate selected branch in53510 loads the same globalbb61c90 immediately before4dd20. That wrapper captures the root at clear-task+38 and installs60580; its body zeros root+68/+70 and releases old shared ownership. This is a root-bound clearing path, not proof of every logout path, ordering versus message callbacks, safe external lifetime or draining scheduled work.",
+    "Both task wrappers submit through39e010. Its selected path checks scheduler state and transfers the task into39e0d0; this static binding does not establish execution, current thread or completion. The getter returns an address within the member after releasing its temporary shared pair; account replacement/clear requires explicit lifetime and epoch handling in any future observer."
+  ],
+  "remaining": [
+    "Identify result-object and initialization-string producer/namespace, byte+4 condition and account transitions",
+    "Bind active account/friend identity and stable lifetime/epoch; no active instance read",
+    "Trace2eb3780 state ownership, enable/reset and history/reconnect filtering",
+    "Determine concrete permissible receiver observation method, executor ordering and teardown",
+    "No runnable adapter, minimized receive verification, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "398-inbound-key-root-filter.json",
+    "402-inbound-consumer-gates.json",
+    "414-inbound-subscriber-registration.json",
+    "415-inbound-subscriber-dispatch.json"
+  ]
+}

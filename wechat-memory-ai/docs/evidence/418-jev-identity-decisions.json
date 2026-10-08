@@ -1,0 +1,195 @@
+{
+  "checked_at_utc": "2026-10-08T04:45:10.629714+00:00",
+  "user_request": "继续，在需要做出决断的时候调用jev模型进行判断",
+  "scope": "Actual TypeSafe Jev technical advisory calls. Not verification, independent review, permissions or WeChat reply-model integration.",
+  "official_api_documentation": "https://docs.typesafe.ai/api",
+  "records": [
+    {
+      "time_utc": "2026-10-07T23:16:21.355315+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 0.859,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "objective": "Find the producer of the current-account member of a known root object using offline static analysis, before building a personal WeChat message receiver.",
+          "known": "Root virtual getter+60 returns shared member+68/+70. Root+20 calls member virtual+18 to obtain a string used for endpoint comparison. Root is stored at a known global but no active process is read.",
+          "candidates": [
+            {
+              "name": "65980",
+              "facts": [
+                "Input RCX is a captured task object; RSI loaded from task+2b8.",
+                "Calls65f60, whose factory calls37ad20, returning a new shared object.",
+                "Writes returned shared object into RSI+68/+70, calls37d6c0 on that new object, then passes RSI+2f0 to384ba0.",
+                "The origin of task+2b8 and class identity of RSI are not yet established."
+              ]
+            },
+            {
+              "name": "63340",
+              "facts": [
+                "Copies string fields at0/30 and vector at50 from RDX to RCX.",
+                "Copies RDX+68/+70 shared pair into RCX+68/+70.",
+                "Neither input object is bound to the global root."
+              ]
+            },
+            {
+              "name": "662e0",
+              "facts": [
+                "Allocates0x80-byte bucket array and writes the same sentinel into each eight-byte slot including+68/+70.",
+                "Destination of the+68/+70 writes is the new bucket array, not established root."
+              ]
+            }
+          ],
+          "scope": "Only public code facts and abstract research state supplied. No credentials, chat content, account identifiers or live object values. A model answer is advice, not evidence or authorization."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Which bounded follow-up is most useful to establish the root member producer given the evidence and unresolved object identity?",
+            "criteria": {
+              "trace_65980_capture": "Find the task construction/callback chain for65980 and prove where task+2b8 comes from, then inspect the constructed member table.",
+              "trace_63340_copy": "Trace callers of generic copy63340 to establish its inputs first.",
+              "scan_more_offsets": "Repeat broad+68/+70 store scanning before tracing these object origins.",
+              "none": "No listed follow-up is supported or useful."
+            }
+          },
+          "root_producer_claim": {
+            "type": "choice",
+            "instructions": "Do the currently supplied facts establish that65980 writes the known global root current-account member?",
+            "criteria": {
+              "established": "Destination RSI is already proven to be that global root.",
+              "candidate_unbound": "The writes are relevant but task+2b8 destination identity remains unproved.",
+              "contradicted": "Facts establish that RSI is a different object."
+            }
+          }
+        }
+      },
+      "request_sha256": "9082bcb0ac9a9a729307f4ac7f7a0a77fc569a36e842925fdf374a7c27a812d1",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_trace": {
+            "type": "choice",
+            "choice": "trace_65980_capture",
+            "confidence": 1.0,
+            "probabilities": {
+              "trace_63340_copy": 0.0,
+              "trace_65980_capture": 1.0,
+              "scan_more_offsets": 0.0,
+              "none": 0.0
+            }
+          },
+          "root_producer_claim": {
+            "type": "choice",
+            "choice": "candidate_unbound",
+            "confidence": 1.0,
+            "probabilities": {
+              "established": 0.0,
+              "candidate_unbound": 1.0,
+              "contradicted": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 969,
+          "output_tokens": 119
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    },
+    {
+      "time_utc": "2026-10-08T04:41:29.254679+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 0.656,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "objective": "Progress toward a personal WeChat single-friend minimized receiver; decide the next bounded static investigation.",
+          "new_verified_facts": [
+            "The global root flows through45d10 ->47a240 ->4c140 ->4d740 into task+2b8. Task body65980 constructs member via65f60/37ad20 and stores it atroot+68/+70.",
+            "Constructed member table8fa9498 has slot+18=384a60, returning member+48. The constructor copies the first string of its init record to that member string;51c60 preserves the record through two captures. Root+20 uses this getter.",
+            "On one selected branch,47a240 obtains the init string from a result object+88 if that object byte+4 equals1. The result object origin, byte business meaning and string identifier namespace are not yet verified; do not infer wxid or login success.",
+            "A separate global-root path54ceb ->4dd20 captures root in another task+38; body60580 clearsroot+68/+70. This is not proof of all logout/teardown paths or completion of queued work.",
+            "Earlier2eb3780 skips on flag+148==1, nonzero threshold and source numeric time<=threshold; it has other map branches. Active state identity, enable/reset timing, historical/reconnect behavior and account scope remain unverified.",
+            "Concrete internal message subscriptions were found, but no live adapter or current-account authentication exists. All work reads a fixed DLL as disk bytes only; no process or chat access and auto reply stays disabled."
+          ],
+          "privacy": "No keys, live values, account identifiers or chats supplied. Model judgments do not authorize actions or substitute for byte-level verification."
+        },
+        "questions": {
+          "next_priority": {
+            "type": "choice",
+            "instructions": "Choose the single most useful next bounded investigation to reduce the receiver admission gap. Prefer completing prerequisite identity semantics before broad scans; choose from the actual remaining work.",
+            "criteria": {
+              "identity_record_source": "Trace the result object and init-record first string producer to establish identifier namespace and identity transition conditions.",
+              "filter_activation": "Trace2eb3780 state ownership, enable/reset producer and epoch to establish historical/reconnect filtering.",
+              "deeper_storage": "Return to lower database transaction implementation before the two above gaps.",
+              "runtime_now": "Begin live process observation immediately because static producer and getter are sufficient."
+            }
+          },
+          "account_claim": {
+            "type": "choice",
+            "instructions": "Which current claim is supported by the supplied facts, without trusting confidence as proof?",
+            "criteria": {
+              "live_authenticated": "The active current account wxid and minimized reception are authenticated.",
+              "static_member_bound_semantics_pending": "The selected static root member assignment/getter/clear paths are bound; actual account identifier meaning and live lifecycle are still pending.",
+              "producer_still_unbound": "The destination of the selected member assignment is still unrelated to the known global root."
+            }
+          }
+        }
+      },
+      "request_sha256": "b20617cd805c0a9b248250bf43a47761edcb5bf049509f875b3ff6d54dd58c7e",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_priority": {
+            "type": "choice",
+            "choice": "identity_record_source",
+            "confidence": 1.0,
+            "probabilities": {
+              "filter_activation": 0.0,
+              "identity_record_source": 1.0,
+              "runtime_now": 0.0,
+              "deeper_storage": 0.0
+            }
+          },
+          "account_claim": {
+            "type": "choice",
+            "choice": "static_member_bound_semantics_pending",
+            "confidence": 1.0,
+            "probabilities": {
+              "live_authenticated": 0.0,
+              "static_member_bound_semantics_pending": 1.0,
+              "producer_still_unbound": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 982,
+          "output_tokens": 108
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    }
+  ],
+  "agent_disposition": [
+    {
+      "record": 1,
+      "accepted_priority": "trace_65980_capture",
+      "at_decision_time": "Destination root binding not yet established; candidate_unbound was retained.",
+      "subsequent_separate_evidence": "419 independently traces global root through capture and member write; the earlier decision record is not rewritten."
+    },
+    {
+      "record": 2,
+      "accepted_priority": "identity_record_source",
+      "claim_limit": "static_member_bound_semantics_pending",
+      "next_scope": "Continue bounded disk-static result/initialization-string provenance, then state enable/reset and history/reconnect filtering."
+    }
+  ],
+  "confidence_is_not_correctness_or_permission": true,
+  "live_chat_data_supplied": false,
+  "credential_value_recorded": false,
+  "auto_reply_model_connected": false
+}

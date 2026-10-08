@@ -1,5 +1,13 @@
 # 普通个人微信长期记忆 AI Implementation Plan
 
+## 当前执行点：查清身份字符串含义（418–421）
+
+[419](evidence/419-inbound-root-member-source.json)已补全局root→捕获任务→新成员+68/+70、成员虚槽+18→字符串+48，以及同一root的清空路径。下一项不再停留于同偏移写入扫描：先追47a240所选result+88及byte+4的生产者，明确初始化字符串标识域与身份切换条件，再补2eb3780状态归属、启用/reset和首批历史重连。保留实际receiver/executor、回调排空和外部采集方法缺口。
+
+按用户要求在两个取舍点真实调用Jev，记录[418](evidence/418-jev-identity-decisions.json)；采纳追捕获来源及随后优先字符串来源的建议，结论仍由磁盘字节证实。后续实质技术取舍继续调用Jev，不把它当验证或权限来源。
+
+接入里程碑仍依次为：明确可实施的接收观察条件→真正最小化接收验证→单测试好友固定文字发送并确认→模型草稿与拦截→按既定确认开启监督下自动回复。当前处于第一步，无可运行适配器或可靠上线日期。[420](evidence/420-inbound-identity-checkpoint.json)保存监听停止；[421](evidence/421-inbound-identity-validation.json)仅静态复核。产品0.1.22、自动回复关闭，后续证据从422起。
+
 ## 当前执行点：先补身份和新消息判定（414–417）
 
 本轮已找到707420服务getter上的service+e8订阅注册、具体回调和解除订阅路径，见[414](evidence/414-inbound-subscriber-registration.json)/[415](evidence/415-inbound-subscriber-dispatch.json)。旧扫描漏掉MOV立即数再ADD的形式，不再以旧扫描未命中作为无订阅者依据。

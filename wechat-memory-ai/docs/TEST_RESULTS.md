@@ -1,5 +1,13 @@
 # Windows 测试结果（当前源码 v0.1.22）
 
+## 2026-10-08：418–421身份成员链与Jev记录复核
+
+[421](evidence/421-inbound-identity-validation.json)重新读取固定DLL，核完整区间解码/哈希、两分支469a0等叶函数字节、原始rel32/RIP计算、两个类型表及关键参数/字段断言。重点验证全局root到task+2b8、两次记录复制、新成员+48字符串和root清空task+38。完整解码不等于整个CFG或业务语义已认证；当前只证明[419](evidence/419-inbound-root-member-source.json)所选路径。
+
+[418](evidence/418-jev-identity-decisions.json)保留两次真实Jev请求/响应、模型与用量。校验请求哈希、选项有效性、记录一致性和密钥不入证据；不再次发送API请求。模型confidence=1也不证明二进制事实或接入已完成。第一次判candidate_unbound反映当时事实，之后才由419补绑定，不能倒改模型记录。
+
+417列出的12个历史分析脚本哈希保持，七份文档本地链接、修改范围和git差异通过复核。[420](evidence/420-inbound-identity-checkpoint.json)的保存监听仍stopped/native_reader_timeout，24569快照/24505最小化快照/unknown1，防待机不活动；不是当前窗口认证。产品0.1.22、自动回复关闭。未运行产品、原生、并发或真实收发测试；无新增独立审查。
+
 ## 2026-10-07：414–417订阅链静态复核
 
 本轮核固定DLL字节、完整解码区间、注册/派发字段、直接调用相对位移、RIP目标、调用表和有锚点叶函数，见[417](evidence/417-inbound-entry-validation.json)。特别复核同一getter707420、默认工厂到1799070、4a7360节点写入与17cac20字段对应、9d9ce0参数桥，以及4a7570的匹配/打标记。此为同一执行者静态复核，不是独立评审、产品测试、实机接收或兼容性通过。

@@ -1,0 +1,113 @@
+{
+  "checked_at_utc": "2026-10-08T04:47:05.367616+00:00",
+  "status": "passed",
+  "scope": "Same-executor fixed-file verification; not complete CFG, runtime compatibility, active account authentication or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 12,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_raw_rel32_math": 19,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 127,
+  "rip_references_with_raw_displacement_math": 7,
+  "branch_field_assertions": 100,
+  "explicit_table_targets_checked": 3,
+  "explicit_rip_targets_checked": 7,
+  "preserved_register_spans_checked": 5,
+  "jev_advisory_calls_recorded": 2,
+  "jev_model": "jev-1.13.0",
+  "jev_recorded_usage_total": {
+    "input_tokens": 1951,
+    "output_tokens": 227
+  },
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 12,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 701,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and418-421 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Old graph/save definitions extracted using AST; generic verifier prefix copied as text. Old writers and API calls not rerun.",
+    "469a0 leaf includes both returns, not just the first RET.",
+    "Same-offset scans include unbound copies and bucket-array writes; only root-bound capture data flow supports the producer claim.",
+    "Selected spans assume normal Windows x64 preserved registers across called functions; not whole-program alias/lifetime proof.",
+    "The result string can be overwritten from existing input; no universal fresh network response, wxid or login-success claim.",
+    "Jev records describe the facts available at each decision time; confidence does not verify those facts.",
+    "Preliminary2eb3780-state offset scans were not promoted to bound state ownership/activation evidence."
+  ],
+  "remaining": [
+    "Identify result-object and initialization-string producer/namespace, byte+4 condition and account transitions",
+    "Bind active account/friend identity and stable lifetime/epoch; no active instance read",
+    "Trace2eb3780 state ownership, enable/reset and history/reconnect filtering",
+    "Determine concrete permissible receiver observation method, executor ordering and teardown",
+    "No runnable adapter, minimized receive verification, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-identity-20261008/jev_decision.py",
+      "sha256": "8e2392ced20aa0f8d18b5fc20a3950fac48a92d43327a37373dd158adc0b4148"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/jev_followup.py",
+      "sha256": "b62e1fffdbacb431e05d1d0919bc99f39862905fd3a66840c18ab691457b7b65"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/write_evidence.py",
+      "sha256": "6be5523031f9062376c67d1d7b44a50ea860f37a7c84a03f5a0c3df536d61679"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/verify_evidence.py",
+      "sha256": "bbc2483f9b88ce13ba51efd805be957f4dee734975b873d0541fb417296ab773"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/verification_checks.py",
+      "sha256": "b937150a865c6a21553ccc1c7a4a1b8bada6d70f8cea98416aa32dde703b0a8d"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/update_docs.py",
+      "sha256": "669f5f1b40884fe64e3c94961b6d7b4019712ef14e8898e8b020c9b58fe004a4"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-identity-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}
