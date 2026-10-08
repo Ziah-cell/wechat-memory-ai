@@ -1,0 +1,999 @@
+{
+  "checked_at_utc": "2026-10-08T12:33:42.342104+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Selected CoDoSync normal loop, mode mutation and final return",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6840",
+      "end": "0x2ea8669",
+      "role_inference": "Processor gate and selected status checks only",
+      "instruction_count": 1647,
+      "disk_range_sha256": "5c899759b800472143ab129bdc0dac80cd9f6dcdef8892ffd5bcfa71ec5e27e7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x76edb90",
+      "end": "0x76edc57",
+      "role_inference": "Length-bounded byte comparator; zero for equality",
+      "instruction_count": 69,
+      "disk_range_sha256": "bb25b7df06bab2dbc8b2d54fb1df15e7b5cb1e9edcb553b06a82dde63998f27d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6630",
+      "end": "0x2ea6720",
+      "role_inference": "Request buffer source accessor with owner-string or global fallback",
+      "instruction_count": 68,
+      "disk_range_sha256": "7b49267130675953f5a80fbc6d9b55dd16ce0f646d6cfe1371e135d15b743f20",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2ea31f0",
+      "kind": "call",
+      "to": "0x2ea6630"
+    },
+    {
+      "at": "0x2ea3ffa",
+      "kind": "call",
+      "to": "0x2ea6840"
+    },
+    {
+      "at": "0x2ea408d",
+      "kind": "call",
+      "to": "0x76edb90"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x2ea30ca",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xb1c], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save original mode separately at local+b1c"
+    },
+    {
+      "at": "0x2ea3135",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initialize low-byte success marker1"
+    },
+    {
+      "at": "0x2ea3137",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xa74], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store success marker at local+a74"
+    },
+    {
+      "at": "0x2ea3170",
+      "mnemonic": "call",
+      "operands": "0x7524b70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleanup before next iteration test"
+    },
+    {
+      "at": "0x2ea3175",
+      "mnemonic": "lea",
+      "operands": "rbx, [rbp + 0xa00]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Per-iteration request address"
+    },
+    {
+      "at": "0x2ea317f",
+      "mnemonic": "call",
+      "operands": "0x108ec50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destroy previous request"
+    },
+    {
+      "at": "0x2ea3184",
+      "mnemonic": "test",
+      "operands": "dil, dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test continuation low byte"
+    },
+    {
+      "at": "0x2ea3187",
+      "mnemonic": "je",
+      "operands": "0x2ea46c2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False exits loop to46c2"
+    },
+    {
+      "at": "0x2ea31b3",
+      "mnemonic": "call",
+      "operands": "0x108e6f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct next request"
+    },
+    {
+      "at": "0x2ea31cc",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x7b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Current mode from local+7b8"
+    },
+    {
+      "at": "0x2ea31d2",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xa1c], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field4 receives current mode"
+    },
+    {
+      "at": "0x2ea31f0",
+      "mnemonic": "call",
+      "operands": "0x2ea6630",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Obtain current buffer-shaped string through2ea6630"
+    },
+    {
+      "at": "0x2ea3f87",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0xad0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer statusA for processor"
+    },
+    {
+      "at": "0x2ea3f8d",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rbp + 0xad4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Outer statusB for processor"
+    },
+    {
+      "at": "0x2ea3fd7",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rbp + 0xaf8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response pointer from extracted local result"
+    },
+    {
+      "at": "0x2ea3fde",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor statusB stack argument"
+    },
+    {
+      "at": "0x2ea3fe2",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x20], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor statusA stack argument"
+    },
+    {
+      "at": "0x2ea3fe9",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0xa00]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor request argument"
+    },
+    {
+      "at": "0x2ea3ff0",
+      "mnemonic": "mov",
+      "operands": "r8, rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor response argument"
+    },
+    {
+      "at": "0x2ea3ffa",
+      "mnemonic": "call",
+      "operands": "0x2ea6840",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Command processor call"
+    },
+    {
+      "at": "0x2ea4000",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check processor low-byte result"
+    },
+    {
+      "at": "0x2ea4002",
+      "mnemonic": "je",
+      "operands": "0x2ea40b0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False goes to error-marker path"
+    },
+    {
+      "at": "0x2ea4008",
+      "mnemonic": "mov",
+      "operands": "r13d, dword ptr [rbx + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read response field3 value"
+    },
+    {
+      "at": "0x2ea400c",
+      "mnemonic": "test",
+      "operands": "r13d, r13d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check nonzero value"
+    },
+    {
+      "at": "0x2ea400f",
+      "mnemonic": "je",
+      "operands": "0x2ea4320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero stops continuation"
+    },
+    {
+      "at": "0x2ea401f",
+      "mnemonic": "call",
+      "operands": "0x26fc320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Update helper gets flags; full state semantics not certified"
+    },
+    {
+      "at": "0x2ea4025",
+      "mnemonic": "test",
+      "operands": "byte ptr [rbx + 0x14], 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Low3 value bits decide whether comparison is reached"
+    },
+    {
+      "at": "0x2ea4029",
+      "mnemonic": "je",
+      "operands": "0x2ea4320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "No low3 bits stops"
+    },
+    {
+      "at": "0x2ea402f",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rbp + 0xa10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field3 nested pointer"
+    },
+    {
+      "at": "0x2ea4039",
+      "mnemonic": "je",
+      "operands": "0x2ea4335",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing request nested pointer uses generated default path"
+    },
+    {
+      "at": "0x2ea403f",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field4 nested pointer"
+    },
+    {
+      "at": "0x2ea4046",
+      "mnemonic": "je",
+      "operands": "0x2ea434d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Missing response nested pointer uses generated default path"
+    },
+    {
+      "at": "0x2ea404c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request buffer string object pointer+8"
+    },
+    {
+      "at": "0x2ea4050",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rax + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request small-string capacity branch"
+    },
+    {
+      "at": "0x2ea405e",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Heap request data pointer"
+    },
+    {
+      "at": "0x2ea4061",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response buffer string object pointer+8"
+    },
+    {
+      "at": "0x2ea4065",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [r9 + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response small-string capacity branch"
+    },
+    {
+      "at": "0x2ea4073",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request actual string length"
+    },
+    {
+      "at": "0x2ea4077",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Provisional continue1"
+    },
+    {
+      "at": "0x2ea407a",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [r9 + 0x10], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare response actual string length"
+    },
+    {
+      "at": "0x2ea407e",
+      "mnemonic": "jne",
+      "operands": "0x2ea4390",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Different lengths keep continue1"
+    },
+    {
+      "at": "0x2ea4084",
+      "mnemonic": "test",
+      "operands": "r8, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Equal lengths zero test"
+    },
+    {
+      "at": "0x2ea4087",
+      "mnemonic": "je",
+      "operands": "0x2ea4320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Both empty stop"
+    },
+    {
+      "at": "0x2ea408d",
+      "mnemonic": "call",
+      "operands": "0x76edb90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare exactly length bytes"
+    },
+    {
+      "at": "0x2ea4092",
+      "mnemonic": "test",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check equality return"
+    },
+    {
+      "at": "0x2ea4094",
+      "mnemonic": "setne",
+      "operands": "dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Continue only when byte comparator nonzero"
+    },
+    {
+      "at": "0x2ea40aa",
+      "mnemonic": "jmp",
+      "operands": "0x2ea4562",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Join continuation decision"
+    },
+    {
+      "at": "0x2ea42ff",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [r15 + 0x178]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Owner diagnostic object"
+    },
+    {
+      "at": "0x2ea4306",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax + 0x1c], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mark processor failure diagnostic"
+    },
+    {
+      "at": "0x2ea430a",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xa74], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear success marker"
+    },
+    {
+      "at": "0x2ea4314",
+      "mnemonic": "jmp",
+      "operands": "0x2ea4590",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stop after processor failure"
+    },
+    {
+      "at": "0x2ea4320",
+      "mnemonic": "xor",
+      "operands": "edi, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal stop sets continuation0 without clearing success marker"
+    },
+    {
+      "at": "0x2ea4330",
+      "mnemonic": "jmp",
+      "operands": "0x2ea4562",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Join stop decision"
+    },
+    {
+      "at": "0x2ea4335",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rip + 0x8cd2df4]",
+      "rip_targets": [
+        "0xbb77130"
+      ],
+      "public_static_strings": [],
+      "observation": "Generated default request object"
+    },
+    {
+      "at": "0x2ea433c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default request field3"
+    },
+    {
+      "at": "0x2ea434d",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0x8cd2de4]",
+      "rip_targets": [
+        "0xbb77138"
+      ],
+      "public_static_strings": [],
+      "observation": "Generated default response object"
+    },
+    {
+      "at": "0x2ea4354",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default response field4"
+    },
+    {
+      "at": "0x2ea4562",
+      "mnemonic": "test",
+      "operands": "dil, dil",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test continuation before mode mutation"
+    },
+    {
+      "at": "0x2ea4565",
+      "mnemonic": "je",
+      "operands": "0x2ea4590",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False skips next-mode writes"
+    },
+    {
+      "at": "0x2ea4567",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x7b8], 6",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Next input/current mode6"
+    },
+    {
+      "at": "0x2ea4571",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x7b0], 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Next input firstQWORD7"
+    },
+    {
+      "at": "0x2ea457c",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Keep continuation1"
+    },
+    {
+      "at": "0x2ea4590",
+      "mnemonic": "xor",
+      "operands": "edi, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Stop low byte0"
+    },
+    {
+      "at": "0x2ea4680",
+      "mnemonic": "jb",
+      "operands": "0x2ea3175",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleanup returns to per-iteration destructor/test"
+    },
+    {
+      "at": "0x2ea4698",
+      "mnemonic": "jb",
+      "operands": "0x2ea3170",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Heap cleanup returns to3170"
+    },
+    {
+      "at": "0x2ea46bd",
+      "mnemonic": "jmp",
+      "operands": "0x2ea3170",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Heap cleanup returns to3170"
+    },
+    {
+      "at": "0x2ea46c2",
+      "mnemonic": "mov",
+      "operands": "r12d, dword ptr [rbp + 0xb1c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Loop exit reloads ORIGINAL mode+b1c"
+    },
+    {
+      "at": "0x2ea46c9",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "End log compares original19"
+    },
+    {
+      "at": "0x2ea50e1",
+      "mnemonic": "test",
+      "operands": "byte ptr [rbp + 0xa74], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final success-marker low-bit gate"
+    },
+    {
+      "at": "0x2ea50e8",
+      "mnemonic": "je",
+      "operands": "0x2ea5298",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cleared marker bypasses flush and returnsfalse normally"
+    },
+    {
+      "at": "0x2ea523a",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final mode comparison uses saved original value"
+    },
+    {
+      "at": "0x2ea523e",
+      "mnemonic": "sete",
+      "operands": "dl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Flush argument is original mode==19"
+    },
+    {
+      "at": "0x2ea5241",
+      "mnemonic": "lea",
+      "operands": "rcx, [r15 + 0x1d0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same embedded batch manager"
+    },
+    {
+      "at": "0x2ea5248",
+      "mnemonic": "call",
+      "operands": "0x2eb8870",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Flush2eb8870"
+    },
+    {
+      "at": "0x2ea524e",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check flush low-byte result"
+    },
+    {
+      "at": "0x2ea5250",
+      "mnemonic": "je",
+      "operands": "0x2ea5298",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False gives normal returnfalse"
+    },
+    {
+      "at": "0x2ea5267",
+      "mnemonic": "call",
+      "operands": "0x381550",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path calls update helper; full persistence semantics open"
+    },
+    {
+      "at": "0x2ea5293",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal success low byte1"
+    },
+    {
+      "at": "0x2ea5298",
+      "mnemonic": "xor",
+      "operands": "edi, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal failure low byte0"
+    },
+    {
+      "at": "0x2ea52a1",
+      "mnemonic": "call",
+      "operands": "0x2eb4940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Both final result branches reset batch manager"
+    },
+    {
+      "at": "0x2ea52bb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x1b8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear owner cached string length"
+    },
+    {
+      "at": "0x2ea52c6",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear owner cached string first byte"
+    },
+    {
+      "at": "0x2ea53b8",
+      "mnemonic": "mov",
+      "operands": "eax, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return boolean viaEDI"
+    },
+    {
+      "at": "0x2ea6883",
+      "mnemonic": "mov",
+      "operands": "ebx, dword ptr [rbp + 0x3a8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor receives outer statusB"
+    },
+    {
+      "at": "0x2ea6889",
+      "mnemonic": "mov",
+      "operands": "edi, dword ptr [rbp + 0x3a0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor receives outer statusA"
+    },
+    {
+      "at": "0x2ea6891",
+      "mnemonic": "or",
+      "operands": "eax, edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Combine status pair"
+    },
+    {
+      "at": "0x2ea6893",
+      "mnemonic": "je",
+      "operands": "0x2ea699d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero pair enters protocol-status check"
+    },
+    {
+      "at": "0x2ea69ae",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [r8 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field1 status value"
+    },
+    {
+      "at": "0x2ea69b2",
+      "mnemonic": "cmp",
+      "operands": "eax, 0xfffff82a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Numeric special value-2006 checked"
+    },
+    {
+      "at": "0x2ea69b7",
+      "mnemonic": "je",
+      "operands": "0x2ea69c1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Special value passes this early gate"
+    },
+    {
+      "at": "0x2ea69b9",
+      "mnemonic": "test",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero passes this early gate"
+    },
+    {
+      "at": "0x2ea69bb",
+      "mnemonic": "jne",
+      "operands": "0x2ea777b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other value takes selected error branch"
+    },
+    {
+      "at": "0x2ea775f",
+      "mnemonic": "xor",
+      "operands": "r12d, r12d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected processor failure path returns0"
+    },
+    {
+      "at": "0x2ea7da3",
+      "mnemonic": "mov",
+      "operands": "r12b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected late processor path sets lowbyte1"
+    },
+    {
+      "at": "0x2ea8636",
+      "mnemonic": "mov",
+      "operands": "eax, r12d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Processor return isR12D; this is not full processor proof"
+    },
+    {
+      "at": "0x76edb90",
+      "mnemonic": "sub",
+      "operands": "rdx, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Comparator computes relative data address"
+    },
+    {
+      "at": "0x76edbc0",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Byte load bounded by remaining length"
+    },
+    {
+      "at": "0x76edbc2",
+      "mnemonic": "cmp",
+      "operands": "al, byte ptr [rcx + rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare byte at second address"
+    },
+    {
+      "at": "0x76edbc5",
+      "mnemonic": "jne",
+      "operands": "0x76edbd3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mismatch branch"
+    },
+    {
+      "at": "0x76edbca",
+      "mnemonic": "dec",
+      "operands": "r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Decrement remaining byte count"
+    },
+    {
+      "at": "0x76edbcf",
+      "mnemonic": "xor",
+      "operands": "rax, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Equal returns0"
+    },
+    {
+      "at": "0x76edbd3",
+      "mnemonic": "sbb",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mismatch returns sign"
+    },
+    {
+      "at": "0x76edbe3",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rcx + rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare8-byte chunk"
+    },
+    {
+      "at": "0x76edc03",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rcx + rdx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare fourth8-byte chunk"
+    },
+    {
+      "at": "0x76edc13",
+      "mnemonic": "and",
+      "operands": "r8, 0x1f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Remaining bytes after32-byte chunks"
+    },
+    {
+      "at": "0x76edc23",
+      "mnemonic": "cmp",
+      "operands": "rax, qword ptr [rcx + rdx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare remaining8-byte chunk"
+    },
+    {
+      "at": "0x76edc32",
+      "mnemonic": "and",
+      "operands": "r8, 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Remaining tail bytes"
+    },
+    {
+      "at": "0x76edc4e",
+      "mnemonic": "cmp",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Byte-reversed mismatch value comparison"
+    },
+    {
+      "at": "0x2ea663c",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rcx + 0x1b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read owner cached string length+1b8"
+    },
+    {
+      "at": "0x2ea6646",
+      "mnemonic": "je",
+      "operands": "0x2ea6665",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty cached string selects global fallback"
+    },
+    {
+      "at": "0x2ea665c",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x1a8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Owner heap string data"
+    },
+    {
+      "at": "0x2ea6670",
+      "mnemonic": "call",
+      "operands": "0x4fac0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback accessor4fac0; source domain not certified"
+    },
+    {
+      "at": "0x2ea667a",
+      "mnemonic": "add",
+      "operands": "rcx, 0x1a8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Owner inline string data+1a8"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "selected_projection": {
+    "inputs": "P=normal processor AL, F=observed response field3 value after intervening helper, A/B=actual request/response buffer string bytes",
+    "continue": "P && ((F & 7) != 0) && (A != B), for stable valid objects and normally returning intervening helpers",
+    "stop_is_error": "Not necessarily: zero low flags or equal bytes stop with success marker retained; processor false clears marker",
+    "mode": "Continue overwrites current input mode with6, not saved original mode; final flush gets original==19",
+    "final_normal_gate": "Uncleared marker permits flush; flush false returnsfalse; flush true plus normal later helper/cleanup returns true",
+    "limits": "No assertion of guaranteed termination, full CFG/alias safety, exceptions, server completion, async callback draining or per-message freshness"
+  },
+  "conclusions": [
+    "After processor2ea6840 returns true, zero response field3 or no low3 value bits ends continuation. With low3 bits set, differing actual buffer lengths continue; equal zero lengths stop; equal nonzero lengths use the bounded byte comparator and continue only when it returns nonzero. Presence flags are distinct from these field3 value flags. Comparison is binary and does not stop at embedded NUL.",
+    "The flag update helper is called between initial field3 nonzero check and low-bit read; formula assumes stable valid objects across normally returning helpers. Generated-default fallback pointers exist for missing nested pointers; their complete initialization/lifetime is not newly certified. No guarantee of eventual token change or loop termination is established.",
+    "Continuing writes current record mode6 and firstQWORD7, then cleanup returns to the request destructor and loop test. Original mode remains at local+b1c and is reloaded after loop exit; final flush receives original==19. A later request mode6 cannot certify that an originally mode19 batch is now fresh.",
+    "Processorfalse clears the success marker and ends the loop. Normal stop for unchanged/empty buffer or exhausted low flags does not clear that marker. Final selected normal path checks marker then flushAL; either failure returnsfalse, while flushtrue proceeds through another helper before returningtrue. Both final branches reset the embedded batch manager and clear cached string. Intervening work/exception paths remain outside this bounded proof.",
+    "The processor early gate permits response field1 values0 and-2006 after a zero outer status pair; this is not a complete processor success predicate and does not assign an official meaning to-2006. The outer loop deliberately treats processorAL as an input rather than claiming all command/status branches are certified.",
+    "An empty response buffer can satisfy the generated nested completeness check, and equal empty buffers can stop continuation. Loop end, mode change, processor success, outer returntrue and driver timestamp refresh each remain insufficient on their own to admit newly arrived messages or declare history complete."
+  ],
+  "remaining": [
+    "Bind actual asynchronous NewSync result production and parser/completion failures; distinguish default/fallback response from verified response",
+    "Trace response-buffer update into next-request state and complete reset/reconnect/identity epoch; current comparison alone is not a history boundary",
+    "Deferred batch mode policy, direction, account namespace, callback drain/lifetime and a concrete permitted observation method remain open",
+    "No runnable adapter, minimized receive verification, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "428-inbound-filter-owner-reset.json",
+    "433-inbound-sync-mode-source.json",
+    "434-inbound-sync-mode-propagation.json"
+  ]
+}

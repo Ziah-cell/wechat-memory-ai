@@ -1,0 +1,1108 @@
+{
+  "checked_at_utc": "2026-10-08T12:33:42.342104+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x108fa30",
+      "end": "0x108fa82",
+      "role_inference": "NewSyncRequest type name",
+      "instruction_count": 18,
+      "disk_range_sha256": "8d9b401c017f6b9a64439ca40f2eddba31ebcc40a9aea56b376454cda31bab93",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x108f5c0",
+      "end": "0x108f734",
+      "role_inference": "Request numeric field serializer",
+      "instruction_count": 103,
+      "disk_range_sha256": "99d6262d2916733f148d06545bfd1671ae1de00acde6ab3aeccab0f6c46e4812",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x108f980",
+      "end": "0x108fa2f",
+      "role_inference": "Request required presence and nested completeness",
+      "instruction_count": 62,
+      "disk_range_sha256": "a81b1e6206e1c7e57946464a07be77e97e343983294c132511fb163df1408de6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x108ee50",
+      "end": "0x108f4f3",
+      "role_inference": "Request parser constructs field3 buffer",
+      "instruction_count": 457,
+      "disk_range_sha256": "4110067bc3f4c48cd9050489b67ddfb2ae365704c5990df1a0c8ba10725809f0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x10906e0",
+      "end": "0x1090732",
+      "role_inference": "NewSyncResponse type name",
+      "instruction_count": 18,
+      "disk_range_sha256": "ce4807f9a08a72742adb2200482e7c0d272c158758d7d117e84c2bcbbcd05115",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1090370",
+      "end": "0x109047c",
+      "role_inference": "Response numeric field serializer",
+      "instruction_count": 81,
+      "disk_range_sha256": "9945c14e25e57bbb7b0ab2a88eec77269baabaf9e30be538c582b89237290da6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x1090660",
+      "end": "0x10906d9",
+      "role_inference": "Response required presence and nested completeness",
+      "instruction_count": 44,
+      "disk_range_sha256": "e47c06e3f0c3de514d20d8828e5438504f76e65858c34a3630613746894cdb2e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x108fdd0",
+      "end": "0x10902ed",
+      "role_inference": "Response parser constructs field4 buffer",
+      "instruction_count": 359,
+      "disk_range_sha256": "f183ef8fb43fbbb9e4c30a191f0bc4610d3b52a76262dd68e0afaf938ad3f962",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x68e0a0",
+      "end": "0x68e0ef",
+      "role_inference": "SKBuiltinBuffer_t type name",
+      "instruction_count": 18,
+      "disk_range_sha256": "078a9e1c80bb3a53080e058095dde6de0495af0b8d892838cb6014fb10161496",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x68dfa0",
+      "end": "0x68dfe8",
+      "role_inference": "Buffer numeric field serializer",
+      "instruction_count": 26,
+      "disk_range_sha256": "6101adf3948be091bc3184fe6d78103a7e248c8c86b46f69763837341f85379d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6720",
+      "end": "0x2ea67d9",
+      "role_inference": "Result constructor creates shared NewSyncResponse at+28",
+      "instruction_count": 52,
+      "disk_range_sha256": "d9c83a0f6eaee51948041eb1e92c616e4408c3032b371e74a4a1d0ce3589f42e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Per-iteration request constructor and numeric assignments",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x108e6f0",
+      "size": 56,
+      "anchor": "Direct constructor call2ea31b3",
+      "instructions": [
+        {
+          "at": "0x108e6f0",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x108e6f3",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x80e012e]"
+        },
+        {
+          "at": "0x108e6fa",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x108e6fd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x44], 0"
+        },
+        {
+          "at": "0x108e705",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x108e708",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x108e70c",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], 0"
+        },
+        {
+          "at": "0x108e714",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0xaad7e55]"
+        },
+        {
+          "at": "0x108e71b",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], rcx"
+        },
+        {
+          "at": "0x108e71f",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x28], xmm0"
+        },
+        {
+          "at": "0x108e723",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x34], xmm0"
+        },
+        {
+          "at": "0x108e727",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x108e730",
+      "size": 29,
+      "anchor": "Direct constructor call2ea6792",
+      "instructions": [
+        {
+          "at": "0x108e730",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x108e733",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x80e016e]"
+        },
+        {
+          "at": "0x108e73a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x108e73d",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x108e740",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x108e744",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x18], xmm0"
+        },
+        {
+          "at": "0x108e748",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x24], xmm0"
+        },
+        {
+          "at": "0x108e74c",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x68c320",
+      "size": 40,
+      "anchor": "Direct parser calls108f194 and109012e",
+      "instructions": [
+        {
+          "at": "0x68c320",
+          "mnemonic": "mov",
+          "operands": "rax, rcx"
+        },
+        {
+          "at": "0x68c323",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0x895c25e]"
+        },
+        {
+          "at": "0x68c32a",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rcx"
+        },
+        {
+          "at": "0x68c32d",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x10], 0"
+        },
+        {
+          "at": "0x68c335",
+          "mnemonic": "lea",
+          "operands": "rcx, [rip + 0xb4da234]"
+        },
+        {
+          "at": "0x68c33c",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rcx"
+        },
+        {
+          "at": "0x68c340",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rax + 0x18], 0"
+        },
+        {
+          "at": "0x68c347",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x68e090",
+      "size": 7,
+      "anchor": "Buffer table8fe8588+20",
+      "instructions": [
+        {
+          "at": "0x68e090",
+          "mnemonic": "movzx",
+          "operands": "eax, byte ptr [rcx + 0x18]"
+        },
+        {
+          "at": "0x68e094",
+          "mnemonic": "and",
+          "operands": "al, 1"
+        },
+        {
+          "at": "0x68e096",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x108f194",
+      "kind": "call",
+      "to": "0x68c320"
+    },
+    {
+      "at": "0x108f3c2",
+      "kind": "call",
+      "to": "0x68c320"
+    },
+    {
+      "at": "0x109012e",
+      "kind": "call",
+      "to": "0x68c320"
+    },
+    {
+      "at": "0x2ea6792",
+      "kind": "call",
+      "to": "0x108e730"
+    },
+    {
+      "at": "0x2ea31b3",
+      "kind": "call",
+      "to": "0x108e6f0"
+    },
+    {
+      "at": "0x2ea3852",
+      "kind": "call",
+      "to": "0x2ea6720"
+    },
+    {
+      "at": "0x2ea3964",
+      "kind": "call",
+      "to": "0x2ea6720"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x916e828",
+      "role_inference": "Request table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x108fa30"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x108f980"
+        },
+        {
+          "offset": "0x38",
+          "target": "0x108ee50"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x108f5c0"
+        }
+      ]
+    },
+    {
+      "rva": "0x916e8a8",
+      "role_inference": "Response table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x10906e0"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x1090660"
+        },
+        {
+          "offset": "0x38",
+          "target": "0x108fdd0"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x1090370"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fe8588",
+      "role_inference": "Buffer table",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x68e0a0"
+        },
+        {
+          "offset": "0x20",
+          "target": "0x68e090"
+        },
+        {
+          "offset": "0x48",
+          "target": "0x68dfa0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x108e6f3",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x80e012e]",
+      "rip_targets": [
+        "0x916e828"
+      ],
+      "public_static_strings": [],
+      "observation": "Load request table916e828"
+    },
+    {
+      "at": "0x108e6fa",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install request table"
+    },
+    {
+      "at": "0x108e730",
+      "mnemonic": "mov",
+      "operands": "rax, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response constructor receives object pointer"
+    },
+    {
+      "at": "0x108e733",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x80e016e]",
+      "rip_targets": [
+        "0x916e8a8"
+      ],
+      "public_static_strings": [],
+      "observation": "Load response table916e8a8"
+    },
+    {
+      "at": "0x108e73a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install response table"
+    },
+    {
+      "at": "0x108fa4d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], 0x17",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request type name length23"
+    },
+    {
+      "at": "0x108fa5d",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x80dee24]",
+      "rip_targets": [
+        "0x916e888"
+      ],
+      "public_static_strings": [
+        "micromsg.NewSyncRequest"
+      ],
+      "observation": "First16 type name bytes"
+    },
+    {
+      "at": "0x108fa67",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x7473657571655263",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Last8 type name bytes constant"
+    },
+    {
+      "at": "0x108fa71",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0xf], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Overlapping type name tail at15"
+    },
+    {
+      "at": "0x10906fd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], 0x18",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response type name length24"
+    },
+    {
+      "at": "0x109070d",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x80de1f4]",
+      "rip_targets": [
+        "0x916e908"
+      ],
+      "public_static_strings": [
+        "micromsg.NewSyncResponse"
+      ],
+      "observation": "First16 response name bytes"
+    },
+    {
+      "at": "0x1090717",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x65736e6f70736552",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Last8 response name bytes constant"
+    },
+    {
+      "at": "0x1090721",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x10], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response name tail at16"
+    },
+    {
+      "at": "0x108f63d",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field2 DWORD+18"
+    },
+    {
+      "at": "0x108f640",
+      "mnemonic": "mov",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number2"
+    },
+    {
+      "at": "0x108f654",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field3 nested pointer+10"
+    },
+    {
+      "at": "0x108f668",
+      "mnemonic": "mov",
+      "operands": "ecx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number3"
+    },
+    {
+      "at": "0x108f680",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x1c]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field4 DWORD+1c"
+    },
+    {
+      "at": "0x108f683",
+      "mnemonic": "mov",
+      "operands": "ecx, 4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number4"
+    },
+    {
+      "at": "0x10903ae",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field1 DWORD+10"
+    },
+    {
+      "at": "0x10903b1",
+      "mnemonic": "mov",
+      "operands": "ecx, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number1"
+    },
+    {
+      "at": "0x10903c5",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field2 nested pointer+8"
+    },
+    {
+      "at": "0x10903d9",
+      "mnemonic": "mov",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number2"
+    },
+    {
+      "at": "0x10903ed",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x14]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field3 DWORD+14"
+    },
+    {
+      "at": "0x10903f0",
+      "mnemonic": "mov",
+      "operands": "ecx, 3",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number3"
+    },
+    {
+      "at": "0x1090404",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field4 nested pointer+18"
+    },
+    {
+      "at": "0x1090418",
+      "mnemonic": "mov",
+      "operands": "ecx, 4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number4"
+    },
+    {
+      "at": "0x108f985",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request presence bitmap+48"
+    },
+    {
+      "at": "0x108f988",
+      "mnemonic": "not",
+      "operands": "eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invert presence bits"
+    },
+    {
+      "at": "0x108f98a",
+      "mnemonic": "test",
+      "operands": "al, 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Require bits1,2,4; mode field4 bit8 not mandatory"
+    },
+    {
+      "at": "0x108f9c2",
+      "mnemonic": "test",
+      "operands": "al, 4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field3 presence check"
+    },
+    {
+      "at": "0x108f9c6",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field3 nested pointer"
+    },
+    {
+      "at": "0x108f9d2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nested completeness slot20"
+    },
+    {
+      "at": "0x1090665",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rcx + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response presence bitmap+30"
+    },
+    {
+      "at": "0x1090668",
+      "mnemonic": "not",
+      "operands": "eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invert presence bits"
+    },
+    {
+      "at": "0x109066a",
+      "mnemonic": "test",
+      "operands": "al, 0xf",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Require fields1-4 bits0xf"
+    },
+    {
+      "at": "0x109069b",
+      "mnemonic": "test",
+      "operands": "byte ptr [rsi + 0x30], 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field4 presence bit8"
+    },
+    {
+      "at": "0x10906a1",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field4 nested pointer"
+    },
+    {
+      "at": "0x10906ad",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nested completeness slot20"
+    },
+    {
+      "at": "0x108f171",
+      "mnemonic": "or",
+      "operands": "byte ptr [rdi + 0x48], 4",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request parser sets field3 presence4"
+    },
+    {
+      "at": "0x108f175",
+      "mnemonic": "mov",
+      "operands": "r14, qword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field3 pointer+10"
+    },
+    {
+      "at": "0x108f194",
+      "mnemonic": "call",
+      "operands": "0x68c320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct SKBuiltinBuffer_t"
+    },
+    {
+      "at": "0x108f19e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x10], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store request nested buffer pointer"
+    },
+    {
+      "at": "0x108f1ff",
+      "mnemonic": "call",
+      "operands": "0x68de10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parse selected nested buffer"
+    },
+    {
+      "at": "0x109010b",
+      "mnemonic": "or",
+      "operands": "byte ptr [rdi + 0x30], 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response parser sets field4 presence8"
+    },
+    {
+      "at": "0x109010f",
+      "mnemonic": "mov",
+      "operands": "rbx, qword ptr [rdi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Response field4 pointer+18"
+    },
+    {
+      "at": "0x109012e",
+      "mnemonic": "call",
+      "operands": "0x68c320",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct SKBuiltinBuffer_t"
+    },
+    {
+      "at": "0x1090138",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x18], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store response nested buffer pointer"
+    },
+    {
+      "at": "0x1090198",
+      "mnemonic": "call",
+      "operands": "0x68de10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Parse selected nested buffer"
+    },
+    {
+      "at": "0x68c323",
+      "mnemonic": "lea",
+      "operands": "rcx, [rip + 0x895c25e]",
+      "rip_targets": [
+        "0x8fe8588"
+      ],
+      "public_static_strings": [],
+      "observation": "Load buffer table8fe8588"
+    },
+    {
+      "at": "0x68c32a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install buffer table"
+    },
+    {
+      "at": "0x68c32d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero field1 and cached span"
+    },
+    {
+      "at": "0x68c33c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Default string object pointer+8"
+    },
+    {
+      "at": "0x68c340",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rax + 0x18], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Presence bitmap+18 initialized0"
+    },
+    {
+      "at": "0x68e0bd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], 0x1a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer type name length26"
+    },
+    {
+      "at": "0x68e0cd",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x895a514]",
+      "rip_targets": [
+        "0x8fe85e8"
+      ],
+      "public_static_strings": [
+        "micromsg.SKBuiltinBuffer_t"
+      ],
+      "observation": "Buffer name first16 bytes"
+    },
+    {
+      "at": "0x68e0d7",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x895a514]",
+      "rip_targets": [
+        "0x8fe85f2"
+      ],
+      "public_static_strings": [
+        "KBuiltinBuffer_t"
+      ],
+      "observation": "Buffer name overlapping tail16 bytes"
+    },
+    {
+      "at": "0x68dfaf",
+      "mnemonic": "test",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer field1 presence bit1"
+    },
+    {
+      "at": "0x68dfb3",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer field1 DWORD+10"
+    },
+    {
+      "at": "0x68dfb6",
+      "mnemonic": "mov",
+      "operands": "ecx, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number1"
+    },
+    {
+      "at": "0x68dfc6",
+      "mnemonic": "test",
+      "operands": "al, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer field2 presence bit2"
+    },
+    {
+      "at": "0x68dfd1",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer field2 string object pointer+8"
+    },
+    {
+      "at": "0x68dfd5",
+      "mnemonic": "mov",
+      "operands": "ecx, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Field number2"
+    },
+    {
+      "at": "0x68e090",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read buffer presence bitmap"
+    },
+    {
+      "at": "0x68e094",
+      "mnemonic": "and",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Completeness requires only bit1, not bytes bit2"
+    },
+    {
+      "at": "0x2ea31b3",
+      "mnemonic": "call",
+      "operands": "0x108e6f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct request at rbp+a00"
+    },
+    {
+      "at": "0x2ea31b9",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x7b0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read current input firstDWORD"
+    },
+    {
+      "at": "0x2ea31bf",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xa18], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field2 assignment"
+    },
+    {
+      "at": "0x2ea31c5",
+      "mnemonic": "or",
+      "operands": "byte ptr [rbp + 0xa48], 0xa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mark request fields2 and4 present"
+    },
+    {
+      "at": "0x2ea31cc",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rbp + 0x7b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read current per-iteration mode"
+    },
+    {
+      "at": "0x2ea31d2",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xa1c], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request field4 assignment"
+    },
+    {
+      "at": "0x2ea337b",
+      "mnemonic": "call",
+      "operands": "0x2ef8650",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Buffer-producing helper; internal source state still partial"
+    },
+    {
+      "at": "0x2ea339a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xa10], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Assign request field3 nested pointer"
+    },
+    {
+      "at": "0x2ea6792",
+      "mnemonic": "call",
+      "operands": "0x108e730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct typed response"
+    },
+    {
+      "at": "0x2ea679c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x28], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store shared response pointer at result+28"
+    },
+    {
+      "at": "0x2ea67a8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x30], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store response control block at result+30"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "field_map": {
+    "request": {
+      "type": "micromsg.NewSyncRequest",
+      "presence_offset": "0x48",
+      "required_mask": "0x7",
+      "fields": {
+        "2": {
+          "offset": "0x18",
+          "shape": "DWORD",
+          "presence": "0x2"
+        },
+        "3": {
+          "offset": "0x10",
+          "shape": "SKBuiltinBuffer_t pointer",
+          "presence": "0x4"
+        },
+        "4": {
+          "offset": "0x1c",
+          "shape": "DWORD current mode",
+          "presence": "0x8"
+        }
+      }
+    },
+    "response": {
+      "type": "micromsg.NewSyncResponse",
+      "presence_offset": "0x30",
+      "required_mask": "0xf",
+      "fields": {
+        "1": {
+          "offset": "0x10",
+          "shape": "DWORD status consumed by processor",
+          "presence": "0x1"
+        },
+        "2": {
+          "offset": "0x8",
+          "shape": "nested pointer",
+          "presence": "0x2"
+        },
+        "3": {
+          "offset": "0x14",
+          "shape": "DWORD continuation flags consumed by outer loop",
+          "presence": "0x4"
+        },
+        "4": {
+          "offset": "0x18",
+          "shape": "SKBuiltinBuffer_t pointer",
+          "presence": "0x8"
+        }
+      }
+    },
+    "buffer": {
+      "type": "micromsg.SKBuiltinBuffer_t",
+      "presence_offset": "0x18",
+      "required_mask": "0x1",
+      "fields": {
+        "1": {
+          "offset": "0x10",
+          "shape": "DWORD",
+          "presence": "0x1"
+        },
+        "2": {
+          "offset": "0x8",
+          "shape": "string object pointer",
+          "presence": "0x2"
+        }
+      }
+    }
+  },
+  "conclusions": [
+    "Constructor tables and name-returning slots bind NewSyncRequest and NewSyncResponse. Result constructor2ea6720 installs a shared NewSyncResponse at+28/+30. This is a default typed object, not proof of successful network parsing or complete asynchronous result production.",
+    "Serializer field numbers bind request field2 at+18, field3 at+10 and field4 at+1c; response field1 at+10, field2 at+8, field3 at+14 and field4 at+18. Field names beyond public type names remain descriptive usage inferences, not an official schema claim.",
+    "Parser allocation paths bind request field3 and response field4 to SKBuiltinBuffer_t. Its field2 points to the string object whose length/data the continuation loop reads. Required presence mask1 checks only buffer field1; it neither requires bytes field2 nor compares declared field1 value with actual string length.",
+    "Request required mask7 does not require mode field4 presence8. Response required mask0xf requires fields1-4 plus nested completeness, but not nonzero status/flags or nonempty buffer bytes. Passing generated completeness is not a synchronization success or history-boundary test."
+  ],
+  "remaining": [
+    "Bind actual asynchronous NewSync result production and parser/completion failures; distinguish default/fallback response from verified response",
+    "Trace response-buffer update into next-request state and complete reset/reconnect/identity epoch; current comparison alone is not a history boundary",
+    "Deferred batch mode policy, direction, account namespace, callback drain/lifetime and a concrete permitted observation method remain open",
+    "No runnable adapter, minimized receive verification, controlled send confirmation or auto reply"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-08T12:33:42.342104+00:00",
+  "scope": "Actual user-requested Jev argmax; not binary evidence or independent review",
+  "records": [
+    {
+      "time_utc": "2026-10-08T12:24:45.010765+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 1.781,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "goal": "Establish initial-history/reconnect boundaries for the existing personal WeChat project through authorized fixed-file disk-static analysis only. No target execution, process access, real chat data or messaging.",
+          "facts": [
+            "Previous turn bound numeric mode19 to input mode or zero/elapsed wall-clock override. Both mode branches can prepare/append messages; mode and closing signal are not fresh-message admission.",
+            "This turn constructors108e6f0 and108e730 install separate tables whose type-name methods build micromsg.NewSyncRequest and micromsg.NewSyncResponse. Protocol completeness masks are7 and15 respectively. Numeric field mapping remains to be completed.",
+            "After command processor2ea6840 returns nonzero, outerCoDoSync reads response+14. Low bits7 must be nonzero and nested request+10/response+18 strings differ for the selected continuation. Equal strings, including both empty, stop that loop. Exact nested types/producer semantics remain unverified.",
+            "On continuation, the next local request mode is changed to6 and first QWORD7, while final flush compares the separately saved original mode with19. This is not a per-message epoch proof.",
+            "Command processor false clears a success low-bit marker, and the final gate bypasses flush and returnsfalse on that path. A candidate response-producing closure table9584dd8+10=2ead5a0 calls2ead900; it copies a status pair and shared response into the outer local result and signals completion. The actual network result/type binding has not been fully followed."
+          ],
+          "privacy": "Abstract static code facts and public literals only; no credentials or user/account/chat content.",
+          "policy": "Agent follows maximum returned option probability, preserving the raw answer. Advice is not byte verification, runtime success or permission."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Choose the next bounded trace that most improves correctness of the current synchronization-end finding.",
+            "criteria": {
+              "response_producer": "First bind the actual response-producing closure/result to NewSyncResponse and status sources, then finish its numeric field mapping.",
+              "continuation_contract": "First complete field mapping and selected continuation/stop/return conditions, keeping actual network response production as an explicit gap.",
+              "deferred_mode_body": "Defer outer loop work and follow the later deferred closure that captures the mode byte."
+            }
+          },
+          "baseline_admission": {
+            "type": "choice",
+            "instructions": "Do these current static loop/type findings alone certify a safe fresh-message baseline?",
+            "criteria": {
+              "not_established": "No. Loop termination and local booleans still lack message recency, identity epoch, callback drain and runtime observation evidence.",
+              "established": "Yes. The current loop termination conditions suffice to certify a fresh-message baseline."
+            }
+          }
+        }
+      },
+      "request_sha256": "31ea1ffb3e2b0f593e8a651e4ca2ee4cdcd2b8da65658822210e816b9b7e1a62",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_trace": {
+            "type": "choice",
+            "choice": "continuation_contract",
+            "confidence": 0.25,
+            "probabilities": {
+              "response_producer": 0.49,
+              "continuation_contract": 0.5,
+              "deferred_mode_body": 0.01
+            }
+          },
+          "baseline_admission": {
+            "type": "choice",
+            "choice": "not_established",
+            "confidence": 1.0,
+            "probabilities": {
+              "not_established": 1.0,
+              "established": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 914,
+          "output_tokens": 93
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    }
+  ],
+  "automatic_selection": {
+    "rule": "argmax returned probabilities; ties prefer returned choice then request order",
+    "selected": {
+      "next_trace": {
+        "option": "continuation_contract",
+        "probability": 0.5,
+        "confidence": 0.25
+      },
+      "baseline_admission": {
+        "option": "not_established",
+        "probability": 1.0,
+        "confidence": 1.0
+      }
+    }
+  },
+  "agent_disposition": {
+    "selected_priority": "continuation_contract",
+    "followup": "438 binds typed fields and required presence;439 follows selected continuation and normal return.",
+    "admission": "not_established",
+    "qualification": "0.50 versus0.49 with confidence0.25 is a close advisory choice; highest probability followed without strengthening evidence."
+  },
+  "live_chat_data_supplied": false,
+  "credential_value_recorded": false,
+  "auto_reply_model_connected": false
+}

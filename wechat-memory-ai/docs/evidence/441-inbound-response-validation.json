@@ -1,0 +1,129 @@
+{
+  "checked_at_utc": "2026-10-08T12:39:44.770013+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh disk checks and pure selected predicate projections; not complete CFG/alias proof, live compatibility, history admission or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 15,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_raw_rel32_math": 10,
+  "unique_tables_checked": 3,
+  "unique_instruction_observations_checked": 186,
+  "rip_references_with_raw_displacement_math": 9,
+  "branch_field_assertions": 130,
+  "explicit_table_targets_checked": 11,
+  "explicit_rip_targets_checked": 3,
+  "exact_public_type_names_reconstructed": 3,
+  "predicate_projections": {
+    "scope": "24 pure selected predicate cases, no target execution, decoder emulation, runtime samples or network requests",
+    "continuation_cases": 12,
+    "normal_marker_flush_cases": 4,
+    "original_current_mode_cases": 4,
+    "nested_required_presence_cases": 4,
+    "counterexamples": [
+      "Both empty buffers stop even with low continuation flags set",
+      "Nested buffer completeness permits missing byte field2",
+      "Later request mode6 preserves original mode19 flush classification",
+      "Processor failure and ordinary equal-buffer stop have different success-marker effects",
+      "Early protocol status-2006 passes one gate, without being certified as complete success"
+    ]
+  },
+  "jev_advisory_calls_recorded": 1,
+  "jev_model": "jev-1.13.0",
+  "jev_recorded_usage_total": {
+    "input_tokens": 914,
+    "output_tokens": 93
+  },
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 12,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 841,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and437-441 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Previous writers/API scripts never executed: graph/save extracted as AST definitions and generic verifier prefix copied as text.",
+    "Full function decoding does not certify all paths. Processor AL is an input to the outer selected projection; its complete success predicate is not claimed.",
+    "Type/serializer/presence mapping is established, actual network response production and parser/fallback state remain open.",
+    "Buffer byte comparison is length-bounded, not an authenticated history cursor. No live buffer or account values read.",
+    "Close Jev argmax followed once; advisory confidence is not used as proof."
+  ],
+  "initial_assertion_corrections": {
+    "failed_verifier_runs": 1,
+    "corrected_expected_operand_rows": 3,
+    "detail": "Handwritten expectations used RAX instead of RDX at108f654,10903c5,1090404. Re-read serializer windows and corrected register spelling; numeric field mapping and saved byte observations unchanged."
+  },
+  "remaining": [
+    "Bind actual asynchronous NewSync result production and parser/completion failures; distinguish default/fallback response from verified response",
+    "Trace response-buffer update into next-request state and complete reset/reconnect/identity epoch; current comparison alone is not a history boundary",
+    "Deferred batch mode policy, direction, account namespace, callback drain/lifetime and a concrete permitted observation method remain open",
+    "No runnable adapter, minimized receive verification, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-response-20261008/jev_decision.py",
+      "sha256": "06c52506fe2cd5c56ca6468bb4c18f049c6a9723f0a4a6cb0ff08d60a867eff1"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/write_evidence.py",
+      "sha256": "f1999845d8d73d83654db0450577c349cd58dc72c67fdcf9fc13832e6ddf761f"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/verify_evidence.py",
+      "sha256": "59e7c88d71b63eef7243aa859f80c1c0f828fe672774362fc9cc65bf3b6cb581"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/verification_checks.py",
+      "sha256": "8a3dab19d31fd1cf73a8e38d0134a5e84a7d1720c3c7e92fc37dc21651af6253"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/update_docs.py",
+      "sha256": "400f2deb7d93cff8f17bdf324d2a4a24f165d5deef988015bbd423e568672bff"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-response-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}
