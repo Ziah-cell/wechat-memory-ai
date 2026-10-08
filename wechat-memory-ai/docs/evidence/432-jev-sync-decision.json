@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-08T07:19:29.546844+00:00",
+  "scope": "Actual user-requested Jev advice, automatically selected argmax; not independent review or reply-model integration",
+  "records": [
+    {
+      "time_utc": "2026-10-08T07:09:41.805121+00:00",
+      "status": "received",
+      "http_status": 200,
+      "elapsed_seconds": 0.625,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "goal": "Establish trustworthy initial-history/reconnect versus fresh-message boundaries for the existing single-test-friend personal WeChat receiver project. Current authorization is fixed-file disk-static analysis only; no DLL execution, process access, installation or messages.",
+          "facts": [
+            "Prior turn bound a batch-local cleared/deleted-message filter and normal reset; it does not establish fresh-message admission. Account namespace/epoch, callback lifetime and concrete observation method remain open.",
+            "Outer function2ea2f60 has public literal CoDoSync and constructor-bound vtable9584308 slot28. No direct E8/E9 callers were found; virtual callers remain candidates.",
+            "Its RDX input is copied by2ea6460. Input DWORD+8 is preserved into local+8 and compared with numeric19. Equality changes a reserved capacity from10 to100, emits LoginFlow CoDoSync end on a selected path, and passes a boolean into the batch flush/transform. Numeric19 meaning and producer are not yet certified.",
+            "An input DWORD at+0 and numeric mode+8 are copied into an outer generated request at+18/+1c. Request/response protocol type has not yet been bound in this turn.",
+            "After command processing succeeds, response DWORD+14 and its low bits7 participate in continuation; response+18 is compared against request+10 nested strings. Loop control can change, but exact cursor/phase semantics and constructor/default field types remain unverified."
+          ],
+          "decision_policy": "Automatically take the largest returned option probability. Model advice is not binary proof, permission or a runtime result.",
+          "privacy": "Only abstract static-code facts and public code literals; no credentials, private account/chat data or live state."
+        },
+        "questions": {
+          "next_trace": {
+            "type": "choice",
+            "instructions": "Choose the next bounded trace that best resolves the current history/reconnect ambiguity.",
+            "criteria": {
+              "mode_producer": "Bind concrete virtual caller and input+8 producer for numeric19, then follow its flush boolean effects; distinguish login scene from per-message freshness.",
+              "response_continuation": "First bind outer request/response types and low-bit/string continuation conditions, then determine what a loop ending can certify.",
+              "account_epoch": "Defer sync details and return to the captured account input+60 namespace/epoch source."
+            }
+          },
+          "current_admission": {
+            "type": "choice",
+            "instructions": "Do these currently verified findings justify treating mode19=false or a finished sync loop as fresh-message admission?",
+            "criteria": {
+              "insufficient": "No. Producer, response types and history/epoch correspondence remain missing; preserve unknown.",
+              "sufficient": "Yes. Numeric mode and loop completion already authenticate a fresh-message boundary."
+            }
+          }
+        }
+      },
+      "request_sha256": "afaad675ddf53bce362700e2cbbf3bd2490dd6e81e7ad9a7cf404af34e9e595b",
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "next_trace": {
+            "type": "choice",
+            "choice": "mode_producer",
+            "confidence": 0.7,
+            "probabilities": {
+              "account_epoch": 0.15,
+              "mode_producer": 0.8,
+              "response_continuation": 0.05
+            }
+          },
+          "current_admission": {
+            "type": "choice",
+            "choice": "insufficient",
+            "confidence": 1.0,
+            "probabilities": {
+              "sufficient": 0.0,
+              "insufficient": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 892,
+          "output_tokens": 87
+        }
+      },
+      "scope": "Advisory technical judgment requested by user; not binary verification, live compatibility, independent code review or action permission."
+    }
+  ],
+  "automatic_selection": {
+    "rule": "argmax returned probabilities; ties prefer returned choice then request order",
+    "selected": {
+      "next_trace": {
+        "option": "mode_producer",
+        "probability": 0.8,
+        "confidence": 0.7
+      },
+      "current_admission": {
+        "option": "insufficient",
+        "probability": 1.0,
+        "confidence": 1.0
+      }
+    }
+  },
+  "agent_disposition": {
+    "selected_priority": "mode_producer",
+    "followup": "433 binds selected mode producer and clock rule;434 follows the resulting batch boolean.",
+    "admission": "insufficient",
+    "input_qualification": "The decision input called the10/100 helper argument a reserved capacity; this turn certifies its numeric selection only and does not rely on that semantic label."
+  },
+  "live_chat_data_supplied": false,
+  "credential_value_recorded": false,
+  "auto_reply_model_connected": false
+}

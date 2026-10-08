@@ -1,0 +1,653 @@
+{
+  "checked_at_utc": "2026-10-08T07:19:29.546844+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Mode equality at selected flush call",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb8870",
+      "end": "0x2eb89c0",
+      "role_inference": "Forward mode boolean to batch preparation",
+      "instruction_count": 76,
+      "disk_range_sha256": "d87fa8b601e44d513bc9af1ee9beca4ee4b898bd798235df8f8df5e338dc3363",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb8a20",
+      "end": "0x2eb95ed",
+      "role_inference": "Preserve mode byte for preparation and downstream batches",
+      "instruction_count": 673,
+      "disk_range_sha256": "01ea60cd110c0a708f47c7372654e09df15b175f1f04af48a0108227c51fe919",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb9af0",
+      "end": "0x2ebb7a1",
+      "role_inference": "Mode selects between batch-wide preparation branches",
+      "instruction_count": 1567,
+      "disk_range_sha256": "3573735b6cf0b473d7e60220f661225331ffc1b911409d76db5d96c0f3c3033d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ebd6a0",
+      "end": "0x2ebd7b3",
+      "role_inference": "Forward mode to bound message manager getter path",
+      "instruction_count": 90,
+      "disk_range_sha256": "6cd3c23c3fd6f813aa4238934517d699eeca6f433b58c60a726c03e32dc54524",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17cb2c0",
+      "end": "0x17cd051",
+      "role_inference": "Preserve and forward same mode to selected later processing",
+      "instruction_count": 1674,
+      "disk_range_sha256": "f91393bc504d06eae2c08e0a163d8fc220db409e9aa2898198cb848e55867a91",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17c8eb0",
+      "end": "0x17c9815",
+      "role_inference": "Selected path forwards mode into later helper",
+      "instruction_count": 538,
+      "disk_range_sha256": "f9740c573a8a9ff69a96d087b6ff44f918632df5279475c124e39ed5a802ea99",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x17c9c50",
+      "end": "0x17ca6d0",
+      "role_inference": "Capture mode in deferred closure; no freshness policy claim",
+      "instruction_count": 599,
+      "disk_range_sha256": "0217cfff419ca5ed92dbe0c3e309f57d1dc126e13479b5b917b6624cdac54550",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2ea5248",
+      "kind": "call",
+      "to": "0x2eb8870"
+    },
+    {
+      "at": "0x2eb88ab",
+      "kind": "jmp",
+      "to": "0x2eb8a20"
+    },
+    {
+      "at": "0x2eb8b72",
+      "kind": "call",
+      "to": "0x2eb9af0"
+    },
+    {
+      "at": "0x2eb90be",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2eb9347",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2eb93c9",
+      "kind": "call",
+      "to": "0x2ebd6a0"
+    },
+    {
+      "at": "0x2ebd702",
+      "kind": "call",
+      "to": "0x17cb2c0"
+    },
+    {
+      "at": "0x17cc971",
+      "kind": "call",
+      "to": "0x17c8eb0"
+    },
+    {
+      "at": "0x17cca73",
+      "kind": "call",
+      "to": "0x17c8eb0"
+    },
+    {
+      "at": "0x17c9260",
+      "kind": "call",
+      "to": "0x17c9c50"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x2ea523a",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare numeric19"
+    },
+    {
+      "at": "0x2ea523e",
+      "mnemonic": "sete",
+      "operands": "dl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Equality boolean inDL"
+    },
+    {
+      "at": "0x2ea5241",
+      "mnemonic": "lea",
+      "operands": "rcx, [r15 + 0x1d0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same embedded batch submanager"
+    },
+    {
+      "at": "0x2ea5248",
+      "mnemonic": "call",
+      "operands": "0x2eb8870",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Flush receives equality boolean"
+    },
+    {
+      "at": "0x2eb888c",
+      "mnemonic": "mov",
+      "operands": "r8d, edx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "ForwardEDX toR8D; consumed as low-byte boolean"
+    },
+    {
+      "at": "0x2eb8892",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same input collection"
+    },
+    {
+      "at": "0x2eb889b",
+      "mnemonic": "add",
+      "operands": "rdx, 0x58",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same embedded local rejection filter, separate from mode"
+    },
+    {
+      "at": "0x2eb889f",
+      "mnemonic": "xor",
+      "operands": "r9d, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other flagR9D explicitly0"
+    },
+    {
+      "at": "0x2eb88ab",
+      "mnemonic": "jmp",
+      "operands": "0x2eb8a20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Tailcall batch processor"
+    },
+    {
+      "at": "0x2eb8a57",
+      "mnemonic": "mov",
+      "operands": "r12d, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve incoming mode boolean"
+    },
+    {
+      "at": "0x2eb8add",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x327], r12b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save low-byte mode in local327"
+    },
+    {
+      "at": "0x2eb8b6a",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x327]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode passed to preparation"
+    },
+    {
+      "at": "0x2eb8b72",
+      "mnemonic": "call",
+      "operands": "0x2eb9af0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preparation call"
+    },
+    {
+      "at": "0x2eb9b24",
+      "mnemonic": "mov",
+      "operands": "ebx, r8d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save incoming preparation mode"
+    },
+    {
+      "at": "0x2eb9d4f",
+      "mnemonic": "test",
+      "operands": "bl, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test mode low byte"
+    },
+    {
+      "at": "0x2eb9d51",
+      "mnemonic": "je",
+      "operands": "0x2ebad4a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False jumps to second preparation loop"
+    },
+    {
+      "at": "0x2eb9d57",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x210], 0xffffffff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path initializes local counter/state-1"
+    },
+    {
+      "at": "0x2eb9da3",
+      "mnemonic": "call",
+      "operands": "0xb9610",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path creates auxiliary endpoint map"
+    },
+    {
+      "at": "0x2eb9e50",
+      "mnemonic": "call",
+      "operands": "0xa7bbd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path initializes extended message"
+    },
+    {
+      "at": "0x2eb9e77",
+      "mnemonic": "call",
+      "operands": "0x2ebc6c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path uses same eligibility helper"
+    },
+    {
+      "at": "0x2eba449",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsp + 0x20], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected true-mode adjustment option0 on stack"
+    },
+    {
+      "at": "0x2eba458",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp + 0x210]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True-mode helper receives auxiliary state address"
+    },
+    {
+      "at": "0x2eba45f",
+      "mnemonic": "call",
+      "operands": "0x2ad2de0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected true-mode adjustment2ad2de0"
+    },
+    {
+      "at": "0x2eba465",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x310], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store returned adjusted time-shaped value"
+    },
+    {
+      "at": "0x2eba6c8",
+      "mnemonic": "xor",
+      "operands": "r9d, r9d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Another true-mode adjustment optionR9D0"
+    },
+    {
+      "at": "0x2eba6cb",
+      "mnemonic": "call",
+      "operands": "0x2ad2760",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected true-mode adjustment2ad2760"
+    },
+    {
+      "at": "0x2eba6d1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x310], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store adjusted value"
+    },
+    {
+      "at": "0x2ebac96",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path copies selected value into extension+70"
+    },
+    {
+      "at": "0x2ebaca1",
+      "mnemonic": "add",
+      "operands": "qword ptr [rax + 8], 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "True path appends120-byte element"
+    },
+    {
+      "at": "0x2ebad4a",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False preparation loop begins from same input vector"
+    },
+    {
+      "at": "0x2ebadf1",
+      "mnemonic": "call",
+      "operands": "0xa7bbd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False path initializes extended message"
+    },
+    {
+      "at": "0x2ebae17",
+      "mnemonic": "call",
+      "operands": "0x2ebc6c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False path uses same eligibility helper"
+    },
+    {
+      "at": "0x2ebb017",
+      "mnemonic": "mov",
+      "operands": "r9b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False-mode adjustment optionR9B1"
+    },
+    {
+      "at": "0x2ebb01a",
+      "mnemonic": "call",
+      "operands": "0x2ad2760",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected false-mode adjustment2ad2760"
+    },
+    {
+      "at": "0x2ebb020",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x310], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store returned adjusted value"
+    },
+    {
+      "at": "0x2ebb6b8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x70], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False path copies selected value into extension+70"
+    },
+    {
+      "at": "0x2ebb6c3",
+      "mnemonic": "add",
+      "operands": "qword ptr [rax + 8], 0x78",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False path appends120-byte element"
+    },
+    {
+      "at": "0x2eb90ae",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x327]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass preserved mode to downstream batch"
+    },
+    {
+      "at": "0x2eb90be",
+      "mnemonic": "call",
+      "operands": "0x2ebd6a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected batch dispatch"
+    },
+    {
+      "at": "0x2eb9337",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x327]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass preserved mode to later batch"
+    },
+    {
+      "at": "0x2eb9347",
+      "mnemonic": "call",
+      "operands": "0x2ebd6a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected batch dispatch"
+    },
+    {
+      "at": "0x2eb93b9",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x327]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass preserved mode to final selected batch"
+    },
+    {
+      "at": "0x2eb93c9",
+      "mnemonic": "call",
+      "operands": "0x2ebd6a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected batch dispatch"
+    },
+    {
+      "at": "0x2ebd6c7",
+      "mnemonic": "mov",
+      "operands": "r14b, r8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve mode byte"
+    },
+    {
+      "at": "0x2ebd6ef",
+      "mnemonic": "call",
+      "operands": "0x707420",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Bound service getter707420 from414"
+    },
+    {
+      "at": "0x2ebd6fc",
+      "mnemonic": "mov",
+      "operands": "r8d, r14d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward mode argument"
+    },
+    {
+      "at": "0x2ebd702",
+      "mnemonic": "call",
+      "operands": "0x17cb2c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Consumer17cb2c0"
+    },
+    {
+      "at": "0x17cb2f7",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x767], r8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save mode byte767"
+    },
+    {
+      "at": "0x17cc966",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x767]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward mode on selected path"
+    },
+    {
+      "at": "0x17cc971",
+      "mnemonic": "call",
+      "operands": "0x17c8eb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call17c8eb0"
+    },
+    {
+      "at": "0x17cca68",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x767]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward mode on other selected path"
+    },
+    {
+      "at": "0x17cca73",
+      "mnemonic": "call",
+      "operands": "0x17c8eb0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call17c8eb0"
+    },
+    {
+      "at": "0x17c8ee4",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x326], r8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save mode byte326"
+    },
+    {
+      "at": "0x17c9258",
+      "mnemonic": "movzx",
+      "operands": "r8d, byte ptr [rbp + 0x326]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload same mode"
+    },
+    {
+      "at": "0x17c9260",
+      "mnemonic": "call",
+      "operands": "0x17c9c50",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call17c9c50"
+    },
+    {
+      "at": "0x17c9c84",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x296], r8b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save mode byte296"
+    },
+    {
+      "at": "0x17ca4e2",
+      "mnemonic": "movzx",
+      "operands": "edx, byte ptr [rbp + 0x296]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload mode for capture"
+    },
+    {
+      "at": "0x17ca505",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x130], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install deferred closure table"
+    },
+    {
+      "at": "0x17ca50c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x138], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture receiver atclosure+8"
+    },
+    {
+      "at": "0x17ca513",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rbp + 0x140], dl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture mode byte atclosure+10"
+    },
+    {
+      "at": "0x17ca536",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rbp + 0x148], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture prepared vector"
+    },
+    {
+      "at": "0x17ca591",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp + 0x130]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass closure to submission helper"
+    },
+    {
+      "at": "0x17ca59b",
+      "mnemonic": "call",
+      "operands": "0x30ece0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit through30ece0; body/later policy not certified in this turn"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "conclusions": [
+    "The equality(mode,19) low byte flows2ea2f60->2eb8870->2eb8a20. It is distinct from the embedded rejection-filter address. The same mode is forwarded to preparation2eb9af0 and selected downstream batches; neither mode is automatically dropped here.",
+    "In2eb9af0, true andfalse select different preparation loops over the same input representation. Both have selected paths that construct extended messages and append120-byte elements. The true path has auxiliary state/map and calls2ad2de0 or2ad2760(option0); the selected false path calls2ad2760(option1). Selected returned values replace extension+70. This does not authenticate adjusted time, per-message age or complete behavior of those helpers.",
+    "Downstream mode is preserved through2ebd6a0->17cb2c0->17c8eb0->17c9c50 and captured at deferred closure+10. The later body and notification policy are not certified here. It is a batch-processing input, not independently evidenced is_history/is_self/account_epoch.",
+    "Do not build the adapter by treating mode!=19 as fresh, mode19 as old, or flag reset/signal emission as baseline completion. Typed response/continuation and identity/lifetime evidence remain required."
+  ],
+  "remaining": [
+    "Bind typed outer request/response, low-bit/string continuation and caller-visible outcome; do not infer freshness from loop ending",
+    "Trace channel mode origins and other receiver implementations/overrides, complete clock/state reset and reconnect lifecycle as needed",
+    "Account namespace/epoch, direction, callback lifetime and concrete permissible observation method remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "394-inbound-field-provenance.json",
+    "397-inbound-batch-consumer.json",
+    "403-inbound-group-notification.json",
+    "414-inbound-subscriber-registration.json"
+  ]
+}

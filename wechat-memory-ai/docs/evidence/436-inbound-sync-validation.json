@@ -1,0 +1,128 @@
+{
+  "checked_at_utc": "2026-10-08T07:23:25.503786+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh disk checks and bounded arithmetic; not complete CFG/alias proof, live compatibility, per-message freshness or independent review",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 16,
+  "unique_anchored_leaves_checked": 0,
+  "unique_direct_edges_with_raw_rel32_math": 18,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 155,
+  "rip_references_with_raw_displacement_math": 4,
+  "branch_field_assertions": 118,
+  "explicit_table_targets_checked": 3,
+  "explicit_rip_targets_checked": 3,
+  "clock_import_entries_checked": 1,
+  "predicate_projections": {
+    "scope": "Pure selected arithmetic/normal-path predicates, no target/API execution or actual messages",
+    "mode_cases": 10,
+    "clock_conversion_cases": 11,
+    "normal_driver_cases": 4,
+    "conversion_bound": "Nonnegative adjusted ticks through max_seconds*10000000+9999999: reciprocal error is below1/10000000, so floor quotient is exact",
+    "counterexamples": [
+      "Difference7200 preserves input;7201 overrides19",
+      "Incoming19 remains19 even without zero/age predicate",
+      "Negative wall-clock movement does not become monotonic elapsed time",
+      "Post-driver mode marker reset lacks a result test",
+      "Both preparation modes have selected append paths, so mode alone is not an admission filter"
+    ]
+  },
+  "jev_advisory_calls_recorded": 1,
+  "jev_model": "jev-1.13.0",
+  "jev_recorded_usage_total": {
+    "input_tokens": 892,
+    "output_tokens": 87
+  },
+  "jev_requests_repeated_during_verification": false,
+  "credential_value_in_records": false,
+  "previous_analysis_script_hashes_unchanged": 13,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 806,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and432-436 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "concurrency_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "research_probe_notes": [
+    "Previous writers/API scripts not rerun: graph/save extracted as pure AST definitions and generic verification prefix copied as text.",
+    "Direct-call and bounded virtual-call scans are candidates, not completeness proofs.",
+    "Selected concrete type/capture chain established; active receiver, all overrides and channel operation not certified.",
+    "FILETIME meaning from Microsoft docs and import metadata; scalar threshold and conversion from fixed bytes. No live clock/API/locale called.",
+    "Mode is not per-message history; both preparation branches can append. Later captured-mode closure behavior remains unverified.",
+    "Jev input reserve-capacity label retained in raw request but qualified in disposition; only10/100 numeric argument selection relied upon."
+  ],
+  "initial_assertion_corrections": {
+    "count": 0
+  },
+  "remaining": [
+    "Bind typed outer request/response, low-bit/string continuation and caller-visible outcome; do not infer freshness from loop ending",
+    "Trace channel mode origins and other receiver implementations/overrides, complete clock/state reset and reconnect lifecycle as needed",
+    "Account namespace/epoch, direction, callback lifetime and concrete permissible observation method remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-sync-20261008/jev_decision.py",
+      "sha256": "be0766acb9b3470a80b391354a55daa365a094b4d86413902c66ada552402fb7"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/write_evidence.py",
+      "sha256": "366b3af02b36c50f9f3195723844ee452538a41d3c5a2e56b864439b060a860d"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/verify_evidence.py",
+      "sha256": "cab1a99b059e103112b660b8fcd81501ac5d2d9872476cdc822a869b8fc7badc"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/verification_checks.py",
+      "sha256": "5fdfe582069b66770b8e6e4b926fa6bbcb073be09506103932b072cf4a3a8754"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/update_docs.py",
+      "sha256": "db6a4f7f759c576c9174a0d250eed6a9db33e8844d4f3ebc6e9cdcf9b6c13e67"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-sync-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

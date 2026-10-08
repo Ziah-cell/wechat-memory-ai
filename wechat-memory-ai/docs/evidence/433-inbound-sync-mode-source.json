@@ -1,0 +1,955 @@
+{
+  "checked_at_utc": "2026-10-08T07:19:29.546844+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2eb15e0",
+      "end": "0x2eb16f8",
+      "role_inference": "Base constructor initializes saved wall-clock value and busy/pending flags",
+      "instruction_count": 79,
+      "disk_range_sha256": "2e685c30e8df1fd13f2784f0fa42665fe0d7235245a85793dea83115abbe23fd",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea1d70",
+      "end": "0x2ea1ec9",
+      "role_inference": "Concrete sync owner installs vtable9584308 after base constructor",
+      "instruction_count": 70,
+      "disk_range_sha256": "6d69bc4a110d8e32ad38a10188c9f2c1d4b9a2c59fea3ab38d3b97efbb368e00",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea2010",
+      "end": "0x2ea24cf",
+      "role_inference": "Same owner captured by a closure using table9584948",
+      "instruction_count": 282,
+      "disk_range_sha256": "c4a763d1a11fda4fe893bf29874e56ecab7054a6c3c371b50e2a84725249e0d6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eabce0",
+      "end": "0x2eac3ab",
+      "role_inference": "Closure receives queued mode then conditionally overrides it with19",
+      "instruction_count": 392,
+      "disk_range_sha256": "cb10679482c9e44f2ff3d641a21d7ed105f99208a02a847ccb07b0e3b67cad11",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea2cc0",
+      "end": "0x2ea2ef7",
+      "role_inference": "Predicate saved==0 OR signed wrapped(now-saved)>=7201",
+      "instruction_count": 127,
+      "disk_range_sha256": "cca0b716f612def9c810d85831e0d67b5afa720f235f8700099d47b6bca11962",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x76bc7c0",
+      "end": "0x76bc831",
+      "role_inference": "Imported FILETIME wall clock converted to whole seconds; not monotonic",
+      "instruction_count": 28,
+      "disk_range_sha256": "71efb27a1f24949d25f2b3ba45bffd66eb98c64c16c1c3fa521b3145654b34b8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb19d0",
+      "end": "0x2eb203f",
+      "role_inference": "Busy/pending driver calls concrete slot28; normal true branch refreshes saved time",
+      "instruction_count": 353,
+      "disk_range_sha256": "bef594c5933b726890c06bace6a0157bce8466f8efe5c52bad18340ea5f458eb",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6460",
+      "end": "0x2ea65ff",
+      "role_inference": "Input record copy preserves DWORD+8 numeric mode",
+      "instruction_count": 122,
+      "disk_range_sha256": "6dd4bc1287cba35f1f775e4b72574d86c2ab218f6cfdb3aedcdd5399f3d6864c",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "CoDoSync reads copied mode and compares19 at selected sites",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2ea1d8c",
+      "kind": "call",
+      "to": "0x2eb15e0"
+    },
+    {
+      "at": "0x2eac171",
+      "kind": "call",
+      "to": "0x2ea2cc0"
+    },
+    {
+      "at": "0x2eac194",
+      "kind": "call",
+      "to": "0x76bc7c0"
+    },
+    {
+      "at": "0x2eac215",
+      "kind": "call",
+      "to": "0x2eb19d0"
+    },
+    {
+      "at": "0x2ea2ce3",
+      "kind": "call",
+      "to": "0x76bc7c0"
+    },
+    {
+      "at": "0x2eb1a7b",
+      "kind": "call",
+      "to": "0x76bc7c0"
+    },
+    {
+      "at": "0x2ea30ac",
+      "kind": "call",
+      "to": "0x2ea6460"
+    },
+    {
+      "at": "0x2ea3514",
+      "kind": "call",
+      "to": "0x76bc7c0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9584308",
+      "role_inference": "Concrete owner start and CoDoSync slots",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x2ea2010"
+        },
+        {
+          "offset": "0x28",
+          "target": "0x2ea2f60"
+        }
+      ]
+    },
+    {
+      "rva": "0x9584948",
+      "role_inference": "Captured closure body",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x2eabce0"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2eb16b7",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbx + 0x60], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Saved wall-clock field+60 initialized0"
+    },
+    {
+      "at": "0x2eb16bf",
+      "mnemonic": "mov",
+      "operands": "word ptr [rbx + 0x68], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Busy/pending bytes+68/+69 initialized0"
+    },
+    {
+      "at": "0x2ea1d89",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve concrete owner address"
+    },
+    {
+      "at": "0x2ea1d8c",
+      "mnemonic": "call",
+      "operands": "0x2eb15e0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Base constructor on same address"
+    },
+    {
+      "at": "0x2ea1d91",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x66e2570]",
+      "rip_targets": [
+        "0x9584308"
+      ],
+      "public_static_strings": [],
+      "observation": "Concrete table9584308"
+    },
+    {
+      "at": "0x2ea1d98",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install concrete table"
+    },
+    {
+      "at": "0x2ea202e",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Start slot saves same owner"
+    },
+    {
+      "at": "0x2ea2046",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rsi + 0x58], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set owner active byte+58"
+    },
+    {
+      "at": "0x2ea239b",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x66e25a6]",
+      "rip_targets": [
+        "0x9584948"
+      ],
+      "public_static_strings": [],
+      "observation": "Closure table9584948"
+    },
+    {
+      "at": "0x2ea23a2",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x180], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install closure table in local object"
+    },
+    {
+      "at": "0x2ea23a9",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x188], rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture owner at closure+8"
+    },
+    {
+      "at": "0x2ea2403",
+      "mnemonic": "lea",
+      "operands": "r9, [rbp + 0x180]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass closure address to submission helper"
+    },
+    {
+      "at": "0x2ea240d",
+      "mnemonic": "call",
+      "operands": "0x30ea10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit selected closure through30ea10; executor execution not certified here"
+    },
+    {
+      "at": "0x2eabd0d",
+      "mnemonic": "mov",
+      "operands": "rsi, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Closure body gets captured owner from+8"
+    },
+    {
+      "at": "0x2eabd14",
+      "mnemonic": "lea",
+      "operands": "r12, [rbp + 0x90]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "R12 identifies local input-record base rbp+90"
+    },
+    {
+      "at": "0x2eabe5b",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected receive helper uses owner channel+48"
+    },
+    {
+      "at": "0x2eabea0",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x170]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Receive into temporary input record rbp+170"
+    },
+    {
+      "at": "0x2eabead",
+      "mnemonic": "call",
+      "operands": "0x2eac720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Channel receive helper2eac720; full channel not audited"
+    },
+    {
+      "at": "0x2eabebb",
+      "mnemonic": "mov",
+      "operands": "r14d, dword ptr [rbp + 0x178]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Initial mode from received record+8"
+    },
+    {
+      "at": "0x2eac16d",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read same owner saved wall-clock value+60"
+    },
+    {
+      "at": "0x2eac171",
+      "mnemonic": "call",
+      "operands": "0x2ea2cc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call zero-or-elapsed predicate"
+    },
+    {
+      "at": "0x2eac177",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check predicate low-byte result"
+    },
+    {
+      "at": "0x2eac179",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Override candidate numeric19"
+    },
+    {
+      "at": "0x2eac17e",
+      "mnemonic": "cmovne",
+      "operands": "r14d, ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Override incoming mode only when predicate nonzero"
+    },
+    {
+      "at": "0x2eac189",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rcx], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store predicate boolean in diagnostic object"
+    },
+    {
+      "at": "0x2eac1a8",
+      "mnemonic": "cmp",
+      "operands": "r14d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected-mode19 brackets driver with status/signal"
+    },
+    {
+      "at": "0x2eac1ae",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0x1c8], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set owner+1c8=1"
+    },
+    {
+      "at": "0x2eac1be",
+      "mnemonic": "call",
+      "operands": "0xef86d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal owner+78 withtrue"
+    },
+    {
+      "at": "0x2eac1fa",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x90], 7",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input record first QWORD7"
+    },
+    {
+      "at": "0x2eac205",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x98], r14d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input record+8 receives selected mode"
+    },
+    {
+      "at": "0x2eac20c",
+      "mnemonic": "mov",
+      "operands": "rcx, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Driver uses same owner"
+    },
+    {
+      "at": "0x2eac20f",
+      "mnemonic": "mov",
+      "operands": "rdx, r12",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Driver receives local record base"
+    },
+    {
+      "at": "0x2eac215",
+      "mnemonic": "call",
+      "operands": "0x2eb19d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Call2eb19d0"
+    },
+    {
+      "at": "0x2eac21b",
+      "mnemonic": "cmp",
+      "operands": "r14d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "After driver, compare mode again without checking returnedAL"
+    },
+    {
+      "at": "0x2eac221",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0x1c8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reset owner+1c8=0"
+    },
+    {
+      "at": "0x2eac231",
+      "mnemonic": "call",
+      "operands": "0xef86d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signal owner+78 withfalse"
+    },
+    {
+      "at": "0x2ea2cde",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Predicate preserves saved value"
+    },
+    {
+      "at": "0x2ea2ce3",
+      "mnemonic": "call",
+      "operands": "0x76bc7c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get current converted wall-clock value"
+    },
+    {
+      "at": "0x2ea2ce8",
+      "mnemonic": "test",
+      "operands": "rsi, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test saved value zero"
+    },
+    {
+      "at": "0x2ea2ceb",
+      "mnemonic": "sete",
+      "operands": "cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Saved-zero predicate"
+    },
+    {
+      "at": "0x2ea2cee",
+      "mnemonic": "sub",
+      "operands": "rax, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subtract saved from current in64 bits"
+    },
+    {
+      "at": "0x2ea2cf1",
+      "mnemonic": "cmp",
+      "operands": "rax, 0x1c21",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare wrapped signed difference against0x1c21=7201"
+    },
+    {
+      "at": "0x2ea2cf7",
+      "mnemonic": "setge",
+      "operands": "bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signed greater/equal predicate"
+    },
+    {
+      "at": "0x2ea2cfa",
+      "mnemonic": "or",
+      "operands": "bl, cl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "OR zero and elapsed predicates"
+    },
+    {
+      "at": "0x2ea2ee3",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return predicate in low byte"
+    },
+    {
+      "at": "0x76bc7cf",
+      "mnemonic": "lea",
+      "operands": "rcx, [rsp + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Output FILETIME local pointer"
+    },
+    {
+      "at": "0x76bc7d4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x278f1de]",
+      "rip_targets": [
+        "0x9e4b9b8"
+      ],
+      "public_static_strings": [],
+      "observation": "IAT call to KERNEL32.GetSystemTimeAsFileTime"
+    },
+    {
+      "at": "0x76bc7df",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0xfe624e212ac18000",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Subtract116444736000000000100ns ticks"
+    },
+    {
+      "at": "0x76bc7ec",
+      "mnemonic": "movabs",
+      "operands": "rax, 0xd6bf94d5e57a42bd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signed division reciprocal constant"
+    },
+    {
+      "at": "0x76bc7f6",
+      "mnemonic": "imul",
+      "operands": "r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signed high-half multiplication"
+    },
+    {
+      "at": "0x76bc7f9",
+      "mnemonic": "add",
+      "operands": "rdx, r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Add original adjusted tick value"
+    },
+    {
+      "at": "0x76bc7fc",
+      "mnemonic": "sar",
+      "operands": "rdx, 0x17",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Arithmetic shift23"
+    },
+    {
+      "at": "0x76bc803",
+      "mnemonic": "shr",
+      "operands": "rax, 0x3f",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Signed rounding adjustment"
+    },
+    {
+      "at": "0x76bc807",
+      "mnemonic": "add",
+      "operands": "rdx, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Complete whole-seconds conversion"
+    },
+    {
+      "at": "0x76bc80a",
+      "mnemonic": "movabs",
+      "operands": "rax, 0x793582aff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Maximum supported whole-seconds value"
+    },
+    {
+      "at": "0x76bc817",
+      "mnemonic": "jle",
+      "operands": "0x76bc81d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Over-maximum branch test"
+    },
+    {
+      "at": "0x76bc819",
+      "mnemonic": "or",
+      "operands": "rdx, 0xffffffffffffffff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return-1 sentinel beyond maximum"
+    },
+    {
+      "at": "0x76bc820",
+      "mnemonic": "mov",
+      "operands": "rax, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return converted value"
+    },
+    {
+      "at": "0x2eb19fd",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x148], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save input record pointer"
+    },
+    {
+      "at": "0x2eb1a04",
+      "mnemonic": "mov",
+      "operands": "rsi, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save same sync owner"
+    },
+    {
+      "at": "0x2eb1a2d",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rsi + 0x68], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Busy flag exactly1 takes pending path"
+    },
+    {
+      "at": "0x2eb1a40",
+      "mnemonic": "mov",
+      "operands": "r12, qword ptr [rsi + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read saved wall-clock field+60"
+    },
+    {
+      "at": "0x2eb1a4c",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x68], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Set busy flag"
+    },
+    {
+      "at": "0x2eb1a50",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load concrete receiver table"
+    },
+    {
+      "at": "0x2eb1a56",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x148]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Forward same input record pointer"
+    },
+    {
+      "at": "0x2eb1a5d",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Virtual slot28 is2ea2f60 for constructor-bound table"
+    },
+    {
+      "at": "0x2eb1a60",
+      "mnemonic": "mov",
+      "operands": "r14d, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save returned boolean"
+    },
+    {
+      "at": "0x2eb1a6c",
+      "mnemonic": "test",
+      "operands": "r14b, r14b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test low-byte result"
+    },
+    {
+      "at": "0x2eb1a6f",
+      "mnemonic": "je",
+      "operands": "0x2eb1ee0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False goes to branch without selected timestamp refresh"
+    },
+    {
+      "at": "0x2eb1a75",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x68], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear busy flag on normal true branch"
+    },
+    {
+      "at": "0x2eb1a7b",
+      "mnemonic": "call",
+      "operands": "0x76bc7c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get current converted wall-clock value"
+    },
+    {
+      "at": "0x2eb1a80",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x60], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Refresh same saved field+60"
+    },
+    {
+      "at": "0x2eb1a84",
+      "mnemonic": "cmp",
+      "operands": "byte ptr [rsi + 0x69], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check pending byte"
+    },
+    {
+      "at": "0x2eb1a8e",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x69], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear pending byte"
+    },
+    {
+      "at": "0x2eb1a96",
+      "mnemonic": "jne",
+      "operands": "0x2eb1a40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Repeat driver if allowed; not an exactly-once boundary"
+    },
+    {
+      "at": "0x2eb1be4",
+      "mnemonic": "je",
+      "operands": "0x2eb1a6c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero previous timestamp logging path rejoins same return check"
+    },
+    {
+      "at": "0x2eb1d95",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x69], 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Already-busy path sets pending1"
+    },
+    {
+      "at": "0x2eb201a",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rsi + 0x68], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal false path clears busy flag"
+    },
+    {
+      "at": "0x2ea2f94",
+      "mnemonic": "mov",
+      "operands": "rdi, rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "CoDoSync receives input record"
+    },
+    {
+      "at": "0x2ea2f97",
+      "mnemonic": "mov",
+      "operands": "r15, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "CoDoSync same owner"
+    },
+    {
+      "at": "0x2ea30a9",
+      "mnemonic": "mov",
+      "operands": "rdx, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Input record passed to copier"
+    },
+    {
+      "at": "0x2ea30ac",
+      "mnemonic": "call",
+      "operands": "0x2ea6460",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy input record"
+    },
+    {
+      "at": "0x2ea6481",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [rdx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read source DWORD+8"
+    },
+    {
+      "at": "0x2ea6484",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rcx + 8], eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve destination DWORD+8"
+    },
+    {
+      "at": "0x2ea30b2",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [rbp + 0x7b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read copied local mode"
+    },
+    {
+      "at": "0x2ea30ca",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xb1c], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save mode for later comparisons"
+    },
+    {
+      "at": "0x2ea30d0",
+      "mnemonic": "cmp",
+      "operands": "esi, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Compare19 before selected helper argument"
+    },
+    {
+      "at": "0x2ea3108",
+      "mnemonic": "mov",
+      "operands": "ecx, 0x64",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode19 argument candidate100"
+    },
+    {
+      "at": "0x2ea310d",
+      "mnemonic": "mov",
+      "operands": "edx, 0xa",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other-mode argument candidate10"
+    },
+    {
+      "at": "0x2ea3112",
+      "mnemonic": "cmove",
+      "operands": "rdx, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Choose candidate on mode equality"
+    },
+    {
+      "at": "0x2ea46c9",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mode19 test before public LoginFlow label"
+    },
+    {
+      "at": "0x2ea46cf",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x66dfc72]",
+      "rip_targets": [
+        "0x9584348"
+      ],
+      "public_static_strings": [
+        "LoginFlow CoDoSync end"
+      ],
+      "observation": "Public literal LoginFlow CoDoSync end"
+    },
+    {
+      "at": "0x2ea523a",
+      "mnemonic": "cmp",
+      "operands": "r12d, 0x13",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final selected mode comparison"
+    },
+    {
+      "at": "0x2ea523e",
+      "mnemonic": "sete",
+      "operands": "dl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Convert equality to low-byte boolean"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "clock_import": {
+    "iat_rva": "0x9e4b9b8",
+    "descriptor_rva": "0x9e4aa94",
+    "lookup_rva": "0x9e4af48",
+    "hint_name_rva": "0x9e4cb02",
+    "dll": "KERNEL32.dll",
+    "symbol": "GetSystemTimeAsFileTime"
+  },
+  "clock_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime",
+      "accessed_date": "2026-10-08",
+      "fact": "The imported API supplies current system date/time as UTC FILETIME."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime",
+      "accessed_date": "2026-10-08",
+      "fact": "FILETIME uses100-nanosecond intervals since1601-01-01 UTC."
+    }
+  ],
+  "conclusions": [
+    "Constructor-bound owner table9584308+8 starts the selected closure and+28 identifies2ea2f60.2ea2010 captures the same owner at closure+8 with table9584948+10=2eabce0. The body builds its local record and calls2eb19d0, which forwards that record and same receiver through+28. This is a selected static type/argument chain; no active instance, full executor execution or all overrides are certified.",
+    "The closure first reads an incoming numeric mode from channel-received record+8. Predicate2ea2cc0 returns saved_owner+60==0 OR signed64_wrapped(current-saved)>=7201. A true result overrides incoming mode with19; a false result preserves it, including an incoming19. Therefore mode19 is not exclusive to the first login, nor is mode!=19 a per-message freshness certificate.",
+    "Fixed-file import metadata binds the clock call toGetSystemTimeAsFileTime. Its100ns count is epoch-adjusted and converted to whole seconds using the checked multiply/shift sequence. The ordinary valid-clock predicate is at least7201 seconds, not7200; it is wall-clock based, not a monotonic elapsed timer. Large/invalid clock values, sentinel-1, wrap and clock changes are not normalized by the selected predicate.",
+    "Base constructor sets saved time+60 to0. On the selected normal true return from virtualCoDoSync,2eb19d0 clears busy and refreshes+60; its normal false path clears busy without that refresh. Already-busy calls set a pending flag, and the true path may repeat. None of these booleans proves per-item history, database commit, all callbacks drained or exactly-once delivery.",
+    "Mode19 brackets the driver with owner+1c8 and a signal at+78, but the post-call reset does not inspect the returnedAL. These markers and the LoginFlow text therefore do not independently certify successful synchronization or a safe baseline-complete event."
+  ],
+  "remaining": [
+    "Bind typed outer request/response, low-bit/string continuation and caller-visible outcome; do not infer freshness from loop ending",
+    "Trace channel mode origins and other receiver implementations/overrides, complete clock/state reset and reconnect lifecycle as needed",
+    "Account namespace/epoch, direction, callback lifetime and concrete permissible observation method remain open",
+    "No runnable adapter, minimized receive validation, controlled send confirmation or auto reply"
+  ],
+  "prior_evidence_reused_by_reference": [
+    "397-inbound-batch-consumer.json",
+    "428-inbound-filter-owner-reset.json"
+  ]
+}

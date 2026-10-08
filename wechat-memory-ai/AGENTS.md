@@ -1,5 +1,19 @@
 # 项目开发约定
 
+## 最新：同步模式19的来源与批次传递（432–436）
+
+2026-10-08固定DLL磁盘只读。[433](docs/evidence/433-inbound-sync-mode-source.json)接通构造表9584308、启动时捕获owner的闭包9584948+10→2eabce0、2eb19d0虚槽+28→2ea2f60。输入记录+8的mode来自所选通道接收结果；2ea2cc0以同一owner+60检查“保存值为零，或64位相减后的有符号差>=7201”，条件真则覆盖为19，假则保留输入值，包括原有19。因此19不是首次登录专属标志，非19也不认证单条新来信。
+
+时钟调用已由PE导入表绑定GetSystemTimeAsFileTime，配合本地整数换算确定为整秒墙钟。正常有效值下门槛为7201秒，不是7200秒或单调计时；时钟回拨、越界返回-1及相减回绕须保留。API的UTC/100纳秒单位依据见[微软系统时间文档](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime)及[FILETIME文档](https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime)，客户端门槛来自本地字节。
+
+owner+60构造为零，所查driver在CoDoSync返回true的正常分支更新它，返回false的正常分支不走该处更新时间；busy/pending可触发再次处理。mode19前后设置/清除owner+1c8并发信号，但后置清除未检查driver返回AL。这些状态不是每条消息、完整同步成功或回调排空证明。
+
+[434](docs/evidence/434-inbound-sync-mode-propagation.json)将mode==19一路接到批次准备及后续闭包捕获。true/false准备分支都存在追加120字节元素的路径，并采用不同的时间调整调用/选项；没有在此处按mode整批拒绝。该mode与428的内嵌删除/清空过滤状态是两件事，不可直接命名is_history。调整helper完整语义、后续闭包处理及真实新旧边界仍缺。
+
+[432](docs/evidence/432-jev-sync-decision.json)记录一次真实Jev调用，模型jev-1.13.0；自动采用最高概率项“追mode生产者”（0.80，confidence0.70），已落实到433/434。原始建议保留，输入中10/100“预留容量”的推测仅按数值参数保存，不拿模型或该推测补二进制结论。[436](docs/evidence/436-inbound-sync-validation.json)为同一执行者新鲜静态复核和纯算术推演，非独立审查或运行验收。
+
+下一项补外层请求/响应的具体类型、低位/字符串继续循环条件和调用方结果；保留通道mode其他来源、账号标识域/代次、方向、回调寿命与具体采集方式缺口。[435](docs/evidence/435-inbound-sync-checkpoint.json)记录监听仍停止，产品0.1.22、自动回复关闭，无可运行适配器。未加载DLL、操作窗口、重启监听、访问进程/聊天数据库或真实收发。本轮读取Codex额度剩余80%，40%保存监测id40继续有效；没有因该规则停止主任务。431列出的13个历史脚本保持，新目录data/inbound-sync-20261008，后续证据从437起。
+
 ## 最新：批次过滤状态与控制参数（427–431）
 
 2026-10-08继续固定DLL磁盘只读。[428](docs/evidence/428-inbound-filter-owner-reset.json)绑定parent+1d0子管理器中的内嵌过滤状态+58；构造时阈值和active为零。rawtype51的选定控制路径可用操作15/16更新端点阈值，或用操作9的deleteMessages参数处理端点ID集合并启用过滤。2eb3780在active恰为1时按全局阈值、端点ID集合或端点阈值拒绝所选消息。所查外层正常flush的true/false路径都会清理集合并reset这份过滤状态；未认证异常、所有提前返回或重连阶段。
