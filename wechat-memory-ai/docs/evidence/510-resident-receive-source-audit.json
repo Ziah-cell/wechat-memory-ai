@@ -1,0 +1,175 @@
+{
+  "checked_at_utc": "2026-10-09T13:46:02.379112+00:00",
+  "method": "fixed public source and fixed DLL disk analysis",
+  "audit": {
+    "upstream_commit": "1dbd4ea281d73d478aa8d09a8b83fbd265f715f7",
+    "upstream_files": [
+      {
+        "path": "upstream/README.md",
+        "upstream_path": "README.md",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/README.md",
+        "sha256": "3dd37ea61584e1d1e17bbfdc6160d19beb35c6771c90d04be5024f6d703c9b7a",
+        "bytes": 3189
+      },
+      {
+        "path": "upstream/LICENSE.md",
+        "upstream_path": "LICENSE.md",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/LICENSE.md",
+        "sha256": "b301808b732cfaa60df2b4b422d78cd97d2a15058b207e7e33f0535ba5170dd6",
+        "bytes": 1099
+      },
+      {
+        "path": "upstream/src/detours.cpp",
+        "upstream_path": "src/detours.cpp",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp",
+        "sha256": "ea4f2b7ae5b71a902d88ae6b55e9167b72fcf69d2bece8acc453450702be3f91",
+        "bytes": 100842
+      },
+      {
+        "path": "upstream/src/detours.h",
+        "upstream_path": "src/detours.h",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.h",
+        "sha256": "74b9d7a9f4f219a3ba1f08ee3f11ffece16f10ba413b12477955cca7449c4f60",
+        "bytes": 43270
+      },
+      {
+        "path": "upstream/src/disasm.cpp",
+        "upstream_path": "src/disasm.cpp",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/disasm.cpp",
+        "sha256": "13c38684b1c1018828138301b57863feb37be70557d39ffe171849a0894ff395",
+        "bytes": 168669
+      },
+      {
+        "path": "upstream/samples/simple/simple.cpp",
+        "upstream_path": "samples/simple/simple.cpp",
+        "url": "https://raw.githubusercontent.com/microsoft/Detours/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/samples/simple/simple.cpp",
+        "sha256": "70af67d9e7a648090496ec08aa00ea2bc9fcddd91648e91092e901324b2df5cd",
+        "bytes": 2322
+      }
+    ],
+    "anchors": [
+      {
+        "label": "x64_jump",
+        "start": 369,
+        "end": 437,
+        "sha256": "088e3eae9b28274608ce09b2a7e18d5acba69217ec70e19deea43556d383e52a",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L369"
+      },
+      {
+        "label": "transaction_begin_abort",
+        "start": 1869,
+        "end": 1934,
+        "sha256": "073e6772cdca2da6699d8dcfba07b19ed6619d04b8fe1c68ed1f7e5836d1fffd",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L1869"
+      },
+      {
+        "label": "commit_patch",
+        "start": 1962,
+        "end": 2051,
+        "sha256": "c76904c26ca1ba9532fdfdd324eec896fbcad76719d39ab055c0d8d93952512f",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L1962"
+      },
+      {
+        "label": "commit_context_cleanup",
+        "start": 2134,
+        "end": 2246,
+        "sha256": "c2fa1e0484f45461bbbaccd703dd67f91e6ee5adab9a19fc54ea71e074365708",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L2134"
+      },
+      {
+        "label": "thread_update",
+        "start": 2248,
+        "end": 2289,
+        "sha256": "2192d975f1f9adfbadb2ff616baea3c3da882b3f6de02329c3013f2a0b6c2a69",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L2248"
+      },
+      {
+        "label": "copy_prefix",
+        "start": 2494,
+        "end": 2570,
+        "sha256": "f15ce0ddbfe2cb2c8e7a0c9a873137644a3bafa40e07ef7cc0b91c1d9b6f7843",
+        "url": "https://github.com/microsoft/Detours/blob/1dbd4ea281d73d478aa8d09a8b83fbd265f715f7/src/detours.cpp#L2494"
+      }
+    ],
+    "registration_name_search": {
+      "README.md": [],
+      "LICENSE.md": [],
+      "src/detours.cpp": [],
+      "src/detours.h": [],
+      "src/disasm.cpp": [],
+      "samples/simple/simple.cpp": []
+    },
+    "registration_search_scope": "Only six archived files; not a universal absence proof",
+    "image_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+    "image_size": 204099112,
+    "function": [
+      "0xa773b0",
+      "0xa77dde",
+      "0xa01aa18"
+    ],
+    "prefix_hex": "5541565657",
+    "prefix_instructions": [
+      {
+        "rva": "0xa773b0",
+        "size": 1,
+        "mnemonic": "push",
+        "operands": "rbp"
+      },
+      {
+        "rva": "0xa773b1",
+        "size": 2,
+        "mnemonic": "push",
+        "operands": "r14"
+      },
+      {
+        "rva": "0xa773b3",
+        "size": 1,
+        "mnemonic": "push",
+        "operands": "rsi"
+      },
+      {
+        "rva": "0xa773b4",
+        "size": 1,
+        "mnemonic": "push",
+        "operands": "rdi"
+      }
+    ],
+    "original_unwind": {
+      "version": 1,
+      "flags": 3,
+      "prologue_size": 28,
+      "slot_count": 10,
+      "frame": 133,
+      "bytes_hex": "191c0a851c68200015030d01420006300570046003e00150",
+      "sha256": "f6d665fdc3b76e3bba263047697cbae02d8a43b647f5bd90591813d0c0ceedea"
+    },
+    "jump_decodes": {
+      "41ffe3": {
+        "mnemonic": "jmp",
+        "operands": "r11"
+      },
+      "49ffe3": {
+        "mnemonic": "jmp",
+        "operands": "r11"
+      },
+      "ff250d000000": {
+        "mnemonic": "jmp",
+        "operands": "qword ptr [rip + 0xd]"
+      }
+    },
+    "source_sha256": "6d772a60ad142b037dd2e4111cacd43c0f5424b07c79501a25392c2b596bf7dc",
+    "helper_sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d",
+    "upstream_code_executed": false,
+    "target_loaded": false
+  },
+  "source_manifest_sha256": "0404c8269ed77c92bb0a3bd2ea72b0961380a7e9b49840c7ba11582b1f5198c7",
+  "conclusions": {
+    "owner_lifetime": "Target owns proposed hook code/trampoline/unwind metadata/buffer; external consumer exit must not free them. Not implemented.",
+    "thread_registration": "DetourUpdateThread only updates enlisted threads; hot installation with new threads remains unresolved.",
+    "commit_status": "Selected context/protection/cache/resume failures are not all propagated; no actual API-fault injection performed.",
+    "unwind": "Fixed five-byte prefix contains four pushes; original unwind metadata cannot be copied blindly."
+  },
+  "upstream_executed": false,
+  "upstream_modified": false,
+  "live_injection_authorized": false
+}
