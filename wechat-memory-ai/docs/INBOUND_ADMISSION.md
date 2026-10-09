@@ -1,5 +1,43 @@
 # 最小化真实入站：能力证据与准入条件
 
+## 2026-10-09：从现有代码能否直接实现接入
+
+**不能直接接通。当前有读取界面变化的工具，没有满足本目标的真实收发适配器。** 本次逐项检查源码，不重读微信窗口。源码哈希、24处锚点及7类组件清单见[455](evidence/455-minimized-source-feasibility.json)；本轮101项选定离线回归见[456](evidence/456-minimized-source-validation.json)。下方10月4日实机记录是历史观察，不代表当前仍在监听。
+
+| 现有来源/组件 | 实际提供什么 | 为什么不能直接用于最小化自动回复 |
+| --- | --- | --- |
+| [background读取](../src/wechat_memory/live_reader.cs) | 同一窗口/列表绑定、IsIconic值、行token/类型/Name文字；两次读取一致性复核 | 协议没有账号、sender、收发方向、服务器ID或同步阶段。两次相同也不是原子消息事件 |
+| [BackgroundOccurrenceSession](../src/wechat_memory/live_read.py) | 首屏跳过、行变化连续性、本地UUID/序号；方向固定unknown | 首屏之后追加仍可能是自身消息或历史同步；本地epoch是观察会话标识，不是微信账号/重连代次 |
+| selection读取 | 多选标签与昵称前缀生成incoming_candidate | 前缀不能认证发送者，不能替换background后宣称方向已解决；不操作窗口进入多选 |
+| [ReadOnlyWeChatSource](../src/wechat_memory/live_source.py) | 有界、同线程的visual_text读取；本地候选对象有效期；随机标记边界 | poll固定要求视觉协议，原生拒绝最小化；marker_boundary_observed不排除后续历史同步，observed_at仅本地观察时间 |
+| [能力报告](../src/wechat_memory/inbound_capabilities.py) | 属性存在性、计数、滚动属性 | 输出始终admission=rejected；即使所有属性存在也不补身份语义 |
+| [monitor](../src/wechat_memory/monitor.py) / [CallbackInbox](../src/wechat_memory/callback_inbox.py) | 前者计数后丢弃候选，后者搬运已构造Event、清理本地队列 | 没有微信内部订阅。inbox代次、pending=0或source.close都不认证客户端回调已退出 |
+| [Adapter](../src/wechat_memory/adapters.py) / [Engine](../src/wechat_memory/engine.py) | MockAdapter和模拟outbox；Config/Engine只接收mock | 仍缺real poll、真实目标绑定send与送达判据；把真实输入包装成默认is_self=false的Event属于伪造来源 |
+
+一个合成background快照在首屏后追加一行，代码只能给出unknown；其字段不能区分“对方新来信”“自身消息”“较晚显示的历史”。这是协议信息不足的示例，不是三次微信实机复现。手工补入account_id、sender_id、direction、server_message_id、sync_phase或identity_epoch均被严格协议拒绝；打开一个布尔开关不会产生缺失事实。
+
+### 将452的条件对应到现有实现
+
+| 452中的客户端事件 | 当前可取得的相似信息 | 结论 |
+| --- | --- | --- |
+| cancel_requested | Python监听收到stop指令 | 只停止自己的观察，不是微信请求取消 |
+| network_stop_executed | 无 | 没有客户端enable位/StopTask的采集器 |
+| map_entry_removed | 本地inbox pending计数 | 不是微信网络任务映射 |
+| timeout_handle_removed | NativeReader子进程超时与阶段耗时 | 不是微信NewSync的计时句柄 |
+| callback_exited | Python来源关闭、读取子进程结束、本地代次失效 | 不证明微信完成/停止/超时回调退出 |
+| observation_ready | 窗口绑定、minimized、baseline_ready | 只覆盖界面观察条件，缺消息身份语义与真实来源 |
+
+这张表用于阻止把不同层级的信息误当成同一件事。**452和O1–O7的内部对象字段只约束采用相关内部调用/回调的方案；独立来源不必复制微信全部内部状态。** 所有方案共同需要：稳定账号与目标关联、可信方向、可解释的消息ID及历史/重连策略、采集器有界交付和停止机制。发送能力另行验证。
+
+### 本轮决定与明确的实现顺序
+
+1. 结束“多等几条unknown或继续核普通NewSync包装层即可接入”的路线。现有静态研究可作候选实现参考，不能代表已经完成采集器。
+2. 先准备一个具体采集器方案：写清入口/API、精确版本和许可、能获得的原始字段、如何关联账号与单好友、如何区分实时/历史、如何解绑与退出。未确认的项保持未确认，不用更多必需字段掩盖没有来源的事实。
+3. 方法具备依据后，先完成隔离实现与离线验证；若需要额外运行权限，给出具体范围和退出办法后再请求，当前不执行进程/数据库访问、安装或注入。
+4. 接收实机验收通过后，再验证目标绑定发送、模型与记忆，最后按既定确认启用自动回复。目前无法给出可靠启用时间。
+
+精确版本公开检索补查了3个GitHub限定查询，搜索工具没有返回结果；仅说明本次索引未找到匹配，不能推断不存在兼容项目，也没有复核任何上游HEAD。没有据此安装组件或改换Bot/Web方案。
+
 2026-10-04，v0.1.22。**当前普通最小化 UIA 来源仍拒绝进入回复核心。** 本版新增的是可复查的能力检查和拒绝报告，没有实现可接受真实消息的桥接或发送器。
 
 后续已完成两UIA候选固定源码和规则反例核查，未找到可直接采用的来源；证据及范围见[SOURCE_ROUTE_AUDIT](SOURCE_ROUTE_AUDIT.md)。用户已选择保留真正最小化、扩大非UIA静态评估；[NON_UIA_ROUTE_AUDIT](NON_UIA_ROUTE_AUDIT.md)进一步核查5仓库47份文本，仍无可直接准入来源。结构化字段与回调不能代替账号/方向/历史验证。产品源码和现有监听未改。

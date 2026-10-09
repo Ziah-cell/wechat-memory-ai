@@ -1,0 +1,82 @@
+{
+  "checked_at_utc": "2026-10-09T00:32:54.823328+00:00",
+  "phase": "stopped",
+  "stop_reason": "native_reader_timeout",
+  "snapshots": 24569,
+  "minimized_snapshots": 24505,
+  "filtered_unknown_texts": 1,
+  "keep_awake_request_active": false,
+  "saved_runtime_sha256": "83ad7e3c3d8d26b99f4fdd9856fab9974e06e2a445c7873df26e44962df07f09",
+  "current_window_verified": false,
+  "product_version": "0.1.22",
+  "auto_reply_enabled": false,
+  "runnable_minimized_adapter": false,
+  "listener_restarted": false,
+  "process_memory_read": false,
+  "chat_database_read_or_written": false,
+  "target_weixin_dll_loaded": false,
+  "window_operated": false,
+  "real_messages_sent": 0,
+  "jev_request_attempts": 0,
+  "other_advisory_model_requests": 0,
+  "product_tests_run": true,
+  "selected_offline_tests": 101,
+  "full_suite_run": false,
+  "native_fixtures_run": false,
+  "live_compatibility_verified": false,
+  "source_files_unchanged": 29,
+  "earlier_analysis_scripts_unchanged": 11,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md",
+    "docs/INBOUND_ADMISSION.md"
+  ],
+  "local_links_checked": 982,
+  "document_checks": "passed",
+  "research_directory": "data/source-feasibility-20261009",
+  "analysis_scripts": [
+    {
+      "path": "data/source-feasibility-20261009/audit_sources.py",
+      "sha256": "239ca5dbab707bbcc95abdccfe96d150335a945d60eff3b33fbc8fa3331a7a08"
+    },
+    {
+      "path": "data/source-feasibility-20261009/check_and_save.py",
+      "sha256": "7656849088cbf57b5a908c6ff7820dc182450226f0e36fd3deec7d2805bb8e32"
+    },
+    {
+      "path": "data/source-feasibility-20261009/update_docs.py",
+      "sha256": "2e2e99341e5d312e644e3a490dac9e3fdc0edfb2195b23c9c3bea5b9bd3f9b03"
+    }
+  ],
+  "quota_monitor": {
+    "id": "40",
+    "threshold_remaining_percent": 40,
+    "primary_used_percent": 30,
+    "secondary_remaining_percent": null,
+    "lowest_known_remaining_percent": 70,
+    "source": "rateLimitsByLimitId.codex from usage tool this turn",
+    "threshold_reached": false,
+    "main_task_pause_requested": false
+  },
+  "exact_version_search": {
+    "queries": [
+      "site:github.com WeChat \"4.1.15.50\" hook send receive",
+      "site:github.com 微信 \"4.1.15.50\" 自动回复",
+      "site:github.com \"4.1.15.50\" wxauto"
+    ],
+    "result": "Search tool returned no results; no upstream code or HEAD was verified.",
+    "limitation": "Not evidence that no compatible project exists."
+  },
+  "remaining": [
+    "Concrete runtime collector missing",
+    "Account/peer binding and direction evidence missing",
+    "Message identity and history/reconnect policy not established",
+    "Real target-bound send and delivery semantics not implemented"
+  ],
+  "next_step": "Collector-first implementation proposal: select a concrete acquisition method, establish exact version/API ownership and implement an offline harness before asking for any runtime scope. No further generic NewSync disassembly or automatic expansion to process/DB access."
+}

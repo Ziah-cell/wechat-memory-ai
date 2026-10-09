@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-10-09T00:29:58.806813+00:00",
+  "status": "passed",
+  "selected_modules": [
+    "test_background_read",
+    "test_inbound_capabilities",
+    "test_live_source",
+    "test_preflight",
+    "test_callback_inbox",
+    "test_config",
+    "test_engine"
+  ],
+  "tests_run": 101,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "full_suite_run": false,
+  "scope": "Existing offline product tests; mocked NativeReader/subprocess and fake model. No native fixtures, real client, real network model, or live compatibility validation.",
+  "external_operation_audit_guard": [
+    "subprocess.Popen",
+    "os.system",
+    "os.startfile",
+    "socket.connect",
+    "socket.getaddrinfo",
+    "ctypes.dlopen(non-null)"
+  ],
+  "blocked_external_attempts": [],
+  "source_files_unchanged": 29,
+  "initial_harness_failure": {
+    "stage": "test module import, before test execution",
+    "cause": "Guard blocked Windows ctypes standard-library kernel32.GetLastError initialization.",
+    "correction": "Initialize only stdlib ctypes before installing the unchanged test-operation guard.",
+    "product_code_changed": false,
+    "target_dll_loaded": false
+  },
+  "prior_analysis_scripts_unchanged": 11,
+  "synthetic_schema_cases": 1,
+  "extra_field_rejection_cases": 6,
+  "independent_reviewer": false,
+  "test_log": {
+    "path": "data/source-feasibility-20261009/selected-tests.txt",
+    "sha256": "5d9a26e1e058b5dd70e42d9d0a8ab471de0812d711c5e67458b8906ed16da5fc"
+  },
+  "analysis_script": {
+    "path": "data/source-feasibility-20261009/audit_sources.py",
+    "sha256": "239ca5dbab707bbcc95abdccfe96d150335a945d60eff3b33fbc8fa3331a7a08"
+  },
+  "docs_validation": "Separate document check recorded in457 after edits."
+}
