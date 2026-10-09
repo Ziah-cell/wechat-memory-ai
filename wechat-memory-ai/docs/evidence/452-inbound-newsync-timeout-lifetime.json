@@ -1,0 +1,838 @@
+{
+  "checked_at_utc": "2026-10-09T00:17:05.537984+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ead900",
+      "end": "0x2eae3b3",
+      "role_inference": "Per-attempt context constructor call",
+      "instruction_count": 622,
+      "disk_range_sha256": "cb10193616721de4adb1665591c832b82078785c16b0ae6198d7021bbb352494",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3c9c70",
+      "end": "0x3c9ead",
+      "role_inference": "Context inherits service and stores timeout/fallback",
+      "instruction_count": 156,
+      "disk_range_sha256": "cea299d13db5e45f6b2f41a59f9c9bcc3e904ddbd4d704e05b8804b31c44b924",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eae7f0",
+      "end": "0x2eaecff",
+      "role_inference": "NewSync inner launch, timeout registration, join, result selection, remove handle",
+      "instruction_count": 329,
+      "disk_range_sha256": "86980724b7eaa1c804ca22be76139f2e949874555c3c72261340f92c9b666f35",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3cacc0",
+      "end": "0x3cad90",
+      "role_inference": "Forward output shared job pair to launch",
+      "instruction_count": 62,
+      "disk_range_sha256": "a79dbb5302e068183e6ccccb82402b0e1658f5fe535a4bf552ac0f007e090e29",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3ca730",
+      "end": "0x3cab6a",
+      "role_inference": "Launch concrete job construction",
+      "instruction_count": 229,
+      "disk_range_sha256": "d34b71e1cab321b4c812fbd04f50e8a099b9fda5b435b1ee38abb400ceaa5071",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3e10",
+      "end": "0xda3e7b",
+      "role_inference": "Shared job forwarding constructor",
+      "instruction_count": 34,
+      "disk_range_sha256": "7710bea995e20c85e62a139aa9f67398eed20aa024e2acebda94ed64fd411222",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3ed0",
+      "end": "0xda3faf",
+      "role_inference": "Allocate shared job and return allocation+10 pointer",
+      "instruction_count": 70,
+      "disk_range_sha256": "25646b9eadd77eea6e3beac6e106e242d797f75a428516973100fa76087b53cc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda77c0",
+      "end": "0xda78b5",
+      "role_inference": "Shared control block constructs job at+10",
+      "instruction_count": 65,
+      "disk_range_sha256": "38349ab12336078808b8a000d91611ce81a273e10060a3daf257cebbe84730f6",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda3fe0",
+      "end": "0xda470d",
+      "role_inference": "Concrete job installs9126068",
+      "instruction_count": 404,
+      "disk_range_sha256": "696df565e2c72677746838e12c96b1d9a85d6511d050622cd198398f433fffe0",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda4cc0",
+      "end": "0xda5065",
+      "role_inference": "Cancellation flag and posted resume work",
+      "instruction_count": 197,
+      "disk_range_sha256": "937faa62a6205d40e72eff62f35f5e8c0ed317f94dac456d8ce19067f030570d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xda6b40",
+      "end": "0xda6b93",
+      "role_inference": "Posted cancellation supplies resume-1",
+      "instruction_count": 26,
+      "disk_range_sha256": "96c03c82a33d95e755aa5a15244296b3ac5f39e049bc8802110301ff1ab96d5f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eaf7d0",
+      "end": "0x2eaf97b",
+      "role_inference": "Specific NewSync result awaits future",
+      "instruction_count": 114,
+      "disk_range_sha256": "9320a68cf12c526fb0bb976f4a3c8278cdab3957e34b159b35e88ba56daa322d",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b1ff0",
+      "end": "0x3b2145",
+      "role_inference": "Await wrapper negative result throws",
+      "instruction_count": 66,
+      "disk_range_sha256": "e3b33a6ced70d0a367d09b30da452210156e882dd00c35aa82708b9be1efb21f",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x49eae0",
+      "end": "0x49f3aa",
+      "role_inference": "Await negative resume invokes promise cancellation",
+      "instruction_count": 514,
+      "disk_range_sha256": "dba6f05b56ababc7fdc8ed2df662f6743bc5e9e5c5fd2958b38068730e071cae",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x2eb0fb0",
+      "size": 41,
+      "anchor": "9585228+8 timeout capture move",
+      "instructions": [
+        {
+          "at": "0x2eb0fb0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x2eb0fb3",
+          "mnemonic": "lea",
+          "operands": "rdx, [rip + 0x66d426e]"
+        },
+        {
+          "at": "0x2eb0fba",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rdx"
+        },
+        {
+          "at": "0x2eb0fbd",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2eb0fc0",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2eb0fc4",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x2eb0fc8",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x2eb0fcc",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0x2eb0fd0",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x10], rdx"
+        },
+        {
+          "at": "0x2eb0fd4",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rcx + 8], xmm0"
+        },
+        {
+          "at": "0x2eb0fd8",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x5c1c0",
+      "size": 11,
+      "anchor": "9585228+10 invokes captured job+10",
+      "instructions": [
+        {
+          "at": "0x5c1c0",
+          "mnemonic": "mov",
+          "operands": "rcx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x5c1c4",
+          "mnemonic": "mov",
+          "operands": "rax, qword ptr [rcx]"
+        },
+        {
+          "at": "0x5c1c7",
+          "mnemonic": "jmp",
+          "operands": "qword ptr [rax + 0x10]"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2eada6e",
+      "kind": "call",
+      "to": "0x3c9c70"
+    },
+    {
+      "at": "0x2eadc87",
+      "kind": "call",
+      "to": "0x2eae7f0"
+    },
+    {
+      "at": "0x2eae93a",
+      "kind": "call",
+      "to": "0x3cacc0"
+    },
+    {
+      "at": "0x3cad60",
+      "kind": "call",
+      "to": "0x3ca730"
+    },
+    {
+      "at": "0x3ca969",
+      "kind": "call",
+      "to": "0xda3e10"
+    },
+    {
+      "at": "0xda3e32",
+      "kind": "call",
+      "to": "0xda3ed0"
+    },
+    {
+      "at": "0xda3f0e",
+      "kind": "call",
+      "to": "0xda77c0"
+    },
+    {
+      "at": "0xda78a0",
+      "kind": "call",
+      "to": "0xda3fe0"
+    },
+    {
+      "at": "0x2eaf7e4",
+      "kind": "call",
+      "to": "0x3b1ff0"
+    },
+    {
+      "at": "0x3b2016",
+      "kind": "call",
+      "to": "0x49eae0"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9585228",
+      "role_inference": "Specific NewSync timeout callback",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x2eb0fb0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x5c1c0"
+        }
+      ]
+    },
+    {
+      "rva": "0x9126068",
+      "role_inference": "Concrete job cancel/join",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0xda4cc0"
+        },
+        {
+          "offset": "0x18",
+          "target": "0xda5140"
+        }
+      ]
+    },
+    {
+      "rva": "0x91264d8",
+      "role_inference": "Posted cancellation work",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0xda6b40"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2eada0e",
+      "mnemonic": "mov",
+      "operands": "ebx, dword ptr [rax + 4]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Options secondDWORD timeout"
+    },
+    {
+      "at": "0x2eada49",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x28], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Constructor sixtharg timeout"
+    },
+    {
+      "at": "0x2eada4d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsp + 0x20], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Explicit service override null, inherit"
+    },
+    {
+      "at": "0x2eada6e",
+      "mnemonic": "call",
+      "operands": "0x3c9c70",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct per-attempt context"
+    },
+    {
+      "at": "0x3c9cda",
+      "mnemonic": "call",
+      "operands": "0x3ca5d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Current scope resolver"
+    },
+    {
+      "at": "0x3c9cea",
+      "mnemonic": "call",
+      "operands": "0x3ca720",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get scope options"
+    },
+    {
+      "at": "0x3c9d69",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [r15], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy inherited service/options region to context+28"
+    },
+    {
+      "at": "0x3c9e59",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [rbp + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read supplied timeout DWORD"
+    },
+    {
+      "at": "0x3c9e63",
+      "mnemonic": "je",
+      "operands": "0x3c9e68",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Null override preserves inherited service"
+    },
+    {
+      "at": "0x3c9e6c",
+      "mnemonic": "mov",
+      "operands": "dword ptr [r8 + 0x48], ecx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store timeout context+48"
+    },
+    {
+      "at": "0x3c9e7e",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r8 + 0x50], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store typed fallback context+50"
+    },
+    {
+      "at": "0x2eae81a",
+      "mnemonic": "mov",
+      "operands": "r15, rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve contextRCX asR15"
+    },
+    {
+      "at": "0x2eae92c",
+      "mnemonic": "lea",
+      "operands": "rdx, [rbp + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Output shared job pair local110"
+    },
+    {
+      "at": "0x2eae93a",
+      "mnemonic": "call",
+      "operands": "0x3cacc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Launch specific inner job"
+    },
+    {
+      "at": "0x2eae949",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [r15 + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Inherited timeout service context+28"
+    },
+    {
+      "at": "0x2eae96f",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Captured job pointer fromlocal110"
+    },
+    {
+      "at": "0x2eae976",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0x66d68ab]",
+      "rip_targets": [
+        "0x9585228"
+      ],
+      "public_static_strings": [],
+      "observation": "Timeout table9585228"
+    },
+    {
+      "at": "0x2eae981",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x18], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture job at closure+8"
+    },
+    {
+      "at": "0x2eae985",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 0x10], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture control block at+10"
+    },
+    {
+      "at": "0x2eae99c",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [r15 + 0x48]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pass timeoutDWORD context+48"
+    },
+    {
+      "at": "0x2eae9a3",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Timeout registration via inheritedservice+10"
+    },
+    {
+      "at": "0x2eae9a6",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0xe8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store returned registration handle"
+    },
+    {
+      "at": "0x2eae9ad",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x110]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same job pointer"
+    },
+    {
+      "at": "0x2eae9b7",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Join job virtual+18"
+    },
+    {
+      "at": "0x2eaec23",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rbp + 0xe8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload registration handle"
+    },
+    {
+      "at": "0x2eaec2a",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal remove via service+18 after result selection"
+    },
+    {
+      "at": "0x2eaec3a",
+      "mnemonic": "lock dec",
+      "operands": "dword ptr [rdi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release job sharedcount after removal"
+    },
+    {
+      "at": "0x2eb0fc8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 8], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move same job pointer"
+    },
+    {
+      "at": "0x5c1c0",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured job"
+    },
+    {
+      "at": "0x5c1c7",
+      "mnemonic": "jmp",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke its cancel virtual+10"
+    },
+    {
+      "at": "0x3cad60",
+      "mnemonic": "call",
+      "operands": "0x3ca730",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Launch into same output pointer"
+    },
+    {
+      "at": "0x3ca969",
+      "mnemonic": "call",
+      "operands": "0xda3e10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Build concrete shared job"
+    },
+    {
+      "at": "0xda3e32",
+      "mnemonic": "call",
+      "operands": "0xda3ed0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Shared construction helper"
+    },
+    {
+      "at": "0xda3e3c",
+      "mnemonic": "movups",
+      "operands": "xmmword ptr [rsi], xmm0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy returned sharedpair tooutput"
+    },
+    {
+      "at": "0xda3f0e",
+      "mnemonic": "call",
+      "operands": "0xda77c0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct sharedallocation"
+    },
+    {
+      "at": "0xda3f18",
+      "mnemonic": "lea",
+      "operands": "rax, [rdi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Returned job is allocation+10"
+    },
+    {
+      "at": "0xda3f1c",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Write returned pointer"
+    },
+    {
+      "at": "0xda788f",
+      "mnemonic": "lea",
+      "operands": "rcx, [rsi + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct job at sameallocation+10"
+    },
+    {
+      "at": "0xda78a0",
+      "mnemonic": "call",
+      "operands": "0xda3fe0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Concrete constructor"
+    },
+    {
+      "at": "0xda4076",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8381feb]",
+      "rip_targets": [
+        "0x9126068"
+      ],
+      "public_static_strings": [],
+      "observation": "Concrete jobtable9126068"
+    },
+    {
+      "at": "0xda407d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install table"
+    },
+    {
+      "at": "0xda4ce2",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cancellation flagvalue1"
+    },
+    {
+      "at": "0xda4ce4",
+      "mnemonic": "xchg",
+      "operands": "byte ptr [rcx + 0x17b], al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Atomic exchange flag"
+    },
+    {
+      "at": "0xda4cea",
+      "mnemonic": "test",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check prior bit0"
+    },
+    {
+      "at": "0xda4cec",
+      "mnemonic": "jne",
+      "operands": "0xda4ffc",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Prior cancellation skips new posting in this method"
+    },
+    {
+      "at": "0xda4f54",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x838157d]",
+      "rip_targets": [
+        "0x91264d8"
+      ],
+      "public_static_strings": [],
+      "observation": "Posted cancel closure table91264d8"
+    },
+    {
+      "at": "0xda4f88",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Executor virtual+8 schedules work, not direct synchronous completion"
+    },
+    {
+      "at": "0xda6b55",
+      "mnemonic": "mov",
+      "operands": "rdx, 0xffffffffffffffff",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Negative1 resume argument"
+    },
+    {
+      "at": "0xda6b5c",
+      "mnemonic": "call",
+      "operands": "0x49e3a0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Request coroutine resume"
+    },
+    {
+      "at": "0x2eaf7e4",
+      "mnemonic": "call",
+      "operands": "0x3b1ff0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Specific response awaits with3b1ff0"
+    },
+    {
+      "at": "0x3b2016",
+      "mnemonic": "call",
+      "operands": "0x49eae0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Await-noexcept helper"
+    },
+    {
+      "at": "0x3b201e",
+      "mnemonic": "js",
+      "operands": "0x3b2126",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Negative resume takes throw branch"
+    },
+    {
+      "at": "0x3b213f",
+      "mnemonic": "call",
+      "operands": "0x769c574",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Throw negative result exception"
+    },
+    {
+      "at": "0x49f189",
+      "mnemonic": "mov",
+      "operands": "rsi, rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resume result retained"
+    },
+    {
+      "at": "0x49f19f",
+      "mnemonic": "jns",
+      "operands": "0x49f2d9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonnegative skips cancellation path"
+    },
+    {
+      "at": "0x49f1b2",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rbp + 0x100]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Awaited promise statepointer"
+    },
+    {
+      "at": "0x49f1b9",
+      "mnemonic": "call",
+      "operands": "0x3b2ec0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Negative resume cancels awaited promise"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "prior_evidence_reused_by_reference": [
+    "359-send-cancel-timeout-contract.json",
+    "367-send-executor-resume.json",
+    "369-send-lifetime-boundaries.json",
+    "373-send-looper-clock.json",
+    "374-send-looper-cancel-dispatch.json",
+    "378-send-scope-shutdown.json",
+    "444-inbound-newsync-parse-completion.json"
+  ],
+  "remaining": [
+    "No runnable adapter or concrete passive collection method for truly minimized WeChat",
+    "Account identifier domain, direction, historical/reconnect boundary and identity generation remain unbound",
+    "Specific closure/table links are static, not active instance or account certification",
+    "Full exception unwinding, callback drain, executor shutdown and cross-thread ordering remain unproved",
+    "Raw captured service lifetime is not established by this closure; reference-counted promise/mutex/job captures are separate"
+  ],
+  "conclusions": [
+    "Specific inner job created through3cacc0/3ca730/da3e10/da3ed0/da77c0 installs9126068. NewSync timeout closure9585228 captures that shared job; slot10=5c1c0 calls job slot10=da4cc0. This previously conditional closure type link is now directly connected.",
+    "Per-attempt constructor3c9c70 stores raw timeout atcontext+48 and inherits service at+28 because caller override isnull. Registration passes that DWORD with specific job cancel callback; normal path joins job, selects result, removes saved handle, releases shared job. All exceptional cleanup paths remain open.",
+    "Job cancel exchanges flag1; prior bit0 suppresses another post through this method. Selected posted work requests resume-1. NewSync result awaits3b1ff0; negative resume path in49eae0 cancels awaited promise and wrapper throws. Exact concrete executor timing/context-switch and all interleavings are not recertified.",
+    "120000 remains raw per-attempt timeout.373 establishes milliseconds only for a particular default looper, not this active inherited service. No exact120s whole-sync timeout or runtime firing assertion.",
+    "374 shows one-shot dequeue can remove indexed task before invocation. Thus normal timeout-handle removal does not certify an already dequeued callback has exited. This is a conditional scheduling possibility, not a reproduced NewSync race.",
+    "Research now has concrete submit/resolve/stop/timeout closure links. Remaining route blocker is acquisition plus observable identity/freshness/lifetime; adding more wrapper offsets alone cannot create a runnable minimized receiver."
+  ],
+  "observation_requirements": [
+    {
+      "event": "cancel_requested",
+      "evidence": "Observed request for specific session-local job/promise token",
+      "does_not_imply": [
+        "network_stop_executed",
+        "map_entry_removed",
+        "callback_exited"
+      ]
+    },
+    {
+      "event": "network_stop_executed",
+      "evidence": "Observed enabled StopTask path and local task association",
+      "does_not_imply": [
+        "server_work_undone",
+        "callback_exited"
+      ]
+    },
+    {
+      "event": "map_entry_removed",
+      "evidence": "Observed removal associated with correct wrapper/task; distinguish response extraction and stop",
+      "does_not_imply": [
+        "no_inflight_callback"
+      ]
+    },
+    {
+      "event": "timeout_handle_removed",
+      "evidence": "Observed removal result and whether callback was already dequeued",
+      "does_not_imply": [
+        "callback_exited"
+      ]
+    },
+    {
+      "event": "callback_exited",
+      "evidence": "Observed matching entry/exit for response, cancel and timeout callbacks, with queue/capture ownership accounted for",
+      "does_not_imply": [
+        "all_other_callbacks_drained",
+        "account_identity_bound"
+      ]
+    },
+    {
+      "event": "observation_ready",
+      "evidence": "Concrete authorized passive collector, verified minimized availability, single account/target identity, history baseline and observer shutdown mechanism",
+      "current_status": "not established; no fake verified switch or client stop action"
+    }
+  ]
+}

@@ -1,0 +1,1052 @@
+{
+  "checked_at_utc": "2026-10-09T00:17:05.537984+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2eafdb0",
+      "end": "0x2eb00e5",
+      "role_inference": "Submit NewSync while holding shared callback mutex then register specific stop hook",
+      "instruction_count": 227,
+      "disk_range_sha256": "acfc8c8d0ca8df0ed452474650ee18a6215b6d79dde95fc86cfdb8551dfdb468",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb01f0",
+      "end": "0x2eb047c",
+      "role_inference": "Package and submit via service+28; return wrapper DWORD+8",
+      "instruction_count": 183,
+      "disk_range_sha256": "f3e29fd137e9ff886fb5c04a4152fae0d66b5c1fa81c3ae35457f31db30dc631",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0d20",
+      "end": "0x2eb0f0a",
+      "role_inference": "Specific stop closure body uses captured service/task via slot30",
+      "instruction_count": 111,
+      "disk_range_sha256": "9b73121b9797ecd256ddbbf219dcc60425c27d0e45e4273c825f5fc86258915b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b2c40",
+      "end": "0x3b2db0",
+      "role_inference": "Install hook holder into promise",
+      "instruction_count": 102,
+      "disk_range_sha256": "787451c1e1c36ec3dd5916980f74c6146bd71024fc6b6ed586d036568e639c12",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0xbf40",
+      "end": "0xc0c1",
+      "role_inference": "Holder swap selected pointer path",
+      "instruction_count": 101,
+      "disk_range_sha256": "620bb0b0a01b262a1f598d8c7422a4f0e030d1638c63cdf0ea8a4491ccba27b8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b56e0",
+      "end": "0x3b5700",
+      "role_inference": "Hook wrapper discards underlying return and reports normaltrue",
+      "instruction_count": 11,
+      "disk_range_sha256": "d0e160c9e5fd64110ce202179b5a1f84390d40e422cb44024133b790e623fa67",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b2ec0",
+      "end": "0x3b3056",
+      "role_inference": "Pending-only promise cancellation",
+      "instruction_count": 104,
+      "disk_range_sha256": "4884452d92cfd4bdd53bcf36d04420833e3fb83c9fade4a305d6d789d8bd6943",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x3b3160",
+      "end": "0x3b337a",
+      "role_inference": "Pending-only settlement shared by resolve/reject",
+      "instruction_count": 115,
+      "disk_range_sha256": "75044b31b8fce79ef0391e2c54d359431f117826273b3b368293d662e3fa7993",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35d970",
+      "end": "0x35dc3b",
+      "role_inference": "Default service stop with enable gate and map cleanup",
+      "instruction_count": 164,
+      "disk_range_sha256": "e9d9cbfbcd7055f0bd762eb4a592b9c9b5128927752eab166fbfdea4500a74e5",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x35dfe0",
+      "end": "0x35e6a4",
+      "role_inference": "Default response extracts/removes wrapper before callback",
+      "instruction_count": 405,
+      "disk_range_sha256": "44dfd589b1a5eb186afe50b2a7ff5aa2f6cff308ba8f36f51ecc2f3a47e7d0dc",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0840",
+      "end": "0x2eb0994",
+      "role_inference": "Specific completion callback locks shared mutex and resolves result",
+      "instruction_count": 99,
+      "disk_range_sha256": "ec7ef6f3c7fd6318b2f45ea7948c52ff8b5959de4ea05f457d99347324ca2af3",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2eb0a00",
+      "end": "0x2eb0af5",
+      "role_inference": "Specific response result resolve",
+      "instruction_count": 74,
+      "disk_range_sha256": "ebcf04f507ef0fa5afb925f9a0a643a379be85c0e0cf14369056e8b5e8420e1a",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [
+    {
+      "rva": "0x2eb0ce0",
+      "size": 22,
+      "anchor": "9585188 copy/move preserves service/task capture",
+      "instructions": [
+        {
+          "at": "0x2eb0ce0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x2eb0ce3",
+          "mnemonic": "lea",
+          "operands": "rdx, [rip + 0x66d449e]"
+        },
+        {
+          "at": "0x2eb0cea",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rdx"
+        },
+        {
+          "at": "0x2eb0ced",
+          "mnemonic": "movups",
+          "operands": "xmm0, xmmword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x2eb0cf1",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2eb0cf5",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x2eb0d00",
+      "size": 9,
+      "anchor": "9585188+10 stop thunk adjusts+8",
+      "instructions": [
+        {
+          "at": "0x2eb0d00",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x2eb0d04",
+          "mnemonic": "jmp",
+          "operands": "0x2eb0d20"
+        }
+      ]
+    },
+    {
+      "rva": "0x2eb07b0",
+      "size": 82,
+      "anchor": "9585048+8 preserves shared callback mutex/promise",
+      "instructions": [
+        {
+          "at": "0x2eb07b0",
+          "mnemonic": "mov",
+          "operands": "rax, rdx"
+        },
+        {
+          "at": "0x2eb07b3",
+          "mnemonic": "lea",
+          "operands": "rdx, [rip + 0x66d488e]"
+        },
+        {
+          "at": "0x2eb07ba",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax], rdx"
+        },
+        {
+          "at": "0x2eb07bd",
+          "mnemonic": "xorps",
+          "operands": "xmm0, xmm0"
+        },
+        {
+          "at": "0x2eb07c0",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 8], xmm0"
+        },
+        {
+          "at": "0x2eb07c4",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0x2eb07c8",
+          "mnemonic": "test",
+          "operands": "rdx, rdx"
+        },
+        {
+          "at": "0x2eb07cb",
+          "mnemonic": "je",
+          "operands": "0x2eb07d1"
+        },
+        {
+          "at": "0x2eb07cd",
+          "mnemonic": "lock inc",
+          "operands": "dword ptr [rdx + 8]"
+        },
+        {
+          "at": "0x2eb07d1",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 8]"
+        },
+        {
+          "at": "0x2eb07d5",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 8], rdx"
+        },
+        {
+          "at": "0x2eb07d9",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x10]"
+        },
+        {
+          "at": "0x2eb07dd",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x10], rdx"
+        },
+        {
+          "at": "0x2eb07e1",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x18]"
+        },
+        {
+          "at": "0x2eb07e5",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x18], rdx"
+        },
+        {
+          "at": "0x2eb07e9",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rax + 0x20], xmm0"
+        },
+        {
+          "at": "0x2eb07ed",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x20]"
+        },
+        {
+          "at": "0x2eb07f1",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x20], rdx"
+        },
+        {
+          "at": "0x2eb07f5",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rcx + 0x28]"
+        },
+        {
+          "at": "0x2eb07f9",
+          "mnemonic": "mov",
+          "operands": "qword ptr [rax + 0x28], rdx"
+        },
+        {
+          "at": "0x2eb07fd",
+          "mnemonic": "movups",
+          "operands": "xmmword ptr [rcx + 0x20], xmm0"
+        },
+        {
+          "at": "0x2eb0801",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "rva": "0x2eb0810",
+      "size": 18,
+      "anchor": "9585048+10 callback thunk adjusts+8",
+      "instructions": [
+        {
+          "at": "0x2eb0810",
+          "mnemonic": "add",
+          "operands": "rcx, 8"
+        },
+        {
+          "at": "0x2eb0814",
+          "mnemonic": "mov",
+          "operands": "r9d, dword ptr [r9]"
+        },
+        {
+          "at": "0x2eb0817",
+          "mnemonic": "mov",
+          "operands": "r8d, dword ptr [r8]"
+        },
+        {
+          "at": "0x2eb081a",
+          "mnemonic": "mov",
+          "operands": "rdx, qword ptr [rdx]"
+        },
+        {
+          "at": "0x2eb081d",
+          "mnemonic": "jmp",
+          "operands": "0x2eb0840"
+        }
+      ]
+    },
+    {
+      "rva": "0x3b3880",
+      "size": 11,
+      "anchor": "Resolve selects state1",
+      "instructions": [
+        {
+          "at": "0x3b3880",
+          "mnemonic": "mov",
+          "operands": "r8d, 1"
+        },
+        {
+          "at": "0x3b3886",
+          "mnemonic": "jmp",
+          "operands": "0x3b3160"
+        }
+      ]
+    }
+  ],
+  "direct_edges": [
+    {
+      "at": "0x2eaff42",
+      "kind": "call",
+      "to": "0x2eb01f0"
+    },
+    {
+      "at": "0x2eaff90",
+      "kind": "call",
+      "to": "0x3b2c40"
+    },
+    {
+      "at": "0x3b2d48",
+      "kind": "call",
+      "to": "0xbf40"
+    },
+    {
+      "at": "0x3b2fff",
+      "kind": "call",
+      "to": "0x3b3160"
+    },
+    {
+      "at": "0x2eb08ed",
+      "kind": "call",
+      "to": "0x2eb0a00"
+    },
+    {
+      "at": "0x2eb0acd",
+      "kind": "call",
+      "to": "0x3b3880"
+    },
+    {
+      "at": "0x2eb0d04",
+      "kind": "jmp",
+      "to": "0x2eb0d20"
+    },
+    {
+      "at": "0x2eb081d",
+      "kind": "jmp",
+      "to": "0x2eb0840"
+    },
+    {
+      "at": "0x3b3886",
+      "kind": "jmp",
+      "to": "0x3b3160"
+    }
+  ],
+  "tables": [
+    {
+      "rva": "0x9585188",
+      "role_inference": "Specific NewSync stop capture",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x0",
+          "target": "0x2eb0ce0"
+        },
+        {
+          "offset": "0x8",
+          "target": "0x2eb0ce0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x2eb0d00"
+        }
+      ]
+    },
+    {
+      "rva": "0x9585048",
+      "role_inference": "Specific completion capture",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x8",
+          "target": "0x2eb07b0"
+        },
+        {
+          "offset": "0x10",
+          "target": "0x2eb0810"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fadbc8",
+      "role_inference": "Promise hook wrapper",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x10",
+          "target": "0x3b56e0"
+        }
+      ]
+    },
+    {
+      "rva": "0x8fa5398",
+      "role_inference": "Default adjusted service submission/stop",
+      "writable_section": false,
+      "slots": [
+        {
+          "offset": "0x28",
+          "target": "0x35bec0"
+        },
+        {
+          "offset": "0x30",
+          "target": "0x35d970"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "at": "0x2eafe1b",
+      "mnemonic": "add",
+      "operands": "r14, 0x10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Allocated shared mutex begins controlblock+10"
+    },
+    {
+      "at": "0x2eafe4a",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 0x40], r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save mutex pointer local40"
+    },
+    {
+      "at": "0x2eafe52",
+      "mnemonic": "mov",
+      "operands": "rcx, r14",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Acquire same mutex before submit"
+    },
+    {
+      "at": "0x2eafe55",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mutex acquire helper"
+    },
+    {
+      "at": "0x2eafebf",
+      "mnemonic": "mov",
+      "operands": "r8, qword ptr [rbp + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reload mutex pointer"
+    },
+    {
+      "at": "0x2eafec3",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp + 8], r8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Store shared mutex pointer local8"
+    },
+    {
+      "at": "0x2eafed3",
+      "mnemonic": "lea",
+      "operands": "r9, [rip + 0x66d516e]",
+      "rip_targets": [
+        "0x9585048"
+      ],
+      "public_static_strings": [],
+      "observation": "Completion closure table9585048"
+    },
+    {
+      "at": "0x2eafeef",
+      "mnemonic": "movdqu",
+      "operands": "xmm1, xmmword ptr [rbp + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load shared mutex pair"
+    },
+    {
+      "at": "0x2eaff1e",
+      "mnemonic": "movdqu",
+      "operands": "xmmword ptr [rbp - 0x30], xmm1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Capture mutex pair at closure+20"
+    },
+    {
+      "at": "0x2eaff36",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit service pointer from capturefirstqword"
+    },
+    {
+      "at": "0x2eaff42",
+      "mnemonic": "call",
+      "operands": "0x2eb01f0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit wrapper"
+    },
+    {
+      "at": "0x2eaff48",
+      "mnemonic": "mov",
+      "operands": "ebx, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save returned task DWORD"
+    },
+    {
+      "at": "0x2eaff6c",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same service pointer for stop capture"
+    },
+    {
+      "at": "0x2eaff73",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same promise state"
+    },
+    {
+      "at": "0x2eaff76",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x66d520b]",
+      "rip_targets": [
+        "0x9585188"
+      ],
+      "public_static_strings": [],
+      "observation": "Stop closure table9585188"
+    },
+    {
+      "at": "0x2eaff81",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rbp - 8], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Closure+8 raw service pointer"
+    },
+    {
+      "at": "0x2eaff85",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp], ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Closure+10 task DWORD"
+    },
+    {
+      "at": "0x2eaff90",
+      "mnemonic": "call",
+      "operands": "0x3b2c40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install stop hook"
+    },
+    {
+      "at": "0x2eaffb3",
+      "mnemonic": "call",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release shared callback mutex after hook installation"
+    },
+    {
+      "at": "0x2eb03f2",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Submit service vslot28"
+    },
+    {
+      "at": "0x2eb040c",
+      "mnemonic": "mov",
+      "operands": "esi, dword ptr [r12 + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Read task number from wrapper+8 after submit"
+    },
+    {
+      "at": "0x2eb0465",
+      "mnemonic": "mov",
+      "operands": "eax, esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return task DWORD"
+    },
+    {
+      "at": "0x2eb0ced",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy raw service/task bytes"
+    },
+    {
+      "at": "0x2eb0d00",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjust stop capture base"
+    },
+    {
+      "at": "0x2eb0d04",
+      "mnemonic": "jmp",
+      "operands": "0x2eb0d20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Specific stop body"
+    },
+    {
+      "at": "0x2eb0eec",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured service"
+    },
+    {
+      "at": "0x2eb0eef",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load captured task"
+    },
+    {
+      "at": "0x2eb0ef5",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x30]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke service vslot30"
+    },
+    {
+      "at": "0x3b2cdb",
+      "mnemonic": "add",
+      "operands": "rsi, 0xd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Promise hook holder at+d0"
+    },
+    {
+      "at": "0x3b2ce2",
+      "mnemonic": "lea",
+      "operands": "rax, [rip + 0x8bfaedf]",
+      "rip_targets": [
+        "0x8fadbc8"
+      ],
+      "public_static_strings": [],
+      "observation": "Generic hook table"
+    },
+    {
+      "at": "0x3b2d48",
+      "mnemonic": "call",
+      "operands": "0xbf40",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Swap holder into promise"
+    },
+    {
+      "at": "0xbf6d",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rdi + 0x38], rax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Save prior promise hook"
+    },
+    {
+      "at": "0xbf71",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x38], rcx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Install hook callable pointer"
+    },
+    {
+      "at": "0x3b56e4",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rcx + 0x40]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load actual stop closure"
+    },
+    {
+      "at": "0x3b56f0",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Invoke stop closure"
+    },
+    {
+      "at": "0x3b56f3",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normaltrue independently of stop action"
+    },
+    {
+      "at": "0x3b2f09",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only pending promise eligible"
+    },
+    {
+      "at": "0x3b2f10",
+      "mnemonic": "jne",
+      "operands": "0x3b301c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Settled skips hook"
+    },
+    {
+      "at": "0x3b2f16",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rsi + 0x108]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Hook callable at+108"
+    },
+    {
+      "at": "0x3b2f29",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Hook invocation"
+    },
+    {
+      "at": "0x3b2f33",
+      "mnemonic": "je",
+      "operands": "0x3b301c",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False hook blocks cancel settlement"
+    },
+    {
+      "at": "0x3b2ff9",
+      "mnemonic": "mov",
+      "operands": "r8d, 2",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cancellation state2"
+    },
+    {
+      "at": "0x3b2fff",
+      "mnemonic": "call",
+      "operands": "0x3b3160",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Pending settlement helper"
+    },
+    {
+      "at": "0x3b31aa",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rsi + 0xc4], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Settlement pending gate"
+    },
+    {
+      "at": "0x3b31b8",
+      "mnemonic": "je",
+      "operands": "0x3b32b9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Only0 can publish newstate"
+    },
+    {
+      "at": "0x3b32b9",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsi + 0xc4], edi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish selected state"
+    },
+    {
+      "at": "0x35d98e",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjusted service enable byte+8"
+    },
+    {
+      "at": "0x35d992",
+      "mnemonic": "test",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Bit0 gate"
+    },
+    {
+      "at": "0x35d994",
+      "mnemonic": "je",
+      "operands": "0x35dc0b",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Disabled returns before StopTask/map removal"
+    },
+    {
+      "at": "0x35d99f",
+      "mnemonic": "add",
+      "operands": "rcx, 0x68",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjusted service lock+68 equals primary+78"
+    },
+    {
+      "at": "0x35d9c9",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0xb07a539]",
+      "rip_targets": [
+        "0xb3d7f08"
+      ],
+      "public_static_strings": [],
+      "observation": "Existing on-disk stop dispatch; runtime slot not read"
+    },
+    {
+      "at": "0x35d9d0",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rdi + 0x58]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Adjusted map+58 equals primary+68"
+    },
+    {
+      "at": "0x35d9f2",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [rcx + 0x20], esi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Find captured task key"
+    },
+    {
+      "at": "0x35dbe4",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Destroy matched wrapper"
+    },
+    {
+      "at": "0x35dbec",
+      "mnemonic": "call",
+      "operands": "0x10680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Remove matched map node"
+    },
+    {
+      "at": "0x35e012",
+      "mnemonic": "lea",
+      "operands": "r14, [rcx + 0x78]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Primary service map lock+78"
+    },
+    {
+      "at": "0x35e019",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Acquire map lock"
+    },
+    {
+      "at": "0x35e036",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x68]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Primary map+68"
+    },
+    {
+      "at": "0x35e277",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rdx + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Take response wrapper from selected node"
+    },
+    {
+      "at": "0x35e27b",
+      "mnemonic": "call",
+      "operands": "0x10680",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Remove response map entry"
+    },
+    {
+      "at": "0x35e290",
+      "mnemonic": "call",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Unlock before response processing/callback"
+    },
+    {
+      "at": "0x35e637",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rdi + 0x98]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Load callback holder from wrapper"
+    },
+    {
+      "at": "0x35e655",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback invocation occurs after map removal/unlock"
+    },
+    {
+      "at": "0x2eb07ed",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rcx + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Move same callback mutex pointer"
+    },
+    {
+      "at": "0x2eb07f1",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rax + 0x20], rdx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve pointer at closure+20"
+    },
+    {
+      "at": "0x2eb0810",
+      "mnemonic": "add",
+      "operands": "rcx, 8",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback base+8 adjustment"
+    },
+    {
+      "at": "0x2eb0865",
+      "mnemonic": "mov",
+      "operands": "r15, qword ptr [rcx + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Body+18 is original closure+20 mutex"
+    },
+    {
+      "at": "0x2eb086c",
+      "mnemonic": "call",
+      "operands": "0x7525b98",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Acquire captured mutex"
+    },
+    {
+      "at": "0x2eb08ed",
+      "mnemonic": "call",
+      "operands": "0x2eb0a00",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Publish specific response result"
+    },
+    {
+      "at": "0x2eb095b",
+      "mnemonic": "call",
+      "operands": "0x7525bc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Release callback mutex on normal path"
+    },
+    {
+      "at": "0x2eb0960",
+      "mnemonic": "mov",
+      "operands": "al, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Callback normaltrue"
+    },
+    {
+      "at": "0x2eb0acd",
+      "mnemonic": "call",
+      "operands": "0x3b3880",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve promise via state1 helper"
+    },
+    {
+      "at": "0x3b3880",
+      "mnemonic": "mov",
+      "operands": "r8d, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Resolve state1 selection"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "prior_evidence_reused_by_reference": [
+    "355-send-service-task-return.json",
+    "359-send-cancel-timeout-contract.json",
+    "443-inbound-newsync-result-producer.json"
+  ],
+  "remaining": [
+    "No runnable adapter or concrete passive collection method for truly minimized WeChat",
+    "Account identifier domain, direction, historical/reconnect boundary and identity generation remain unbound",
+    "Specific closure/table links are static, not active instance or account certification",
+    "Full exception unwinding, callback drain, executor shutdown and cross-thread ordering remain unproved",
+    "Raw captured service lifetime is not established by this closure; reference-counted promise/mutex/job captures are separate"
+  ],
+  "conclusions": [
+    "This directly binds NewSync closure9585188 to its submitted wrapper task number and service pointer; it is not an analogy to the older send closure. Raw task ID is local, not account/message identity.",
+    "Factory holds a shared mutex before submit and through stop-hook installation. Completion closure captures that same pointer at+20; thunk adjusts+8 and body locks+18. This is selected normal-path serialization, not full reentrant/exception/cross-thread safety.",
+    "Hook wrapper3b56e0 reports true after normal stop return. Stop35d970 can return immediately when adjusted service byte+8 bit0 isclear, yet pending cancellation can request promise state2. State2 therefore does not prove StopTask ran or map cleanup occurred.",
+    "With bound default service layout, stop map+58/lock+68 are response primary map+68/lock+78 after+10 subobject adjustment. Response extracts and removes wrapper then unlocks before parsing/callback. Later map absence cannot certify absence of already extracted work.",
+    "Resolve1 and cancel2 both pass the same pending0 gate. A prior settlement prevents value replacement by this helper, but does not prevent all callback body work, prove all captures released, or establish delivery/retraction.",
+    "Stop closure copies a raw service pointer/task. Shared callback mutex and promise ownership do not independently establish service/account lifetime. No live stop, promise mutation or network call was performed."
+  ]
+}
