@@ -1,0 +1,37 @@
+{
+  "client_date": "2026-10-10",
+  "host_checked_at_utc": "2026-10-09T23:30:07.136061+00:00",
+  "base_commit": "a0f04f8991eeb72baa7b588cac1e3f9852e28ce8",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "sqlite": "3.53.1",
+  "sources": {
+    "docs/experiments/resident_delivery_ledger.py": "5eff36095d77051fec57114882f73236824aaaf443d95167827afb3873bc6096",
+    "docs/experiments/test_resident_delivery.py": "e12ffcf50ca8848d6ef739882d30fd982c0ea1cd396983397fd613b6fab82b06"
+  },
+  "native_binary": {
+    "path": "data/resident-publisher-20261010/resident_publisher_fixture.exe",
+    "sha256": "9c5225def798ea77507dce2643282479869c35fb5e49cc7841a50512b4e41307"
+  },
+  "scope": "Fictional SQLite durable inbox only; no real send, model, product Store or WeChat adapter",
+  "contract": {
+    "identity": "epoch and sequence, assigned by trusted fixture controller; not authenticated live origin",
+    "deduplication": "inbox row, sequence cursor and operation marker commit in one database transaction",
+    "stop": "BEGIN IMMEDIATE serializes with accept; successful ACK only after COMMIT",
+    "late_ack": "older committed accept ACK may arrive after STOP ACK; no later inbox insert permitted",
+    "closed_epoch": "cannot be reopened; old STOP must not affect a new active epoch",
+    "busy": "explicit failure, not a successful stop ACK",
+    "durability": "WAL and synchronous FULL; actual process crashes tested, not power loss"
+  },
+  "references": [
+    "https://www.sqlite.org/lang_transaction.html",
+    "https://www.sqlite.org/wal.html",
+    "https://www.sqlite.org/pragma.html#pragma_synchronous",
+    "https://www.sqlite.org/uri.html"
+  ],
+  "limitations": [
+    "No claim of exactly-once external network effects or actual message sending.",
+    "Already committed rows are retained and may be read later; no product consumer is connected.",
+    "No target code patch, trampoline execution, arbitrary pointer validation or ABI authentication.",
+    "No disk/power/network-filesystem failure or arbitrary corruption tests."
+  ]
+}
