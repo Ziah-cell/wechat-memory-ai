@@ -1,0 +1,159 @@
+{
+  "checked_at_utc": "2026-10-09T04:56:37.309853+00:00",
+  "scope": "Two unchanged public candidate HEADs, one fixed disk DLL function, official API documentation; proposed runtime has NOT run.",
+  "candidate_heads": [
+    {
+      "repository": "mosheng20205/WechatHook4.1.10.27",
+      "request_url": "https://api.github.com/repos/mosheng20205/WechatHook4.1.10.27/commits/HEAD",
+      "sha": "713ec7d6f01d858e067a623c9bf2cda64d0d3e19",
+      "committer_date": "2026-07-18T11:01:38Z",
+      "matches_previous_audit": true,
+      "cache": "data/bounded-receive-probe-20261009/mosheng20205-head.json",
+      "sha256": "9726eb79fffaafdf9e95d37dfd9824a681c5a874350ab0399cb73adf3a089948"
+    },
+    {
+      "repository": "aixed/WeChat-Hook",
+      "request_url": "https://api.github.com/repos/aixed/WeChat-Hook/commits/HEAD",
+      "sha": "e905d07ade50d2c6472e4eb3bd4f3fe19cf662c6",
+      "committer_date": "2026-09-15T02:56:10Z",
+      "matches_previous_audit": true,
+      "cache": "data/bounded-receive-probe-20261009/aixed-head.json",
+      "sha256": "f3996225a29d187b9c933883e3baa8d9ce71739611dd41843e8da05bd8cf0ec5"
+    }
+  ],
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "disk_function": {
+    "rva": "0xa773b0",
+    "end": "0xa77dde",
+    "cache_sha256": "ee3071268f145ae6179ef5489029ef3187f6f73e11a36b1e63dee00913f41a24"
+  },
+  "anchors": [
+    {
+      "at": "0xa773d7",
+      "mnemonic": "mov",
+      "operands": "rsi, rdx",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa773da",
+      "mnemonic": "mov",
+      "operands": "rdi, rcx",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa77687",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x50]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa77692",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x20]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa776de",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa776f9",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [r9 + 0x10]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa776fd",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [r9 + 0x18], 0x10",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa77704",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [r9]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa77803",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 8]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa7780c",
+      "mnemonic": "mov",
+      "operands": "r9, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": []
+    },
+    {
+      "at": "0xa7785e",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rsi + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": []
+    }
+  ],
+  "byte_windows": [
+    {
+      "rva": "0xa773b0",
+      "size": 48,
+      "hex": "5541565657534881ec10020000488dac24800000000f29b58001000048c78578010000feffffff4889d64889cf488d05",
+      "sha256": "533ebfcc5685c1d9f10718c070630372314ffc58071f32a83f0bcab58cc0226d"
+    },
+    {
+      "rva": "0xa77687",
+      "size": 132,
+      "hex": "488b465048898748010000488b46204885c0750b488b05aefa0f0b488b4020488d8f7002000048898d40010000488d8f8802000048898d48010000488d8f9802000048898d50010000488d8fc802000048898d580100004c8b48084889bd70010000c687c0020000004c398d600100007463498b7910498379181072034d8b09488b8d70",
+      "sha256": "0633a0c967f4bef0c003dcf376c29cdfee5bfdb5402ab5238e8ab5d1e459239b"
+    },
+    {
+      "rva": "0xa77803",
+      "size": 120,
+      "hex": "488b46084885c0740f4c8b4808488d41184c39c8751aeb43488b052ef90f0b488b40084c8b4808488d41184c39c8742b498b7910498379181072034d8b09488b8d70010000488b41304839c776664883c1184889fae8f3685cff90488b46184885c0750b488b05e2f80f0b488b40184c8b4808488b857001",
+      "sha256": "fb56955453b2517a3974ff40afa7df225db31df6c04e4299d16b15c9d0ba8b11"
+    }
+  ],
+  "inherited_layout_evidence": "394-inbound-field-provenance.json",
+  "official_api_urls": [
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/noninvasive-debugging--user-mode-",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugclient2-attachprocess",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugcontrol-addbreakpoint",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/controlling-breakpoint-flags-and-parameters",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugdataspaces-readvirtual",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugcontrol-waitforevent",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugcontrol-setinterrupt",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-breakpoints",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dbgeng/nf-dbgeng-idebugclient-detachprocesses"
+  ],
+  "os_files_present_only": [
+    {
+      "path": "C:\\Windows\\System32\\dbgeng.dll",
+      "size": 7225344
+    },
+    {
+      "path": "C:\\Windows\\System32\\dbghelp.dll",
+      "size": 2307568
+    }
+  ],
+  "limits": [
+    "No new public .50 implementation found in these searches; not a global absence claim.",
+    "RDX/layout is static; active instance, identity, direction, first-sync/reconnect origins remain unknown.",
+    "Debugger proposal requires invasive execution control; system DLL existence does not validate compatibility."
+  ],
+  "target_dll_loaded": false,
+  "process_memory_read": false,
+  "native_debugger_executed": false
+}

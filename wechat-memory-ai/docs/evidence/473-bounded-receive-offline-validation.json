@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-10-09T04:56:37.309853+00:00",
+  "executor": "same assistant; not independent review",
+  "experiment": "docs/experiments/check_receive_probe_layout.py",
+  "experiment_sha256": "db0e97def2684ba01242ce368f52f023ca35a8b88ed43f0f153be7f9e1ce3d41",
+  "tests_run": 17,
+  "failures": 0,
+  "errors": 0,
+  "result": "passed",
+  "log": "data/bounded-receive-probe-20261009/offline-results.txt",
+  "log_sha256": "7f3b2c3ac40002aeeef702abe75e91c8e4178723548231367b2e4fa3acb97f75",
+  "maximum_fixture": {
+    "read_bytes": 504,
+    "read_calls": 10
+  },
+  "fresh_static_checks": {
+    "functions": 1,
+    "exact_instructions": 11,
+    "byte_windows": 3
+  },
+  "product_source_files_unchanged": 29,
+  "historical_research_scripts_unchanged": 24,
+  "historical_evidence_files_preserved": 288,
+  "historical_evidence_manifest_sha256": "155fd42dead0b8aa5b8c3098fedfa2a0d2286f1efbddec33f27ec0cfffd4d4d1",
+  "report_sha256": "4c752afe55a9ab28901f0dffdf52e13f3cd628d6a3b72e1166de5262b3dfe50d",
+  "not_tested": [
+    "product regression",
+    "debug API or native fixture",
+    "WeChat process",
+    "real message reception",
+    "first sync or reconnect origin",
+    "minimized send"
+  ],
+  "pre_save_failure": {
+    "error": "KeyError: cache_path",
+    "cause": "Inherited script manifest mixes cache_path and path keys.",
+    "new_evidence_written_before_failure": 0,
+    "repair": "Use either existing key and verify all inherited hashes; no earlier files modified."
+  }
+}
