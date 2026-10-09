@@ -1,0 +1,251 @@
+{
+  "checked_at_utc": "2026-10-09T04:40:25.319264+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "reviewer": "Same executing assistant, not independent",
+  "fresh_function_ranges": 26,
+  "ranges": [
+    {
+      "begin": "0xa3eb00",
+      "end": "0xa3f0c8",
+      "fully_decoded": true,
+      "instruction_count": 391,
+      "disk_range_sha256": "95b206096c289339c3f478e00209e3cf18ca595fdc08a5789f4bd0f3ee243b3e"
+    },
+    {
+      "begin": "0xa78d60",
+      "end": "0xa78ef0",
+      "fully_decoded": true,
+      "instruction_count": 82,
+      "disk_range_sha256": "c29f0a9b7be9f9aeb8fa4f9d1f4d0ea9bbc43c028048a240f2835c99acc045cc"
+    },
+    {
+      "begin": "0xa7c8e0",
+      "end": "0xa7c9a3",
+      "fully_decoded": true,
+      "instruction_count": 56,
+      "disk_range_sha256": "9a09f4481ec547ba347bf8ebcf0c688fb88edcc7caa0e05f6a040cc8ae2278b4"
+    },
+    {
+      "begin": "0xabce70",
+      "end": "0xabcf3f",
+      "fully_decoded": true,
+      "instruction_count": 61,
+      "disk_range_sha256": "929e097bf5294db0d1ba64bce270c9fd4ccd4ddac588b8fbc7fefefed2be8d73"
+    },
+    {
+      "begin": "0xabcf40",
+      "end": "0xabcfb2",
+      "fully_decoded": true,
+      "instruction_count": 37,
+      "disk_range_sha256": "37a5535ef88e955586c28e258a8568e30ad471e89fdc3952e7264ad66f26f802"
+    },
+    {
+      "begin": "0xabe9e0",
+      "end": "0xabee88",
+      "fully_decoded": true,
+      "instruction_count": 253,
+      "disk_range_sha256": "9c0deab51a062627384363b3b73184d4fff0b3e6c6745ffc7b8d37d246e307f9"
+    },
+    {
+      "begin": "0xbc32d0",
+      "end": "0xbc3452",
+      "fully_decoded": true,
+      "instruction_count": 102,
+      "disk_range_sha256": "4d56d8b5fe1bd206d1047112b8960726aafa21c7658f275105b459c3bbbd497a"
+    },
+    {
+      "begin": "0x17c7fb0",
+      "end": "0x17c8278",
+      "fully_decoded": true,
+      "instruction_count": 219,
+      "disk_range_sha256": "1563f49b82385a93103bc7f28c53c133efa8c93db0c5c58b5b5b795004f27b52"
+    },
+    {
+      "begin": "0x17cb2c0",
+      "end": "0x17cd051",
+      "fully_decoded": true,
+      "instruction_count": 1674,
+      "disk_range_sha256": "f91393bc504d06eae2c08e0a163d8fc220db409e9aa2898198cb848e55867a91"
+    },
+    {
+      "begin": "0x18237e0",
+      "end": "0x1823b47",
+      "fully_decoded": true,
+      "instruction_count": 196,
+      "disk_range_sha256": "c04b02682e661d0dacaae737cd01fd94fdb03c9b6e87315743b0de4d18bc4a42"
+    },
+    {
+      "begin": "0x1823cd0",
+      "end": "0x1823fbb",
+      "fully_decoded": true,
+      "instruction_count": 173,
+      "disk_range_sha256": "cf5bffadfb1f4e5db0b126bbfaf90cf043a547d586ae0ca2cd80a1e5d07c97c0"
+    },
+    {
+      "begin": "0x22e9900",
+      "end": "0x22e9ad2",
+      "fully_decoded": true,
+      "instruction_count": 127,
+      "disk_range_sha256": "c7c9e58b74d54c68a052c72edc10b37df45fa297c07d5e6c2e26a87da7373a6c"
+    },
+    {
+      "begin": "0x2353c30",
+      "end": "0x2354f63",
+      "fully_decoded": true,
+      "instruction_count": 1057,
+      "disk_range_sha256": "a808a662f72aeeab50fff1af06b19dca76d62fbe53b2a7259027a2977db1aee4"
+    },
+    {
+      "begin": "0x23800e0",
+      "end": "0x238078e",
+      "fully_decoded": true,
+      "instruction_count": 451,
+      "disk_range_sha256": "0f170756ed647b74000877b9da39b5301c34b9528f4a2270c6425eda4de13c15"
+    },
+    {
+      "begin": "0x23ae820",
+      "end": "0x23b708a",
+      "fully_decoded": true,
+      "instruction_count": 8404,
+      "disk_range_sha256": "ce9d94745f35fecace7ef82e7f0a14646f1e35ff92b82f260ae5e163f24740dc"
+    },
+    {
+      "begin": "0x23b8ba0",
+      "end": "0x23b8f6c",
+      "fully_decoded": true,
+      "instruction_count": 255,
+      "disk_range_sha256": "4fc0a050f08e713840babc59c49b08bcbc54fe1c08aff663e442fa12b9402d8a"
+    },
+    {
+      "begin": "0x23b8fb0",
+      "end": "0x23bb029",
+      "fully_decoded": true,
+      "instruction_count": 1787,
+      "disk_range_sha256": "64362a49c3d0245f523fe017f8c2a310d7b8aea25d501e0b052b71c43ab6488e"
+    },
+    {
+      "begin": "0x23bc6f0",
+      "end": "0x23bdafb",
+      "fully_decoded": true,
+      "instruction_count": 1130,
+      "disk_range_sha256": "94bd287f62d88186733417cedacdc32b37880796b561b7e8862448c72481a3d0"
+    },
+    {
+      "begin": "0x23be4f0",
+      "end": "0x23be91b",
+      "fully_decoded": true,
+      "instruction_count": 246,
+      "disk_range_sha256": "ad26bc2a86595980cbc6ef7b93a83f3344f371b51906ba1ff067a19b529779d0"
+    },
+    {
+      "begin": "0x23be920",
+      "end": "0x23be957",
+      "fully_decoded": true,
+      "instruction_count": 24,
+      "disk_range_sha256": "ca436bafae6074daf47be1bf1a99ec9330ccad62a1fed79e69f1ac83738afee7"
+    },
+    {
+      "begin": "0x23be960",
+      "end": "0x23be99a",
+      "fully_decoded": true,
+      "instruction_count": 24,
+      "disk_range_sha256": "293901aca18da0cfd26875db41a07f80d6f270c44444ff8976fd4a73bda6a455"
+    },
+    {
+      "begin": "0x23be9a0",
+      "end": "0x23bea75",
+      "fully_decoded": true,
+      "instruction_count": 57,
+      "disk_range_sha256": "29cee97d6b1e5666bf8a1933da3a5b1bb58d65515e97974893f56efbbf38b828"
+    },
+    {
+      "begin": "0x23bea80",
+      "end": "0x23bebe4",
+      "fully_decoded": true,
+      "instruction_count": 96,
+      "disk_range_sha256": "116c1c9b021c8fb7b60ca1c54eb50e6397e42a4a23540884d9bd80a87cbf1644"
+    },
+    {
+      "begin": "0x23bebf0",
+      "end": "0x23bef3c",
+      "fully_decoded": true,
+      "instruction_count": 231,
+      "disk_range_sha256": "c5716da275a68b9a1fb1c75596e6b75da57ba5493ae43d1bcc756c2afc269ef6"
+    },
+    {
+      "begin": "0x2acb300",
+      "end": "0x2acb9eb",
+      "fully_decoded": true,
+      "instruction_count": 387,
+      "disk_range_sha256": "4eb3c6a399196dba4dc476c97091064ce94ff783443dc10adbc16848ebe71d52"
+    },
+    {
+      "begin": "0x3a13280",
+      "end": "0x3a13614",
+      "fully_decoded": true,
+      "instruction_count": 213,
+      "disk_range_sha256": "a7e35617f6c5e456de0819302f61507e7644004d2785092287e26528b4897dc3"
+    }
+  ],
+  "exact_instruction_assertions": 73,
+  "conditional_value_derivation_rows": 8,
+  "bitset_expansion": [
+    [
+      0,
+      2,
+      9,
+      15,
+      17
+    ],
+    [
+      0,
+      2,
+      9,
+      17,
+      53
+    ]
+  ],
+  "source_files_unchanged": 29,
+  "earlier_scripts_unchanged": 24,
+  "preserved_experiments": [
+    {
+      "path": "docs/experiments/check_db_collector_assumptions.py",
+      "sha256": "1ee3325d303d7484044c22d06689e5c3d03cd0cc6d5ecba22bebb180b690315e"
+    },
+    {
+      "path": "docs/experiments/check_db_raw_metadata.py",
+      "sha256": "fe63f2a5e5438d4144e0f544184801f795814b6a8781fbdb8c17598d426a909c"
+    }
+  ],
+  "product_tests_run": false,
+  "native_fixtures_run": false,
+  "client_runtime_validation": false,
+  "synthetic_test_suite_run": false,
+  "discovery_files": [
+    {
+      "path": "data/inbound-origin-consumers-20261009/member-candidates.json",
+      "sha256": "7ae3a19ef7aac77873001395a36b9835fcd6401b4d146fa0c536bebf53539c43"
+    },
+    {
+      "path": "data/inbound-origin-consumers-20261009/pair-candidates.json",
+      "sha256": "31775db44b7aede0e4c4adddc9e52531d65c27858f5fffed1c057ab5066e4d60"
+    },
+    {
+      "path": "data/inbound-origin-consumers-20261009/calls-18237e0-1823cd0.json",
+      "sha256": "a8db506bcd33e989ac8f3d4494b80fdfa974c2b03459226fc80f47c760d3714d"
+    },
+    {
+      "path": "data/inbound-origin-consumers-20261009/calls-23b8ba0-23b8fb0-23bc6f0.json",
+      "sha256": "207e4a229e0e4e90dea3dbde4e96a5531f124af202d7b3ca099112f33caf002e"
+    },
+    {
+      "path": "data/inbound-origin-consumers-20261009/calls-abce70-abcf40-17c7fb0-23be9a0.json",
+      "sha256": "92f49baebe1886472b9b921f7a287d5afc3dfd3d25315489ab6853a16249e21d"
+    }
+  ],
+  "discovery_limits": "Pattern/owned E8/E9 scans select candidates; no claim to find every indirect, aliased or differently encoded consumer.",
+  "tool_notes": [
+    "Initial research file inspect.py shadowed Python inspect, causing Capstone import to fail; renamed research.py and reran successfully. Target code never loaded.",
+    "Initial pair-scan display truncated; saved candidates were filtered before selected functions were decoded. No unsupported complete-search claim."
+  ]
+}

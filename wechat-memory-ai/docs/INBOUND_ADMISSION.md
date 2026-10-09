@@ -1,5 +1,15 @@
 # 最小化真实入站：能力证据与准入条件
 
+## 最新：scene 消费者与集合写入核查收敛（468–471）
+
+2026-10-09（北京时间）。[续查记录](INBOUND_EVENT_ORIGIN_4_1_15_50.md)已补scene三种不同数值规则：[468](evidence/468-inbound-scene-consumers.json)确认它们分别影响特定支路，不能合并为is_live。17c7fb0尾部掩码命中返回false；新建解析对象时缺scene和显式0可落到相同值，不能从0认证实时消息。
+
+[469](evidence/469-inbound-key-set-writers.json)找到23be9a0集合的三处插入调用。键为条件选用的消息+2c8字符串，或选定字符串与两个DWORD拼接，并非AddMsg字段12。命中消费会删除节点，后续缺项不代表第一次收到；写入点、内部投影及返回值也不认证数据库提交或历史水位。
+
+本轮结束这两项作为单独自动回复准入判据的定点核查。后续回到具体采集器的初始同步/重连/逐条交付语义；没有来源证据前保留unknown，不再猜scene、换集合或增加verified开关。没有可运行的真实最小化适配器；接收核查不代表发送解决。
+
+[470](evidence/470-inbound-consumers-validation.json)为同一执行者的新鲜静态复核与数值推导，未跑产品或微信测试。[471](evidence/471-inbound-consumers-checkpoint.json)保存产品0.1.22、自动回复关闭、监听保存停止状态；无Jev/其他判断模型、进程/密钥/聊天数据库/窗口/发送操作。最低已知额度剩余58%，既有id40不变，后续证据从472起。
+
 ## 最新：逐条消息来源与默认文字分支（464–467）
 
 2026-10-09（北京时间）。[具体核查](INBOUND_EVENT_ORIGIN_4_1_15_50.md)沿同一哈希的.50 DLL磁盘只读推进。[464](evidence/464-inbound-msgsource-provenance.json)绑定AddMsg字段10→内部+1c0→msgsource解析器；scene的存储位置已知，数值域和新旧含义仍未知。share_msg的时间/ID属于嵌套引用，不能替换当前消息身份。解析失败或空串后外层仍可设置+2c0，故“已处理”不证明解析成功或实时来信。
