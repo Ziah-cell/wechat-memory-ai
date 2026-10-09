@@ -1,0 +1,533 @@
+{
+  "checked_at_utc": "2026-10-09T13:23:51.788211+00:00",
+  "disk_only": true,
+  "image_loaded": false,
+  "audit": {
+    "image_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+    "image_size": 204099112,
+    "directories": [
+      {
+        "kind": "normal",
+        "descriptors": 1,
+        "symbols": 333
+      },
+      {
+        "kind": "delay",
+        "descriptors": 39,
+        "symbols": 884
+      }
+    ],
+    "api_name_allowlist": [
+      "EventEnabled",
+      "EventProviderEnabled",
+      "EventRegister",
+      "EventUnregister",
+      "EventWrite",
+      "EventWriteEx",
+      "EventWriteTransfer",
+      "RegisterTraceGuidsA",
+      "RegisterTraceGuidsW",
+      "RoActivateInstance",
+      "RoGetActivationFactory",
+      "Shell_NotifyIconA",
+      "Shell_NotifyIconW",
+      "TraceEvent",
+      "TraceMessage",
+      "WindowsCreateString",
+      "WindowsDeleteString"
+    ],
+    "matched_imports": [
+      {
+        "kind": "delay",
+        "module": "SHELL32.dll",
+        "symbol": "Shell_NotifyIconW",
+        "iat_rva": "0xbb60548"
+      }
+    ],
+    "exact_substrings": [
+      {
+        "token": "Windows.UI.Notifications.ToastNotificationManager",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Windows.UI.Notifications.ToastNotificationManager",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Windows.UI.Notifications.ToastNotification",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Windows.UI.Notifications.ToastNotification",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Windows.UI.Notifications.Management.UserNotificationListener",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Windows.UI.Notifications.Management.UserNotificationListener",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Microsoft.Windows.AppNotifications.AppNotificationManager",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "Microsoft.Windows.AppNotifications.AppNotificationManager",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "ToastGeneric",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "ToastGeneric",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "<toast",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "<toast",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "TraceLogging",
+        "encoding": "ascii",
+        "count": 0,
+        "first_matches": []
+      },
+      {
+        "token": "TraceLogging",
+        "encoding": "utf-16-le",
+        "count": 0,
+        "first_matches": []
+      }
+    ],
+    "provider_guid_identified": false,
+    "message_schema_identified": false,
+    "runtime_observed": false,
+    "source_sha256": "16c83879d5f8563424f97faf49cf76e67909d1fa546fc1f3b68741e6f6f2babc",
+    "limits": [
+      "Only this exact disk image and normal/delay import directories were inspected.",
+      "Substring absence does not exclude dynamic lookup, other modules or other encodings.",
+      "API/string presence does not establish reachability, a message provider or message semantics."
+    ]
+  },
+  "second_parser": {
+    "verification": "passed",
+    "independent_parser": true,
+    "independent_reviewer": false,
+    "import_descriptors": 40,
+    "import_symbols": 1217,
+    "substring_checks": 14,
+    "matched_imports": [
+      {
+        "kind": "delay",
+        "module": "SHELL32.dll",
+        "symbol": "Shell_NotifyIconW",
+        "iat_rva": "0xbb60548"
+      }
+    ],
+    "direct_references": [
+      {
+        "at": "0x1e01c93",
+        "owner": "0x1e01990",
+        "end": "0x1e01cc7",
+        "owner_sha256": "547ef3bfea62419f4b3350dd6ae87891c58a5e50c4b155aff23deb910a6fdc40",
+        "context": [
+          {
+            "at": "0x1e01c80",
+            "mnemonic": "mov",
+            "operands": "ecx, 4"
+          },
+          {
+            "at": "0x1e01c85",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x9d7ec7d]"
+          },
+          {
+            "at": "0x1e01c8b",
+            "mnemonic": "jmp",
+            "operands": "0x1e01cb0"
+          },
+          {
+            "at": "0x1e01c8d",
+            "mnemonic": "lea",
+            "operands": "rdx, [rbp - 0x40]"
+          },
+          {
+            "at": "0x1e01c91",
+            "mnemonic": "mov",
+            "operands": "ecx, esi"
+          },
+          {
+            "at": "0x1e01c93",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x9d5e8af]"
+          },
+          {
+            "at": "0x1e01c99",
+            "mnemonic": "test",
+            "operands": "eax, eax"
+          }
+        ]
+      },
+      {
+        "at": "0x1e01caa",
+        "owner": "0x1e01990",
+        "end": "0x1e01cc7",
+        "owner_sha256": "547ef3bfea62419f4b3350dd6ae87891c58a5e50c4b155aff23deb910a6fdc40",
+        "context": [
+          {
+            "at": "0x1e01c9b",
+            "mnemonic": "jne",
+            "operands": "0x1e01c48"
+          },
+          {
+            "at": "0x1e01c9d",
+            "mnemonic": "xor",
+            "operands": "eax, eax"
+          },
+          {
+            "at": "0x1e01c9f",
+            "mnemonic": "jmp",
+            "operands": "0x1e01cb5"
+          },
+          {
+            "at": "0x1e01ca1",
+            "mnemonic": "lea",
+            "operands": "rdx, [rbp - 0x40]"
+          },
+          {
+            "at": "0x1e01ca5",
+            "mnemonic": "mov",
+            "operands": "ecx, 4"
+          },
+          {
+            "at": "0x1e01caa",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x9d5e898]"
+          },
+          {
+            "at": "0x1e01cb0",
+            "mnemonic": "test",
+            "operands": "eax, eax"
+          }
+        ]
+      },
+      {
+        "at": "0x1e02150",
+        "owner": "0x1e02010",
+        "end": "0x1e02170",
+        "owner_sha256": "77d364fefcc896d16237fcff216f6c674eee656a533ed3df4973e59bcf9faaa4",
+        "context": [
+          {
+            "at": "0x1e02143",
+            "mnemonic": "pop",
+            "operands": "rdi"
+          },
+          {
+            "at": "0x1e02144",
+            "mnemonic": "pop",
+            "operands": "rsi"
+          },
+          {
+            "at": "0x1e02145",
+            "mnemonic": "ret",
+            "operands": ""
+          },
+          {
+            "at": "0x1e02146",
+            "mnemonic": "lea",
+            "operands": "rdx, [rsp + 0x30]"
+          },
+          {
+            "at": "0x1e0214b",
+            "mnemonic": "mov",
+            "operands": "ecx, 1"
+          },
+          {
+            "at": "0x1e02150",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x9d5e3f2]"
+          },
+          {
+            "at": "0x1e02156",
+            "mnemonic": "test",
+            "operands": "eax, eax"
+          }
+        ]
+      },
+      {
+        "at": "0x4c3aeb1",
+        "owner": "0x4c3ad90",
+        "end": "0x4c3affc",
+        "owner_sha256": "0196925ad886d584351f3fba3f5a0fa1e3390ed78267e043395a5b21f22ca233",
+        "context": [
+          {
+            "at": "0x4c3ae98",
+            "mnemonic": "mov",
+            "operands": "rax, qword ptr [rsi + 0x20]"
+          },
+          {
+            "at": "0x4c3ae9c",
+            "mnemonic": "mov",
+            "operands": "qword ptr [rsp + 0x30], rax"
+          },
+          {
+            "at": "0x4c3aea1",
+            "mnemonic": "mov",
+            "operands": "dword ptr [rsp + 0x3c], 0x80"
+          },
+          {
+            "at": "0x4c3aea9",
+            "mnemonic": "mov",
+            "operands": "ecx, 2"
+          },
+          {
+            "at": "0x4c3aeae",
+            "mnemonic": "mov",
+            "operands": "rdx, rdi"
+          },
+          {
+            "at": "0x4c3aeb1",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x6f25691]"
+          },
+          {
+            "at": "0x4c3aeb7",
+            "mnemonic": "mov",
+            "operands": "rcx, qword ptr [rsi + 0x20]"
+          }
+        ]
+      },
+      {
+        "at": "0x4c3b154",
+        "owner": "0x4c3b000",
+        "end": "0x4c3b19a",
+        "owner_sha256": "9f01f594ef4d594674bb47e77ecfe8a850062f56eb3d48ae4454eb3db3ba051a",
+        "context": [
+          {
+            "at": "0x4c3b134",
+            "mnemonic": "mov",
+            "operands": "qword ptr [rsp + 0x50], rbx"
+          },
+          {
+            "at": "0x4c3b139",
+            "mnemonic": "mov",
+            "operands": "dword ptr [rsp + 0x5c], 8"
+          },
+          {
+            "at": "0x4c3b141",
+            "mnemonic": "mov",
+            "operands": "dword ptr [rsp + 0x174], 1"
+          },
+          {
+            "at": "0x4c3b14c",
+            "mnemonic": "mov",
+            "operands": "ecx, 1"
+          },
+          {
+            "at": "0x4c3b151",
+            "mnemonic": "mov",
+            "operands": "rdx, rdi"
+          },
+          {
+            "at": "0x4c3b154",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x6f253ee]"
+          },
+          {
+            "at": "0x4c3b15a",
+            "mnemonic": "cmp",
+            "operands": "eax, 1"
+          }
+        ]
+      },
+      {
+        "at": "0x4c3bb55",
+        "owner": "0x4c3ba20",
+        "end": "0x4c3bbb1",
+        "owner_sha256": "e5c81734cb4daf663bc106a296e8eb2c64d9ffbf526f3a7edf84a1b735ed0ac2",
+        "context": [
+          {
+            "at": "0x4c3bb40",
+            "mnemonic": "mov",
+            "operands": "r8d, 8"
+          },
+          {
+            "at": "0x4c3bb46",
+            "mnemonic": "mov",
+            "operands": "rcx, rdi"
+          },
+          {
+            "at": "0x4c3bb49",
+            "mnemonic": "call",
+            "operands": "0x38930"
+          },
+          {
+            "at": "0x4c3bb4e",
+            "mnemonic": "lea",
+            "operands": "rdx, [rsp + 0x28]"
+          },
+          {
+            "at": "0x4c3bb53",
+            "mnemonic": "mov",
+            "operands": "ecx, esi"
+          },
+          {
+            "at": "0x4c3bb55",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x6f249ed]"
+          },
+          {
+            "at": "0x4c3bb5b",
+            "mnemonic": "test",
+            "operands": "eax, eax"
+          }
+        ]
+      },
+      {
+        "at": "0x4c3bb6f",
+        "owner": "0x4c3ba20",
+        "end": "0x4c3bbb1",
+        "owner_sha256": "e5c81734cb4daf663bc106a296e8eb2c64d9ffbf526f3a7edf84a1b735ed0ac2",
+        "context": [
+          {
+            "at": "0x4c3bb5f",
+            "mnemonic": "mov",
+            "operands": "al, 1"
+          },
+          {
+            "at": "0x4c3bb61",
+            "mnemonic": "test",
+            "operands": "esi, esi"
+          },
+          {
+            "at": "0x4c3bb63",
+            "mnemonic": "jne",
+            "operands": "0x4c3bb7e"
+          },
+          {
+            "at": "0x4c3bb65",
+            "mnemonic": "lea",
+            "operands": "rdx, [rsp + 0x28]"
+          },
+          {
+            "at": "0x4c3bb6a",
+            "mnemonic": "mov",
+            "operands": "ecx, 4"
+          },
+          {
+            "at": "0x4c3bb6f",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x6f249d3]"
+          },
+          {
+            "at": "0x4c3bb75",
+            "mnemonic": "test",
+            "operands": "eax, eax"
+          }
+        ]
+      },
+      {
+        "at": "0x4c3c71a",
+        "owner": "0x4c3c0d0",
+        "end": "0x4c3c796",
+        "owner_sha256": "f8744d28ad724c9dc2b177da1f99e9f0fbe1a8f6127aabc7868cf131e505bdae",
+        "context": [
+          {
+            "at": "0x4c3c6f8",
+            "mnemonic": "cmovg",
+            "operands": "eax, esi"
+          },
+          {
+            "at": "0x4c3c6fb",
+            "mnemonic": "mov",
+            "operands": "dword ptr [rsp + 0x400], eax"
+          },
+          {
+            "at": "0x4c3c702",
+            "mnemonic": "mov",
+            "operands": "dword ptr [rsp + 0xe4], 0x90"
+          },
+          {
+            "at": "0x4c3c70d",
+            "mnemonic": "lea",
+            "operands": "rdx, [rsp + 0xd0]"
+          },
+          {
+            "at": "0x4c3c715",
+            "mnemonic": "mov",
+            "operands": "ecx, 1"
+          },
+          {
+            "at": "0x4c3c71a",
+            "mnemonic": "call",
+            "operands": "qword ptr [rip + 0x6f23e28]"
+          },
+          {
+            "at": "0x4c3c720",
+            "mnemonic": "lea",
+            "operands": "rcx, [rsp + 0x60]"
+          }
+        ]
+      }
+    ],
+    "reference_scope": "FF15/FF25 RIP-relative instructions inside fully decoded .pdata ranges; not indirect dataflow coverage",
+    "source_sha256": "241f428e8b4cccf1fad8e35f6ca9dd9af1828cebb83a5615da577e2872ab1ea2",
+    "parser_sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+  },
+  "independent_reviewer": false,
+  "balloon_static_path": {
+    "call_rva": "0x4c3c71a",
+    "function_start": "0x4c3c0d0",
+    "function_end": "0x4c3c796",
+    "function_sha256": "f8744d28ad724c9dc2b177da1f99e9f0fbe1a8f6127aabc7868cf131e505bdae",
+    "structure_base": "rsp+0xd0",
+    "flags_store": "[rsp+0xe4]=0x90",
+    "flags_offset": "0x14",
+    "inferred_api_arguments": "NIM_MODIFY, NIF_INFO|NIF_SHOWTIP",
+    "proves_current_chat_uses_path": false,
+    "proves_listener_delivery": false,
+    "proves_chat_identity": false
+  },
+  "interpretation": "Only allowlisted imports/substrings and selected direct references. Absence is not proof of no provider or no toast support.",
+  "raw_bindings": [
+    {
+      "path": "data/os-receive-surfaces-20261009/disk-audit.json",
+      "sha256": "845af92e1efb9ea17706092a720d906a19b3fdfaa04d8a9c4f238152436dd399"
+    },
+    {
+      "path": "data/os-receive-surfaces-20261009/disk-verification.json",
+      "sha256": "1ed299ad3bad390b855dab83d0e9e85b0f7c2817ecd5de6edd2a70fbeb0057d5"
+    }
+  ]
+}

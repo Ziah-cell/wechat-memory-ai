@@ -1,0 +1,75 @@
+{
+  "checked_at_utc": "2026-10-09T13:23:51.788211+00:00",
+  "method": "Primary Microsoft API documentation; no native capture run",
+  "sources": [
+    {
+      "id": "pss_capture",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processsnapshot/nf-processsnapshot-psscapturesnapshot",
+      "observed_contract": "Point-in-time process capture, not an application event subscription."
+    },
+    {
+      "id": "pss_flags",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processsnapshot/ne-processsnapshot-pss_capture_flags",
+      "observed_contract": "VA_CLONE includes all cloneable pages; VA_SPACE does not include page contents."
+    },
+    {
+      "id": "pss_free",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processsnapshot/nf-processsnapshot-pssfreesnapshot",
+      "observed_contract": "ProcessHandle names the process containing the snapshot; no all-helper-death proof was obtained."
+    },
+    {
+      "id": "etw_model",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/etw/about-event-tracing",
+      "observed_contract": "Events originate from instrumented providers; ETW has documented event-loss conditions."
+    },
+    {
+      "id": "etw_session",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-event-tracing-session",
+      "observed_contract": "Controller starts/stops sessions and enables providers; no controller-exit cleanup guarantee claimed."
+    },
+    {
+      "id": "notification_guide",
+      "url": "https://learn.microsoft.com/en-us/windows/apps/develop/notifications/app-notifications/notification-listener",
+      "observed_contract": "Permission is required; list is current notifications; background trigger syncs current state; revoked access can silently return empty."
+    },
+    {
+      "id": "user_notification",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.ui.notifications.usernotification?view=winrt-26100",
+      "observed_contract": "AppInfo, CreationTime, Id, Notification properties; notification ID is not a proven WeChat message ID."
+    },
+    {
+      "id": "notification",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.ui.notifications.notification?view=winrt-26100",
+      "observed_contract": "Visual and ExpirationTime; not the producer ToastNotification type."
+    },
+    {
+      "id": "listener",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.ui.notifications.management.usernotificationlistener?view=winrt-26100",
+      "observed_contract": "No generic reply or activation method in inspected public API."
+    },
+    {
+      "id": "producer_toast",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification?view=winrt-26100",
+      "observed_contract": "Producer-side metadata cannot be presumed accessible through UserNotification.Notification."
+    },
+    {
+      "id": "shell_notify",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shell_notifyiconw",
+      "observed_contract": "Taskbar status area API; Windows 11 balloon banners do not remain in Notification Center after dismissal/timeout."
+    },
+    {
+      "id": "notify_struct",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/shellapi/ns-shellapi-notifyicondataw",
+      "observed_contract": "uID/guidItem identify an icon; NIF_INFO=0x10 and NIF_SHOWTIP=0x80."
+    }
+  ],
+  "candidate_decisions": {
+    "snapshot_sampling": "No event retention/address/lifetime contract; entry RDX is transient. No live snapshot or fixture selected.",
+    "etw": "No compatible message provider GUID/event schema identified; generic tracing not a source.",
+    "notification_listener": "Inspected API lacks required chat identity/direction/history and generic reply. Actual WeChat delivery through listener unknown."
+  },
+  "changed_capture_mechanism_selected": false,
+  "actual_helper_exit_guarantee_tested": false,
+  "scope_note": "In-process hook/injection is not selected and not covered by the approved external breakpoint live observation.",
+  "global_impossibility_proved": false
+}

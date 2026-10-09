@@ -1,5 +1,12 @@
 # 最小化真实入站：能力证据与准入条件
 
+## 最新：快照、ETW与Windows通知尚不能补齐来源（507–509）
+
+2026-10-09。[替代来源报告](OS_RECEIVE_SURFACE_AUDIT.md)核查三个具体OS接口。通知ID/应用身份/图标ID不能自动映射为微信消息、账号或好友；入口参数快照没有事件保留契约；通用ETW无已识别消息提供者。固定DLL气泡通知路径只说明存在相关代码，未验证聊天执行或通知监听器交付。
+
+因此没有新增真实桥接或verified开关，当前准入仍关闭。此结论仅覆盖本轮候选与固定检查，不证明所有通知/ETW/只读缓冲方案不可能。[507](evidence/507-os-receive-contracts.json)、[508](evidence/508-os-receive-disk-audit.json)、[509](evidence/509-os-receive-checkpoint.json)。
+
+
 ## 最新：scene 消费者与集合写入核查收敛（468–471）
 
 2026-10-09（北京时间）。[续查记录](INBOUND_EVENT_ORIGIN_4_1_15_50.md)已补scene三种不同数值规则：[468](evidence/468-inbound-scene-consumers.json)确认它们分别影响特定支路，不能合并为is_live。17c7fb0尾部掩码命中返回false；新建解析对象时缺scene和显式0可落到相同值，不能从0认证实时消息。
