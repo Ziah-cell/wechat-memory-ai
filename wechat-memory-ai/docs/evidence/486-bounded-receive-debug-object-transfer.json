@@ -1,0 +1,1024 @@
+{
+  "checked_at_utc": "2026-10-09T11:01:02.546080+00:00",
+  "base_commit": "2f17469282fcca02d044679bd80383dde9376bea",
+  "fixture_only": true,
+  "mechanism": "Guardian creates and retains the same no-kill debug object before owner attaches; duplicate handle passed only to sibling owner. Recovery starts after deliberate 200ms delay.",
+  "initial_run": "run-15bcafc0e14d.json",
+  "initial_counts": {
+    "total": 15,
+    "recovered": 12,
+    "failed": 3
+  },
+  "initial_cases": [
+    {
+      "mode": "owner_before_hit",
+      "repeat": 0,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_before_hit",
+      "repeat": 1,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_before_hit",
+      "repeat": 2,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_after_hit",
+      "repeat": 0,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 187.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 187.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_after_hit",
+      "repeat": 1,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_after_hit",
+      "repeat": 2,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 187.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 187.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_busy",
+      "repeat": 0,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 187.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "burst_calls": 521,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 187.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_busy",
+      "repeat": 1,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 187.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "burst_calls": 517,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 187.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_busy",
+      "repeat": 2,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "burst_calls": 530,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_pending",
+      "repeat": 0,
+      "recovered": false,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 0,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 0,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 1
+    },
+    {
+      "mode": "owner_pending",
+      "repeat": 1,
+      "recovered": false,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 0,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 0,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 1
+    },
+    {
+      "mode": "owner_pending",
+      "repeat": 2,
+      "recovered": false,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 0,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 0,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 1
+    },
+    {
+      "mode": "guardian_busy",
+      "repeat": 0,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "hits": 20,
+        "fixture_only": true,
+        "raw_win32": true,
+        "stop_reason": "cancelled"
+      },
+      "survivor_exit": 0,
+      "burst_calls": 653,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "hits": 20,
+          "fixture_only": true,
+          "raw_win32": true,
+          "stop_reason": "cancelled"
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 0,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "guardian_busy",
+      "repeat": 1,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "hits": 15,
+        "fixture_only": true,
+        "raw_win32": true,
+        "stop_reason": "cancelled"
+      },
+      "survivor_exit": 0,
+      "burst_calls": 648,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "hits": 15,
+          "fixture_only": true,
+          "raw_win32": true,
+          "stop_reason": "cancelled"
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 0,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "guardian_busy",
+      "repeat": 2,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "hits": 16,
+        "fixture_only": true,
+        "raw_win32": true,
+        "stop_reason": "cancelled"
+      },
+      "survivor_exit": 0,
+      "burst_calls": 648,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "hits": 16,
+          "fixture_only": true,
+          "raw_win32": true,
+          "stop_reason": "cancelled"
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 0,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0
+    }
+  ],
+  "failure": "An event already returned to the dead owner was not redelivered automatically. Detach returned success but target failed with a single-step exception.",
+  "first_replay_run": "run-dd95128db8ee.json",
+  "first_replay_cases": [
+    {
+      "mode": "owner_pending",
+      "repeat": 0,
+      "replay": true,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 188.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "replay_probe",
+          "replay_requested": true,
+          "event_code": 1,
+          "exception_code": "0x80000004",
+          "fixture_only": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 188.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_pending",
+      "repeat": 1,
+      "replay": true,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "replay_probe",
+          "replay_requested": true,
+          "event_code": 1,
+          "exception_code": "0x80000004",
+          "fixture_only": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    },
+    {
+      "mode": "owner_pending",
+      "repeat": 2,
+      "replay": true,
+      "recovered": true,
+      "fixture_only": true,
+      "created_before_attach": true,
+      "recovery_result": {
+        "kind": "result",
+        "cleanup": "detached",
+        "recovery_hits": 1,
+        "recovery_ms": 203.0,
+        "fixture_only": true
+      },
+      "survivor_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "owner_events": [
+        {
+          "kind": "owner_ready",
+          "fixture_only": true
+        },
+        {
+          "kind": "armed",
+          "fixture_only": true,
+          "raw_win32": true
+        },
+        {
+          "kind": "owned_event_received",
+          "fixture_only": true
+        }
+      ],
+      "owner_error_tail": [],
+      "owner_exit": 1,
+      "guardian_events": [
+        {
+          "kind": "guardian_ready",
+          "fixture_only": true,
+          "created_before_attach": true
+        },
+        {
+          "kind": "replay_probe",
+          "replay_requested": true,
+          "event_code": 1,
+          "exception_code": "0x80000004",
+          "fixture_only": true
+        },
+        {
+          "kind": "result",
+          "cleanup": "detached",
+          "recovery_hits": 1,
+          "recovery_ms": 203.0,
+          "fixture_only": true
+        }
+      ],
+      "guardian_error_tail": [],
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0
+    }
+  ],
+  "replay_mechanism": "DBG_REPLY_LATER requests the received event again for the known main thread. Actual event code determines handling; unrelated exceptions are not universally marked handled.",
+  "first_extended_counts": {
+    "total": 27,
+    "passed": 27,
+    "recovered": 24,
+    "expected_native_fatal_exit": 3
+  },
+  "first_extended_run": "run-2b06738f06c3.json",
+  "third_party_native_header": {
+    "repository": "winsiderss/systeminformer",
+    "commit": "9cdd0426e0843e80cabef27f148cee0281fa0883",
+    "url": "https://raw.githubusercontent.com/winsiderss/systeminformer/9cdd0426e0843e80cabef27f148cee0281fa0883/phnt/include/ntdbg.h",
+    "sha256": "b3fcbbe7dd936038790ea15b78ec90601c93fa63fde4c9e4d42cd5d63ac49b1a",
+    "bytes": 14631,
+    "authority": "Third-party Native API declarations, not Microsoft-supported ABI contract"
+  },
+  "cache_files": [
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-15bcafc0e14d.json",
+      "sha256": "d00eec81c3b99d76f8d3035dbd6d8a537a1314ec41e0320dea7724a8b1170396"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-18772b4eb10b.json",
+      "sha256": "a4e5f80cd81e5d0dde0ab2dba4d3ee478485b71546bc6edd41bd8e1d4a033fbe"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-2b06738f06c3.json",
+      "sha256": "cc8fd5835cfb01ed476a41cda50e5addda47045b7b87f58d7565fbc17042a451"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-3dbd0dfe9560.json",
+      "sha256": "94cda141d3d9dabe02685047abe2a65da1361b527646aef65adebaa2fc50c5a5"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-8fad36d2403e.json",
+      "sha256": "c20424afa2c4e9615fdec8c21f6fcc1d0d0ae3a0f9fcdd9e382e858821d85789"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-d26b41eee128.json",
+      "sha256": "032fc6f8afd6fbf0832efabb62fa9f92853bbea6cd89f89bea308b13b33cbea0"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-dd95128db8ee.json",
+      "sha256": "f31fc86bc5dda0f81144241d422399a6bebdd5c7ca61592890bcd52f94602a5d"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-ec7aa40aae3e.json",
+      "sha256": "ad667006383c805068f889471d4c86ff08be6fa04ab4652a1fb41962c207eacf"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/run-ffc30f6bb098.json",
+      "sha256": "010f13c30c67cc4f6f151464d25f779638adbb0bfb7f47cdd6aa1be243cd54e5"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/transfer-initial.py",
+      "sha256": "56a80033a6cc1949ff35675854661e0ef1474f0d0efd94a46b2ccb6354b57adb"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/transfer-lifecycle-red.py",
+      "sha256": "c9361ae72b443abe54c9bdbfa8a0fde7183cbbc037d728adc5e0dc22c6fe285e"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/transfer-replay-first.py",
+      "sha256": "4bacec0443899f1b958534ee586f3d502a9f3498054f100b52094634dd81f64b"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/transfer-replay-matrix.py",
+      "sha256": "1f11ea357ac32048739e1cfa15b200c423c729d0547e6c34c659c1d4372579f7"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/test-transfer-initial.py",
+      "sha256": "2226293c911a6a368405974031266b3579c0417877d28ee7fc0002d49b49b299"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/test-transfer-lifecycle-red.py",
+      "sha256": "07afac2e5209a7093c57038842e10ddab9150c79b58ffb7d11760cbeded08ac0"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/test-transfer-replay-first.py",
+      "sha256": "ee4080fd4fa014be03e23b50dd29155f54197d3a03dc5290febff34c3f359fe8"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/test-transfer-replay-matrix.py",
+      "sha256": "941342e9a7963e8d5f38e5492a2dcbeb07ee3344dfef584ea83ded02f551673d"
+    },
+    {
+      "path": "data/bounded-receive-transfer-20261009/header-source.json",
+      "sha256": "c96e08ad9f5923e5279fd58c03680b34a1760200ecf27cd93b0a3225889af4c2"
+    }
+  ],
+  "wechat_gate_passed": false
+}
