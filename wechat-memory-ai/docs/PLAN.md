@@ -822,3 +822,13 @@ Files: runtime.py、cli.py、scripts/*、tests/test_runtime.py、README.md、doc
 - [x] 运行失败，实现跨平台控制；核验 Windows 脚本的静态内容，明确未执行。
 - [x] 执行完整测试、编译、安装/模拟演示、压缩包解压运行。
 - [x] 进行独立代码审查，修复重要问题；生成测试报告、状态文档与完整压缩包。
+
+## 额度监测保存点（2026-10-09T14:14:16Z）
+
+额度接口最低已知剩余 21%，达到 40% 保存阈值；未知窗口不按零处理。本次核对 implementation 已提交成果 dc5ae249925e20d9fbd105230637d60b56107a72，保存开始时 Git 工作区干净。新任务“继续微信最小化采集器开发”正在推进自建发布器故障隔离；其进行中工作尚未验收，本保存点不将它计为完成。
+
+已完成与验证：510–512 保存常驻采集设计及虚构栈展开对照；8 批 43 条记录中，38 次原生展开为 31 正确、7 不正确，5 条回退模型为 1 正确、4 不正确。不带 REX.W 的 R11 跳转候选最终 6 处正确；失败对照保留。原双角色退出失败仍未修复，未重跑产品测试，也未验证完整挂钩。
+
+研究位置：`docs/RESIDENT_RECEIVE_FEASIBILITY.md`、`docs/evidence/510-resident-receive-source-audit.json`、`docs/evidence/511-resident-receive-unwind.json`、`docs/evidence/512-resident-receive-checkpoint.json`；本地研究与交接位于 `data/resident-receive-design-20261009/`，其中 `HANDOFF.json` 保存已推送提交及后续事项。
+
+未完成与下一步：自建发布器/消费者的有界缓冲、消费者卡死或退出、缓冲满、停止后的旧记录及资源寿命验证；跳板执行、完整 ABI、异常传播、CFG/CET 和并发安装仍待验证。合作启动不能证明实机热挂安全。微信尚未接入，自动回复关闭；实机注入未获授权，不调用 Jev。本次只保存进度，不暂停主任务；保存并确认推送后暂停额度监测 id40，避免重复触发。研究证据序号 513 留给主任务。
