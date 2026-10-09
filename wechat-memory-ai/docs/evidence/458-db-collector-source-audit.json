@@ -1,0 +1,323 @@
+{
+  "checked_at_utc": "2026-10-09T00:51:07.749793+00:00",
+  "base_commit": "e279badf5d2b6f34179e65076dfb3010ee23f9e8",
+  "upstream_commit": "fbfb02677f8f5c8d52be166dc2a662a836f1354d",
+  "scope": "Pinned cached public text, AST syntax/anchor checks; no upstream execution",
+  "upstream_head_refetched_this_round": false,
+  "files": [
+    {
+      "path": "README.zh-CN.md",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/README.zh-CN.md",
+      "sha256": "8da55f04452a032f86f1b7ec46f32b74260fdd6722d7c5b87e52529de30f63c8",
+      "bytes": 111045
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/pyproject.toml",
+      "sha256": "8b2f8c673d15b5b1564ee6eec5b158ce3a70cb482add22d3b7fdc689a9413635",
+      "bytes": 2176
+    },
+    {
+      "path": "wechatauto/db.py",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/db.py",
+      "sha256": "50eac9ded3a9b52e74c99c7e94afc741e64901005a3dae8728f3ef3f3e1a22ab",
+      "bytes": 135702
+    },
+    {
+      "path": "wechatauto/__init__.py",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/__init__.py",
+      "sha256": "156adfb7abcb2c4e49cb43f0860b36bb5faec1752b15539414fa3322d495d02f",
+      "bytes": 2328
+    },
+    {
+      "path": "wechatauto/demo_listen.py",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_listen.py",
+      "sha256": "e1dd4d9513ac71f16c91a35dc57f43b5c9094684ddfa74eb6e456df9ac506b13",
+      "bytes": 4458
+    },
+    {
+      "path": "wechatauto/wx.py",
+      "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/wx.py",
+      "sha256": "dbc55ee9d0d5bdb292a5f6a8fcb43604af93d34b9caa366424e3d1cabac11dce",
+      "bytes": 68823
+    }
+  ],
+  "checked_anchors": [
+    {
+      "file": "wechatauto/db.py",
+      "start": 487,
+      "end": 508,
+      "checked_terms": [
+        "self._load_or_extract_keys",
+        "self._pick_account"
+      ],
+      "excerpt_sha256": "d06daa4b397f6fdfb89fe94fb79d8f9a116d429d61ce12f72ff30d0279ecfc1a",
+      "claim": "constructor can acquire keys and choose an account"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 513,
+      "end": 550,
+      "checked_terms": [
+        "candidates.sort(reverse=True)",
+        "return re.sub"
+      ],
+      "excerpt_sha256": "ce436292680ff44c5c75bc09e56470928f9274780e049e473e09f2c6942ab13b",
+      "claim": "mtime account selection and directory-derived wxid are heuristics"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 571,
+      "end": 578,
+      "checked_terms": [
+        "def _try_other_accounts",
+        "切换"
+      ],
+      "excerpt_sha256": "9756813c40e59daabb21a909c90c6e6f5c956a92df2841b19dfce021b1916350",
+      "claim": "automatic account fallback exists"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 655,
+      "end": 744,
+      "checked_terms": [
+        "self.extract_keys()",
+        "self.extract_master_key()",
+        "cache_paths"
+      ],
+      "excerpt_sha256": "d6439acb8a5b1fceb9de38e07c0163c572616d21efd4c443a64bf7c8dbd52094",
+      "claim": "cached-key arguments do not establish a no-process-access mode"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1430,
+      "end": 1467,
+      "checked_terms": [
+        "if best is None:",
+        "best_applied = -1",
+        "return conn"
+      ],
+      "excerpt_sha256": "910ef36531c7a95db27f333dba0d41a0fcac445c3187c4355197f2853f4c3d05",
+      "claim": "old/main-only fallback returns a connection"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1470,
+      "end": 1486,
+      "checked_terms": [
+        "PRAGMA quick_check"
+      ],
+      "excerpt_sha256": "0e531c00148511b6a65312d68ef2978b4a7d5e023261ff9aa0a639f03ea5e32c",
+      "claim": "structural readability check, not provenance"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1492,
+      "end": 1551,
+      "checked_terms": [
+        "hdr[8:16] != wal_salt",
+        "out.write(pt)",
+        "return last"
+      ],
+      "excerpt_sha256": "3fd22eabf609a08e2499194d371b6b95a7cf3570c00d2480a568af3fcad68884",
+      "claim": "full body does not consume commit marker or cumulative frame checksums"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1576,
+      "end": 1614,
+      "checked_terms": [
+        "self.extract_keys()",
+        "self._save_keys()"
+      ],
+      "excerpt_sha256": "9fe25206a950f518f413086d0b61becf937b50ba6b658b6afcfeffc9695f2e1a",
+      "claim": "new shard discovery may acquire more keys"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1628,
+      "end": 1639,
+      "checked_terms": [
+        "_md5_hex(user.encode())",
+        "return found"
+      ],
+      "excerpt_sha256": "f8bb17eb7f7c015482a128f821350b3d070d4e247ba7b09d4b9a91dd40a3ce43",
+      "claim": "table locator, not target authentication"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1661,
+      "end": 1693,
+      "checked_terms": [
+        "self._open(rel)",
+        "self._find_msg_tables"
+      ],
+      "excerpt_sha256": "f19612ff78b4c8439a78f075cb34d77776c1a2c95cf2bd116e29ee122baec65c",
+      "claim": "opens shards independently"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1735,
+      "end": 1768,
+      "checked_terms": [
+        "server_id, sort_seq",
+        "except sqlite3.DatabaseError:",
+        "continue"
+      ],
+      "excerpt_sha256": "5ac6f50f199ef565d0f2d81bea43cd2e612e2d4aa8843245a62b91be417cc074",
+      "claim": "raw select includes ID; shard errors are swallowed"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 1986,
+      "end": 2005,
+      "checked_terms": [
+        "limit: int = 200",
+        "WHERE sort_seq > ?",
+        "rows[:want]"
+      ],
+      "excerpt_sha256": "f6e958c7658bd8d0341607d96ec5646f5afe344838a0cc4398bfe1c82b30590b",
+      "claim": "scalar sequence keyset with capped pages"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2007,
+      "end": 2040,
+      "checked_terms": [
+        "sender_id != 2",
+        "\"sender_username\"",
+        "\"sort_seq\""
+      ],
+      "excerpt_sha256": "fa15833b7f4e9836c55f5916a643578c13a0e6c2e050929b067e551ad3919fb0",
+      "claim": "public projection drops server_id and shard, skips sender rowid 2"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2416,
+      "end": 2435,
+      "checked_terms": [
+        "SELECT rowid, user_name FROM SenderName2Id",
+        "self._sender_id_cache = idx"
+      ],
+      "excerpt_sha256": "00a578672fbbce967dfdee6b7e73dfdc91f5eb201a64905f9d2f95f2aae7cbce",
+      "claim": "sender map cache"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2778,
+      "end": 2830,
+      "checked_terms": [
+        "self._load_watermark()",
+        "listener_watermark.json"
+      ],
+      "excerpt_sha256": "e699d0f6fddde20a3856a80bfa4f430fee063822cb31f080a77c3bdcc9224b60",
+      "claim": "persistent watermark loaded by default"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2862,
+      "end": 2867,
+      "checked_terms": [
+        "if user not in self._watermark:"
+      ],
+      "excerpt_sha256": "ede28c5d3c0a3aee72256535568c57e43690f1bda3bb8950f055019f27497eb4",
+      "claim": "only absent watermark gets current baseline"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2921,
+      "end": 2932,
+      "checked_terms": [
+        "q.put(_LISTENER_STOP)",
+        "t.join(timeout=5)"
+      ],
+      "excerpt_sha256": "d0d4a9fed50b2f95f5fc9fda1af014484ec8ac32569fa0d3988e796cd11315fc",
+      "claim": "tail sentinel and timed joins without liveness confirmation"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2942,
+      "end": 2964,
+      "checked_terms": [
+        "since = max(",
+        "self._inflight[user] = last_seq"
+      ],
+      "excerpt_sha256": "e5a438587b431cfcff3501d4fcfcf7d2610f753327960a2f2dd946b983886c6f",
+      "claim": "dispatched seq becomes next poll boundary"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2966,
+      "end": 3002,
+      "checked_terms": [
+        "q = queue.Queue()",
+        "self._commit_watermark(user, m.get(\"sort_seq\"))"
+      ],
+      "excerpt_sha256": "0efbf27d23801779a9ef930d24cc5c4456e2b8de3b3a66843919f036a951364e",
+      "claim": "unbounded queue and watermark after retry exhaustion"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 3004,
+      "end": 3022,
+      "checked_terms": [
+        "for attempt in range",
+        "for cb in cbs:",
+        "time.sleep(self.retry_delay)"
+      ],
+      "excerpt_sha256": "1ddc91c6a81e24c81d09c00c38f6705c924f3426acacdc6969e41f36c21202ed",
+      "claim": "whole callback group retried without stop check"
+    },
+    {
+      "file": "wechatauto/wx.py",
+      "start": 240,
+      "end": 299,
+      "checked_terms": [
+        "is_self = sender_id == 2",
+        "msg.attr = 'self' if is_self else 'friend'"
+      ],
+      "excerpt_sha256": "191b701d8e058dfdda8010a4ddfb05d3c91eab280cb129b64a3f951c6914b059",
+      "claim": "binary role decision ignores resolved username"
+    },
+    {
+      "file": "wechatauto/wx.py",
+      "start": 481,
+      "end": 504,
+      "checked_terms": [
+        "return self._gui.send_msg(msg, target)"
+      ],
+      "excerpt_sha256": "fa7fcff87175a7c4a078e436e4cf3bdb960b99e5fda66ee5e2aef0a6f1d07b7a",
+      "claim": "send delegates to GUI; minimized send not demonstrated"
+    }
+  ],
+  "license": "Apache-2.0",
+  "candidate_version": "1.2.5.1",
+  "upstream_declared_tested_wechat": "4.1.15.13",
+  "local_target_wechat": "4.1.15.50",
+  "live_compatibility_verified": false,
+  "report": "docs/DB_COLLECTOR_FEASIBILITY.md",
+  "decision": "Not admissible. Frozen-snapshot pagination experiment is useful but not a live collector.",
+  "new_findings": [
+    "sender rowid 2 assumption remains in incoming wrapper despite README caveat",
+    "WAL merge body does not consume commit markers/cumulative frame checksums"
+  ],
+  "remaining": [
+    "No validated .50 committed snapshot acquisition implementation",
+    "No source distinction between later observed history and live incoming rows",
+    "No authenticated account/peer binding or sender mapping epoch",
+    "No independently verified minimized sender"
+  ],
+  "authoritative_references": [
+    "https://www.sqlite.org/fileformat2.html#wal_file_format",
+    "https://www.sqlite.org/isolation.html",
+    "https://www.sqlite.org/backup.html",
+    "https://www.sqlite.org/rowvalue.html#scrolling_window_queries",
+    "https://docs.python.org/3/library/threading.html#threading.Thread.join"
+  ]
+}
