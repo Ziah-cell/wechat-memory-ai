@@ -1,0 +1,101 @@
+{
+  "client_date": "2026-10-10",
+  "host_checked_at_utc": "2026-10-09T18:59:21.160898+00:00",
+  "base_commit": "0743a4cd7ed1ec2db9e885d7974f4aa11e6502ad",
+  "scope": "Self-owned native process fixture; no hook or WeChat target",
+  "toolchain": {
+    "version": "0.14.1",
+    "index_url": "https://ziglang.org/download/index.json",
+    "index_sha256": "3792de22f982011a3da915b8a8b92b0b3d10e0249726ac0fcaa69e66130e847e",
+    "tarball": "https://ziglang.org/download/0.14.1/zig-x86_64-windows-0.14.1.zip",
+    "shasum": "554f5378228923ffd558eac35e21af020c73789d87afeabf4bfd16f2e6feed2c",
+    "size": "82229343"
+  },
+  "build": {
+    "command": [
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+      "cc",
+      "-target",
+      "x86_64-windows-gnu",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\resident_publisher_fixture.c",
+      "-o",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\resident_publisher_fixture.exe"
+    ],
+    "exit": 0,
+    "seconds": 0.47544259997084737,
+    "output": "",
+    "source_sha256": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+    "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "exe_sha256": "9c5225def798ea77507dce2643282479869c35fb5e49cc7841a50512b4e41307"
+  },
+  "assembly": {
+    "path": "data/resident-publisher-20261010/fixture-882328c3.s",
+    "sha256": "bda1fc3f5881854a49c28ababa0666acd053e6e806aa1c797293016acc579533",
+    "source_sha256": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+    "kind": "same-source compiler listing, not final PE disassembly or runtime trace",
+    "functions": {
+      "publish": "publish:                                # @publish\n.Lfunc_begin4:\n.seh_proc publish\n\tpushq\t%rbp\n\t.seh_pushreg %rbp\n\tmovq\t%rsp, %rbp\n\t.seh_setframe %rbp, 0\n\t.seh_endprologue\n.Ltmp214:\n\tmovq\t8(%rcx), %rax\n\tmovl\t60(%rax), %eax\n\tcmpl\t$1, %eax\n\tjne\t.LBB4_10\n.Ltmp215:\n\tcmpl\t$32, %r8d\n\tjne\t.LBB4_2\n.Ltmp216:\n\tmovl\t$1, %r8d\n.Ltmp217:\n\txorl\t%eax, %eax\n\tlock\t\tcmpxchgl\t%r8d, 16(%rcx)\n\tmovq\t8(%rcx), %r8\n\tjne\t.LBB4_4\n.Ltmp218:\n\tmovl\t60(%r8), %eax\n\tcmpl\t$1, %eax\n\tjne\t.LBB4_9\n.Ltmp219:\n\tmovq\t8(%rcx), %r8\n\tmovq\t64(%r8), %rax\n.Ltmp220:\n\tcmpq\t$8, %rax\n\tjne\t.LBB4_8\n.Ltmp221:\n\tmovl\t$4, %edx\n.Ltmp222:\n\tmovl\t$1, %eax\n.Ltmp223:\n\tlock\t\tcmpxchgl\t%edx, 60(%r8)\n.Ltmp224:\n\tjmp\t.LBB4_9\n.Ltmp225:\n.LBB4_2:\n\tmovq\t8(%rcx), %rcx\n.Ltmp226:\n\tmovl\t$6, %edx\n.Ltmp227:\n\tmovl\t$1, %eax\n\tlock\t\tcmpxchgl\t%edx, 60(%rcx)\n.Ltmp228:\n\tjmp\t.LBB4_10\n.Ltmp229:\n.LBB4_4:\n\tmovl\t$5, %ecx\n.Ltmp230:\n\tmovl\t$1, %eax\n\tlock\t\tcmpxchgl\t%ecx, 60(%r8)\n.Ltmp231:\n\tjmp\t.LBB4_10\n.Ltmp232:\n.LBB4_8:\n\tleaq\t(%rax,%rax,4), %r9\n.Ltmp233:\n\taddq\t$1, %rax\n.Ltmp234:\n\tmovq\t%rax, 72(%r8,%r9,8)\n\tmovups\t(%rdx), %xmm0\n\tmovups\t16(%rdx), %xmm1\n\tmovups\t%xmm0, 80(%r8,%r9,8)\n\tmovups\t%xmm1, 96(%r8,%r9,8)\n\tmovq\t8(%rcx), %rdx\n.Ltmp235:\n\tmovq\t%rax, 64(%rdx)\n.Ltmp236:\n.LBB4_9:\n\txorl\t%eax, %eax\n\txchgl\t%eax, 16(%rcx)\n.Ltmp237:\n.LBB4_10:\n\tpopq\t%rbp\n\tretq\n.Ltmp238:\n.Lfunc_end4:\n\t.seh_endproc",
+      "wrapped": "wrapped:                                # @wrapped\n.Lfunc_begin2:\n.seh_proc wrapped\n\tpushq\t%rbp\n\t.seh_pushreg %rbp\n\tpushq\t%rsi\n\t.seh_pushreg %rsi\n\tpushq\t%rdi\n\t.seh_pushreg %rdi\n\tpushq\t%rbx\n\t.seh_pushreg %rbx\n\tsubq\t$72, %rsp\n\t.seh_stackalloc 72\n\tleaq\t64(%rsp), %rbp\n\t.seh_setframe %rbp, 64\n\t.seh_endprologue\n\tmovl\t%edx, %r8d\n\tmovq\t%rcx, %rsi\n\tmovl\t$1, %ebx\n.Ltmp191:\n\tlock\t\txaddq\t%rbx, 24(%rcx)\n\tleaq\t1(%rbx), %rdi\n.Ltmp192:\n\tmovq\t%rdi, -32(%rbp)\n\tmovl\t$2779096485, %eax               # imm = 0xA5A5A5A5\n\txorq\t%rdi, %rax\n\tmovq\t%rax, -24(%rbp)\n\tleaq\t8(%rbx), %rax\n\tmovq\t%rax, -16(%rbp)\n\tleaq\t(%rdi,%rdi,2), %rax\n\tmovq\t%rax, -8(%rbp)\n\tleaq\t-32(%rbp), %rdx\n.Ltmp193:\n\tcallq\tpublish\n.Ltmp194:\n\tmovq\t%rsi, %rcx\n\tmovq\t%rdi, %rdx\n\tcallq\toriginal\n.Ltmp195:\n\tleaq\t(%rbx,%rbx,4), %rcx\n\taddq\t$16, %rcx\n\tcmpq\t%rcx, %rax\n\tje\t.LBB2_2\n.Ltmp196:\n\tlock\t\taddq\t$1, 40(%rsi)\n.Ltmp197:\n.LBB2_2:\n\taddq\t$72, %rsp\n\tpopq\t%rbx\n\tpopq\t%rdi\n.Ltmp198:\n\tpopq\t%rsi\n.Ltmp199:\n\tpopq\t%rbp\n\tretq\n.Ltmp200:\n.Lfunc_end2:\n\t.seh_endproc",
+      "original": "original:                               # @original\n.Lfunc_begin5:\n.seh_proc original\n\tpushq\t%rbp\n\t.seh_pushreg %rbp\n\tmovq\t%rsp, %rbp\n\t.seh_setframe %rbp, 0\n\t.seh_endprologue\n.Ltmp239:\n\tlock\t\taddq\t$1, 32(%rcx)\n\tleaq\t(%rdx,%rdx,4), %rax\n\taddq\t$11, %rax\n\tpopq\t%rbp\n\tretq\n.Ltmp240:\n.Lfunc_end5:\n\t.seh_endproc"
+    },
+    "publisher_calls": 0,
+    "publisher_backward_branches": 0
+  },
+  "compiler_inventory": "Get-Command cl/clang/clang-cl/gcc/zig absent and four common install paths absent; not exhaustive",
+  "preflight_failure": {
+    "old_handoff_base": "dc5ae249925e20d9fbd105230637d60b56107a72",
+    "actual_base": "0743a4cd7ed1ec2db9e885d7974f4aa11e6502ad",
+    "failed_script_sha256": "2a74c2ba383cb05111280dc8c3570e65acfbf4e47951c60ed40f9868e2b17146",
+    "exit": 1,
+    "new_evidence_written_before_failure": false,
+    "intervening_commit": "quota save in docs/STATUS.md and docs/PLAN.md only; preserved"
+  },
+  "auxiliary_diagnostics": [
+    "Default Python pefile import failed; no installation performed.",
+    "Standard-library PE header check: Machine 0x8664, seven sections, zero COFF symbols; no final PE symbolic disassembly claimed."
+  ],
+  "ownership": {
+    "owner": "native target executable, direct compiled calls",
+    "records": 8,
+    "payload_bytes": 32,
+    "mapping_bytes": 4096,
+    "layout_bytes": 392,
+    "consumer": "FILE_MAP_READ, VirtualQuery PAGE_READONLY",
+    "reuse": "none within one target session",
+    "fault_policy": "sticky state; next calls still execute original",
+    "stop_semantics": "last consumer validation is acceptance point; previously accepted output cannot be retracted"
+  },
+  "references": [
+    "https://ziglang.org/download/index.json",
+    "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile",
+    "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-createfilemappingw",
+    "https://learn.microsoft.com/en-us/windows/win32/memory/closing-a-file-mapping-object"
+  ],
+  "cache_files": [
+    {
+      "path": "data/resident-publisher-20261010/build-94f3d800bc3c.json",
+      "sha256": "8b80bf95714d7efe90a862b20cc220c04dc2bee0ee4ff72697cac40d71cf6b4a"
+    },
+    {
+      "path": "data/resident-publisher-20261010/build-before-noinline.json",
+      "sha256": "8b80bf95714d7efe90a862b20cc220c04dc2bee0ee4ff72697cac40d71cf6b4a"
+    },
+    {
+      "path": "data/resident-publisher-20261010/build-c1604ce589e8.json",
+      "sha256": "f8fc69b94f09f9c7e4a5ad1375b5ba84a011d19eb52a731f377abc7fb8e38608"
+    },
+    {
+      "path": "data/resident-publisher-20261010/fixture-before-noinline.c",
+      "sha256": "661b1a7f8925bbf9e326ad899d62b9fd96995d9b231a3e67df7e45685c0b5c2a"
+    },
+    {
+      "path": "data/resident-publisher-20261010/fixture-before-noinline.exe",
+      "sha256": "29e05ee2c1b507dcd9e704c281058e31bb06e36a8601a3066981a0f3d7617226"
+    }
+  ]
+}
