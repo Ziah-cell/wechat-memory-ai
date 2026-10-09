@@ -1,0 +1,860 @@
+{
+  "checked_at_utc": "2026-10-09T10:22:51.703425+00:00",
+  "base_commit": "07d2d91fb3176f9abc8051261934b32edb8df339",
+  "fixture_only": true,
+  "kind": "diagnostic contrasts; not recovery acceptance pass",
+  "initial_setup_error": {
+    "stage": "before any debugger attach",
+    "used_thread_access": "0x100a",
+    "observed": "thread ownership check failed",
+    "correction": "THREAD_QUERY_LIMITED_INFORMATION is 0x0800; corrected mask to 0x080a from pinned winnt.h",
+    "fixture_closed_in_finally": true,
+    "win32_error_code_captured": false
+  },
+  "counts": {
+    "diagnostic_runs": 14,
+    "baseline_or_normal_recovered": 2,
+    "forced_exit_hung_until_fixture_teardown": 3,
+    "forced_exit_single_step_exit": 6,
+    "controlled_disable_before_next_call_recovered": 3
+  },
+  "command_exits": {
+    "initial_matrix": 1,
+    "causal_only": 0
+  },
+  "causal_interpretation": "Enabled slot-0 residue explains the tested post-return failure. TF was clear. Disabling slot before next synthetic call removes failure; target-call sequencing makes this unsuitable as automatic recovery proof.",
+  "cases": [
+    {
+      "mode": "baseline",
+      "repeat": 0,
+      "recovered": true,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 0,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "normal_detach",
+      "repeat": 0,
+      "recovered": true,
+      "call_before_exit": true,
+      "observer_exit": 0,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 0,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "kill_before_hit",
+      "repeat": 0,
+      "recovered": false,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x200",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x1"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x200",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x1"
+        }
+      ]
+    },
+    {
+      "mode": "kill_before_hit",
+      "repeat": 1,
+      "recovered": false,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x244",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x1"
+        }
+      ]
+    },
+    {
+      "mode": "kill_before_hit",
+      "repeat": 2,
+      "recovered": false,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 1,
+          "resume_prior_count": 2,
+          "context_flags": "0x100011",
+          "eflags": "0x244",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x1"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_hit",
+      "repeat": 0,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_hit",
+      "repeat": 1,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_hit",
+      "repeat": 2,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_settled_hit",
+      "repeat": 0,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_settled_hit",
+      "repeat": 1,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "kill_after_settled_hit",
+      "repeat": 2,
+      "recovered": false,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "recovery_failed": true,
+      "fixture_exit_before_teardown": 1,
+      "fixture_error_tail": [
+        "OSError: exception: single step"
+      ],
+      "fixture_exit_after_teardown": 1,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        }
+      ]
+    },
+    {
+      "mode": "disable_before_next_call",
+      "repeat": 0,
+      "recovered": true,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "manual_disable": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "changed_field": "DR7 slot-0 enable bits only"
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 0,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_controlled_disable",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "disable_before_next_call",
+      "repeat": 1,
+      "recovered": true,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "manual_disable": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "changed_field": "DR7 slot-0 enable bits only"
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 0,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_controlled_disable",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "disable_before_next_call",
+      "repeat": 2,
+      "recovered": true,
+      "call_before_exit": true,
+      "observer_exit": 1,
+      "manual_disable": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "changed_field": "DR7 slot-0 enable bits only"
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_error_tail": [],
+      "fixture_exit_after_teardown": 0,
+      "snapshots": [
+        {
+          "stage": "before_attach",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        },
+        {
+          "stage": "before_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_observer_exit",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": true,
+          "enabled_slots_mask": 1,
+          "dr0_nonzero": true,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0xffff0ff0",
+          "dr7": "0x401"
+        },
+        {
+          "stage": "after_controlled_disable",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "context_flags": "0x100011",
+          "eflags": "0x246",
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr0_nonzero": false,
+          "dr1_to_dr3_zero": true,
+          "dr6": "0x0",
+          "dr7": "0x0"
+        }
+      ]
+    }
+  ],
+  "cache_files": [
+    {
+      "path": "data/bounded-receive-crash-20261009/register-diagnostics-initial.json",
+      "sha256": "71e80e9b5b79b645784e43f84e3f6e75f966532029e24e92f8d00ae922554ca7"
+    },
+    {
+      "path": "data/bounded-receive-crash-20261009/diagnose-initial.py",
+      "sha256": "94daa7c27a5e1f29c5dc579ce73c5fcabc528dbb69e16835e74aaf013b9a73ac"
+    },
+    {
+      "path": "data/bounded-receive-crash-20261009/causal-disable.json",
+      "sha256": "87b17b059cad4442eb328d24aac7eb9ffefb901204b109d5fc23fda39e895701"
+    },
+    {
+      "path": "data/bounded-receive-crash-20261009/targeted-suite.json",
+      "sha256": "d3e9a421665429eaf84f71986f5398cf2e505e414777f48012b57b0abb6211d6"
+    },
+    {
+      "path": "data/bounded-receive-crash-20261009/targeted-suite.txt",
+      "sha256": "79c1385fc52fea012ef2478f7b4619f1c75076cd34c7428a89f43c64040df589"
+    },
+    {
+      "path": "data/bounded-receive-crash-20261009/header-source.json",
+      "sha256": "c77ca8c13ac28f5ae097e3a0ee27fc185e9ef1e3469cf04e4b5d6d1c218cf618"
+    }
+  ],
+  "microsoft_header": {
+    "url": "https://raw.githubusercontent.com/microsoft/win32metadata/76c04c2021ef4a831a6f1e06d9566002d746139b/generation/WinSDK/RecompiledIdlHeaders/um/winnt.h",
+    "sha256": "404019933323ca25f5db8ce14437483e1054398ce454d5c75df2e187cec2ae40",
+    "bytes": 849622
+  }
+}

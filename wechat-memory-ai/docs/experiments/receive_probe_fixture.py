@@ -66,7 +66,8 @@ def main():
     threading.Thread(target=input_thread, daemon=True).start()
     def emit(value):
         print(json.dumps(value), flush=True)
-    emit({"kind": "ready", "pid": os.getpid(), "address": address, "signature": "4889d0c3"})
+    emit({"kind": "ready", "pid": os.getpid(), "main_tid": threading.get_native_id(),
+          "address": address, "signature": "4889d0c3"})
     count = 0
     heartbeat = 0
     try:
