@@ -1,0 +1,994 @@
+{
+  "checked_at_utc": "2026-10-09T10:41:45.700750+00:00",
+  "base_commit": "4a2e8cd6807254fd1b8f2b94627077c9b96e008f",
+  "rounds": [
+    {
+      "label": "original cleanup",
+      "cache_file": "run-c5dd4300bd00.json",
+      "total": 3,
+      "recovered": 1,
+      "cases": [
+        {
+          "mode": "broker_front_busy",
+          "repeat": 0,
+          "recovered": false,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "failure_type": "TimeoutExpired",
+          "fixture_exit_before_teardown": 1,
+          "fixture_exit_after_teardown": 1,
+          "fixture_error_tail": [
+            "OSError: exception: single step"
+          ],
+          "observer_error_tail": [],
+          "observer_exit_after_teardown": 1,
+          "seconds": 7.453,
+          "observer_result": {
+            "cleanup": "cleanup_unknown",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 15,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 16
+              },
+              "callback_stops": 16,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 1,
+          "recovered": false,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "failure_type": "TimeoutExpired",
+          "fixture_exit_before_teardown": 1,
+          "fixture_exit_after_teardown": 1,
+          "fixture_error_tail": [
+            "OSError: exception: single step"
+          ],
+          "observer_error_tail": [],
+          "observer_exit_after_teardown": 1,
+          "seconds": 7.484,
+          "observer_result": {
+            "cleanup": "cleanup_unknown",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 14,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 15
+              },
+              "callback_stops": 15,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 2,
+          "recovered": true,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "burst_calls": 668,
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 0,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit": 0,
+          "observer_exit_after_teardown": 0,
+          "seconds": 1.5,
+          "observer_result": {
+            "cleanup": "detached",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 14,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 6
+              },
+              {
+                "api": "interrupt_active",
+                "hr": "0x0"
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 15,
+                "0x8000000a": 1
+              },
+              "callback_stops": 15,
+              "status_hr": "0x0",
+              "status": 6,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "invalidate stale stop only",
+      "cache_file": "run-288216e38fdc.json",
+      "total": 3,
+      "recovered": 1,
+      "cases": [
+        {
+          "mode": "broker_front_busy",
+          "repeat": 0,
+          "recovered": true,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "burst_calls": 650,
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 0,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit": 0,
+          "observer_exit_after_teardown": 0,
+          "seconds": 1.453,
+          "observer_result": {
+            "cleanup": "detached",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 14,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 6
+              },
+              {
+                "api": "interrupt_active",
+                "hr": "0x0"
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 15,
+                "0x8000000a": 1
+              },
+              "callback_stops": 15,
+              "status_hr": "0x0",
+              "status": 6,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 1,
+          "recovered": false,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "failure_type": "TimeoutExpired",
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 1,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit_after_teardown": 1,
+          "seconds": 10.453,
+          "observer_result": {
+            "cleanup": "cleanup_unknown",
+            "cleanup_error": "resume",
+            "stop_reason": "cancelled",
+            "hits": 16,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 17
+              },
+              "callback_stops": 17,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 2,
+          "recovered": false,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "failure_type": "TimeoutExpired",
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 1,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit_after_teardown": 1,
+          "seconds": 10.469,
+          "observer_result": {
+            "cleanup": "cleanup_unknown",
+            "cleanup_error": "resume",
+            "stop_reason": "cancelled",
+            "hits": 13,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 14
+              },
+              "callback_stops": 14,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "invalidate stale stop and avoid duplicate GO",
+      "cache_file": "run-4dd7dad68ac6.json",
+      "total": 3,
+      "recovered": 3,
+      "cases": [
+        {
+          "mode": "broker_front_busy",
+          "repeat": 0,
+          "recovered": true,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "burst_calls": 644,
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 0,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit": 0,
+          "observer_exit_after_teardown": 0,
+          "seconds": 1.516,
+          "observer_result": {
+            "cleanup": "detached",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 8,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              },
+              {
+                "api": "already_go",
+                "status": 1
+              },
+              {
+                "api": "interrupt_active",
+                "hr": "0x0"
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 9
+              },
+              "callback_stops": 9,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 1,
+          "recovered": true,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "burst_calls": 653,
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 0,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit": 0,
+          "observer_exit_after_teardown": 0,
+          "seconds": 1.5,
+          "observer_result": {
+            "cleanup": "detached",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 13,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              },
+              {
+                "api": "already_go",
+                "status": 1
+              },
+              {
+                "api": "interrupt_active",
+                "hr": "0x0"
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 14
+              },
+              "callback_stops": 14,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        },
+        {
+          "mode": "broker_front_busy",
+          "repeat": 2,
+          "recovered": true,
+          "post_arm_main_thread_progress": true,
+          "killed_role": "controller",
+          "burst_calls": 652,
+          "fixture_exit_before_teardown": null,
+          "fixture_exit_after_teardown": 0,
+          "fixture_error_tail": [],
+          "observer_error_tail": [],
+          "observer_exit": 0,
+          "observer_exit_after_teardown": 0,
+          "seconds": 1.5,
+          "observer_result": {
+            "cleanup": "detached",
+            "cleanup_error": null,
+            "stop_reason": "cancelled",
+            "hits": 15,
+            "cleanup_api": [
+              {
+                "api": "status",
+                "hr": "0x0",
+                "value": 1
+              },
+              {
+                "api": "already_go",
+                "status": 1
+              },
+              {
+                "api": "interrupt_active",
+                "hr": "0x0"
+              },
+              {
+                "api": "remove_breakpoint",
+                "hr": "0x0"
+              },
+              {
+                "api": "detach",
+                "hr": "0x0"
+              }
+            ],
+            "fixture_diagnostics": {
+              "wait_hresult_counts": {
+                "0x0": 16
+              },
+              "callback_stops": 16,
+              "status_hr": "0x0",
+              "status": 1,
+              "type_hr": "0x0",
+              "type": 2,
+              "qualifier": 0
+            }
+          },
+          "snapshots": [
+            {
+              "stage": "baseline",
+              "prior_suspend_count": 0,
+              "resume_prior_count": 1,
+              "trap_flag": false,
+              "dr0_is_fixture_function": false,
+              "enabled_slots_mask": 0,
+              "dr7": "0x0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_busy_frontend_cases": [
+    {
+      "mode": "broker_front_busy",
+      "repeat": 0,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 657,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.594,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 10,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 1
+          },
+          {
+            "api": "already_go",
+            "status": 1
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 11
+          },
+          "callback_stops": 11,
+          "status_hr": "0x0",
+          "status": 1,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "broker_front_busy",
+      "repeat": 1,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 645,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.484,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 14,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 1
+          },
+          {
+            "api": "already_go",
+            "status": 1
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 15
+          },
+          "callback_stops": 15,
+          "status_hr": "0x0",
+          "status": 1,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "broker_front_busy",
+      "repeat": 2,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 646,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.5,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 13,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 1
+          },
+          {
+            "api": "already_go",
+            "status": 1
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 14
+          },
+          "callback_stops": 14,
+          "status_hr": "0x0",
+          "status": 1,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "broker_front_busy",
+      "repeat": 3,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 644,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.469,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 14,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 1
+          },
+          {
+            "api": "already_go",
+            "status": 1
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 15
+          },
+          "callback_stops": 15,
+          "status_hr": "0x0",
+          "status": 1,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "broker_front_busy",
+      "repeat": 4,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 645,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.469,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 15,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 1
+          },
+          {
+            "api": "already_go",
+            "status": 1
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 16
+          },
+          "callback_stops": 16,
+          "status_hr": "0x0",
+          "status": 1,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    },
+    {
+      "mode": "broker_front_busy",
+      "repeat": 5,
+      "recovered": true,
+      "post_arm_main_thread_progress": true,
+      "killed_role": "controller",
+      "burst_calls": 641,
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_error_tail": [],
+      "observer_error_tail": [],
+      "observer_exit": 0,
+      "observer_exit_after_teardown": 0,
+      "seconds": 1.485,
+      "observer_result": {
+        "cleanup": "detached",
+        "cleanup_error": null,
+        "stop_reason": "cancelled",
+        "hits": 12,
+        "cleanup_api": [
+          {
+            "api": "status",
+            "hr": "0x0",
+            "value": 6
+          },
+          {
+            "api": "interrupt_active",
+            "hr": "0x0"
+          },
+          {
+            "api": "remove_breakpoint",
+            "hr": "0x0"
+          },
+          {
+            "api": "detach",
+            "hr": "0x0"
+          }
+        ],
+        "fixture_diagnostics": {
+          "wait_hresult_counts": {
+            "0x0": 13,
+            "0x8000000a": 1
+          },
+          "callback_stops": 13,
+          "status_hr": "0x0",
+          "status": 6,
+          "type_hr": "0x0",
+          "type": 2,
+          "qualifier": 0
+        }
+      },
+      "snapshots": [
+        {
+          "stage": "baseline",
+          "prior_suspend_count": 0,
+          "resume_prior_count": 1,
+          "trap_flag": false,
+          "dr0_is_fixture_function": false,
+          "enabled_slots_mask": 0,
+          "dr7": "0x0"
+        }
+      ]
+    }
+  ],
+  "corrected_busy_frontend_counts": {
+    "total": 9,
+    "recovered": 9
+  },
+  "corrected_idle_frontend_counts": {
+    "total": 3,
+    "recovered": 3
+  },
+  "debugger_owner_crash_counts": {
+    "total": 3,
+    "recovered": 0
+  },
+  "limited_claim": "Normal cleanup in the surviving broker improved in tested schedules; debugger owner crash recovery remains failed.",
+  "fix_location": "docs/experiments/receive_probe_variants.py:FreshStopEngine; original observer unchanged",
+  "initial_harness_abort": {
+    "batch": "run-ab5be026b48e.json",
+    "saved_cases_before_abort": 14,
+    "next_case": "broker_front_busy repeat0",
+    "error": "subprocess.TimeoutExpired waiting for broker exit",
+    "failing_case_detail_saved": false,
+    "creator_teardown_executed": true,
+    "harness_correction": "Catch TimeoutExpired as a recorded failure; no timeout extension or assertion relaxation."
+  },
+  "command_exits": {
+    "original_broker_batch": 1,
+    "stop_only_batch": 1,
+    "corrected_broker_batch": 1,
+    "extra_busy_frontend_batch": 0
+  }
+}

@@ -80,6 +80,23 @@ def main():
                 emit({"kind": "exit", "calls": count})
                 break
             if command:
+                if command == "ping":
+                    emit({"kind": "pong"})
+                    continue
+                if command == "burst":
+                    # Autonomous calls continue while the harness kills a worker
+                    # or debugger; no wait-for-repair handshake and no catch.
+                    until = time.monotonic() + 1
+                    burst_calls = 0
+                    while time.monotonic() < until:
+                        assert function(None, samples["miss"]) == samples["miss"]
+                        burst_calls += 1
+                        if burst_calls == 1:
+                            emit({"kind": "burst_started"})
+                        time.sleep(0.001)
+                    count += burst_calls
+                    emit({"kind": "burst_done", "calls": burst_calls})
+                    continue
                 if command == "fatal":
                     k.CreateThread.argtypes = [c.c_void_p, c.c_size_t, c.c_void_p, c.c_void_p,
                                                c.c_uint32, c.POINTER(c.c_uint32)]
