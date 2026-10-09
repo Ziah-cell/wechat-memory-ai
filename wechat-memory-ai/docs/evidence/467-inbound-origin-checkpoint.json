@@ -1,0 +1,188 @@
+{
+  "checked_at_utc": "2026-10-09T01:20:24.291701+00:00",
+  "base_commit": "6f0f902e2b0daee39fb83cc6663d7f70b2f3fbce",
+  "product_version": "0.1.22",
+  "auto_reply_enabled": false,
+  "runnable_minimized_adapter": false,
+  "phase": "stopped",
+  "stop_reason": "native_reader_timeout",
+  "saved_runtime_sha256": "83ad7e3c3d8d26b99f4fdd9856fab9974e06e2a445c7873df26e44962df07f09",
+  "current_window_verified": false,
+  "source_files_unchanged": 29,
+  "source_hashes": {
+    "src/wechat_memory/__init__.py": "dd7018432917f527fde7eefedecad5b9fc9ba99b8f0580e857941b00f7c7d6b0",
+    "src/wechat_memory/__main__.py": "bd045ddd5242d002f692dac452be9afba38deef5cde541a5fc074bfef5987b91",
+    "src/wechat_memory/adapters.py": "f763be8bd0a788527af513aae77b2711b063e080d2f5a26bf3f29fd0731c7162",
+    "src/wechat_memory/audit.py": "b7f9cd95ff7cf9c34cf264061faedea8f3b23af02425c1f5c9fc277470346f26",
+    "src/wechat_memory/backup.py": "8e8685930bbc83867213c99fd03f7b3b8b5610c334bd9d2df7dd66aee238785f",
+    "src/wechat_memory/callback_inbox.py": "1e69823d62b85f7e4d66eb67ce43b08d8d6561961df41867f6162638fd2ee9ef",
+    "src/wechat_memory/cli.py": "b746f4e9e97ff46c58f21f588188296ae02e39583f9c2b8790bdf264bc41c634",
+    "src/wechat_memory/config.py": "6cc4197ec8e282c606247efe14786a07301209774bec3446ccd6ff4f2ce70928",
+    "src/wechat_memory/engine.py": "a08a684479f2e9fee26affafa17cbee852973d2da82309bc07491272bfd7109c",
+    "src/wechat_memory/inbound_capabilities.py": "7b8bc33e960c87c8893bebea953f1f5083a51f34a69944b0130fce9c8ebb33cb",
+    "src/wechat_memory/live_read.py": "fe79517aabdc61ac03645e00ebdbd092d01234a0c6ae148251133e4d789c3625",
+    "src/wechat_memory/live_reader.cs": "990161fe11d8e55772509fdd5346585b72b254ccdf97dfda812146af35acd585",
+    "src/wechat_memory/live_source.py": "119ff741088df274f29fa543ea7244a7f9b3de3396377c2f19dae25edd53f831",
+    "src/wechat_memory/memory.py": "9b6a4aae32add11aaa4a99a761015c2b21bc589140fa86532b7bd9c114a2072c",
+    "src/wechat_memory/models.py": "cd1fba0595ce24d7bd5367df2b94bc2eed16c36778dfa7cdd9f0cafbf8fd2ba8",
+    "src/wechat_memory/monitor.py": "a0d6e1aa616e09cbb295fa39875c743df74ca884e4ed87937f3dd6d00f880deb",
+    "src/wechat_memory/ocr_check.py": "10d01056d43a8f8ca7a741d32d3e72fce8ada5333c3cd79f387e9c16c81e7f2b",
+    "src/wechat_memory/ocr_synthetic.ps1": "d7cb3f05e29e19c06d3f049fccc75e11efa29f4a7b7688b8192b06d30f94f52f",
+    "src/wechat_memory/offline_check.py": "8cb42548c9898af61d1db691b4b9a3aad9fd1405cfbf223e23c5da91d002a02d",
+    "src/wechat_memory/operations.py": "2f525139d8728144db88cbfc1255a7d3829c6190167bb76ce67d5f346c28577c",
+    "src/wechat_memory/power.py": "01d516383d2d7ff1bdd49c37d2d7c63dd34bc30e7c3284ef8930c912a1722181",
+    "src/wechat_memory/preferences.py": "5433c91d5d12e5f52459ed0f12c7612e0c22c6ff1aaaa207da261eb91681426a",
+    "src/wechat_memory/preflight.py": "eb7b18b5f23dc563be345933edcd1d46403d00bfde8f2dd8c64d3f8a54867ac8",
+    "src/wechat_memory/runtime.py": "b8444ee169aff426d8fb4f9f7c55b5aeadc5938f31a8d70d4abbec17acd635f3",
+    "src/wechat_memory/store.py": "bc407e76d5fc437f9a6bbee7012dc64222dbbc451dc22e07ae77d5f077e3ae55",
+    "src/wechat_memory/uia_probe.ps1": "e1dd35f36c2982c02635d8cc4ea8f0ea409af6d07fc97a72abe433cb4df81a20",
+    "src/wechat_memory/uia_support.ps1": "4a4877d6b2402edd62fcc97adb08571477dec3cf45e952ff10798c4b8a81f1c6",
+    "src/wechat_memory/visual_direction.cs": "d3a04f84c45b95280289922eae9b278194ff72f9567f90bf1621390f8478c71d",
+    "src/wechat_memory/wechat_probe.py": "6dc3ae6eb23d28e466cf8a7b4543b5727c648336605b9f22a29025b49d5f9a51"
+  },
+  "earlier_analysis_scripts_unchanged": 20,
+  "earlier_analysis_scripts": [
+    {
+      "cache_path": "data/inbound-cancel-20261009/write_evidence.py",
+      "sha256": "0a168c7a0dc2f23ffdfcd57ad6f81a5101a0fb82a612eab9054f8847da96940f"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verify_evidence.py",
+      "sha256": "3ee843d9f63a02ea9202d326a0a194d6a0e3b6619b19248149bea3020b5c7892"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verification_checks.py",
+      "sha256": "43bf6a34afdbc900745244719d4f39a8854a069c26436e853edf0a22e8df32d5"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/update_docs.py",
+      "sha256": "8e9d24a73cd1f2e062582a6d1c89196acb737fa11c36f9b5e2ce180f754b7e77"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    },
+    {
+      "path": "data/source-feasibility-20261009/audit_sources.py",
+      "sha256": "239ca5dbab707bbcc95abdccfe96d150335a945d60eff3b33fbc8fa3331a7a08"
+    },
+    {
+      "path": "data/source-feasibility-20261009/check_and_save.py",
+      "sha256": "7656849088cbf57b5a908c6ff7820dc182450226f0e36fd3deec7d2805bb8e32"
+    },
+    {
+      "path": "data/source-feasibility-20261009/update_docs.py",
+      "sha256": "2e2e99341e5d312e644e3a490dac9e3fdc0edfb2195b23c9c3bea5b9bd3f9b03"
+    },
+    {
+      "path": "data/collector-design-20261009/save_evidence.py",
+      "sha256": "0d0649d436d447f390d57c479abd11fd14a6a5de9d22e967f393edb59352933e"
+    },
+    {
+      "path": "data/collector-design-20261009/verify_evidence.py",
+      "sha256": "b58782c62be7e14bd1ba9ca44b05e16d09f5442dd67cec8c9504bba96dfdcc68"
+    },
+    {
+      "path": "data/db-route-closure-20261009/fetch_texts.py",
+      "sha256": "5ddbbcdd3e4a0f81d2d7193d968ed760bf049c1369e46fe7b42bdc4aa86d869d"
+    },
+    {
+      "path": "data/db-route-closure-20261009/audit_route.py",
+      "sha256": "3f296407df6bc381cc30b927a754e4fdaa8373f8107ead7e4e331ba06f282f86"
+    },
+    {
+      "path": "data/db-route-closure-20261009/save_closure.py",
+      "sha256": "63c43d582068b30270c54e841ca79f30d9562430d53dc9a86db9a5aca4e0e64b"
+    },
+    {
+      "path": "data/db-route-closure-20261009/final_check.py",
+      "sha256": "0eda7c3583244c68f437b20c7783ec7cdb89ee858d9c4a08646a5b1ca660e4c4"
+    }
+  ],
+  "analysis_scripts": [
+    {
+      "path": "data/inbound-event-origin-20261009/final_check.py",
+      "sha256": "69903a9f757f6bc264d7c2cbe03fdea2646bda15a1a108036896b1e67cffbbba"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/probe.py",
+      "sha256": "9055bf245be3bfc6c1b78c2b400a093d2a1f61851468f2b632d7bd87dcafa665"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/save.py",
+      "sha256": "fa8a889c9cf61f7e827149e3de7ae990ddc51c30b23205567e8362cada8f3ec4"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/table.py",
+      "sha256": "8f637ff6e31953eaad7095e4ea0b007f23b17d1bdd8876c63af111c5db21e035"
+    }
+  ],
+  "earlier_experiments": [
+    {
+      "path": "docs/experiments/check_db_collector_assumptions.py",
+      "sha256": "1ee3325d303d7484044c22d06689e5c3d03cd0cc6d5ecba22bebb180b690315e"
+    },
+    {
+      "path": "docs/experiments/check_db_raw_metadata.py",
+      "sha256": "fe63f2a5e5438d4144e0f544184801f795814b6a8781fbdb8c17598d426a909c"
+    }
+  ],
+  "docs_updated": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/INBOUND_ADMISSION.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "report": "docs/INBOUND_EVENT_ORIGIN_4_1_15_50.md",
+  "report_sha256": "d59b684c985a5c8ed76a4a1dceb9effedfc31452a9685dac2022bc7eefe6a643",
+  "previous_db_report_sha256": "64b034bdf18bb66a51dc689782d145bae799f4756b2e70e030bf157ba936bfa8",
+  "independent_reviewer": false,
+  "listener_restarted": false,
+  "process_memory_read": false,
+  "chat_database_read_or_written": false,
+  "keys_read": false,
+  "target_weixin_dll_loaded": false,
+  "window_operated": false,
+  "third_party_installed_or_executed": false,
+  "real_messages_sent": 0,
+  "jev_request_attempts": 0,
+  "other_advisory_model_requests": 0,
+  "product_tests_run": false,
+  "synthetic_tests_run": 0,
+  "quota": {
+    "primary_used_percent": 39,
+    "lowest_known_remaining_percent": 61,
+    "secondary": "unavailable",
+    "monitor": "existing id40"
+  },
+  "research_directory": "data/inbound-event-origin-20261009",
+  "next_evidence": 468
+}

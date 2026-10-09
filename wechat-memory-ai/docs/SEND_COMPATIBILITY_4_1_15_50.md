@@ -1,5 +1,15 @@
 # Windows 微信 4.1.15.50：磁盘静态兼容性与发送调用图
 
+## 最新：逐条消息来源与默认文字分支（464–467）
+
+2026-10-09（北京时间）。[具体核查](INBOUND_EVENT_ORIGIN_4_1_15_50.md)沿同一哈希的.50 DLL磁盘只读推进。[464](evidence/464-inbound-msgsource-provenance.json)绑定AddMsg字段10→内部+1c0→msgsource解析器；scene的存储位置已知，数值域和新旧含义仍未知。share_msg的时间/ID属于嵌套引用，不能替换当前消息身份。解析失败或空串后外层仍可设置+2c0，故“已处理”不证明解析成功或实时来信。
+
+[465](evidence/465-inbound-deferred-text-gate.json)接通434的延迟闭包：先查handler虚槽+48，true才传模式给+40。默认TextMessageHandler的+48固定false，该分支不能作为文字实时/历史过滤器；实际receiver和注册覆盖仍待认证。闭包前后调用的23be9a0是命中后删除集合元素的操作，非无副作用查询，其写入来源和键含义未知。
+
+[466](evidence/466-inbound-origin-validation.json)记录同一执行者的新鲜磁盘字节/指令/表槽与历史文件哈希复核，非独立审查或实机验收，本轮没有新增或重跑产品测试。[467](evidence/467-inbound-origin-checkpoint.json)保存产品0.1.22、自动回复关闭、监听保存停止状态；无进程/数据库/密钥/窗口/发送或外部判断模型调用。
+
+下一步仅限msgsource.scene的具体消费者和值域，或23be9a0集合的具体写入来源；未认证前保持unknown，不扩散通用NewSync偏移、不添加verified开关。接收核查不代表最小化发送已解决。最低已知额度剩余61%，既有id40监测不变；后续证据从468起。
+
 ## 最新：固定数据库候选定点核查结束（461–463）
 
 2026-10-09（北京时间）。[方案结论](DB_COLLECTOR_FEASIBILITY.md)现将wechatauto-replica固定fbfb026排除出无人值守真实入站实施候选，保留离线结构参考。[461](evidence/461-db-route-closure-audit.json)核对完整77份Python及2份文档：消息source仅透传，packed_info用于媒体标识/文件名；未找到实时/历史分类器。8处SQLite连接分别为原副本读取/校验、导出、镜像或测试库，没有另一条已提交快照入口。该结论不外推为所有数据库路线不可能。

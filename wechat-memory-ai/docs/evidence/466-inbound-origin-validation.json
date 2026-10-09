@@ -1,0 +1,132 @@
+{
+  "checked_at_utc": "2026-10-09T01:20:24.291701+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "reviewer": "Same executing assistant; not independent",
+  "fresh_function_ranges": 14,
+  "fully_decoded": true,
+  "exact_instruction_assertions": 49,
+  "static_string_assertions": 8,
+  "callable_pointer_assertions": 3,
+  "bounded_leaf_bytes": "31c0c3",
+  "ranges": [
+    {
+      "begin": "0xa773b0",
+      "end": "0xa77dde",
+      "fully_decoded": true,
+      "disk_range_sha256": "aee5482db36b184473ee9eb5f3eff0199d0e0f1bc4702fbc1031a87de186b0fd",
+      "instruction_count": 555
+    },
+    {
+      "begin": "0xa78d60",
+      "end": "0xa78ef0",
+      "fully_decoded": true,
+      "disk_range_sha256": "c29f0a9b7be9f9aeb8fa4f9d1f4d0ea9bbc43c028048a240f2835c99acc045cc",
+      "instruction_count": 82
+    },
+    {
+      "begin": "0xa78ef0",
+      "end": "0xa793df",
+      "fully_decoded": true,
+      "disk_range_sha256": "7acc9bf04473572e1ae191dea98394cd7c05b7011c239425304a4f3195f3b4c2",
+      "instruction_count": 281
+    },
+    {
+      "begin": "0xa7c8e0",
+      "end": "0xa7c9a3",
+      "fully_decoded": true,
+      "disk_range_sha256": "9a09f4481ec547ba347bf8ebcf0c688fb88edcc7caa0e05f6a040cc8ae2278b4",
+      "instruction_count": 56
+    },
+    {
+      "begin": "0x1092310",
+      "end": "0x10925b1",
+      "fully_decoded": true,
+      "disk_range_sha256": "e8a6db50d84c6393ac5fc6df9bd42346c54c2206069ffe5f06c157fcb2e63052",
+      "instruction_count": 165
+    },
+    {
+      "begin": "0x17c5700",
+      "end": "0x17c614d",
+      "fully_decoded": true,
+      "disk_range_sha256": "150a99954bed2d8cfc67f7195e679183cb068f6fc21b15c25ef3673095e49928",
+      "instruction_count": 595
+    },
+    {
+      "begin": "0x17c9c50",
+      "end": "0x17ca6d0",
+      "fully_decoded": true,
+      "disk_range_sha256": "0217cfff419ca5ed92dbe0c3e309f57d1dc126e13479b5b917b6624cdac54550",
+      "instruction_count": 599
+    },
+    {
+      "begin": "0x185ede0",
+      "end": "0x185f499",
+      "fully_decoded": true,
+      "disk_range_sha256": "5733028172db9f55622a3d636638bff06a9429abec425dfd679f62fc930fb4a4",
+      "instruction_count": 416
+    },
+    {
+      "begin": "0x2353500",
+      "end": "0x23535dd",
+      "fully_decoded": true,
+      "disk_range_sha256": "360ac0100c132cd0eb72aff6b1e8a90f915214cb738e21ee45eaeea8659d12d7",
+      "instruction_count": 66
+    },
+    {
+      "begin": "0x23535e0",
+      "end": "0x23536bd",
+      "fully_decoded": true,
+      "disk_range_sha256": "cbc1f2369b05b67c8e89a712d3ed254c4b0f8d35a0965b104d8337584bcc0ea3",
+      "instruction_count": 66
+    },
+    {
+      "begin": "0x2353c30",
+      "end": "0x2354f63",
+      "fully_decoded": true,
+      "disk_range_sha256": "a808a662f72aeeab50fff1af06b19dca76d62fbe53b2a7259027a2977db1aee4",
+      "instruction_count": 1057
+    },
+    {
+      "begin": "0x23be9a0",
+      "end": "0x23bea75",
+      "fully_decoded": true,
+      "disk_range_sha256": "29cee97d6b1e5666bf8a1933da3a5b1bb58d65515e97974893f56efbbf38b828",
+      "instruction_count": 57
+    },
+    {
+      "begin": "0x38c9450",
+      "end": "0x38c9538",
+      "fully_decoded": true,
+      "disk_range_sha256": "5d76cff934b4358c3f62da5ab823379077846395e8f4aa235f9f80020bad19f3",
+      "instruction_count": 72
+    },
+    {
+      "begin": "0x38d3c90",
+      "end": "0x38d3cc3",
+      "fully_decoded": true,
+      "disk_range_sha256": "64656edf6a05e9aab121c6b3812281907671e179ec308138c26d03c6c095c474",
+      "instruction_count": 19
+    }
+  ],
+  "source_files_unchanged": 29,
+  "earlier_analysis_scripts_unchanged": 20,
+  "earlier_experiments_unchanged": [
+    {
+      "path": "docs/experiments/check_db_collector_assumptions.py",
+      "sha256": "1ee3325d303d7484044c22d06689e5c3d03cd0cc6d5ecba22bebb180b690315e"
+    },
+    {
+      "path": "docs/experiments/check_db_raw_metadata.py",
+      "sha256": "fe63f2a5e5438d4144e0f544184801f795814b6a8781fbdb8c17598d426a909c"
+    }
+  ],
+  "product_tests_run": false,
+  "synthetic_tests_run": 0,
+  "native_fixtures_run": false,
+  "client_runtime_validation": false,
+  "findings_scope": "Fresh disk decode/cache equality plus selected exact anchors, not formal full CFG proof or execution test",
+  "tool_notes": [
+    "Guessed429 evidence filename absent; actual filename located by search, no mutation.",
+    "PowerShell rg glob operands rejected as filenames; repeated with rg -g pattern. No product defect or approval denial."
+  ]
+}
