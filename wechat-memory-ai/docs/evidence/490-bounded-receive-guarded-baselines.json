@@ -1,0 +1,219 @@
+{
+  "checked_at_utc": "2026-10-09T11:42:31.295811+00:00",
+  "base_commit": "dc32551d85f112cb6d7aa04d177da2091d286285",
+  "fixture_only": true,
+  "legacy_new_thread": {
+    "cache_path": "data/bounded-receive-guarded-20261009/run-753232187b32.json",
+    "sha256": "14c580664cae722b22a526ad57fb42d6f6211c6a127d9ef52431321f81b3e3eb",
+    "cases": [
+      {
+        "mode": "new_thread",
+        "legacy": true,
+        "passed": false,
+        "failure_type": "AssertionError",
+        "result": {
+          "kind": "result",
+          "cleanup": "detached",
+          "hits": 0,
+          "fixture_only": true,
+          "raw_win32": true,
+          "stop_reason": "cancelled"
+        },
+        "fixture_exit_before_teardown": null,
+        "fixture_exit_after_teardown": 0,
+        "owner_exit": 0,
+        "guardian_exit": 1
+      }
+    ]
+  },
+  "first_bounded_new_thread": {
+    "cache_path": "data/bounded-receive-guarded-20261009/run-9b1491cbe9c7.json",
+    "sha256": "eab95ff2d6f243b596b389ceb51aacad623572c5b904ad8d47489491ea6e860a",
+    "cases": [
+      {
+        "mode": "new_thread",
+        "legacy": false,
+        "passed": true,
+        "result": {
+          "kind": "result",
+          "fixture_only": true,
+          "cleanup": "detached",
+          "hits": 1,
+          "thread_hits": 1,
+          "record": {
+            "marker_match": true,
+            "endpoint_a_tag": "b3b3538b37a548536d31ffcfffe98b04ff71ff7548215d1a8ab6d9ef5942943b",
+            "endpoint_b_tag": "6710aea00b04c94b29e3b98e37552335dd42de8de7874a24cabc587d356deab0",
+            "field12_tag": "f6b27e36fa102a6bbfa20765757bb0512b444a80e57a1ddfbd84b469d1d37861",
+            "field12_nonzero": true,
+            "direction": "unknown",
+            "origin": "unknown",
+            "read_bytes": 248,
+            "read_calls": 8
+          },
+          "stop_reason": "marker_match",
+          "replayed": 0,
+          "created": 6,
+          "exited_threads": 2,
+          "max_read_bytes": 248,
+          "max_read_calls": 8,
+          "max_event_processing_ms": 0.453,
+          "total_event_processing_ms": 1.143
+        },
+        "guardian_result": {
+          "kind": "result",
+          "fixture_only": true,
+          "cleanup": "already_detached",
+          "hits": 0,
+          "thread_hits": 0,
+          "record": null,
+          "stop_reason": null,
+          "replayed": 0,
+          "created": 0,
+          "exited_threads": 0,
+          "max_read_bytes": 0,
+          "max_read_calls": 0,
+          "max_event_processing_ms": 0.0,
+          "total_event_processing_ms": 0.0
+        },
+        "fixture_exit_before_teardown": null,
+        "fixture_exit_after_teardown": 0,
+        "owner_exit": 0,
+        "guardian_exit": 0
+      }
+    ]
+  },
+  "state_change_permission_red": {
+    "cases": [
+      {
+        "repeat": 0,
+        "passed": false,
+        "failure_type": "AssertionError",
+        "worker_error_tail": [
+          "                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "RuntimeError: state_change_failed:0xc0000022"
+        ],
+        "fixture_exit": 0
+      },
+      {
+        "repeat": 1,
+        "passed": false,
+        "failure_type": "AssertionError",
+        "worker_error_tail": [
+          "                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "RuntimeError: state_change_failed:0xc0000022"
+        ],
+        "fixture_exit": 0
+      },
+      {
+        "repeat": 2,
+        "passed": false,
+        "failure_type": "AssertionError",
+        "worker_error_tail": [
+          "                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "RuntimeError: state_change_failed:0xc0000022"
+        ],
+        "fixture_exit": 0
+      }
+    ],
+    "source_sha256": "39f698b66e00ecabde2a12cb6a25974cc65e2e518fc1ac1a43f15238547220d1"
+  },
+  "state_change_last_handle_release": {
+    "cases": [
+      {
+        "repeat": 0,
+        "passed": true,
+        "blocked_before_worker_exit": true,
+        "worker_error_tail": [],
+        "fixture_exit": 0
+      },
+      {
+        "repeat": 1,
+        "passed": true,
+        "blocked_before_worker_exit": true,
+        "worker_error_tail": [],
+        "fixture_exit": 0
+      },
+      {
+        "repeat": 2,
+        "passed": true,
+        "blocked_before_worker_exit": true,
+        "worker_error_tail": [],
+        "fixture_exit": 0
+      }
+    ],
+    "source_sha256": "3f7007187796852fb3bb1950722ce6d252092ea7286a50105dfa7f118905cc3a"
+  },
+  "undebugged_exception_baselines": {
+    "cases": [
+      {
+        "command": "exception",
+        "repeat": 0,
+        "fixture_exit": 0,
+        "exception_caught": true,
+        "continued": true
+      },
+      {
+        "command": "exception",
+        "repeat": 1,
+        "fixture_exit": 0,
+        "exception_caught": true,
+        "continued": true
+      },
+      {
+        "command": "exception",
+        "repeat": 2,
+        "fixture_exit": 0,
+        "exception_caught": true,
+        "continued": true
+      },
+      {
+        "command": "breakpoint",
+        "repeat": 0,
+        "fixture_exit": 2147483651,
+        "exit_code": 2147483651
+      },
+      {
+        "command": "breakpoint",
+        "repeat": 1,
+        "fixture_exit": 2147483651,
+        "exit_code": 2147483651
+      },
+      {
+        "command": "breakpoint",
+        "repeat": 2,
+        "fixture_exit": 2147483651,
+        "exit_code": 2147483651
+      },
+      {
+        "command": "fatal",
+        "repeat": 0,
+        "fixture_exit": 3221225501,
+        "exit_code": 3221225501
+      },
+      {
+        "command": "fatal",
+        "repeat": 1,
+        "fixture_exit": 3221225501,
+        "exit_code": 3221225501
+      },
+      {
+        "command": "fatal",
+        "repeat": 2,
+        "fixture_exit": 3221225501,
+        "exit_code": 3221225501
+      }
+    ],
+    "source_sha256": "b3e00d785630d32144d029744b3349f7518cfbb5e9379dad99981d9c698b457b",
+    "fixture_sha256": "5bc17bc9bd13705a0ac2e5033f49612fa321e91e818a351d841a1b6aded4eda3"
+  },
+  "third_party_native_header": {
+    "url": "https://raw.githubusercontent.com/winsiderss/systeminformer/9cdd0426e0843e80cabef27f148cee0281fa0883/phnt/include/ntpsapi.h",
+    "sha256": "669b680bb2d8724c7c9c2ade2042ee88a8d0a857a3de589a8a3db14f62ee4ce3",
+    "bytes": 193145,
+    "authority": "third-party Native API declarations; no Microsoft stability guarantee"
+  },
+  "live_gate_passed": false,
+  "scope": "Sibling fixture processes only; no real application attachment.",
+  "early_manifest_limitation": "Standalone freeze and smoke runs did not record every transitive import; final matrix records 11 source files."
+}

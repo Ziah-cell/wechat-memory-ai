@@ -1,0 +1,787 @@
+{
+  "checked_at_utc": "2026-10-09T11:42:31.295811+00:00",
+  "base_commit": "dc32551d85f112cb6d7aa04d177da2091d286285",
+  "fixture_only": true,
+  "source_hashes": {
+    "docs/experiments/receive_probe_fixture.py": "90b6a0610600c53511dc2dec539ba5670bcc7761915060bbfebedaf4c888260d",
+    "docs/experiments/receive_probe_variants.py": "91c47a2900db2e0f124d65ec29a094da54d3995ed711aec3f1b0512c42f811f8",
+    "docs/experiments/receive_probe_win32.py": "38a0f29a6ef1079aca1da0aa47cbdce47813480f48ab6d48ab6bd3071a9eb0c6",
+    "docs/experiments/compare_receive_probe_methods.py": "96ce4faf711cf4ab4058d5d28b3027b98775e6f6f061eee1372888baac8b4e40",
+    "docs/experiments/receive_probe_observer.py": "478d9e23bcd768d7e3a5d8e2976798688753c8337f3cba3a1ad9eb171e328246",
+    "docs/experiments/diagnose_receive_probe_crash.py": "f5ff8f01bf161079bc9528466c2024999ddbeafb765dc59b10c67630945ca99e",
+    "docs/experiments/test_receive_probe_native.py": "99f78464f6c517d9cced7df7c892ba1113d3de89f62ded9748f7f1f29be78953",
+    "docs/experiments/receive_probe_transfer.py": "094f98f25c3ea3b78a5550f82a716d7dc042e4b39253291bdc3ea3977618ae00",
+    "docs/experiments/test_receive_probe_transfer.py": "3ecb1c49523e8af87eaa044b968be33ce66462daaafb334e7f563b9134a2c346",
+    "docs/experiments/probe_fixture_freeze.py": "3f7007187796852fb3bb1950722ce6d252092ea7286a50105dfa7f118905cc3a",
+    "docs/experiments/receive_probe_guarded.py": "1d5862f84c4b02d30b8da5402da4b007d4e6f2255a2e7434122b136ec8a09e05",
+    "docs/experiments/receive_probe_parallel_fixture.py": "c946a0848e19da271d1e16214cb2d0d8c8c76848a1bb4e487a6e3b4b334dae99",
+    "docs/experiments/test_receive_probe_guarded.py": "cfd2f2a3088cf01c20e6e8b52cc1d9f555d975a48d63394437ad4ad77be4c7eb",
+    "docs/experiments/test_receive_probe_guarded_matrix.py": "e67c6eb70f3032a887ac48bf52fabb1a2b7d9970af706ad36dc3ffebc3c1e86d",
+    "docs/experiments/check_receive_probe_layout.py": "db0e97def2684ba01242ce368f52f023ca35a8b88ed43f0f153be7f9e1ce3d41"
+  },
+  "run_source_bindings": [
+    {
+      "run": "exception-baseline.json",
+      "sha256": "bebd08ac0223003aa419984ead445cf9b9c5046ac68b83afe5b637641135e2b0",
+      "count": 9,
+      "passed": 0,
+      "recorded_failures": 0,
+      "source_versions": {
+        "source_sha256": "data/bounded-receive-guarded-20261009/exception_baseline.py",
+        "fixture_sha256": "data/bounded-receive-guarded-20261009/parallel-first.py"
+      }
+    },
+    {
+      "run": "freeze-6629b5df17e7.json",
+      "sha256": "3f922deeaaa061be78e8377f2278e5b0023c85b92991e9b5dbe422d2fdb59337",
+      "count": 3,
+      "passed": 3,
+      "recorded_failures": 0,
+      "source_versions": {
+        "source_sha256": "docs/experiments/probe_fixture_freeze.py"
+      }
+    },
+    {
+      "run": "freeze-ea7460fe1bc9.json",
+      "sha256": "3e3c75b5c6f97edcdfb9f6b2afd6b391a4a01e4efe6b0acdc8698e6b2b1b2249",
+      "count": 3,
+      "passed": 0,
+      "recorded_failures": 3,
+      "source_versions": {
+        "source_sha256": "data/bounded-receive-guarded-20261009/freeze-initial.py"
+      }
+    },
+    {
+      "run": "matrix-06521b69ed91.json",
+      "sha256": "46ef79b4ab35cdf0f224990e0c9286200d6ff87b640bac9082ce7798b4388f9a",
+      "count": 90,
+      "passed": 89,
+      "recorded_failures": 1,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-90.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-10a776ec7a95.json",
+      "sha256": "287ef2fd63cdc2c63ade014e73b0c841070fbf05de576fe1017f24f1b7acf106",
+      "count": 1,
+      "passed": 1,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-bp-expectation.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-1894159dea22.json",
+      "sha256": "759c1ff6fb15ad1147c71cbf17acfdb6e59a3a13eaba49d5cf433d767b3e908f",
+      "count": 5,
+      "passed": 4,
+      "recorded_failures": 1,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-thaw-first.py"
+      }
+    },
+    {
+      "run": "matrix-1c7af5f606b1.json",
+      "sha256": "3f80e4cc1b9498c14e73749f40947410f7798f8363dd9c409d1591639164b15f",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-collision.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-collision.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-context-diagnostics.py"
+      }
+    },
+    {
+      "run": "matrix-30ba3cfdb6f5.json",
+      "sha256": "764fd21fc30f035e5911e43fa143b2ef4199d01cd2698738e3dfd47fd77c900e",
+      "count": 108,
+      "passed": 108,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "docs/experiments/test_receive_probe_guarded_matrix.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "docs/experiments/receive_probe_guarded.py"
+      }
+    },
+    {
+      "run": "matrix-3419d6a79624.json",
+      "sha256": "1e21048ff70c1694eec5f128142f86c573231087b271ef0819c2fdbd17f24a26",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "docs/experiments/test_receive_probe_guarded_matrix.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "docs/experiments/receive_probe_guarded.py"
+      }
+    },
+    {
+      "run": "matrix-3c15672405a0.json",
+      "sha256": "53ebd040e1bcb37989b6d227a2d95f39ba789c0fff76f3404950f57544c07d9a",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-deferred-clear.py"
+      }
+    },
+    {
+      "run": "matrix-6d0b61be8a70.json",
+      "sha256": "4d847d1e5c204c61042853d7ead97b851fdff82171100a945da6ab38b2ad4dca",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-error-diagnostics.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-74ba4e7207e1.json",
+      "sha256": "de756dbcc1073b5a2d8019661db0212eaf311aabddf45c4fcaf2a47ed25dfb92",
+      "count": 1,
+      "passed": 1,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-bp-expectation.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-7e6cd896b937.json",
+      "sha256": "8ce3644ffc532f531704103d92acea08b46d896b771205b1624acc7aa12afb20",
+      "count": 5,
+      "passed": 3,
+      "recorded_failures": 2,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-rapid-red.py"
+      }
+    },
+    {
+      "run": "matrix-87d0243730ce.json",
+      "sha256": "20a96f0d43e5622c3e1601363fa7ad3a78b643571895a36bddee8617d57d00fd",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-collision.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-collision.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-context-diagnostics.py"
+      }
+    },
+    {
+      "run": "matrix-888304665447.json",
+      "sha256": "8be33f2ed2f82011d9fb4c248e23f48f18895148d2aeed69f4046350271c6038",
+      "count": 1,
+      "passed": 1,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-bp-expectation.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-a6c48bd415fc.json",
+      "sha256": "bda4fb8e0b511f3f1053893388fc6be65171d580e97a11701a6b0ee9bdd06d39",
+      "count": 108,
+      "passed": 105,
+      "recorded_failures": 3,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "docs/experiments/test_receive_probe_guarded_matrix.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-deferred-clear.py"
+      }
+    },
+    {
+      "run": "matrix-ab7ceb0ad2d6.json",
+      "sha256": "133202367cacb6a398153b938486ead8ba0080cd158ce0bdb76347cac522ce67",
+      "count": 24,
+      "passed": 23,
+      "recorded_failures": 1,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-first.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-matrix-red.py"
+      }
+    },
+    {
+      "run": "matrix-c3c3a6227469.json",
+      "sha256": "ba0a90045c0e6cbcd26e30003cd46ff6b7476389aa66ae4eda230d0a7fb5e0d4",
+      "count": 5,
+      "passed": 4,
+      "recorded_failures": 1,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-thaw-error-stage.py"
+      }
+    },
+    {
+      "run": "matrix-cb4126cc1b69.json",
+      "sha256": "6e75278c18f27e3f2583dee0976a5958b5f0e42e27ccee8be308add6e15f9dc6",
+      "count": 5,
+      "passed": 3,
+      "recorded_failures": 2,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-thaw-register-red.py"
+      }
+    },
+    {
+      "run": "matrix-d53d2580b9a1.json",
+      "sha256": "5d5b6111cae929dff213bf8c4e138a955a9f1dd1f8b2037ed5a3f86d0f4a85d2",
+      "count": 3,
+      "passed": 0,
+      "recorded_failures": 3,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-bp-expectation.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "data/bounded-receive-guarded-20261009/parallel-first.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py"
+      }
+    },
+    {
+      "run": "matrix-edd685191430.json",
+      "sha256": "26ee22ad2aa08df13c3d531bb130214f822091f76785644d05bd8681deb895f1",
+      "count": 5,
+      "passed": 5,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded_matrix.py": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+        "docs/experiments/receive_probe_parallel_fixture.py": "docs/experiments/receive_probe_parallel_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/probe_fixture_freeze.py": "docs/experiments/probe_fixture_freeze.py",
+        "docs/experiments/receive_probe_variants.py": "docs/experiments/receive_probe_variants.py",
+        "docs/experiments/receive_probe_observer.py": "docs/experiments/receive_probe_observer.py",
+        "docs/experiments/compare_receive_probe_methods.py": "docs/experiments/compare_receive_probe_methods.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-thaw-error-stage.py"
+      }
+    },
+    {
+      "run": "run-753232187b32.json",
+      "sha256": "14c580664cae722b22a526ad57fb42d6f6211c6a127d9ef52431321f81b3e3eb",
+      "count": 1,
+      "passed": 0,
+      "recorded_failures": 1,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded.py": "docs/experiments/test_receive_probe_guarded.py",
+        "docs/experiments/receive_probe_fixture.py": "docs/experiments/receive_probe_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py"
+      }
+    },
+    {
+      "run": "run-9b1491cbe9c7.json",
+      "sha256": "eab95ff2d6f243b596b389ceb51aacad623572c5b904ad8d47489491ea6e860a",
+      "count": 1,
+      "passed": 1,
+      "recorded_failures": 0,
+      "source_versions": {
+        "docs/experiments/test_receive_probe_guarded.py": "docs/experiments/test_receive_probe_guarded.py",
+        "docs/experiments/receive_probe_fixture.py": "docs/experiments/receive_probe_fixture.py",
+        "docs/experiments/receive_probe_transfer.py": "docs/experiments/receive_probe_transfer.py",
+        "docs/experiments/receive_probe_win32.py": "docs/experiments/receive_probe_win32.py",
+        "docs/experiments/check_receive_probe_layout.py": "docs/experiments/check_receive_probe_layout.py",
+        "docs/experiments/test_receive_probe_native.py": "docs/experiments/test_receive_probe_native.py",
+        "docs/experiments/receive_probe_guarded.py": "data/bounded-receive-guarded-20261009/guarded-first.py"
+      }
+    }
+  ],
+  "run_count": 23,
+  "all_run_case_count": 403,
+  "final_run_sources_match_current": true,
+  "cache_files": [
+    {
+      "path": "data/bounded-receive-guarded-20261009/exception-baseline.json",
+      "sha256": "bebd08ac0223003aa419984ead445cf9b9c5046ac68b83afe5b637641135e2b0"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/exception_baseline.py",
+      "sha256": "b3e00d785630d32144d029744b3349f7518cfbb5e9379dad99981d9c698b457b"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/freeze-6629b5df17e7.json",
+      "sha256": "3f922deeaaa061be78e8377f2278e5b0023c85b92991e9b5dbe422d2fdb59337"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/freeze-ea7460fe1bc9.json",
+      "sha256": "3e3c75b5c6f97edcdfb9f6b2afd6b391a4a01e4efe6b0acdc8698e6b2b1b2249"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/freeze-initial.py",
+      "sha256": "39f698b66e00ecabde2a12cb6a25974cc65e2e518fc1ac1a43f15238547220d1"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-before-race-diagnostics.py",
+      "sha256": "a80975f59e1e1b8e7e5a44d390b7793c23020e2035a1d408416e51bf305760f7"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-context-diagnostics.py",
+      "sha256": "5d8e33677b0bb65e5993d97af0ea77374b0570d190ac8223cd865d7337de90b8"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-deferred-clear.py",
+      "sha256": "2bb6586ebd5d07a5d895ad65db766c41ea3fa06b991a76f05e25b2c874716749"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-first.py",
+      "sha256": "5980114e8f1cedfb5b3f82158572c464e502df67c0062b8864d7301bdbbefb9f"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-matrix-red.py",
+      "sha256": "dd5b3e0a01d2a7e4419d29b4d7e05314183ada89b27b1076bc6df0a8031018d4"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-rapid-red.py",
+      "sha256": "ea6b42c629091b5e029c5630eb03e309ee354d5c28e21a1fe82fa8d6c911ef0b"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-recovery-bp-fixed.py",
+      "sha256": "a80975f59e1e1b8e7e5a44d390b7793c23020e2035a1d408416e51bf305760f7"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-thaw-error-stage.py",
+      "sha256": "05e1a4e3844dad75fdd0a72566e4a1c7b03d6a7a1d9bd9015953a2d281642b99"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-thaw-first.py",
+      "sha256": "9244e4dc6e29c064e4cf5a47eb79f99cf00b04467bb18ddc0d509cd7ad4ce5ac"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/guarded-thaw-register-red.py",
+      "sha256": "e4e1ee136d1c0862d3ac5b67c6341a4e8bfb545a0ac0c8793bb8bcae36b71fe8"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/header-source.json",
+      "sha256": "a0c960dc128e82f6d833b396d1f0a5da9ce7689ba3af4aeb09e3cf6024369851"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/inspect_artifacts.py",
+      "sha256": "34a6c25d44196a9eefcc46a57952643a704fe2d574fe07dbeb41fa81b9194f1c"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-06521b69ed91.json",
+      "sha256": "46ef79b4ab35cdf0f224990e0c9286200d6ff87b640bac9082ce7798b4388f9a"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-10a776ec7a95.json",
+      "sha256": "287ef2fd63cdc2c63ade014e73b0c841070fbf05de576fe1017f24f1b7acf106"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-1894159dea22.json",
+      "sha256": "759c1ff6fb15ad1147c71cbf17acfdb6e59a3a13eaba49d5cf433d767b3e908f"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-1c7af5f606b1.json",
+      "sha256": "3f80e4cc1b9498c14e73749f40947410f7798f8363dd9c409d1591639164b15f"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-30ba3cfdb6f5.json",
+      "sha256": "764fd21fc30f035e5911e43fa143b2ef4199d01cd2698738e3dfd47fd77c900e"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-3419d6a79624.json",
+      "sha256": "1e21048ff70c1694eec5f128142f86c573231087b271ef0819c2fdbd17f24a26"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-3c15672405a0.json",
+      "sha256": "53ebd040e1bcb37989b6d227a2d95f39ba789c0fff76f3404950f57544c07d9a"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-6d0b61be8a70.json",
+      "sha256": "4d847d1e5c204c61042853d7ead97b851fdff82171100a945da6ab38b2ad4dca"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-74ba4e7207e1.json",
+      "sha256": "de756dbcc1073b5a2d8019661db0212eaf311aabddf45c4fcaf2a47ed25dfb92"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-7e6cd896b937.json",
+      "sha256": "8ce3644ffc532f531704103d92acea08b46d896b771205b1624acc7aa12afb20"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-87d0243730ce.json",
+      "sha256": "20a96f0d43e5622c3e1601363fa7ad3a78b643571895a36bddee8617d57d00fd"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-888304665447.json",
+      "sha256": "8be33f2ed2f82011d9fb4c248e23f48f18895148d2aeed69f4046350271c6038"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-90.py",
+      "sha256": "742e1c96ca735deabcda4aae8db6e7c1bf5352ba121e7d13a6b784d759ed89ff"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-a6c48bd415fc.json",
+      "sha256": "bda4fb8e0b511f3f1053893388fc6be65171d580e97a11701a6b0ee9bdd06d39"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-ab7ceb0ad2d6.json",
+      "sha256": "133202367cacb6a398153b938486ead8ba0080cd158ce0bdb76347cac522ce67"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-before-thaw-crashes.py",
+      "sha256": "1ffb85cff82f875529f36af2690a2dc9c3f040413ba4381961b15d76edb9e661"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-bp-expectation.py",
+      "sha256": "e84bc95c4dadcb06defad8347ae0b59641901ee0cad013090c5c7c5750b66bb2"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-c3c3a6227469.json",
+      "sha256": "ba0a90045c0e6cbcd26e30003cd46ff6b7476389aa66ae4eda230d0a7fb5e0d4"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-cb4126cc1b69.json",
+      "sha256": "6e75278c18f27e3f2583dee0976a5958b5f0e42e27ccee8be308add6e15f9dc6"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-collision.py",
+      "sha256": "ce9eeb439bcd5dab36f45236d5f44f2213fed06bddb1e418eeef633dcbc5acca"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-d53d2580b9a1.json",
+      "sha256": "5d5b6111cae929dff213bf8c4e138a955a9f1dd1f8b2037ed5a3f86d0f4a85d2"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-edd685191430.json",
+      "sha256": "26ee22ad2aa08df13c3d531bb130214f822091f76785644d05bd8681deb895f1"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-error-diagnostics.py",
+      "sha256": "22a6e3ebc92ae6ac150de3cfa9ad4757f42db28017eb8a913e3dfe27f7316388"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-first.py",
+      "sha256": "4f90ff6df30a0ec57d81cea798683a95667b68aa9080327e23ec758b7060218b"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/matrix-rapid.py",
+      "sha256": "1ffb85cff82f875529f36af2690a2dc9c3f040413ba4381961b15d76edb9e661"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/ntpsapi.h.txt",
+      "sha256": "669b680bb2d8724c7c9c2ade2042ee88a8d0a857a3de589a8a3db14f62ee4ce3"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/parallel-collision.py",
+      "sha256": "4fad46bad821391c31cdb59ef02cb74f85ea34e6f30db8bf6e27773c63c953e0"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/parallel-first.py",
+      "sha256": "5bc17bc9bd13705a0ac2e5033f49612fa321e91e818a351d841a1b6aded4eda3"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/prior-evidence-hashes.json",
+      "sha256": "cf998cb7742018b8f173636c2c6ffa5ebf134eb229788e01270ff5dc2b50a56b"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/run-753232187b32.json",
+      "sha256": "14c580664cae722b22a526ad57fb42d6f6211c6a127d9ef52431321f81b3e3eb"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/run-9b1491cbe9c7.json",
+      "sha256": "eab95ff2d6f243b596b389ceb51aacad623572c5b904ad8d47489491ea6e860a"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/save_checkpoint.py",
+      "sha256": "04b68fd6a70b1377e97351aee143315251e9e06bc99883dd79778381684e18b2"
+    },
+    {
+      "path": "data/bounded-receive-guarded-20261009/test-guarded-first.py",
+      "sha256": "cfd2f2a3088cf01c20e6e8b52cc1d9f555d975a48d63394437ad4ad77be4c7eb"
+    }
+  ],
+  "product_source_hashes": {
+    "src/wechat_memory/__init__.py": "dd7018432917f527fde7eefedecad5b9fc9ba99b8f0580e857941b00f7c7d6b0",
+    "src/wechat_memory/__main__.py": "bd045ddd5242d002f692dac452be9afba38deef5cde541a5fc074bfef5987b91",
+    "src/wechat_memory/adapters.py": "f763be8bd0a788527af513aae77b2711b063e080d2f5a26bf3f29fd0731c7162",
+    "src/wechat_memory/audit.py": "b7f9cd95ff7cf9c34cf264061faedea8f3b23af02425c1f5c9fc277470346f26",
+    "src/wechat_memory/backup.py": "8e8685930bbc83867213c99fd03f7b3b8b5610c334bd9d2df7dd66aee238785f",
+    "src/wechat_memory/callback_inbox.py": "1e69823d62b85f7e4d66eb67ce43b08d8d6561961df41867f6162638fd2ee9ef",
+    "src/wechat_memory/cli.py": "b746f4e9e97ff46c58f21f588188296ae02e39583f9c2b8790bdf264bc41c634",
+    "src/wechat_memory/config.py": "6cc4197ec8e282c606247efe14786a07301209774bec3446ccd6ff4f2ce70928",
+    "src/wechat_memory/engine.py": "a08a684479f2e9fee26affafa17cbee852973d2da82309bc07491272bfd7109c",
+    "src/wechat_memory/inbound_capabilities.py": "7b8bc33e960c87c8893bebea953f1f5083a51f34a69944b0130fce9c8ebb33cb",
+    "src/wechat_memory/live_read.py": "fe79517aabdc61ac03645e00ebdbd092d01234a0c6ae148251133e4d789c3625",
+    "src/wechat_memory/live_reader.cs": "990161fe11d8e55772509fdd5346585b72b254ccdf97dfda812146af35acd585",
+    "src/wechat_memory/live_source.py": "119ff741088df274f29fa543ea7244a7f9b3de3396377c2f19dae25edd53f831",
+    "src/wechat_memory/memory.py": "9b6a4aae32add11aaa4a99a761015c2b21bc589140fa86532b7bd9c114a2072c",
+    "src/wechat_memory/models.py": "cd1fba0595ce24d7bd5367df2b94bc2eed16c36778dfa7cdd9f0cafbf8fd2ba8",
+    "src/wechat_memory/monitor.py": "a0d6e1aa616e09cbb295fa39875c743df74ca884e4ed87937f3dd6d00f880deb",
+    "src/wechat_memory/ocr_check.py": "10d01056d43a8f8ca7a741d32d3e72fce8ada5333c3cd79f387e9c16c81e7f2b",
+    "src/wechat_memory/ocr_synthetic.ps1": "d7cb3f05e29e19c06d3f049fccc75e11efa29f4a7b7688b8192b06d30f94f52f",
+    "src/wechat_memory/offline_check.py": "8cb42548c9898af61d1db691b4b9a3aad9fd1405cfbf223e23c5da91d002a02d",
+    "src/wechat_memory/operations.py": "2f525139d8728144db88cbfc1255a7d3829c6190167bb76ce67d5f346c28577c",
+    "src/wechat_memory/power.py": "01d516383d2d7ff1bdd49c37d2d7c63dd34bc30e7c3284ef8930c912a1722181",
+    "src/wechat_memory/preferences.py": "5433c91d5d12e5f52459ed0f12c7612e0c22c6ff1aaaa207da261eb91681426a",
+    "src/wechat_memory/preflight.py": "eb7b18b5f23dc563be345933edcd1d46403d00bfde8f2dd8c64d3f8a54867ac8",
+    "src/wechat_memory/runtime.py": "b8444ee169aff426d8fb4f9f7c55b5aeadc5938f31a8d70d4abbec17acd635f3",
+    "src/wechat_memory/store.py": "bc407e76d5fc437f9a6bbee7012dc64222dbbc451dc22e07ae77d5f077e3ae55",
+    "src/wechat_memory/uia_probe.ps1": "e1dd35f36c2982c02635d8cc4ea8f0ea409af6d07fc97a72abe433cb4df81a20",
+    "src/wechat_memory/uia_support.ps1": "4a4877d6b2402edd62fcc97adb08571477dec3cf45e952ff10798c4b8a81f1c6",
+    "src/wechat_memory/visual_direction.cs": "d3a04f84c45b95280289922eae9b278194ff72f9567f90bf1621390f8478c71d",
+    "src/wechat_memory/wechat_probe.py": "6dc3ae6eb23d28e466cf8a7b4543b5727c648336605b9f22a29025b49d5f9a51"
+  },
+  "earlier_analysis_scripts": [
+    {
+      "cache_path": "data/inbound-cancel-20261009/write_evidence.py",
+      "sha256": "0a168c7a0dc2f23ffdfcd57ad6f81a5101a0fb82a612eab9054f8847da96940f"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verify_evidence.py",
+      "sha256": "3ee843d9f63a02ea9202d326a0a194d6a0e3b6619b19248149bea3020b5c7892"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verification_checks.py",
+      "sha256": "43bf6a34afdbc900745244719d4f39a8854a069c26436e853edf0a22e8df32d5"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/update_docs.py",
+      "sha256": "8e9d24a73cd1f2e062582a6d1c89196acb737fa11c36f9b5e2ce180f754b7e77"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    },
+    {
+      "path": "data/source-feasibility-20261009/audit_sources.py",
+      "sha256": "239ca5dbab707bbcc95abdccfe96d150335a945d60eff3b33fbc8fa3331a7a08"
+    },
+    {
+      "path": "data/source-feasibility-20261009/check_and_save.py",
+      "sha256": "7656849088cbf57b5a908c6ff7820dc182450226f0e36fd3deec7d2805bb8e32"
+    },
+    {
+      "path": "data/source-feasibility-20261009/update_docs.py",
+      "sha256": "2e2e99341e5d312e644e3a490dac9e3fdc0edfb2195b23c9c3bea5b9bd3f9b03"
+    },
+    {
+      "path": "data/collector-design-20261009/save_evidence.py",
+      "sha256": "0d0649d436d447f390d57c479abd11fd14a6a5de9d22e967f393edb59352933e"
+    },
+    {
+      "path": "data/collector-design-20261009/verify_evidence.py",
+      "sha256": "b58782c62be7e14bd1ba9ca44b05e16d09f5442dd67cec8c9504bba96dfdcc68"
+    },
+    {
+      "path": "data/db-route-closure-20261009/fetch_texts.py",
+      "sha256": "5ddbbcdd3e4a0f81d2d7193d968ed760bf049c1369e46fe7b42bdc4aa86d869d"
+    },
+    {
+      "path": "data/db-route-closure-20261009/audit_route.py",
+      "sha256": "3f296407df6bc381cc30b927a754e4fdaa8373f8107ead7e4e331ba06f282f86"
+    },
+    {
+      "path": "data/db-route-closure-20261009/save_closure.py",
+      "sha256": "63c43d582068b30270c54e841ca79f30d9562430d53dc9a86db9a5aca4e0e64b"
+    },
+    {
+      "path": "data/db-route-closure-20261009/final_check.py",
+      "sha256": "0eda7c3583244c68f437b20c7783ec7cdb89ee858d9c4a08646a5b1ca660e4c4"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/final_check.py",
+      "sha256": "69903a9f757f6bc264d7c2cbe03fdea2646bda15a1a108036896b1e67cffbbba"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/probe.py",
+      "sha256": "9055bf245be3bfc6c1b78c2b400a093d2a1f61851468f2b632d7bd87dcafa665"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/save.py",
+      "sha256": "fa8a889c9cf61f7e827149e3de7ae990ddc51c30b23205567e8362cada8f3ec4"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/table.py",
+      "sha256": "8f637ff6e31953eaad7095e4ea0b007f23b17d1bdd8876c63af111c5db21e035"
+    }
+  ],
+  "previous_nine_source_files_preserved": true,
+  "prior_evidence_count": 306,
+  "prior_evidence_manifest_sha256": "cf998cb7742018b8f173636c2c6ffa5ebf134eb229788e01270ff5dc2b50a56b",
+  "report_sha256": "584576fff669e76a9ae2f6934fa200eaa8f23a8650045ecdefc9d69d7be177a0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "validation_scope": "Same executor: fresh artifact/hash/AST/link checks and native fixture observations; not independent review.",
+  "no_product_tests_reexecuted": true
+}
