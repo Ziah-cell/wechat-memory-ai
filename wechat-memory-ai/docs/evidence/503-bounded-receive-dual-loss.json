@@ -1,0 +1,1027 @@
+{
+  "checked_at_utc": "2026-10-09T12:55:00.805701+00:00",
+  "base_commit": "2f2b6c5c56aa9fe22ca0808a3f40366138a735d2",
+  "fixture_only": true,
+  "command": "python docs/experiments/test_receive_probe_dual_loss.py --repeat 3",
+  "exit_code": 1,
+  "final_run": "data/bounded-receive-fault-boundaries-20261009/dual-35308962adcb.json",
+  "counts": {
+    "total": 30,
+    "recovery_passed": 18,
+    "recovery_failed": 12,
+    "debugger_absent_queries": 30,
+    "single_thread_failed_with_enabled_owned_slot": 9,
+    "parallel_failed": 3
+  },
+  "final_cases": [
+    {
+      "mode": "baseline",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_detach",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "915212c67393645f9518fdc35a06b0e8e82360c1039221d88e997af30540631d",
+          "endpoint_b_tag": "be3a040f4c777112749f1754c54f1edd3bd9e6ef7c1cd6c98813aecace0566e4",
+          "field12_tag": "82dc58af0d7c595d69e148167c4586b6abe8c4398ff002de640fd6ed93f7086b",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        }
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_detach",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "866c093a55e649e61ae793b12eb998987b1a0f448668335e94249264badb80eb",
+          "endpoint_b_tag": "75cb4730b872c7ce704614f37c62e5a95e826fd9bf28cdc8ef8b072c1bf580c4",
+          "field12_tag": "ad8e65227420cbf67e03427dac03a57b6af1a96bfa8128c7f5e99c1353519b36",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        }
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_detach",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "798d080764199147d9f487f1f0a324a2839d767e49cc23d3543225015d8dbcaf",
+          "endpoint_b_tag": "0c308ee3eda631d12ba5fd7084b6e0a3e2d773e8a9aa1cac4647ec6c29ff4f1c",
+          "field12_tag": "f5fe721ab0f27f1ba9d730ebbc547e91772ed57ab279e320f9d025f6b68ec0e3",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        }
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "attached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0926,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "attached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0609,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "attached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0708,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "idle",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0707,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "idle",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0878,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "idle",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0828,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "pending",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "received",
+      "kill_request_gap_ms": 0.0813,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "pending",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "received",
+      "kill_request_gap_ms": 0.0617,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "pending",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "received",
+      "kill_request_gap_ms": 0.0745,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "parallel",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.1345,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "burst_summary",
+          "workers_completed": 0,
+          "counts": []
+        }
+      ],
+      "repeat": 0,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "parallel",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.0679,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "burst_summary",
+          "workers_completed": 0,
+          "counts": []
+        }
+      ],
+      "repeat": 1,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "parallel",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "kill_request_gap_ms": 0.1275,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "worker_fault",
+          "reason": "single_step"
+        },
+        {
+          "kind": "burst_summary",
+          "workers_completed": 0,
+          "counts": []
+        }
+      ],
+      "repeat": 2,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "frozen",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_frozen",
+      "kill_request_gap_ms": 0.0722,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "frozen",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_frozen",
+      "kill_request_gap_ms": 0.0824,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "frozen",
+      "passed": false,
+      "recovered": false,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_frozen",
+      "kill_request_gap_ms": 0.0817,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": true,
+        "enabled_slots_mask": 1
+      },
+      "failure_stage": "fresh_calls",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": 1,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 1,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": true
+    },
+    {
+      "mode": "cleared",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_cleared",
+      "kill_request_gap_ms": 0.0619,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "cleared",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_cleared",
+      "kill_request_gap_ms": 0.0653,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "cleared",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_cleared",
+      "kill_request_gap_ms": 0.0661,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "thawed",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_thawed",
+      "kill_request_gap_ms": 0.0719,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "thawed",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_thawed",
+      "kill_request_gap_ms": 0.0663,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "thawed",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_thawed",
+      "kill_request_gap_ms": 0.0649,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "detached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_detached",
+      "kill_request_gap_ms": 0.1901,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "detached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_detached",
+      "kill_request_gap_ms": 0.0795,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "detached",
+      "passed": true,
+      "recovered": true,
+      "fixture_only": true,
+      "fault_boundary": "cleanup_detached",
+      "kill_request_gap_ms": 0.0727,
+      "both_confirmed_exited": true,
+      "kill_order": [
+        "owner",
+        "guardian"
+      ],
+      "debugger_present_after_roles_exit": false,
+      "register_state": {
+        "prior_suspend_count": 0,
+        "resume_prior_count": 1,
+        "trap_flag": false,
+        "dr0_is_fixture_function": false,
+        "enabled_slots_mask": 0
+      },
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "owner_exit": 1,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 1,
+      "fixture_exit_after_teardown": 0,
+      "fixture_invalid_lines": 0,
+      "worker_faults": [],
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    }
+  ],
+  "earlier_run": {
+    "file": "data/bounded-receive-fault-boundaries-20261009/dual-12b5fe26a7cc.json",
+    "count": 30,
+    "passed": 18,
+    "failed": 12
+  },
+  "kill_order": [
+    "owner",
+    "guardian"
+  ],
+  "atomic_simultaneous_termination": false,
+  "maximum_kill_request_gap_ms": 0.1901,
+  "recovery_failures_fixed": false,
+  "failures_relabelled_as_expected": false,
+  "live_gate_passed": false,
+  "surviving_register_repair_helper": false,
+  "manual_register_clear": false,
+  "conclusion": "No debugger present does not imply no active hardware slot. Both roles lost before slot cleanup leave this fixture unsafe; no live-entry acceptance.",
+  "source_url": "https://learn.microsoft.com/en-us/windows/win32/api/debugapi/nf-debugapi-checkremotedebuggerpresent"
+}

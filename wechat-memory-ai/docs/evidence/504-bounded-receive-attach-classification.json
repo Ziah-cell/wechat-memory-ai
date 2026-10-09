@@ -1,0 +1,2300 @@
+{
+  "checked_at_utc": "2026-10-09T12:55:00.805701+00:00",
+  "base_commit": "2f2b6c5c56aa9fe22ca0808a3f40366138a735d2",
+  "fixture_only": true,
+  "legacy_command": "python docs/experiments/test_receive_probe_attach_audit.py --repeat 3",
+  "legacy_exit_code": 1,
+  "legacy_counts": {
+    "total": 15,
+    "passed": 9,
+    "failed": 6
+  },
+  "legacy_cases": [
+    {
+      "mode": "baseline_breakpoint",
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline_breakpoint",
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline_breakpoint",
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "25a830f4dc11bed969025871153690cab38a3d1b3c71556a2ec1e9eaec3adc61",
+          "endpoint_b_tag": "fb3c33b1407438fa43bf5213fe3e2bb2bdfff572e7e9e9f4ef358bb1f38f4b82",
+          "field12_tag": "0030308351732a57ff6080e9e9d316ae2cc5e7e9e980f65c118cc956d6347ec0",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "8eac5df092161620ab59add8d83eeebb24dcefab244f96ceda65c5210b97b699",
+          "endpoint_b_tag": "e2072dfafd577ab7c01004f4e2b2820aa9599339e6637bdba22c59444c979d1c",
+          "field12_tag": "c20a00b5a9d580a8ea299a622ddb183f709e80600167fb1a813b6e5e4d837490",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "e764227808b3190c34cbfd3bf98c3214f4f742820c510fad04503a32abfad798",
+          "endpoint_b_tag": "e16b08f322e125270ff04fe8052f7efb41ea72dcc74225d3ee2e40db52fd1d38",
+          "field12_tag": "56076f12a5916f5423f074378b600e9c4e608fcd610998cf39c90963f9e62fbe",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "passed": false,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": true
+      },
+      "failure_stage": "classification",
+      "failure_type": "AssertionError",
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 0,
+        "stop_reason": "attach_audit_complete",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    }
+  ],
+  "candidate_command": "python docs/experiments/test_receive_probe_attach_audit.py --strict --repeat 3",
+  "candidate_exit_code": 0,
+  "candidate_counts": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "normal_attach_resumed": 3,
+    "intended_breakpoint_exits": 12
+  },
+  "candidate_cases": [
+    {
+      "mode": "baseline_breakpoint",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline_breakpoint",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "baseline_breakpoint",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "154a842db9e53435ea6ab4a31106136e34d02a2c1cf90e356beb65d5a6d36a84",
+          "endpoint_b_tag": "7d1f6aaad6878a7ac9466a3ff36b62ccc6b85805d1b177476624e3f433be5c36",
+          "field12_tag": "7c4190b1f4a9f1aad2e66053de5fff7f3d5b9b9e0e551cdb9b453d983a690145",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "aa3805fdceb2126da56c6ba20065a1f965c49cad50f4d21bd49aafd25f3e3ccc",
+          "endpoint_b_tag": "aa13286f4ddc21e1f92475c8b091ca11261ac8836cb4804feb681c116e831085",
+          "field12_tag": "5451bb917bb7f4628c3468f9f2fe72e847a82c82acba73115dcab9f2c86573a6",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "normal_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        }
+      ],
+      "target_resumed": true,
+      "fixture_exit_before_teardown": null,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 0,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "detached",
+        "hits": 1,
+        "stop_reason": "marker_match",
+        "record": {
+          "marker_match": true,
+          "endpoint_a_tag": "194f75bfe8ab2d30bcc3529c97cbeef1dd2a7ddbf44caaeed78f45ad02fb0d40",
+          "endpoint_b_tag": "bb8def03a55b7cc3a48a05f813a9f12ce76db2b0787e397c5c41351abb95c2b7",
+          "field12_tag": "cab4d97533794ae0fa26fa74b53d758606b09a3652d999399c1bc8c6b8a4f07d",
+          "field12_nonzero": true,
+          "direction": "unknown",
+          "origin": "unknown",
+          "read_bytes": 248,
+          "read_calls": 8
+        },
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "already_detached",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "application_after_attach",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": false,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": true,
+          "candidate_match": true,
+          "legacy_consumed_as_initial": true
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": true,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x10002",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": false,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": true,
+            "candidate_match": true,
+            "legacy_consumed_as_initial": true
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": true,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_raise",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": false,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": false,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": false,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 0,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 1,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    },
+    {
+      "mode": "race_same_address",
+      "strict": true,
+      "passed": true,
+      "fixture_only": true,
+      "audits": [
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 1,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        },
+        {
+          "kind": "breakpoint_audit",
+          "fixture_only": true,
+          "previous_initial_seen": false,
+          "first_chance": 0,
+          "main_thread": true,
+          "address_is_local_dbg_breakpoint": true,
+          "start_is_local_dbg_breakin": false,
+          "candidate_match": false,
+          "legacy_consumed_as_initial": false
+        }
+      ],
+      "native_exit": 2147483651,
+      "application_audit": {
+        "kind": "breakpoint_audit",
+        "fixture_only": true,
+        "previous_initial_seen": false,
+        "first_chance": 1,
+        "main_thread": true,
+        "address_is_local_dbg_breakpoint": true,
+        "start_is_local_dbg_breakin": false,
+        "candidate_match": false,
+        "legacy_consumed_as_initial": false
+      },
+      "fixture_exit_before_teardown": 2147483651,
+      "owner_invalid_lines": 0,
+      "breakpoint_dispositions": [
+        {
+          "status": "0x80010001",
+          "success": true
+        },
+        {
+          "status": "0x80010001",
+          "success": true
+        }
+      ],
+      "owner_exit": 0,
+      "guardian_invalid_lines": 0,
+      "guardian_exit": 0,
+      "fixture_exit_after_teardown": 2147483651,
+      "repeat": 2,
+      "owner_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": "target_exited",
+        "record": null,
+        "attach_audits": [
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 1,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          },
+          {
+            "kind": "breakpoint_audit",
+            "fixture_only": true,
+            "previous_initial_seen": false,
+            "first_chance": 0,
+            "main_thread": true,
+            "address_is_local_dbg_breakpoint": true,
+            "start_is_local_dbg_breakin": false,
+            "candidate_match": false,
+            "legacy_consumed_as_initial": false
+          }
+        ],
+        "controlled_hold_released": true,
+        "pause_budget_certified": false
+      },
+      "guardian_result": {
+        "cleanup": "target_exited",
+        "hits": 0,
+        "stop_reason": null,
+        "record": null,
+        "attach_audits": [],
+        "controlled_hold_released": false,
+        "pause_budget_certified": false
+      },
+      "fixture_single_step_reported": false
+    }
+  ],
+  "candidate_run": "data/bounded-receive-fault-boundaries-20261009/attach-0c28f33944c4.json",
+  "race": "Counted suspension of own fixture observed break-in thread until detach or target exit; application main thread raises breakpoint first.",
+  "candidate": "First chance, not previously accepted initial breakpoint, address matches local DbgBreakPoint, thread creation start matches local DbgUiRemoteBreakin. Other breakpoints use normal unhandled path without setting initial-seen.",
+  "limitations": [
+    "Same-host sibling fixture observation only; local export labels are not remote module identity proof.",
+    "Not a Windows version-independent authentication contract; thread start information is not immutable.",
+    "Controlled race frequency and extra counted holds do not certify pause budgets.",
+    "Candidate remains in optional dedicated audit mode, not original collector/product/full lifecycle integration.",
+    "Does not fix both-role loss."
+  ],
+  "source_urls": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/debugapi/nf-debugapi-debugactiveprocess",
+    "https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-create_thread_debug_info"
+  ],
+  "product_classifier_changed": false,
+  "live_gate_passed": false
+}
