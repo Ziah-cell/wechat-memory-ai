@@ -1,0 +1,162 @@
+{
+  "checked_at_utc": "2026-10-09T00:09:40.451365+00:00",
+  "status": "passed",
+  "scope": "Same-executor fresh disk checks and31 pure cases; not independent review, complete CFG/lifetime or runtime compatibility",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "unique_unwind_ranges_checked": 18,
+  "unique_anchored_leaves_checked": 4,
+  "unique_direct_edges_with_raw_rel32_math": 26,
+  "unique_tables_checked": 2,
+  "unique_instruction_observations_checked": 178,
+  "rip_references_with_raw_displacement_math": 9,
+  "branch_field_assertions": 126,
+  "predicate_projections": {
+    "scope": "31 scalar/list cases:12 merge,8 reset-mask,8 config/status,3 request-fallback. No target execution or reachability proof. Empty merge input cases project the loop algorithm only; normal wrapper has earlier empty gates.",
+    "case_count": 31,
+    "merge_cases": 12,
+    "reset_mask_cases": 8,
+    "config_status_cases": [
+      {
+        "status": 0,
+        "config": false,
+        "selected_processor_return": true,
+        "explicit_member_clear": false
+      },
+      {
+        "status": 0,
+        "config": true,
+        "selected_processor_return": true,
+        "explicit_member_clear": false
+      },
+      {
+        "status": -1,
+        "config": false,
+        "selected_processor_return": true,
+        "explicit_member_clear": false
+      },
+      {
+        "status": -1,
+        "config": true,
+        "selected_processor_return": false,
+        "explicit_member_clear": true
+      },
+      {
+        "status": -3,
+        "config": false,
+        "selected_processor_return": true,
+        "explicit_member_clear": false
+      },
+      {
+        "status": -3,
+        "config": true,
+        "selected_processor_return": false,
+        "explicit_member_clear": true
+      },
+      {
+        "status": -4,
+        "config": false,
+        "selected_processor_return": true,
+        "explicit_member_clear": false
+      },
+      {
+        "status": -4,
+        "config": true,
+        "selected_processor_return": false,
+        "explicit_member_clear": false
+      }
+    ],
+    "request_fallback_cases": 3,
+    "limits": [
+      "All values hypothetical; no chat/account data",
+      "Does not certify full tree helper or serializer implementation",
+      "No concurrent mutation, allocator failure, malformed parse, 4GiB size or full CFG proof"
+    ]
+  },
+  "previous_analysis_script_hashes_unchanged": 13,
+  "saved_listener_state_unchanged": true,
+  "local_links_checked": 904,
+  "documents_checked": [
+    "AGENTS.md",
+    "docs/STATUS.md",
+    "docs/PLAN.md",
+    "docs/TEST_RESULTS.md",
+    "docs/PERSONAL_ACCOUNT_ROUTE.md",
+    "docs/SEND_COMPATIBILITY_4_1_15_50.md",
+    "docs/ISOLATED_OBSERVATION_4_1_15_50.md"
+  ],
+  "diff_check": "passed",
+  "change_scope": "Seven documents and447-450 new evidence only",
+  "product_tests_run": false,
+  "native_tests_run": false,
+  "independent_reviewer": false,
+  "observation_plan_executed": false,
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "database_read_or_written": false,
+  "real_messages_sent": 0,
+  "jev_request_attempts": 0,
+  "other_advisory_model_requests": 0,
+  "research_probe_notes": [
+    "Pure graph/save definitions extracted by AST; old writers/API scripts never run",
+    "Storage helper semantics and identity left open; equal offsets/global source not active instance proof",
+    "Table scan included non-function data; only verified named slots enter evidence",
+    "Request fallback is one NUL byte, not empty; refines abstract439 comparison scenarios",
+    "Unsigned max update is asymmetric for duplicate old keys; no freshness proof"
+  ],
+  "initial_assertion_corrections": {
+    "count": 0
+  },
+  "remaining": [
+    "Concrete passive acquisition method and callable adapter remain absent",
+    "Full executor/cancellation/queued callback lifetime and reconnect/account generation boundaries remain uncertified",
+    "Account identifier domain, message direction and per-message freshness remain unbound",
+    "Member getter/setter use same global dispatch source and offsets; active instance/account and durable persistence are not proved",
+    "Selected normal-path byte derivation is not full CFG, alias, malformed-input or concurrent runtime proof"
+  ],
+  "analysis_scripts": [
+    {
+      "cache_path": "data/inbound-buffer-20261008/write_evidence.py",
+      "sha256": "d7ee74c2574d954355e06034b0c832c740c4f6bdb8f22c26ba45483019784939"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/verify_evidence.py",
+      "sha256": "4326d7a6789c7bb89574d5a20b5f26967d9d0be6f33a04408461cf4535f00494"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/verification_checks.py",
+      "sha256": "90865b7c01029df425430b462af527b7e0ba1fcd2848d910583dce2759d0f248"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/update_docs.py",
+      "sha256": "ec022f1af1131292fc9d6b23e4850e37f0f2d800bade629d293cc075c287fb6f"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-buffer-20261008/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    }
+  ]
+}

@@ -1,5 +1,21 @@
 # 4.1.15.50 隔离观察方案：调用条件与结果判据
 
+## 最新：停止Jev参与；SyncKey更新与重置（447–450）
+
+用户最新要求“继续，不要jev参加”：**停止 Jev 参与，由助手直接判断并继续工作；先前要求调用 Jev 的指令已被覆盖。** 下方Jev条目仅为历史记录，本轮及后续不再调用其判断，也不替换为其他外部判断模型。
+
+2026-10-09（北京时间）继续固定DLL磁盘只读。[447](evidence/447-inbound-synckey-update.json)把2ea9360/2ef87d0绑定到micromsg.SyncKey/KeyVal：旧缓冲先解析，响应缓冲后解析，本helper确实检查两次解析结果。所选合并先保留旧列表每个key的首个value，再逐项以无符号较大值更新或插入响应项；旧列表后续同key不参与取最大。声明数量不一致只记录诊断后继续，输出数量改为合并集合大小。不同于444的外层解析返回丢失，不能把两层解析混为一谈。
+
+普通响应为空时不修改缓存并返回0；旧缓冲为空时直接复制响应，不解析SyncKey，也返回0。合并失败-1/-3/-4产生空输出，2ea9360先将其写入owner+1a8，再交上层消费数值状态。下一请求经2ea6630读缓存/成员回退，若仍为空则构造实际长度1的零字节，再封装SKBuiltinBuffer_t。439中空/空比较仅为抽象条件，不代表这条正常请求构造会发空串；二进制零字节不等于空。
+
+[448](evidence/448-inbound-synckey-reset.json)核所选后段：配置clicfg_xwechat_newsync_key_error_handle为false时，非零合并状态仍可保留处理器true；为true才返回false，且只对-1/-3显式清空并写回成员，-4不走该写回。只核调用的默认参数true，未读取实时配置。协议field1数值-2006直接替换响应字节并立即调用成员setter，发生在最终flush之前；不为其猜官方枚举名称。
+
+getter4fac0与47220同取全局bb61c90的虚槽60；返回成员的380cc0/381550使用同一+400字符串及同一存储key地址。最终flush正常成功后另有成员写回，共同清理只清owner+1a8；下次可再次回退到成员。未认证活跃实例/账号一致性或持久写入成功。循环比较原请求与原响应，下一请求却可能采用合并值；循环继续不保证新状态进展，也不认证逐条消息新旧。
+
+[449](evidence/449-inbound-buffer-checkpoint.json)保存监听仍停止，产品0.1.22、自动回复关闭，尚无可运行适配器。本轮没有调用Jev/其他判断模型，没有加载目标DLL、访问进程/聊天数据库、操作窗口、重启监听或真实收发。Codex可用窗口最低剩余74%（primary已用26%，secondary未知），40%监测id40继续；主任务未暂停。研究目录沿用本轮创建的data/inbound-buffer-20261008，文档时间按北京时间10月9日记。
+
+[450](evidence/450-inbound-buffer-validation.json)记录同一执行者新鲜静态复核及31个纯值案例，非独立审查或运行验收；446列出的13个历史分析脚本保持。下一项绑定具体NewSync停止/取消闭包到已有服务取消链，明确排队回调寿命和可观测条件，不继续扩散存储内部。账号标识域/代次、方向、新旧边界及实际采集方式仍缺；随后才能形成最小接收实现，进行任务栏最小化接收与单好友受控发送验收，最后按既定确认开启自动回复。后续证据从451起。
+
 ## 最新：NewSync实际回调、解析返回与完成标记（442–446）
 
 2026-10-08继续固定DLL磁盘只读。[443](evidence/443-inbound-newsync-result-producer.json)接通外层2ead5a0→2ead900→2eae7f0、内层job9584e78→2eaf5b0、future工厂9584f18→2eafdb0，以及提交wrapper9584fb8和完成回调9585048。wrapper内+a8是NewSyncRequest，+f8是NewSyncResponse；具体回调2eb0840经虚槽+20取得响应，再把响应与两个回调状态交给promise。复用355/364已核默认服务路径；未认证活跃实例、完整执行器和异步寿命。
@@ -56,7 +72,7 @@ owner+60构造为零，所查driver在CoDoSync返回true的正常分支更新它
 
 426列出的13个历史脚本保持；新研究目录data/inbound-filter-20261008，历史证据不改，后续从432起。后续实质取舍继续实际调用Jev并自动采用返回的最高概率选项，不扩大已授权范围。
 
-2026-10-08更新。本方案把343–446的静态材料转成可审阅的观察对象、记录字段和停止条件，服务于普通个人号单测试好友、中文文字、真正任务栏最小化的目标。**这是方案与证据清单，尚未运行，也未形成可调用适配器。** 产品v0.1.22、自动回复关闭。
+2026-10-09更新。本方案把343–450的静态材料转成可审阅的观察对象、记录字段和停止条件，服务于普通个人号单测试好友、中文文字、真正任务栏最小化的目标。**这是方案与证据清单，尚未运行，也未形成可调用适配器。** 产品v0.1.22、自动回复关闭。
 
 ## 当前可做与进入观察前还缺什么
 
@@ -103,7 +119,7 @@ owner+60构造为零，所查driver在CoDoSync返回true的正常分支更新它
 | O3 验证每次尝试的计时与重试 | 385本层预算与每轮timeout；390上层第二次调用有B102/state10/原始type49子类及标志限制；373具体looper用毫秒 | 逻辑请求/handler调用/公共尝试编号、原始类型/子类与上层标志变化、原始预算及剩余值、A/B、每次timeout与退避参数、实际executor/单位、注册/到期/取出/移除阶段、单调时间差、句柄及触发次数 | 原始type1不满足390上层判据，不能由handler名称外推。先认证实际executor再解释120000/1000；不把每次参数当总时限或相乘成全局网络次数。不添加应用重试；等待取消/异常、重复/缺失保留unknown，不改变电源或重启原监听。 |
 | O4 验证对象释放和停止 | 369正常清理；374一次性取出清表后才调用，取消可查空返回；378第二scope取消/等待/析构、kernel取消/等待后网络服务停止/清理；group析构可跳过join | 各对象会话内编号、持有/释放、任务取出、回调开始/退出、取消结果、group成员等待开始/退出、auto-join分支/跳过原因、网络停止、最终looper quit/join/销毁、队列清空独立事件 | group等待、析构返回、服务停止、promise完成均不能代替全部闭包退出/撤销证据。网络接口须保留子对象调整，不能把停止方法当主对象析构。若取消后调用或析构跳过等待，保留顺序并停止新增工作，不能宣称未发送；不主动释放客户端对象或强制终止微信。 |
 | O5 区分提交、解析与业务结果 | 358、363–364公共任务/parse限制；386文字首项消费；389本地state分支、整体A/B保留、最终对象替换与条件本地信号；390上层promise可带错误resolve1 | handler及原始类型、逻辑请求/handler调用/尝试/任务编号、目标来源与会话内匹配编号、解析/字段存在性、声明/实际条数、整体/逐条/本地状态、结果所属层/对象类别、通知门槛与订阅者编号；缺证据用unknown | 整体0/0与本地state5可在所查条件分支共存，不能合并为单个success。最终+28不是必然原协议响应。本地数值信号无已认证对端含义；真实订阅者与更新效果待补。字段8/目标候选不等于唯一身份，任务号不代替跨尝试或目标匹配；结果未知不重发。 |
-| O6 准入真实来信 | 397–407源/扩展/内部批次、门槛、数值tag和上层AND；410缺对象跳任务；411空过滤/空map true及下层OR；419全局root成员赋值/字符串/清空；423账号field1可缺失；424选定认证回调；428内嵌过滤状态及正常批次reset；429名称/参数限制；433模式19时间/输入来源；434批次传递；438协议字段及presence；439循环与返回；443具体响应/完成字；444解析返回丢失及替代值 | 经认证账号/好友别名、账号段/首字符串presence与空值、响应值位及输入来源模式、身份字符串标识域/初始化条件、成员替换和清空阶段/会话代次、借用值的寿命依据，原项→子分组→创建任务→返回项关联，跳过原因/数量，各阶段输入/返回数量，逐键byte原值/归约规则/结果层，promise阶段，ID/时间/过滤/缓存域，控制操作与active前后值、全局/端点阈值及ID集合分支、正常reset阶段，输入/最终mode及覆盖原因、保存墙钟值存在性/差值、busy/pending和模式信号阶段，原始/逐轮mode、响应类型/来源、外层A/B与协议field1、原始parse结果/封装返回、内外完成字/替代值来源、field3值与presence分开、缓冲存在性/长度及相等关系、循环停止原因、处理器与flush结果，最终方向依据，服务getter/实例与账号域、注册descriptor/thunk/member/executor、直接或排队回调阶段、解除标记及实际排空证据，首批历史重连和最小化布尔 | 数值tag不代替身份或rawtype，不能据同偏移合并实例；不合并下层OR与上层AND；true不证明所有原项覆盖。非零不一律等于1，缺键/类型异常单列；部分结果或空true不认证持久提交、新来信或回滚。字段+48、result+88、byte+4==1、完整性检查或完成回调均不单独认证wxid/登录成功；账号段/字符串缺失或空值保持unknown，不将response+30的值bit1当presence；成员替换或清空时停止沿用旧身份与去重域。身份/方向/活跃订阅未绑定保持unknown；mode19不专属首次登录，mode6、空缓冲比较相同、循环结束、promise1、内外完成字或外层true均不认证历史排空；非19、模式信号结束、过滤关闭或批次reset均不认证新鲜消息，clearAllMsg所查分支不作有效全局阈值依据；首批只建基线，旧/自身/unknown不交付，边界变化停止，不补时间/ID/方向/积压。 |
+| O6 准入真实来信 | 397–407源/扩展/内部批次、门槛、数值tag和上层AND；410缺对象跳任务；411空过滤/空map true及下层OR；419全局root成员赋值/字符串/清空；423账号field1可缺失；424选定认证回调；428内嵌过滤状态及正常批次reset；429名称/参数限制；433模式19时间/输入来源；434批次传递；438协议字段及presence；439循环与返回；443具体响应/完成字；444解析返回丢失及替代值；447SyncKey合并与零字节请求；448错误配置/成员回退/-2006写回 | 经认证账号/好友别名、账号段/首字符串presence与空值、响应值位及输入来源模式、身份字符串标识域/初始化条件、成员替换和清空阶段/会话代次、借用值的寿命依据，原项→子分组→创建任务→返回项关联，跳过原因/数量，各阶段输入/返回数量，逐键byte原值/归约规则/结果层，promise阶段，ID/时间/过滤/缓存域，控制操作与active前后值、全局/端点阈值及ID集合分支、正常reset阶段，输入/最终mode及覆盖原因、保存墙钟值存在性/差值、busy/pending和模式信号阶段，原始/逐轮mode、响应类型/来源、外层A/B与协议field1、原始parse结果/封装返回、内外完成字/替代值来源、field3值与presence分开、缓冲存在性/长度及相等关系、旧/响应/合并缓冲来源与解析状态、数值合并状态与配置实际值、owner/member缓存域、-2006立即写回与最终flush阶段、单零字节回退、循环停止原因、处理器与flush结果，最终方向依据，服务getter/实例与账号域、注册descriptor/thunk/member/executor、直接或排队回调阶段、解除标记及实际排空证据，首批历史重连和最小化布尔 | 数值tag不代替身份或rawtype，不能据同偏移合并实例；不合并下层OR与上层AND；true不证明所有原项覆盖。非零不一律等于1，缺键/类型异常单列；部分结果或空true不认证持久提交、新来信或回滚。字段+48、result+88、byte+4==1、完整性检查或完成回调均不单独认证wxid/登录成功；账号段/字符串缺失或空值保持unknown，不将response+30的值bit1当presence；成员替换或清空时停止沿用旧身份与去重域。身份/方向/活跃订阅未绑定保持unknown；零返回/空缓存/合并完成均不认证解析成功或新消息；成员回退与owner清空分开，配置未知不能取默认当实值；mode19不专属首次登录，mode6、空缓冲比较相同、循环结束、promise1、内外完成字或外层true均不认证历史排空；非19、模式信号结束、过滤关闭或批次reset均不认证新鲜消息，clearAllMsg所查分支不作有效全局阈值依据；首批只建基线，旧/自身/unknown不交付，边界变化停止，不补时间/ID/方向/积压。 |
 | O7 受控好友送达判据 | 385内部尝试；389本地状态/信号；390受限上层调用和带错误promise，均不提供独立好友收到证明 | 事先批准的逻辑请求编号、handler调用/公共尝试/本地任务编号、双方对应事件、最终结果对象类别、是否重复、最小化观察、人工对端确认及时间 | 须另有明确固定文本发送授权且前置条件满足，具体方案须说明各调用层。单个中文逻辑请求，本项目不追加重发或自动AI；本地信号、整体0/0或promise1不代替对端证据。内部尝试/重复/缺失不能解释则不判通过，不能外推长期可靠性。 |
 
 O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于允许本项目主动构造请求。O5只能在解析和关联证据真实可观测时成立，不能新增人工verified开关填补。O6/O7与模型、真实记忆及自动回复仍隔离。
@@ -112,7 +128,7 @@ O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于�
 
 设计记录字段：`build_hash / run_id / account_section_present / account_string_present / account_string_empty / auth_value_flag / identity_input_mode / identity_epoch / identity_member_stage / identity_namespace_basis / borrowed_value_lifetime_basis / sequence / skipped_subgroup_count / subgroup_skip_reason / filtered_item_count / result_map_byte / aggregation_operator / storage_commit_evidence / child_task_token / numeric_group_tag / result_aggregation_level / input_item_count / returned_item_count / partial_result_state / result_group_token / source_group_mapping / backend_result_bit / signal_kind / subscriber_registration_state / callback_stage / batch_token / original_sync_mode / per_iteration_mode / sync_response_origin / sync_callback_status_pair / sync_protocol_status / raw_parse_result / wrapper_parse_return / inner_outer_completion / fallback_value_source / sync_response_type / response_field3_value / sync_buffer_presence / sync_buffer_length / sync_buffer_equality / sync_loop_stop_reason / sync_processor_result / sync_flush_result / incoming_sync_mode / effective_sync_mode / mode_override_reason / saved_clock_present / wall_clock_delta / driver_busy_pending / filter_owner_token / control_operation / filter_active_before_after / filter_reset_stage / filter_branch / time_value_stage / time_adjustment_basis / identity_source_state / cache_epoch / sync_phase / source_field_presence / source_id_zero / queue_token / consumer_token / transform_stage / descriptor_kind / direction_basis / logical_request_token / handler_call_token / attempt_token / task_token / retry_remaining / raw_message_type / raw_subtype / upper_flag_before_after / result_layer / result_payload_kind / subscriber_token / monotonic_elapsed / stage / object_token / parent_token / thread_token / context_kind / executor_table_rva / raw_timeout / raw_backoff / certified_unit / state_before / state_after / outcome / missing_evidence`。整体/逐条/本地状态须分别标注所属层；阶段区分注册、取出、回调开始/退出及移除返回，每次会话重新分配对象编号。不保存原始地址、昵称、账号ID、正文、完整响应、数据库内容或密钥。协议字段如不能脱敏且保留可验证关联，先停在设计阶段。静态证据中的DLL RVA是代码位置，不是活跃对象地址。
 
-1. **离线准备（当前范围）**：442的Jev最高概率选项已落实到443/444：已绑定具体NewSync回调、结果发布、解析返回丢失及所选替代值/重试条件。下一项补响应缓冲更新2ea9360/2ef87d0、-2006分支、reset/重连和取消/回调寿命。所有完成标记仍不认证消息新旧；保留input+60来源、标识域、身份代次、实际executor与采集方式。442–446仍是静态研究，不加载目标DLL。
+1. **离线准备（当前范围）**：用户已停止Jev参与。447/448已补SyncKey更新、错误处理配置、-2006立即成员写回及缓存清理/回退；下一项核具体NewSync停止/取消闭包与排队回调寿命，整理实际可观测条件。保留身份/方向/重连代次和采集方法缺口，不再扩散存储层。447–450仍是静态研究，不加载目标DLL。
 2. **有界只读观察（尚未授权/未实现）**：方法和前置条件具备后，方案建议一次最多5分钟或200条元数据事件，以先到者结束；无适配器发送、模型或记忆写入。预算是拟议采集上限，不是微信超时值。必须先有真实最小化状态与单账号/单目标的可信限定，不能沿用停止文件代替。
 3. **一次受控发送（尚未授权/未执行）**：仅在前述缺口满足且具体发送获批后，执行一次固定中文文本，分别记提交、解析、业务响应、对端观察。任何结果不明保留unknown并结束，不通过重试“验证成功”。
 4. **退出审阅**：核对事件顺序、遗漏/重复、所有权清理和观察器退出；缺少任一条件即标本次未通过，记录具体缺口。之后才讨论来源桥接与更长时间运行。自动回复仍需既有最终明确确认。
@@ -121,7 +137,7 @@ O1–O4可以围绕客户端本来发生的合法行为设计观察，不等于�
 
 ## 本轮结论与下一项
 
-已补具体NewSync响应回调、两层完成字、解析返回丢失和所选替代值/重试条件。下一项为**响应缓冲更新与-2006分支、reset/重连及取消/回调寿命**。input+60来源、标识域/身份代次、活跃实例、实际执行器、回调排空与采集方式仍缺；O1–O7未开始运行验收。
+已补SyncKey具体合并、错误处理配置、-2006直接替换和两级缓存回退。下一项为**具体NewSync取消闭包、回调寿命与实际观察条件**；由助手直接判断，不调用Jev。input+60来源、标识域/身份代次、活跃实例、实际执行器、回调排空与采集方式仍缺；O1–O7未开始运行验收。
 
 证据：[367执行与恢复](evidence/367-send-executor-resume.json)、[368计时参数](evidence/368-send-timeout-parameter.json)、[369生命周期](evidence/369-send-lifetime-boundaries.json)、[370保存状态](evidence/370-send-executor-checkpoint.json)、[371静态复核](evidence/371-send-executor-validation.json)。技术说明见[兼容性报告](SEND_COMPATIBILITY_4_1_15_50.md)。
 

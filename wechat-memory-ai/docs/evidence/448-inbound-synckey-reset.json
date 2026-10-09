@@ -1,0 +1,734 @@
+{
+  "checked_at_utc": "2026-10-08T23:15:39.378368+00:00",
+  "dll_sha256": "0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b",
+  "scope": "Selected disk-static result contract; no runtime compatibility proof",
+  "unwind_nodes": [
+    {
+      "rva": "0x2ea6840",
+      "end": "0x2ea8669",
+      "role_inference": "Status consumer and -2006 replacement",
+      "instruction_count": 1647,
+      "disk_range_sha256": "5c899759b800472143ab129bdc0dac80cd9f6dcdef8892ffd5bcfa71ec5e27e7",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea9bd0",
+      "end": "0x2ea9c86",
+      "role_inference": "Replace owner bytes then write member immediately",
+      "instruction_count": 58,
+      "disk_range_sha256": "1ad780449e561a7c68faf7927602cdd1b582ba3796c5ff0317f70067aca21467",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea9cc0",
+      "end": "0x2ea9ec5",
+      "role_inference": "Configuration query gates error handling",
+      "instruction_count": 109,
+      "disk_range_sha256": "a93c1d6b9704928a51c4c11b6ff181976e4781cb9fdb628411a16ba24eb59236",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea2f60",
+      "end": "0x2ea544f",
+      "role_inference": "Final flush/save then clear per-loop cache",
+      "instruction_count": 2075,
+      "disk_range_sha256": "c561c92c24faa68d97c5e49f4e585a240ee71507c5358469e16b62491cb1fff8",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x2ea6630",
+      "end": "0x2ea6720",
+      "role_inference": "Fallback when owner cache empty",
+      "instruction_count": 68,
+      "disk_range_sha256": "7b49267130675953f5a80fbc6d9b55dd16ce0f646d6cfe1371e135d15b743f20",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x4fac0",
+      "end": "0x4fc18",
+      "role_inference": "Global root slot60 -> shared member -> buffer getter",
+      "instruction_count": 103,
+      "disk_range_sha256": "3cced254078dab99db4946ff8fdbb5ed7984ce100b155cb5b2b966b5a2922c8e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x47220",
+      "end": "0x4727c",
+      "role_inference": "Same global root slot60 -> shared member",
+      "instruction_count": 25,
+      "disk_range_sha256": "5359ee95026e8e57762ef32a0a9cd5243dba397509bd53e19eb306cb9812b54b",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x380cc0",
+      "end": "0x381044",
+      "role_inference": "Member+400 getter with fallback load",
+      "instruction_count": 207,
+      "disk_range_sha256": "8e12e91931160304ea6545123ae7ab2a44db58cac92895eb38c1bde6573dd42e",
+      "fully_decoded": true
+    },
+    {
+      "rva": "0x381550",
+      "end": "0x381738",
+      "role_inference": "Member+400 update and downstream storage helper",
+      "instruction_count": 124,
+      "disk_range_sha256": "6d4841d81e577effb54f57aefa66667406bbfc4858ba11f36eaa6416d0016f95",
+      "fully_decoded": true
+    }
+  ],
+  "anchored_leaves": [],
+  "direct_edges": [
+    {
+      "at": "0x2ea6e70",
+      "kind": "call",
+      "to": "0x47220"
+    },
+    {
+      "at": "0x2ea6f35",
+      "kind": "call",
+      "to": "0x47220"
+    },
+    {
+      "at": "0x2ea6ff3",
+      "kind": "call",
+      "to": "0x47220"
+    },
+    {
+      "at": "0x2ea814e",
+      "kind": "call",
+      "to": "0x2ea9cc0"
+    },
+    {
+      "at": "0x2ea82af",
+      "kind": "call",
+      "to": "0x2ea9bd0"
+    },
+    {
+      "at": "0x2ea8407",
+      "kind": "call",
+      "to": "0x2ea9bd0"
+    },
+    {
+      "at": "0x2ea9c44",
+      "kind": "call",
+      "to": "0x47220"
+    },
+    {
+      "at": "0x2ea9c50",
+      "kind": "call",
+      "to": "0x381550"
+    },
+    {
+      "at": "0x2ea31f0",
+      "kind": "call",
+      "to": "0x2ea6630"
+    },
+    {
+      "at": "0x2ea3ffa",
+      "kind": "call",
+      "to": "0x2ea6840"
+    },
+    {
+      "at": "0x2ea5256",
+      "kind": "call",
+      "to": "0x47220"
+    },
+    {
+      "at": "0x2ea5267",
+      "kind": "call",
+      "to": "0x381550"
+    },
+    {
+      "at": "0x2ea6670",
+      "kind": "call",
+      "to": "0x4fac0"
+    },
+    {
+      "at": "0x4fb07",
+      "kind": "call",
+      "to": "0x380cc0"
+    },
+    {
+      "at": "0x380db0",
+      "kind": "call",
+      "to": "0x47220"
+    }
+  ],
+  "tables": [],
+  "observations": [
+    {
+      "at": "0x2ea7da3",
+      "mnemonic": "mov",
+      "operands": "r12b, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Selected late-path initial processor resulttrue"
+    },
+    {
+      "at": "0x2ea7da6",
+      "mnemonic": "cmp",
+      "operands": "eax, 0xfffff82a",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Protocol numeric status-2006"
+    },
+    {
+      "at": "0x2ea7db2",
+      "mnemonic": "je",
+      "operands": "0x2ea82c9",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Take direct replacement branch"
+    },
+    {
+      "at": "0x2ea7def",
+      "mnemonic": "mov",
+      "operands": "ebx, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Preserve numeric merge status"
+    },
+    {
+      "at": "0x2ea7df1",
+      "mnemonic": "test",
+      "operands": "eax, eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonzero merge status diagnostic"
+    },
+    {
+      "at": "0x2ea8146",
+      "mnemonic": "test",
+      "operands": "ebx, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Zero merge status keeps prior true result"
+    },
+    {
+      "at": "0x2ea8148",
+      "mnemonic": "je",
+      "operands": "0x2ea85fd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Skip error helper for0"
+    },
+    {
+      "at": "0x2ea814e",
+      "mnemonic": "call",
+      "operands": "0x2ea9cc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Query error-handling config"
+    },
+    {
+      "at": "0x2ea8154",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check actual config result, not default"
+    },
+    {
+      "at": "0x2ea8156",
+      "mnemonic": "je",
+      "operands": "0x2ea85fd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False config leaves prior true result"
+    },
+    {
+      "at": "0x2ea815e",
+      "mnemonic": "not",
+      "operands": "eax",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Bitwise complement of status"
+    },
+    {
+      "at": "0x2ea8160",
+      "mnemonic": "test",
+      "operands": "eax, 0xfffffffd",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Mask recognizes -1 and-3"
+    },
+    {
+      "at": "0x2ea8165",
+      "mnemonic": "jne",
+      "operands": "0x2ea82c1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Other nonzero errors bypass explicit empty replacement"
+    },
+    {
+      "at": "0x2ea828d",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0x6046961]",
+      "rip_targets": [
+        "0x8eeebf5"
+      ],
+      "public_static_strings": [],
+      "observation": "Static empty C-string input for reset"
+    },
+    {
+      "at": "0x2ea829b",
+      "mnemonic": "call",
+      "operands": "0x88ad0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Construct empty reset string"
+    },
+    {
+      "at": "0x2ea82af",
+      "mnemonic": "call",
+      "operands": "0x2ea9bd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Explicit empty replace and member write for selected statuses"
+    },
+    {
+      "at": "0x2ea82c1",
+      "mnemonic": "xor",
+      "operands": "r12d, r12d",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Enabled handler returnsfalse on every nonzero merge status"
+    },
+    {
+      "at": "0x2ea83e8",
+      "mnemonic": "mov",
+      "operands": "rax, qword ptr [rax + 0x18]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Protocol-2006 gets response field4"
+    },
+    {
+      "at": "0x2ea83fc",
+      "mnemonic": "mov",
+      "operands": "rdx, qword ptr [rax + 8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nested field2 bytes"
+    },
+    {
+      "at": "0x2ea8407",
+      "mnemonic": "call",
+      "operands": "0x2ea9bd0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace rather than merge"
+    },
+    {
+      "at": "0x2ea9be5",
+      "mnemonic": "lea",
+      "operands": "rsi, [rcx + 0x1a8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Owner string destination+1a8"
+    },
+    {
+      "at": "0x2ea9c27",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x1b8], rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Replace actual string length, even zero"
+    },
+    {
+      "at": "0x2ea9c37",
+      "mnemonic": "call",
+      "operands": "0x76edc90",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Copy replacement bytes"
+    },
+    {
+      "at": "0x2ea9c44",
+      "mnemonic": "call",
+      "operands": "0x47220",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Get shared member"
+    },
+    {
+      "at": "0x2ea9c50",
+      "mnemonic": "call",
+      "operands": "0x381550",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Immediately write member buffer, before final flush"
+    },
+    {
+      "at": "0x2ea9d0f",
+      "mnemonic": "movups",
+      "operands": "xmm0, xmmword ptr [rip + 0x66da64a]",
+      "rip_targets": [
+        "0x9584360"
+      ],
+      "public_static_strings": [
+        "clicfg_xwechat_newsync_key_error_handle"
+      ],
+      "observation": "Public config key prefix"
+    },
+    {
+      "at": "0x2ea9d24",
+      "mnemonic": "movabs",
+      "operands": "rcx, 0x656c646e61685f72",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Config key suffix literal"
+    },
+    {
+      "at": "0x2ea9d3d",
+      "mnemonic": "mov",
+      "operands": "dl, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Query default argumenttrue"
+    },
+    {
+      "at": "0x2ea9d3f",
+      "mnemonic": "call",
+      "operands": "0xba9100",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Actual config query"
+    },
+    {
+      "at": "0x2ea9eb2",
+      "mnemonic": "mov",
+      "operands": "eax, ebx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return actual configuration result"
+    },
+    {
+      "at": "0x2ea663c",
+      "mnemonic": "mov",
+      "operands": "rdi, qword ptr [rcx + 0x1b8]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Owner actual length"
+    },
+    {
+      "at": "0x2ea6646",
+      "mnemonic": "je",
+      "operands": "0x2ea6665",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty owner falls back"
+    },
+    {
+      "at": "0x2ea6665",
+      "mnemonic": "call",
+      "operands": "0x45d10",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Global root getter"
+    },
+    {
+      "at": "0x2ea6670",
+      "mnemonic": "call",
+      "operands": "0x4fac0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback getter"
+    },
+    {
+      "at": "0x4fade",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xbb121ab]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "Ignores incomingRCX and uses globalroot slot"
+    },
+    {
+      "at": "0x4faec",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Shared member via root vslot60"
+    },
+    {
+      "at": "0x4faff",
+      "mnemonic": "test",
+      "operands": "rdi, rdi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member null check"
+    },
+    {
+      "at": "0x4fb07",
+      "mnemonic": "call",
+      "operands": "0x380cc0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member string getter"
+    },
+    {
+      "at": "0x4fbea",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rsi + 0x10], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Absent member yields empty bytes"
+    },
+    {
+      "at": "0x47237",
+      "mnemonic": "mov",
+      "operands": "rcx, qword ptr [rip + 0xbb1aa52]",
+      "rip_targets": [
+        "0xbb61c90"
+      ],
+      "public_static_strings": [],
+      "observation": "Same globalroot slot"
+    },
+    {
+      "at": "0x47246",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x60]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Same root vslot60"
+    },
+    {
+      "at": "0x380ce7",
+      "mnemonic": "lea",
+      "operands": "rsi, [rcx + 0x400]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member getter field+400"
+    },
+    {
+      "at": "0x380cee",
+      "mnemonic": "cmp",
+      "operands": "qword ptr [rcx + 0x410], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Cached member length+410"
+    },
+    {
+      "at": "0x380cf6",
+      "mnemonic": "jne",
+      "operands": "0x381026",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Nonempty returns cached member data"
+    },
+    {
+      "at": "0x380d1b",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member vslot28 storage object"
+    },
+    {
+      "at": "0x380d42",
+      "mnemonic": "lea",
+      "operands": "r8, [rip + 0xb7e3c2f]",
+      "rip_targets": [
+        "0xbb64978"
+      ],
+      "public_static_strings": [],
+      "observation": "Same storage key address as setter"
+    },
+    {
+      "at": "0x380d5a",
+      "mnemonic": "call",
+      "operands": "0x3c4f20",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Fallback storage read helper, internals not recertified"
+    },
+    {
+      "at": "0x380d8e",
+      "mnemonic": "je",
+      "operands": "0x380d9e",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Empty storage result has secondary fallback"
+    },
+    {
+      "at": "0x380dcc",
+      "mnemonic": "call",
+      "operands": "0xeccb60",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Secondary fallback helper and mode2; account/domain semantics open"
+    },
+    {
+      "at": "0x381026",
+      "mnemonic": "mov",
+      "operands": "rax, rsi",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Return member+400 string reference"
+    },
+    {
+      "at": "0x381573",
+      "mnemonic": "lea",
+      "operands": "rdi, [rcx + 0x400]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Setter destination member+400"
+    },
+    {
+      "at": "0x3815b8",
+      "mnemonic": "mov",
+      "operands": "qword ptr [rcx + 0x410], rbx",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Setter length member+410"
+    },
+    {
+      "at": "0x3815de",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x28]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Member vslot28 storage object"
+    },
+    {
+      "at": "0x3815e5",
+      "mnemonic": "lea",
+      "operands": "rdx, [rip + 0xb7e338c]",
+      "rip_targets": [
+        "0xbb64978"
+      ],
+      "public_static_strings": [],
+      "observation": "Same key address as getter"
+    },
+    {
+      "at": "0x3815ef",
+      "mnemonic": "call",
+      "operands": "0x3c57d0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Downstream storage write helper"
+    },
+    {
+      "at": "0x38161d",
+      "mnemonic": "test",
+      "operands": "bl, bl",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Check helper boolean only to select diagnostic path"
+    },
+    {
+      "at": "0x381724",
+      "mnemonic": "add",
+      "operands": "rsp, 0x180",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal return epilogue; no explicit propagated boolean contract"
+    },
+    {
+      "at": "0x2ea5248",
+      "mnemonic": "call",
+      "operands": "0x2eb8870",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final flush"
+    },
+    {
+      "at": "0x2ea524e",
+      "mnemonic": "test",
+      "operands": "al, al",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Test flush result"
+    },
+    {
+      "at": "0x2ea5250",
+      "mnemonic": "je",
+      "operands": "0x2ea5298",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "False skips final member write"
+    },
+    {
+      "at": "0x2ea5256",
+      "mnemonic": "call",
+      "operands": "0x47220",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Shared member getter"
+    },
+    {
+      "at": "0x2ea5267",
+      "mnemonic": "call",
+      "operands": "0x381550",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Final member write"
+    },
+    {
+      "at": "0x2ea5293",
+      "mnemonic": "mov",
+      "operands": "dil, 1",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Normal outer resulttrue after write helper normal return"
+    },
+    {
+      "at": "0x2ea529a",
+      "mnemonic": "lea",
+      "operands": "rcx, [r15 + 0x1d0]",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Common batch reset"
+    },
+    {
+      "at": "0x2ea52a1",
+      "mnemonic": "call",
+      "operands": "0x2eb4940",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Reset batch manager"
+    },
+    {
+      "at": "0x2ea52bb",
+      "mnemonic": "mov",
+      "operands": "qword ptr [r15 + 0x1b8], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear only owner string length"
+    },
+    {
+      "at": "0x2ea52c6",
+      "mnemonic": "mov",
+      "operands": "byte ptr [rax], 0",
+      "rip_targets": [],
+      "public_static_strings": [],
+      "observation": "Clear its first byte"
+    }
+  ],
+  "weixin_dll_loaded": false,
+  "process_memory_read": false,
+  "real_messages_sent": 0,
+  "callable_adapter_verified": false,
+  "prior_evidence_reused_by_reference": [
+    "428-inbound-filter-owner-reset.json",
+    "439-inbound-newsync-continuation.json"
+  ],
+  "remaining": [
+    "Concrete passive acquisition method and callable adapter remain absent",
+    "Full executor/cancellation/queued callback lifetime and reconnect/account generation boundaries remain uncertified",
+    "Account identifier domain, message direction and per-message freshness remain unbound",
+    "Member getter/setter use same global dispatch source and offsets; active instance/account and durable persistence are not proved",
+    "Selected normal-path byte derivation is not full CFG, alias, malformed-input or concurrent runtime proof"
+  ],
+  "conclusions": [
+    "Late selected processor status0 calls merge/update. With numeric merge status nonzero and configuration false, previous true result remains; with configuration true it returnsfalse. Config key clicfg_xwechat_newsync_key_error_handle is passed defaulttrue, actual value unread.",
+    "Enabled error handler uses (~status & 0xfffffffd)==0 to select explicit empty replacement for -1 or-3. Response parse failure-4 returnsfalse without that explicit member reset; cache was already replaced with empty output by2ea9360. Subsequent cache fallback can retrieve prior member bytes. No overall successful sync is asserted.",
+    "Protocol field1 numeric-2006 bypasses ordinary merge and directly replaces owner buffer, then immediately calls member setter381550 via47220, even before final flush; no official enum meaning assigned. Empty response here is not ordinary empty-response no-op.",
+    "4fac0 and47220 use the same global pointer bb61c90 and virtual slot60. Returned member getter380cc0 and setter381550 use member+400 string. Getter has storage read/secondary fallback; setter attempts storage write with same key address. Active instance/account/durable write is not established.",
+    "Final normal CoDoSync true branch writes member after successful batch flush, then common path clears owner+1a8. Clearing owner cache is not clearing member+400 or persisted storage. Immediate-2006 write can already have occurred before later flush failure.",
+    "Loop continuation in439 compares prior request bytes with raw response bytes, while next request may use a merged value different from raw response. A changed raw response alone does not prove next-state progress or a new-message boundary.",
+    "No full reconnect, cancellation or callback-drain boundary has been proved. Next work should bind selected NewSync stop closure to existing service cancellation evidence and enumerate observer prerequisites without further storage expansion."
+  ]
+}
