@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-10-09T05:09:36.154137+00:00",
+  "user_message": "同意，继续",
+  "approved_proposal": "docs/BOUNDED_RECEIVE_PROBE_4_1_15_50.md",
+  "proposal_commit": "dc86a171c3100b88015d9e09d33187ea53621238",
+  "scope": "Implement observer and validate self-owned native fixtures first. Only after all specified checks pass, one bounded debugger observation of selected .50 WeChat process with limited message fields and minimized checks.",
+  "not_authorized": [
+    "keys",
+    "chat database",
+    "other user processes",
+    "arbitrary memory dumps",
+    "client downgrade",
+    "custom DLL injection",
+    "message sending",
+    "automatic replies",
+    "Jev"
+  ],
+  "fixture_executed_at_authorization_record": false,
+  "wechat_attached_at_authorization_record": false
+}

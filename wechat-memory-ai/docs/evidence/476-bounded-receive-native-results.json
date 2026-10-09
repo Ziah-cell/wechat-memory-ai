@@ -1,0 +1,98 @@
+{
+  "checked_at_utc": "2026-10-09T05:25:59.397662+00:00",
+  "scope": "Self-owned x64 fixture processes only; no WeChat attachment or memory reads.",
+  "authorization": "475-bounded-receive-authorization.json",
+  "counts": {
+    "total": 12,
+    "passed": 11,
+    "failed": 1,
+    "errors": 0,
+    "native_cases": 11,
+    "header_contract_cases": 1
+  },
+  "suite_passed": false,
+  "wechat_entry_gate": "rejected_by_failed_fixture",
+  "cases": [
+    {
+      "test": "test_receive_probe_native.BindingContractTests.test_com_slots_against_pinned_microsoft_header",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_cancel_while_waiting",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_deadline",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_delay_then_match",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_hit_budget",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_layout_error_detaches",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_native_read_match_and_detach",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_new_thread_breakpoint",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_observer_abrupt_exit_target_survives",
+      "result": "failed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_target_exits",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_unhandled_native_exception_not_swallowed",
+      "result": "passed"
+    },
+    {
+      "test": "test_receive_probe_native.NativeProbeTests.test_unrelated_exception_passed_to_target",
+      "result": "passed"
+    }
+  ],
+  "failed_case": {
+    "test": "test_observer_abrupt_exit_target_survives",
+    "sequence": [
+      "Arm hardware execution breakpoint on self-owned native fixture",
+      "Fixture completes one miss call under debugger",
+      "Harness forcibly terminates its own observer",
+      "Fixture calls the observed function again"
+    ],
+    "actual": "OSError: exception: single step",
+    "fixture_exit_code": 1,
+    "expected": "Fixture remains alive and completes another call and heartbeat",
+    "underlying_post_crash_registers_read": false,
+    "expected_failure_decorator_used": false
+  },
+  "cache_files": [
+    {
+      "path": "data/bounded-receive-native-20261009/native-suite-final.txt",
+      "sha256": "cb3282f3a2ee8b02c99b97f35e15f73cf372aeceef794a5a785a2b5a42b1bcf7"
+    },
+    {
+      "path": "data/bounded-receive-native-20261009/native-suite-final.json",
+      "sha256": "d0c20bdd5ac35be0e6f7f23af6a36c4945468f4c47d088816ccd29616fc81304"
+    }
+  ],
+  "source_hashes": {
+    "docs/experiments/receive_probe_fixture.py": "d01570a3fb7d5a410059960411eaf7e11ba31d20805099dcf90061cea4dacc25",
+    "docs/experiments/receive_probe_observer.py": "478d9e23bcd768d7e3a5d8e2976798688753c8337f3cba3a1ad9eb171e328246",
+    "docs/experiments/test_receive_probe_native.py": "99f78464f6c517d9cced7df7c892ba1113d3de89f62ded9748f7f1f29be78953"
+  },
+  "observed_target": "fictional message bytes in project-owned Python child with own executable allocation",
+  "system_dbgeng_loaded": true,
+  "wechat_process_accessed": false,
+  "product_tests_run": false
+}
