@@ -1,0 +1,1075 @@
+{
+  "checked_at_utc": "2026-10-09T01:06:43.529940+00:00",
+  "base_commit": "dcd8e461607fdcf4c9c0c49ef5c4af535738db06",
+  "scope": "Fixed public source corpus; text/AST/manual caller audit only",
+  "manifest": {
+    "checked_at_utc": "2026-10-09T01:00:31.526980+00:00",
+    "commit": "fbfb02677f8f5c8d52be166dc2a662a836f1354d",
+    "tree_sha256": "d65201ef1c4b6b260296a42642dc40283e8cc7ed4aaad8ba98ca8c19980f36e1",
+    "selection": "Every .py blob plus GUIDE.md and docs/技术文档.md; all stored as .txt",
+    "files": [
+      {
+        "path": "GUIDE.md",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/GUIDE.md",
+        "bytes": 78831,
+        "git_blob_sha1": "dc7cc5fc922c0017f05016604b241bfaf8540268",
+        "sha256": "b8261132b9ec6b56b2e85fa05e820ce65fd9d2909af5e978504d964d0add8574",
+        "method": "https-public-text"
+      },
+      {
+        "path": "demo_original_image.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/demo_original_image.py",
+        "bytes": 3428,
+        "git_blob_sha1": "e5e37b2c52a1a5964a08c2dcee64a23448670bdf",
+        "sha256": "bfab71071e50369eb36f76618a25a54accd19a09c1017138f87b5175cce152b7",
+        "method": "https-public-text"
+      },
+      {
+        "path": "docs/技术文档.md",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/docs/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3.md",
+        "bytes": 28570,
+        "git_blob_sha1": "97862129254a67d424093e141b4cac2754130cd0",
+        "sha256": "a05a7134e765b32f9f9a0d193bb67fddd66d3d0b740cf3e85b6aaa0343f472ff",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/selftest.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/selftest.py",
+        "bytes": 172389,
+        "git_blob_sha1": "2350bb548593a25f80cf63aa9aba677e8fc2dd8e",
+        "sha256": "41772217c00a931aeddeb3a9d38638dd321f1fb7241c7d1575c6013876a3e2c9",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_chat_identity.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_chat_identity.py",
+        "bytes": 5261,
+        "git_blob_sha1": "66cc7fda84ae068eed0a99811dcd87098ff40325",
+        "sha256": "a755949f8b6bccbde536eaf4d0b9e2f89ee9a7b9cdb72e5578bb20d0390ab2f8",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_db_path_root.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_db_path_root.py",
+        "bytes": 8362,
+        "git_blob_sha1": "6655ce06131deeae0871d03aa49df23ca723a3f6",
+        "sha256": "06651f5f3533c631b4c09a581220c4773626b030eb800dbf06545e25a38b1ea4",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_forward.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_forward.py",
+        "bytes": 28223,
+        "git_blob_sha1": "2ee5a26675840cb20f44fabc36d4eb64d8257bfa",
+        "sha256": "aa1c7a4cc3e62d91256d155bb2f25a9f915a0fb5bcf729e187492967e5c5a3fc",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_labels.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_labels.py",
+        "bytes": 57249,
+        "git_blob_sha1": "68fc1eaee62315047803b8068ae53184529c25cf",
+        "sha256": "8f76ce2a93ce632f954cdba0be228ee3dfa61ffe5ae7d95b9129bc4e972128da",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_ocr_send_gate.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_ocr_send_gate.py",
+        "bytes": 6191,
+        "git_blob_sha1": "24eaf827fc6c8bc834ba29799130b65c433bd6e4",
+        "sha256": "ae6e9f6f458d5eecf8da4f5ba772724238174129a9cafc6cb5a668b287192569",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_ocr_switch.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_ocr_switch.py",
+        "bytes": 5310,
+        "git_blob_sha1": "646293c178543435245f9f15b1ba16ea1b7e0e35",
+        "sha256": "8d9c3654c303d276c1b0a0b98f5db5dbc65b502dcffa60f5d9ad568cdf3cf74d",
+        "method": "https-public-text"
+      },
+      {
+        "path": "tools/test_send_verify.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/tools/test_send_verify.py",
+        "bytes": 5187,
+        "git_blob_sha1": "6c01a5b25037307fe4708492f988dfec4e21c72a",
+        "sha256": "67757f36620b233a5918404fb89f5474ce7b91356782eca32df2f2b7856236c1",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/__init__.py",
+        "bytes": 2328,
+        "git_blob_sha1": "d7d22c12cfa5032ecfb2a2b14a69d1655ddd5fa7",
+        "sha256": "156adfb7abcb2c4e49cb43f0860b36bb5faec1752b15539414fa3322d495d02f",
+        "method": "prior-cache-reverified"
+      },
+      {
+        "path": "wechatauto/__main__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/__main__.py",
+        "bytes": 358,
+        "git_blob_sha1": "050b34789ce015b1df7c231515c0291431c9aa69",
+        "sha256": "72f16fb154bed27080515c9d6f00b5cd71f8aa55eccc7df8a9c0b02b6616340a",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/assets/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/assets/__init__.py",
+        "bytes": 81,
+        "git_blob_sha1": "b67b966a10d7bac4ffd2aa2b151db707c5086ca0",
+        "sha256": "eeedfa39ffa21c4146d86677073099303a1993571f445dee4a481e24eb268d2e",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/cli.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/cli.py",
+        "bytes": 34130,
+        "git_blob_sha1": "93a6a4678352455f4851b9be200a03b0bf6c4f5d",
+        "sha256": "b5c054e56b89ac675bf954fc44c50e58529ea6aa621079e4a4e12c5acc19dbab",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/db.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/db.py",
+        "bytes": 135702,
+        "git_blob_sha1": "1a331c901f03b81a97b41fa300338a033f90d50b",
+        "sha256": "50eac9ded3a9b52e74c99c7e94afc741e64901005a3dae8728f3ef3f3e1a22ab",
+        "method": "prior-cache-reverified"
+      },
+      {
+        "path": "wechatauto/demo.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo.py",
+        "bytes": 2004,
+        "git_blob_sha1": "1eebe0afb8c78ee5ae9f16c83006518e7e09a388",
+        "sha256": "dbb03a92e3d0eba0685ff046cc795dcc7daac2cc3666e78d95de4503adb161c2",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_db.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_db.py",
+        "bytes": 2855,
+        "git_blob_sha1": "9902ed3a3d328b9344d7b55791cf34f580e71f97",
+        "sha256": "adb36e4e1835c9d7d20674c11107e369fe99f134962a1af91c111d04122c80fb",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_emoji_capture.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_emoji_capture.py",
+        "bytes": 3341,
+        "git_blob_sha1": "884d6c43fac4aa2872be4dc9d9195128b69ac0df",
+        "sha256": "6e57fb957323a8cd472dea25cd3c611ef73991106d0e17befb9b3310778fba70",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_forward.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_forward.py",
+        "bytes": 18001,
+        "git_blob_sha1": "34704135fc16b12c5c3377ffd4333a54e4a5ef62",
+        "sha256": "280c4baf6dd95d37d60a93c6242d4c1591b79501316e7f80b242835e43f87de2",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_forward_voice.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_forward_voice.py",
+        "bytes": 2668,
+        "git_blob_sha1": "4767210100a099f2445b6523b474b3344d5b96d0",
+        "sha256": "ebcbf938c707bd5e3a736a4e2187f3e06597b826836af095fca4488a53f323b9",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_group_messages.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_group_messages.py",
+        "bytes": 15051,
+        "git_blob_sha1": "e40a5ae8260d66b71d5672cdf02aebcbeff523d8",
+        "sha256": "51bb0aa0ad9aaf9944eaa7a2f55dc03cc8f5ca8561888a7f2ae0bac50ca21b22",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_guia.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_guia.py",
+        "bytes": 2520,
+        "git_blob_sha1": "41fa2dc16697a22bba6a27780ce60af286381c1d",
+        "sha256": "3519c214a87693f44ee9817334cb5ae185a6b8ce7c9629d8c28a311f2584e633",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_labels.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_labels.py",
+        "bytes": 4216,
+        "git_blob_sha1": "9fa0c7611cbb016b1e09b4dd9a5430a5ba3903e3",
+        "sha256": "4ddafa5a2edb5f5c10812ee97dc3a9736d9e2bba8d325ed9f5e6bc2c14cac336",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_listen.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_listen.py",
+        "bytes": 4458,
+        "git_blob_sha1": "65fad6c42b8ab6c42315960166004f0d871da2a6",
+        "sha256": "e1dd4d9513ac71f16c91a35dc57f43b5c9094684ddfa74eb6e456df9ac506b13",
+        "method": "prior-cache-reverified"
+      },
+      {
+        "path": "wechatauto/demo_media.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_media.py",
+        "bytes": 10728,
+        "git_blob_sha1": "3fc628ea1a4007d4eaa02f7b1f9b1e5fc3a87476",
+        "sha256": "7c73794071cabfbfcfb6f83fa5d5480dd0fc759e1a79fb60cd8347a8490539ba",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_cells.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_cells.py",
+        "bytes": 5184,
+        "git_blob_sha1": "5c33a345efbf924e5d1a9717141cfd147d6fa647",
+        "sha256": "bc64be6cfff8ef8501fa2c9d6215d3ba73a46dbfa301da52c1610d38534cdd06",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_comment.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_comment.py",
+        "bytes": 2029,
+        "git_blob_sha1": "b40008cde943abd6c66b5f5fe200bbe4e87875c8",
+        "sha256": "867dac3eac1d05d4a50f01dfad0566c092a852f899a9ddd1c273664e65a187a6",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_comments.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_comments.py",
+        "bytes": 2511,
+        "git_blob_sha1": "3ba0db9e5f140226687ca954e32993957981f721",
+        "sha256": "7e7e4d4b246a48355cdd95e03a72c26e16baf09f7f8fd0230e9eb755bbed7047",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_dump.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_dump.py",
+        "bytes": 2311,
+        "git_blob_sha1": "2d60cae6083808ace20e3b3f07fe7b9061f13562",
+        "sha256": "f7543aa50cade05b3e1b413fb8f3520f8ea0986aaccf41ebae810844bbc89902",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_find.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_find.py",
+        "bytes": 2927,
+        "git_blob_sha1": "61ef09ca606e0fd087fc508caceef65094c95b5d",
+        "sha256": "80ca053cb5163e5c4317287aa8fffe77d537fdad57e1eb1749661ccf587ed60e",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_like.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_like.py",
+        "bytes": 1682,
+        "git_blob_sha1": "d62e1015ffb5c1dc1b75b7d491da0f5cde48abb1",
+        "sha256": "7a81fb692c57438b2069a3b7106facda7fe2d13633bf1cad9579c1aef5efad4f",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_more.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_more.py",
+        "bytes": 2167,
+        "git_blob_sha1": "d8fef8e22afd712a95642556fa86b046f196e521",
+        "sha256": "d26fa8921dc938b2f2b73d90ef51cd118be712ee09506be0c2abdea8a312fa1d",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_observe.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_observe.py",
+        "bytes": 2664,
+        "git_blob_sha1": "4ce048b904fbea85d52bd850be90598552374658",
+        "sha256": "84d43a45068cbdbf23ddb6ec25bf3330dd601dd94f1846ce1396825469ff8299",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moment_reply.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moment_reply.py",
+        "bytes": 2550,
+        "git_blob_sha1": "675a78e88223698b404fd5ed7f7f9df5a9ac25fb",
+        "sha256": "12dec9dcf07c6fbc1226f631a4a5a096200405d3825a4377e60b06464cf92bd8",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moments_download.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moments_download.py",
+        "bytes": 4804,
+        "git_blob_sha1": "4b3c25c6021e887ed36ecaa9a476e8156f09e33b",
+        "sha256": "bcc88f1ebb0d505fae69626363cede42c45037f1e7324bca5746b09c4b9d44e7",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_moments_interact.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_moments_interact.py",
+        "bytes": 3708,
+        "git_blob_sha1": "645cc5515dab55686f6c979ca5180be17467509a",
+        "sha256": "6df88d543609af1803ee3122c0cfcb9b557ae075b5e89eacf9aaaec6d5bb0925",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_quote.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_quote.py",
+        "bytes": 1874,
+        "git_blob_sha1": "c74928d97f4de6c57ae8033be6338f4568e5cbb2",
+        "sha256": "986c1df560ca2c432b0a5834b0eabbfbd1c4141087944ff1974c53a3830a6596",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_recall.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_recall.py",
+        "bytes": 2428,
+        "git_blob_sha1": "6633da76ba3dc804ae5ffeb40b56ec0c96d299d0",
+        "sha256": "daf8934232d7aceb0f2517165d02f0afb1385a78cd733bfbb6c71b5bf9830041",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_reply_at.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_reply_at.py",
+        "bytes": 2415,
+        "git_blob_sha1": "e1094f8710f294acc568b8fee8159a30b0f7b94e",
+        "sha256": "18242ba68935344e37efd4b90aac6f4b4b0c4390c2ca641795ad5419da9c6763",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_robust.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_robust.py",
+        "bytes": 6174,
+        "git_blob_sha1": "7c10277095a97bedd18229f9ca9f0db00bee947a",
+        "sha256": "871ed339ced2e8b062a5b3eedbedc084c11579d668853325628a84d38505d5c6",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_send.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_send.py",
+        "bytes": 8358,
+        "git_blob_sha1": "7e054d17f4fc112c075627391d33d3fbbfe48fa6",
+        "sha256": "57af4bec07c7c1c8edfadc3ad342f4f71b23efe2a22eecd87a60a7ff11106d91",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_send_verify.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_send_verify.py",
+        "bytes": 7856,
+        "git_blob_sha1": "e3bc77f02f1285a3fe75695600d9707e206fa808",
+        "sha256": "f1d2e8efe5e30183dd24299e61f1c223752e0a26d1b12c0b8eeb26dfdcd418ad",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/demo_v109.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/demo_v109.py",
+        "bytes": 6371,
+        "git_blob_sha1": "815450af9959493af349470baa169dd282bf0351",
+        "sha256": "96ab5f1aa1062688b95b063b33fef4de537002f21cc7b9d66ae70ad2482db9a3",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/diagnose_keys.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/diagnose_keys.py",
+        "bytes": 12691,
+        "git_blob_sha1": "4beee4f079db531cda4685f4c5c826b4355328d7",
+        "sha256": "c5f3d2460c15b8a0e5eb6e2f29373faf7fe5f5f31da504c633277becdeab434f",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/exceptions.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/exceptions.py",
+        "bytes": 1702,
+        "git_blob_sha1": "35c57b19178da1db8229731466c0efebc1f885e8",
+        "sha256": "d32f932bf8ffc446760e0532e0ed7e3c92a3a257a13bc0420623430e31cd48aa",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/forward.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/forward.py",
+        "bytes": 16928,
+        "git_blob_sha1": "0f00f0f4d9a6aacc2e746e4102f259283ef029e4",
+        "sha256": "93164397c7b821dfb7181e6ac7724446b05f075d0c6ac37c596cc78c4df7056a",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/guia.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/guia.py",
+        "bytes": 123990,
+        "git_blob_sha1": "8eba97915947eef391f1f0a21007f52b84146579",
+        "sha256": "3aa2964316447f7c66fb136593836e160b01fe330de639a15aba0c5f68710ad8",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/labels.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/labels.py",
+        "bytes": 62284,
+        "git_blob_sha1": "d99e3239b2ec90fe5bad34adeb86b7e6a1982936",
+        "sha256": "fcfcd76aaf9b74750acd8352fb28ffd5554eb31365076b24554084b8480d027b",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/languages.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/languages.py",
+        "bytes": 15707,
+        "git_blob_sha1": "b9f9cf3944679b3b228d7c107cd61c810b8bdbfd",
+        "sha256": "75718fc0a5f797646f7501e115a9fa925a734e56637b42c6959f028d9586f578",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/logger.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/logger.py",
+        "bytes": 4601,
+        "git_blob_sha1": "cf2cb333532c773d09efe3ad6fc6bdaf6061cf5a",
+        "sha256": "bc0f1324fa5c370ab952080c54fe3cccabb11e2c423924c68336abaa12da292a",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/media.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/media.py",
+        "bytes": 109196,
+        "git_blob_sha1": "d3876de89487ffdc8efb4bfe955d0d49e2ba7e7c",
+        "sha256": "40acd9c255ad01a0700e0e1d9e29ab1497b19bfe1d2e174c3affc48e5b43a2f8",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/moment.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/moment.py",
+        "bytes": 169330,
+        "git_blob_sha1": "e7397788463d73d7a47cee35016c06cf9bd875eb",
+        "sha256": "1f64ed46d065e620bb2bb245c89503a6b1c0ccebb6e49b7fc314fe8afe4e0913",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/moment_observer.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/moment_observer.py",
+        "bytes": 10640,
+        "git_blob_sha1": "3473c49e6c6d38b3dcbd99cef7aa9e2a84417944",
+        "sha256": "fd71f4b964feda78f58a9b3e906f36f888537d0c1b55e105922a27c27a2a670e",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/__init__.py",
+        "bytes": 1815,
+        "git_blob_sha1": "e0efd1a9f000bb3f20aed6d7120494dff53e920a",
+        "sha256": "3de4bd2f1fe49981ae35bd353be1cf69f8832bb2600d014d2a0f0e25285153b3",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/base.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/base.py",
+        "bytes": 9067,
+        "git_blob_sha1": "8310c5e01ce201e78b9f4eaa95ea1aa191e69653",
+        "sha256": "a6bb817a09c598d679d581181eb1e3b6488bd3a9429d9d2b09025d65e8cfc0a2",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/friend.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/friend.py",
+        "bytes": 3081,
+        "git_blob_sha1": "154fee1913d087508cdf46002f87fbc8a243e35f",
+        "sha256": "6a7596f659eb08fc1950fa3b01565b8efc3f04533e93c5456cc10dc382bd7cf2",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/mattr.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/mattr.py",
+        "bytes": 1804,
+        "git_blob_sha1": "e0b249576b4274aefb4cf8d6c2bd11c54d927c9d",
+        "sha256": "dc12aa2b0b427c415b91b3a9eaaaf8997342e3052f1ce1ef1e411dfddd3dd6bf",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/msg.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/msg.py",
+        "bytes": 3998,
+        "git_blob_sha1": "ee6ec4550a8260cb2a08a24fc5b4a151a4b232b1",
+        "sha256": "9b01be40d94c7b4d95088fa2432ff4ee16e3cfc66f62d5cb9dab434a3602a0ff",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/mtype.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/mtype.py",
+        "bytes": 43548,
+        "git_blob_sha1": "2afab03033e2ad34d2377163e44b7112f7552024",
+        "sha256": "336d76a8314f411dea4cc125aa00cce4bafc56dcfb939f5222e3fee9224f1f93",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/msgs/self.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/msgs/self.py",
+        "bytes": 3037,
+        "git_blob_sha1": "b20a79bd536a85699083a7792cceae6c9fbf0b3f",
+        "sha256": "60528117648e9ebbe3462115a7ac8a3968e2e9a480184f06e4bdadbaaf30b676",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/param.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/param.py",
+        "bytes": 3506,
+        "git_blob_sha1": "1ae024c76513a6e58dec98f2f06aab172b2bb680",
+        "sha256": "f05c5984d3fc72cb255fa662e24753415827bf69c2ff811c42bfb0113044f56c",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/recall.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/recall.py",
+        "bytes": 16573,
+        "git_blob_sha1": "8119bc2c2aed01bb216cf2d63beed35e20729434",
+        "sha256": "ca57d4f3b9fb4930aaf465082818bd8654327378a9237bbd7efbd7d8b43fd1ae",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/rhythm.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/rhythm.py",
+        "bytes": 13539,
+        "git_blob_sha1": "b1d92379e8cc569c53da02eeee5af9eecc3d1ea6",
+        "sha256": "637f7582256d642526fa831220070ec56a3363878de5a9e8f837e97feac60764",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/sender.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/sender.py",
+        "bytes": 7165,
+        "git_blob_sha1": "c253a8f6c96afa50425a65e0af97a13aca67dd47",
+        "sha256": "0e562c9b0ec2623933f2e3f5db933c9a4a9e4eb9c046fab68608a048c63063b9",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/__init__.py",
+        "bytes": 674,
+        "git_blob_sha1": "149ecf7d138d8ad64a1998f767972e4d1160cd01",
+        "sha256": "d2d3ff24eaaf3da086b5ef0c49a449ccffb19096770a5e5da4f0b99b0926e171",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/base.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/base.py",
+        "bytes": 1531,
+        "git_blob_sha1": "d81200a37ea1905f7950cdca9b5e47b6e2deebfa",
+        "sha256": "ae2762f8e48237397f87de45bfc33d00db98257a5b598b7425e8ffdaaaae398b",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/chatbox.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/chatbox.py",
+        "bytes": 14288,
+        "git_blob_sha1": "ef7916d278fbd58bb44e2b1fc80fed990c0861eb",
+        "sha256": "b6a8ac334c6b2c59f88a1dbb18edcf447bd9dcf08977c00d34f7db38fbac5d45",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/component.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/component.py",
+        "bytes": 10155,
+        "git_blob_sha1": "8d604005d8cd3a83241223969db1537e9576ae68",
+        "sha256": "c56e432575cfb33d711ebd738b14063c7cc841899abe11e565318ce75bdafc67",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/main.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/main.py",
+        "bytes": 8955,
+        "git_blob_sha1": "66edd722f90392ca9e62d6a7c1335fa48a40491e",
+        "sha256": "6361c9c90b1d7de7ae74fdaa3d24aba429f5657e36791cfe4cb740033706fcf5",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/navigationbox.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/navigationbox.py",
+        "bytes": 2148,
+        "git_blob_sha1": "5f64423b9817b3dc8b32ccfa5e496c4a1f012195",
+        "sha256": "fc6db41d348e27e620251700056168e08428a49ab4c4d2f788567b683b9d42a9",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/ui/sessionbox.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/ui/sessionbox.py",
+        "bytes": 8211,
+        "git_blob_sha1": "e41949add9e5b9f5b95783e818cc777da08139da",
+        "sha256": "da8def83e021e700e4e878ad347bcb4134a9291a31e28e03fa1d657e9b2d9ef3",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/uia/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/uia/__init__.py",
+        "bytes": 12800,
+        "git_blob_sha1": "315ae21492844ac63540110743af1420d05b89bb",
+        "sha256": "050f551f152632641164afaafa6ba29b3b09e48793b301a027ffcebd3f15ce21",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/uia_driver.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/uia_driver.py",
+        "bytes": 90978,
+        "git_blob_sha1": "3f652bfad0110083ef325dc8774022c1fd0727d0",
+        "sha256": "366f7fe09eccfbc58806c7b2a02411f5fb5a15713e4951214dda27614601a99e",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/utils/__init__.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/utils/__init__.py",
+        "bytes": 673,
+        "git_blob_sha1": "7d895fc908340ad200b546550d9dc87ca2ecb4b4",
+        "sha256": "ae573f9b60ed38a7c4c961cc008289f50b457c602f9bba4f84d7ad70517c5d51",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/utils/lock.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/utils/lock.py",
+        "bytes": 3774,
+        "git_blob_sha1": "ce40fccf61023a7f83b96d0e2273de5882e2faea",
+        "sha256": "c7f78e2332e7f91c58fd0af0ae4c3147914589cd357c57b8dc7e78986ce95799",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/utils/tools.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/utils/tools.py",
+        "bytes": 11169,
+        "git_blob_sha1": "28de353f4c71e96d86dee3d0ad2da1913a492c01",
+        "sha256": "a52c18675c493dddb3f64618083660773f4296513e2e77c2493091385f7349ec",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/utils/win32.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/utils/win32.py",
+        "bytes": 11965,
+        "git_blob_sha1": "172cf9c145207693e095b85fe5e911ccbc77b08f",
+        "sha256": "c40ae9bef79121199ea010642346e31e17ee13efc0fc0f625c5e20ed248b50eb",
+        "method": "https-public-text"
+      },
+      {
+        "path": "wechatauto/wx.py",
+        "url": "https://raw.githubusercontent.com/fanyuantaier/wechatauto-replica/fbfb02677f8f5c8d52be166dc2a662a836f1354d/wechatauto/wx.py",
+        "bytes": 68823,
+        "git_blob_sha1": "da25f0cfdb646dbace9e71a9ceb96498ce8c1717",
+        "sha256": "dbc55ee9d0d5bdb292a5f6a8fcb43604af93d34b9caa366424e3d1cabac11dce",
+        "method": "prior-cache-reverified"
+      }
+    ]
+  },
+  "tree_entries": 99,
+  "tree_truncated": false,
+  "audit": {
+    "checked_at_utc": "2026-10-09T01:06:43.443213+00:00",
+    "files": 79,
+    "python_files_parsed": 77,
+    "whole_tree_python_inventory_matched": true,
+    "database_or_cipher_imports": [
+      {
+        "file": "tools/selftest.py",
+        "line": 1174,
+        "owner": "t_voice",
+        "module": "sqlite3",
+        "alias": null
+      },
+      {
+        "file": "tools/selftest.py",
+        "line": 1559,
+        "owner": "t_image",
+        "module": "sqlite3",
+        "alias": null
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 30,
+        "owner": "",
+        "module": "sqlite3",
+        "alias": null
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 40,
+        "owner": "",
+        "module": "cryptography.hazmat.primitives.ciphers",
+        "names": [
+          "Cipher",
+          "algorithms",
+          "modes"
+        ]
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 157,
+        "owner": "MediaDownloader._validate_key",
+        "module": "cryptography.hazmat.primitives.ciphers",
+        "names": [
+          "Cipher",
+          "algorithms",
+          "modes"
+        ]
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 296,
+        "owner": "MediaDownloader._scan_aes_key._try_key",
+        "module": "cryptography.hazmat.primitives.ciphers",
+        "names": [
+          "Cipher",
+          "algorithms",
+          "modes"
+        ]
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 444,
+        "owner": "MediaDownloader._decrypt_v2",
+        "module": "cryptography.hazmat.primitives.ciphers",
+        "names": [
+          "Cipher",
+          "algorithms",
+          "modes"
+        ]
+      },
+      {
+        "file": "wechatauto/recall.py",
+        "line": 37,
+        "owner": "",
+        "module": "sqlite3",
+        "alias": null
+      }
+    ],
+    "sqlite_connections": [
+      {
+        "file": "tools/selftest.py",
+        "line": 1196,
+        "owner": "t_voice.build",
+        "expression": "sqlite3.connect(':memory:')"
+      },
+      {
+        "file": "tools/selftest.py",
+        "line": 1285,
+        "owner": "t_voice",
+        "expression": "sqlite3.connect(media_path)"
+      },
+      {
+        "file": "tools/selftest.py",
+        "line": 1303,
+        "owner": "t_voice.open_media",
+        "expression": "sqlite3.connect(media_path)"
+      },
+      {
+        "file": "tools/selftest.py",
+        "line": 1897,
+        "owner": "t_image",
+        "expression": "sqlite3.connect(':memory:')"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1464,
+        "owner": "WeChatDB._open_unlocked",
+        "expression": "sqlite3.connect(f'file:{dst}?mode=ro', uri=True)"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1479,
+        "owner": "WeChatDB._check_merged",
+        "expression": "sqlite3.connect(f'file:{dst}?mode=ro', uri=True)"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 2639,
+        "owner": "WeChatDB.export_history",
+        "expression": "sqlite3.connect(out_path)"
+      },
+      {
+        "file": "wechatauto/recall.py",
+        "line": 100,
+        "owner": "RecallGuard._init_db",
+        "expression": "sqlite3.connect(path, check_same_thread=False)"
+      }
+    ],
+    "metadata_reads": [
+      {
+        "file": "wechatauto/db.py",
+        "line": 1886,
+        "owner": "WeChatDB.get_image_rows",
+        "kind": "get",
+        "expression": "r.get('packed_info_data')"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1916,
+        "owner": "WeChatDB.get_message_rows_for_media",
+        "kind": "subscript",
+        "expression": "r['source']"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1917,
+        "owner": "WeChatDB.get_message_rows_for_media",
+        "kind": "subscript",
+        "expression": "r['packed_info_data']"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1961,
+        "owner": "WeChatDB.get_message_row",
+        "kind": "subscript",
+        "expression": "row['source']"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1962,
+        "owner": "WeChatDB.get_message_row",
+        "kind": "subscript",
+        "expression": "row['packed_info_data']"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 2479,
+        "owner": "WeChatDB._export_row",
+        "kind": "subscript",
+        "expression": "r['packed_info_data']"
+      },
+      {
+        "file": "wechatauto/guia.py",
+        "line": 2405,
+        "owner": "WeChatGUI._verify_attachment_sent",
+        "kind": "get",
+        "expression": "row.get('packed_info')"
+      },
+      {
+        "file": "wechatauto/guia.py",
+        "line": 2405,
+        "owner": "WeChatGUI._verify_attachment_sent",
+        "kind": "subscript",
+        "expression": "row['packed_info']"
+      },
+      {
+        "file": "wechatauto/guia.py",
+        "line": 2406,
+        "owner": "WeChatGUI._verify_attachment_sent",
+        "kind": "subscript",
+        "expression": "row['packed_info']"
+      },
+      {
+        "file": "wechatauto/guia.py",
+        "line": 2409,
+        "owner": "WeChatGUI._verify_attachment_sent",
+        "kind": "subscript",
+        "expression": "row['packed_info']"
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 1040,
+        "owner": "MediaDownloader._img_md5",
+        "kind": "get",
+        "expression": "row.get('packed_info')"
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 1759,
+        "owner": "MediaDownloader.download_video",
+        "kind": "get",
+        "expression": "row.get('packed_info')"
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 1791,
+        "owner": "MediaDownloader._file_name",
+        "kind": "subscript",
+        "expression": "r['packed_info']"
+      },
+      {
+        "file": "wechatauto/media.py",
+        "line": 1792,
+        "owner": "MediaDownloader._file_name",
+        "kind": "subscript",
+        "expression": "r['packed_info']"
+      }
+    ],
+    "source_token_lines": [
+      {
+        "file": "wechatauto/db.py",
+        "line": 1761,
+        "text": "\"message_content, source, packed_info_data, compress_content, \""
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1916,
+        "text": "\"source\": r[\"source\"],"
+      },
+      {
+        "file": "wechatauto/db.py",
+        "line": 1961,
+        "text": "\"source\": row[\"source\"],"
+      },
+      {
+        "file": "wechatauto/moment.py",
+        "line": 2021,
+        "text": "source = 'uia'"
+      },
+      {
+        "file": "wechatauto/moment.py",
+        "line": 2037,
+        "text": "source = 'uia+ocr'"
+      },
+      {
+        "file": "wechatauto/moment.py",
+        "line": 2041,
+        "text": "'source': source,"
+      },
+      {
+        "file": "wechatauto/moment.py",
+        "line": 2167,
+        "text": "'source': 'db',"
+      }
+    ],
+    "backup_or_sqlite_snapshot_calls": [
+      {
+        "file": "wechatauto/recall.py",
+        "line": 180,
+        "owner": "RecallGuard.on_msg",
+        "expression": "self._backup_media(msg)"
+      }
+    ],
+    "caveat": "AST and exact-token inventory plus manual caller review; not a proof about all dynamic execution or WeChat schema semantics."
+  },
+  "anchors": [
+    {
+      "file": "wechatauto/db.py",
+      "start": 1891,
+      "end": 1965,
+      "checked_terms": [
+        "WHERE local_id=?",
+        "row = row[0]",
+        "\"source\": row[\"source\"]"
+      ],
+      "excerpt_sha256": "b3f86355330c72f7d40c3a0c1a71038609acf5f07d78b33d55daeae049db75bb"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2007,
+      "end": 2040,
+      "checked_terms": [
+        "sender_id != 2",
+        "\"sort_seq\": r[\"sort_seq\"]"
+      ],
+      "excerpt_sha256": "fa15833b7f4e9836c55f5916a643578c13a0e6c2e050929b067e551ad3919fb0"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2473,
+      "end": 2496,
+      "checked_terms": [
+        "r[\"packed_info_data\"]",
+        "md5 = re.search"
+      ],
+      "excerpt_sha256": "3c29671cd1754f712f8a79b2999e6aeab3c1c4a0530d53433e7f0bdde9e91f26"
+    },
+    {
+      "file": "wechatauto/media.py",
+      "start": 1039,
+      "end": 1047,
+      "checked_terms": [
+        "row.get(\"packed_info\")",
+        "re.search"
+      ],
+      "excerpt_sha256": "e05b024bcc7269395ee8b91b86bc7f400cdfa01f00fa33c2c332e6b5ecb92347"
+    },
+    {
+      "file": "wechatauto/media.py",
+      "start": 1754,
+      "end": 1798,
+      "checked_terms": [
+        "row.get(\"packed_info\")",
+        "SELECT d.packed_info",
+        "WHERE i.message_svr_id=?"
+      ],
+      "excerpt_sha256": "2ab423fa43cfb87281ae6cf08cf9bbb2552e08253e61e28a210e0cf0392b09bf"
+    },
+    {
+      "file": "wechatauto/guia.py",
+      "start": 2375,
+      "end": 2414,
+      "checked_terms": [
+        "row['packed_info']",
+        "if fname_bytes in"
+      ],
+      "excerpt_sha256": "a1504bba00b541f3be219f1d77b983ff3e4e6ef0d7d8aafb7d55d0a87c5e67f0"
+    },
+    {
+      "file": "wechatauto/moment.py",
+      "start": 2021,
+      "end": 2041,
+      "checked_terms": [
+        "source = 'uia'",
+        "source = 'uia+ocr'"
+      ],
+      "excerpt_sha256": "4a07b05707eede257b88f329f64d9182a8d5490d96154e1a980166d7d12c6d7d"
+    },
+    {
+      "file": "wechatauto/moment.py",
+      "start": 2987,
+      "end": 2991,
+      "checked_terms": [
+        "return self.db._open(rel)"
+      ],
+      "excerpt_sha256": "d332ba65aa1d6252216e70b3cad94ec6eeb2e665a311c43756a73ff0387ce114"
+    },
+    {
+      "file": "wechatauto/recall.py",
+      "start": 98,
+      "end": 116,
+      "checked_terms": [
+        "recall.db",
+        "sqlite3.connect",
+        "CREATE TABLE IF NOT EXISTS mirror"
+      ],
+      "excerpt_sha256": "a7bd8f6af980decc253cf41593c1cecc45ae1cb04d2c7e2e0ecf6cdd00edd29a"
+    },
+    {
+      "file": "wechatauto/recall.py",
+      "start": 132,
+      "end": 180,
+      "checked_terms": [
+        "self.db.get_messages",
+        "def _backup_media",
+        "md.download_media"
+      ],
+      "excerpt_sha256": "24519520d48ce34ee89b371e30defab2968a728728016a23dc6094bb63ee8ba6"
+    },
+    {
+      "file": "wechatauto/db.py",
+      "start": 2639,
+      "end": 2650,
+      "checked_terms": [
+        "sqlite3.connect(out_path)",
+        "CREATE TABLE messages"
+      ],
+      "excerpt_sha256": "ed5202060c2ead90182844ee1922f41b4ab1fa6475c9b77a1adf8bf5cc6357f4"
+    },
+    {
+      "file": "docs/技术文档.md",
+      "start": 113,
+      "end": 151,
+      "checked_terms": [
+        "STAMP_VERSION=2",
+        "integrity_check",
+        "保证不重不漏"
+      ],
+      "excerpt_sha256": "885387dd795ad3a05a5eabc7d15344c5de07c7ba9dd4041166720e6aae4f956b"
+    }
+  ],
+  "connection_classification": {
+    "decrypted_copy_reader": 1,
+    "decrypted_copy_checker": 1,
+    "history_export_destination": 1,
+    "own_recall_mirror": 1,
+    "test_fixtures": 4
+  },
+  "decision": "Exclude this fixed candidate from unattended real-inbound implementation; offline schema reference only.",
+  "findings": [
+    "source is selected and forwarded by raw APIs; no source payload classifier found in reviewed code.",
+    "packed_info consumers locate media IDs/file names or check attachments; not live/history origin.",
+    "moment source labels uia/uia+ocr/db describe a separate UI/data route.",
+    "Public listener projection omits both fields; local_id re-fetch can associate another shard row.",
+    "Eight direct sqlite3.connect calls have been classified; none adds a compatible live WCDB snapshot path.",
+    "Only backup-token call is media backup; MomentDB delegates to the same db._open.",
+    "Technical document self-reports1.0.6 and includes stale stamp/check assumptions; not an acceptance certificate."
+  ],
+  "limits": [
+    "Corpus/AST search is not a formal whole-program dynamic-execution proof.",
+    "No claim about the full WeChat schema, future releases, other database libraries, or actual field values.",
+    "No candidate installation/import/execution, keys, process access, chat DB, UI, or sends."
+  ],
+  "tool_notes": [
+    "Web tool returned Internal Error for GitHub tree API; ordinary public HTTPS download succeeded, no policy denial.",
+    "Guessed432-inbound-sync-mode-source.json was absent; rg located existing433, read only; no artifact changed."
+  ]
+}

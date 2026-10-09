@@ -1,0 +1,27 @@
+{
+  "checked_at_utc": "2026-10-09T01:06:43.529940+00:00",
+  "scope": "synthetic memory SQLite rule projections only",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "cases": [
+    "test_equal_seq_selection_depends_on_shard_iteration",
+    "test_newer_other_shard_replaces_original_metadata",
+    "test_type_filter_still_cannot_bind_same_type_collision"
+  ],
+  "boundary_attempts": [],
+  "passed": true,
+  "log": "test_equal_seq_selection_depends_on_shard_iteration (__main__.RawMetadataCounterexamples.test_equal_seq_selection_depends_on_shard_iteration) ... ok\ntest_newer_other_shard_replaces_original_metadata (__main__.RawMetadataCounterexamples.test_newer_other_shard_replaces_original_metadata) ... ok\ntest_type_filter_still_cannot_bind_same_type_collision (__main__.RawMetadataCounterexamples.test_type_filter_still_cannot_bind_same_type_collision) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.010s\n\nOK\n",
+  "script": "docs/experiments/check_db_raw_metadata.py",
+  "script_sha256": "fe63f2a5e5438d4144e0f544184801f795814b6a8781fbdb8c17598d426a909c",
+  "command": "python docs/experiments/check_db_raw_metadata.py",
+  "upstream_executed": false,
+  "product_tests_run": false,
+  "real_wechat_verified": false,
+  "original_18_cases_rerun": false,
+  "original_101_product_tests_rerun": false,
+  "interpretation": "Counterexamples to raw local_id re-fetch association; not runtime failures reproduced in WeChat.",
+  "syntax_boundaries": "Only standard library imports; every sqlite3.connect has literal :memory: argument"
+}
