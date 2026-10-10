@@ -1,0 +1,176 @@
+{
+  "client_date": "2026-10-10",
+  "host_checked_at_utc": "2026-10-10T00:10:03.878548+00:00",
+  "base_commit": "aebabdf8506b7707e5c26b81552fc904403102c9",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "host": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+    "docs/experiments/trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+    "docs/experiments/test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1"
+  },
+  "compiler": {
+    "path": "data/resident-publisher-20261010/toolchain/zig-x86_64-windows-0.14.1/zig.exe",
+    "sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "builds": [
+    {
+      "path": "data/executed-trampoline-20261010/build-b317b5c75559/build.json",
+      "sha256": "33d73bf3d06d1070eecfa5ef6f78111a8a768b28cb1f1a8d1a57cf97c7425bc9",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\executed_trampoline_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\build-b317b5c75559\\executed_trampoline_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "executed_trampoline_fixture.c": "6b3673c3aba5b26d222654052226e8f28efe90a20ca1e32dfbfc8c6959b8c57f",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "65ad7a6cbe7dae1e71b467b2225c554669b220bf06d482c936e74dbdf850e776"
+    },
+    {
+      "path": "data/executed-trampoline-20261010/build-1191111d9783/build.json",
+      "sha256": "21d15dda278f8928c1fd5e1e0357e123e08859de6e2bc814b04b7311b9e408db",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\executed_trampoline_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\build-1191111d9783\\executed_trampoline_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "executed_trampoline_fixture.c": "a924552aaccf8b5d0d52900d2f4ef1e055bf05d4bb2959afbaa1a721c8edb5a5",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "307f0be5188accab5e7be13382a4aab46ef0e1d756169c5918fc20bdb7f1d1e7"
+    },
+    {
+      "path": "data/executed-trampoline-20261010/build-dae6192f51fa/build.json",
+      "sha256": "37768047d4fe66c721a5c0cad57083796cb09dd6c5f2c9acce4c51a519158122",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\executed_trampoline_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\build-dae6192f51fa\\executed_trampoline_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "executed_trampoline_fixture.c": "6fbc63b88d9e60cbefa0cc911e02fa374baafd0cb1ee90c497c5fe0d9846a0b6",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "991988fac8ad3219b0b508446b8dd20e7fbddd921048828640b30b9740efcc76"
+    },
+    {
+      "path": "data/executed-trampoline-20261010/build-4745d12770e5/build.json",
+      "sha256": "a97b0f05507a1fa8176081d57ad883e3907aa01d355171c55a3adb9c4cc20f63",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\executed_trampoline_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\build-4745d12770e5\\executed_trampoline_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "280edae92d2fb007babb31f26fcbf4e018e646c27025a6e4c4c09214404dab7d"
+    }
+  ],
+  "final_binary": {
+    "path": "data/executed-trampoline-20261010/executed_trampoline_fixture.exe",
+    "sha256": "280edae92d2fb007babb31f26fcbf4e018e646c27025a6e4c4c09214404dab7d"
+  },
+  "scope": "Generated code and entry patches only in each self-created native child; known integer/double signatures. No external PID input.",
+  "layout": {
+    "allocation": 4096,
+    "integer_original": "0x100",
+    "integer_trampoline": "0x200",
+    "integer_relay": "0x300",
+    "float_original": "0x500",
+    "float_trampoline": "0x600",
+    "float_relay": "0x700",
+    "original_unwind": "0109050009020570046003e001500000",
+    "trampoline_unwind": "011204000570046003e00150",
+    "relay_unwind": "01000000",
+    "prefix": "5541565657",
+    "tail_jump": "49bb<imm64>41ffe3",
+    "trampoline_size": 18,
+    "original_stack_decrement": 40,
+    "six_argument_weights": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13
+    ]
+  },
+  "references": [
+    "https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention?view=msvc-170",
+    "https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64?view=msvc-170",
+    "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect",
+    "https://learn.microsoft.com/en-us/cpp/cpp/try-except-statement?view=msvc-170"
+  ],
+  "limitations": [
+    "Known fixed prefix; no general instruction relocation.",
+    "Fault in original body only; no asynchronous trampoline-PC exception matrix.",
+    "Trampoline prologue size18 differs from earlier synthetic size5 metadata.",
+    "No live hot-install, concurrent stop/unload, CFG/CET or unknown ABI claim.",
+    "Capture means atomic counter only; no publisher, SQLite or real message integration."
+  ]
+}

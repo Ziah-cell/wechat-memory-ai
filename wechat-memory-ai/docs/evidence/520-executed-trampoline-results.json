@@ -1,0 +1,4543 @@
+{
+  "client_date": "2026-10-10",
+  "runs": [
+    {
+      "path": "data/executed-trampoline-20261010/run-279544c0d446/results.json",
+      "sha256": "f95b8377073bd67bc13a74e102d1b3f865be961cfc172f6e26c79ef7677b3404",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "70b91cb1fe5a40a6de5f3eaf6006e6e738541699cc8ed35e4dea51355f785296"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": false,
+          "error": "FileNotFoundError(2, '系统找不到指定的文件。', None, 2, None)"
+        }
+      ],
+      "total": 1,
+      "passed": 0,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-8f5a47c2e698/results.json",
+      "sha256": "0a184806a825ebe5d752280b7a254025b976108caba18b95021922172336c939",
+      "driver_exit_observed": 0,
+      "source_hashes": {
+        "test_executed_trampoline.py": "70b91cb1fe5a40a6de5f3eaf6006e6e738541699cc8ed35e4dea51355f785296",
+        "executed_trampoline_fixture.c": "6b3673c3aba5b26d222654052226e8f28efe90a20ca1e32dfbfc8c6959b8c57f",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "65ad7a6cbe7dae1e71b467b2225c554669b220bf06d482c936e74dbdf850e776",
+        "build.json": "33d73bf3d06d1070eecfa5ef6f78111a8a768b28cb1f1a8d1a57cf97c7425bc9"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        }
+      ],
+      "total": 11,
+      "passed": 11,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-ebce852991e6/results.json",
+      "sha256": "33f7d61ab42b28e55c5fc08c89947e5444456171de17de197173a40c37fcaf48",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "70b91cb1fe5a40a6de5f3eaf6006e6e738541699cc8ed35e4dea51355f785296",
+        "executed_trampoline_fixture.c": "6b3673c3aba5b26d222654052226e8f28efe90a20ca1e32dfbfc8c6959b8c57f",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "65ad7a6cbe7dae1e71b467b2225c554669b220bf06d482c936e74dbdf850e776",
+        "build.json": "33d73bf3d06d1070eecfa5ef6f78111a8a768b28cb1f1a8d1a57cf97c7425bc9"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "omit_rbp"
+          ],
+          "passed": true,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ]
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))"
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))"
+        }
+      ],
+      "total": 4,
+      "passed": 2,
+      "metadata": "omit_rbp",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-82ebb028c43a/results.json",
+      "sha256": "a373435849dc1edb0205296ac88a3a5a6bc4a38551b79c59f0862c11fe24bf9c",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "6b3673c3aba5b26d222654052226e8f28efe90a20ca1e32dfbfc8c6959b8c57f",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "65ad7a6cbe7dae1e71b467b2225c554669b220bf06d482c936e74dbdf850e776",
+        "build.json": "33d73bf3d06d1070eecfa5ef6f78111a8a768b28cb1f1a8d1a57cf97c7425bc9"
+      },
+      "cases": [
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": false,
+          "pid": 101216,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError([])",
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": false,
+          "pid": 161172,
+          "child_exit": 2,
+          "stdout": "",
+          "stderr": "",
+          "events": [],
+          "error": "AssertionError(('child_exit', 2))",
+          "all_children_exited": true
+        }
+      ],
+      "total": 2,
+      "passed": 0,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-6bb83e14a747/results.json",
+      "sha256": "6bfd81bb3aceb881b2f4486027e67c0edd3aa8d12a8f3cf6b4e35ae10a2c178c",
+      "driver_exit_observed": 0,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "a924552aaccf8b5d0d52900d2f4ef1e055bf05d4bb2959afbaa1a721c8edb5a5",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "307f0be5188accab5e7be13382a4aab46ef0e1d756169c5918fc20bdb7f1d1e7",
+        "build.json": "21d15dda278f8928c1fd5e1e0357e123e08859de6e2bc814b04b7311b9e408db"
+      },
+      "cases": [
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157412,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159448,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        }
+      ],
+      "total": 2,
+      "passed": 2,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-99c3a8faf8ad/results.json",
+      "sha256": "33b30aa41589b82b464a20fec98ae02774d4b4d81cd88fdf9aa1ca1de05750cc",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "a924552aaccf8b5d0d52900d2f4ef1e055bf05d4bb2959afbaa1a721c8edb5a5",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "307f0be5188accab5e7be13382a4aab46ef0e1d756169c5918fc20bdb7f1d1e7",
+        "build.json": "21d15dda278f8928c1fd5e1e0357e123e08859de6e2bc814b04b7311b9e408db"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": true,
+          "pid": 161964,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 162836,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError([{'event': 'fault_unwind', 'restored_mask': 14, 'rsp_delta': 40}])",
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 161560,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))",
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 160312,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))",
+          "all_children_exited": true
+        }
+      ],
+      "total": 4,
+      "passed": 1,
+      "metadata": "omit_rbp",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-937916aac9cb/results.json",
+      "sha256": "5011f854fa6646955c820057c9d61026913dfb835a8f3122e73b7fd36706105f",
+      "driver_exit_observed": 0,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "a924552aaccf8b5d0d52900d2f4ef1e055bf05d4bb2959afbaa1a721c8edb5a5",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "307f0be5188accab5e7be13382a4aab46ef0e1d756169c5918fc20bdb7f1d1e7",
+        "build.json": "21d15dda278f8928c1fd5e1e0357e123e08859de6e2bc814b04b7311b9e408db"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 137644,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 124960,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159480,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157968,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162200,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161716,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 134008,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161248,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157520,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158048,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 149580,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159764,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157832,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159664,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162064,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157952,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158888,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 154928,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161496,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158032,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161540,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158004,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161488,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158464,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 118880,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 160420,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 156920,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 130576,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161296,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159860,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163676,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157764,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162512,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 160508,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162648,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161560,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        }
+      ],
+      "total": 36,
+      "passed": 36,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-a502d1db9b75/results.json",
+      "sha256": "fea89c31b4b785bf16dd897ccf64ba8f4cc3b05af7ff194a1248733124cea7a2",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "6fbc63b88d9e60cbefa0cc911e02fa374baafd0cb1ee90c497c5fe0d9846a0b6",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "991988fac8ad3219b0b508446b8dd20e7fbddd921048828640b30b9740efcc76",
+        "build.json": "37768047d4fe66c721a5c0cad57083796cb09dd6c5f2c9acce4c51a519158122"
+      },
+      "cases": [
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": false,
+          "pid": 159628,
+          "child_exit": 9,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":128,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 128,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError(('child_exit', 9))",
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": false,
+          "pid": 162240,
+          "child_exit": 9,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":128,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 128,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError(('child_exit', 9))",
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": false,
+          "pid": 162520,
+          "child_exit": 9,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":128,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 128,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError(('child_exit', 9))",
+          "all_children_exited": true
+        }
+      ],
+      "total": 3,
+      "passed": 0,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-7785d36a433b/results.json",
+      "sha256": "cfb414f423730f0e470f2bd1cb10aacd36671027dfd44626cf8f944517870748",
+      "driver_exit_observed": 0,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "280edae92d2fb007babb31f26fcbf4e018e646c27025a6e4c4c09214404dab7d",
+        "build.json": "a97b0f05507a1fa8176081d57ad883e3907aa01d355171c55a3adb9c4cc20f63"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159632,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161888,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158476,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161292,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 160392,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162648,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158160,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162604,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162324,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 123536,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159508,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163360,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 144108,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 162172,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 156928,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 138804,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158492,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 145520,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 160280,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 153632,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163516,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163244,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 160796,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 114088,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157816,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158428,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "integer",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 157904,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161880,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":0,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 0,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 161744,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":129,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 129,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "floating",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "floating",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 139084,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":129,\"hook_returns\":129,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 129,
+              "hook_returns": 129,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163440,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158032,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":2,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 2,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 163404,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":63,\"rsp_delta\":48}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":1,\"captures\":0,\"caught\":3221225477,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 63,
+              "rsp_delta": 48
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 1,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "hooked",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "hooked",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 158328,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":20001,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 20001,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "parallel",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "parallel",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 142936,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":20001,\"hook_returns\":20001,\"captures\":0,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 20001,
+              "hook_returns": 20001,
+              "captures": 0,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "transition",
+          "mode": "stopped",
+          "metadata": "exact",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "transition",
+            "stopped",
+            "exact"
+          ],
+          "passed": true,
+          "pid": 159012,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":2,\"hook_returns\":2,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 2,
+              "hook_returns": 2,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        }
+      ],
+      "total": 36,
+      "passed": 36,
+      "metadata": "exact",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    },
+    {
+      "path": "data/executed-trampoline-20261010/run-dc8635b48c4e/results.json",
+      "sha256": "be521da38e8c6951c29bdc025eaefa6b03d69cdf73e4df49345d04c4e88adf68",
+      "driver_exit_observed": 1,
+      "source_hashes": {
+        "test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "executed_trampoline_fixture.exe": "280edae92d2fb007babb31f26fcbf4e018e646c27025a6e4c4c09214404dab7d",
+        "build.json": "a97b0f05507a1fa8176081d57ad883e3907aa01d355171c55a3adb9c4cc20f63"
+      },
+      "cases": [
+        {
+          "kind": "integer",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "integer",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": true,
+          "pid": 162192,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":1,\"hook_returns\":1,\"captures\":1,\"caught\":0,\"installed\":true}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 1,
+              "hook_returns": 1,
+              "captures": 1,
+              "caught": 0,
+              "installed": true
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "baseline",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "baseline",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 130236,
+          "child_exit": 0,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n{\"event\":\"filter\",\"in_original\":true,\"access_violation\":true}\n{\"event\":\"result\",\"errors\":0,\"register_mask\":31,\"hook_entries\":0,\"hook_returns\":0,\"captures\":0,\"caught\":3221225477,\"installed\":false}\n{\"event\":\"cleanup\",\"prefix_restored\":true,\"table_deleted\":true,\"lookups_absent\":true,\"freed\":true}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            },
+            {
+              "event": "filter",
+              "in_original": true,
+              "access_violation": true
+            },
+            {
+              "event": "result",
+              "errors": 0,
+              "register_mask": 31,
+              "hook_entries": 0,
+              "hook_returns": 0,
+              "captures": 0,
+              "caught": 3221225477,
+              "installed": false
+            },
+            {
+              "event": "cleanup",
+              "prefix_restored": true,
+              "table_deleted": true,
+              "lookups_absent": true,
+              "freed": true
+            }
+          ],
+          "error": "AssertionError([{'event': 'fault_unwind', 'restored_mask': 14, 'rsp_delta': 40}])",
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "hooked",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "hooked",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 159664,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))",
+          "all_children_exited": true
+        },
+        {
+          "kind": "fault",
+          "mode": "stopped",
+          "metadata": "omit_rbp",
+          "command": [
+            "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\executed-trampoline-20261010\\executed_trampoline_fixture.exe",
+            "fault",
+            "stopped",
+            "omit_rbp"
+          ],
+          "passed": false,
+          "pid": 160060,
+          "child_exit": 3221225477,
+          "stdout": "{\"event\":\"ready\",\"registered_entries\":6,\"all_lookups_match\":true}\n{\"event\":\"fault_unwind\",\"restored_mask\":14,\"rsp_delta\":40}\n",
+          "stderr": "",
+          "events": [
+            {
+              "event": "ready",
+              "registered_entries": 6,
+              "all_lookups_match": true
+            },
+            {
+              "event": "fault_unwind",
+              "restored_mask": 14,
+              "rsp_delta": 40
+            }
+          ],
+          "error": "AssertionError(('child_exit', 3221225477))",
+          "all_children_exited": true
+        }
+      ],
+      "total": 4,
+      "passed": 1,
+      "metadata": "omit_rbp",
+      "target": "self-created child; generated code and entry patches only in its own allocation",
+      "live_wechat_hook": false
+    }
+  ],
+  "final_run": "data/executed-trampoline-20261010/run-7785d36a433b/results.json",
+  "final_negative_run": "data/executed-trampoline-20261010/run-dc8635b48c4e/results.json",
+  "counts": {
+    "verification": "passed",
+    "all_attempts": 103,
+    "matching_assertions": 89,
+    "retained_failures": 14,
+    "children": 102,
+    "exit_codes": {
+      "0": 92,
+      "2": 1,
+      "3221225477": 6,
+      "9": 3
+    },
+    "successful_builds": 4,
+    "final_cases": 36,
+    "final_faults": 9,
+    "final_float_vectors": 1152,
+    "final_worker_threads": 24,
+    "final_hook_counters": {
+      "hook_entries": 120804,
+      "hook_returns": 120798,
+      "captures": 60402
+    },
+    "final_negative_passed": 1,
+    "final_negative_total": 4
+  },
+  "generated_original_invocations_from_case_paths": 121200,
+  "final_exception_invocations": 9,
+  "old_driver_limitation": "Missing-RBP baseline exception still caught and passed weak old assertions; preserve this as limited evidence, not valid unwind proof.",
+  "strengthened_fault_check": "Read-only CONTEXT copy at actual own fault; RtlVirtualUnwind restores RBP/R14/RSI/RDI/RSP/RIP. Exact mask63/delta48; omit mask14/delta40.",
+  "float_strengthening": "Position-weighted assertion failed 3 earlier sum-only cases; final generated function now weighted.",
+  "own_process_audit_command": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "ConvertTo-Json -InputObject @(Get-CimInstance Win32_Process -Filter \"Name='executed_trampoline_fixture.exe'\" | Select-Object ProcessId,Name,ExecutablePath)"
+  ],
+  "remaining_own_processes": [],
+  "host_process_audit_at_utc": "2026-10-10T00:10:03.878548+00:00",
+  "hardware_breakpoint_recovery": "FAILED_UNCHANGED",
+  "live_gate_passed": false,
+  "publisher_ledger_integration": "NOT_TESTED",
+  "actual_wechat_abi": "NOT_AUTHENTICATED"
+}
