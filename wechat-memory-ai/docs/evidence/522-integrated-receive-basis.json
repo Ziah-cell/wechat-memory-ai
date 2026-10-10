@@ -1,0 +1,73 @@
+{
+  "client_date": "2026-10-11",
+  "host_checked_at_utc": "2026-10-10T17:31:11.097668+00:00",
+  "base_commit": "46362d554ec41b482c6a265556e5f683a1d00090",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "host": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/integrated_receive_fixture.c": "390a68c850cb3fd4613b4bf57b9ae1805272571e08c2b8d3d0978f4a17125b83",
+    "docs/experiments/test_integrated_receive.py": "95f136cf00d1b1e7442a41234e08585599cb252497a706c46a959b2cae1628e4"
+  },
+  "build": {
+    "path": "data/integrated-receive-20261011/build-52a727d9a587/build.json",
+    "sha256": "3b9ddeccf454a889fbd4ef4d1375bcbb0131825c1bc2c5ceb2e8c947431f2f6e",
+    "command": [
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+      "cc",
+      "-target",
+      "x86_64-windows-gnu",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fms-extensions",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\integrated_receive_fixture.c",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+      "-o",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\integrated-receive-20261011\\build-52a727d9a587\\integrated_receive_fixture.exe"
+    ],
+    "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "source_hashes": {
+      "integrated_receive_fixture.c": "390a68c850cb3fd4613b4bf57b9ae1805272571e08c2b8d3d0978f4a17125b83",
+      "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+      "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+      "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+    },
+    "build_exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "exe_sha256": "56aae0c2af2b8304140e5c30c8b487ffb90bfad09a36655d3c732fa4b4b16f84"
+  },
+  "binary": {
+    "path": "data/integrated-receive-20261011/integrated_receive_fixture.exe",
+    "sha256": "56aae0c2af2b8304140e5c30c8b487ffb90bfad09a36655d3c732fa4b4b16f84"
+  },
+  "compiler": {
+    "path": "data/resident-publisher-20261010/toolchain/zig-x86_64-windows-0.14.1/zig.exe",
+    "sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "reused_files": {
+    "docs/experiments/resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+    "docs/experiments/executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+    "docs/experiments/trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+    "docs/experiments/resident_delivery_ledger.py": "5eff36095d77051fec57114882f73236824aaaf443d95167827afb3873bc6096",
+    "docs/experiments/test_resident_publisher.py": "ff7cf1fcc9300bc225e201f6d1387c3fa898be628603b0cf9a4bd0c59cb26848"
+  },
+  "scope": "Own native entry -> relay -> integrated Hook -> bounded publisher and original trampoline; external consumer -> trusted test controller -> fictional SQLite ledger.",
+  "stop_order": "Ledger STOP commit and successful ACK first; native STOP request second. Not an atomic distributed transaction.",
+  "original_counter": "Incremented after trampoline returns successfully; not an independent counter inside generated original body.",
+  "integration": "Controlled test driver transports batches. No autonomous production bridge or Engine.",
+  "limitations": [
+    "Only known by-value integer parameters; copies Hook-local 32-byte record.",
+    "8 append-only records; full/contention stop capture, no ring reuse.",
+    "Controller remains alive; sequential child kills do not prove all-helper failure.",
+    "Capture precedes original return; does not imply real message acceptance.",
+    "No integrated capture fault/reentrancy/original-exception test, hot install/unload, CFG/CET or live ABI authentication."
+  ],
+  "component_references": [
+    "docs/RESIDENT_PUBLISHER_LIFECYCLE.md",
+    "docs/RESIDENT_DELIVERY_COMMIT.md",
+    "docs/EXECUTED_TRAMPOLINE_VALIDATION.md"
+  ]
+}
