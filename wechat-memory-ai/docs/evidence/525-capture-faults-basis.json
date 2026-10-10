@@ -1,0 +1,113 @@
+{
+  "client_date": "2026-10-11",
+  "host_checked_at_utc": "2026-10-10T17:42:05.790616+00:00",
+  "base_commit": "849f13d44c6b7ef8236abb89c0af01091ad9910b",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "host": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/capture_faults_fixture.c": "d259e6c21bd6ddaf8069e4f04d8af326e255474da19295c49965c0d3eef19aac",
+    "docs/experiments/capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+    "docs/experiments/test_capture_faults.py": "f024a41069ab361cde0ed6dfbf2cd9ae834c3cc4fbe244d0e7ef85956250826f"
+  },
+  "build": {
+    "path": "data/capture-faults-20261011/build-beedcc94ad9e/build.json",
+    "sha256": "1be62fdf451e769c6950b5ae46716903cd24ebd80cb206cf3b5819fb666ca58b",
+    "command": [
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+      "cc",
+      "-target",
+      "x86_64-windows-gnu",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fms-extensions",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_faults_fixture.c",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+      "-o",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\capture-faults-20261011\\build-beedcc94ad9e\\capture_faults_fixture.exe"
+    ],
+    "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "source_hashes": {
+      "capture_faults_fixture.c": "d259e6c21bd6ddaf8069e4f04d8af326e255474da19295c49965c0d3eef19aac",
+      "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+      "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+      "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+      "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+    },
+    "build_exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "exe_sha256": "672ab6dda0a95b79ebe10c7afc3344a2e057824f5ac1c4d75078113f80f7d9eb"
+  },
+  "binary": {
+    "path": "data/capture-faults-20261011/capture_faults_fixture.exe",
+    "sha256": "672ab6dda0a95b79ebe10c7afc3344a2e057824f5ac1c4d75078113f80f7d9eb"
+  },
+  "compiler": {
+    "path": "data/resident-publisher-20261010/toolchain/zig-x86_64-windows-0.14.1/zig.exe",
+    "sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "derived_from": {
+    "path": "docs/experiments/integrated_receive_fixture.c",
+    "sha256": "390a68c850cb3fd4613b4bf57b9ae1805272571e08c2b8d3d0978f4a17125b83"
+  },
+  "listing": {
+    "path": "data/capture-faults-20261011/listing.json",
+    "sha256": "c86b4a7dcf7689ea754f3bda4fd411dfc55e9bc7abcefaf99d8cef692b38f3bf",
+    "command": [
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+      "cc",
+      "-target",
+      "x86_64-windows-gnu",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fms-extensions",
+      "-S",
+      "-masm=intel",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_faults_fixture.c",
+      "-o",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\capture-faults-20261011\\compiler-listing.s"
+    ],
+    "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "source_sha256": "d259e6c21bd6ddaf8069e4f04d8af326e255474da19295c49965c0d3eef19aac",
+    "exit": 0,
+    "stderr": "",
+    "listing_sha256": "f7dad7be97053662d8320ca24e094f60700e326622d48473574941b753f7342a",
+    "matches": {
+      "__emutls_get_address": [],
+      "_tls_index": [
+        5961,
+        8524,
+        8891
+      ],
+      "capture_depth": [
+        5964,
+        8527,
+        8896,
+        8943,
+        10041,
+        10042,
+        17746,
+        17747,
+        17748
+      ]
+    },
+    "scope": "Compiler assembly listing only, not EXE disassembly or timing trace"
+  },
+  "policy": "Prepare bounded local candidate, forward original, publish only after successful original return. TLS nested entries forward without capture; finally resets outer depth.",
+  "capture_filter": "Only own copy-site code, own PAGE_NOACCESS read address and EXCEPTION_ACCESS_VIOLATION read operation. Original exceptions continue search.",
+  "injection": "Own 8192-byte allocation, second page NOACCESS; first read offset0 or third read offset14. No external PID or unknown object.",
+  "limitations": [
+    "No publisher-held-gate or shared-record commit fault injection.",
+    "No multithread TLS or latency bound proof; compiler listing is not EXE disassembly.",
+    "Nested record deliberately skipped; not complete delivery.",
+    "Already published records cannot be assumed revoked; only later consumer read tested.",
+    "No arbitrary pointer/corruption/CFG/CET/hot-install/live ABI claim."
+  ]
+}
