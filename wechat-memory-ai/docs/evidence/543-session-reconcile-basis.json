@@ -1,0 +1,87 @@
+{
+  "client_date": "2026-10-12",
+  "checked_at_utc": "2026-10-11T23:34:06.352050+00:00",
+  "base_commit": "fa185024945925e707d717db597202f52666515b",
+  "source_hashes": {
+    "docs/experiments/session_target_binding.py": "dd590c73e48568367c5306e40e9d288f38e4dd73b47ed92a15eba112aaa90821",
+    "docs/experiments/session_reconcile_ledger.py": "ffb43cf39d67e3f8086f5364f41dafedc99e089dba0b644b95e7571c9cebdd54",
+    "docs/experiments/session_reconcile_recovery.py": "6c407677d51d729c79f397ff67f19db37cb9db6096ba000024e42fae3b6e80a7",
+    "docs/experiments/test_session_reconcile.py": "81af9efd8c32403ebeb4da9587bc2f472166ba9cd7d033ca02853c319887789e"
+  },
+  "native": {
+    "source": "data/target-lifetime-20261012/target_lifetime_fixture.exe",
+    "sha256": "9ba2603e7e3a39f9254358e3d9ac2395c4920eccfa51c616d4ff540b4bfb5dca",
+    "frozen_checkpoint": "docs/evidence/542-target-lifetime-checkpoint.json",
+    "new_build": false
+  },
+  "frozen_old_files": 764,
+  "old_research": 61,
+  "old_product": 29,
+  "old_analysis": 24,
+  "old_evidence": 359,
+  "plan": "docs/superpowers/plans/2026-10-12-session-reconciliation.md",
+  "api_references": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess",
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+    "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-enumprocesses",
+    "https://www.sqlite.org/lang_transaction.html"
+  ],
+  "failures": {
+    "missing_implementation": "run-3d794dd83b2a",
+    "matrix_failures": 9,
+    "negative_rounds": 2,
+    "missing_database_checks": [
+      {
+        "path": "data/session-reconcile-20261012/missing-recovery-7216e20264c5/result.json",
+        "sha256": "ee2917b84076f78c708a43224508f390857b9e39d78f757b6293a5bde038b08a",
+        "args": [
+          "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+          "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\session_reconcile_recovery.py",
+          "--database",
+          "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\session-reconcile-20261012\\missing-recovery-7216e20264c5\\ledger.sqlite3"
+        ],
+        "source_sha256": "297f817ca324883e90e7e59fd7653dbe559c8d5da9db84fc8db93c68b7343816",
+        "exit": 0,
+        "output": {
+          "event": "recovery",
+          "outcome": "no_active_session"
+        },
+        "database_created": true,
+        "passed": false
+      },
+      {
+        "path": "data/session-reconcile-20261012/missing-recovery-8ecf1e4e15ec/result.json",
+        "sha256": "58069aab1bee8fd86d27322ceee6f777cddb4b967e941b1d19cb4a5da8835405",
+        "args": [
+          "C:\\Users\\zhihua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+          "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\session_reconcile_recovery.py",
+          "--database",
+          "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\session-reconcile-20261012\\missing-recovery-8ecf1e4e15ec\\ledger.sqlite3"
+        ],
+        "source_sha256": "6c407677d51d729c79f397ff67f19db37cb9db6096ba000024e42fae3b6e80a7",
+        "exit": 2,
+        "output": {
+          "event": "recovery",
+          "outcome": "error",
+          "reason": "missing_database"
+        },
+        "database_created": false,
+        "passed": true
+      }
+    ]
+  },
+  "constraints": {
+    "owned_fixtures_only": true,
+    "fictional_payloads": true,
+    "old_databases_unchanged": true,
+    "live_wechat": false,
+    "models": false,
+    "auto_reply": false,
+    "listener": "stopped",
+    "id40": "previously paused, unchanged",
+    "subagents": false,
+    "worktree": false,
+    "outer_controller_alive": true,
+    "independent_relay_integration": false
+  }
+}
