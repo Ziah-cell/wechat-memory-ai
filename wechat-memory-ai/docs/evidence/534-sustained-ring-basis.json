@@ -1,0 +1,93 @@
+{
+  "client_date": "2026-10-11",
+  "base_commit": "fc7ae72350d7268f25e2ed616255550c4294d55a",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+    "docs/experiments/sustained_ring_fixture.c": "45001363b753c34d9b3ec11c05bc2e95b017de19ba948793e58b8f137491642e",
+    "docs/experiments/sustained_ring_ledger.py": "6f731d36621aedf90a1c34d22c8992890683bab660c24543be0af3480b1b838d",
+    "docs/experiments/test_sustained_ring.py": "8ea4ce716e3faa54e387c78773ca57298507c1cb4092e1dc190d3ba1c595371f"
+  },
+  "builds": [
+    {
+      "path": "data/sustained-ring-20261011/build-4e592a07132b/build.json",
+      "sha256": "45668e6c4b3268e82004d8c7b7a24d9082617e4f42724c0eea77868bcead162c",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\sustained_ring_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\sustained-ring-20261011\\build-4e592a07132b\\sustained_ring_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "sustained_ring_fixture.c": "45001363b753c34d9b3ec11c05bc2e95b017de19ba948793e58b8f137491642e",
+        "sustained_ring_protocol.h": "92ced0d827cc3632775d5399fb59b8f6fdcb705167b21df7da5c1489b7088401",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "f9453a07c0e7982bb349a6351df32d71d9b9d349627db3a2e83ed5a6ab9cd15c"
+    },
+    {
+      "path": "data/sustained-ring-20261011/build-ef03bee25821/build.json",
+      "sha256": "7869913c83c085ede182927be3a0797884b9633a02c7a2b60a3d285d8ffe1278",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\sustained_ring_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\sustained-ring-20261011\\build-ef03bee25821\\sustained_ring_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "sustained_ring_fixture.c": "45001363b753c34d9b3ec11c05bc2e95b017de19ba948793e58b8f137491642e",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "a70424a70128e0e29558327b5b64565d8b36594b7b960eda9e2fa037257cb372"
+    }
+  ],
+  "spec": "docs/superpowers/specs/2026-10-11-sustained-ring-design.md",
+  "plan": "docs/superpowers/plans/2026-10-11-sustained-ring.md",
+  "prior_counts": {
+    "research": 47,
+    "product": 29,
+    "analysis": 24,
+    "evidence": 350
+  },
+  "frozen_manifest_sha256": "1a86e305d60e1044db06aa4122894e1164eb1fa1658d610fe5d868a73fd488e9",
+  "prior_evidence_manifest_sha256": "cd94bd485e4ddb1726ca5f6b81c687c2fe92d3bdd2ffc5279eeb72c0a56df926",
+  "trusted_ack_relay": true,
+  "real_wechat_operations": false,
+  "subagents_or_other_models": false
+}
