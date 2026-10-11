@@ -1,0 +1,205 @@
+{
+  "client_date": "2026-10-11",
+  "base_commit": "e84318bb7072bc1224848ec23869e3d121f09316",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/autonomous_relay_fixture.c": "ec96557a7d00f4623e0573b6d8ad49daa1fa95eed3e00567252f3e42f16ebc4f",
+    "docs/experiments/autonomous_relay_hook.inc": "45efedbb8b8ec9438486aa5ea0df8f44a80a1ca69e461f26c73f3ddc9a3e931d",
+    "docs/experiments/autonomous_relay.py": "b02616c0c2f6edbd361a780db0ebe26b0a31f9e11287458eb1ba647d3a46a5a5",
+    "docs/experiments/autonomous_relay_ledger.py": "fa85d7a5fa7913820e7a1d6c192fcf5dc732424e34b932ec39d0031211c07876",
+    "docs/experiments/test_autonomous_relay.py": "c79142cee9fe87ff2e3faa17d10772e49677750339bcb694e14c7e3633f73d1f"
+  },
+  "plan": "docs/superpowers/plans/2026-10-11-autonomous-relay.md",
+  "build_preflight_failure": {
+    "exit": 1,
+    "compiler_started": false,
+    "reason": "Pinned digest literal was mistyped in the new build script; assert rejected before compilation.",
+    "incorrect_literal": "1ddf230367e07738c4a769e66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "verified_actual_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "builds": [
+    {
+      "path": "data/autonomous-relay-20261011/build-14ac1d310a23/build.json",
+      "sha256": "f5aaf47f064cb4c3d24da3cdc99a0693df8df7a1fb9b105f99b45c0a36888738",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\autonomous-relay-20261011\\build-14ac1d310a23\\autonomous_relay_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "autonomous_relay_fixture.c": "ec96557a7d00f4623e0573b6d8ad49daa1fa95eed3e00567252f3e42f16ebc4f",
+        "autonomous_relay_hook.inc": "45efedbb8b8ec9438486aa5ea0df8f44a80a1ca69e461f26c73f3ddc9a3e931d",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "cd1e85b8f74cab35cc17b3755710d5bdf5734e761b955ab0e1fd0921aa59fb79"
+    },
+    {
+      "path": "data/autonomous-relay-20261011/build-172631aa6139/build.json",
+      "sha256": "30ec3c3525a53bca73f8208dd161ee372d40f6678146785a591eef412aa7b97c",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\autonomous-relay-20261011\\build-172631aa6139\\autonomous_relay_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "autonomous_relay_fixture.c": "bfefa021d763fb02b26f39051dcdabfebe169498ff1b0b7c84356ffbe5b69e92",
+        "autonomous_relay_hook.inc": "45efedbb8b8ec9438486aa5ea0df8f44a80a1ca69e461f26c73f3ddc9a3e931d",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 1,
+      "stdout": "",
+      "stderr": "In file included from C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c:2:\nIn file included from C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments/autonomous_relay_hook.inc:1:\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments/sustained_ring_protocol.h:109:12: error: unused function 'consumer' [-Werror,-Wunused-function]\n  109 | static int consumer(const char *name,const char *epoch){\n      |            ^~~~~~~~\nIn file included from C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c:2:\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments/autonomous_relay_hook.inc:294:12: error: unused function 'integrated_target' [-Werror,-Wunused-function]\n  294 | static int integrated_target(const char *name,const char *epoch) {\n      |            ^~~~~~~~~~~~~~~~~\n2 errors generated.\n"
+    },
+    {
+      "path": "data/autonomous-relay-20261011/build-2e0207eac19b/build.json",
+      "sha256": "51cd11f40a858e774bf243fc876d306f2cac8960985abec2e6e2b0e67dd8cc5f",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\autonomous-relay-20261011\\build-2e0207eac19b\\autonomous_relay_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "autonomous_relay_fixture.c": "af0d309d7f5f22de30a937fc82802b45593c0c20bf056fdc5b168d1c6881029a",
+        "autonomous_relay_hook.inc": "45efedbb8b8ec9438486aa5ea0df8f44a80a1ca69e461f26c73f3ddc9a3e931d",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "50cee62161839987347ea099fe312c4f1175704510f343e97a348813a6891ae8"
+    },
+    {
+      "path": "data/autonomous-relay-20261011/build-56e72cba287e/build.json",
+      "sha256": "41d70fead57d45160894093d4dd11a427e473b2138f5257384706d21345cc5a5",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\autonomous-relay-20261011\\build-56e72cba287e\\autonomous_relay_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "autonomous_relay_fixture.c": "d916a183bed7af4ca2f337f1d1f09561eb56d4cc88c8e95270021de742f27d7d",
+        "autonomous_relay_hook.inc": "45efedbb8b8ec9438486aa5ea0df8f44a80a1ca69e461f26c73f3ddc9a3e931d",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "6d76dd1f83354f4029e2e5e6b2f82296a578e1cec0e3b2b0952847b5a48714a6"
+    },
+    {
+      "path": "data/autonomous-relay-20261011/build-887ab41dddbe/build.json",
+      "sha256": "52eb867c5ea2712306127406450ea1b005e53a6bf1ad9032e14d16d9e260b221",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\autonomous-relay-20261011\\build-887ab41dddbe\\autonomous_relay_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "autonomous_relay_fixture.c": "906dfbec288cb8911b403cc101de54141585460e6b74b1f749a1e5e2625354f0",
+        "sustained_ring_fixture.c": "45001363b753c34d9b3ec11c05bc2e95b017de19ba948793e58b8f137491642e",
+        "sustained_ring_protocol.h": "b03e599ea1bda332556f67c884635ce4b0577702afd36542ad2601965cae43d9",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 1,
+      "stdout": "",
+      "stderr": "In file included from C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c:3:\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments/sustained_ring_fixture.c:2:9: error: 'main' macro redefined [-Werror,-Wmacro-redefined]\n    2 | #define main trampoline_component_main\n      |         ^\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c:2:9: note: previous definition is here\n    2 | #define main frozen_ring_main\n      |         ^\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\autonomous_relay_fixture.c:181:5: error: redefinition of 'main'\n  181 | int main(int argc,char **argv){\n      |     ^\nC:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments/sustained_ring_fixture.c:350:5: note: previous definition is here\n  350 | int main(int argc,char **argv) {\n      |     ^\n2 errors generated.\n"
+    }
+  ],
+  "old_research": 51,
+  "old_product": 29,
+  "old_analysis": 24,
+  "old_evidence": 353,
+  "frozen_manifest_sha256": "b9c7fde5d4ee2032f5b2e435187293120932e483b5be10ad8809ecce18b96816",
+  "official_references": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeclientprocessid",
+    "https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipe-server-using-overlapped-i-o",
+    "https://learn.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-cancelioex"
+  ],
+  "trusted_relay": true,
+  "controller_remained_alive": true,
+  "live_wechat_operations": false,
+  "subagents_or_other_models": false
+}
