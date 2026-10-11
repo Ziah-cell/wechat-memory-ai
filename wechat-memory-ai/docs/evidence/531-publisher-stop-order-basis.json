@@ -1,0 +1,138 @@
+{
+  "client_date": "2026-10-11",
+  "host_checked_at_utc": "2026-10-11T05:08:31.181738+00:00",
+  "base_commit": "b3baacc8d35f77783e698b2f549093fe989262fb",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "host": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/publisher_stop_order_fixture.c": "7909ac9f22e5fe25791a7852ee5cd7ea141ea88f50ead11b3e2b059371c4481c",
+    "docs/experiments/test_publisher_stop_order.py": "25d6f46c8e0f1e82ee2193c41acc4789b0bd680a3b34ac127711e00b902c9c31"
+  },
+  "builds": [
+    {
+      "path": "data/publisher-stop-order-20261011/build-34af0c2b2e71/build.json",
+      "sha256": "24dfa2313d8b96657a6717c3945d1e693de74fa85b5a30b3fdf4bc11baec6077",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\publisher_stop_order_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\publisher-stop-order-20261011\\build-34af0c2b2e71\\publisher_stop_order_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "publisher_stop_order_fixture.c": "a499426f4cbc8d50d9c8c6f07df2f7cd0626b17e3383d39a4f4c680f429e7040",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "78b66f276ac2a7aae1574e30c942f6bf5b4cacd4a27ada330b1ff3bb67551933"
+    },
+    {
+      "path": "data/publisher-stop-order-20261011/build-dd4f8f6bd09f/build.json",
+      "sha256": "cbe77e5006bc1703c2dedbbcd47a1ce08bb006638b8424cab1ba411e2bc00254",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\publisher_stop_order_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\publisher-stop-order-20261011\\build-dd4f8f6bd09f\\publisher_stop_order_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "publisher_stop_order_fixture.c": "6aeb7b8f1873a3a5642fab789b618db16a8bbf35b4d0d171aef4db54c695cfe7",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "0f91d8c42c5ca02181b167e69520cbb355bcbbcfd697d47a9585d2a2269c8129"
+    },
+    {
+      "path": "data/publisher-stop-order-20261011/build-d9324eceef16/build.json",
+      "sha256": "4b4ddff07bde0c1bd20db410440ea86416743bf380e486b275fef238c6a95db8",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\publisher_stop_order_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\publisher-stop-order-20261011\\build-d9324eceef16\\publisher_stop_order_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "publisher_stop_order_fixture.c": "7909ac9f22e5fe25791a7852ee5cd7ea141ea88f50ead11b3e2b059371c4481c",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "9f056d777e26bc6551e025abc6a779e452ed56dd3660a7b193cb8b9b0bc9c83d"
+    }
+  ],
+  "binary": {
+    "path": "data/publisher-stop-order-20261011/publisher_stop_order_fixture.exe",
+    "sha256": "9f056d777e26bc6551e025abc6a779e452ed56dd3660a7b193cb8b9b0bc9c83d"
+  },
+  "compiler": {
+    "path": "data/resident-publisher-20261010/toolchain/zig-x86_64-windows-0.14.1/zig.exe",
+    "sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "derived_from": {
+    "path": "docs/experiments/publisher_gate_tls_fixture.c",
+    "sha256": "b74fdc4fddc90abb04c84a3c30be7c7d2f6ac19513d1e7190dd9c7d89b0434f7"
+  },
+  "policy": "Before releasing the acquired gate on abnormal completion, mark capture inactive. Recheck state after acquiring the gate even if the earlier admission check passed. Do not change the narrow exception filter.",
+  "reproduction": "Pause worker1 after unlock and before outer handler; let worker2 finish; real read-only consumer reads and real SQLite inbox commits before resuming worker1.",
+  "second_producer_positions": [
+    "Fresh entry after unlock.",
+    "Candidate copied and original returned before invalidation, paused before publisher.",
+    "Publisher first state check passed before invalidation, paused before gate CAS."
+  ],
+  "self_review": "Expanded final matrix from two positions to three; a prechecked producer may acquire the gate after invalidation but must not publish. Added skip_recheck control to test the preserved inner check.",
+  "limitations": [
+    "Own copy-site read AV only, not a fault in the shared write instruction.",
+    "Blocking test events expose order, not occurrence frequency or latency bound.",
+    "Earlier accepted records cannot be revoked.",
+    "No arbitrary pointer, hot install, CFG/CET or live ABI proof."
+  ]
+}
