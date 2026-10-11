@@ -1,0 +1,104 @@
+{
+  "client_date": "2026-10-11",
+  "host_checked_at_utc": "2026-10-11T04:51:35.071252+00:00",
+  "base_commit": "f857d94e64c909a68bcd2326cf691247a85211e5",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "host": "Windows-11-10.0.26200-SP0",
+  "sources": {
+    "docs/experiments/publisher_gate_tls_fixture.c": "b74fdc4fddc90abb04c84a3c30be7c7d2f6ac19513d1e7190dd9c7d89b0434f7",
+    "docs/experiments/test_publisher_gate_tls.py": "5eb2354756e9ce3420e865b68c0f1293aa143495d82b3ec792a03423b211436e"
+  },
+  "builds": [
+    {
+      "path": "data/publisher-gate-tls-20261011/build-69581ff2b46a/build.json",
+      "sha256": "94836fb662eea9995ac5763165cc938e8d10cbdaeafd05e3c8efc725b02e164d",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\publisher_gate_tls_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\publisher-gate-tls-20261011\\build-69581ff2b46a\\publisher_gate_tls_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "publisher_gate_tls_fixture.c": "56c1064bab33059dbcbe593795062a0b4bbceed4cd49440e7470ceabf0930935",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "69a27fd3f6954db07e0dd82cfd9d85d8d307a6a33a23094d722966151f8b4a6b"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/build-172d074da54c/build.json",
+      "sha256": "e25273e3aa6bc454f3d9a2ae5013da5cc2b7fb48a2a162b83a1e95e3a5dbac8e",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\publisher_gate_tls_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\publisher-gate-tls-20261011\\build-172d074da54c\\publisher_gate_tls_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "publisher_gate_tls_fixture.c": "b74fdc4fddc90abb04c84a3c30be7c7d2f6ac19513d1e7190dd9c7d89b0434f7",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "8e7d57db9b7cbd4d0d1a04ab78424a07bf518a5cef9c776690a45f7eacf9eaba"
+    }
+  ],
+  "binary": {
+    "path": "data/publisher-gate-tls-20261011/publisher_gate_tls_fixture.exe",
+    "sha256": "8e7d57db9b7cbd4d0d1a04ab78424a07bf518a5cef9c776690a45f7eacf9eaba"
+  },
+  "compiler": {
+    "path": "data/resident-publisher-20261010/toolchain/zig-x86_64-windows-0.14.1/zig.exe",
+    "sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd"
+  },
+  "derived_from": {
+    "path": "docs/experiments/capture_faults_fixture.c",
+    "sha256": "d259e6c21bd6ddaf8069e4f04d8af326e255474da19295c49965c0d3eef19aac"
+  },
+  "policy": "Copy local by-value input, successfully forward original, acquire gate, write record, release-store published, finally release gate. Outer narrow handler stops capture.",
+  "injection": "Own copy-site read AV inside acquired gate at entry, after first16 bytes, before release-store, after release-store. NOT a fault at shared write instructions.",
+  "tls_overlap": "Worker1 blocks at depth1 before capture, outside gate; worker2 captures/reenters and finishes, signals worker1. Join both before slot diagnostics. Each scenario uses a new target.",
+  "self_review": [
+    "Removed inherited async workers command to avoid slot-diagnostic read/write race.",
+    "Setup/join failure terminates fixture with code25 instead of returning past live stack arguments; failure injection untested."
+  ],
+  "limitations": [
+    "Gate release precedes outer handler setting inactive; another concurrent publisher crossing this interval is untested.",
+    "Only own read AV accepted; actual shared-write AV and arbitrary pointer/corruption recovery untested.",
+    "No hot-install/CFG/CET/live ABI or nonblocking timing claim.",
+    "Nested candidates skipped; already accepted records not revoked."
+  ]
+}

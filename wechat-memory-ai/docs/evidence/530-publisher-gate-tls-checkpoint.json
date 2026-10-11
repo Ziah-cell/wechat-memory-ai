@@ -1,0 +1,264 @@
+{
+  "client_date": "2026-10-11",
+  "host_checked_at_utc": "2026-10-11T04:51:35.071252+00:00",
+  "base_commit": "f857d94e64c909a68bcd2326cf691247a85211e5",
+  "source_hashes": {
+    "docs/experiments/receive_probe_fixture.py": "90b6a0610600c53511dc2dec539ba5670bcc7761915060bbfebedaf4c888260d",
+    "docs/experiments/receive_probe_variants.py": "91c47a2900db2e0f124d65ec29a094da54d3995ed711aec3f1b0512c42f811f8",
+    "docs/experiments/receive_probe_win32.py": "38a0f29a6ef1079aca1da0aa47cbdce47813480f48ab6d48ab6bd3071a9eb0c6",
+    "docs/experiments/compare_receive_probe_methods.py": "96ce4faf711cf4ab4058d5d28b3027b98775e6f6f061eee1372888baac8b4e40",
+    "docs/experiments/receive_probe_observer.py": "478d9e23bcd768d7e3a5d8e2976798688753c8337f3cba3a1ad9eb171e328246",
+    "docs/experiments/diagnose_receive_probe_crash.py": "f5ff8f01bf161079bc9528466c2024999ddbeafb765dc59b10c67630945ca99e",
+    "docs/experiments/test_receive_probe_native.py": "99f78464f6c517d9cced7df7c892ba1113d3de89f62ded9748f7f1f29be78953",
+    "docs/experiments/receive_probe_transfer.py": "094f98f25c3ea3b78a5550f82a716d7dc042e4b39253291bdc3ea3977618ae00",
+    "docs/experiments/test_receive_probe_transfer.py": "3ecb1c49523e8af87eaa044b968be33ce66462daaafb334e7f563b9134a2c346",
+    "docs/experiments/probe_fixture_freeze.py": "3f7007187796852fb3bb1950722ce6d252092ea7286a50105dfa7f118905cc3a",
+    "docs/experiments/receive_probe_guarded.py": "1d5862f84c4b02d30b8da5402da4b007d4e6f2255a2e7434122b136ec8a09e05",
+    "docs/experiments/receive_probe_parallel_fixture.py": "c946a0848e19da271d1e16214cb2d0d8c8c76848a1bb4e487a6e3b4b334dae99",
+    "docs/experiments/test_receive_probe_guarded.py": "cfd2f2a3088cf01c20e6e8b52cc1d9f555d975a48d63394437ad4ad77be4c7eb",
+    "docs/experiments/test_receive_probe_guarded_matrix.py": "e67c6eb70f3032a887ac48bf52fabb1a2b7d9970af706ad36dc3ffebc3c1e86d",
+    "docs/experiments/check_receive_probe_layout.py": "db0e97def2684ba01242ce368f52f023ca35a8b88ed43f0f153be7f9e1ce3d41",
+    "docs/experiments/receive_probe_timed_fixture.py": "66b7fd1b4e4c11d4f8eb9b63d21ca874294d6adbda3bdce218df4fb072e4dfa9",
+    "docs/experiments/receive_probe_timing.py": "4d81ac34abbdce099d118c4f184b3c0da823bb44df6665b7ced9667bb4407561",
+    "docs/experiments/receive_pause_bounds.py": "3823fd4a413af1b25b6e51cf5af72bde8fd82d12af016b6866d3b09da53d4174",
+    "docs/experiments/test_receive_probe_timing.py": "e630773b5dace4e14efb38783fb02e4674cd65fed378a8d2fa82de7eb0b18c85",
+    "docs/experiments/test_receive_pause_bounds.py": "8292ff994798f4449faa2236341cd1bd22fa35475cd3d0f06a03a245859ddb4f",
+    "docs/experiments/receive_probe_lifecycle.py": "6a2a9dcfdd85decf66f8a5cfbe69d8283e450c1b06c70c4270a810eff517d239",
+    "docs/experiments/receive_probe_lifecycle_fixture.py": "0a041b6a52d5d2b9070ebe3e1338e9c4614500c05b82e14803fab9982afc51ed",
+    "docs/experiments/test_receive_probe_timing_lifecycle.py": "300f3bf0a60b2ea31d81fdcb7a01d3410c1eb37ae34433524344d9a2ec9fe422",
+    "docs/experiments/test_receive_probe_lifecycle_policy.py": "aab566563a567f6359cda940d47f3a9ce95998b6205225b239b864187264feef",
+    "docs/experiments/test_receive_probe_lifecycle_output.py": "0022d700c1ca5041771069569b8bf68212ca2ad7f3fbc9797aedba4f8ed5f829",
+    "docs/experiments/test_receive_probe_dual_loss.py": "3f993b08d57f9abe138cb42fb7aec0e238f7a22a1cc6acad8de0708b144c81a3",
+    "docs/experiments/receive_probe_attach_audit.py": "8c1900b52a80881d01010249204f3fcaf1ef16b2cd621292a045c76a0b9b6214",
+    "docs/experiments/receive_probe_attach_fixture.py": "04df71353bb5bf2176855ae56dbaaa131d9e90c7b6ab02098f52296e63606995",
+    "docs/experiments/test_receive_probe_attach_audit.py": "6fb5d156833c0dff3bfbd442691ad6adb9cb01a2f7e7dc189f95c6a3f826e7d6",
+    "docs/experiments/audit_os_receive_surfaces.py": "16c83879d5f8563424f97faf49cf76e67909d1fa546fc1f3b68741e6f6f2babc",
+    "docs/experiments/probe_resident_unwind.py": "6887d2fadb7043366efeeb50d80b2ff39add8e65f5c739f3249d55071cb6b969",
+    "docs/experiments/resident_publisher_fixture.c": "882328c3fcfa9b65fb368107176c273e7e3d0ebe35fefce6f39112e19ab71971",
+    "docs/experiments/test_resident_publisher.py": "ff7cf1fcc9300bc225e201f6d1387c3fa898be628603b0cf9a4bd0c59cb26848",
+    "docs/experiments/resident_delivery_ledger.py": "5eff36095d77051fec57114882f73236824aaaf443d95167827afb3873bc6096",
+    "docs/experiments/test_resident_delivery.py": "e12ffcf50ca8848d6ef739882d30fd982c0ea1cd396983397fd613b6fab82b06",
+    "docs/experiments/executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+    "docs/experiments/trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+    "docs/experiments/test_executed_trampoline.py": "36784440149bc71d3c2f9dd65c2623759e08b7d10c9ede31929d3a6f6deec2f1",
+    "docs/experiments/integrated_receive_fixture.c": "390a68c850cb3fd4613b4bf57b9ae1805272571e08c2b8d3d0978f4a17125b83",
+    "docs/experiments/test_integrated_receive.py": "95f136cf00d1b1e7442a41234e08585599cb252497a706c46a959b2cae1628e4",
+    "docs/experiments/capture_faults_fixture.c": "d259e6c21bd6ddaf8069e4f04d8af326e255474da19295c49965c0d3eef19aac",
+    "docs/experiments/capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+    "docs/experiments/test_capture_faults.py": "f024a41069ab361cde0ed6dfbf2cd9ae834c3cc4fbe244d0e7ef85956250826f",
+    "docs/experiments/publisher_gate_tls_fixture.c": "b74fdc4fddc90abb04c84a3c30be7c7d2f6ac19513d1e7190dd9c7d89b0434f7",
+    "docs/experiments/test_publisher_gate_tls.py": "5eb2354756e9ce3420e865b68c0f1293aa143495d82b3ec792a03423b211436e"
+  },
+  "product_source_hashes": {
+    "src/wechat_memory/__init__.py": "dd7018432917f527fde7eefedecad5b9fc9ba99b8f0580e857941b00f7c7d6b0",
+    "src/wechat_memory/__main__.py": "bd045ddd5242d002f692dac452be9afba38deef5cde541a5fc074bfef5987b91",
+    "src/wechat_memory/adapters.py": "f763be8bd0a788527af513aae77b2711b063e080d2f5a26bf3f29fd0731c7162",
+    "src/wechat_memory/audit.py": "b7f9cd95ff7cf9c34cf264061faedea8f3b23af02425c1f5c9fc277470346f26",
+    "src/wechat_memory/backup.py": "8e8685930bbc83867213c99fd03f7b3b8b5610c334bd9d2df7dd66aee238785f",
+    "src/wechat_memory/callback_inbox.py": "1e69823d62b85f7e4d66eb67ce43b08d8d6561961df41867f6162638fd2ee9ef",
+    "src/wechat_memory/cli.py": "b746f4e9e97ff46c58f21f588188296ae02e39583f9c2b8790bdf264bc41c634",
+    "src/wechat_memory/config.py": "6cc4197ec8e282c606247efe14786a07301209774bec3446ccd6ff4f2ce70928",
+    "src/wechat_memory/engine.py": "a08a684479f2e9fee26affafa17cbee852973d2da82309bc07491272bfd7109c",
+    "src/wechat_memory/inbound_capabilities.py": "7b8bc33e960c87c8893bebea953f1f5083a51f34a69944b0130fce9c8ebb33cb",
+    "src/wechat_memory/live_read.py": "fe79517aabdc61ac03645e00ebdbd092d01234a0c6ae148251133e4d789c3625",
+    "src/wechat_memory/live_reader.cs": "990161fe11d8e55772509fdd5346585b72b254ccdf97dfda812146af35acd585",
+    "src/wechat_memory/live_source.py": "119ff741088df274f29fa543ea7244a7f9b3de3396377c2f19dae25edd53f831",
+    "src/wechat_memory/memory.py": "9b6a4aae32add11aaa4a99a761015c2b21bc589140fa86532b7bd9c114a2072c",
+    "src/wechat_memory/models.py": "cd1fba0595ce24d7bd5367df2b94bc2eed16c36778dfa7cdd9f0cafbf8fd2ba8",
+    "src/wechat_memory/monitor.py": "a0d6e1aa616e09cbb295fa39875c743df74ca884e4ed87937f3dd6d00f880deb",
+    "src/wechat_memory/ocr_check.py": "10d01056d43a8f8ca7a741d32d3e72fce8ada5333c3cd79f387e9c16c81e7f2b",
+    "src/wechat_memory/ocr_synthetic.ps1": "d7cb3f05e29e19c06d3f049fccc75e11efa29f4a7b7688b8192b06d30f94f52f",
+    "src/wechat_memory/offline_check.py": "8cb42548c9898af61d1db691b4b9a3aad9fd1405cfbf223e23c5da91d002a02d",
+    "src/wechat_memory/operations.py": "2f525139d8728144db88cbfc1255a7d3829c6190167bb76ce67d5f346c28577c",
+    "src/wechat_memory/power.py": "01d516383d2d7ff1bdd49c37d2d7c63dd34bc30e7c3284ef8930c912a1722181",
+    "src/wechat_memory/preferences.py": "5433c91d5d12e5f52459ed0f12c7612e0c22c6ff1aaaa207da261eb91681426a",
+    "src/wechat_memory/preflight.py": "eb7b18b5f23dc563be345933edcd1d46403d00bfde8f2dd8c64d3f8a54867ac8",
+    "src/wechat_memory/runtime.py": "b8444ee169aff426d8fb4f9f7c55b5aeadc5938f31a8d70d4abbec17acd635f3",
+    "src/wechat_memory/store.py": "bc407e76d5fc437f9a6bbee7012dc64222dbbc451dc22e07ae77d5f077e3ae55",
+    "src/wechat_memory/uia_probe.ps1": "e1dd35f36c2982c02635d8cc4ea8f0ea409af6d07fc97a72abe433cb4df81a20",
+    "src/wechat_memory/uia_support.ps1": "4a4877d6b2402edd62fcc97adb08571477dec3cf45e952ff10798c4b8a81f1c6",
+    "src/wechat_memory/visual_direction.cs": "d3a04f84c45b95280289922eae9b278194ff72f9567f90bf1621390f8478c71d",
+    "src/wechat_memory/wechat_probe.py": "6dc3ae6eb23d28e466cf8a7b4543b5727c648336605b9f22a29025b49d5f9a51"
+  },
+  "earlier_analysis_scripts": [
+    {
+      "cache_path": "data/inbound-cancel-20261009/write_evidence.py",
+      "sha256": "0a168c7a0dc2f23ffdfcd57ad6f81a5101a0fb82a612eab9054f8847da96940f"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verify_evidence.py",
+      "sha256": "3ee843d9f63a02ea9202d326a0a194d6a0e3b6619b19248149bea3020b5c7892"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/verification_checks.py",
+      "sha256": "43bf6a34afdbc900745244719d4f39a8854a069c26436e853edf0a22e8df32d5"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/update_docs.py",
+      "sha256": "8e9d24a73cd1f2e062582a6d1c89196acb737fa11c36f9b5e2ce180f754b7e77"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/probe.py",
+      "sha256": "8f31829c44f4d612fd577f8f88cdfdb12c750f3f5ff1a6b2f1dc58657af0a1d1"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/read_table.py",
+      "sha256": "9f8de9aeca6960b93fd67d3b19a49f2e64ab77ef094146d54c993f362ed1aa16"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/callers.py",
+      "sha256": "868021a37a7bd3b5756049e7a739e859a23898e65d9560c69c5cf85cd0d363cd"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/references.py",
+      "sha256": "88ce5806b263df58cf5c2c84f4f1771b1c49658009a914221133bd63e251775c"
+    },
+    {
+      "cache_path": "data/inbound-cancel-20261009/call_catalog.py",
+      "sha256": "f2e9914757d6ea1e0c6eeefe7a7fe29216fb4f95c8db32da7c552ebbd55a5942"
+    },
+    {
+      "cache_path": "data/send-result-20261005/write_result_evidence.py",
+      "sha256": "21e2335dd68dd0105f26bdd20e6375f29d20047adf302d470b16eb623c04a9fb"
+    },
+    {
+      "cache_path": "data/send-disasm-20261005/pe_context.py",
+      "sha256": "4f9845acfa0bf25484be3f7d324af1a0cbb2cb29da66b70aea9411626b83dc5d"
+    },
+    {
+      "path": "data/source-feasibility-20261009/audit_sources.py",
+      "sha256": "239ca5dbab707bbcc95abdccfe96d150335a945d60eff3b33fbc8fa3331a7a08"
+    },
+    {
+      "path": "data/source-feasibility-20261009/check_and_save.py",
+      "sha256": "7656849088cbf57b5a908c6ff7820dc182450226f0e36fd3deec7d2805bb8e32"
+    },
+    {
+      "path": "data/source-feasibility-20261009/update_docs.py",
+      "sha256": "2e2e99341e5d312e644e3a490dac9e3fdc0edfb2195b23c9c3bea5b9bd3f9b03"
+    },
+    {
+      "path": "data/collector-design-20261009/save_evidence.py",
+      "sha256": "0d0649d436d447f390d57c479abd11fd14a6a5de9d22e967f393edb59352933e"
+    },
+    {
+      "path": "data/collector-design-20261009/verify_evidence.py",
+      "sha256": "b58782c62be7e14bd1ba9ca44b05e16d09f5442dd67cec8c9504bba96dfdcc68"
+    },
+    {
+      "path": "data/db-route-closure-20261009/fetch_texts.py",
+      "sha256": "5ddbbcdd3e4a0f81d2d7193d968ed760bf049c1369e46fe7b42bdc4aa86d869d"
+    },
+    {
+      "path": "data/db-route-closure-20261009/audit_route.py",
+      "sha256": "3f296407df6bc381cc30b927a754e4fdaa8373f8107ead7e4e331ba06f282f86"
+    },
+    {
+      "path": "data/db-route-closure-20261009/save_closure.py",
+      "sha256": "63c43d582068b30270c54e841ca79f30d9562430d53dc9a86db9a5aca4e0e64b"
+    },
+    {
+      "path": "data/db-route-closure-20261009/final_check.py",
+      "sha256": "0eda7c3583244c68f437b20c7783ec7cdb89ee858d9c4a08646a5b1ca660e4c4"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/final_check.py",
+      "sha256": "69903a9f757f6bc264d7c2cbe03fdea2646bda15a1a108036896b1e67cffbbba"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/probe.py",
+      "sha256": "9055bf245be3bfc6c1b78c2b400a093d2a1f61851468f2b632d7bd87dcafa665"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/save.py",
+      "sha256": "fa8a889c9cf61f7e827149e3de7ae990ddc51c30b23205567e8362cada8f3ec4"
+    },
+    {
+      "path": "data/inbound-event-origin-20261009/table.py",
+      "sha256": "8f637ff6e31953eaad7095e4ea0b007f23b17d1bdd8876c63af111c5db21e035"
+    }
+  ],
+  "earlier_evidence_count": 344,
+  "prior_evidence_manifest_sha256": "708ad382748f1d659f37c93a82c2cf9e252e07f17b91038368df6e27090d1c7d",
+  "report": "docs/PUBLISHER_GATE_TLS_VALIDATION.md",
+  "report_sha256": "ad2e689fb5b1a12625b5a744c3a959db9b44d8c8b0867b7c82e42ec4c0c54beb",
+  "plan": "docs/superpowers/plans/2026-10-11-publisher-gate-tls.md",
+  "plan_sha256": "781f2abbba1245a2e563abf20143c9265a8cd97ca4b2cfbb821657de2564a60f",
+  "cache_files": [
+    {
+      "path": "data/publisher-gate-tls-20261011/prepare_driver.py",
+      "sha256": "a8611c3bd7244145fd48b6d4d94e1d83eaea264d1ead9a2d0b0036be078dc496"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/prepare_fixture.py",
+      "sha256": "173056bffda3b72c82bdffe5907a3e17890ac24f8fcee0564177454321fbd4cc"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/build_fixture.py",
+      "sha256": "a5547050b39b0faba9c6e127a6d4046bfd2982eb66c9a2fedf142f9151233b44"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/build.json",
+      "sha256": "e25273e3aa6bc454f3d9a2ae5013da5cc2b7fb48a2a162b83a1e95e3a5dbac8e"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/audit_databases.py",
+      "sha256": "d01a5f646700349a8146b6cf67b9efb7df317626a8cfee188a1dc1734da18541"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/database-audit.json",
+      "sha256": "e210b3ca7574cfb51b0445be2df84c7d052532a25f5d012abffe5bf2ef481180"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/audit_runs.py",
+      "sha256": "2727a1ac51314a2199e94e382a21c428e2aea456f0ff3ed05006b198602dab95"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/save_checkpoint.py",
+      "sha256": "1c84d9bba94320072c17db29b7ca17b5e8ee51863db14bb9b556e1e58b51d3fb"
+    },
+    {
+      "path": "data/publisher-gate-tls-20261011/verify_checkpoint.py",
+      "sha256": "e498cd6c555669cd13d6b4e2674b4259439fa35556d4839ec5636b3694be945b"
+    }
+  ],
+  "saved_runtime_sha256": "83ad7e3c3d8d26b99f4fdd9856fab9974e06e2a445c7873df26e44962df07f09",
+  "product_version": "0.1.22",
+  "auto_reply_enabled": false,
+  "runnable_minimized_adapter": false,
+  "own_gate_tls_checks": 21,
+  "product_tests_run": 0,
+  "live_receive_tests_run": 0,
+  "wechat_attached": false,
+  "wechat_memory_read": false,
+  "wechat_dll_loaded": false,
+  "custom_dll_injected": false,
+  "window_operated": false,
+  "chat_db_accessed": false,
+  "keys_accessed": false,
+  "listener_restarted": false,
+  "real_message_sent": false,
+  "Jev_or_other_advisory_model_called": false,
+  "own_code_executed": true,
+  "own_copy_faults_injected": true,
+  "own_original_exceptions_propagated": true,
+  "publisher_inside_gate_read_fault_tested": true,
+  "multithread_tls_tested": true,
+  "hot_install_tested": false,
+  "cfg_cet_tested": false,
+  "all_helpers_loss_tested": false,
+  "arbitrary_pointer_safety_proven": false,
+  "shared_write_instruction_fault_tested": false,
+  "concurrent_publisher_during_fault_tested": false,
+  "production_adapter_integrated": false,
+  "no_fixture_processes_left": true,
+  "hardware_breakpoint_recovery_acceptance": "FAILED_UNCHANGED",
+  "latest_known_remaining_percent": 5,
+  "existing_monitor": "id40 already PAUSED; unchanged",
+  "next_steps": [
+    "In a NEW own-process variant, force another publisher across gate-finally release and outer handler invalidation; test and fix stop-before-release ordering without weakening original-exception propagation.",
+    "Only after this race, design sustained bounded buffer reuse, sequence and backpressure. Current buffer has eight nonreused records.",
+    "Retain narrow fault scope: own read AV only. Actual shared write faults, arbitrary pointer/corruption, hot install/unload, CFG/CET, real identity/ABI and production adapter remain unproven.",
+    "Preserve all frozen sources and evidence. Do not repeat unchanged hardware-breakpoint dual-loss tests or extend approval475 to real injection."
+  ]
+}
