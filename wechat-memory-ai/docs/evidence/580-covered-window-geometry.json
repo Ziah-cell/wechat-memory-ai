@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-13",
+  "mode": "bound_open_window_occlusion_geometry",
+  "user_reported_covered": true,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "images_captured": false,
+  "foreground_before": false,
+  "window_area": {
+    "grid_size": 33,
+    "sample_points": 1089,
+    "target_points": 0,
+    "other_window_points": 1089,
+    "unknown_points": 0,
+    "target_boundary_points": 0,
+    "boundary_sample_points": 128,
+    "foreground_rect_covers_area": false
+  },
+  "client_area": {
+    "grid_size": 33,
+    "sample_points": 1089,
+    "target_points": 0,
+    "other_window_points": 1089,
+    "unknown_points": 0,
+    "target_boundary_points": 0,
+    "boundary_sample_points": 128,
+    "foreground_rect_covers_area": false
+  },
+  "binding_rechecked": true,
+  "foreground_after": false,
+  "minimized_after": false,
+  "status": "completed",
+  "focus_sampling": {
+    "requested_interval_ms": 20,
+    "samples": 80,
+    "changes": 0,
+    "target_foreground_samples": 0
+  },
+  "foreground_unchanged_at_check_boundaries": true,
+  "limitation": "Hit testing samples window ownership; it does not prove pixel opacity or continuous coverage/focus."
+}

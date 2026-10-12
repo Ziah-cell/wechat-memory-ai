@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-13",
+  "mode": "open_window_readonly_check",
+  "samples": [
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 9,
+        "text_rows": 4,
+        "capture_attempts": 1,
+        "incoming_candidates": 3,
+        "self_candidates": 0,
+        "unknown_texts": 1,
+        "reason_counts": {
+          "geometry_invalid": 1,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 3,
+          "self_evidence": 0,
+          "not_text": 5
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "foreground_rect_covers_target": false,
+        "target_points": 0,
+        "other_window_points": 9,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 1.031
+    },
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 9,
+        "text_rows": 4,
+        "capture_attempts": 1,
+        "incoming_candidates": 3,
+        "self_candidates": 0,
+        "unknown_texts": 1,
+        "reason_counts": {
+          "geometry_invalid": 1,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 3,
+          "self_evidence": 0,
+          "not_text": 5
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "foreground_rect_covers_target": false,
+        "target_points": 0,
+        "other_window_points": 9,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 0.438
+    },
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 9,
+        "text_rows": 4,
+        "capture_attempts": 1,
+        "incoming_candidates": 3,
+        "self_candidates": 0,
+        "unknown_texts": 1,
+        "reason_counts": {
+          "geometry_invalid": 1,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 3,
+          "self_evidence": 0,
+          "not_text": 5
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "foreground_rect_covers_target": false,
+        "target_points": 0,
+        "other_window_points": 9,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 0.437
+    }
+  ],
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "capabilities": {
+    "item_status_rows": 0,
+    "help_text_rows": 0,
+    "labeled_by_rows": 0,
+    "item_type_rows": 0,
+    "automation_id_rows": 5,
+    "text_pattern_rows": 0,
+    "status": "capabilities_observed",
+    "rows": 9,
+    "distinct_automation_ids": 1,
+    "text_rows": 4,
+    "scroll_pattern": false,
+    "bottom_observed": null,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false
+  },
+  "capability_focus_unchanged": true,
+  "joint_read": {
+    "rows": 9,
+    "text_rows": 4,
+    "nonblank_text_rows": 4,
+    "incoming_candidates": 3,
+    "self_candidates": 0,
+    "unknown": 6,
+    "window": {
+      "foreground": false,
+      "minimized": false,
+      "foreground_rect_covers_target": false,
+      "target_points": 0,
+      "other_window_points": 9,
+      "unknown_points": 0,
+      "sample_points": 9
+    },
+    "foreground_unchanged": true
+  },
+  "diagnostics": {
+    "child_calls": 5,
+    "child_timeouts": 0,
+    "last_call_ms": 397,
+    "max_call_ms": 1027,
+    "last_call_timed_out": false,
+    "native_trace_valid": true,
+    "last_native_stage": "completed",
+    "native_checkpoints_ms": {
+      "started": 1,
+      "request_read": 1,
+      "client_lookup": 41,
+      "process_lookup": 41,
+      "window_lookup": 52,
+      "binding_check": 116,
+      "tree_lookup": 119,
+      "list_binding": 202,
+      "rows_first": 203,
+      "visual_capture": 210,
+      "binding_final": 252,
+      "snapshot_ready": 253,
+      "serializing": 253,
+      "completed": 262
+    },
+    "slowest_call": {
+      "child_call": 1,
+      "call_ms": 1027,
+      "timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 12,
+        "request_read": 14,
+        "client_lookup": 86,
+        "process_lookup": 87,
+        "window_lookup": 103,
+        "binding_check": 334,
+        "tree_lookup": 339,
+        "list_binding": 506,
+        "rows_first": 509,
+        "visual_capture": 521,
+        "binding_final": 587,
+        "snapshot_ready": 588,
+        "serializing": 588,
+        "completed": 688
+      }
+    }
+  },
+  "status": "completed",
+  "focus_sampling": {
+    "requested_interval_ms": 20,
+    "samples": 95,
+    "changes": 0,
+    "target_foreground_samples": 0,
+    "note": "Sampled observations, not continuous focus-event monitoring"
+  },
+  "foreground_unchanged_at_check_boundaries": true
+}
