@@ -1,10 +1,12 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 有界观察器：强制退出后的断点残留已定位，当前方法不进入微信
 
 2026-10-09。延续[475的授权](evidence/475-bounded-receive-authorization.json)，本轮只操作本项目创建的测试子进程。**问题已定位，但没有实现满足原门槛的自动恢复；当前直接使用 DbgEng 硬件断点的观察器仍不能进入微信。** 这不是等待用户再次许可，也不表示所有接收方法都不可行。
 
 ## 新证据回答了什么
 
-上一轮[原生测试](BOUNDED_RECEIVE_NATIVE_RESULTS.md)已发现强制结束观察器后，目标再次调用时发生单步异常。本轮增加[诊断脚本](experiments/diagnose_receive_probe_crash.py)，直接读取自己创建的夹具主线程状态：先核对线程所属 PID，再成对 SuspendThread / GetThreadContext / ResumeThread。AMD64 CONTEXT 按固定微软头文件使用16字节对齐、1232字节缓冲，只请求控制和调试寄存器；不重新附加来读取，不捕获目标的单步异常，不读取用户进程。
+上一轮[原生测试](BOUNDED_RECEIVE_NATIVE_RESULTS.md)已发现强制结束观察器后，目标再次调用时发生单步异常。本轮增加诊断脚本（历史源码路径 `experiments/diagnose_receive_probe_crash.py`，已删除），直接读取自己创建的夹具主线程状态：先核对线程所属 PID，再成对 SuspendThread / GetThreadContext / ResumeThread。AMD64 CONTEXT 按固定微软头文件使用16字节对齐、1232字节缓冲，只请求控制和调试寄存器；不重新附加来读取，不捕获目标的单步异常，不读取用户进程。
 
 | 对照 | 次数 | 结果 |
 | --- | ---: | --- |

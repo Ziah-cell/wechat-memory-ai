@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 目标结束后的持久会话对账
 
 2026-10-12，基线 `fa185024945925e707d717db597202f52666515b`，实现提交 `eac1d06`。仅使用自建目标、虚构数据和独立实验库；上一阶段的残留 active 会话没有被改写。
@@ -10,7 +12,7 @@
 
 ## 协议及数据含义
 
-[session_reconcile_ledger.py](experiments/session_reconcile_ledger.py) 使用新的 schema 2 和独立目录。`begin` 保存并核验目标 PID/创建时间；`accept` 在写事务内检查活动 epoch 和目标存活，然后原子提交记录及游标，成功回执才携带 ACK。目标与 epoch、批次之间的联系仍来自受信的自建启动器和桥接，进程存活校验不是任意发送者的身份认证。
+session_reconcile_ledger.py（历史源码路径 `experiments/session_reconcile_ledger.py`，已删除） 使用新的 schema 2 和独立目录。`begin` 保存并核验目标 PID/创建时间；`accept` 在写事务内检查活动 epoch 和目标存活，然后原子提交记录及游标，成功回执才携带 ACK。目标与 epoch、批次之间的联系仍来自受信的自建启动器和桥接，进程存活校验不是任意发送者的身份认证。
 
 `observe` 仅持久保存可信测试桥接已经读到的序号上界，不保存这批载荷。`reconcile` 从数据库取得目标绑定，自行查询进程状态，活目标拒绝、无法确定的状态保留 active。结束记录与操作号、游标及 active 清除在同一个 `BEGIN IMMEDIATE` 事务中完成；重复对账返回同一终态，不重复生成结束操作。
 
@@ -24,7 +26,7 @@
 
 ## 身份证明与原子性边界
 
-[session_target_binding.py](experiments/session_target_binding.py) 只读打开进程、检查创建时间和等待状态。打开失败本身不等于进程已经结束；代码仅在成功取得未截断的 PID 列表且目标 PID 不在其中时使用缺席证明，否则返回未知。微软文档分别定义了 [OpenProcess 的失败与权限](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)、[创建时间的读取](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes)及 [EnumProcesses 缓冲区截断判断](https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-enumprocesses)。
+session_target_binding.py（历史源码路径 `experiments/session_target_binding.py`，已删除） 只读打开进程、检查创建时间和等待状态。打开失败本身不等于进程已经结束；代码仅在成功取得未截断的 PID 列表且目标 PID 不在其中时使用缺席证明，否则返回未知。微软文档分别定义了 [OpenProcess 的失败与权限](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess)、[创建时间的读取](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes)及 [EnumProcesses 缓冲区截断判断](https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-enumprocesses)。
 
 本轮最终 **57 份实际终态证明全部是 `same_process_signaled`**。名为 `absent_restart` 的测试释放本测试持有的目标句柄后重启接收器，系统仍允许读取到已结束的原进程对象。因此它只证明释放句柄后的重启对账，**没有实机覆盖 PID 缺席分支**。实际 PID 复用、权限拒绝和枚举截断也没有覆盖；创建时间错误的 begin 拒绝已实测，未知查询状态的保守拒绝使用显式故障注入，不能当成真实权限错误测试。
 
@@ -32,7 +34,7 @@ SQLite 写事务只有一个写入者，[事务文档](https://www.sqlite.org/la
 
 ## 恢复操作
 
-[session_reconcile_recovery.py](experiments/session_reconcile_recovery.py) 做一次恢复检查，从已有库读取活动 epoch 和绑定，然后尝试对账。目标存活、查询未知或写锁忙时返回 deferred；没有后台循环、自动化或守护目标的职责。若库已无活动会话，返回 no_active_session。
+session_reconcile_recovery.py（历史源码路径 `experiments/session_reconcile_recovery.py`，已删除） 做一次恢复检查，从已有库读取活动 epoch 和绑定，然后尝试对账。目标存活、查询未知或写锁忙时返回 deferred；没有后台循环、自动化或守护目标的职责。若库已无活动会话，返回 no_active_session。
 
 自审发现初版恢复命令在数据库路径不存在时会创建空库并返回 no_active_session，容易掩盖路径写错。先保留实际失败 `missing-recovery-7216e20264c5`，再改为必须存在且用 SQLite URI `mode=rw` 打开，防止检查后文件消失时自动创建。修复后的 `missing-recovery-8ecf1e4e15ec` 返回明确 missing_database、退出 2、没有新建数据库；随后重跑完整最终矩阵。
 

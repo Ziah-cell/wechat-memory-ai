@@ -1,12 +1,6 @@
 # 指定窗口的只读消息源设计
 
-## v0.1.18的普通窗口后台模式
-
-background为单独的Occurrence候选协议，所有文本unknown，不进入本页来源/Preflight，也不调用模型、记忆或发送。允许真正最小化，静态读取已实测；运行后超时停止，长期恢复及新到达仍未验证。详情见[CONTINUOUS_LISTENER.md](CONTINUOUS_LISTENER.md)。
-
-## v0.1.17的独立常驻候选监听
-
-新增[常驻监听](CONTINUOUS_LISTENER.md)，包括可尝试最小化读取的多选标签模式；它只统计未验证候选，不使用本页的PreflightSession，不返回LiveCandidate，也不连接Engine。本文ReadOnlyWeChatSource仍要求原视觉读取条件和随机标记，不能将新增模式的基线状态当作其准入证明。
+2026-10-12：最小化专用读取已删除；本来源继续采用正常打开窗口的联合视觉读取，不激活窗口。非前台与遮挡的当前实测见 [OPEN_WINDOW_VALIDATION.md](OPEN_WINDOW_VALIDATION.md)。
 
 库级只读来源已实现；此前177通过连发与随机标记准入，现224进一步通过同一绑定来源中的真实新自身过滤、后来信交付及关闭后候选失效。用户已授权自主开发至自动回复启用前，当前仍未连接Engine、模型、真实记忆或发送。
 

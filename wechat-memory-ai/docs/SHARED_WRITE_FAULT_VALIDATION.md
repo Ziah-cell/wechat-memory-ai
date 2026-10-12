@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 真实共享槽写异常与发布隔离
 
 2026-10-12。在新的自建 Windows x64 变体中，实际将共享槽所在视图页改成只读，让正常写指令触发访问异常。最终 19 类各 3 次，**57/57 通过**；其中 51 次真实写访问异常，45 次符合窄过滤条件并保留原调用结果，6 次不符合条件而向外传播。另有 3 次嵌套原调用读异常向外传播。这些传播异常由最外层测试观察器记录，不算生产过滤器处理成功。
@@ -53,7 +55,7 @@ OS 死亡与 SQLite COMMIT 仍非原子；PID 缺席/复用、真实权限与枚
 ## 证据和恢复入口
 
 - [549 来源与构建](evidence/549-shared-write-basis.json)、[550 结果](evidence/550-shared-write-results.json)、[551 检查点](evidence/551-shared-write-checkpoint.json)。
-- [实施计划](superpowers/plans/2026-10-12-shared-write-faults.md)、[写入站点](experiments/shared_write_sites.S)、[异常过滤和发布](experiments/shared_write_hook.inc)、[两页布局](experiments/shared_write_protocol.h)、[测试](experiments/test_shared_write.py)。
+- [实施计划](superpowers/plans/2026-10-12-shared-write-faults.md)、写入站点（历史源码路径 `experiments/shared_write_sites.S`，已删除）、异常过滤和发布（历史源码路径 `experiments/shared_write_hook.inc`，已删除）、两页布局（历史源码路径 `experiments/shared_write_protocol.h`，已删除）、测试（历史源码路径 `experiments/test_shared_write.py`，已删除）。
 - 本机缓存 `data/shared-write-20261012`，最终矩阵 `run-61d091612d4d/results.json`；`HANDOFF.json` 保存最终提交与恢复入口。仅 `verify_checkpoint.py` 和 `audit_results.py` 可只读复核，准备/构建/原生测试/证据写入脚本不得重跑。
 
 原始进程日志、数据库和工具链在被 Git 忽略的本机缓存；仓库保存源码、报告、结果和内容哈希。检查点同时核对测试字节与 Git 按 LF 规范化的源码 blob。后续证据从 552 开始。

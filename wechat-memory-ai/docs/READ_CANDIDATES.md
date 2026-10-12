@@ -1,3 +1,5 @@
+> 2026-10-12：本文保留既往受控测试及普通窗口组件说明。当前实机 UIA 标识不可用、真实桥接未完成；最新状态与范围以 [STATUS](STATUS.md)、[窗口验证](OPEN_WINDOW_VALIDATION.md) 为准。最小化路线已删除，旧测试成功不代表当前非前台/遮挡收发成功。
+
 # v0.1.13 有人监督的只读预检与方向候选
 
 这些模式用于继续验证普通个人微信接入，均未接入 Engine、模型、记忆或发送器。`sender_verified/history_boundary_verified/real_send_supported/model_called` 始终为 false。原视觉诊断和普通内容观察仍独立；v0.1.9新增同一次有界调用内的正文/方向联合候选，不能将其当作已确认来信。

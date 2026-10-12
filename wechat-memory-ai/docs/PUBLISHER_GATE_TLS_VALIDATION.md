@@ -1,8 +1,10 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 自建发布器持门异常与线程隔离
 
 2026-10-11。新独立变体在取得发布写门后，用 finally 释放写门；已验证四个内部注入点的异常展开，以及两个重叠线程各自的重入标记。最终7类各3次，共21次检查通过，63个子进程全部正常退出。结论仅限自建已知ABI、固定缓冲与指定故障指令，微信最小化自动回复仍未就绪。
 
-[528来源](evidence/528-publisher-gate-tls-basis.json)、[529结果](evidence/529-publisher-gate-tls-results.json)、[530检查点](evidence/530-publisher-gate-tls-checkpoint.json)保存两次构建、全部运行、数据库审计与旧文件哈希。[C变体](experiments/publisher_gate_tls_fixture.c)从冻结的 capture_faults_fixture.c 另存修改，[驱动](experiments/test_publisher_gate_tls.py)独立新增。旧43份研究源码、29份产品源码、24份分析脚本及344份证据不变。
+[528来源](evidence/528-publisher-gate-tls-basis.json)、[529结果](evidence/529-publisher-gate-tls-results.json)、[530检查点](evidence/530-publisher-gate-tls-checkpoint.json)保存两次构建、全部运行、数据库审计与旧文件哈希。C变体（历史源码路径 `experiments/publisher_gate_tls_fixture.c`，已删除）从冻结的 capture_faults_fixture.c 另存修改，驱动（历史源码路径 `experiments/test_publisher_gate_tls.py`，已删除）独立新增。旧43份研究源码、29份产品源码、24份分析脚本及344份证据不变。
 
 ## 持门期间的故障
 

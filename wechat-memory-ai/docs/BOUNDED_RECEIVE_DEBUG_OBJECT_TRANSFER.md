@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 保留调试对象后的故障接手实验
 
 2026-10-09。延续[475授权](evidence/475-bounded-receive-authorization.json)，在自建程序上增加第四种恢复办法：安装断点前，由恢复进程创建并保留同一个内核调试对象，再把句柄复制给实际执行附加的观察进程。**最终13种场景各运行3次，39次符合预期：36次继续运行，3次保留故意触发的原生致命异常。** 这是单线程恢复机制的进展，尚不是通过完整准入检查的微信观察器。
@@ -10,7 +12,7 @@
 
 两个角色及目标都是测试脚本创建的子进程。恢复进程先验证同级进程身份及目标四字节虚构函数，随后才复制自己的调试对象句柄；不枚举系统句柄，不选择或附加用户应用。观察进程监测恢复进程的存活，后者单独退出时，前者执行正常清理。
 
-实现见 [receive_probe_transfer.py](experiments/receive_probe_transfer.py)，测试见 [test_receive_probe_transfer.py](experiments/test_receive_probe_transfer.py)。没有改变产品代码或原 DbgEng 观察器，没有软件断点补丁、自定义 DLL 注入或微信运行入口。
+实现见 receive_probe_transfer.py（历史源码路径 `experiments/receive_probe_transfer.py`，已删除），测试见 test_receive_probe_transfer.py（历史源码路径 `experiments/test_receive_probe_transfer.py`，已删除）。没有改变产品代码或原 DbgEng 观察器，没有软件断点补丁、自定义 DLL 注入或微信运行入口。
 
 ## 失败对照及修正
 

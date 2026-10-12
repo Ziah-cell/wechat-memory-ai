@@ -107,6 +107,7 @@ class OcrCheckTests(unittest.TestCase):
 
 
 @unittest.skipUnless(AVAILABLE and os.name == 'nt', 'requires implemented Windows diagnostic')
+@unittest.skip('Previously excluded native experiments; do not retry under the current project authorization')
 class NativeOcrCheckTests(unittest.TestCase):
     def test_builtin_ocr_with_synthetic_pixels(self):
         result = check()

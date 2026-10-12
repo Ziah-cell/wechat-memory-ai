@@ -73,12 +73,12 @@ class KeepAwakeTests(unittest.TestCase):
                 events.append('reader')
             def __enter__(self): return self
             def __exit__(self, *_): events.append('reader_closed')
-            def read_background_text(self): raise ReadError('native_reader_timeout')
+            def read(self, **kwargs): raise ReadError('native_reader_timeout')
         def api(flags):
             events.append(flags)
             return 0x80000000
         with tempfile.TemporaryDirectory() as directory, patch.object(power, '_set_execution_state', side_effect=api), patch.object(monitor, 'NativeReader', Reader):
-            self.assertEqual(monitor.run_monitor('fixture.exe', directory, reader_mode='background', keep_awake=True), 3)
+            self.assertEqual(monitor.run_monitor('fixture.exe', directory, keep_awake=True), 3)
             status = monitor.monitor_status(directory)
         self.assertEqual(events, [0x80000001, 'reader', 'reader_closed', 0x80000000])
         self.assertEqual(status['stop_reason'], 'native_reader_timeout')
@@ -143,7 +143,7 @@ class KeepAwakeTests(unittest.TestCase):
             token = 'a'*32
             statuses = [dict(active=False), dict(active=True, run_id=token, phase='observing')]
             with tempfile.TemporaryDirectory() as directory, patch.object(monitor, 'Controller', return_value=Mock(run_id=token)), patch.object(monitor, 'runtime_status', side_effect=statuses), patch.object(monitor.subprocess, 'Popen') as launch:
-                code, _ = monitor._start('fixture.exe', directory, reader_mode='background', keep_awake=enabled)
+                code, _ = monitor._start('fixture.exe', directory, keep_awake=enabled)
                 self.assertEqual(code, 0)
                 self.assertEqual('--keep-awake' in launch.call_args.args[0], enabled)
 

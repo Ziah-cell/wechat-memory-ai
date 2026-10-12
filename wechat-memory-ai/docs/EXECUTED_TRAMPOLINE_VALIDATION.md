@@ -1,10 +1,12 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 自建跳板实际执行与异常传播
 
 2026-10-10。最终自建Windows x64程序在12类场景各3次、共36次检查中通过六参数转发、返回值、所选四个非易失寄存器、异常传播和合作清理检查。这里的Hook只计数，没有连接原生发布器、SQLite接收表、产品Engine或真实微信。完整原始结果见[520](evidence/520-executed-trampoline-results.json)，构建见[519](evidence/519-executed-trampoline-basis.json)，保留状态见[521](evidence/521-executed-trampoline-checkpoint.json)。
 
 ## 实际执行路径
 
-新增[C夹具](experiments/executed_trampoline_fixture.c)、[汇编调用者](experiments/trampoline_register_caller.S)和[测试驱动](experiments/test_executed_trampoline.py)。使用已校验的本地Zig 0.14.1，以Windows x64、O2、Wall/Wextra/Werror编译；四次构建均退出0，无编译警告。各次源码、编译参数、诊断、EXE和哈希在忽略目录归档，证据JSON内保存构建清单及运行原文。没有安装全局工具链。
+新增C夹具（历史源码路径 `experiments/executed_trampoline_fixture.c`，已删除）、汇编调用者（历史源码路径 `experiments/trampoline_register_caller.S`，已删除）和测试驱动（历史源码路径 `experiments/test_executed_trampoline.py`，已删除）。使用已校验的本地Zig 0.14.1，以Windows x64、O2、Wall/Wextra/Werror编译；四次构建均退出0，无编译警告。各次源码、编译参数、诊断、EXE和哈希在忽略目录归档，证据JSON内保存构建清单及运行原文。没有安装全局工具链。
 
 每个子进程申请自己的4096字节页，生成两个原函数、两个跳板和两个中转。Hook安装前不存在调用线程，入口的固定五字节压栈前缀被E9改成到同页中转的相对跳转。中转用R11跳至编译好的C Hook；Hook用已知签名调用跳板，跳板复制四次压栈后跳回原函数+5。原函数执行余部并返回到Hook，Hook再返回调用者。只有被动关闭采集计数，没有运行时卸载。
 

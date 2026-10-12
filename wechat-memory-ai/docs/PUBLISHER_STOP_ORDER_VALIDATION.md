@@ -1,8 +1,10 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 发布器异常停用与写门释放顺序
 
 2026-10-11。已在新自建变体复现并修复“异常展开先释放门、外层处理器随后才停用采集”的窗口。修复在持门区异常退出时先把采集状态设为INVALID，再释放门，并保留取得门之后的状态复核。最终15类各3次共45次检查通过，135个最终子进程全退出0；现有382项离线项目测试也全部通过。真实微信接收与自动回复仍未就绪。
 
-[531来源](evidence/531-publisher-stop-order-basis.json)、[532结果](evidence/532-publisher-stop-order-results.json)、[533检查点](evidence/533-publisher-stop-order-checkpoint.json)保存全部构建、运行和审计。[新C变体](experiments/publisher_stop_order_fixture.c)从冻结的 publisher_gate_tls_fixture.c 另存，[独立驱动](experiments/test_publisher_stop_order.py)先写正确行为断言。旧45份研究、29份产品、24份分析脚本和347份证据保持。
+[531来源](evidence/531-publisher-stop-order-basis.json)、[532结果](evidence/532-publisher-stop-order-results.json)、[533检查点](evidence/533-publisher-stop-order-checkpoint.json)保存全部构建、运行和审计。新C变体（历史源码路径 `experiments/publisher_stop_order_fixture.c`，已删除）从冻结的 publisher_gate_tls_fixture.c 另存，独立驱动（历史源码路径 `experiments/test_publisher_stop_order.py`，已删除）先写正确行为断言。旧45份研究、29份产品、24份分析脚本和347份证据保持。
 
 ## 复现与最小修复
 

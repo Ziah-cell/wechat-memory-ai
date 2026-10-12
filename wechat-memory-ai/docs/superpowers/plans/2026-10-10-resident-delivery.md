@@ -1,3 +1,5 @@
+> 2026-10-12 已取消的最小化/内部采集研究计划。不得继续执行，不再保留其研究源码；当前唯一活动方案见 [WINDOW_OPEN_PLAN.md](../../WINDOW_OPEN_PLAN.md)。
+
 # 虚构持久接收表与停止确认 Implementation Plan
 
 > For agentic workers: use superpowers:executing-plans inline. Existing authorization keeps implementation in this workspace and permits commit/push; do not use advisory models or create worktrees.

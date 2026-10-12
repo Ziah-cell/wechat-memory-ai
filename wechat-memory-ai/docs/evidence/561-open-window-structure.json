@@ -1,0 +1,22 @@
+{
+  "child_nodes": 4,
+  "message_lists": 0,
+  "minimized_private_windows": 0,
+  "inspection_errors": 0,
+  "visible_wechat_windows": 2,
+  "other_root_ids": 0,
+  "input_fields": 0,
+  "independent_private_windows": 0,
+  "empty_root_ids": 2,
+  "date": "2026-10-12",
+  "scope": "visible windows of the exact installed Weixin executable; root and direct child metadata only",
+  "message_text_read": false,
+  "pixels_read": false,
+  "input_sent": false,
+  "process_integrity": {
+    "checker_integrity": "medium",
+    "wechat_integrities": [
+      "medium"
+    ]
+  }
+}

@@ -1,14 +1,16 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 停顿预算与完整夹具生命周期集成
 
 2026-10-09。沿用[既有授权](evidence/475-bounded-receive-authorization.json)，将[停顿区间检查](BOUNDED_RECEIVE_PAUSE_TIMING.md)接入[36类生命周期矩阵](BOUNDED_RECEIVE_GUARDED_THREADS.md)。最终每类3次，**108次预期行为检查通过**：93次目标继续运行，12次保留原有致命异常退出，3次主动正常退出。仅操作自建夹具，微信准入仍关闭。
 
 ## 本轮改变
 
-新增[集成观察器](experiments/receive_probe_lifecycle.py)，继承已有计时观察器，把每次等待事件的请求片段限制为最多5毫秒；清理使用的零等待保持为零。实际返回时间仍受系统调度影响，不能据此保证5毫秒唤醒。原20份相关源码全部保留。
+新增集成观察器（历史源码路径 `experiments/receive_probe_lifecycle.py`，已删除），继承已有计时观察器，把每次等待事件的请求片段限制为最多5毫秒；清理使用的零等待保持为零。实际返回时间仍受系统调度影响，不能据此保证5毫秒唤醒。原20份相关源码全部保留。
 
 结果增加运行时区间摘要，区分观察/恢复角色真正掌握的历史与测试控制器事后掌握的结束进程时间。运行时发现未闭合、历史缺失或超预算时，保持丢弃候选记录；测试端不能替恢复角色补造已知边界。
 
-新增[输出同步夹具](experiments/receive_probe_lifecycle_fixture.py)，只将原并行夹具的JSON输出置于同一锁内，保留原生函数、异常行为和自主并行调用。[新矩阵](experiments/test_receive_probe_timing_lifecycle.py)记录损坏输出数量，并将其判为失败；诊断保存不再因JSON损坏而直接抛出异常。
+新增输出同步夹具（历史源码路径 `experiments/receive_probe_lifecycle_fixture.py`，已删除），只将原并行夹具的JSON输出置于同一锁内，保留原生函数、异常行为和自主并行调用。新矩阵（历史源码路径 `experiments/test_receive_probe_timing_lifecycle.py`，已删除）记录损坏输出数量，并将其判为失败；诊断保存不再因JSON损坏而直接抛出异常。
 
 ## 实测失败与修正
 

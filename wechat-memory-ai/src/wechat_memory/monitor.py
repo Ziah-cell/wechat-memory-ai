@@ -12,13 +12,13 @@ import subprocess
 import sys
 import time
 
-from .live_read import NativeReader, ReadError, VisualOccurrenceSession, SelectionOccurrenceSession, BackgroundOccurrenceSession, reader_diagnostics, _STOP_REASONS
+from .live_read import NativeReader, ReadError, VisualOccurrenceSession, reader_diagnostics, _STOP_REASONS
 from .runtime import AlreadyRunning, Controller, InstanceLock, atomic_json, runtime_status, send_control
 from .power import KeepAwake, PowerRequestError
 
 
 _COUNTS = ('snapshots', 'incoming_candidates', 'filtered_self_texts',
-           'filtered_unknown_texts', 'snapshot_change_retries', 'minimized_snapshots')
+           'filtered_unknown_texts', 'snapshot_change_retries')
 _PHASES = frozenset({'starting', 'waiting_baseline', 'observing', 'stopped', 'busy'})
 _REASONS = _STOP_REASONS | frozenset({'requested', 'already_running', 'startup_failed',
                                     'startup_timeout', 'stop_pending', 'not_running', 'monitor_failed',
@@ -33,11 +33,9 @@ def _public_status(raw):
                   baseline_ready=raw.get('baseline_ready') is True,
                   sender_verified=False, history_boundary_verified=False,
                   real_send_supported=False, model_called=False, memory_written=False,
-                  minimized_supported=False, reply_ready=False)
-    mode = raw.get('reader_mode')
-    result['reader_mode'] = mode if isinstance(mode,str) and mode in ('selection','background') else 'visual'
-    result['minimized_observation_enabled'] = result['reader_mode'] in ('selection','background')
-    result['window_minimized'] = raw.get('window_minimized') is True
+                  reply_ready=False)
+    # An old status file is historical evidence, never relabel it as a visual run.
+    result['reader_mode'] = 'visual' if raw.get('reader_mode', 'visual') == 'visual' else 'unsupported'
     result['keep_awake_requested'] = raw.get('keep_awake_requested') is True
     result['keep_awake_request_active'] = (result['active'] and result['keep_awake_requested']
                                             and raw.get('keep_awake_request_active') is True)
@@ -61,7 +59,7 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual', ke
     if type(keep_awake) is not bool:
         return 2
     directory = Path(directory)
-    if reader_mode not in ('visual','selection','background'):
+    if reader_mode != 'visual':
         return 2
     if run_id is not None and not re.fullmatch(r'[a-f0-9]{32}', run_id):
         return 2
@@ -70,14 +68,12 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual', ke
             controller = Controller(directory)
             if run_id is not None:
                 controller.run_id = run_id
-            session = {'visual':VisualOccurrenceSession, 'selection':SelectionOccurrenceSession,
-                       'background':BackgroundOccurrenceSession}[reader_mode]()
+            session = VisualOccurrenceSession()
             reader = None
             power = KeepAwake(keep_awake)
             counts = dict.fromkeys(_COUNTS, 0)
             counts['baseline_ready'] = False
             counts['reader_mode'] = reader_mode
-            counts['window_minimized'] = False
 
             def publish(phase, reason=None):
                 atomic_json(directory/'runtime.json', dict(pid=os.getpid(), run_id=controller.run_id,
@@ -96,20 +92,13 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual', ke
                     while True:
                         if stopped():
                             break
-                        if reader_mode == 'selection':
-                            raw = reader.read_selection_text()
-                        elif reader_mode == 'background':
-                            raw = reader.read_background_text()
-                        else:
-                            raw = reader.read(visual_text=True)
+                        raw = reader.read(visual_text=True)
                         if stopped():
                             break
                         observations = session.accept(raw)
                         progress = session.report()
                         counts['snapshots'] = progress['snapshots']
                         counts['baseline_ready'] = progress['status'] == 'reading'
-                        counts['window_minimized'] = raw.get('minimized') is True
-                        counts['minimized_snapshots'] += int(counts['window_minimized'])
                         counts['incoming_candidates'] += sum(item.direction == 'incoming_candidate' for item in observations)
                         counts['filtered_self_texts'] += sum(item.direction == 'self_candidate' for item in observations)
                         counts['filtered_unknown_texts'] += sum(item.direction == 'unknown' for item in observations)
@@ -147,6 +136,8 @@ def run_monitor(client_path, directory, *, run_id=None, reader_mode='visual', ke
 def _start(client_path, directory, *, reader_mode='visual', keep_awake=False):
     if type(keep_awake) is not bool:
         raise ValueError('invalid_keep_awake')
+    if reader_mode != 'visual':
+        raise ValueError('invalid_reader_mode')
     directory = Path(directory).resolve()
     if runtime_status(directory)['active']:
         return 3, dict(monitor_status(directory), stop_reason='already_running')
@@ -210,8 +201,8 @@ def main(argv=None):
         item.add_argument('--client-path', required=True)
         item.add_argument('--keep-awake', action='store_true',
                           help='Request Windows idle-sleep prevention while observing; display, manual sleep and lid behavior are unchanged.')
-        item.add_argument('--reader', choices=('visual','selection','background'), default='visual',
-                          help='background reads normal-window text; selection reads multiselect labels; both allow minimization and never verify a sender.')
+        item.add_argument('--reader', choices=('visual',), default='visual',
+                          help='Read a normally open window without activating it; minimized windows stop observation.')
         if action == 'run':
             item.add_argument('--run-id', help=argparse.SUPPRESS)
     actions.add_parser('status')

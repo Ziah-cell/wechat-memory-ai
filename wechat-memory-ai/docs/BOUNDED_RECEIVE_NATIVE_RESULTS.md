@@ -1,14 +1,16 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 有界接收观察：授权已取得，原生夹具未全部通过
 
 2026-10-09。用户已明确回复“同意，继续”，批准[原方案](BOUNDED_RECEIVE_PROBE_4_1_15_50.md)的分阶段范围，[475](evidence/475-bounded-receive-authorization.json)保存该授权。**不是缺少许可；当前实现没有通过进入微信实验的技术门槛。** 本轮没有连接微信、要求新测试消息或开启自动回复。
 
 ## 本轮实际实现
 
-- [外部观察器](experiments/receive_probe_observer.py)：使用本机 System32 DbgEng，设置处理器执行断点，通过 RDX 读取限量虚构消息，保留方向/来源 unknown；支持命中上限、截止时间、取消、目标退出和有限清理。当前命令行只有 fixture 模式，没有微信入口。
-- [自建原生夹具](experiments/receive_probe_fixture.py)：自己的 Python 子进程在自己的地址空间分配并调用 x64 小函数，向观察器提供虚构对象；另有新线程和异常路径。没有向其他进程注入代码。故意异常测试关闭该夹具自身的崩溃弹窗，不改系统设置。
-- [集成检查](experiments/test_receive_probe_native.py)：启动、控制并清理本项目自己的夹具/观察器。观察器在附加前核对目标是同一 Python 可执行文件、父 PID 与测试脚本相同；本轮所有附加和内存读取都限于这些自建子进程。
+- 外部观察器（历史源码路径 `experiments/receive_probe_observer.py`，已删除）：使用本机 System32 DbgEng，设置处理器执行断点，通过 RDX 读取限量虚构消息，保留方向/来源 unknown；支持命中上限、截止时间、取消、目标退出和有限清理。当前命令行只有 fixture 模式，没有微信入口。
+- 自建原生夹具（历史源码路径 `experiments/receive_probe_fixture.py`，已删除）：自己的 Python 子进程在自己的地址空间分配并调用 x64 小函数，向观察器提供虚构对象；另有新线程和异常路径。没有向其他进程注入代码。故意异常测试关闭该夹具自身的崩溃弹窗，不改系统设置。
+- 集成检查（历史源码路径 `experiments/test_receive_probe_native.py`，已删除）：启动、控制并清理本项目自己的夹具/观察器。观察器在附加前核对目标是同一 Python 可执行文件、父 PID 与测试脚本相同；本轮所有附加和内存读取都限于这些自建子进程。
 
-观察记录只含测试匹配布尔、HMAC标签、计数和固定错误/HRESULT。原来的[17项虚构字节投影](experiments/check_receive_probe_layout.py)保持不变，未将固定测试标记当作实机随机标记。产品 `src/` 的29份文件保持0.1.22，没有接 Engine、模型、记忆或发送。
+观察记录只含测试匹配布尔、HMAC标签、计数和固定错误/HRESULT。原来的17项虚构字节投影（历史源码路径 `experiments/check_receive_probe_layout.py`，已删除）保持不变，未将固定测试标记当作实机随机标记。产品 `src/` 的29份文件保持0.1.22，没有接 Engine、模型、记忆或发送。
 
 ## 新鲜检查结果：12项，11通过、1失败
 

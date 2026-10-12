@@ -8,13 +8,12 @@ import unittest
 from unittest.mock import patch
 
 from wechat_memory import live_read, monitor
-from test_background_read import background
-from test_monitor import row
+from test_monitor import row, snapshot
 
 
 STAGES = ('started', 'request_read', 'client_lookup', 'process_lookup',
           'window_lookup', 'binding_check', 'tree_lookup', 'list_binding',
-          'rows_first', 'binding_middle', 'rows_second', 'rows_compare',
+          'rows_first', 'visual_capture',
           'binding_final', 'snapshot_ready', 'serializing', 'completed')
 
 
@@ -34,11 +33,11 @@ class ReaderTimingTests(unittest.TestCase):
 
     def test_success_keeps_stdout_protocol_and_exposes_only_fixed_checkpoints(self):
         reader = native()
-        raw = background(row('a', 'PRIVATE_BODY'))
+        raw = snapshot(row('a', 'PRIVATE_BODY'))
         done = subprocess.CompletedProcess([], 0, json.dumps(raw).encode(), trace())
         with patch.object(live_read.subprocess, 'run', return_value=done), \
                 patch.object(live_read.time, 'perf_counter', side_effect=[1, 1.25]):
-            self.assertEqual(reader.read_background_text(), raw)
+            self.assertEqual(reader.read(visual_text=True), raw)
         report = reader.diagnostics
         self.assertEqual(report['child_calls'], 1)
         self.assertEqual(report['child_timeouts'], 0)
@@ -56,7 +55,7 @@ class ReaderTimingTests(unittest.TestCase):
         error = subprocess.TimeoutExpired('PRIVATE_COMMAND', 8, output=b'PRIVATE_BODY', stderr=trace(9))
         with patch.object(live_read.subprocess, 'run', side_effect=error) as run:
             with self.assertRaisesRegex(live_read.ReadError, '^native_reader_timeout$'):
-                reader.read_background_text()
+                reader.read(visual_text=True)
         self.assertEqual(run.call_count, 1)
         self.assertIsNone(reader.binding)
         report = reader.diagnostics
@@ -74,10 +73,10 @@ class ReaderTimingTests(unittest.TestCase):
         for stderr in bad:
             with self.subTest(case=bad.index(stderr)):
                 reader = native()
-                raw = background(row('a'))
+                raw = snapshot(row('a'))
                 done = subprocess.CompletedProcess([], 0, json.dumps(raw).encode(), stderr)
                 with patch.object(live_read.subprocess, 'run', return_value=done):
-                    self.assertEqual(reader.read_background_text(), raw)
+                    self.assertEqual(reader.read(visual_text=True), raw)
                 self.assertFalse(reader.diagnostics['native_trace_valid'])
                 self.assertEqual(reader.diagnostics['last_native_stage'], 'not_reported')
                 self.assertEqual(reader.diagnostics['native_checkpoints_ms'], {})
@@ -85,14 +84,14 @@ class ReaderTimingTests(unittest.TestCase):
 
     def test_trace_is_replaced_each_call_and_counters_include_failed_children(self):
         reader = native()
-        raw = background(row('a'))
+        raw = snapshot(row('a'))
         responses = [subprocess.CompletedProcess([],0,json.dumps(raw).encode(),trace()),
                      subprocess.CompletedProcess([],3,b'{"status":"reader_error","reason":"window_or_list_changed"}',trace(6))]
         with patch.object(live_read.subprocess, 'run', side_effect=responses), \
                 patch.object(live_read.time, 'perf_counter', side_effect=[0,.5,1,1.25]):
-            reader.read_background_text()
+            reader.read(visual_text=True)
             with self.assertRaisesRegex(live_read.ReadError, '^window_or_list_changed$'):
-                reader.read_background_text()
+                reader.read(visual_text=True)
         report = reader.diagnostics
         self.assertEqual(report['child_calls'], 2)
         self.assertEqual(report['max_call_ms'], 500)
@@ -102,12 +101,12 @@ class ReaderTimingTests(unittest.TestCase):
 
     def test_os_error_discards_prior_trace_and_does_not_publish_exception(self):
         reader = native()
-        raw = background(row('a'))
+        raw = snapshot(row('a'))
         with patch.object(live_read.subprocess, 'run', side_effect=[
                 subprocess.CompletedProcess([],0,json.dumps(raw).encode(),trace()), OSError('PRIVATE')]):
-            reader.read_background_text()
+            reader.read(visual_text=True)
             with self.assertRaisesRegex(live_read.ReadError, '^native_reader_unavailable$'):
-                reader.read_background_text()
+                reader.read(visual_text=True)
         self.assertEqual(reader.diagnostics['child_calls'], 2)
         self.assertFalse(reader.diagnostics['native_trace_valid'])
 
@@ -120,12 +119,12 @@ class ReaderTimingTests(unittest.TestCase):
             return run([sys.executable,'-X','utf8','-c',script], **kwargs)
         with patch.object(live_read.subprocess, 'run', side_effect=child):
             with self.assertRaisesRegex(live_read.ReadError, '^native_reader_timeout$'):
-                reader._read_once(background_text=True, _timeout=1)
+                reader._read_once(visual_text=True, _timeout=1)
         self.assertEqual(reader.diagnostics['last_native_stage'], 'window_lookup')
         self.assertTrue(reader.diagnostics['last_call_timed_out'])
 
     def test_monitor_publishes_last_failed_call_and_rejects_untrusted_diagnostics(self):
-        values = iter([background(row('a')), live_read.ReadError('native_reader_timeout')])
+        values = iter([snapshot(row('a')), live_read.ReadError('native_reader_timeout')])
         class Reader:
             snapshot_change_retries=0
             diagnostics = dict(child_calls=2,child_timeouts=1,last_call_ms=8001,max_call_ms=8001,
@@ -134,13 +133,13 @@ class ReaderTimingTests(unittest.TestCase):
             def __init__(self,*args): pass
             def __enter__(self): return self
             def __exit__(self,*args): pass
-            def read_background_text(self):
+            def read(self, **kwargs):
                 value=next(values)
                 if isinstance(value,Exception): raise value
                 return value
         with tempfile.TemporaryDirectory() as temp:
             with patch.object(monitor,'NativeReader',Reader), patch.object(monitor.time,'sleep'):
-                self.assertEqual(monitor.run_monitor('fixture.exe',temp,reader_mode='background'),3)
+                self.assertEqual(monitor.run_monitor('fixture.exe',temp),3)
             status=monitor.monitor_status(temp)
             report=status['reader_diagnostics']
             self.assertEqual(report['last_native_stage'],'rows_first')

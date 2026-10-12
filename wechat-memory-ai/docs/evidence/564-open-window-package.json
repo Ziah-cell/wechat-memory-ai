@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-12",
+  "version": "0.1.23",
+  "wheel_built_offline": true,
+  "installed_offline_check": {
+    "checks": {
+      "callbacks_enqueue_without_processing": true,
+      "closed_callbacks_rejected": true,
+      "duplicate_filtered": true,
+      "no_sends": true,
+      "old_backlog_discarded": true,
+      "old_callback_revoked": true,
+      "overflow_stops_and_discards": true,
+      "restart_dedup": true,
+      "same_text_with_distinct_ids_preserved": true,
+      "self_history_other_peer_filtered": true
+    },
+    "network_enabled": false,
+    "real_send_supported": false,
+    "real_wechat_verified": false,
+    "source": "synthetic_callbacks",
+    "status": "passed"
+  },
+  "retired_code_absent_from_wheel": true,
+  "package_files": 33,
+  "python_modules": 23,
+  "native_resources": 5,
+  "temporary_package_removed_on_exit": true
+}

@@ -1,3 +1,5 @@
+> 2026-10-12：本文保留既往受控测试及普通窗口组件说明。当前实机 UIA 标识不可用、真实桥接未完成；最新状态与范围以 [STATUS](STATUS.md)、[窗口验证](OPEN_WINDOW_VALIDATION.md) 为准。最小化路线已删除，旧测试成功不代表当前非前台/遮挡收发成功。
+
 # 验收总览（v0.1.18）
 
 更新日期：2026-10-04。程序功能、真实模型和真实微信分别验收，不能互相替代。最新发现336项，选定323/323通过，76.531秒，另13项原生测试未重跑。证据见[260](evidence/260-background-final-regression.txt)/[261](evidence/261-background-final-regression-scope.json)。

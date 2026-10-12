@@ -1,3 +1,5 @@
+> 2026-10-12 已取消的最小化/内部采集研究计划。不得继续执行，不再保留其研究源码；当前唯一活动方案见 [WINDOW_OPEN_PLAN.md](../../WINDOW_OPEN_PLAN.md)。
+
 # Windows 实测与修复 Implementation Plan
 
 > **For agentic workers:** 使用 superpowers:executing-plans 逐项完成；用户已要求了解交接后继续，本轮在现有独立工作目录进行可逆修复与验证。

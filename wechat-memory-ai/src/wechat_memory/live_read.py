@@ -23,13 +23,10 @@ class ReadError(RuntimeError):
 
 _NATIVE_REASONS = frozenset({
     'client_unavailable', 'process_inspection_failed', 'window_discovery_failed',
-    'private_window_not_unique', 'window_minimized', 'window_binding_unavailable',
+    'private_window_not_unique', 'window_identity_unavailable', 'window_minimized', 'window_binding_unavailable',
     'window_or_list_changed', 'message_tree_unavailable', 'message_list_unavailable',
     'message_rows_unavailable', 'layout_unavailable', 'capabilities_unavailable', 'native_reader_failed',
     'visual_capture_unavailable', 'visual_snapshot_changed',
-    'selection_mode_required', 'selection_snapshot_changed',
-    'background_mode_required', 'background_snapshot_changed',
-    'inbound_capabilities_changed',
 })
 
 _STOP_REASONS = _NATIVE_REASONS | frozenset({
@@ -389,64 +386,6 @@ class VisualOccurrenceSession(OccurrenceSession):
         return report
 
 
-def validate_selection_snapshot(raw):
-    """Labels in multiselect mode are not authenticated sender identities.
-
-    In particular, matching or nested display names can match this prefix.
-    Nonmatching names remain unknown, never implicitly self messages.
-    """
-    if (not isinstance(raw, dict) or raw.get('status') != 'selection_text_snapshot'
-            or type(raw.get('minimized')) is not bool
-            or not isinstance(raw.get('peer_name'),str)
-            or not raw['peer_name'].strip() or len(raw['peer_name']) > 256
-            or any(c in raw['peer_name'] for c in '\r\n\t\0')):
-        raise ReadError('invalid_snapshot')
-    base = {k:v for k,v in raw.items() if k not in ('minimized','peer_name')}
-    identity, rows = validate_snapshot(dict(base,status='snapshot'))
-    peer = raw['peer_name']
-    # Detect renames without keeping a second copy of private labels.
-    identity += (hashlib.sha256(peer.encode('utf-8')).hexdigest(),)
-    prefix = peer+' '
-    records = []
-    for token, fingerprint, kind, label in rows:
-        incoming = kind == 'text' and label.startswith(prefix)
-        text = label[len(prefix):] if incoming else label
-        records.append((token,fingerprint,kind,text,'incoming_candidate' if incoming else 'unknown'))
-    return identity, records
-
-
-class SelectionOccurrenceSession(OccurrenceSession):
-    """Read-only candidate continuity; never usable as a PreflightSession."""
-    def _validate(self, raw):
-        return validate_selection_snapshot(raw)
-
-    def _direction(self, row):
-        return row[4]
-
-    def report(self):
-        return dict(super().report(), mode='selection_occurrence_candidates')
-
-
-def validate_background_snapshot(raw):
-    if (not isinstance(raw,dict) or raw.get('status') != 'background_text_snapshot'
-            or type(raw.get('minimized')) is not bool):
-        raise ReadError('invalid_snapshot')
-    base = {k:v for k,v in raw.items() if k != 'minimized'}
-    return validate_snapshot(dict(base,status='snapshot'))
-
-
-class BackgroundOccurrenceSession(OccurrenceSession):
-    """Normal-window text changes with no evidence of sender direction."""
-    def _validate(self, raw):
-        return validate_background_snapshot(raw)
-
-    def _direction(self, row):
-        return 'unknown'
-
-    def report(self):
-        return dict(super().report(), mode='background_occurrence_candidates')
-
-
 def validate_binding(raw):
     """Validate an explicit target using the existing snapshot identity rules."""
     if not isinstance(raw,dict) or set(raw) != {'process','started','window','root','list_token'}:
@@ -455,30 +394,9 @@ def validate_binding(raw):
     return dict(raw)
 
 
-def window_state_report(raw):
-    """Metadata only: readable bounds are not proof of current message pixels."""
-    identity_keys = {'process','started','window','root','list_token'}
-    flags = {'minimized','list_bounds_usable','list_scroll_pattern'}
-    counts = {'rows','text_rows','offscreen_text_rows','bounded_text_rows',
-              'text_pattern_rows','child_text_rows'}
-    if (not isinstance(raw,dict) or set(raw) != identity_keys | flags | counts | {'status'}
-            or raw['status'] != 'window_state_snapshot'):
-        raise ReadError('invalid_snapshot')
-    validate_binding({key:raw[key] for key in identity_keys})
-    if (any(type(raw[key]) is not bool for key in flags)
-            or any(type(raw[key]) is not int or not 0 <= raw[key] <= 256 for key in counts)
-            or raw['text_rows'] > raw['rows']
-            or any(raw[key] > raw['text_rows'] for key in counts-{'rows','text_rows'})):
-        raise ReadError('invalid_snapshot')
-    return dict(status='window_state_observed', **{key:raw[key] for key in flags | counts},
-                message_text_read=False, minimized_reply_supported=False,
-                sender_verified=False, history_boundary_verified=False,
-                real_send_supported=False, model_called=False)
-
-
 _NATIVE_STAGES = ('started', 'request_read', 'client_lookup', 'process_lookup',
                   'window_lookup', 'binding_check', 'tree_lookup', 'list_binding',
-                  'rows_first', 'binding_middle', 'rows_second', 'rows_compare',
+                  'rows_first', 'visual_capture',
                   'binding_final', 'snapshot_ready', 'serializing', 'completed')
 _MAX_TIMING_MS = 86_400_000
 
@@ -630,30 +548,9 @@ class NativeReader:
                 raise ReadError('native_reader_timeout')
             time.sleep(min(0.05, remaining))
 
-    def read_window_state(self):
-        if self._binding is None:
-            raise ReadError('window_binding_unavailable')
-        return self._read_once(window_state=True)
-
-    def read_inbound_capabilities(self):
-        """Bound metadata inspection, with no retry, rebind or message delivery."""
-        if self._binding is None:
-            raise ReadError('window_binding_unavailable')
-        return self._read_once(inbound_capabilities=True)
-
-    def read_selection_text(self):
-        if self._binding is None:
-            return self._read_once(selection_text=True)
-        return self._read_consistent(dict(selection_text=True), 'selection_snapshot_changed')
-
-    def read_background_text(self):
-        if self._binding is None:
-            return self._read_once(background_text=True)
-        return self._read_consistent(dict(background_text=True), 'background_snapshot_changed')
-
-    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, window_state=False, selection_text=False, background_text=False, inbound_capabilities=False, _timeout=8):
+    def _read_once(self, *, layout=False, capabilities=False, visual=False, visual_text=False, _timeout=8):
         try:
-            if sum(bool(value) for value in (layout,capabilities,visual,visual_text,window_state,selection_text,background_text,inbound_capabilities))>1:
+            if sum(bool(value) for value in (layout,capabilities,visual,visual_text))>1:
                 raise ReadError('invalid_snapshot')
             command = [str(self.executable),self.client_path]
             if layout:
@@ -664,14 +561,6 @@ class NativeReader:
                 command.append('--visual')
             if visual_text:
                 command.append('--visual-text')
-            if window_state:
-                command.append('--window-state')
-            if selection_text:
-                command.append('--selection-text')
-            if background_text:
-                command.append('--background-text')
-            if inbound_capabilities:
-                command.append('--inbound-capabilities')
             stderr, timed_out = None, False
             started = time.perf_counter()
             try:
@@ -708,16 +597,7 @@ class NativeReader:
                     raise ReadError(raw['reason'])
                 raise ReadError('native_reader_unavailable')
             try:
-                if inbound_capabilities:
-                    from .inbound_capabilities import inbound_capability_report
-                    inbound_capability_report(raw)
-                elif background_text:
-                    validate_background_snapshot(raw)
-                elif selection_text:
-                    validate_selection_snapshot(raw)
-                elif window_state:
-                    window_state_report(raw)
-                elif layout:
+                if layout:
                     layout_report(raw)
                 elif capabilities:
                     capability_report(raw)

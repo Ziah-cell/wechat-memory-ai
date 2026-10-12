@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 进程内常驻发布器：可行性研究与跳板展开对照
 
 2026-10-09。本轮继续普通个人号、单好友、真正最小化、免费方案的研究。**找到一个能正确展开所选虚构栈的跳板编码候选，但没有实现或验证微信 Hook。** 原硬件断点的双角色退出失败保持；[OS 来源核查](OS_RECEIVE_SURFACE_AUDIT.md)也没有被重新包装成可用消息源。
@@ -32,7 +34,7 @@
 
 重新只读校验同一 .50 DLL 哈希 `0cf6379405432385a1c442766443450f26a7689f45e53c1b4ad2822061f3113b`。RVA `0xa773b0` 的前5字节为 `55 41 56 56 57`，依次压入 RBP、R14、RSI、RDI，共减少栈指针32字节。原函数展开头为版本1、flags=3、序言28字节、10个展开槽；不能直接照搬给地址和指令范围不同的跳板。
 
-[实验脚本](experiments/probe_resident_unwind.py)只在自己创建的子进程里申请可读写、不可执行的内存，写入虚构指令字节、栈和寄存器上下文。它注册动态函数表，调用 `RtlLookupFunctionEntry`、`RtlVirtualUnwind`，最后删除表并释放内存。**没有执行这些指令，没有把上下文应用到线程，没有安装挂钩，也没有加载微信 DLL。** Windows 展开规则要求动态代码提供相应元数据，实际输出仍需逐个位置检查。[x64展开规则](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64?view=msvc-170)、[展开接口](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtlvirtualunwind)、[动态表注册](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtladdfunctiontable)、[删除接口](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtldeletefunctiontable)。
+实验脚本（历史源码路径 `experiments/probe_resident_unwind.py`，已删除）只在自己创建的子进程里申请可读写、不可执行的内存，写入虚构指令字节、栈和寄存器上下文。它注册动态函数表，调用 `RtlLookupFunctionEntry`、`RtlVirtualUnwind`，最后删除表并释放内存。**没有执行这些指令，没有把上下文应用到线程，没有安装挂钩，也没有加载微信 DLL。** Windows 展开规则要求动态代码提供相应元数据，实际输出仍需逐个位置检查。[x64展开规则](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64?view=msvc-170)、[展开接口](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtlvirtualunwind)、[动态表注册](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtladdfunctiontable)、[删除接口](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtldeletefunctiontable)。
 
 | 受控变体 | 观察结果 | 命令退出 |
 | --- | --- | --- |

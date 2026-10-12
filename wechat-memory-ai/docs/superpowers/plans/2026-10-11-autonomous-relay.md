@@ -1,3 +1,5 @@
+> 2026-10-12 已取消的最小化/内部采集研究计划。不得继续执行，不再保留其研究源码；当前唯一活动方案见 [WINDOW_OPEN_PLAN.md](../../WINDOW_OPEN_PLAN.md)。
+
 # 自建独立消费与ACK中继计划
 
 2026-10-11。按既有授权直接自行实施，不使用子代理、不创建worktree、不改冻结材料。沿用brainstorming、writing-plans、TDD、executing-plans与完成前验证流程；审批/分支/清理默认步骤由用户已有指令覆盖。

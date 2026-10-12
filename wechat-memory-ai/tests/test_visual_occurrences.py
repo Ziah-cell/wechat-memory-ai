@@ -155,6 +155,7 @@ class VisualOccurrenceTests(unittest.TestCase):
 
 
 @unittest.skipUnless(os.name=='nt','Windows native fixtures required')
+@unittest.skip('Previously excluded native experiments; do not retry under the current project authorization')
 class NativeVisualTextTests(unittest.TestCase):
     def test_compiled_guard_rejects_text_changes_with_stable_token_and_geometry(self):
         framework=Path(os.environ.get('SystemRoot',r'C:\Windows'))/'Microsoft.NET/Framework64/v4.0.30319'

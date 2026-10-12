@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 三种退出恢复办法的自建程序比较
 
 2026-10-09。用户要求“继续，尝试多种办法”。延续[475授权](evidence/475-bounded-receive-authorization.json)，本轮实际实现并比较三种实验办法；所有附加、寄存器操作和故意终止都限于本项目创建的子进程。**独立调试进程改善了前端退出的恢复，但三种办法都未通过调试进程自身强制退出的完整要求，仍不进入微信。**
@@ -26,7 +28,7 @@
 
 第一次修正只在请求 GO 后撤销旧停止点标记，仍有2次清理在再次请求 GO 时失败，不能宣布修复。随后实验子类同时避免在已经 GO 时重复提交 GO，并要求重新取得实际停止事件后再移除断点。该版空闲前端退出3次、连续调用前端退出3次通过，再针对新发现的竞态复验6次，均分离成功并继续自主调用；9次连续调用样本各完成641–657次函数执行。样本结果不能证明所有调度次序都已覆盖。
 
-这个修正保留在实验 [FreshStopEngine](experiments/receive_probe_variants.py)，没有改写原[观察器](experiments/receive_probe_observer.py)或将原失败测试改成预期失败。它修正的是存活调试进程的正常清理路径；自身被强制结束时仍不会执行这段路径。[483](evidence/483-bounded-receive-broker-cleanup.json)区分每次尝试、修正后样本和未解决故障。
+这个修正保留在实验 FreshStopEngine（历史源码路径 `experiments/receive_probe_variants.py`，已删除），没有改写原观察器（历史源码路径 `experiments/receive_probe_observer.py`，已删除）或将原失败测试改成预期失败。它修正的是存活调试进程的正常清理路径；自身被强制结束时仍不会执行这段路径。[483](evidence/483-bounded-receive-broker-cleanup.json)区分每次尝试、修正后样本和未解决故障。
 
 ## 一次性断点的功能代价
 

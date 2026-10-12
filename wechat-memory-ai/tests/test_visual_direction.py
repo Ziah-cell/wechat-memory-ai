@@ -24,6 +24,7 @@ def visual_snapshot():
 
 
 @unittest.skipUnless(os.name=='nt','Windows .NET bitmap fixture required')
+@unittest.skip('Previously excluded native experiments; do not retry under the current project authorization')
 class VisualBitmapTests(unittest.TestCase):
     def test_native_capture_reads_only_a_synthetic_window_and_returns_no_pixels(self):
         framework=Path(os.environ.get('SystemRoot',r'C:\Windows'))/'Microsoft.NET/Framework64/v4.0.30319'

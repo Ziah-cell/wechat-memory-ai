@@ -1,10 +1,12 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 多线程有界观察与退出接管实验
 
 2026-10-09。沿用[475授权](evidence/475-bounded-receive-authorization.json)，将[共享调试对象接管](BOUNDED_RECEIVE_DEBUG_OBJECT_TRANSFER.md)与新线程跟踪、有界字段读取集成到同一实验实现。最终36类场景各3次，**108次符合预期：93次继续运行、12次保留故意触发的原生致命退出、3次目标主动退出**。微信准入仍关闭：真实停顿核算、运行身份及模块绑定等条件尚未完成。
 
 ## 实现和范围
 
-新增 [receive_probe_guarded.py](experiments/receive_probe_guarded.py)、[并发夹具](experiments/receive_probe_parallel_fixture.py)、[状态句柄探针](experiments/probe_fixture_freeze.py)、[初始对照](experiments/test_receive_probe_guarded.py)及[最终矩阵](experiments/test_receive_probe_guarded_matrix.py)。原观察器、原失败测试、上一轮接管脚本及产品源码保持原样。
+新增 receive_probe_guarded.py（历史源码路径 `experiments/receive_probe_guarded.py`，已删除）、并发夹具（历史源码路径 `experiments/receive_probe_parallel_fixture.py`，已删除）、状态句柄探针（历史源码路径 `experiments/probe_fixture_freeze.py`，已删除）、初始对照（历史源码路径 `experiments/test_receive_probe_guarded.py`，已删除）及最终矩阵（历史源码路径 `experiments/test_receive_probe_guarded_matrix.py`，已删除）。原观察器、原失败测试、上一轮接管脚本及产品源码保持原样。
 
 恢复进程在附加前创建并保留同一个调试对象，观察进程在每个线程创建事件继续之前安装自己的硬件执行槽。清理按目标进程句柄枚举线程，保留独立线程句柄并检查所属进程；恢复进程可为已交付但未回复的事件请求重报，再依据实际事件处理。两个角色和目标均为测试脚本自己的同级子进程，入口仍核验夹具身份和四字节虚构函数。
 

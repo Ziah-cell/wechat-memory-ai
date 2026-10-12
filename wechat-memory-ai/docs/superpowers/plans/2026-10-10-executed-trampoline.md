@@ -1,3 +1,5 @@
+> 2026-10-12 已取消的最小化/内部采集研究计划。不得继续执行，不再保留其研究源码；当前唯一活动方案见 [WINDOW_OPEN_PLAN.md](../../WINDOW_OPEN_PLAN.md)。
+
 # 自建跳板实际执行 Implementation Plan
 
 > Use superpowers:executing-plans inline. Existing authorization covers own-process fixtures and normal commit/push. Stay on implementation; no worktree, advisory model, real-client patch or injection.

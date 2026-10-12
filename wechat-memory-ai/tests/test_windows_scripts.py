@@ -119,7 +119,7 @@ class WindowsScriptTests(unittest.TestCase):
                 with self.subTest(shell=shell, enabled=enabled):
                     command = [shell, '-NoProfile', '-NonInteractive', '-File', str(scripts/'windows.ps1'),
                                '-Python', sys.executable, '-Action', 'start-listener',
-                               '-ListenerReader', 'background', '-ClientPath', 'fixture path.exe']
+                               '-ListenerReader', 'visual', '-ClientPath', 'fixture path.exe']
                     if enabled:
                         command.append('-KeepAwake')
                     result = subprocess.run(command, capture_output=True, timeout=20)
@@ -128,3 +128,15 @@ class WindowsScriptTests(unittest.TestCase):
                     self.assertEqual('--keep-awake' in args, enabled)
                     self.assertEqual(args[args.index('--client-path')+1], 'fixture path.exe')
                     self.assertFalse((project/'config.toml').exists())
+
+    def test_retired_reader_parameters_cannot_start_a_listener(self):
+        for shell in SHELLS:
+            for mode in ('background', 'selection'):
+                with self.subTest(shell=shell, mode=mode):
+                    directory = Path(self.tmp.name)/'never-created'
+                    result = self.invoke(shell, 'windows.ps1', '-Action', 'start-listener',
+                                         '-ListenerReader', mode, '-ListenerData', str(directory),
+                                         '-ClientPath', 'fixture.exe')
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertFalse(directory.exists())
+                    self.assertEqual(self.config.read_bytes(), self.original)

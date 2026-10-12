@@ -1,3 +1,5 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 独立中继、目标自有寿命与持久终态整合
 
 2026-10-12。本轮把此前分开的原生目标、独立中继、SQLite 接收协议和结束对账接成一条**自建进程、虚构数据**链路。启动控制器结束后，目标继续有限工作，中继继续提交；接收器可在提交前后崩溃重启；目标结束后，中继核验实际进程状态并提交持久终态。未接入产品或真实微信。
@@ -56,7 +58,7 @@
 ## 证据与恢复
 
 - [546 来源与构建](evidence/546-lifecycle-pipeline-basis.json)、[547 结果](evidence/547-lifecycle-pipeline-results.json)、[548 检查点](evidence/548-lifecycle-pipeline-checkpoint.json)。
-- [实施计划](superpowers/plans/2026-10-12-lifecycle-pipeline.md)。新源码为 [原生目标](experiments/lifecycle_pipeline_fixture.c)、[中继](experiments/lifecycle_pipeline_relay.py)、[接收器](experiments/lifecycle_pipeline_ledger.py)、[嵌套控制器](experiments/lifecycle_pipeline_controller.py) 和 [测试](experiments/test_lifecycle_pipeline.py)。
+- [实施计划](superpowers/plans/2026-10-12-lifecycle-pipeline.md)。新源码为 原生目标（历史源码路径 `experiments/lifecycle_pipeline_fixture.c`，已删除）、中继（历史源码路径 `experiments/lifecycle_pipeline_relay.py`，已删除）、接收器（历史源码路径 `experiments/lifecycle_pipeline_ledger.py`，已删除）、嵌套控制器（历史源码路径 `experiments/lifecycle_pipeline_controller.py`，已删除） 和 测试（历史源码路径 `experiments/test_lifecycle_pipeline.py`，已删除）。
 - 本机缓存 `data/lifecycle-pipeline-20261012`；最终矩阵 `run-bf5f067b435d/results.json`。`HANDOFF.json` 保存最终提交和恢复入口；仅 `verify_checkpoint.py`、`audit_results.py` 是只读复核入口。准备、构建、原生测试和证据写入脚本不得重跑。
 
 该缓存被 Git 忽略，原始进程日志、数据库和工具链属于本机证据；仓库保存源码、报告、结果摘要及内容哈希。原始哈希对应实际测试的本机字节；Git 按既有属性规范化行尾，548 另记录并核对 LF 归一化源码与提交 blob 的一致性。后续证据从 549 开始。

@@ -1,8 +1,10 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 自建采集故障、原异常与重入边界
 
 2026-10-11。新增独立Hook变体先复制虚构参数，原函数成功返回后才发布；最终8类各3次共24次检查通过。指定采集读异常可局部结束采集并保留原调用；原函数异常继续传播，重入标记在异常退出后恢复。此结论只属于自建已知函数及指定复制点，不是任意内存错误隔离证明。
 
-[525来源](evidence/525-capture-faults-basis.json)、[526结果](evidence/526-capture-faults-results.json)、[527检查点](evidence/527-capture-faults-checkpoint.json)保留构建、原始运行、只读数据库审计与旧哈希。[新C变体](experiments/capture_faults_fixture.c)由上一轮集成入口另存修改，[汇编复制点](experiments/capture_copy_site.S)及[驱动](experiments/test_capture_faults.py)为新增。旧40份研究、29份产品、24份分析与341份证据保持。
+[525来源](evidence/525-capture-faults-basis.json)、[526结果](evidence/526-capture-faults-results.json)、[527检查点](evidence/527-capture-faults-checkpoint.json)保留构建、原始运行、只读数据库审计与旧哈希。新C变体（历史源码路径 `experiments/capture_faults_fixture.c`，已删除）由上一轮集成入口另存修改，汇编复制点（历史源码路径 `experiments/capture_copy_site.S`，已删除）及驱动（历史源码路径 `experiments/test_capture_faults.py`，已删除）为新增。旧40份研究、29份产品、24份分析与341份证据保持。
 
 ## 记录与异常边界
 

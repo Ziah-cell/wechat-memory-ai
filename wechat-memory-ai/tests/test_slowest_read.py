@@ -5,8 +5,7 @@ import unittest
 from unittest.mock import patch
 
 from wechat_memory import live_read, monitor
-from test_background_read import background
-from test_monitor import row
+from test_monitor import row, snapshot
 from test_reader_timing import native, trace
 
 
@@ -15,12 +14,12 @@ class SlowestReadTests(unittest.TestCase):
         self.assertIn('slowest_call',native().diagnostics,'slowest native call is not retained')
 
     def invoke(self,reader,duration,stderr,*,error=None):
-        result=subprocess.CompletedProcess([],0,json.dumps(background(row('a'))).encode(),stderr)
+        result=subprocess.CompletedProcess([],0,json.dumps(snapshot(row('a'))).encode(),stderr)
         with patch.object(live_read.subprocess,'run',side_effect=error,return_value=result), \
                 patch.object(live_read.time,'perf_counter',side_effect=[0,duration]):
             if error:
-                with self.assertRaises(live_read.ReadError):reader.read_background_text()
-            else:reader.read_background_text()
+                with self.assertRaises(live_read.ReadError):reader.read(visual_text=True)
+            else:reader.read(visual_text=True)
 
     def test_fast_followup_does_not_erase_slow_phase_evidence(self):
         reader=native()
@@ -62,7 +61,7 @@ class SlowestReadTests(unittest.TestCase):
         exposed['slowest_call']['native_checkpoints_ms']['completed']=999
         exposed['slowest_call']['text']='PRIVATE'
         self.assertEqual(reader.diagnostics['slowest_call']['child_call'],20)
-        self.assertEqual(reader.diagnostics['slowest_call']['native_checkpoints_ms']['completed'],150)
+        self.assertEqual(reader.diagnostics['slowest_call']['native_checkpoints_ms']['completed'],130)
         self.assertNotIn('PRIVATE',json.dumps(reader.diagnostics))
         self.assertLess(len(json.dumps(reader.diagnostics)),2000)
 

@@ -1,8 +1,10 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 自建独立消费、持久提交与ACK中继
 
 2026-10-11。本阶段去掉了测试驱动对每圈读/提交/ACK的调度：自建目标工作线程持续调用已知ABI入口，独立Python中继控制只读原生bridge与虚构SQLite接收器，提交成功后通过命名管道发送ACK。最终21类各3次共63项通过，382项离线产品测试通过。产品0.1.22及自动回复状态没有改变。
 
-[537来源](evidence/537-autonomous-relay-basis.json)、[538结果](evidence/538-autonomous-relay-results.json)、[539检查点](evidence/539-autonomous-relay-checkpoint.json)保存证据。[新原生入口](experiments/autonomous_relay_fixture.c)、[独立Hook包含文件](experiments/autonomous_relay_hook.inc)、[中继](experiments/autonomous_relay.py)、[接收器](experiments/autonomous_relay_ledger.py)、[测试驱动](experiments/test_autonomous_relay.py)另存；旧51研究、29产品、24分析、353证据和旧报告/计划保持。新Hook包含文件等于上一阶段C源码删去其独立main，旧文件未改。
+[537来源](evidence/537-autonomous-relay-basis.json)、[538结果](evidence/538-autonomous-relay-results.json)、[539检查点](evidence/539-autonomous-relay-checkpoint.json)保存证据。新原生入口（历史源码路径 `experiments/autonomous_relay_fixture.c`，已删除）、独立Hook包含文件（历史源码路径 `experiments/autonomous_relay_hook.inc`，已删除）、中继（历史源码路径 `experiments/autonomous_relay.py`，已删除）、接收器（历史源码路径 `experiments/autonomous_relay_ledger.py`，已删除）、测试驱动（历史源码路径 `experiments/test_autonomous_relay.py`，已删除）另存；旧51研究、29产品、24分析、353证据和旧报告/计划保持。新Hook包含文件等于上一阶段C源码删去其独立main，旧文件未改。
 
 ## 进程边界
 

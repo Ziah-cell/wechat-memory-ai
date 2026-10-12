@@ -1,3 +1,5 @@
+> 2026-10-12 已取消的最小化/内部采集研究计划。不得继续执行，不再保留其研究源码；当前唯一活动方案见 [WINDOW_OPEN_PLAN.md](../../WINDOW_OPEN_PLAN.md)。
+
 # Sustained ring implementation plan
 
 > 使用 executing-plans 在本会话自行实施和审查。用户要求自主推进、禁止子代理、保留全部证据，覆盖技能默认审批、委派、worktree和清理步骤。

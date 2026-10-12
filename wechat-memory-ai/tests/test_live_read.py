@@ -396,6 +396,7 @@ class LiveReadTests(unittest.TestCase):
         reader.executable=Path('fixture.exe')
         for raw, code, expected in [
                 ({'status':'reader_error','reason':'window_minimized'},3,'window_minimized'),
+                ({'status':'reader_error','reason':'window_identity_unavailable'},3,'window_identity_unavailable'),
                 ({'status':'reader_error','reason':'window_or_list_changed'},3,'window_or_list_changed'),
                 ({'status':'reader_error','reason':'PRIVATE'},3,'native_reader_unavailable'),
                 ({'status':'reader_error','reason':'window_minimized','text':'PRIVATE'},3,'native_reader_unavailable'),

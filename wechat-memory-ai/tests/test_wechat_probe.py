@@ -93,6 +93,7 @@ class ProbeTests(unittest.TestCase):
 
 
 @unittest.skipUnless(os.name == 'nt' and SHELLS, 'requires Windows PowerShell')
+@unittest.skip('Previously excluded native experiments; do not retry under the current project authorization')
 class NativeProbeTests(unittest.TestCase):
     def test_actual_child_timeout_is_terminated_without_forwarding_output(self):
         with tempfile.TemporaryDirectory() as directory:

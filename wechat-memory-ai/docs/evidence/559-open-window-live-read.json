@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-12",
+  "mode": "open_window_readonly_check",
+  "samples": [],
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "status": "stopped",
+  "reason": "private_window_not_unique"
+}

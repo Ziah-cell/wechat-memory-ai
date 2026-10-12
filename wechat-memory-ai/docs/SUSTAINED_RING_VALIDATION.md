@@ -1,8 +1,10 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 固定内存多圈缓冲与持久提交ACK验收
 
 2026-10-11。本阶段在自建Windows x64目标、实际跳板、只读消费者和虚构SQLite接收表中实现固定8槽循环缓冲。记录只有在接收表提交后、由受信控制器转发对应ACK，才允许复用。最终22类各3次共66项通过；现有382项离线产品测试通过。产品仍0.1.22，真实最小化微信接收和自动回复尚未就绪。
 
-[534来源](evidence/534-sustained-ring-basis.json)、[535结果](evidence/535-sustained-ring-results.json)、[536检查点](evidence/536-sustained-ring-checkpoint.json)保存依据。新增[协议及消费者](experiments/sustained_ring_protocol.h)、[原生Hook夹具](experiments/sustained_ring_fixture.c)、[虚构接收器](experiments/sustained_ring_ledger.py)、[测试驱动](experiments/test_sustained_ring.py)。旧47份研究、29份产品、24份分析和350份证据未修改；旧报告与计划亦保持。
+[534来源](evidence/534-sustained-ring-basis.json)、[535结果](evidence/535-sustained-ring-results.json)、[536检查点](evidence/536-sustained-ring-checkpoint.json)保存依据。新增协议及消费者（历史源码路径 `experiments/sustained_ring_protocol.h`，已删除）、原生Hook夹具（历史源码路径 `experiments/sustained_ring_fixture.c`，已删除）、虚构接收器（历史源码路径 `experiments/sustained_ring_ledger.py`，已删除）、测试驱动（历史源码路径 `experiments/test_sustained_ring.py`，已删除）。旧47份研究、29份产品、24份分析和350份证据未修改；旧报告与计划亦保持。
 
 ## 协议与实现
 

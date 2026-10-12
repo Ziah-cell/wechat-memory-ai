@@ -1,12 +1,14 @@
+> 已取消路线的历史报告（2026-10-12）。下文命令/下一步不再执行；研究源码、重复程序和构建产物已删除，旧哈希仅记录当时状态，不能用于核验当前工作副本。当前方案见 [WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+
 # 自建跳板、发布器与持久接收表的集成检查
 
 2026-10-11。新自建原生程序实际执行改写入口、C Hook、跳板和原函数，并在Hook中将四个虚构参数发布到固定8条映射；独立只读消费者输出后，由Python测试控制器交给SQLite接收进程。最终14类各3次共42次通过。它是受控组件集成实验，没有接入真实微信或产品自动回复。
 
-构建与来源见[522](evidence/522-integrated-receive-basis.json)，全部运行及独立数据库审计见[523](evidence/523-integrated-receive-results.json)，保留状态见[524](evidence/524-integrated-receive-checkpoint.json)。本轮只有[新C集成入口](experiments/integrated_receive_fixture.c)和[新测试驱动](experiments/test_integrated_receive.py)两份研究源码，之前38份研究、29份产品、24份分析脚本和338份证据保持。
+构建与来源见[522](evidence/522-integrated-receive-basis.json)，全部运行及独立数据库审计见[523](evidence/523-integrated-receive-results.json)，保留状态见[524](evidence/524-integrated-receive-checkpoint.json)。本轮只有新C集成入口（历史源码路径 `experiments/integrated_receive_fixture.c`，已删除）和新测试驱动（历史源码路径 `experiments/test_integrated_receive.py`，已删除）两份研究源码，之前38份研究、29份产品、24份分析脚本和338份证据保持。
 
 ## 实现边界
 
-C集成入口以编译期包含方式复用[发布器](experiments/resident_publisher_fixture.c)及[跳板辅助函数](experiments/executed_trampoline_fixture.c)，将两者原有测试main重命名；新main不调用这两个入口。构建清单记录所有包含文件和汇编依赖的哈希。仍用已校验的本地Zig 0.14.1，Windows x64、O2、Wall/Wextra/Werror；一次构建退出0，无警告。
+C集成入口以编译期包含方式复用发布器（历史源码路径 `experiments/resident_publisher_fixture.c`，已删除）及跳板辅助函数（历史源码路径 `experiments/executed_trampoline_fixture.c`，已删除），将两者原有测试main重命名；新main不调用这两个入口。构建清单记录所有包含文件和汇编依赖的哈希。仍用已校验的本地Zig 0.14.1，Windows x64、O2、Wall/Wextra/Werror；一次构建退出0，无警告。
 
 新Hook签名为六个uint64参数。前四项组成32字节本地数组，分别为id、id XOR固定常数、id+7、id×3；第五项为已知长度、第六项为固定测试参数。Hook将本地数组交给旧publish，然后调用跳板；调用者独立比较六参数的加权返回值。状态字段`original`在Hook拿到返回值后增加，代表成功转发返回次数，不是原函数体内的独立计数器。
 

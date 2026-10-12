@@ -16,4 +16,4 @@
 
 ## 本地目录结构
 
-Git 根目录是 `vx.agent`；应用在 `wechat-memory-ai/`。从仓库根目录进入该子目录后，按 README 运行。旧 ZIP 与 PACKAGE_MANIFEST.json 仅是此前本机打包记录，Git 忽略它们；后续以 Git commit 和测试证据标识版本。
+Git 根目录是 `vx.agent`；应用在 `wechat-memory-ai/`。从仓库根目录进入该子目录后，按 README 运行。旧 ZIP、构建目录及过期 PACKAGE_MANIFEST.json 已在 2026-10-12 删除；版本以 Git commit 和测试证据标识。
