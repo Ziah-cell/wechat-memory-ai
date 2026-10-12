@@ -1,4 +1,4 @@
-# v0.1.23 测试结果（2026-10-12）
+# v0.1.23 测试结果（2026-10-13 更新）
 
 最新运行 `python -X utf8 scripts/test.py`：**346 项发现，333 项通过，13 项明确跳过，0 失败/错误，49.471 秒**。[完整输出](evidence/567-open-window-preflight-regression.txt)。
 
@@ -17,5 +17,7 @@
 初期新号验证未通过读取前置条件：两次 `private_window_not_unique` 旧诊断和一次 `window_identity_unavailable` 新诊断全部保留。[559](evidence/559-open-window-live-read.json)、[560](evidence/560-open-window-live-read.json)、[561 结构](evidence/561-open-window-structure.json)、[562 新诊断](evidence/562-open-window-live-diagnostic.json)。这些不是消息读取或发送通过记录。
 
 后续用户确认更换账号，并选择旧号继续只读验证：旧号三种 UIA 接口均可见私聊根标识（[574](evidence/574-previous-account-uia-comparison.json)）。非前台、部分遮挡下 3 次视觉快照及 1 次联合文本读取成功，取得 3 条非空文本；每次 9 点中 6 点命中其他窗口、调用前后前台相同（[575](evidence/575-previous-account-open-window-live.json)）。输入框可写、发送按钮候选支持 Invoke 但禁用，仅查询元数据（[576](evidence/576-open-window-input-metadata.json)）。未发送、未调用模型、未写真实记忆或保存正文/图像。完整遮挡、可靠方向、历史/新事件和发送仍未验收，详见 [实测说明](OPEN_WINDOW_VALIDATION.md)。此阶段无产品代码改动，未重复运行完整回归。
+
+2026-10-13 只读复查在 `window_minimized` 处停止，0 快照、未发送/调用模型/写真实记忆；29 次前台采样未观察到切换，检查前后前台相同（[578](evidence/578-open-window-occlusion-live.json)）。目标未绑定，不能统计其前台采样数。完整遮挡读取仍待正常打开窗口准备完成。本轮仅增加脱敏证据与文档，未改产品代码或重复执行全量回归。
 
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "mode": "open_window_readonly_check",
+  "samples": [],
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "status": "stopped",
+  "reason": "window_minimized",
+  "focus_sampling": {
+    "requested_interval_ms": 20,
+    "samples": 29,
+    "changes": 0,
+    "target_foreground_samples": null,
+    "note": "Sampled observations, not continuous focus-event monitoring"
+  },
+  "foreground_unchanged_at_check_boundaries": true
+}
