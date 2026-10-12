@@ -14,6 +14,76 @@ from wechat_memory.live_read import NativeReader, ReadError
 
 class OpenWindowContractTests(unittest.TestCase):
     @unittest.skipUnless(os.name == 'nt', 'Windows compiler required')
+    def test_native_discovery_checks_minimization_before_uia(self):
+        # Pure discovery inputs: no windows, native UI fixtures or WeChat access.
+        # A throwing callback detects any accidental UIA access while all windows
+        # are minimized. Other cases preserve uniqueness and fail-closed identity.
+        source = r'''
+using System;
+using System.Reflection;
+class DiscoveryContract {
+    static int reads;
+    static IntPtr[] windows = { new IntPtr(1), new IntPtr(2) };
+    static void Reason(string expected, Action action) {
+        try { action(); throw new Exception("missing stop"); }
+        catch (InvalidOperationException) {
+            string actual = (string)typeof(LiveReader).GetField("failureReason",
+                BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
+            if (actual != expected) throw new Exception("wrong reason");
+        }
+    }
+    static int Main() {
+        try { Run(); return 0; }
+        catch (Exception ex) { Console.WriteLine(ex.Message); return 1; }
+    }
+    static void Run() {
+        Reason("window_minimized", delegate {
+            LiveReader.FindPrivateWindow(windows, h => true,
+                h => { reads++; throw new Exception("UIA must not run"); });
+        });
+        if (reads != 0) throw new Exception("unexpected read");
+        Reason("private_window_not_unique", delegate {
+            LiveReader.FindPrivateWindow(new IntPtr[0], h => false, h => "");
+        });
+        Reason("window_identity_unavailable", delegate {
+            LiveReader.FindPrivateWindow(windows, h => false, h => "");
+        });
+        Reason("private_window_not_unique", delegate {
+            LiveReader.FindPrivateWindow(windows, h => false, h => "ChatSingleWindowwxid_fixture");
+        });
+        Reason("window_minimized", delegate {
+            LiveReader.FindPrivateWindow(windows, h => h == windows[1],
+                h => h == windows[1] ? "ChatSingleWindowwxid_fixture" : "MainWindow");
+        });
+        IntPtr result = LiveReader.FindPrivateWindow(windows, h => false,
+            h => h == windows[1] ? "ChatSingleWindowwxid_fixture" : "MainWindow");
+        if (result != windows[1]) throw new Exception("wrong target");
+        Console.WriteLine("discovery_contract_passed");
+    }
+}
+'''
+        framework = Path(os.environ.get('SystemRoot', r'C:\Windows'))/'Microsoft.NET/Framework64/v4.0.30319'
+        package = Path(__file__).resolve().parents[1]/'src/wechat_memory'
+        with tempfile.TemporaryDirectory() as directory:
+            harness = Path(directory)/'discovery.cs'
+            harness.write_text(source, encoding='utf-8')
+            executable = Path(directory)/'discovery.exe'
+            args = [str(framework/'csc.exe'), '/nologo', '/target:exe',
+                    '/main:DiscoveryContract', '/out:'+str(executable),
+                    '/reference:'+str(framework/'System.Web.Extensions.dll'),
+                    '/reference:'+str(framework/'System.Drawing.dll')]
+            args += ['/reference:'+str(framework/'WPF'/name) for name in
+                     ('UIAutomationClient.dll','UIAutomationTypes.dll','WindowsBase.dll')]
+            args += [str(package/'live_reader.cs'),str(package/'visual_direction.cs'),str(harness)]
+            compiled = subprocess.run(args,capture_output=True,timeout=25,
+                                      creationflags=subprocess.CREATE_NO_WINDOW)
+            self.assertEqual(compiled.returncode,0,compiled.stdout.decode('utf-8','replace'))
+            result = subprocess.run([str(executable)],capture_output=True,timeout=8,
+                                    creationflags=subprocess.CREATE_NO_WINDOW)
+            self.assertEqual(result.returncode,0,result.stdout.decode('utf-8','replace'))
+            self.assertEqual(result.stdout.strip(), b'discovery_contract_passed')
+
+    @unittest.skipUnless(os.name == 'nt', 'Windows compiler required')
     def test_native_retired_modes_are_rejected_before_client_access(self):
         # Compile the product, without UI fixtures or an actual WeChat process.
         with tempfile.TemporaryDirectory() as temp, NativeReader(str(Path(temp)/'Weixin.exe')) as reader:

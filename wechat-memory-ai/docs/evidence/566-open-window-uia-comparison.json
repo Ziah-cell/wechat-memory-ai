@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-12",
+  "visible_windows": 2,
+  "results": [
+    {
+      "skipped_minimized": true
+    },
+    {
+      "skipped_minimized": true
+    }
+  ],
+  "foreground_unchanged_at_boundaries": true,
+  "message_body_read": false,
+  "pixels_read": false,
+  "input_sent": false
+}

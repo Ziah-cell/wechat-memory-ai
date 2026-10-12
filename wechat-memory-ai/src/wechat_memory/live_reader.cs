@@ -102,6 +102,29 @@ public static class LiveReader {
         }
         if(indexAfter!=visualRows.Count) throw new InvalidOperationException();
     }
+    internal static IntPtr FindPrivateWindow(IList<IntPtr> windows,
+            Func<IntPtr,bool> isMinimized, Func<IntPtr,string> automationId) {
+        // IsWindowVisible also includes minimized windows. UIA identities may
+        // disappear there, so stop before UIA if no normal window is available.
+        bool anyOpen = false;
+        foreach (var window in windows) {
+            if (!isMinimized(window)) { anyOpen = true; break; }
+        }
+        if (windows.Count > 0 && !anyOpen) throw Failure("window_minimized");
+        var targets = new List<IntPtr>();
+        int identifiedWindows = 0;
+        foreach (var window in windows) {
+            string id = automationId(window);
+            if (!String.IsNullOrEmpty(id)) identifiedWindows++;
+            if (id.StartsWith("ChatSingleWindowwxid_",StringComparison.Ordinal)) targets.Add(window);
+        }
+        // Never guess a contact from a title or coordinates when identity is absent.
+        if (targets.Count == 0 && windows.Count > 0 && identifiedWindows == 0)
+            throw Failure("window_identity_unavailable");
+        if (targets.Count != 1) throw Failure("private_window_not_unique");
+        if (isMinimized(targets[0])) throw Failure("window_minimized");
+        return targets[0];
+    }
     public static object Snapshot(string client, Dictionary<string,object> expected, string mode) {
         bool layout = mode == "--layout";
         bool capabilities = mode == "--capabilities";
@@ -126,35 +149,26 @@ public static class LiveReader {
             } catch { throw new InvalidOperationException(); }
         }
         Timing("window_lookup");
-        var targets = new List<IntPtr>();
-        int visibleWindows = 0, identifiedWindows = 0;
-        Exception failure = null;
+        var windows = new List<IntPtr>();
         failureReason = "window_discovery_failed";
-        EnumWindows(delegate(IntPtr window, IntPtr unused) {
+        bool enumerated = EnumWindows(delegate(IntPtr window, IntPtr unused) {
             uint pid;
             GetWindowThreadProcessId(window,out pid);
             if (!processes.ContainsKey((int)pid) || !IsWindowVisible(window)) return true;
-            visibleWindows++;
-            try {
-                var element = AutomationElement.FromHandle(window);
-                SameProcess(element,(int)pid);
-                string id = Property(element,AutomationElement.AutomationIdProperty);
-                if (!String.IsNullOrEmpty(id)) identifiedWindows++;
-                if (id.StartsWith("ChatSingleWindowwxid_",StringComparison.Ordinal)) targets.Add(window);
-            } catch (Exception ex) { failure = ex; return false; }
+            windows.Add(window);
             return true;
         },IntPtr.Zero);
-        if (failure != null) throw new InvalidOperationException();
-        // An inaccessible tree is not evidence that the user failed to open
-        // the chat. Never fall back to a title, screen coordinates or another
-        // window when UIA cannot identify any visible WeChat root.
-        if (targets.Count == 0 && visibleWindows > 0 && identifiedWindows == 0)
-            throw Failure("window_identity_unavailable");
-        if (targets.Count != 1) throw Failure("private_window_not_unique");
-        if (IsIconic(targets[0])) throw Failure("window_minimized");
+        if (!enumerated) throw new InvalidOperationException();
+        IntPtr handle = FindPrivateWindow(windows, IsIconic, delegate(IntPtr window) {
+            uint pid;
+            GetWindowThreadProcessId(window,out pid);
+            if (!processes.ContainsKey((int)pid)) throw new InvalidOperationException();
+            var element = AutomationElement.FromHandle(window);
+            SameProcess(element,(int)pid);
+            return Property(element,AutomationElement.AutomationIdProperty);
+        });
         Timing("binding_check");
         failureReason = "window_binding_unavailable";
-        IntPtr handle = targets[0];
         uint owner;
         GetWindowThreadProcessId(handle,out owner);
         Process selected = processes[(int)owner];
