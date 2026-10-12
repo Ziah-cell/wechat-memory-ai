@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-12",
+  "mode": "open_window_readonly_check",
+  "samples": [
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 7,
+        "text_rows": 3,
+        "capture_attempts": 1,
+        "incoming_candidates": 1,
+        "self_candidates": 0,
+        "unknown_texts": 2,
+        "reason_counts": {
+          "geometry_invalid": 2,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 1,
+          "self_evidence": 0,
+          "not_text": 4
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "target_points": 3,
+        "other_window_points": 6,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 1.047
+    },
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 7,
+        "text_rows": 3,
+        "capture_attempts": 1,
+        "incoming_candidates": 1,
+        "self_candidates": 0,
+        "unknown_texts": 2,
+        "reason_counts": {
+          "geometry_invalid": 2,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 1,
+          "self_evidence": 0,
+          "not_text": 4
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "target_points": 3,
+        "other_window_points": 6,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 0.406
+    },
+    {
+      "visual": {
+        "status": "visual_observed",
+        "rows": 7,
+        "text_rows": 3,
+        "capture_attempts": 1,
+        "incoming_candidates": 1,
+        "self_candidates": 0,
+        "unknown_texts": 2,
+        "reason_counts": {
+          "geometry_invalid": 2,
+          "background_unsupported": 0,
+          "edges_inconsistent": 0,
+          "avatar_inconclusive": 0,
+          "foreground_evidence_absent": 0,
+          "incoming_bubble_unconfirmed": 0,
+          "incoming_green_conflict": 0,
+          "self_bubble_unconfirmed": 0,
+          "incoming_evidence": 1,
+          "self_evidence": 0,
+          "not_text": 4
+        },
+        "sender_verified": false,
+        "history_boundary_verified": false,
+        "real_send_supported": false,
+        "model_called": false
+      },
+      "window": {
+        "foreground": false,
+        "minimized": false,
+        "target_points": 3,
+        "other_window_points": 6,
+        "unknown_points": 0,
+        "sample_points": 9
+      },
+      "foreground_unchanged": true,
+      "seconds": 0.391
+    }
+  ],
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "capabilities": {
+    "help_text_rows": 0,
+    "text_pattern_rows": 0,
+    "item_type_rows": 0,
+    "labeled_by_rows": 0,
+    "item_status_rows": 0,
+    "automation_id_rows": 4,
+    "status": "capabilities_observed",
+    "rows": 7,
+    "distinct_automation_ids": 1,
+    "text_rows": 3,
+    "scroll_pattern": false,
+    "bottom_observed": null,
+    "sender_verified": false,
+    "history_boundary_verified": false,
+    "real_send_supported": false,
+    "model_called": false
+  },
+  "capability_focus_unchanged": true,
+  "joint_read": {
+    "rows": 7,
+    "text_rows": 3,
+    "nonblank_text_rows": 3,
+    "incoming_candidates": 1,
+    "self_candidates": 0,
+    "unknown": 6,
+    "window": {
+      "foreground": false,
+      "minimized": false,
+      "target_points": 3,
+      "other_window_points": 6,
+      "unknown_points": 0,
+      "sample_points": 9
+    },
+    "foreground_unchanged": true
+  },
+  "diagnostics": {
+    "child_calls": 5,
+    "child_timeouts": 0,
+    "last_call_ms": 390,
+    "max_call_ms": 1055,
+    "last_call_timed_out": false,
+    "native_trace_valid": true,
+    "last_native_stage": "completed",
+    "native_checkpoints_ms": {
+      "started": 1,
+      "request_read": 2,
+      "client_lookup": 39,
+      "process_lookup": 39,
+      "window_lookup": 50,
+      "binding_check": 113,
+      "tree_lookup": 116,
+      "list_binding": 195,
+      "rows_first": 196,
+      "visual_capture": 208,
+      "binding_final": 245,
+      "snapshot_ready": 246,
+      "serializing": 246,
+      "completed": 255
+    },
+    "slowest_call": {
+      "child_call": 1,
+      "call_ms": 1055,
+      "timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 12,
+        "request_read": 13,
+        "client_lookup": 86,
+        "process_lookup": 86,
+        "window_lookup": 104,
+        "binding_check": 332,
+        "tree_lookup": 338,
+        "list_binding": 523,
+        "rows_first": 530,
+        "visual_capture": 538,
+        "binding_final": 609,
+        "snapshot_ready": 609,
+        "serializing": 609,
+        "completed": 711
+      }
+    }
+  },
+  "status": "completed",
+  "foreground_unchanged_at_check_boundaries": true
+}

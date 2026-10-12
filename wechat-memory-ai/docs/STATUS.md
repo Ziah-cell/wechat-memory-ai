@@ -12,16 +12,16 @@
 
 ## 当前实机边界
 
-用户已确认打开独立聊天窗口。精确客户端路径的检查发现 2 个可见微信窗口，但两者根 AutomationId 均为空，首层 4 个子控件中未见消息列表或输入框。客户端 4.1.15.50，微信与检查进程均为 medium 权限级别。
+**当前目标已改为此前可读的旧测试号，用户已授权正文及遮挡只读验证。** 新号在正常窗口下的 .NET、原生 UIA、UIA8 均无私聊标识（[570](evidence/570-restored-uia-comparison.json)）；用户手动准备旧号后，三接口均取得私聊根标识（[574](evidence/574-previous-account-uia-comparison.json)），客户端版本复核仍为 4.1.15.50。这支持账号/登录会话相关差异，但未证明微信内部原因或新号永久不可读。用户取消返回新号复查，选择继续旧号；授权记录见 [577](evidence/577-previous-account-readonly-scope.json)。
 
-新增 `window_identity_unavailable` 将这类前置失败与“没有唯一独立窗口”区分。实机返回该原因，未进入正文/像素读取；检查开始和结束时的前台窗口相同。这不证明整个期间焦点始终未变，也不能证明非前台/遮挡收发成功。原因尚未确定，不能把它归咎于遮挡或让用户反复重开窗口。
+旧号已在**非前台、部分遮挡**下取得 3 次视觉快照和 1 次联合文本快照：7 个列表项、3 条非空文本；每次 9 个采样点中 6 个落在其他窗口上，目标未最小化，每次检查前后前台相同（[575](evidence/575-previous-account-open-window-live.json)）。未保存正文/图像、未发送、未调用模型、未写真实记忆。这是短时静态读取证据，不是完整遮挡、持续焦点不变或新来信验收。
 
-随后检查发现两扇窗口均已最小化，因此 .NET/COM UIA 比较在前置阶段跳过（[566](evidence/566-open-window-uia-comparison.json)）。已修正发现顺序：全部微信窗口最小化时在访问 UIA 前返回 `window_minimized`；保留唯一绑定和最终最小化复查。实机已确认此停止原因、0 快照、前后焦点相同（[568](evidence/568-open-window-preflight-live.json)）。此前记录未完整统计最小化状态，不能推定此前也全部最小化。
+方向仅有 1 条来信候选、2 条未知；后续几何检查发现 2 条文本控件越出列表边界，符合保守几何门槛。没有滚动模式，历史/底部边界未知。输入框声明可写 ValuePattern 和 TextPattern；发送按钮标签候选支持 Invoke，但当前禁用；只检查元数据，没有写入或调用（[576](evidence/576-open-window-input-metadata.json)）。联系人身份、方向、历史、新事件、去重和不抢焦点发送仍需分别验证。
 
-用户再次回复准备完成后，最新检测为 1 个正常窗口、1 个最小化窗口；正常窗口在 .NET、原生 UIA、UIA8 中仍无私聊标识，COM 两接口均报告 HWND 代理，产品仍在 `window_identity_unavailable` 停止（[569](evidence/569-restored-open-window-live.json)、[570](evidence/570-restored-uia-comparison.json)）。未进入正文或图像读取。Win32 类名对照未命中，未执行下层遍历；Computer Use 本地运行环境初始化失败，没有访问微信（[571](evidence/571-restored-private-window-structure.json)、[572](evidence/572-computer-use-initialization.json)）。已询问当前是否仍为此前可读的测试账号；账号策略和登录会话原因尚未确认。
+此前全部最小化导致的诊断顺序问题已修复：在 UIA 访问前返回 `window_minimized`，实机为 0 快照（[568](evidence/568-open-window-preflight-live.json)）。最初空标识记录不能追溯认定均由最小化引起。Computer Use 运行环境另有初始化故障，没有访问微信（[572](evidence/572-computer-use-initialization.json)）；普通原生读取不依赖该工具。
 
 此次修正后最新全量回归：346 项发现、333 通过、13 跳过，0 失败/错误，49.471 秒（[567](evidence/567-open-window-preflight-regression.txt)）。新增测试仅使用内存中的窗口状态和回调，不重试被禁止的原生 UI/位图实验。
 
-普通读取、方向、身份、历史、发送和实际桥接仍待实测。当前没有启动常驻监听，旧 standby 监听保持停止，自动回复关闭。详见 [窗口验证](OPEN_WINDOW_VALIDATION.md)。
+完整遮挡检查等待用户准备。当前没有启动常驻监听，旧 standby 监听保持停止，自动回复关闭。详见 [窗口验证](OPEN_WINDOW_VALIDATION.md)。
 
-下一步仅围绕普通 UIA 可访问性和不抢焦点的接入条件推进；不恢复被取消研究、不放宽绑定、不使用昵称/坐标猜测联系人。真实模型、发送、自动回复保留最终确认边界。活动计划：[WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+下一步完成旧号完整遮挡下静态读取，再核验新事件与发送前置条件；不恢复被取消研究、不放宽绑定、不使用昵称/坐标猜测联系人。真实模型、发送、自动回复保留最终确认边界。活动计划：[WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "status": "metadata_observed",
+  "binding_rechecked": true,
+  "input_fields": [
+    {
+      "value_pattern": true,
+      "value_read_only": false,
+      "text_pattern": true,
+      "enabled": true,
+      "keyboard_focusable": true,
+      "has_keyboard_focus": false
+    }
+  ],
+  "send_label_candidates": 1,
+  "send_invoke_available_candidates": 1,
+  "send_enabled_candidates": 0,
+  "text_geometry": {
+    "text_rows": 3,
+    "outside_list": 2,
+    "below_minimum_height": 0,
+    "below_minimum_width": 0,
+    "edges_misaligned": 0,
+    "offscreen": 0,
+    "empty_bounds": 0
+  },
+  "foreground": false,
+  "minimized": false,
+  "foreground_unchanged_at_boundaries": true,
+  "message_body_read": false,
+  "pixels_read": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "real_send_supported": false
+}

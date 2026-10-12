@@ -14,6 +14,8 @@
 
 离线 wheel 构建、安装及 installed offline-check 通过：23 Python 模块、5 原生资源，未包含 retired 模块或研究代码。网络关闭、假模型、临时数据、无发送。[包核验](evidence/564-open-window-package.json)。旧 ZIP/构建副本/包清单已删除；验证产生的临时包及新构建目录也已清理。
 
-真实客户端验证未通过读取前置条件：两次 `private_window_not_unique` 旧诊断和一次 `window_identity_unavailable` 新诊断全部保留。[559](evidence/559-open-window-live-read.json)、[560](evidence/560-open-window-live-read.json)、[561 结构](evidence/561-open-window-structure.json)、[562 新诊断](evidence/562-open-window-live-diagnostic.json)。这些不是消息读取、遮挡支持、方向识别或发送通过记录；详见 [实测说明](OPEN_WINDOW_VALIDATION.md)。
+初期新号验证未通过读取前置条件：两次 `private_window_not_unique` 旧诊断和一次 `window_identity_unavailable` 新诊断全部保留。[559](evidence/559-open-window-live-read.json)、[560](evidence/560-open-window-live-read.json)、[561 结构](evidence/561-open-window-structure.json)、[562 新诊断](evidence/562-open-window-live-diagnostic.json)。这些不是消息读取或发送通过记录。
+
+后续用户确认更换账号，并选择旧号继续只读验证：旧号三种 UIA 接口均可见私聊根标识（[574](evidence/574-previous-account-uia-comparison.json)）。非前台、部分遮挡下 3 次视觉快照及 1 次联合文本读取成功，取得 3 条非空文本；每次 9 点中 6 点命中其他窗口、调用前后前台相同（[575](evidence/575-previous-account-open-window-live.json)）。输入框可写、发送按钮候选支持 Invoke 但禁用，仅查询元数据（[576](evidence/576-open-window-input-metadata.json)）。未发送、未调用模型、未写真实记忆或保存正文/图像。完整遮挡、可靠方向、历史/新事件和发送仍未验收，详见 [实测说明](OPEN_WINDOW_VALIDATION.md)。此阶段无产品代码改动，未重复运行完整回归。
 
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。

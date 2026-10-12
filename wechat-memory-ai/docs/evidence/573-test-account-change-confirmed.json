@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-12",
+  "source": "user_confirmation",
+  "same_account_as_previous_success": false,
+  "previous_success_applies_to_current_account": false,
+  "account_related_difference_hypothesis": true,
+  "account_causality_verified": false,
+  "fresh_same_environment_account_comparison_completed": false,
+  "automatic_account_switch": false,
+  "new_live_read_performed": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false
+}

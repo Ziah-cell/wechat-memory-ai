@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-12",
+  "visible_windows": 2,
+  "results": [
+    {
+      "managed_before": {
+        "empty_id": false,
+        "private_window_id": true,
+        "framework_win32": false,
+        "framework_qt": true,
+        "framework_empty": false,
+        "provider_property_read": false,
+        "provider_has_hwnd_proxy": false,
+        "provider_has_msaa_proxy": false,
+        "provider_has_qt": false
+      },
+      "com": {
+        "empty_id": false,
+        "private_window_id": true,
+        "framework_win32": false,
+        "framework_qt": true,
+        "framework_empty": false,
+        "provider_property_read": true,
+        "provider_has_hwnd_proxy": true,
+        "provider_has_msaa_proxy": false,
+        "provider_has_qt": false
+      },
+      "com8": {
+        "empty_id": false,
+        "private_window_id": true,
+        "framework_win32": false,
+        "framework_qt": true,
+        "framework_empty": false,
+        "provider_property_read": true,
+        "provider_has_hwnd_proxy": true,
+        "provider_has_msaa_proxy": false,
+        "provider_has_qt": false
+      },
+      "managed_after": {
+        "empty_id": false,
+        "private_window_id": true,
+        "framework_win32": false,
+        "framework_qt": true,
+        "framework_empty": false,
+        "provider_property_read": false,
+        "provider_has_hwnd_proxy": false,
+        "provider_has_msaa_proxy": false,
+        "provider_has_qt": false
+      }
+    },
+    {
+      "skipped_minimized": true
+    }
+  ],
+  "foreground_unchanged_at_boundaries": true,
+  "message_body_read": false,
+  "pixels_read": false,
+  "input_sent": false
+}
