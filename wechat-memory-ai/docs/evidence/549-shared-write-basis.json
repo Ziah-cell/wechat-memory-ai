@@ -1,0 +1,158 @@
+{
+  "client_date": "2026-10-12",
+  "checked_at_utc": "2026-10-12T02:12:08.262850+00:00",
+  "base_commit": "7cf4bcf698cf2afbe7974e2b9b47520d6c992bab",
+  "source_hashes": {
+    "docs/experiments/shared_write_fixture.c": "3c81070cba1a68233a3e4e4a5082e564dc7e05bcb1d4aca0aed3914ffa6f879e",
+    "docs/experiments/shared_write_hook.inc": "df6ef11424e4a30efee3cdda29dd03ff9e03489d8fbfca9da2321375d32e7d05",
+    "docs/experiments/shared_write_protocol.h": "2893e5b8eecc7b44d008d9c2608fb559b59560fb0ac6c4d0ce33cd79dc9c0498",
+    "docs/experiments/shared_write_sites.S": "96d89632e4846532923f7670123ba407d49d4520c6f6e1e9ace0b581b19298f6",
+    "docs/experiments/shared_write_ledger.py": "4466aaadd6d6838ccdb6957ec7f8d04aa44d768b6cf6ea156a7a72fb965fb0b3",
+    "docs/experiments/shared_write_relay.py": "d18ea2306da1107312dfbceea73ac25f7eacbcd73061b38fa3e0c50720b133e4",
+    "docs/experiments/shared_write_controller.py": "1ea9400087b10444a5d095730b1d29b25c09903f820efc9880d3480a0a68e44d",
+    "docs/experiments/test_shared_write.py": "8ac57fa6fa5789766c80f75570a2fee434a2bdde55b1d801a0b8d4730e8ed4dd"
+  },
+  "build": {
+    "command": [
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+      "cc",
+      "-target",
+      "x86_64-windows-gnu",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fms-extensions",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_fixture.c",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_sites.S",
+      "-o",
+      "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\shared-write-20261012\\build-8f2383e7b51d\\shared_write_fixture.exe"
+    ],
+    "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+    "source_hashes": {
+      "shared_write_fixture.c": "3c81070cba1a68233a3e4e4a5082e564dc7e05bcb1d4aca0aed3914ffa6f879e",
+      "shared_write_hook.inc": "df6ef11424e4a30efee3cdda29dd03ff9e03489d8fbfca9da2321375d32e7d05",
+      "shared_write_protocol.h": "2893e5b8eecc7b44d008d9c2608fb559b59560fb0ac6c4d0ce33cd79dc9c0498",
+      "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+      "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+      "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+      "shared_write_sites.S": "96d89632e4846532923f7670123ba407d49d4520c6f6e1e9ace0b581b19298f6"
+    },
+    "build_exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "exe_sha256": "63e22eddf6097ea0b85aa3f77091bf9010aad85c3cd625a7ce9843c3b6033951"
+  },
+  "builds": [
+    {
+      "path": "data/shared-write-20261012/build-8f2383e7b51d/build.json",
+      "sha256": "099e99d55150a022b344ae96418ed97cd9f5b3f71b61d99d2ead7fb414c606d1",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_sites.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\shared-write-20261012\\build-8f2383e7b51d\\shared_write_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "shared_write_fixture.c": "3c81070cba1a68233a3e4e4a5082e564dc7e05bcb1d4aca0aed3914ffa6f879e",
+        "shared_write_hook.inc": "df6ef11424e4a30efee3cdda29dd03ff9e03489d8fbfca9da2321375d32e7d05",
+        "shared_write_protocol.h": "2893e5b8eecc7b44d008d9c2608fb559b59560fb0ac6c4d0ce33cd79dc9c0498",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "shared_write_sites.S": "96d89632e4846532923f7670123ba407d49d4520c6f6e1e9ace0b581b19298f6"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "63e22eddf6097ea0b85aa3f77091bf9010aad85c3cd625a7ce9843c3b6033951"
+    },
+    {
+      "path": "data/shared-write-20261012/build-ae7cc5b48c78/build.json",
+      "sha256": "c9756252286912c0e9388f1969ba61163f01e870def7f5fe068c20f2bf0ddda2",
+      "command": [
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\resident-publisher-20261010\\toolchain\\zig-x86_64-windows-0.14.1\\zig.exe",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fms-extensions",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_fixture.c",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\capture_copy_site.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\trampoline_register_caller.S",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\docs\\experiments\\shared_write_sites.S",
+        "-o",
+        "C:\\Users\\zhihua\\Documents\\ChatGPT\\vx.agent\\wechat-memory-ai\\data\\shared-write-20261012\\build-ae7cc5b48c78\\shared_write_fixture.exe"
+      ],
+      "compiler_sha256": "1ddf230367e07738c4a769eae66c1db7469e37bd520e81c86356453d0db2b9fd",
+      "source_hashes": {
+        "shared_write_fixture.c": "3c81070cba1a68233a3e4e4a5082e564dc7e05bcb1d4aca0aed3914ffa6f879e",
+        "shared_write_hook.inc": "dc59eabc8f502d71c8407b1983f18398f6625581296b74946d6ad3e90ffc3020",
+        "shared_write_protocol.h": "2893e5b8eecc7b44d008d9c2608fb559b59560fb0ac6c4d0ce33cd79dc9c0498",
+        "capture_copy_site.S": "9e07269f9f7cccad1ef23a08204ad81a2dad0d724c169dc7b41492d7b5e5ac5c",
+        "executed_trampoline_fixture.c": "94c85b80de0f262099792e0deda9e1404ae2f2a159806b84f688a5b67303c717",
+        "trampoline_register_caller.S": "b577590ef4547df0e44f3a994f0d1fda4c211cf5eeaaf6e9bdd91284057d3fa4",
+        "shared_write_sites.S": "96d89632e4846532923f7670123ba407d49d4520c6f6e1e9ace0b581b19298f6"
+      },
+      "build_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "exe_sha256": "d1e0b23a178f1e7feebda54223052c9b432a6a1162c8419423d2f8cad3b3e03f"
+    }
+  ],
+  "frozen_old_files": 783,
+  "old_research": 70,
+  "old_product": 29,
+  "old_analysis": 24,
+  "old_evidence": 365,
+  "plan": "docs/superpowers/plans/2026-10-12-shared-write-faults.md",
+  "api_references": [
+    "https://learn.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-exception_record",
+    "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect",
+    "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile",
+    "https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf"
+  ],
+  "failures": {
+    "missing_implementation": "run-d78d44b4dcee",
+    "matrix_failures": 12,
+    "negative_rounds": 2,
+    "negative_cases_per_round": 6
+  },
+  "constraints": {
+    "owned_fixtures_only": true,
+    "fictional_payloads": true,
+    "old_databases_unchanged": true,
+    "live_wechat": false,
+    "models": false,
+    "auto_reply": false,
+    "listener": "stopped",
+    "id40": "previously paused, unchanged",
+    "subagents": false,
+    "worktree": false,
+    "outer_observer_alive": true,
+    "one_original_call_worker": true,
+    "control_page_writable_required": true,
+    "shared_write_site_proven": true,
+    "arbitrary_write_fault_recovery": false
+  }
+}
