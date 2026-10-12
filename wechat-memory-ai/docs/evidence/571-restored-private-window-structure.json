@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-12",
+  "visible_windows": 2,
+  "results": [
+    {
+      "private_window_class": false,
+      "main_window_class": false,
+      "minimized": false,
+      "structure_skipped": true
+    },
+    {
+      "private_window_class": false,
+      "main_window_class": false,
+      "minimized": true,
+      "structure_skipped": true
+    }
+  ],
+  "foreground_unchanged_at_boundaries": true,
+  "message_body_read": false,
+  "pixels_read": false,
+  "input_sent": false
+}

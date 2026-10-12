@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-12",
+  "purpose": "readonly_accessibility_crosscheck",
+  "initialization_attempts": 2,
+  "kernel_reset_between_attempts": true,
+  "status": "unavailable_before_app_access",
+  "reason": "failed to write kernel assets: 系统找不到指定的路径。 (os error 3)",
+  "list_apps_called": false,
+  "window_state_called": false,
+  "message_body_read": false,
+  "pixels_read": false,
+  "input_sent": false,
+  "model_called": false
+}

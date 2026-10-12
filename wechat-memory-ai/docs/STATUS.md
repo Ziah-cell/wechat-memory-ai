@@ -16,7 +16,9 @@
 
 新增 `window_identity_unavailable` 将这类前置失败与“没有唯一独立窗口”区分。实机返回该原因，未进入正文/像素读取；检查开始和结束时的前台窗口相同。这不证明整个期间焦点始终未变，也不能证明非前台/遮挡收发成功。原因尚未确定，不能把它归咎于遮挡或让用户反复重开窗口。
 
-继续检查发现两扇窗口当前均已最小化，因此 .NET/COM UIA 比较在前置阶段跳过（[566](evidence/566-open-window-uia-comparison.json)）。已修正发现顺序：全部微信窗口最小化时在访问 UIA 前返回 `window_minimized`；保留唯一绑定和最终最小化复查。实机已确认此停止原因、0 快照、前后焦点相同（[568](evidence/568-open-window-preflight-live.json)）。此前记录未完整统计最小化状态，不能推定此前也全部最小化。正在等待用户恢复独立窗口并保持正常打开，再继续只读验证。
+随后检查发现两扇窗口均已最小化，因此 .NET/COM UIA 比较在前置阶段跳过（[566](evidence/566-open-window-uia-comparison.json)）。已修正发现顺序：全部微信窗口最小化时在访问 UIA 前返回 `window_minimized`；保留唯一绑定和最终最小化复查。实机已确认此停止原因、0 快照、前后焦点相同（[568](evidence/568-open-window-preflight-live.json)）。此前记录未完整统计最小化状态，不能推定此前也全部最小化。
+
+用户再次回复准备完成后，最新检测为 1 个正常窗口、1 个最小化窗口；正常窗口在 .NET、原生 UIA、UIA8 中仍无私聊标识，COM 两接口均报告 HWND 代理，产品仍在 `window_identity_unavailable` 停止（[569](evidence/569-restored-open-window-live.json)、[570](evidence/570-restored-uia-comparison.json)）。未进入正文或图像读取。Win32 类名对照未命中，未执行下层遍历；Computer Use 本地运行环境初始化失败，没有访问微信（[571](evidence/571-restored-private-window-structure.json)、[572](evidence/572-computer-use-initialization.json)）。已询问当前是否仍为此前可读的测试账号；账号策略和登录会话原因尚未确认。
 
 此次修正后最新全量回归：346 项发现、333 通过、13 跳过，0 失败/错误，49.471 秒（[567](evidence/567-open-window-preflight-regression.txt)）。新增测试仅使用内存中的窗口状态和回调，不重试被禁止的原生 UI/位图实验。
 
