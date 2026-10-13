@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "mode": "user_message_side_confirmation",
+  "current_run": "602-stepwise-self-filter.json",
+  "user_confirmed_manual_send_from_computer_old_account": true,
+  "user_confirmed_target_on_right": true,
+  "user_confirmed_switched_back_after_send": true,
+  "self_read_started_after_user_confirmation": true,
+  "actual_account_identity_verified": false,
+  "automatic_input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "product_direction_rules_changed": false
+}

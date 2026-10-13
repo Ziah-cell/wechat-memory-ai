@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-14",
+  "mode": "bound_target_geometry_metadata",
+  "status": "completed",
+  "checks": [
+    {
+      "text_rows": 7,
+      "target_matches": 1,
+      "target_is_last_nonblank_text": true,
+      "scale": 1.5,
+      "window_width": 1104,
+      "window_height": 1132,
+      "list_width": 1081,
+      "list_height": 790,
+      "list_nonempty": true,
+      "targets": [
+        {
+          "offscreen": false,
+          "row_width": 1081,
+          "row_height": 84,
+          "minimum_width": 450,
+          "minimum_height": 54,
+          "width_pass": true,
+          "height_pass": true,
+          "list_contains_row": true,
+          "frame_contains_list": true,
+          "left_edge_aligned": true,
+          "right_edge_aligned": true,
+          "top_outside_pixels": 0,
+          "bottom_outside_pixels": 0,
+          "left_outside_pixels": 0,
+          "right_outside_pixels": 0
+        }
+      ]
+    },
+    {
+      "text_rows": 7,
+      "target_matches": 1,
+      "target_is_last_nonblank_text": true,
+      "scale": 1.5,
+      "window_width": 1104,
+      "window_height": 1132,
+      "list_width": 1081,
+      "list_height": 790,
+      "list_nonempty": true,
+      "targets": [
+        {
+          "offscreen": false,
+          "row_width": 1081,
+          "row_height": 84,
+          "minimum_width": 450,
+          "minimum_height": 54,
+          "width_pass": true,
+          "height_pass": true,
+          "list_contains_row": true,
+          "frame_contains_list": true,
+          "left_edge_aligned": true,
+          "right_edge_aligned": true,
+          "top_outside_pixels": 0,
+          "bottom_outside_pixels": 0,
+          "left_outside_pixels": 0,
+          "right_outside_pixels": 0
+        }
+      ]
+    }
+  ],
+  "binding_rechecked": true,
+  "target_foreground": false,
+  "foreground_unchanged_at_boundaries": true,
+  "target_minimized": false,
+  "message_names_compared_in_memory": true,
+  "message_bodies_persisted": false,
+  "images_captured": false,
+  "binding_persisted": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "geometry_thresholds_changed": false
+}

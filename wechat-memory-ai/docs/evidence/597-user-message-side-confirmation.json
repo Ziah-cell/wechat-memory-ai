@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "mode": "user_message_side_confirmation",
+  "previous_run": "595-covered-self-filter.json",
+  "user_confirmed_target_on_left": true,
+  "intended_self_test_was_displayed_as_incoming": true,
+  "prior_incoming_delivery_consistent_with_user_report": true,
+  "self_filter_check_completed": false,
+  "direction_misclassification_established": false,
+  "actual_account_identity_verified": false,
+  "next_self_step_uses_manual_computer_input": true,
+  "automatic_input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "product_direction_rules_changed": false
+}
