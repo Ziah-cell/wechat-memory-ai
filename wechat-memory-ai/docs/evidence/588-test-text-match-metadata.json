@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-14",
+  "mode": "authorized_test_text_match_metadata",
+  "user_reported_two_test_messages_sent": true,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "images_persisted": false,
+  "observations": [
+    {
+      "text_rows": 5,
+      "marker_matches": 1,
+      "exact_expected_matches": 0,
+      "trimmed_expected_matches": 0,
+      "normalized_expected_matches": 0,
+      "after_marker_rows": [
+        {
+          "length": 2,
+          "exact": false,
+          "trimmed": false,
+          "nfkc_trimmed": false,
+          "whitespace_removed": false,
+          "punctuation_and_whitespace_removed": false,
+          "expected_substring_present": false,
+          "incoming_candidate": true,
+          "self_candidate": false,
+          "direction_unknown": false
+        },
+        {
+          "length": 2,
+          "exact": false,
+          "trimmed": false,
+          "nfkc_trimmed": false,
+          "whitespace_removed": false,
+          "punctuation_and_whitespace_removed": false,
+          "expected_substring_present": false,
+          "incoming_candidate": true,
+          "self_candidate": false,
+          "direction_unknown": false
+        }
+      ],
+      "last_two_same_text": true
+    },
+    {
+      "text_rows": 5,
+      "marker_matches": 1,
+      "exact_expected_matches": 0,
+      "trimmed_expected_matches": 0,
+      "normalized_expected_matches": 0,
+      "after_marker_rows": [
+        {
+          "length": 2,
+          "exact": false,
+          "trimmed": false,
+          "nfkc_trimmed": false,
+          "whitespace_removed": false,
+          "punctuation_and_whitespace_removed": false,
+          "expected_substring_present": false,
+          "incoming_candidate": true,
+          "self_candidate": false,
+          "direction_unknown": false
+        },
+        {
+          "length": 2,
+          "exact": false,
+          "trimmed": false,
+          "nfkc_trimmed": false,
+          "whitespace_removed": false,
+          "punctuation_and_whitespace_removed": false,
+          "expected_substring_present": false,
+          "incoming_candidate": true,
+          "self_candidate": false,
+          "direction_unknown": false
+        }
+      ],
+      "last_two_same_text": true
+    }
+  ],
+  "diagnostics": {
+    "child_calls": 2,
+    "child_timeouts": 0,
+    "last_call_ms": 603,
+    "max_call_ms": 697,
+    "last_call_timed_out": false,
+    "native_trace_valid": true,
+    "last_native_stage": "completed",
+    "native_checkpoints_ms": {
+      "started": 3,
+      "request_read": 4,
+      "client_lookup": 66,
+      "process_lookup": 66,
+      "window_lookup": 82,
+      "binding_check": 173,
+      "tree_lookup": 176,
+      "list_binding": 302,
+      "rows_first": 304,
+      "visual_capture": 312,
+      "binding_final": 375,
+      "snapshot_ready": 376,
+      "serializing": 376,
+      "completed": 386
+    },
+    "slowest_call": {
+      "child_call": 1,
+      "call_ms": 697,
+      "timed_out": false,
+      "native_trace_valid": true,
+      "last_native_stage": "completed",
+      "native_checkpoints_ms": {
+        "started": 2,
+        "request_read": 2,
+        "client_lookup": 26,
+        "process_lookup": 27,
+        "window_lookup": 54,
+        "binding_check": 162,
+        "tree_lookup": 171,
+        "list_binding": 309,
+        "rows_first": 311,
+        "visual_capture": 320,
+        "binding_final": 388,
+        "snapshot_ready": 388,
+        "serializing": 388,
+        "completed": 424
+      }
+    }
+  },
+  "status": "completed"
+}

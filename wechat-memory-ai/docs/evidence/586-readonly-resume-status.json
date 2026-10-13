@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-14",
+  "mode": "readonly_resume_metadata",
+  "previous_marker_not_sent_user_confirmed": true,
+  "old_marker_expired": true,
+  "new_marker_generated": false,
+  "previous_attempt_evidence": "583-covered-live-events.json",
+  "current_attempt_evidence": "584-covered-live-events.json",
+  "root_check_evidence": "585-private-window-root-check.json",
+  "followup_wechat_process_count": 0,
+  "followup_expected_client_process_count": 0,
+  "expected_client_exists": true,
+  "manual_old_account_window_preparation_required": true,
+  "existing_readonly_authorization_retained": true,
+  "automatic_client_launch_performed": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false
+}
