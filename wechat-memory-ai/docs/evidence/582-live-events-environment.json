@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-13",
+  "mode": "post_run_metadata_review",
+  "run_evidence": "581-covered-live-events.json",
+  "configured_seconds": 600,
+  "reported_elapsed_seconds": 2032.141,
+  "system_log_accessible": true,
+  "kernel_power_events": [
+    {
+      "id": 42,
+      "count": 1
+    },
+    {
+      "id": 107,
+      "count": 1
+    },
+    {
+      "id": 506,
+      "count": 1
+    },
+    {
+      "id": 507,
+      "count": 1
+    }
+  ],
+  "sleep_resume_event_interval_seconds": 3.745,
+  "standby_event_interval_seconds": 1800.204,
+  "elapsed_minus_standby_event_interval_seconds": 231.937,
+  "matching_probe_or_reader_processes": 0,
+  "probe_process_check_completed": true,
+  "foreground_switch_cause_verified": false,
+  "native_timeout_stage_available": false,
+  "marker_observed": false,
+  "old_marker_expired": true,
+  "automatic_restart_performed": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "raw_system_event_messages_persisted": false,
+  "interpretation": "A standby interval overlaps the run and is consistent with the elapsed-time overrun; it does not identify the native timeout stage or the cause of foreground changes."
+}

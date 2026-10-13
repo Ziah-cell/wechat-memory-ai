@@ -40,3 +40,5 @@
 - [ ] 分别验证新事件、历史/去重边界、联系人身份及不抢焦点发送，再决定真实源桥接。
 
 2026-10-13 首次继续在 `window_minimized` 处停止，0 快照（[578](evidence/578-open-window-occlusion-live.json)）。用户恢复并确认覆盖后，[579](evidence/579-covered-open-window-live.json) 静态读取及 [580](evidence/580-covered-window-geometry.json) 覆盖采样通过，本轮无需重复准备。后续真实源条件仍未满足。
+
+后续 [581](evidence/581-covered-live-events.json) 新事件测试未完成：169 快照未观察到随机标记，基线与最终交付均为 0，原生读取超时后关闭；两条同文来信与重开基线尚未执行。[582](evidence/582-live-events-environment.json) 记录运行期间的待机区间及无残留进程；前台/覆盖条件也有变化。本项不勾选通过，旧标记失效。下一轮保留失败调用计时与采样间隔，仍使用产品既有只读源，不改判定门槛。
