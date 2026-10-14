@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-14",
+  "mode": "late_user_incoming_confirmation",
+  "previous_run": "602-stepwise-self-filter.json",
+  "user_confirmed_control_sent": true,
+  "user_confirmed_control_displayed_on_left": true,
+  "confirmation_received_after_source_closed": true,
+  "message_arrival_before_source_closed_verified": false,
+  "expired_source_reopened": false,
+  "prior_run_reclassified_as_completed": false,
+  "incoming_control_delivery_verified": false,
+  "automatic_input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false
+}

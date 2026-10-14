@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "mode": "user_stepwise_confirmations",
+  "current_run": "605-stepwise-self-filter.json",
+  "user_confirmed_marker_displayed_on_left": true,
+  "user_confirmed_self_sent_from_computer_old_account": true,
+  "user_confirmed_self_displayed_on_right": true,
+  "user_confirmed_switched_back_after_self_send": true,
+  "user_confirmed_incoming_control_displayed_on_left": true,
+  "each_manual_gate_opened_after_corresponding_confirmation": true,
+  "actual_account_identity_verified": false,
+  "automatic_input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "product_direction_rules_changed": false
+}
