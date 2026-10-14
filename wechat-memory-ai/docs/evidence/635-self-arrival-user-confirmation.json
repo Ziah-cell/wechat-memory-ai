@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-14",
+  "mode": "user_confirmation_after_source_closed",
+  "evidence_sequence": 634,
+  "user_confirmed_computer_old_account_send": true,
+  "user_confirmed_right_bubble": true,
+  "user_confirmed_switched_back": true,
+  "user_confirmed_window_restored_and_covered": true,
+  "source_closed_before_confirmation": true,
+  "actual_message_arrival_before_close_known": false,
+  "self_event_verified": false,
+  "prior_result_changed": false,
+  "message_bodies_persisted": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "limitation": "The self-send confirmation arrived after the minimized stop; actual message arrival relative to source close is unknown. Preparation confirmation permits a fresh supervised session, not replay of the closed one."
+}
