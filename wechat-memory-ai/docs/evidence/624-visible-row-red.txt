@@ -1,0 +1,15 @@
+test_crop_is_limited_to_one_bottom_pixel_and_rechecks_every_geometry_gate (test_visible_row_geometry.VisibleRowGeometryTests.test_crop_is_limited_to_one_bottom_pixel_and_rechecks_every_geometry_gate) ... FAIL
+
+======================================================================
+FAIL: test_crop_is_limited_to_one_bottom_pixel_and_rechecks_every_geometry_gate (test_visible_row_geometry.VisibleRowGeometryTests.test_crop_is_limited_to_one_bottom_pixel_and_rechecks_every_geometry_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_visible_row_geometry.py", line 39, in test_crop_is_limited_to_one_bottom_pixel_and_rechecks_every_geometry_gate
+    self.assertEqual(dict(line.split('=',1) for line in done.stdout.decode().splitlines()),expected)
+AssertionError: {'contained': 'missing_visible_geometry', 'bottom_one': [948 chars]try'} != {'contained': 'valid/10,248,600,72', 'bottom_one': 'vali[919 chars]pty'}
+Diff is 2213 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.244s
+
+FAILED (failures=1)

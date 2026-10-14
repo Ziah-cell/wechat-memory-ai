@@ -2,11 +2,15 @@
 
 2026-10-14 更新。已执行用户取消最小化的指令，微信目标为正常打开、允许非前台和遮挡、不抢焦点。没有创建子代理或工作树，没有启用真实模型、发送或自动回复。
 
-**连续准入的原始到达帧已定位为行超出列表，尚未修复。** 最新 [623](evidence/623-continuous-marker-geometry.json) 第 32 个底层快照中，标记唯一且为末尾，方向 unknown，同帧 reason=geometry_invalid、geometry_reason=row_outside_list；来源以 preflight_marker_ambiguous 停止，交付 0。这直接证明本轮到达时行未完全包含在列表内，不再仅依赖后续静态推断；未记录这帧的越界方向或像素量，也未解释微信为何提供该矩形。
+**已实现底部 1 个物理像素越界的受限裁剪，连续到达验收待完成。** [627](evidence/627-static-visible-row-comparison.json) 同帧实机对比：旧标记原始行底部越界 1 像素、严格几何门槛仍返回 row_outside_list；新分析区域从 84 裁成 83 像素，完全位于列表和图像内，实际方向取得 incoming_evidence。静态检查没有创建事件来源，不能当作新标记连续准入通过。
+
+修正仅适用于底部恰好越界 1 个物理像素且顶部/左右均在列表内的行；保持原点和宽度，裁掉底部 1 像素后重新执行全部几何门槛。裁后太矮、其他侧越界或底部越界更多仍拒绝，头像/气泡证据、阈值、准入、重试、过滤和去重不变。[624](evidence/624-visible-row-red.txt) 新契约先失败，[625](evidence/625-visible-row-targeted.txt) 定向 78 项发现、76 通过、2 跳过；[626](evidence/626-visible-row-regression.txt) 完整 359 项发现、346 通过、13 项既定跳过，42.866 秒。纯矩形测试不创建窗口/位图，未重试被禁止的原生实验。
+
+此前 [623](evidence/623-continuous-marker-geometry.json) 第 32 个底层快照中，唯一末尾标记方向 unknown，同帧 geometry_reason=row_outside_list；来源拒绝、交付 0。这直接证明到达时行越界，未记录该帧的越界量，原失败结果保留。
 
 此前 [615](evidence/615-continuous-marker-reason.json) 到达帧只保留 geometry_invalid；其后 [620](evidence/620-static-marker-geometry-details.json) 静态为 row_outside_list，[621](evidence/621-static-marker-clipping.json) / [622](evidence/622-static-marker-coordinate-rounding.json) 测得旧标记行高 84 像素、底部越界 1 像素，且原始 UIA 坐标已越界。不能将旧标记的静态 1 像素量追填到 615 或 623 的到达帧。
 
-已增加同帧 geometry_reason 固定子原因，保留原几何门槛和顺序，兼容旧协议；不改变准入、过滤、指纹或重试。完整回归 358 项发现、345 通过、13 项既定原生实验跳过，54.462 秒（[619](evidence/619-geometry-details-regression.txt)）。所有读取器已关闭；本轮无需再发送标记。下一步评估部分可见行的处理，须保留列表内采样、正向方向证据及停止边界；当前未实施裁边或容差放宽。
+此前已增加同帧 geometry_reason 固定子原因，回归为 358 项发现、345 通过、13 跳过（[619](evidence/619-geometry-details-regression.txt)）。本次仅增加上述受限分析区域选择，不更改输出协议或将未知方向默认为来信。旧来源均已关闭；新的到达验收先协调即时发送时机，不复用旧标记或回放旧消息。
 
 **分步自身过滤与后来信对照已完整通过。** [605](evidence/605-stepwise-self-filter.json) 在同一有效来源内过滤 1 条自身新消息、交付 0，随后 5 次轮询零交付；再将好友新来信交付 1 次，随后 5 次轮询无重复，候选关闭前有效、关闭后失效。用户各步侧别确认见 [606](evidence/606-stepwise-user-confirmations.json)。来源已关闭。结果限人工确认后固定等待 1 秒的分步读取；598/601 连续读取时新标记方向未知的问题仍未解决，不宣称连续准入稳定或完整遮挡通过。
 
@@ -32,7 +36,7 @@
 
 此前全部最小化导致的诊断顺序问题已修复：在 UIA 访问前返回 `window_minimized`，实机为 0 快照（[568](evidence/568-open-window-preflight-live.json)）。最初空标识记录不能追溯认定均由最小化引起。Computer Use 运行环境另有初始化故障，没有访问微信（[572](evidence/572-computer-use-initialization.json)）；普通原生读取不依赖该工具。
 
-停止保护修正时全量回归为 346 项发现、333 通过、13 跳过（[567](evidence/567-open-window-preflight-regression.txt)）。同帧总原因诊断回归为 352 项发现、339 通过、13 跳过（[609](evidence/609-joint-reasons-regression.txt)）；当前细分几何诊断回归为 358 项发现、345 通过、13 跳过，0 失败/错误，54.462 秒（[619](evidence/619-geometry-details-regression.txt)）。新增测试使用虚构内存快照、子进程替身及纯矩形/数值契约；不创建原生窗口/位图，不重试被禁止的实验。
+停止保护修正时全量回归为 346 项发现、333 通过、13 跳过（[567](evidence/567-open-window-preflight-regression.txt)）。同帧总原因回归为 352 项、细分几何诊断回归为 358 项（609/619）；当前底部 1 像素裁剪回归为 359 项发现、346 通过、13 跳过，0 失败/错误，42.866 秒（[626](evidence/626-visible-row-regression.txt)）。新增测试使用虚构内存快照、子进程替身及纯矩形/数值契约；不创建原生窗口/位图，不重试被禁止的实验。
 
 2026-10-13 首次继续检查在 `window_minimized` 处停止，0 快照（[578](evidence/578-open-window-occlusion-live.json)）；用户恢复并确认覆盖后取得上述 579/580 结果。静态遮挡检查已完成。当前没有启动常驻监听，旧 standby 监听保持停止，自动回复关闭。详见 [窗口验证](OPEN_WINDOW_VALIDATION.md)。
 
@@ -68,4 +72,4 @@
 
 623 共 31 次轮询完整返回，第 32 个底层快照触发拒绝；32 次来源原生调用加 1 次绑定，最长 701 ms、无超时/重取，37.141 秒。63 次几何检查的 9 点均命中其他窗口，1,197 次前台采样无目标窗口，但有 3 次其他窗口切换，整轮前后前台不同。最后失败调用只有前侧几何检查，last_poll_conditions 属于第 31 次，不宣称拒绝调用完整前后条件或连续焦点不变。来源已关闭，原标记失效；未发送、调用模型、写真实记忆或持久化正文/绑定/图像。
 
-后续评估部分可见行的处理，再核验历史/身份与发送前置条件；需要新事件验证时先协调即时发送时机。不恢复被取消研究、不放宽绑定、不使用昵称/坐标猜测联系人。真实模型、发送、自动回复保留最终确认边界。活动计划：[WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。
+627 为一次绑定检查加一次同帧联合静态对比，耗时分别 444/484 ms，无超时，总计 1.219 秒。临时诊断副本只添加同帧几何比较值，分类仍由产品实现执行；前后非前台、前台相同。未保存正文/图像/绑定、未创建事件来源。后续核验修正后的新消息到达，再核验历史/身份与发送前置条件；不恢复被取消研究、不放宽绑定、不使用昵称/坐标猜测联系人。真实模型、发送、自动回复保留最终确认边界。活动计划：[WINDOW_OPEN_PLAN.md](WINDOW_OPEN_PLAN.md)。

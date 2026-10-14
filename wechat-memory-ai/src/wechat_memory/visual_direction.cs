@@ -107,11 +107,29 @@ public static class VisualDirection {
         if(Math.Abs(row.Right-list.Right)>2*scale) return "row_right_misaligned";
         return null;
     }
+    // The observed UIA row can include one physical pixel below the list.
+    // Exclude that pixel from every sample; never read past the list, shift
+    // the row's origin, accept other clipping, or waive the original gates.
+    public static string AnalysisGeometry(bool hasImage, int imageWidth, int imageHeight,
+                                         Rectangle list, Rectangle row, double scale,
+                                         out Rectangle analysisRow) {
+        analysisRow=Rectangle.Empty;
+        string failure=GeometryFailure(hasImage,imageWidth,imageHeight,list,row,scale);
+        if(failure=="row_outside_list" && row.Top>=list.Top && row.Left>=list.Left
+                && row.Right<=list.Right && (long)row.Bottom-list.Bottom==1) {
+            row=new Rectangle(row.X,row.Y,row.Width,row.Height-1);
+            failure=GeometryFailure(hasImage,imageWidth,imageHeight,list,row,scale);
+        }
+        if(failure==null) analysisRow=row;
+        return failure;
+    }
     // Reasons name the first unmet gate, not a proven capture/rendering cause.
     public static VisualClassification Analyze(Bitmap image, Rectangle list, Rectangle row, double scale) {
-        string geometryReason=GeometryFailure(image!=null,image==null ? 0 : image.Width,
-            image==null ? 0 : image.Height,list,row,scale);
+        Rectangle analysisRow;
+        string geometryReason=AnalysisGeometry(image!=null,image==null ? 0 : image.Width,
+            image==null ? 0 : image.Height,list,row,scale,out analysisRow);
         if(geometryReason!=null) return new VisualClassification("unknown","geometry_invalid",geometryReason);
+        row=analysisRow;
         int left=row.Left+(int)Math.Round(8*scale), right=row.Right-(int)Math.Round(8*scale)-1;
         Color background=image.GetPixel(left,row.Top+row.Height/2);
         if(!Neutral(background) || !(background.R>=235 || (background.R>=20 && background.R<=45)))

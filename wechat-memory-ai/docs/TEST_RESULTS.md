@@ -1,6 +1,6 @@
 # v0.1.23 测试结果（2026-10-14 更新）
 
-最新完整回归 `python -X utf8 scripts/test.py`：**358 项发现，345 项通过，13 项明确跳过，0 失败/错误，54.462 秒**。[完整输出](evidence/619-geometry-details-regression.txt)。细分几何诊断没有放宽方向或准入规则。
+最新完整回归 `python -X utf8 scripts/test.py`：**359 项发现，346 项通过，13 项明确跳过，0 失败/错误，42.866 秒**。[完整输出](evidence/626-visible-row-regression.txt)。新增受限底部 1 物理像素裁剪，裁后仍执行原几何和正向方向证据检查，不改变准入、过滤或重试。
 
 此前最小化停止保护修正后的回归为 346 项发现、333 项通过、13 项跳过、0 失败/错误，49.471 秒（[567](evidence/567-open-window-preflight-regression.txt)）。
 
@@ -71,5 +71,9 @@
 完整回归 619 通过；随后 [620](evidence/620-static-marker-geometry-details.json) 验证实机 11 行新字段均有效，同一旧标记静态为 row_outside_list。[621](evidence/621-static-marker-clipping.json) / [622](evidence/622-static-marker-coordinate-rounding.json) 进一步确认原始及转换后底部均越界 1 像素，行高 84，静态拒绝不由整数舍入引入。未重开事件来源、未修改阈值/重试、未自动发送或调用模型/真实记忆；静态结果不追填 615。验证新证据的固定字段/计数、文档链接、git diff --check 及无残留读取器。
 
 [623](evidence/623-continuous-marker-geometry.json) 在新标记原始到达帧直接取得 row_outside_list：唯一末尾标记方向 unknown，第 32 个底层快照拒绝，交付 0，来源关闭。31 次轮询完整返回、33 次原生调用（含绑定）、最长 701 ms、0 超时/重取，37.141 秒。63 次 9 点遮挡检查均满足，1,197 次前台采样无目标但有 3 次其他窗口切换；不声明全程焦点不变，失败调用的后侧条件未采集。只新增实机证据及文档，未改产品代码或重复全量回归；不能把 621/622 的静态 1 像素量追填到该到达帧。证据固定字符串、计数、关闭状态、零副作用、本地链接及无残留进程复核通过。
+
+[624](evidence/624-visible-row-red.txt) 新增分析区域契约测试先出现 1 项预期失败、0 错误；实现后 [625](evidence/625-visible-row-targeted.txt) 定向发现 78 项、76 通过、2 项既定跳过。[626](evidence/626-visible-row-regression.txt) 完整 359 项、346 通过、13 跳过，42.866 秒。新增 23 组纯矩形/数值输入，不创建窗口/位图或调用 UIA；验证仅底部 1 物理像素可裁、其他越界拒绝、裁后重做最小尺寸/对齐/图像范围检查。原先 13 项跳过保持，不将新测试作为被拒位图路线的替代重试。
+
+[627](evidence/627-static-visible-row-comparison.json) 实机同帧静态对比：唯一末尾旧标记原始高度 84、底部越界 1 像素，严格几何返回 row_outside_list；新分析矩形高 83，完全在列表和图像内，实际 incoming_evidence。2 次调用（含绑定）无超时，444/484 ms，总计 1.219 秒，前后非前台。未建立事件源，连续到达未验收；没有发送、模型调用、真实记忆写入或正文/绑定/图像持久化。
 
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。
