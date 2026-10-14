@@ -1,0 +1,334 @@
+test_explained_rows_keep_self_filtering_incoming_delivery_and_zero_repeats (test_joint_visual_reasons.JointVisualReasonTests.test_explained_rows_keep_self_filtering_incoming_delivery_and_zero_repeats) ... FAIL
+test_explained_unknown_marker_still_stops_without_admission (test_joint_visual_reasons.JointVisualReasonTests.test_explained_unknown_marker_still_stops_without_admission) ... FAIL
+test_native_reader_preserves_same_frame_reason_but_not_in_public_timing_report (test_joint_visual_reasons.JointVisualReasonTests.test_native_reader_preserves_same_frame_reason_but_not_in_public_timing_report) ... FAIL
+test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) ... 
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='geometry_invalid', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='background_unsupported', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='edges_inconsistent', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='avatar_inconclusive', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='foreground_evidence_absent', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_bubble_unconfirmed', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_green_conflict', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='self_bubble_unconfirmed', direction='unknown', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_evidence', direction='incoming_candidate', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='self_evidence', direction='self_candidate', kind='text') ... FAIL
+  test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='not_text', direction='unknown', kind='other') ... FAIL
+test_reason_metadata_preserves_legacy_observation_values_and_input (test_joint_visual_reasons.JointVisualReasonTests.test_reason_metadata_preserves_legacy_observation_values_and_input) ... FAIL
+test_untrusted_reason_or_extra_diagnostic_fields_remain_terminal_and_sanitized (test_joint_visual_reasons.JointVisualReasonTests.test_untrusted_reason_or_extra_diagnostic_fields_remain_terminal_and_sanitized) ... ok
+
+======================================================================
+FAIL: test_explained_rows_keep_self_filtering_incoming_delivery_and_zero_repeats (test_joint_visual_reasons.JointVisualReasonTests.test_explained_rows_keep_self_filtering_incoming_delivery_and_zero_repeats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 87, in test_explained_rows_keep_self_filtering_incoming_delivery_and_zero_repeats
+    self.accept_valid(snapshot(*rows))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_explained_unknown_marker_still_stops_without_admission (test_joint_visual_reasons.JointVisualReasonTests.test_explained_unknown_marker_still_stops_without_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 73, in test_explained_unknown_marker_still_stops_without_admission
+    self.accept_valid(snapshot(*baseline, marker))
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_native_reader_preserves_same_frame_reason_but_not_in_public_timing_report (test_joint_visual_reasons.JointVisualReasonTests.test_native_reader_preserves_same_frame_reason_but_not_in_public_timing_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 104, in test_native_reader_preserves_same_frame_reason_but_not_in_public_timing_report
+    self.accept_valid(raw)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='geometry_invalid', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='background_unsupported', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='edges_inconsistent', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='avatar_inconclusive', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='foreground_evidence_absent', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_bubble_unconfirmed', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_green_conflict', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='self_bubble_unconfirmed', direction='unknown', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='incoming_evidence', direction='incoming_candidate', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='self_evidence', direction='self_candidate', kind='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason (test_joint_visual_reasons.JointVisualReasonTests.test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason) (reason='not_text', direction='unknown', kind='other')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 50, in test_reason_direction_and_row_kind_must_agree_for_every_fixed_reason
+    self.assertEqual(self.accept_valid(raw)[1][0][-1], direction)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+======================================================================
+FAIL: test_reason_metadata_preserves_legacy_observation_values_and_input (test_joint_visual_reasons.JointVisualReasonTests.test_reason_metadata_preserves_legacy_observation_values_and_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 31, in accept_valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 199, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 39, in test_reason_metadata_preserves_legacy_observation_values_and_input
+    self.assertEqual(self.accept_valid(current), live_read.validate_visual_text_snapshot(legacy))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_visual_reasons.py", line 33, in accept_valid
+    self.fail('Valid same-frame reason metadata was rejected')
+AssertionError: Valid same-frame reason metadata was rejected
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+FAILED (failures=15)

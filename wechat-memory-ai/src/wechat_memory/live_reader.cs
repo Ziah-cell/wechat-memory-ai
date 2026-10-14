@@ -300,7 +300,8 @@ public static class LiveReader {
                         var classification=row.Kind=="text" ? VisualDirection.Analyze(frame.Image,listRect,rowRect,frame.Scale)
                             : new VisualClassification("unknown","not_text");
                         classifications.Add(classification);
-                        if(visualText) rows.Add(new {token=row.Token,kind=row.Kind,text=row.Text,direction=classification.Direction});
+                        if(visualText) rows.Add(new {token=row.Token,kind=row.Kind,text=row.Text,
+                            direction=classification.Direction,reason=classification.Reason});
                         else rows.Add(new {token=row.Token,kind=row.Kind,direction=classification.Direction,reason=classification.Reason});
                     }
                 }

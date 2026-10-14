@@ -187,15 +187,24 @@ def visual_report(raw):
 
 
 def validate_visual_text_snapshot(raw):
-    """Validate a single provider read; visual directions remain candidates."""
+    """Validate one joint frame, including optional fixed reason metadata."""
     if (not isinstance(raw,dict) or raw.get('status') != 'visual_text_snapshot'
             or not isinstance(raw.get('rows'),list) or len(raw['rows'])>256):
         raise ReadError('invalid_snapshot')
     validation_rows, directions = [], []
     for row in raw['rows']:
-        if (not isinstance(row,dict) or set(row) != {'token','kind','text','direction'}
+        if (not isinstance(row,dict) or set(row) not in (
+                {'token','kind','text','direction'}, {'token','kind','text','direction','reason'})
                 or row['direction'] not in ('incoming_candidate','self_candidate','unknown')
                 or (row['kind']!='text' and row['direction']!='unknown')):
+            raise ReadError('invalid_snapshot')
+        # Older joint snapshots remain valid. New native snapshots preserve the
+        # classifier's same-frame reason without promoting it to identity or
+        # changing observation fingerprints, direction or admission rules.
+        if 'reason' in row and (
+                not isinstance(row['reason'],str) or row['reason'] not in _VISUAL_REASONS
+                or row['direction'] != _VISUAL_REASONS[row['reason']]
+                or (row['kind']=='other') != (row['reason']=='not_text')):
             raise ReadError('invalid_snapshot')
         validation_rows.append({key:row[key] for key in ('token','kind','text')})
         directions.append(row['direction'])
