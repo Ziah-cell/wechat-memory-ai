@@ -70,4 +70,6 @@
 
 完整回归 619 通过；随后 [620](evidence/620-static-marker-geometry-details.json) 验证实机 11 行新字段均有效，同一旧标记静态为 row_outside_list。[621](evidence/621-static-marker-clipping.json) / [622](evidence/622-static-marker-coordinate-rounding.json) 进一步确认原始及转换后底部均越界 1 像素，行高 84，静态拒绝不由整数舍入引入。未重开事件来源、未修改阈值/重试、未自动发送或调用模型/真实记忆；静态结果不追填 615。验证新证据的固定字段/计数、文档链接、git diff --check 及无残留读取器。
 
+[623](evidence/623-continuous-marker-geometry.json) 在新标记原始到达帧直接取得 row_outside_list：唯一末尾标记方向 unknown，第 32 个底层快照拒绝，交付 0，来源关闭。31 次轮询完整返回、33 次原生调用（含绑定）、最长 701 ms、0 超时/重取，37.141 秒。63 次 9 点遮挡检查均满足，1,197 次前台采样无目标但有 3 次其他窗口切换；不声明全程焦点不变，失败调用的后侧条件未采集。只新增实机证据及文档，未改产品代码或重复全量回归；不能把 621/622 的静态 1 像素量追填到该到达帧。证据固定字符串、计数、关闭状态、零副作用、本地链接及无残留进程复核通过。
+
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。
