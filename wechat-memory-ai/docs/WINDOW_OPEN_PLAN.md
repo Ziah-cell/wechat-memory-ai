@@ -63,3 +63,5 @@
 [604](evidence/604-late-incoming-confirmation.json) 记录 602 关闭后到达的人工来信确认，不补记通过。[605](evidence/605-stepwise-self-filter.json) 随后通过全新会话补齐完整分步对照，16 次轮询、231.766 秒，无超时或重取；程序正常退出，来源已关闭。用户各步侧别确认见 [606](evidence/606-stepwise-user-confirmations.json)。本项无需继续发送测试消息；下一项为连续准入方向未知原因，不能由分步通过推定已解决。
 
 同帧原因字段已实现并通过 607–609 离线验证。[610](evidence/610-continuous-marker-reason.json) 连续 523 次读取未观测新标记，来源到期关闭，未取得失败帧；[611](evidence/611-static-joint-reasons.json) 只验证真实联合快照 11 行均含合法原因。下一步仍为取得新标记到达时的同帧原因，不放宽 unknown 停止规则。当前没有运行中的来源，610 旧标记失效，不补发。
+
+[612](evidence/612-continuous-marker-reason.json) 再次连续检查，525 次已接受读取未观测标记，来源到期关闭；[613](evidence/613-late-marker-confirmation.json) 记录关闭后收到的发送确认。[614](evidence/614-expired-marker-static-check.json) 当前静态唯一匹配旧标记、判为来信，但已非末尾，无法确定其是否在来源到期前到达。没有重开到期来源或生成新标记，连续未知根因仍待定位。后续先确认用户可立即从授权好友端发送，再启动有时限的连续检查；不凭迟到确认延长旧来源或回放旧标记。当前全部来源已关闭，无需补发。

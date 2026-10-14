@@ -1,6 +1,8 @@
 # v0.1.23 测试结果（2026-10-14 更新）
 
-最新运行 `python -X utf8 scripts/test.py`：**346 项发现，333 项通过，13 项明确跳过，0 失败/错误，49.471 秒**。[完整输出](evidence/567-open-window-preflight-regression.txt)。
+最新完整回归 `python -X utf8 scripts/test.py`：**352 项发现，339 项通过，13 项明确跳过，0 失败/错误，45.827 秒**。[完整输出](evidence/609-joint-reasons-regression.txt)。此后 610–614 为只读诊断及证据更新，没有产品代码改动，不重复完整回归。
+
+此前最小化停止保护修正后的回归为 346 项发现、333 项通过、13 项跳过、0 失败/错误，49.471 秒（[567](evidence/567-open-window-preflight-regression.txt)）。
 
 新增一项纯内存原生发现契约测试，不创建窗口、不访问微信：全部窗口最小化时 UIA 回调不得执行；空窗口、缺失标识、重复目标和已最小化目标仍停止，唯一正常私聊目标可返回。修正前以 `UIA must not run` 失败，增加前置检查后通过；实机返回 `window_minimized`、0 快照（[568](evidence/568-open-window-preflight-live.json)）。这是停止保护验证，不是最小化读取或正常遮挡读取成功。
 
@@ -57,5 +59,9 @@
 [609](evidence/609-joint-reasons-regression.txt) 完整回归发现 352 项，339 通过、13 项此前禁止重试的原生实验继续跳过，0 失败/错误，45.827 秒。修改只涉及联合快照原因输出和严格校验，没有更改视觉门槛、准入或重试策略；回归通过本身不能证明连续实机方向未知已经解决。
 
 [610](evidence/610-continuous-marker-reason.json) 连续检查取得 523 次快照、交付 0，未观测到新标记，590.766 秒时来源到期；524 次原生调用（含绑定）无超时/重取，最长 696 ms。来源关闭原因为 source_deadline_reached，包装器随后读到 source_closed，不改写原始字段；不能作为未知方向复现或连续准入通过。[611](evidence/611-static-joint-reasons.json) 随后的独立短静态检查确认 11 行均含有效同帧原因，2 次原生调用无超时/重取、最长 456 ms，1.094 秒。仅诊断协议实机验证通过，原到达问题仍缺失败帧证据。
+
+[612](evidence/612-continuous-marker-reason.json) 连续检查 525 次已接受读取、交付 0，未观测标记，590.922 秒后以 source_deadline_reached 关闭。来源 526 次原生调用中最后一次因返回后已到期而未进入会话，另 1 次绑定，合计 527 次、最长 524 ms、无超时/重取。发送确认收到时来源已关闭（[613](evidence/613-late-marker-confirmation.json)），不补记通过。[614](evidence/614-expired-marker-static-check.json) 随后一次静态检查唯一匹配旧标记、判为来信、原因为 incoming_evidence，已不是末尾文本；2 次原生调用、最长 526 ms、无超时/重取，1.203 秒。只证明当前静态可见，不证明到达时间或连续准入。
+
+本次只更新脱敏证据及文档，验证固定字符串范围、计数关系、关闭与零副作用字段、本地文档链接及 git diff --check；不改产品规则、不重跑被禁止的原生实验。所有测试进程已退出，没有发送、模型调用、真实记忆写入或正文/图像/绑定持久化。
 
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。

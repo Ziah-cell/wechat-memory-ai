@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "mode": "late_user_marker_confirmation",
+  "previous_run": "612-continuous-marker-reason.json",
+  "user_confirmed_marker_sent": true,
+  "user_confirmed_displayed_on_left": null,
+  "confirmation_received_after_source_closed": true,
+  "message_arrival_before_source_closed_verified": false,
+  "expired_source_reopened": false,
+  "prior_run_reclassified_as_completed": false,
+  "automatic_input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false
+}
