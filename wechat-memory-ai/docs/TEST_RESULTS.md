@@ -1,6 +1,6 @@
 # v0.1.23 测试结果（2026-10-14 更新）
 
-最新完整回归 `python -X utf8 scripts/test.py`：**352 项发现，339 项通过，13 项明确跳过，0 失败/错误，45.827 秒**。[完整输出](evidence/609-joint-reasons-regression.txt)。此后 610–614 为只读诊断及证据更新，没有产品代码改动，不重复完整回归。
+最新完整回归 `python -X utf8 scripts/test.py`：**358 项发现，345 项通过，13 项明确跳过，0 失败/错误，54.462 秒**。[完整输出](evidence/619-geometry-details-regression.txt)。细分几何诊断没有放宽方向或准入规则。
 
 此前最小化停止保护修正后的回归为 346 项发现、333 项通过、13 项跳过、0 失败/错误，49.471 秒（[567](evidence/567-open-window-preflight-regression.txt)）。
 
@@ -63,5 +63,11 @@
 [612](evidence/612-continuous-marker-reason.json) 连续检查 525 次已接受读取、交付 0，未观测标记，590.922 秒后以 source_deadline_reached 关闭。来源 526 次原生调用中最后一次因返回后已到期而未进入会话，另 1 次绑定，合计 527 次、最长 524 ms、无超时/重取。发送确认收到时来源已关闭（[613](evidence/613-late-marker-confirmation.json)），不补记通过。[614](evidence/614-expired-marker-static-check.json) 随后一次静态检查唯一匹配旧标记、判为来信、原因为 incoming_evidence，已不是末尾文本；2 次原生调用、最长 526 ms、无超时/重取，1.203 秒。只证明当前静态可见，不证明到达时间或连续准入。
 
 本次只更新脱敏证据及文档，验证固定字符串范围、计数关系、关闭与零副作用字段、本地文档链接及 git diff --check；不改产品规则、不重跑被禁止的原生实验。所有测试进程已退出，没有发送、模型调用、真实记忆写入或正文/图像/绑定持久化。
+
+[615](evidence/615-continuous-marker-reason.json) 捕获原到达帧 geometry_invalid：唯一末尾标记方向未知，准入拒绝、零交付并关闭，43.937 秒。37 次来源轮询完整返回，第 38 个底层快照拒绝；39 次原生调用（含绑定），最长 637 ms，无超时/重取。这是失败环节定位，未修复连续准入。
+
+新增 6 项几何子原因测试。[616](evidence/616-geometry-details-red.txt) 为实现前 14 项失败（含子用例）、0 错误；[617](evidence/617-geometry-details-targeted.txt) 首轮定向 77 项中 1 项失败，是新测试把报告原因当作直接异常文本。核对既有契约后修正为 read_session_stopped 异常加 preflight_marker_ambiguous 报告，[618](evidence/618-geometry-details-targeted.txt) 77 项发现、75 通过、2 项既定跳过。覆盖 9 类固定子原因、非法字段、旧协议兼容、未知标记停止、诊断变化不回放、重试/隐私边界，以及 21 组纯数值/矩形及空图像拒绝输出。后者不创建窗口/位图，不调用 UIA/PrintWindow，不重跑原先禁止的实验。
+
+完整回归 619 通过；随后 [620](evidence/620-static-marker-geometry-details.json) 验证实机 11 行新字段均有效，同一旧标记静态为 row_outside_list。[621](evidence/621-static-marker-clipping.json) / [622](evidence/622-static-marker-coordinate-rounding.json) 进一步确认原始及转换后底部均越界 1 像素，行高 84，静态拒绝不由整数舍入引入。未重开事件来源、未修改阈值/重试、未自动发送或调用模型/真实记忆；静态结果不追填 615。验证新证据的固定字段/计数、文档链接、git diff --check 及无残留读取器。
 
 此前测试历史见 [归档](history/TEST_RESULTS-before-window-open.md)。旧研究源码已经删除，原报告的 hash/冻结源码描述仅代表当时事实。

@@ -186,6 +186,13 @@ def visual_report(raw):
                 real_send_supported=False,model_called=False)
 
 
+_GEOMETRY_REASONS = frozenset({
+    'image_missing', 'scale_invalid', 'list_size_invalid', 'row_width_below_minimum',
+    'row_height_below_minimum', 'list_outside_frame', 'row_outside_list',
+    'row_left_misaligned', 'row_right_misaligned',
+})
+
+
 def validate_visual_text_snapshot(raw):
     """Validate one joint frame, including optional fixed reason metadata."""
     if (not isinstance(raw,dict) or raw.get('status') != 'visual_text_snapshot'
@@ -194,7 +201,8 @@ def validate_visual_text_snapshot(raw):
     validation_rows, directions = [], []
     for row in raw['rows']:
         if (not isinstance(row,dict) or set(row) not in (
-                {'token','kind','text','direction'}, {'token','kind','text','direction','reason'})
+                {'token','kind','text','direction'}, {'token','kind','text','direction','reason'},
+                {'token','kind','text','direction','reason','geometry_reason'})
                 or row['direction'] not in ('incoming_candidate','self_candidate','unknown')
                 or (row['kind']!='text' and row['direction']!='unknown')):
             raise ReadError('invalid_snapshot')
@@ -206,6 +214,13 @@ def validate_visual_text_snapshot(raw):
                 or row['direction'] != _VISUAL_REASONS[row['reason']]
                 or (row['kind']=='other') != (row['reason']=='not_text')):
             raise ReadError('invalid_snapshot')
+        if 'geometry_reason' in row:
+            detail = row['geometry_reason']
+            if row['reason'] == 'geometry_invalid':
+                if not isinstance(detail,str) or detail not in _GEOMETRY_REASONS:
+                    raise ReadError('invalid_snapshot')
+            elif detail is not None:
+                raise ReadError('invalid_snapshot')
         validation_rows.append({key:row[key] for key in ('token','kind','text')})
         directions.append(row['direction'])
     identity, rows = validate_snapshot(dict(raw,status='snapshot',rows=validation_rows))

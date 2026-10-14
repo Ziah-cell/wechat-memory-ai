@@ -1,0 +1,299 @@
+test_detail_change_does_not_replay_a_consumed_unknown_occurrence (test_joint_geometry.JointGeometryTests.test_detail_change_does_not_replay_a_consumed_unknown_occurrence) ... FAIL
+test_detail_requires_matching_geometry_reason_and_fixed_string (test_joint_geometry.JointGeometryTests.test_detail_requires_matching_geometry_reason_and_fixed_string) ... ok
+test_detailed_unknown_marker_remains_terminal_with_zero_delivery (test_joint_geometry.JointGeometryTests.test_detailed_unknown_marker_remains_terminal_with_zero_delivery) ... FAIL
+test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) ... 
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='image_missing') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='scale_invalid') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='list_size_invalid') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_width_below_minimum') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_height_below_minimum') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='list_outside_frame') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_outside_list') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_left_misaligned') ... FAIL
+  test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_right_misaligned') ... FAIL
+test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) ... FAIL
+test_native_boundary_preserves_detail_without_retry_or_timing_leak (test_joint_geometry.JointGeometryTests.test_native_boundary_preserves_detail_without_retry_or_timing_leak) ... FAIL
+test_pure_geometry_gates_keep_boundaries_and_report_first_failure (test_joint_geometry.JointGeometryTests.test_pure_geometry_gates_keep_boundaries_and_report_first_failure) ... FAIL
+
+======================================================================
+FAIL: test_detail_change_does_not_replay_a_consumed_unknown_occurrence (test_joint_geometry.JointGeometryTests.test_detail_change_does_not_replay_a_consumed_unknown_occurrence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 79, in test_detail_change_does_not_replay_a_consumed_unknown_occurrence
+    self.valid(raw)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_detailed_unknown_marker_remains_terminal_with_zero_delivery (test_joint_geometry.JointGeometryTests.test_detailed_unknown_marker_remains_terminal_with_zero_delivery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 68, in test_detailed_unknown_marker_remains_terminal_with_zero_delivery
+    self.valid(raw)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='image_missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='scale_invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='list_size_invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_width_below_minimum')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_height_below_minimum')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='list_outside_frame')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_outside_list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_left_misaligned')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract) (detail='row_right_misaligned')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 37, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.assertEqual(self.valid(raw), live_read.validate_visual_text_snapshot(snapshot(row('a', 'PRIVATE', 'unknown'))))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_fixed_details_normalize_to_the_existing_observation_contract (test_joint_geometry.JointGeometryTests.test_fixed_details_normalize_to_the_existing_observation_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 44, in test_fixed_details_normalize_to_the_existing_observation_contract
+    self.valid(raw)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_native_boundary_preserves_detail_without_retry_or_timing_leak (test_joint_geometry.JointGeometryTests.test_native_boundary_preserves_detail_without_retry_or_timing_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 28, in valid
+    return live_read.validate_visual_text_snapshot(raw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\src\wechat_memory\live_read.py", line 200, in validate_visual_text_snapshot
+    raise ReadError('invalid_snapshot')
+wechat_memory.live_read.ReadError: invalid_snapshot
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 91, in test_native_boundary_preserves_detail_without_retry_or_timing_leak
+    self.valid(raw)
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 30, in valid
+    self.fail('Valid fixed geometry detail rejected')
+AssertionError: Valid fixed geometry detail rejected
+
+======================================================================
+FAIL: test_pure_geometry_gates_keep_boundaries_and_report_first_failure (test_joint_geometry.JointGeometryTests.test_pure_geometry_gates_keep_boundaries_and_report_first_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_joint_geometry.py", line 126, in test_pure_geometry_gates_keep_boundaries_and_report_first_failure
+    self.assertEqual(dict(line.split('=',1) for line in done.stdout.decode().splitlines()), expected)
+AssertionError: {'normal': 'missing_geometry_diagnostic', 'missing': [902 chars]tic'} != {'normal': 'valid', 'missing': 'image_missing', 'nan'[638 chars]ing'}
+Diff is 1911 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.417s
+
+FAILED (failures=14)

@@ -42,7 +42,8 @@
 - [x] 分步验证当前旧号新自身消息过滤：用户确认右侧气泡后读取，1 条被过滤、交付 0，随后 5 次轮询无重复（602/603）。
 - [x] 同一有效来源内补齐自身过滤后的好友来信对照和候选关闭失效（605）；自身过滤及来信交付各有 5 次零重复轮询。602 的到期结果保留。
 - [x] 为联合快照补齐同一分类帧的固定原因字段，严格校验并保留旧格式兼容；6 项新测试先失败再通过，完整回归 339 通过、13 跳过（607–609）。诊断字段不改变过滤或准入规则。
-- [ ] 定位连续准入时新标记方向未知（598/601），核验任意历史同步/持久去重、联系人身份及不抢焦点发送，再决定真实源桥接。
+- [x] 连续到达帧保留首个拒绝环节（615）：唯一末尾标记为 geometry_invalid；补齐固定几何子原因及测试（616–619）。
+- [ ] 用同帧几何子原因核对新的到达帧，评估可见区域处理是否需要修正；核验任意历史同步/持久去重、联系人身份及不抢焦点发送，再决定真实源桥接。
 
 2026-10-13 首次继续在 `window_minimized` 处停止，0 快照（[578](evidence/578-open-window-occlusion-live.json)）。用户恢复并确认覆盖后，[579](evidence/579-covered-open-window-live.json) 静态读取及 [580](evidence/580-covered-window-geometry.json) 覆盖采样通过，本轮无需重复准备。后续真实源条件仍未满足。
 
@@ -65,3 +66,5 @@
 同帧原因字段已实现并通过 607–609 离线验证。[610](evidence/610-continuous-marker-reason.json) 连续 523 次读取未观测新标记，来源到期关闭，未取得失败帧；[611](evidence/611-static-joint-reasons.json) 只验证真实联合快照 11 行均含合法原因。下一步仍为取得新标记到达时的同帧原因，不放宽 unknown 停止规则。当前没有运行中的来源，610 旧标记失效，不补发。
 
 [612](evidence/612-continuous-marker-reason.json) 再次连续检查，525 次已接受读取未观测标记，来源到期关闭；[613](evidence/613-late-marker-confirmation.json) 记录关闭后收到的发送确认。[614](evidence/614-expired-marker-static-check.json) 当前静态唯一匹配旧标记、判为来信，但已非末尾，无法确定其是否在来源到期前到达。没有重开到期来源或生成新标记，连续未知根因仍待定位。后续先确认用户可立即从授权好友端发送，再启动有时限的连续检查；不凭迟到确认延长旧来源或回放旧标记。当前全部来源已关闭，无需补发。
+
+用户确认可立即发送后，[615](evidence/615-continuous-marker-reason.json) 捕获唯一末尾标记的未知到达帧，原因为 geometry_invalid，立即停止、零交付。已保留门槛及顺序补充 geometry_reason，完整回归 358 项发现、345 通过、13 跳过（[619](evidence/619-geometry-details-regression.txt)）。[620](evidence/620-static-marker-geometry-details.json) 当前静态为 row_outside_list；[621](evidence/621-static-marker-clipping.json) / [622](evidence/622-static-marker-coordinate-rounding.json) 显示原始与整数转换后底部都越界 1 像素，行高 84，不是本次静态坐标舍入引入。未取得 615 原到达帧的细分值，不追填原记录、不放宽裁边/容差。下一轮新事件应保留细分原因；无需补发旧标记，当前所有来源已关闭。

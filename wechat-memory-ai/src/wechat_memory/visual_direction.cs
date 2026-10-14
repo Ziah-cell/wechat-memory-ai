@@ -51,8 +51,11 @@ public static class VisualCapture {
 }
 
 public sealed class VisualClassification {
-    public readonly string Direction, Reason;
-    public VisualClassification(string direction, string reason) { Direction=direction; Reason=reason; }
+    public readonly string Direction, Reason, GeometryReason;
+    public VisualClassification(string direction, string reason) : this(direction,reason,null) { }
+    public VisualClassification(string direction, string reason, string geometryReason) {
+        Direction=direction; Reason=reason; GeometryReason=geometryReason;
+    }
 }
 
 public static class VisualRetry {
@@ -89,13 +92,26 @@ public static class VisualDirection {
     public static string Classify(Bitmap image, Rectangle list, Rectangle row, double scale) {
         return Analyze(image,list,row,scale).Direction;
     }
+    // Same gates and order as classification; only fixed failure names escape.
+    // Scalar/rectangle inputs also allow checking these gates without a bitmap.
+    public static string GeometryFailure(bool hasImage, int imageWidth, int imageHeight,
+                                         Rectangle list, Rectangle row, double scale) {
+        if(!hasImage) return "image_missing";
+        if(Double.IsNaN(scale) || Double.IsInfinity(scale) || scale<0.75 || scale>3) return "scale_invalid";
+        if(list.Width<=0 || list.Height<=0) return "list_size_invalid";
+        if(row.Width<300*scale) return "row_width_below_minimum";
+        if(row.Height<36*scale) return "row_height_below_minimum";
+        if(!new Rectangle(0,0,imageWidth,imageHeight).Contains(list)) return "list_outside_frame";
+        if(!list.Contains(row)) return "row_outside_list";
+        if(Math.Abs(row.Left-list.Left)>2*scale) return "row_left_misaligned";
+        if(Math.Abs(row.Right-list.Right)>2*scale) return "row_right_misaligned";
+        return null;
+    }
     // Reasons name the first unmet gate, not a proven capture/rendering cause.
     public static VisualClassification Analyze(Bitmap image, Rectangle list, Rectangle row, double scale) {
-        if(image==null || Double.IsNaN(scale) || Double.IsInfinity(scale) || scale<0.75 || scale>3
-                || list.Width<=0 || list.Height<=0 || row.Width<300*scale || row.Height<36*scale
-                || !new Rectangle(0,0,image.Width,image.Height).Contains(list) || !list.Contains(row)
-                || Math.Abs(row.Left-list.Left)>2*scale || Math.Abs(row.Right-list.Right)>2*scale)
-            return new VisualClassification("unknown","geometry_invalid");
+        string geometryReason=GeometryFailure(image!=null,image==null ? 0 : image.Width,
+            image==null ? 0 : image.Height,list,row,scale);
+        if(geometryReason!=null) return new VisualClassification("unknown","geometry_invalid",geometryReason);
         int left=row.Left+(int)Math.Round(8*scale), right=row.Right-(int)Math.Round(8*scale)-1;
         Color background=image.GetPixel(left,row.Top+row.Height/2);
         if(!Neutral(background) || !(background.R>=235 || (background.R>=20 && background.R<=45)))

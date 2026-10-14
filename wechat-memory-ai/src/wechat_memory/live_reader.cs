@@ -301,7 +301,8 @@ public static class LiveReader {
                             : new VisualClassification("unknown","not_text");
                         classifications.Add(classification);
                         if(visualText) rows.Add(new {token=row.Token,kind=row.Kind,text=row.Text,
-                            direction=classification.Direction,reason=classification.Reason});
+                            direction=classification.Direction,reason=classification.Reason,
+                            geometry_reason=classification.GeometryReason});
                         else rows.Add(new {token=row.Token,kind=row.Kind,direction=classification.Direction,reason=classification.Reason});
                     }
                 }
