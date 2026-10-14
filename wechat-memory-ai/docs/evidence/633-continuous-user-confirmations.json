@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-14",
+  "mode": "user_provided_test_confirmations",
+  "evidence_sequence": 632,
+  "immediate_participation_confirmed": true,
+  "friend_marker_sent_confirmed": true,
+  "self_sent_from_computer_old_account_confirmed": true,
+  "self_right_bubble_confirmed": true,
+  "switched_back_after_self_send_confirmed": true,
+  "incoming_control_sent_confirmed": true,
+  "incoming_left_bubble_confirmed": true,
+  "programmatic_identity_verified": false,
+  "message_bodies_persisted": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "limitation": "User confirmations describe test preparation and displayed sides; they do not authenticate the account or sender."
+}

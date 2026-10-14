@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-14",
+  "mode": "offline_event_reason_observer",
+  "status": "passed",
+  "cases": 7,
+  "identical_observation_list": true,
+  "unchanged_direction_counters": true,
+  "delegate_exception_preserved": true,
+  "no_repeat_diagnostic_on_empty_observations": true,
+  "marker_diagnostics_preserved": true,
+  "self_and_incoming_same_frame_reasons": true,
+  "fixture_text_not_in_reports": true,
+  "live_reads": 0,
+  "native_windows_created": 0,
+  "native_bitmaps_created": 0,
+  "product_code_changed": false,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false
+}
