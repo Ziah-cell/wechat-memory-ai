@@ -1,0 +1,114 @@
+test_baselines_repaints_and_direction_upgrades_never_count_as_new_observations (test_observation_diagnostics.ObservationDiagnosticsTests.test_baselines_repaints_and_direction_upgrades_never_count_as_new_observations) ... FAIL
+test_equal_text_on_different_rows_keeps_exact_append_alignment_through_eviction (test_observation_diagnostics.ObservationDiagnosticsTests.test_equal_text_on_different_rows_keeps_exact_append_alignment_through_eviction) ... FAIL
+test_first_and_latest_unknown_batches_survive_later_success_and_report_mutation (test_observation_diagnostics.ObservationDiagnosticsTests.test_first_and_latest_unknown_batches_survive_later_success_and_report_mutation) ... FAIL
+test_legacy_missing_metadata_is_explicit_and_not_invented_as_geometry (test_observation_diagnostics.ObservationDiagnosticsTests.test_legacy_missing_metadata_is_explicit_and_not_invented_as_geometry) ... FAIL
+test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) ... 
+  test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='metadata') ... FAIL
+  test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='binding') ... FAIL
+  test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='continuity') ... FAIL
+test_source_diagnostics_preserve_filtering_delivery_lifecycle_and_privacy (test_observation_diagnostics.ObservationDiagnosticsTests.test_source_diagnostics_preserve_filtering_delivery_lifecycle_and_privacy) ... FAIL
+test_unknown_marker_reason_is_available_after_source_closes_without_another_read (test_observation_diagnostics.ObservationDiagnosticsTests.test_unknown_marker_reason_is_available_after_source_closes_without_another_read) ... FAIL
+
+======================================================================
+FAIL: test_baselines_repaints_and_direction_upgrades_never_count_as_new_observations (test_observation_diagnostics.ObservationDiagnosticsTests.test_baselines_repaints_and_direction_upgrades_never_count_as_new_observations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 33, in test_baselines_repaints_and_direction_upgrades_never_count_as_new_observations
+    report = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_equal_text_on_different_rows_keeps_exact_append_alignment_through_eviction (test_observation_diagnostics.ObservationDiagnosticsTests.test_equal_text_on_different_rows_keeps_exact_append_alignment_through_eviction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 55, in test_equal_text_on_different_rows_keeps_exact_append_alignment_through_eviction
+    report = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_first_and_latest_unknown_batches_survive_later_success_and_report_mutation (test_observation_diagnostics.ObservationDiagnosticsTests.test_first_and_latest_unknown_batches_survive_later_success_and_report_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 91, in test_first_and_latest_unknown_batches_survive_later_success_and_report_mutation
+    before = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_legacy_missing_metadata_is_explicit_and_not_invented_as_geometry (test_observation_diagnostics.ObservationDiagnosticsTests.test_legacy_missing_metadata_is_explicit_and_not_invented_as_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 71, in test_legacy_missing_metadata_is_explicit_and_not_invented_as_geometry
+    report = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='metadata')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 110, in test_rejected_metadata_binding_or_continuity_never_commits_diagnostics
+    before = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='binding')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 110, in test_rejected_metadata_binding_or_continuity_never_commits_diagnostics
+    before = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_rejected_metadata_binding_or_continuity_never_commits_diagnostics (test_observation_diagnostics.ObservationDiagnosticsTests.test_rejected_metadata_binding_or_continuity_never_commits_diagnostics) (failure='continuity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 110, in test_rejected_metadata_binding_or_continuity_never_commits_diagnostics
+    before = self.diagnostics(session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_source_diagnostics_preserve_filtering_delivery_lifecycle_and_privacy (test_observation_diagnostics.ObservationDiagnosticsTests.test_source_diagnostics_preserve_filtering_delivery_lifecycle_and_privacy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 159, in test_source_diagnostics_preserve_filtering_delivery_lifecycle_and_privacy
+    report = self.diagnostics(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+======================================================================
+FAIL: test_unknown_marker_reason_is_available_after_source_closes_without_another_read (test_observation_diagnostics.ObservationDiagnosticsTests.test_unknown_marker_reason_is_available_after_source_closes_without_another_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 132, in test_unknown_marker_reason_is_available_after_source_closes_without_another_read
+    report = self.diagnostics(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhihua\Documents\ChatGPT\vx.agent\wechat-memory-ai\tests\test_observation_diagnostics.py", line 19, in diagnostics
+    self.assertTrue(callable(method), 'A separate sanitized diagnostics snapshot is required')
+AssertionError: False is not true : A separate sanitized diagnostics snapshot is required
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+FAILED (failures=9)

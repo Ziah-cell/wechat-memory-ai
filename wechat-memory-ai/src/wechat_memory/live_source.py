@@ -215,6 +215,12 @@ class ReadOnlyWeChatSource:
                 and isinstance(candidate.observation_id, str)
                 and self._issued.get(candidate.observation_id) is candidate)
 
+    def diagnostics(self):
+        """Return sanitized observation reasons without performing a read."""
+        self._check_access()
+        self._refresh_active()
+        return self._session.diagnostics()
+
     def report(self):
         self._check_access()
         active = self._refresh_active()

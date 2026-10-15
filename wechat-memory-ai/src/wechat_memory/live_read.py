@@ -4,6 +4,7 @@ Observation IDs identify this local reading session, not WeChat server messages.
 Runtime IDs are only continuity tokens within an unchanged window/list instance.
 """
 import argparse
+from copy import deepcopy
 from dataclasses import dataclass
 import hashlib
 import json
@@ -374,6 +375,31 @@ class VisualOccurrenceSession(OccurrenceSession):
         self._direction_counts = {'incoming_candidate':0,'self_candidate':0,'unknown':0}
         self._known_directions = {}
         self._pending_directions = {}
+        self._diagnostic_counts = self._empty_reason_counts()
+        self._first_unknown_batch = None
+        self._latest_unknown_batch = None
+
+    @staticmethod
+    def _empty_reason_counts():
+        return dict(reason_counts=dict.fromkeys(_VISUAL_REASONS, 0),
+                    geometry_reason_counts=dict.fromkeys(sorted(_GEOMETRY_REASONS), 0),
+                    reason_unavailable_texts=0, geometry_detail_unavailable_texts=0)
+
+    @staticmethod
+    def _count_reason(counts, row):
+        # Called only for validated, committed text rows. Keep fixed enums and
+        # counts, never the row, text, token, binding or arbitrary metadata.
+        reason = row.get('reason')
+        if reason is None:
+            counts['reason_unavailable_texts'] += 1
+            return
+        counts['reason_counts'][reason] += 1
+        if reason == 'geometry_invalid':
+            detail = row.get('geometry_reason')
+            if detail is None:
+                counts['geometry_detail_unavailable_texts'] += 1
+            else:
+                counts['geometry_reason_counts'][detail] += 1
 
     def _validate(self, raw):
         identity, rows = validate_visual_text_snapshot(raw)
@@ -390,6 +416,7 @@ class VisualOccurrenceSession(OccurrenceSession):
         return row[4]
 
     def accept(self, raw):
+        previous_sequence = self._sequence
         try:
             observations = super().accept(raw)
             # Only committed rows may strengthen the direction evidence. This
@@ -397,9 +424,40 @@ class VisualOccurrenceSession(OccurrenceSession):
             self._known_directions.update(self._pending_directions)
             for observation in observations:
                 self._direction_counts[observation.direction] += 1
+            # Sequence advances for every appended row, including blanks and
+            # nontext rows. Its delta selects the exact accepted suffix even
+            # after front eviction; matching by text would confuse duplicates.
+            appended_count = self._sequence - previous_sequence
+            unknown_batch = None
+            if appended_count:
+                for row in raw['rows'][-appended_count:]:
+                    if row['kind'] != 'text' or not row['text'].strip():
+                        continue
+                    self._count_reason(self._diagnostic_counts, row)
+                    if row['direction'] == 'unknown':
+                        if unknown_batch is None:
+                            unknown_batch = dict(snapshot=self._snapshots, unknown_texts=0,
+                                                 **self._empty_reason_counts())
+                        unknown_batch['unknown_texts'] += 1
+                        self._count_reason(unknown_batch, row)
+            if unknown_batch is not None:
+                if self._first_unknown_batch is None:
+                    self._first_unknown_batch = unknown_batch
+                self._latest_unknown_batch = unknown_batch
             return observations
         finally:
             self._pending_directions.clear()
+
+    def diagnostics(self):
+        """Detached, bounded reason totals for new observations, not deliveries.
+
+        Includes preflight observations. Baselines and repaints add no reasons;
+        rejected snapshots add nothing. Closing does not erase accepted data.
+        """
+        return deepcopy(dict(snapshots=self._snapshots, observed_texts=self._texts,
+                             **self._diagnostic_counts,
+                             first_unknown_batch=self._first_unknown_batch,
+                             latest_unknown_batch=self._latest_unknown_batch))
 
     def report(self):
         report = super().report()

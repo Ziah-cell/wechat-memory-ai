@@ -77,6 +77,9 @@ class PreflightSession:
         self._unknown += sum(item.direction == 'unknown' for item in observations)
         return incoming
 
+    def diagnostics(self):
+        return self._session.diagnostics()
+
     def report(self):
         report = self._session.report()
         state = ('closed' if self._closed else 'armed' if self._boundary_observed
