@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-20",
+  "mode": "post_window_lookup_preparation_check",
+  "wechat_process_count": 0,
+  "preceding_run": 643,
+  "preceding_snapshots": 0,
+  "preceding_diagnostics_api_queries": 0,
+  "source_created": false,
+  "diagnostics_api_live_verified": false,
+  "preceding_read_free_true_is_initial_value": true,
+  "future_unqueried_read_free_is_null": true,
+  "offline_query_flag_checks": 4,
+  "extra_read_rejection_verified": true,
+  "failure_flag_not_overwritten": true,
+  "additional_native_calls": 0,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "images_persisted": false,
+  "binding_persisted": false,
+  "product_code_changed": false
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-16",
+  "mode": "offline_diagnostics_api_wrapper_check",
+  "accepted_batch_cases": 6,
+  "rejection_cases": 4,
+  "target_reason_comparisons": 3,
+  "active_and_closed_query_checked": true,
+  "observation_list_identity_preserved": true,
+  "original_unknown_survives_repaint": true,
+  "first_and_latest_unknown_distinct": true,
+  "syntax_valid": true,
+  "real_native_calls": 0,
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "images_persisted": false,
+  "binding_persisted": false,
+  "product_code_changed": false
+}

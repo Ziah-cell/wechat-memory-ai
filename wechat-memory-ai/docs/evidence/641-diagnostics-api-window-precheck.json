@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-16",
+  "mode": "authorized_window_capabilities_only",
+  "status": "stopped",
+  "reason": "window_minimized",
+  "message_snapshots": 0,
+  "diagnostics_api_live_test_started": false,
+  "child_calls": 1,
+  "child_timeouts": 0,
+  "last_call_ms": 369,
+  "last_native_stage": "window_lookup",
+  "input_sent": false,
+  "model_called": false,
+  "memory_written": false,
+  "message_bodies_persisted": false,
+  "images_persisted": false,
+  "binding_persisted": false
+}

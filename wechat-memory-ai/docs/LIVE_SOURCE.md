@@ -2,6 +2,8 @@
 
 2026-10-12：最小化专用读取已删除；本来源继续采用正常打开窗口的联合视觉读取，不激活窗口。非前台与遮挡的当前实测见 [OPEN_WINDOW_VALIDATION.md](OPEN_WINDOW_VALIDATION.md)。
 
+2026-10-20 新接口实机尝试尚未建立来源：此前 641 最小化停止，本次 [643](evidence/643-diagnostics-api-live.json) 在窗口发现阶段停止，随后 [644](evidence/644-diagnostics-api-preparation-check.json) 确认无微信进程。0 消息快照、0 接口查询，没有新标记；不能将未调用接口时的 read_free 初值当作通过。本地验证脚本的同帧计数比对、查询不额外读取和关闭保留检查已准备，纯内存结果见 [642](evidence/642-diagnostics-api-observer-check.json)，实机结论仍待用户准备窗口。
+
 最新 [636](evidence/636-self-arrival-reason.json) 自身到达定向复查为 self_evidence，过滤 1 条且零交付，随后 5 次零交付，来源关闭；105 次读取、无超时/重取，未复现 629 的 unknown。此前 [634](evidence/634-self-arrival-reason.json) 在观察到自身消息之前因最小化停止；关闭后用户确认发送及恢复见 [635](evidence/635-self-arrival-user-confirmation.json)，实际到达时序未知，不补记通过。636 的右侧确认见 [637](evidence/637-self-arrival-user-confirmation.json)。本轮没有好友对照或候选生命周期步骤，产品规则未改，长期稳定性仍未验证。
 
 完整对照 [632](evidence/632-continuous-event-reasons.json) 在同一连续来源内完成自身过滤及后来信对照：第 51 次标记准入、第 86 次自身过滤 1 条且零交付、第 118 次好友来信交付 1 次；后两步各 5 次零交付，候选关闭失效。123 次轮询、125 次原生调用（含绑定及 1 次既有快照重取），无超时。自身到达时为目标前台，好友交付时非前台且九点遮挡满足；不是全程遮挡证明。用户确认见 [633](evidence/633-continuous-user-confirmations.json)。
